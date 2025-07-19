@@ -1,0 +1,23 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches: [ "main", "v*" ]  # 主分支和所有 v* 分支触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Doxygen
+        run: |
+          sudo apt-get install doxygen graphviz
+      - name: Generate Docs
+        run: |
+          doxygen Doxyfile
+          mv docs/html docs/${GITHUB_REF#refs/heads/}  # 按分支名保存
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
