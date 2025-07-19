@@ -1,70 +1,60 @@
 name: Publish Multi-version Docs
 on:
   push:
-    branches: [ main, release/* ]  # 监听 main 和 release 分支
-  workflow_dispatch:  # 允许手动触发
+    branches: [ main, release/* ]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 允许推送
+      contents: write
     steps:
-      # 1. 检出代码（包括 .github/versions.list）
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. 安装 Doxygen 和 Graphviz
       - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y doxygen graphviz
 
-      # 3. 读取用户定义的版本清单
       - name: Parse version list
         id: versions
         run: |
-          # 从 .github/versions.list 提取版本
           if [ -f ".github/versions.list" ]; then
             VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | tr '\n' ' ')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
           else
-            echo "versions=main" >> $GITHUB_OUTPUT  # 默认值
+            echo "versions=main" >> $GITHUB_OUTPUT
           fi
 
-      # 4. 为每个版本生成文档
       - name: Build docs
         run: |
-          # 遍历所有版本
           for VERSION in ${{ steps.versions.outputs.versions }}; do
-            # 如果是 main 分支，输出到 latest/
             if [ "$VERSION" = "main" ]; then
               OUT_DIR="latest"
             else
               OUT_DIR="$VERSION"
             fi
-
-            # 生成文档
             mkdir -p "output/$OUT_DIR"
             echo "PROJECT_NUMBER = $VERSION" >> Doxyfile
             doxygen Doxyfile
-
-            # 移动文件到 output/
             mv html/* "output/$OUT_DIR/"
           done
 
-      # 5. 生成 versions.json
       - name: Generate version manifest
         run: |
-          # 从 output/ 目录提取实际生成的版本
           cd output
           echo '{"versions": [' > versions.json
           ls -d */ | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
           echo ']}' >> versions.json
 
-      # 6. 部署到 gh-pages
+      - name: Prepare deployment
+        run: |
+          cp docs/root-index.html output/index.html
+          
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -72,6 +62,3 @@ jobs:
           publish_dir: ./output
           publish_branch: gh-pages
           keep_files: true
-        # 额外步骤：复制智能 index.html 到根目录
-        run: |
-          cp docs/root-index.html output/index.html
