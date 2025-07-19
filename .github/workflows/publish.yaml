@@ -68,7 +68,17 @@ jobs:
 
       - name: Prepare deployment
         run: |
-          cp docs/root-index.html output/index.html
+          cat > output/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <meta http-equiv="refresh" content="0; url=./latest/" />
+          </head>
+          <body>
+            Redirecting to latest version...
+          </body>
+          </html>
+          EOF
           
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
