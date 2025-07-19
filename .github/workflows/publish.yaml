@@ -23,25 +23,40 @@ jobs:
       - name: Parse version list
         id: versions
         run: |
+          # 从 .github/versions.list 提取版本（移除注释和空行）
           if [ -f ".github/versions.list" ]; then
-            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | tr '\n' ' ')
+            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | tr '\n' ' ' | sed 's/ $//')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
           else
             echo "versions=main" >> $GITHUB_OUTPUT
           fi
+          echo "Versions to build: $VERSIONS"
 
       - name: Build docs
         run: |
-          for VERSION in ${{ steps.versions.outputs.versions }}; do
+          # 安全分割字符串为数组
+          IFS=' ' read -ra VERSION_ARRAY <<< "${{ steps.versions.outputs.versions }}"
+          
+          for VERSION in "${VERSION_ARRAY[@]}"; do
+            echo "Building version: $VERSION"
+            
+            # 如果是 main 分支，输出到 latest/
             if [ "$VERSION" = "main" ]; then
               OUT_DIR="latest"
             else
               OUT_DIR="$VERSION"
             fi
+
+            # 生成文档
             mkdir -p "output/$OUT_DIR"
-            echo "PROJECT_NUMBER = $VERSION" >> Doxyfile
-            doxygen Doxyfile
-            mv html/* "output/$OUT_DIR/"
+            cp Doxyfile Doxyfile.tmp
+            echo "PROJECT_NUMBER = $VERSION" >> Doxyfile.tmp
+            doxygen Doxyfile.tmp
+
+            # 移动文件到 output/
+            if [ -d "html" ]; then
+              mv html/* "output/$OUT_DIR/"
+            fi
           done
 
       - name: Generate version manifest
