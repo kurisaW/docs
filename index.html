@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // 1. 读取 versions.json 获取可用版本
+    fetch('/versions.json')
+      .then(res => res.json())
+      .then(data => {
+        const path = window.location.pathname;
+        // 2. 如果直接访问根目录，跳转到默认版本（latest）
+        if (path === '/' || path === '/index.html') {
+          window.location.href = '/latest/';
+        }
+        // 3. 如果访问的是旧链接（如 /v1.0），保持兼容
+        else if (data.versions.some(v => path.startsWith(`/${v}/`))) {
+          return; // 不处理，正常展示子目录内容
+        }
+        // 4. 其他情况跳转到默认版本
+        else {
+          window.location.href = '/latest/';
+        }
+      })
+      .catch(() => {
+        // 如果 versions.json 加载失败，强制跳转到 latest
+        window.location.href = '/latest/';
+      });
+  </script>
+</head>
+<body>
+  Redirecting to latest version...
+</body>
+</html>

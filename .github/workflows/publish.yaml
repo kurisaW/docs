@@ -1,15 +1,16 @@
 name: Publish Multi-version Docs
 on:
   push:
-    branches: [ main, release/* ]  # 监听 main 和 release/ 分支
+    branches: [ main, release/* ]  # 监听 main 和 release 分支
+  workflow_dispatch:  # 允许手动触发
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: write  # 允许推送
     steps:
-      # 1. 检出代码（包括历史记录和标签）
+      # 1. 检出代码（包括 .github/versions.list）
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -21,54 +22,56 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y doxygen graphviz
 
-      # 3. 生成版本号（分支名或标签）
-      - name: Set version info
-        id: version
+      # 3. 读取用户定义的版本清单
+      - name: Parse version list
+        id: versions
         run: |
-          if [[ $GITHUB_REF == refs/heads/main ]]; then
-            echo "version=latest" >> $GITHUB_OUTPUT
-          elif [[ $GITHUB_REF == refs/heads/release/* ]]; then
-            echo "version=${GITHUB_REF#refs/heads/release/}" >> $GITHUB_OUTPUT
+          # 从 .github/versions.list 提取版本
+          if [ -f ".github/versions.list" ]; then
+            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | tr '\n' ' ')
+            echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
           else
-            echo "version=dev" >> $GITHUB_OUTPUT
+            echo "versions=main" >> $GITHUB_OUTPUT  # 默认值
           fi
 
-      # 4. 生成 Doxygen 文档（输出到 ./output）
-      - name: Generate docs
+      # 4. 为每个版本生成文档
+      - name: Build docs
         run: |
-          mkdir -p ./output
-          echo "PROJECT_NUMBER = ${{ steps.version.outputs.version }}" >> Doxyfile
-          doxygen Doxyfile
+          # 遍历所有版本
+          for VERSION in ${{ steps.versions.outputs.versions }}; do
+            # 如果是 main 分支，输出到 latest/
+            if [ "$VERSION" = "main" ]; then
+              OUT_DIR="latest"
+            else
+              OUT_DIR="$VERSION"
+            fi
 
-      # 5. 部署到 gh-pages 的版本子目录
+            # 生成文档
+            mkdir -p "output/$OUT_DIR"
+            echo "PROJECT_NUMBER = $VERSION" >> Doxyfile
+            doxygen Doxyfile
+
+            # 移动文件到 output/
+            mv html/* "output/$OUT_DIR/"
+          done
+
+      # 5. 生成 versions.json
+      - name: Generate version manifest
+        run: |
+          # 从 output/ 目录提取实际生成的版本
+          cd output
+          echo '{"versions": [' > versions.json
+          ls -d */ | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
+          echo ']}' >> versions.json
+
+      # 6. 部署到 gh-pages
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           publish_branch: gh-pages
-          destination_dir: ${{ steps.version.outputs.version }}  # 如 gh-pages/v1.0/
-          keep_files: true  # 保留其他版本
-
-      # 6. 更新 versions.json（记录所有版本）
-      - name: Update version list
-        if: github.ref == 'refs/heads/main'
+          keep_files: true
+        # 额外步骤：复制智能 index.html 到根目录
         run: |
-          # 克隆 gh-pages 分支（使用 Token 认证）
-          git clone --branch gh-pages "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" gh-pages
-          cd gh-pages
-
-          # 生成 versions.json（确保至少包含当前版本）
-          echo '{"versions": [' > versions.json
-          if [ -d "latest" ]; then echo "\"latest\"," >> versions.json; fi
-          if [ -d "v1.0" ]; then echo "\"v1.0\"," >> versions.json; fi
-          # 移除最后一个逗号（如果存在）
-          sed -i '$ s/,$//' versions.json
-          echo ']}' >> versions.json
-
-          # 强制提交（即使文件未变化）
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add versions.json
-          git commit --allow-empty -m "Update version list"
-          git push "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git" gh-pages
+          cp docs/root-index.html output/index.html
