@@ -1424,7 +1424,8 @@ HTML_EXTRA_STYLESHEET  = doxygen-awesome.css \
                          doxygen-custom/custom.css \
                          doxygen-awesome-sidebar-only.css \
                          doxygen-awesome-sidebar-only-darkmode-toggle.css \
-                         doxygen-custom/custom-alternative.css
+                         doxygen-custom/custom-alternative.css \
+                         docs/version-switcher.css
 
 # The HTML_EXTRA_FILES tag can be used to specify one or more extra images or
 # other source files which should be copied to the HTML output directory. Note
@@ -1439,7 +1440,8 @@ HTML_EXTRA_FILES       = doxygen-awesome-darkmode-toggle.js \
                          doxygen-awesome-paragraph-link.js \
                          doxygen-custom/toggle-alternative-theme.js \
                          doxygen-awesome-interactive-toc.js \
-                         doxygen-awesome-tabs.js
+                         doxygen-awesome-tabs.js \
+                         docs/version-switcher.js
 
 # The HTML_COLORSTYLE tag can be used to specify if the generated HTML output
 # should be rendered with a dark or light theme.

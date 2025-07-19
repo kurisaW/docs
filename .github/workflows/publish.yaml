@@ -1,21 +1,69 @@
-name: Publish Doxygen Docs
+name: Publish Multi-version Docs
 on:
   push:
-    branches: [ main ]
-  release:
-    types: [ published ]
+    branches: [ main, release/* ]  # 监听 main 和 release/ 分支
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write  # 允许推送
     steps:
-      - uses: actions/checkout@v4
-      - run: sudo apt-get install -y doxygen graphviz
-      - run: doxygen Doxyfile
-      - uses: peaceiris/actions-gh-pages@v3
+      # 1. 检出代码（包括历史记录和标签）
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 2. 安装 Doxygen 和 Graphviz
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+
+      # 3. 生成版本号（分支名或标签）
+      - name: Set version info
+        id: version
+        run: |
+          if [[ $GITHUB_REF == refs/heads/main ]]; then
+            echo "version=latest" >> $GITHUB_OUTPUT
+          elif [[ $GITHUB_REF == refs/heads/release/* ]]; then
+            echo "version=${GITHUB_REF#refs/heads/release/}" >> $GITHUB_OUTPUT
+          else
+            echo "version=dev" >> $GITHUB_OUTPUT
+          fi
+
+      # 4. 生成 Doxygen 文档（输出到 ./output）
+      - name: Generate docs
+        run: |
+          mkdir -p ./output
+          echo "PROJECT_NUMBER = ${{ steps.version.outputs.version }}" >> Doxyfile
+          doxygen Doxyfile
+
+      # 5. 部署到 gh-pages 的版本子目录
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/html
+          publish_dir: ./output
           publish_branch: gh-pages
+          destination_dir: ${{ steps.version.outputs.version }}  # 如 gh-pages/v1.0/
+          keep_files: true  # 保留其他版本
+
+      # 6. 更新 versions.json（记录所有版本）
+      - name: Update version list
+        if: github.ref == 'refs/heads/main'  # 仅 main 分支更新全局版本列表
+        run: |
+          # 克隆 gh-pages 分支
+          git clone --branch gh-pages https://github.com/$GITHUB_REPOSITORY.git gh-pages
+          cd gh-pages
+
+          # 生成 versions.json
+          echo '{"versions": [' > versions.json
+          ls -d */ | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
+          echo ']}' >> versions.json
+
+          # 提交更新
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add versions.json
+          git commit -m "Update version list"
+          git push
