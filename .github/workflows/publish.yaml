@@ -1,22 +1,42 @@
-name: publish
+name: Publish Doxygen Docs to GitHub Pages
 on:
+  push:
+    branches: [ main ]  # 在 main 分支推送时触发
   release:
-    types: [published]
+    types: [ published ]  # 发布新版本时也触发
+
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
+  build-and-deploy:
+    runs-on: ubuntu-latest
     steps:
+      # 1. 检出代码
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - name: set version
-        run: echo "PROJECT_NUMBER = `git describe --tags`" >> Doxyfile
-      - name: Generate Documentation
-        uses: mattnotmitt/doxygen-action@edge
-      - name: Publish generated content to GitHub Pages
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+          fetch-depth: 0  # 获取完整 Git 历史（用于版本号）
+
+      # 2. 安装 Doxygen 和 Graphviz
+      - name: Install Doxygen and Graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y doxygen graphviz
+
+      # 3. 设置版本号（基于 Git Tag）
+      - name: Set version in Doxyfile
+        run: |
+          echo "PROJECT_NUMBER = $(git describe --tags)" >> Doxyfile
+
+      # 4. 生成 Doxygen 文档（输出到 ./docs-html）
+      - name: Generate Doxygen docs
+        run: |
+          mkdir -p ./docs-html
+          doxygen Doxyfile
+
+      # 5. 部署到 gh-pages 分支
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          dir: docs/html
-          branch: gh-pages
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs-html  # Doxygen 生成的 HTML 目录
+          publish_branch: gh-pages   # 推送到 gh-pages 分支
+          keep_files: false          # 完全覆盖 gh-pages 分支
