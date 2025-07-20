@@ -58,7 +58,7 @@ jobs:
             # 添加版本切换器文件到现有的HTML_EXTRA_FILES和HTML_EXTRA_STYLESHEET
             # 使用 sed 来修改现有的配置行
             sed -i 's|HTML_EXTRA_FILES.*|HTML_EXTRA_FILES = doxygen-awesome-darkmode-toggle.js \\\n                         doxygen-awesome-fragment-copy-button.js \\\n                         doxygen-awesome-paragraph-link.js \\\n                         doxygen-custom/toggle-alternative-theme.js \\\n                         doxygen-awesome-interactive-toc.js \\\n                         doxygen-awesome-tabs.js \\\n                         docs/version-switcher.js|' Doxyfile.tmp
-            sed -i 's|HTML_EXTRA_STYLESHEET.*|HTML_EXTRA_STYLESHEET = doxygen-awesome.css \\\n                         doxygen-custom/custom.css \\\n                         doxygen-awesome-sidebar-only.css \\\n                         doxygen-awesome-sidebar-only-darkmode-toggle.css \\\n                         doxygen-custom/custom-alternative.css \\\n                         docs/version-switcher.css|' Doxyfile.tmp
+            sed -i 's|HTML_EXTRA_STYLESHEET.*|HTML_EXTRA_STYLESHEET = doxygen-awesome.css \\\n                         doxygen-custom/custom.css \\\n                         doxygen-awesome-sidebar-only.css \\\n                         doxygen-awesome-sidebar-only-darkmode-toggle.css \\\n                         doxygen-custom/custom-alternative.css|' Doxyfile.tmp
             doxygen Doxyfile.tmp
 
             if [ -d "html" ]; then
