@@ -16,6 +16,55 @@ document.addEventListener('DOMContentLoaded', function() {
     oldDropdown.remove();
   }
   
+  // 直接注入CSS样式
+  const style = document.createElement('style');
+  style.textContent = `
+    #projectnumber {
+      cursor: pointer !important;
+      text-decoration: underline !important;
+      color: #3498db !important;
+      transition: color 0.2s ease;
+      position: relative;
+      border: 2px solid red !important;
+    }
+    
+    #projectnumber:hover {
+      color: #2980b9 !important;
+    }
+    
+    #version-dropdown {
+      position: absolute !important;
+      top: 100% !important;
+      left: 0 !important;
+      background: white !important;
+      border: 1px solid #ddd !important;
+      border-radius: 4px !important;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+      z-index: 1000 !important;
+      display: none !important;
+      min-width: 100px !important;
+      font-family: inherit !important;
+    }
+    
+    #version-dropdown div {
+      padding: 8px 12px !important;
+      cursor: pointer !important;
+      border-bottom: 1px solid #eee !important;
+      font-size: 12px !important;
+      transition: background-color 0.2s ease !important;
+    }
+    
+    #version-dropdown div:hover {
+      background-color: #f5f5f5 !important;
+    }
+    
+    #version-dropdown div:last-child {
+      border-bottom: none !important;
+    }
+  `;
+  document.head.appendChild(style);
+  console.log('Version switcher: Injected CSS styles');
+  
   // 获取正确的 versions.json 路径
   const currentPath = window.location.pathname;
   const pathSegments = currentPath.split('/').filter(segment => segment);
@@ -73,6 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (projectNumber) {
       console.log('Version switcher: Found project number element, modifying it');
       
+      // 检查CSS是否加载（红色边框测试）
+      const computedStyle = window.getComputedStyle(projectNumber);
+      console.log('Version switcher: Project number border:', computedStyle.border);
+      console.log('Version switcher: CSS loaded:', computedStyle.border.includes('red'));
+      
       // 设置当前版本显示
       const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
       projectNumber.textContent = displayVersion;
@@ -84,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function() {
       // 创建版本选择下拉菜单
       const dropdown = document.createElement('div');
       dropdown.id = 'version-dropdown';
-      dropdown.style.display = 'none'; // 确保初始状态是隐藏的
       
       console.log('Version switcher: Creating dropdown with versions:', versions);
       
@@ -93,12 +146,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const option = document.createElement('div');
         const optionText = version === 'latest' ? 'main' : version;
         option.textContent = optionText;
+        
         console.log('Version switcher: Adding option:', optionText);
         
         option.addEventListener('click', () => {
           const targetVersion = version === 'latest' ? 'latest' : version;
           console.log('Version switcher: Switching to version:', targetVersion);
           window.location.href = '../' + targetVersion + '/html/';
+        });
+        
+        option.addEventListener('mouseenter', () => {
+          option.style.backgroundColor = '#f5f5f5';
+        });
+        
+        option.addEventListener('mouseleave', () => {
+          option.style.backgroundColor = 'white';
         });
         
         dropdown.appendChild(option);
