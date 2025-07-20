@@ -52,32 +52,42 @@ html {
     #side-nav {
         min-width: var(--side-nav-fixed-width);
         max-width: var(--side-nav-fixed-width);
-        top: var(--top-height);
-        overflow: visible;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100vh !important;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
-        height: 100vh !important;
-    }
-
-    #top {
-        display: block;
-        border-bottom: none;
-        /* height: var(--top-height); */
-        margin-bottom: 0;
-        max-width: var(--side-nav-fixed-width);
-        overflow: visible;
+        position: fixed;
         background: var(--side-nav-background);
     }
+    #top {
+        flex-shrink: 0;
+        width: 100%;
+        background: var(--side-nav-background);
+        overflow: visible;
+        min-height: unset;
+        height: auto;
+        border-bottom: none;
+        max-width: var(--side-nav-fixed-width);
+        margin-bottom: 0;
+        z-index: 1;
+    }
     #main-nav {
-        float: none;
-        padding-right: 0;
+        flex-shrink: 0;
+        width: 100%;
         margin-top: 0;
+        background: var(--side-nav-background);
+        z-index: 1;
     }
     #nav-tree {
-        padding: 0;
         flex: 1 1 auto;
         min-height: 0;
         overflow-y: auto;
+        width: 100%;
+        background: var(--side-nav-background);
+        z-index: 0;
     }
     /* 让main-nav及其下方内容自动排在top下方 */
     #side-nav > #top + #main-nav,
