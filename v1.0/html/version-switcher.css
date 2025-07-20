@@ -4,6 +4,7 @@
   text-decoration: underline !important;
   color: #3498db !important;
   transition: color 0.2s ease;
+  position: relative;
 }
 
 #projectnumber:hover {
@@ -12,60 +13,60 @@
 
 /* 版本下拉菜单样式 */
 #version-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-  display: none;
-  min-width: 100px;
-  font-family: inherit;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  z-index: 1000 !important;
+  display: none !important;
+  min-width: 100px !important;
+  font-family: inherit !important;
 }
 
 #version-dropdown div {
-  padding: 8px 12px;
-  cursor: pointer;
-  border-bottom: 1px solid #eee;
-  font-size: 12px;
-  transition: background-color 0.2s ease;
+  padding: 8px 12px !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid #eee !important;
+  font-size: 12px !important;
+  transition: background-color 0.2s ease !important;
 }
 
 #version-dropdown div:hover {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5 !important;
 }
 
 #version-dropdown div:last-child {
-  border-bottom: none;
+  border-bottom: none !important;
 }
 
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   #version-dropdown {
-    background: #2c3e50;
-    border-color: #7f8c8d;
-    color: white;
+    background: #2c3e50 !important;
+    border-color: #7f8c8d !important;
+    color: white !important;
   }
   
   #version-dropdown div {
-    border-bottom-color: #34495e;
+    border-bottom-color: #34495e !important;
   }
   
   #version-dropdown div:hover {
-    background-color: #34495e;
+    background-color: #34495e !important;
   }
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
   #version-dropdown {
-    min-width: 80px;
+    min-width: 80px !important;
   }
   
   #version-dropdown div {
-    font-size: 11px;
-    padding: 6px 8px;
+    font-size: 11px !important;
+    padding: 6px 8px !important;
   }
 }
