@@ -5,217 +5,162 @@ document.addEventListener('DOMContentLoaded', function() {
   // 清理旧的版本切换器元素
   const oldVersionSwitcher = document.getElementById('version-switcher');
   if (oldVersionSwitcher) {
-    console.log('Version switcher: Removing old version switcher element');
     oldVersionSwitcher.remove();
   }
-  
-  // 清理旧的下拉菜单
   const oldDropdown = document.getElementById('version-dropdown');
   if (oldDropdown) {
-    console.log('Version switcher: Removing old dropdown element');
     oldDropdown.remove();
   }
   
-  // 直接注入CSS样式
+  // 注入美观的CSS样式
   const style = document.createElement('style');
   style.textContent = `
     #projectnumber {
       cursor: pointer !important;
-      text-decoration: underline !important;
       color: #3498db !important;
       transition: color 0.2s ease;
       position: relative;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      background: #fff;
+      border-radius: 6px;
+      padding: 2px 10px 2px 8px;
+      box-shadow: 0 1px 4px rgba(52,152,219,0.07);
+      border: 1px solid #e0e6ed;
+      gap: 4px;
+      user-select: none;
     }
-    
-    #projectnumber:hover {
-      color: #2980b9 !important;
+    #projectnumber:hover, #projectnumber.active {
+      background: #f0f7fd;
+      color: #217dbb !important;
+      border-color: #b5d6f6;
     }
-    
+    .dropdown-caret {
+      font-size: 0.85em;
+      color: #888;
+      margin-left: 4px;
+      transition: transform 0.2s;
+      pointer-events: none;
+    }
+    #projectnumber.active .dropdown-caret {
+      transform: rotate(180deg);
+      color: #217dbb;
+    }
     #version-dropdown {
       position: absolute !important;
-      top: 100% !important;
-      left: 0 !important;
-      background: white !important;
-      border: 1px solid #ddd !important;
-      border-radius: 4px !important;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+      top: calc(100% + 4px) !important;
+      right: 0 !important;
+      background: #fff !important;
+      border: 1px solid #e0e6ed !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 16px rgba(52,152,219,0.13) !important;
       z-index: 9999 !important;
-      min-width: 100px !important;
+      min-width: 120px !important;
       font-family: inherit !important;
+      padding: 4px 0 !important;
+      display: none;
     }
-    
     #version-dropdown div {
-      padding: 8px 12px !important;
+      padding: 8px 18px 8px 16px !important;
       cursor: pointer !important;
-      border-bottom: 1px solid #eee !important;
-      font-size: 12px !important;
-      transition: background-color 0.2s ease !important;
-      color: #333 !important;
+      font-size: 13px !important;
+      color: #217dbb !important;
+      border: none !important;
+      background: none !important;
+      border-radius: 0 !important;
+      transition: background 0.18s, color 0.18s;
+      text-align: left;
     }
-    
     #version-dropdown div:hover {
-      background-color: #f5f5f5 !important;
+      background: #f0f7fd !important;
+      color: #145a86 !important;
+      border-radius: 0 8px 8px 0;
     }
-    
-    #version-dropdown div:last-child {
-      border-bottom: none !important;
+    #version-dropdown div.selected {
+      font-weight: bold;
+      color: #145a86 !important;
+      background: #eaf3fa !important;
     }
   `;
   document.head.appendChild(style);
-  console.log('Version switcher: Injected CSS styles');
-  
+
   // 获取正确的 versions.json 路径
   const currentPath = window.location.pathname;
   const pathSegments = currentPath.split('/').filter(segment => segment);
-  
-  console.log('Version switcher: Current path:', currentPath);
-  console.log('Version switcher: Path segments:', pathSegments);
-  
-  // 根据当前路径确定 versions.json 的位置
   let versionsPath = './versions.json';
-  
-  // 如果在子目录中，需要回到根目录
   if (pathSegments.length >= 3) {
-    // 从 /docs/latest/html/index.html 回到 /docs/latest/versions.json
     versionsPath = '../versions.json';
   } else if (pathSegments.length >= 2) {
-    // 从 /docs/latest/ 回到 /docs/versions.json
     versionsPath = '../versions.json';
   }
-  
-  console.log('Version switcher: Fetching versions from:', versionsPath);
-  
-  // 备用版本列表
-  const fallbackVersions = ['latest', 'v1.0'];
-  
+
   fetch(versionsPath)
     .then(res => {
-      console.log('Version switcher: Response status:', res.status);
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`);
-      }
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       return res.json();
     })
     .then(data => {
-      console.log('Version switcher: Received data:', data);
       if (!data.versions || !Array.isArray(data.versions)) {
-        console.warn('Invalid versions.json format, using fallback');
-        return createVersionSwitcher(fallbackVersions);
+        return createVersionSwitcher(['latest', 'v1.0']);
       }
-      
       return createVersionSwitcher(data.versions);
     })
-    .catch(error => {
-      console.error('Failed to load version switcher:', error);
-      console.log('Using fallback version list');
-      return createVersionSwitcher(fallbackVersions);
-    });
-    
+    .catch(() => createVersionSwitcher(['latest', 'v1.0']));
+
   function createVersionSwitcher(versions) {
-    const currentVersion = pathSegments[1] || 'latest'; // 从路径中获取版本号
-    console.log('Version switcher: Current version:', currentVersion);
-    console.log('Version switcher: Available versions:', versions);
-    
-    // 查找项目编号元素
+    const currentVersion = pathSegments[1] || 'latest';
     const projectNumber = document.getElementById('projectnumber');
     if (projectNumber) {
-      console.log('Version switcher: Found project number element, modifying it');
-      
-      // 检查CSS是否加载
-      const computedStyle = window.getComputedStyle(projectNumber);
-      console.log('Version switcher: Project number color:', computedStyle.color);
-      console.log('Version switcher: CSS loaded:', computedStyle.color.includes('rgb(52, 152, 219)'));
-      
-      // 设置当前版本显示
+      // 构建版本号+下拉符号
       const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
-      projectNumber.textContent = displayVersion;
-      console.log('Version switcher: Set display version to:', displayVersion);
-      
-      // 添加提示文本
-      projectNumber.title = 'Click to switch version';
-      
-      // 创建版本选择下拉菜单
+      projectNumber.innerHTML = `<span class="version-label">${displayVersion}</span><span class="dropdown-caret">▼</span>`;
+      projectNumber.title = '点击切换文档版本';
+      projectNumber.classList.remove('active');
+
+      // 创建下拉菜单
       const dropdown = document.createElement('div');
       dropdown.id = 'version-dropdown';
-      dropdown.style.display = 'none'; // 初始状态隐藏
-      
-      console.log('Version switcher: Creating dropdown with versions:', versions);
-      
-      // 添加版本选项
+      dropdown.style.display = 'none';
       versions.forEach(version => {
         const option = document.createElement('div');
         const optionText = version === 'latest' ? 'main' : version;
         option.textContent = optionText;
-        
-        console.log('Version switcher: Adding option:', optionText);
-        
-        option.addEventListener('click', () => {
-          const targetVersion = version === 'latest' ? 'latest' : version;
-          console.log('Version switcher: Switching to version:', targetVersion);
-          
-          // 计算正确的跳转URL
+        if (optionText === displayVersion) {
+          option.classList.add('selected');
+        }
+        option.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (optionText === displayVersion) return;
           let targetUrl;
-          if (targetVersion === 'latest') {
-            // 跳转到最新版本
+          if (version === 'latest') {
             targetUrl = '/docs/latest/html/';
           } else {
-            // 跳转到特定版本
-            targetUrl = `/docs/${targetVersion}/html/`;
+            targetUrl = `/docs/${version}/html/`;
           }
-          
-          console.log('Version switcher: Target URL:', targetUrl);
           window.location.href = targetUrl;
         });
-        
-        option.addEventListener('mouseenter', () => {
-          option.style.backgroundColor = '#f5f5f5';
-        });
-        
-        option.addEventListener('mouseleave', () => {
-          option.style.backgroundColor = 'white';
-        });
-        
         dropdown.appendChild(option);
       });
-      
-      // 将下拉菜单添加到项目编号的父元素
-      const parentElement = projectNumber.parentNode;
-      parentElement.style.position = 'relative';
-      parentElement.appendChild(dropdown);
-      console.log('Version switcher: Added dropdown to parent element');
-      console.log('Version switcher: Dropdown element:', dropdown);
-      console.log('Version switcher: Dropdown style.display:', dropdown.style.display);
-      
-      // 添加点击事件
-      projectNumber.addEventListener('click', (e) => {
+      // 右对齐到 projectnumber
+      projectNumber.style.position = 'relative';
+      projectNumber.appendChild(dropdown);
+
+      // 切换下拉菜单显示
+      function toggleDropdown(e) {
         e.stopPropagation();
         const isVisible = dropdown.style.display === 'block';
         dropdown.style.display = isVisible ? 'none' : 'block';
-        console.log('Version switcher: Toggle dropdown, new state:', dropdown.style.display);
-        console.log('Version switcher: Dropdown computed style:', window.getComputedStyle(dropdown).display);
-        console.log('Version switcher: Dropdown children count:', dropdown.children.length);
-        console.log('Version switcher: Dropdown HTML:', dropdown.innerHTML);
-        
-        // 强制重绘并确保显示
-        if (dropdown.style.display === 'block') {
-          dropdown.style.setProperty('display', 'block', 'important');
-          console.log('Version switcher: Forced display block with important');
-          
-          // 检查下拉菜单的位置和尺寸
-          const rect = dropdown.getBoundingClientRect();
-          console.log('Version switcher: Dropdown position:', rect);
-          console.log('Version switcher: Dropdown dimensions:', rect.width, 'x', rect.height);
-        }
-      });
-      
-      // 点击其他地方关闭下拉菜单
-      document.addEventListener('click', () => {
+        projectNumber.classList.toggle('active', !isVisible);
+      }
+      projectNumber.addEventListener('click', toggleDropdown);
+      // 点击外部关闭
+      document.addEventListener('click', function() {
         dropdown.style.display = 'none';
+        projectNumber.classList.remove('active');
       });
-      
-      console.log('Version switcher: Successfully modified project number element');
-    } else {
-      console.log('Version switcher: Project number element not found');
+      // 防止菜单点击冒泡
+      dropdown.addEventListener('click', e => e.stopPropagation());
     }
   }
 });
