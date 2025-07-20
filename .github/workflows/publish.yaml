@@ -67,6 +67,13 @@ jobs:
           echo '{"versions": [' > versions.json
           ls -d */ | grep -E '^[a-zA-Z0-9]+/' | sed 's/\///g' | sed 's/^/"/' | sed 's/$/"/' | tr '\n' ',' | sed 's/,$//' >> versions.json
           echo ']}' >> versions.json
+          
+          # 将 versions.json 复制到每个版本的目录中
+          for dir in */; do
+            if [ -d "$dir" ]; then
+              cp versions.json "$dir/"
+            fi
+          done
 
       - name: Prepare deployment
         run: |
