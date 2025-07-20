@@ -23,9 +23,8 @@ jobs:
       - name: Parse version list
         id: versions
         run: |
-          # 从 .github/versions.list 提取版本（移除注释和空行）
           if [ -f ".github/versions.list" ]; then
-            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | tr '\n' ' ' | sed 's/ $//')
+            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ' | sed 's/ $//')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
           else
             echo "versions=main" >> $GITHUB_OUTPUT
@@ -34,26 +33,24 @@ jobs:
 
       - name: Build docs
         run: |
-          # 安全分割字符串为数组
           IFS=' ' read -ra VERSION_ARRAY <<< "${{ steps.versions.outputs.versions }}"
           
           for VERSION in "${VERSION_ARRAY[@]}"; do
             echo "Building version: $VERSION"
             
-            # 如果是 main 分支，输出到 latest/
             if [ "$VERSION" = "main" ]; then
               OUT_DIR="latest"
             else
               OUT_DIR="$VERSION"
             fi
 
-            # 生成文档
             mkdir -p "output/$OUT_DIR"
             cp Doxyfile Doxyfile.tmp
             echo "PROJECT_NUMBER = $VERSION" >> Doxyfile.tmp
+            echo "HTML_EXTRA_FILES = docs/version-switcher.js" >> Doxyfile.tmp
+            echo "HTML_EXTRA_STYLESHEET = docs/version-switcher.css" >> Doxyfile.tmp
             doxygen Doxyfile.tmp
 
-            # 移动文件到 output/
             if [ -d "html" ]; then
               mv html/* "output/$OUT_DIR/"
             fi
@@ -62,12 +59,14 @@ jobs:
       - name: Generate version manifest
         run: |
           cd output
+          # 只匹配字母数字目录名
           echo '{"versions": [' > versions.json
-          ls -d */ | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
+          ls -d */ | grep -E '^[a-zA-Z0-9]+/' | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
           echo ']}' >> versions.json
 
       - name: Prepare deployment
         run: |
+          # 创建根目录重定向
           cat > output/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
