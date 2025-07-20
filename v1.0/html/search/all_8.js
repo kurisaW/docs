@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['list_0',['list',['../bug.html',1,'Bug List'],['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]],
-  ['lists_1',['Lists',['../class_my_library_1_1_example.html#autotoc_md3',1,'']]],
-  ['long_5ffunction_5fwith_5fmany_5fparameters_2',['long_function_with_many_parameters',['../class_my_library_1_1_subclass_example.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
+  ['installation_0',['installation',['../index.html#autotoc_md11',1,'Installation'],['../md_docs_2extensions.html#autotoc_md20',1,'Installation'],['../md_docs_2extensions.html#autotoc_md22',1,'Installation'],['../md_docs_2extensions.html#autotoc_md24',1,'Installation'],['../md_docs_2extensions.html#autotoc_md26',1,'Installation'],['../md_docs_2extensions.html#autotoc_md28',1,'Installation'],['../md_docs_2extensions.html#autotoc_md30',1,'Installation']]],
+  ['installation_20instructions_1',['Further installation instructions',['../index.html#autotoc_md16',1,'']]],
+  ['instructions_2',['Further installation instructions',['../index.html#autotoc_md16',1,'']]],
+  ['interactive_20toc_3',['Interactive TOC',['../md_docs_2extensions.html#extension-toc',1,'']]]
 ];

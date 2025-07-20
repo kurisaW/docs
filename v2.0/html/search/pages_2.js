@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['kurisaw_20docs_0',['KurisaW Docs',['../index.html',1,'']]]
+  ['customization_0',['Customization',['../md_docs_2customization.html',1,'']]]
 ];
