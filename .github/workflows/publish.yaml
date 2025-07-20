@@ -73,7 +73,7 @@ jobs:
           <!DOCTYPE html>
           <html>
           <head>
-            <meta http-equiv="refresh" content="0; url=./latest/" />
+            <meta http-equiv="refresh" content="0; url=./latest/html/" />
           </head>
           <body>
             Redirecting to latest version...
