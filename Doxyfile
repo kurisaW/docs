@@ -42,7 +42,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "kurisaw docs"
+PROJECT_NAME           = "RT-Thread RTOS"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -54,14 +54,14 @@ PROJECT_NUMBER         =
 # for a project that appears at the top of each page and should give viewer a
 # quick idea about the purpose of the project. Keep the description short.
 
-PROJECT_BRIEF          = "personal docs"
+PROJECT_BRIEF          = "An open source embedded real-time operating system"
 
 # With the PROJECT_LOGO tag one can specify a logo or an icon that is included
 # in the documentation. The maximum height of the logo should not exceed 55
 # pixels and the maximum width should not exceed 200 pixels. Doxygen will copy
 # the logo to the output directory.
 
-PROJECT_LOGO           = ./logo.drawio.svg
+PROJECT_LOGO           = ../img/rtthread_logo.png
 
 # With the PROJECT_ICON tag one can specify an icon that is included in the tabs
 # when the HTML document is shown. Doxygen will copy the logo to the output
@@ -163,7 +163,7 @@ ABBREVIATE_BRIEF       = "The $name class" \
 # description.
 # The default value is: NO.
 
-ALWAYS_DETAILED_SEC    = NO
+ALWAYS_DETAILED_SEC    = YES
 
 # If the INLINE_INHERITED_MEMB tag is set to YES, Doxygen will show all
 # inherited members of a class in the documentation of that class as if those
@@ -297,7 +297,7 @@ ALIASES                =
 # members will be omitted, etc.
 # The default value is: NO.
 
-OPTIMIZE_OUTPUT_FOR_C  = NO
+OPTIMIZE_OUTPUT_FOR_C  = YES
 
 # Set the OPTIMIZE_OUTPUT_JAVA tag to YES if your project consists of Java or
 # Python sources only. Doxygen will then generate output that is more tailored
@@ -707,7 +707,7 @@ SORT_BRIEF_DOCS        = NO
 # detailed member documentation.
 # The default value is: NO.
 
-SORT_MEMBERS_CTORS_1ST = NO
+SORT_MEMBERS_CTORS_1ST = YES
 
 # If the SORT_GROUP_NAMES tag is set to YES then Doxygen will sort the hierarchy
 # of group names into alphabetical order. If set to NO the group names will
@@ -724,7 +724,7 @@ SORT_GROUP_NAMES       = NO
 # list.
 # The default value is: NO.
 
-SORT_BY_SCOPE_NAME     = NO
+SORT_BY_SCOPE_NAME     = YES
 
 # If the STRICT_PROTO_MATCHING option is enabled and Doxygen fails to do proper
 # type resolution of all parameters of a function it will reject a match between
@@ -965,11 +965,15 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = include \
-                         README.md \
-                         docs/extensions.md \
-                         docs/customization.md \
-                         docs/tricks.md
+INPUT                  = . \
+                         ../src \
+                         ../include \
+                         ../components/finsh \
+                         ../components/drivers/include/drivers \
+                         ../components/drivers/clk \
+                         ../components/drivers/audio \
+                         ../components/dfs/dfs_v2/src \
+                         ../components/dfs/dfs_v2/include
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1011,49 +1015,10 @@ INPUT_FILE_ENCODING    =
 
 FILE_PATTERNS          = *.c \
                          *.cc \
-                         *.cxx \
                          *.cpp \
-                         *.c++ \
-                         *.java \
-                         *.ii \
-                         *.ixx \
-                         *.ipp \
-                         *.i++ \
-                         *.inl \
-                         *.idl \
-                         *.ddl \
-                         *.odl \
                          *.h \
-                         *.hh \
-                         *.hxx \
-                         *.hpp \
-                         *.h++ \
-                         *.cs \
-                         *.d \
-                         *.php \
-                         *.php4 \
-                         *.php5 \
-                         *.phtml \
                          *.inc \
-                         *.m \
-                         *.markdown \
-                         *.md \
-                         *.mm \
-                         *.dox \
-                         *.py \
-                         *.pyw \
-                         *.f90 \
-                         *.f95 \
-                         *.f03 \
-                         *.f08 \
-                         *.f18 \
-                         *.f \
-                         *.for \
-                         *.vhd \
-                         *.vhdl \
-                         *.ucf \
-                         *.qsf \
-                         *.ice
+                         *.md
 
 # The RECURSIVE tag can be used to specify whether or not subdirectories should
 # be searched for input files as well.
@@ -1745,7 +1710,7 @@ QHG_LOCATION           =
 # The default value is: NO.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-GENERATE_ECLIPSEHELP   = NO
+GENERATE_ECLIPSEHELP   = YES
 
 # A unique identifier for the Eclipse help plugin. When installing the plugin
 # the directory name containing the HTML and XML files should also have this
@@ -1753,7 +1718,7 @@ GENERATE_ECLIPSEHELP   = NO
 # The default value is: org.doxygen.Project.
 # This tag requires that the tag GENERATE_ECLIPSEHELP is set to YES.
 
-ECLIPSE_DOC_ID         = org.doxygen.Project
+ECLIPSE_DOC_ID         = org.rt-thread.api_help
 
 # If you want full control over the layout of the generated HTML pages it might
 # be necessary to disable the index and replace it with your own. The
@@ -2497,7 +2462,23 @@ INCLUDE_FILE_PATTERNS  =
 # recursively expanded use the := operator instead of the = operator.
 # This tag requires that the tag ENABLE_PREPROCESSING is set to YES.
 
-PREDEFINED             =
+PREDEFINED             = RT_USING_SEMAPHORE \
+                         RT_USING_MUTEX \
+                         RT_USING_EVENT \
+                         RT_USING_MAILBOX \
+                         RT_USING_MESSAGEQUEUE \
+                         RT_USING_MEMPOOL \
+                         RT_USING_HOOK \
+                         RT_USING_SMALL_MEM \
+                         RT_USING_DEVICE \
+                         RT_USING_MODULE \
+                         RT_USING_DFS \
+                         FINSH_USING_SYMTAB \
+                         FINSH_USING_DESCRIPTION \
+                         RT_USING_FINSH \
+                         RT_USING_HEAP \
+                         RT_USING_MODULE \
+                         RT_USING_SIGNALS
 
 # If the MACRO_EXPANSION and EXPAND_ONLY_PREDEF tags are set to YES then this
 # tag can be used to specify a list of macro names that should be expanded. The
@@ -2675,7 +2656,7 @@ GROUP_GRAPHS           = YES
 # The default value is: NO.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-UML_LOOK               = NO
+UML_LOOK               = YES
 
 # If the UML_LOOK tag is enabled, the fields and methods are shown inside the
 # class node. If there are many fields or methods and many nodes the graph may
@@ -2806,7 +2787,7 @@ DIR_GRAPH_MAX_DEPTH    = 1
 # The default value is: png.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_IMAGE_FORMAT       = svg
+DOT_IMAGE_FORMAT       = png
 
 # If DOT_IMAGE_FORMAT is set to svg, then this option can be set to YES to
 # enable generation of interactive SVG images that allow zooming and panning.
@@ -2886,7 +2867,19 @@ DOT_GRAPH_MAX_NODES    = 50
 # Minimum value: 0, maximum value: 1000, default value: 0.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-MAX_DOT_GRAPH_DEPTH    = 0
+MAX_DOT_GRAPH_DEPTH    = 1000
+
+# Set the DOT_TRANSPARENT tag to YES to generate images with a transparent
+# background. This is disabled by default, because dot on Windows does not seem
+# to support this out of the box.
+#
+# Warning: Depending on the platform used, enabling this option may lead to
+# badly anti-aliased labels on the edges of a graph (i.e. they become hard to
+# read).
+# The default value is: NO.
+# This tag requires that the tag HAVE_DOT is set to YES.
+
+DOT_TRANSPARENT        = NO
 
 # Set the DOT_MULTI_TARGETS tag to YES to allow dot to generate multiple output
 # files in one run (i.e. multiple -o and -T options on the command line). This
