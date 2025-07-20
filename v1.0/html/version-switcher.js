@@ -1,209 +1,90 @@
 // 等待 DOM 加载完成
-// == Version Switcher Sidebar Extension ==
 document.addEventListener('DOMContentLoaded', function() {
-  // 1. 插入 sidebar 扩展区结构
-  function insertSidebarExtension() {
-    // 查找 sidebar
-    var sideNav = document.getElementById('side-nav');
-    if (!sideNav) return null;
-    // 检查是否已插入扩展区
-    if (document.getElementById('sidebar-extensions')) return document.getElementById('sidebar-extensions');
-    // 创建扩展区容器
-    var extDiv = document.createElement('div');
-    extDiv.id = 'sidebar-extensions';
-    extDiv.innerHTML = `
-      <div id="sidebar-extension-toggle">
-        <span id="sidebar-extension-title"></span>
-        <span class="sidebar-caret">▼</span>
-      </div>
-      <div id="sidebar-extension-panel" style="display:none">
-        <div id="sidebar-version-switcher"></div>
-        <!-- 预留：PDF/设置等扩展项 -->
-      </div>
-    `;
-    // 插入到 side-nav 最后
-    sideNav.appendChild(extDiv);
-    return extDiv;
+  console.log('Version switcher: DOM loaded');
+  
+  // 清理旧的版本切换器元素
+  const oldVersionSwitcher = document.getElementById('version-switcher');
+  if (oldVersionSwitcher) {
+    oldVersionSwitcher.remove();
   }
-
-  // 2. 注入样式（透明背景、主题色、动画、圆角、阴影、z-index）
+  const oldDropdown = document.getElementById('version-dropdown');
+  if (oldDropdown) {
+    oldDropdown.remove();
+  }
+  
+  // 注入美观的CSS样式
   const style = document.createElement('style');
   style.textContent = `
-    #sidebar-extensions {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      z-index: 9999;
-      background: transparent;
-      box-sizing: border-box;
-      padding-bottom: 8px;
-      pointer-events: auto;
-    }
-    #sidebar-extension-toggle {
-      display: flex;
+    #projectnumber {
+      cursor: pointer !important;
+      color: #3498db !important;
+      transition: color 0.2s ease;
+      position: relative;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-      font-size: 1em;
-      color: var(--primary-color, #3498db);
-      background: transparent;
-      border-radius: 8px 8px 0 0;
-      padding: 8px 16px 8px 12px;
-      margin: 0 8px;
-      user-select: none;
-      transition: background 0.18s;
-    }
-    #sidebar-extension-toggle:hover, #sidebar-extension-toggle.active {
-      background: var(--side-nav-hover, #f0f7fd);
-    }
-    .sidebar-caret {
-      font-size: 0.9em;
-      margin-left: 8px;
-      transition: transform 0.2s;
-    }
-    #sidebar-extension-toggle.active .sidebar-caret {
-      transform: rotate(180deg);
-    }
-    #sidebar-extension-panel {
-      display: none;
-      background: var(--side-nav-background, #fff);
-      box-shadow: 0 -2px 16px rgba(52,152,219,0.13);
-      border-radius: 0 0 12px 12px;
-      margin: 0 8px 0 8px;
-      padding: 12px 8px 8px 8px;
-      animation: sidebarPanelFadeIn 0.25s;
-      position: relative;
-      z-index: 10000;
-    }
-    @keyframes sidebarPanelFadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    /* 版本切换器样式 */
-    #sidebar-version-switcher {
-      margin-bottom: 8px;
-    }
-    #sidebar-version-switcher .version-switcher-label {
       font-weight: 500;
-      color: var(--primary-color, #3498db);
-      margin-right: 8px;
-    }
-    #sidebar-version-switcher .version-switcher-dropdown {
-      display: inline-block;
-      position: relative;
-    }
-    #sidebar-version-switcher .version-switcher-current {
-      cursor: pointer;
-      color: var(--primary-color, #3498db);
-      background: transparent;
-      border: 1px solid var(--primary-color, #3498db);
+      background: #fff;
       border-radius: 6px;
-      padding: 2px 16px 2px 8px;
-      font-size: 1em;
-      min-width: 60px;
+      padding: 2px 10px 2px 8px;
+      box-shadow: 0 1px 4px rgba(52,152,219,0.07);
+      border: 1px solid #e0e6ed !important;
+      gap: 4px;
       user-select: none;
-      transition: background 0.18s, color 0.18s;
     }
-    #sidebar-version-switcher .version-switcher-current:hover {
-      background: var(--side-nav-hover, #f0f7fd);
-      color: #217dbb;
+    #projectnumber:hover, #projectnumber.active {
+      background: #f0f7fd;
+      color: #217dbb !important;
+      border-color: #b5d6f6;
     }
-    #sidebar-version-switcher .version-switcher-caret {
-      font-size: 0.9em;
+    .dropdown-caret {
+      font-size: 0.85em;
+      color: #888;
       margin-left: 4px;
+      transition: transform 0.2s;
       pointer-events: none;
     }
-    #sidebar-version-switcher .version-switcher-dropdown-list {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: 110%;
-      background: var(--side-nav-background, #fff);
-      border: 1px solid #e0e6ed;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(52,152,219,0.13);
-      z-index: 10001;
-      min-width: 100px;
-      padding: 4px 0;
-    }
-    #sidebar-version-switcher .version-switcher-dropdown-list.show {
-      display: block;
-      animation: sidebarPanelFadeIn 0.18s;
-    }
-    #sidebar-version-switcher .version-switcher-option {
-      padding: 8px 18px 8px 16px;
-      cursor: pointer;
-      font-size: 13px;
+    #projectnumber.active .dropdown-caret {
+      transform: rotate(180deg);
       color: #217dbb;
-      border: none;
-      background: none;
-      border-radius: 0;
+    }
+    #version-dropdown {
+      position: absolute !important;
+      top: calc(100% + 4px) !important;
+      right: 0 !important;
+      background: #fff !important;
+      border: 1px solid #e0e6ed !important;
+      border-radius: 8px !important;
+      box-shadow: 0 4px 16px rgba(52,152,219,0.13) !important;
+      z-index: 9999 !important;
+      min-width: 120px !important;
+      font-family: inherit !important;
+      padding: 4px 0 !important;
+    }
+    #version-dropdown div {
+      padding: 8px 18px 8px 16px !important;
+      cursor: pointer !important;
+      font-size: 13px !important;
+      color: #217dbb !important;
+      border: none !important;
+      background: none !important;
+      border-radius: 0 !important;
       transition: background 0.18s, color 0.18s;
       text-align: left;
     }
-    #sidebar-version-switcher .version-switcher-option.selected {
-      font-weight: bold;
-      color: #145a86;
-      background: #eaf3fa;
-    }
-    #sidebar-version-switcher .version-switcher-option:hover {
-      background: #f0f7fd;
-      color: #145a86;
+    #version-dropdown div:hover {
+      background: #f0f7fd !important;
+      color: #145a86 !important;
       border-radius: 0 8px 8px 0;
     }
-    @media (prefers-color-scheme: dark) {
-      #sidebar-extension-panel, #sidebar-version-switcher .version-switcher-dropdown-list {
-        background: #23272e;
-        color: #fff;
-        border-color: #444c56;
-      }
-      #sidebar-extension-toggle {
-        color: #8ec2f7;
-      }
-      #sidebar-version-switcher .version-switcher-current {
-        color: #8ec2f7;
-        border-color: #8ec2f7;
-      }
-      #sidebar-version-switcher .version-switcher-option {
-        color: #8ec2f7;
-      }
-      #sidebar-version-switcher .version-switcher-option.selected {
-        color: #fff;
-        background: #2c3e50;
-      }
-      #sidebar-version-switcher .version-switcher-option:hover {
-        background: #34495e;
-        color: #fff;
-      }
+    #version-dropdown div.selected {
+      font-weight: bold;
+      color: #145a86 !important;
+      background: #eaf3fa !important;
     }
   `;
   document.head.appendChild(style);
+  console.log('Version switcher: CSS injected');
 
-  // 3. 初始化 sidebar 扩展区
-  const extDiv = insertSidebarExtension();
-  if (!extDiv) return;
-  const toggleBtn = extDiv.querySelector('#sidebar-extension-toggle');
-  const panel = extDiv.querySelector('#sidebar-extension-panel');
-  const versionSwitcherContainer = extDiv.querySelector('#sidebar-version-switcher');
-  const projectName = document.getElementById('projectname')?.childNodes[0]?.textContent?.trim() || 'Project';
-  // 设置入口标题
-  extDiv.querySelector('#sidebar-extension-title').textContent = `${projectName}  v:`;
-
-  // 4. 展开/收起动画
-  toggleBtn.addEventListener('click', function(e) {
-    e.stopPropagation();
-    const isOpen = panel.style.display === 'block';
-    panel.style.display = isOpen ? 'none' : 'block';
-    toggleBtn.classList.toggle('active', !isOpen);
-  });
-  document.addEventListener('click', function() {
-    panel.style.display = 'none';
-    toggleBtn.classList.remove('active');
-  });
-  panel.addEventListener('click', e => e.stopPropagation());
-
-  // 5. 版本切换器逻辑
   // 获取正确的 versions.json 路径
   const currentPath = window.location.pathname;
   const pathSegments = currentPath.split('/').filter(segment => segment);
@@ -213,55 +94,113 @@ document.addEventListener('DOMContentLoaded', function() {
   } else if (pathSegments.length >= 2) {
     versionsPath = '../versions.json';
   }
-  fetch(versionsPath)
-    .then(res => res.ok ? res.json() : {versions:['latest','v1.0']})
-    .then(data => {
-      const versions = (data.versions && Array.isArray(data.versions)) ? data.versions : ['latest','v1.0'];
-      createSidebarVersionSwitcher(versions);
-    })
-    .catch(() => createSidebarVersionSwitcher(['latest','v1.0']));
 
-  function createSidebarVersionSwitcher(versions) {
+  console.log('Version switcher: Fetching from:', versionsPath);
+
+  fetch(versionsPath)
+    .then(res => {
+      console.log('Version switcher: Response status:', res.status);
+      if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      console.log('Version switcher: Received data:', data);
+      if (!data.versions || !Array.isArray(data.versions)) {
+        console.log('Version switcher: Using fallback versions');
+        return createVersionSwitcher(['latest', 'v1.0']);
+      }
+      return createVersionSwitcher(data.versions);
+    })
+    .catch(error => {
+      console.error('Version switcher: Error:', error);
+      return createVersionSwitcher(['latest', 'v1.0']);
+    });
+
+  function createVersionSwitcher(versions) {
     const currentVersion = pathSegments[1] || 'latest';
-    const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
-    // 构建下拉
-    versionSwitcherContainer.innerHTML = `
-      <span class="version-switcher-label">版本</span>
-      <span class="version-switcher-dropdown">
-        <span class="version-switcher-current">${displayVersion}<span class="version-switcher-caret">▼</span></span>
-        <div class="version-switcher-dropdown-list"></div>
-      </span>
-    `;
-    const currentBtn = versionSwitcherContainer.querySelector('.version-switcher-current');
-    const dropdownList = versionSwitcherContainer.querySelector('.version-switcher-dropdown-list');
-    // 填充版本选项
-    versions.forEach(version => {
-      const optionText = version === 'latest' ? 'main' : version;
-      const option = document.createElement('div');
-      option.className = 'version-switcher-option' + (optionText === displayVersion ? ' selected' : '');
-      option.textContent = optionText;
-      option.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (optionText === displayVersion) return;
-        let targetUrl;
-        if (version === 'latest') {
-          targetUrl = '/docs/latest/html/';
-        } else {
-          targetUrl = `/docs/${version}/html/`;
+    const projectNumber = document.getElementById('projectnumber');
+    console.log('Version switcher: Current version:', currentVersion);
+    console.log('Version switcher: Available versions:', versions);
+    
+    if (projectNumber) {
+      console.log('Version switcher: Found project number element');
+      
+      // 构建版本号+下拉符号
+      const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
+      projectNumber.innerHTML = `<span class="version-label">${displayVersion}</span><span class="dropdown-caret">▼</span>`;
+      projectNumber.title = '点击切换文档版本';
+      projectNumber.classList.remove('active');
+      
+      console.log('Version switcher: Set display version to:', displayVersion);
+
+      // 创建下拉菜单
+      const dropdown = document.createElement('div');
+      dropdown.id = 'version-dropdown';
+      dropdown.style.display = 'none';
+      
+      console.log('Version switcher: Creating dropdown with versions:', versions);
+      
+      versions.forEach(version => {
+        const option = document.createElement('div');
+        const optionText = version === 'latest' ? 'main' : version;
+        option.textContent = optionText;
+        if (optionText === displayVersion) {
+          option.classList.add('selected');
         }
-        window.location.href = targetUrl;
+        option.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (optionText === displayVersion) return;
+          let targetUrl;
+          if (version === 'latest') {
+            targetUrl = '/docs/latest/html/';
+          } else {
+            targetUrl = `/docs/${version}/html/`;
+          }
+          console.log('Version switcher: Navigating to:', targetUrl);
+          window.location.href = targetUrl;
+        });
+        dropdown.appendChild(option);
+        console.log('Version switcher: Added option:', optionText);
       });
-      dropdownList.appendChild(option);
-    });
-    // 下拉展开/收起
-    currentBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      const isShow = dropdownList.classList.contains('show');
-      dropdownList.classList.toggle('show', !isShow);
-    });
-    document.addEventListener('click', function() {
-      dropdownList.classList.remove('show');
-    });
-    dropdownList.addEventListener('click', e => e.stopPropagation());
+      
+      // 右对齐到 projectnumber
+      projectNumber.style.position = 'relative';
+      projectNumber.appendChild(dropdown);
+      console.log('Version switcher: Added dropdown to project number');
+
+      // 切换下拉菜单显示
+      function toggleDropdown(e) {
+        e.stopPropagation();
+        const isVisible = dropdown.style.display === 'block';
+        const newDisplay = isVisible ? 'none' : 'block';
+        dropdown.style.display = newDisplay;
+        projectNumber.classList.toggle('active', !isVisible);
+        
+        console.log('Version switcher: Toggle dropdown, new display:', newDisplay);
+        console.log('Version switcher: Dropdown computed style:', window.getComputedStyle(dropdown).display);
+        console.log('Version switcher: Dropdown children count:', dropdown.children.length);
+        
+        // 强制应用样式
+        if (newDisplay === 'block') {
+          dropdown.style.setProperty('display', 'block', 'important');
+          console.log('Version switcher: Forced display block with important');
+        }
+      }
+      
+      projectNumber.addEventListener('click', toggleDropdown);
+      
+      // 点击外部关闭
+      document.addEventListener('click', function() {
+        dropdown.style.display = 'none';
+        projectNumber.classList.remove('active');
+      });
+      
+      // 防止菜单点击冒泡
+      dropdown.addEventListener('click', e => e.stopPropagation());
+      
+      console.log('Version switcher: Successfully initialized');
+    } else {
+      console.log('Version switcher: Project number element not found');
+    }
   }
 });
