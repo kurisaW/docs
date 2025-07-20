@@ -1,0 +1,1210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: Message Queue</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group__messagequeue.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Message Queue<div class="ingroups"><a class="el" href="group__group___i_p_c.html">Group_IPC</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for Message Queue:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group__messagequeue.png" border="0" usemap="#agroup____group____messagequeue" alt=""/></div>
+<map name="agroup____group____messagequeue" id="agroup____group____messagequeue">
+<area shape="rect" href="group__group___i_p_c.html" title=" " alt="" coords="5,5,95,31"/>
+<area shape="rect" title=" " alt="" coords="143,5,269,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__messagequeue.html">rt_messagequeue</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mq__message.html">rt_mq_message</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga1f53ffe3fad5a0d72915626909f3ebea" id="r_ga1f53ffe3fad5a0d72915626909f3ebea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga1f53ffe3fad5a0d72915626909f3ebea">RT_MQ_BUF_SIZE</a>(msg_size,  max_msgs)&#160;&#160;&#160;((<a class="el" href="group__group___basic_def.html#ga8e803706fb0e206869f5f706c1289949">RT_ALIGN</a>((msg_size), RT_ALIGN_SIZE) + sizeof(struct <a class="el" href="structrt__mq__message.html">rt_mq_message</a>)) * (max_msgs))</td></tr>
+<tr class="separator:ga1f53ffe3fad5a0d72915626909f3ebea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga5b956264720da4e2dfbbd54e94e54f96" id="r_ga5b956264720da4e2dfbbd54e94e54f96"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__messagequeue.html">rt_messagequeue</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a></td></tr>
+<tr class="separator:ga5b956264720da4e2dfbbd54e94e54f96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gaac5b76df894964c908271ab0951f7e86" id="r_gaac5b76df894964c908271ab0951f7e86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86">rt_mq_init</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const char *name, void *msgpool, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> msg_size, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> pool_size, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:gaac5b76df894964c908271ab0951f7e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a static messagequeue object.  <br /></td></tr>
+<tr class="separator:gaac5b76df894964c908271ab0951f7e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ed6238494fac3ab081a90d9c563a8f3" id="r_ga1ed6238494fac3ab081a90d9c563a8f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3">rt_mq_detach</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq)</td></tr>
+<tr class="memdesc:ga1ed6238494fac3ab081a90d9c563a8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will detach a static messagequeue object.  <br /></td></tr>
+<tr class="separator:ga1ed6238494fac3ab081a90d9c563a8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35acff654ecee2a76d5555e9683d8470" id="r_ga35acff654ecee2a76d5555e9683d8470"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470">rt_mq_create</a> (const char *name, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> msg_size, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> max_msgs, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:ga35acff654ecee2a76d5555e9683d8470"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a messagequeue object.  <br /></td></tr>
+<tr class="separator:ga35acff654ecee2a76d5555e9683d8470"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbf0bfedc6677ca8357d8b345c9026c9" id="r_gacbf0bfedc6677ca8357d8b345c9026c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9">rt_mq_delete</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq)</td></tr>
+<tr class="memdesc:gacbf0bfedc6677ca8357d8b345c9026c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will delete a messagequeue object and release the memory.  <br /></td></tr>
+<tr class="separator:gacbf0bfedc6677ca8357d8b345c9026c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3d128f328e2e979f0ee86d633937e4e" id="r_gab3d128f328e2e979f0ee86d633937e4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gab3d128f328e2e979f0ee86d633937e4e">rt_mq_send</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:gab3d128f328e2e979f0ee86d633937e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will send a message to the messagequeue object. If there is a thread suspended on the messagequeue, the thread will be resumed.  <br /></td></tr>
+<tr class="separator:gab3d128f328e2e979f0ee86d633937e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b426601c886c46dcc7546e135d1b971" id="r_ga7b426601c886c46dcc7546e135d1b971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga7b426601c886c46dcc7546e135d1b971">rt_mq_send_interruptible</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:ga7b426601c886c46dcc7546e135d1b971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d62ff6c3c18cc822e8ad6f71a7b691" id="r_ga77d62ff6c3c18cc822e8ad6f71a7b691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga77d62ff6c3c18cc822e8ad6f71a7b691">rt_mq_send_killable</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:ga77d62ff6c3c18cc822e8ad6f71a7b691"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a041666764bd3a737e6451e6e40887a" id="r_ga0a041666764bd3a737e6451e6e40887a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga0a041666764bd3a737e6451e6e40887a">rt_mq_send_wait</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga0a041666764bd3a737e6451e6e40887a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac888fea9179aa21a44fccb70771fac69" id="r_gac888fea9179aa21a44fccb70771fac69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gac888fea9179aa21a44fccb70771fac69">rt_mq_send_wait_interruptible</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:gac888fea9179aa21a44fccb70771fac69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52ebc10b837cd2245a9be2b26a4ecfb4" id="r_ga52ebc10b837cd2245a9be2b26a4ecfb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga52ebc10b837cd2245a9be2b26a4ecfb4">rt_mq_send_wait_killable</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga52ebc10b837cd2245a9be2b26a4ecfb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb1abee716f2f5c24a36aff2ffd32c75" id="r_gafb1abee716f2f5c24a36aff2ffd32c75"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gafb1abee716f2f5c24a36aff2ffd32c75">rt_mq_urgent</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, const void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:gafb1abee716f2f5c24a36aff2ffd32c75"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will send an urgent message to the messagequeue object.  <br /></td></tr>
+<tr class="separator:gafb1abee716f2f5c24a36aff2ffd32c75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6a078a9a93a84f5561753f0af6ee93a" id="r_gad6a078a9a93a84f5561753f0af6ee93a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gad6a078a9a93a84f5561753f0af6ee93a">rt_mq_recv</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:gad6a078a9a93a84f5561753f0af6ee93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9db56a8a65402262485037ccb66ed265" id="r_ga9db56a8a65402262485037ccb66ed265"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga9db56a8a65402262485037ccb66ed265">rt_mq_recv_interruptible</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga9db56a8a65402262485037ccb66ed265"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6938b9e0b2d88d6f28ee6b97cbffed54" id="r_ga6938b9e0b2d88d6f28ee6b97cbffed54"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga6938b9e0b2d88d6f28ee6b97cbffed54">rt_mq_recv_killable</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga6938b9e0b2d88d6f28ee6b97cbffed54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b1ec7b2bfbc8029b0200755505d7c55" id="r_ga3b1ec7b2bfbc8029b0200755505d7c55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga3b1ec7b2bfbc8029b0200755505d7c55">rt_mq_control</a> (<a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> mq, int cmd, void *arg)</td></tr>
+<tr class="memdesc:ga3b1ec7b2bfbc8029b0200755505d7c55"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set some extra attributions of a messagequeue object.  <br /></td></tr>
+<tr class="separator:ga3b1ec7b2bfbc8029b0200755505d7c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93cfe66dd53511ed621985bdb06efd90" id="r_ga93cfe66dd53511ed621985bdb06efd90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga93cfe66dd53511ed621985bdb06efd90">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86">rt_mq_init</a>)</td></tr>
+<tr class="separator:ga93cfe66dd53511ed621985bdb06efd90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41f55c01f1f379a8dc5346a3bcbeefe4" id="r_ga41f55c01f1f379a8dc5346a3bcbeefe4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga41f55c01f1f379a8dc5346a3bcbeefe4">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3">rt_mq_detach</a>)</td></tr>
+<tr class="separator:ga41f55c01f1f379a8dc5346a3bcbeefe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68a088043d6dd7676e2500a29127c73c" id="r_ga68a088043d6dd7676e2500a29127c73c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga68a088043d6dd7676e2500a29127c73c">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470">rt_mq_create</a>)</td></tr>
+<tr class="separator:ga68a088043d6dd7676e2500a29127c73c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga615c8481526e7684a61e2264f875cdb8" id="r_ga615c8481526e7684a61e2264f875cdb8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga615c8481526e7684a61e2264f875cdb8">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9">rt_mq_delete</a>)</td></tr>
+<tr class="separator:ga615c8481526e7684a61e2264f875cdb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga38150b4511cf6a2eb3bae015cab2257d" id="r_ga38150b4511cf6a2eb3bae015cab2257d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga38150b4511cf6a2eb3bae015cab2257d">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga0a041666764bd3a737e6451e6e40887a">rt_mq_send_wait</a>)</td></tr>
+<tr class="separator:ga38150b4511cf6a2eb3bae015cab2257d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga661311223232c5049e7673e605a0a5be" id="r_ga661311223232c5049e7673e605a0a5be"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga661311223232c5049e7673e605a0a5be">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gac888fea9179aa21a44fccb70771fac69">rt_mq_send_wait_interruptible</a>)</td></tr>
+<tr class="separator:ga661311223232c5049e7673e605a0a5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1cf16ac3ce97288d2dda8bb256b0740" id="r_gaf1cf16ac3ce97288d2dda8bb256b0740"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gaf1cf16ac3ce97288d2dda8bb256b0740">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga52ebc10b837cd2245a9be2b26a4ecfb4">rt_mq_send_wait_killable</a>)</td></tr>
+<tr class="separator:gaf1cf16ac3ce97288d2dda8bb256b0740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac92c6c82b64e37ecf737d5199fefa91" id="r_gaac92c6c82b64e37ecf737d5199fefa91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gaac92c6c82b64e37ecf737d5199fefa91">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gab3d128f328e2e979f0ee86d633937e4e">rt_mq_send</a>)</td></tr>
+<tr class="separator:gaac92c6c82b64e37ecf737d5199fefa91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36a1839619742e385c7ca72406bc9df2" id="r_ga36a1839619742e385c7ca72406bc9df2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga36a1839619742e385c7ca72406bc9df2">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga7b426601c886c46dcc7546e135d1b971">rt_mq_send_interruptible</a>)</td></tr>
+<tr class="separator:ga36a1839619742e385c7ca72406bc9df2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb696d8c1ff4d9ee454338805f5848cc" id="r_gacb696d8c1ff4d9ee454338805f5848cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gacb696d8c1ff4d9ee454338805f5848cc">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga77d62ff6c3c18cc822e8ad6f71a7b691">rt_mq_send_killable</a>)</td></tr>
+<tr class="separator:gacb696d8c1ff4d9ee454338805f5848cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4abcd39a1a5e2d2246231fd4f7a7e044" id="r_ga4abcd39a1a5e2d2246231fd4f7a7e044"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga4abcd39a1a5e2d2246231fd4f7a7e044">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gafb1abee716f2f5c24a36aff2ffd32c75">rt_mq_urgent</a>)</td></tr>
+<tr class="separator:ga4abcd39a1a5e2d2246231fd4f7a7e044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c628326db47605f25692e93d5d86564" id="r_ga8c628326db47605f25692e93d5d86564"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga8c628326db47605f25692e93d5d86564">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#gad6a078a9a93a84f5561753f0af6ee93a">rt_mq_recv</a>)</td></tr>
+<tr class="separator:ga8c628326db47605f25692e93d5d86564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9bf551e19d76cb80e09251cfe73b9bb3" id="r_ga9bf551e19d76cb80e09251cfe73b9bb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga9bf551e19d76cb80e09251cfe73b9bb3">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga9db56a8a65402262485037ccb66ed265">rt_mq_recv_interruptible</a>)</td></tr>
+<tr class="separator:ga9bf551e19d76cb80e09251cfe73b9bb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadccae9157c6937186b2a5f7191189437" id="r_gadccae9157c6937186b2a5f7191189437"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#gadccae9157c6937186b2a5f7191189437">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga6938b9e0b2d88d6f28ee6b97cbffed54">rt_mq_recv_killable</a>)</td></tr>
+<tr class="separator:gadccae9157c6937186b2a5f7191189437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93476135d1236e75e41c379c15534b5b" id="r_ga93476135d1236e75e41c379c15534b5b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__messagequeue.html#ga93476135d1236e75e41c379c15534b5b">RTM_EXPORT</a> (<a class="el" href="group__group__messagequeue.html#ga3b1ec7b2bfbc8029b0200755505d7c55">rt_mq_control</a>)</td></tr>
+<tr class="separator:ga93476135d1236e75e41c379c15534b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga1f53ffe3fad5a0d72915626909f3ebea" name="ga1f53ffe3fad5a0d72915626909f3ebea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f53ffe3fad5a0d72915626909f3ebea">&#9670;&#160;</a></span>RT_MQ_BUF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_MQ_BUF_SIZE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">msg_size, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">max_msgs&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;((<a class="el" href="group__group___basic_def.html#ga8e803706fb0e206869f5f706c1289949">RT_ALIGN</a>((msg_size), RT_ALIGN_SIZE) + sizeof(struct <a class="el" href="structrt__mq__message.html">rt_mq_message</a>)) * (max_msgs))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga5b956264720da4e2dfbbd54e94e54f96" name="ga5b956264720da4e2dfbbd54e94e54f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b956264720da4e2dfbbd54e94e54f96">&#9670;&#160;</a></span>rt_mq_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__messagequeue.html">rt_messagequeue</a>* <a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga3b1ec7b2bfbc8029b0200755505d7c55" name="ga3b1ec7b2bfbc8029b0200755505d7c55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b1ec7b2bfbc8029b0200755505d7c55">&#9670;&#160;</a></span>rt_mq_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will set some extra attributions of a messagequeue object. </p>
+<dl class="section note"><dt>Note</dt><dd>Currently this function only supports the RT_IPC_CMD_RESET command to reset the messagequeue.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to a messagequeue object.</td></tr>
+    <tr><td class="paramname">cmd</td><td>is a command used to configure some attributions of the messagequeue.</td></tr>
+    <tr><td class="paramname">arg</td><td>is the argument of the function to execute the command.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that this function failed to execute. </dd></dl>
+
+</div>
+</div>
+<a id="ga35acff654ecee2a76d5555e9683d8470" name="ga35acff654ecee2a76d5555e9683d8470"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35acff654ecee2a76d5555e9683d8470">&#9670;&#160;</a></span>rt_mq_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a> rt_mq_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>msg_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>max_msgs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creating a messagequeue object. </p>
+<dl class="section note"><dt>Note</dt><dd>For the messagequeue object, its memory space is allocated automatically. By contrast, the <a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86" title="Initialize a static messagequeue object.">rt_mq_init()</a> function will initialize a static messagequeue object.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86" title="Initialize a static messagequeue object.">rt_mq_init()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is a pointer that given to the messagequeue.</td></tr>
+    <tr><td class="paramname">msg_size</td><td>is the maximum length of a message in the messagequeue (Unit: Byte).</td></tr>
+    <tr><td class="paramname">max_msgs</td><td>is the maximum number of messages in the messagequeue.</td></tr>
+    <tr><td class="paramname">flag</td><td>is the messagequeue flag, which determines the queuing way of how multiple threads wait when the messagequeue is not available. The messagequeue flag can be ONE of the following values: <pre class="fragment">RT_IPC_FLAG_PRIO          The pending threads will queue in order of priority.
+
+RT_IPC_FLAG_FIFO          The pending threads will queue in the first-in-first-out method
+                          (also known as first-come-first-served (FCFS) scheduling strategy).
+
+NOTE: RT_IPC_FLAG_FIFO is a non-real-time scheduling mode. It is strongly recommended to
+use RT_IPC_FLAG_PRIO to ensure the thread is real-time UNLESS your applications concern about
+the first-in-first-out principle, and you clearly understand that all threads involved in
+this messagequeue will become non-real-time threads.
+</pre> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a pointer to the messagequeue object. When the return value is RT_NULL, it means the creation failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can NOT be called in interrupt context. You can use macor RT_DEBUG_NOT_IN_INTERRUPT to check it. </dd></dl>
+
+</div>
+</div>
+<a id="gacbf0bfedc6677ca8357d8b345c9026c9" name="gacbf0bfedc6677ca8357d8b345c9026c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacbf0bfedc6677ca8357d8b345c9026c9">&#9670;&#160;</a></span>rt_mq_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will delete a messagequeue object and release the memory. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is used to delete a messagequeue object which is created by the <a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a> function. By contrast, the <a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3" title="This function will detach a static messagequeue object.">rt_mq_detach()</a> function will detach a static messagequeue object. When the messagequeue is successfully deleted, it will resume all suspended threads in the messagequeue list.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3" title="This function will detach a static messagequeue object.">rt_mq_detach()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to a messagequeue object to be deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the messagequeue detach failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY delete a messagequeue initialized by the <a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a> function. If the messagequeue is initialized by the <a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86" title="Initialize a static messagequeue object.">rt_mq_init()</a> function, you MUST NOT USE this function to delete it, ONLY USE the <a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3" title="This function will detach a static messagequeue object.">rt_mq_detach()</a> function to complete the detachment. for example,the <a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a> function, it cannot be called in interrupt context. </dd></dl>
+
+</div>
+</div>
+<a id="ga1ed6238494fac3ab081a90d9c563a8f3" name="ga1ed6238494fac3ab081a90d9c563a8f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ed6238494fac3ab081a90d9c563a8f3">&#9670;&#160;</a></span>rt_mq_detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will detach a static messagequeue object. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is used to detach a static messagequeue object which is initialized by <a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86" title="Initialize a static messagequeue object.">rt_mq_init()</a> function. By contrast, the <a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9" title="This function will delete a messagequeue object and release the memory.">rt_mq_delete()</a> function will delete a messagequeue object. When the messagequeue is successfully detached, it will resume all suspended threads in the messagequeue list.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9" title="This function will delete a messagequeue object and release the memory.">rt_mq_delete()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to a messagequeue object to be detached.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the initialization is successful. If the return value is any other values, it means that the messagequeue detach failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY detach a static messagequeue initialized by the <a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86" title="Initialize a static messagequeue object.">rt_mq_init()</a> function. If the messagequeue is created by the <a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a> function, you MUST NOT USE this function to detach it, and ONLY USE the <a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9" title="This function will delete a messagequeue object and release the memory.">rt_mq_delete()</a> function to complete the deletion. </dd></dl>
+
+</div>
+</div>
+<a id="gaac5b76df894964c908271ab0951f7e86" name="gaac5b76df894964c908271ab0951f7e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac5b76df894964c908271ab0951f7e86">&#9670;&#160;</a></span>rt_mq_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>msgpool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>msg_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>pool_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a static messagequeue object. </p>
+<dl class="section note"><dt>Note</dt><dd>For the static messagequeue object, its memory space is allocated by the compiler during compiling, and shall placed on the read-write data segment or on the uninitialized data segment. By contrast, the <a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a> function will allocate memory space automatically and initialize the messagequeue.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470" title="Creating a messagequeue object.">rt_mq_create()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to the messagequeue to initialize. It is assumed that storage for the messagequeue will be allocated in your application.</td></tr>
+    <tr><td class="paramname">name</td><td>is a pointer to the name that given to the messagequeue.</td></tr>
+    <tr><td class="paramname">msgpool</td><td>is a pointer to the starting address of the memory space you allocated for the messagequeue in advance. In other words, msgpool is a pointer to the messagequeue buffer of the starting address.</td></tr>
+    <tr><td class="paramname">msg_size</td><td>is the maximum length of a message in the messagequeue (Unit: Byte).</td></tr>
+    <tr><td class="paramname">pool_size</td><td>is the size of the memory space allocated for the messagequeue in advance.</td></tr>
+    <tr><td class="paramname">flag</td><td>is the messagequeue flag, which determines the queuing way of how multiple threads wait when the messagequeue is not available. The messagequeue flag can be ONE of the following values: <pre class="fragment">RT_IPC_FLAG_PRIO          The pending threads will queue in order of priority.
+
+RT_IPC_FLAG_FIFO          The pending threads will queue in the first-in-first-out method
+                          (also known as first-come-first-served (FCFS) scheduling strategy).
+
+NOTE: RT_IPC_FLAG_FIFO is a non-real-time scheduling mode. It is strongly recommended to
+use RT_IPC_FLAG_PRIO to ensure the thread is real-time UNLESS your applications concern about
+the first-in-first-out principle, and you clearly understand that all threads involved in
+this messagequeue will become non-real-time threads.
+</pre> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the initialization is successful. If the return value is any other values, it represents the initialization failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY be called from threads. </dd></dl>
+
+</div>
+</div>
+<a id="gad6a078a9a93a84f5561753f0af6ee93a" name="gad6a078a9a93a84f5561753f0af6ee93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6a078a9a93a84f5561753f0af6ee93a">&#9670;&#160;</a></span>rt_mq_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> rt_mq_recv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9db56a8a65402262485037ccb66ed265" name="ga9db56a8a65402262485037ccb66ed265"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9db56a8a65402262485037ccb66ed265">&#9670;&#160;</a></span>rt_mq_recv_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> rt_mq_recv_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6938b9e0b2d88d6f28ee6b97cbffed54" name="ga6938b9e0b2d88d6f28ee6b97cbffed54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6938b9e0b2d88d6f28ee6b97cbffed54">&#9670;&#160;</a></span>rt_mq_recv_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> rt_mq_recv_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab3d128f328e2e979f0ee86d633937e4e" name="gab3d128f328e2e979f0ee86d633937e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3d128f328e2e979f0ee86d633937e4e">&#9670;&#160;</a></span>rt_mq_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will send a message to the messagequeue object. If there is a thread suspended on the messagequeue, the thread will be resumed. </p>
+<dl class="section note"><dt>Note</dt><dd>When using this function to send a message, if the messagequeue is fully used, the current thread will wait for a timeout. By contrast, when the messagequeue is fully used, the <a class="el" href="group__group__messagequeue.html#ga0a041666764bd3a737e6451e6e40887a">rt_mq_send_wait()</a> function will return an error code immediately without waiting.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#ga0a041666764bd3a737e6451e6e40887a">rt_mq_send_wait()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to the messagequeue object to be sent.</td></tr>
+    <tr><td class="paramname">buffer</td><td>is the content of the message.</td></tr>
+    <tr><td class="paramname">size</td><td>is the length of the message(Unit: Byte).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the messagequeue detach failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can be called in interrupt context and thread context. </dd></dl>
+
+</div>
+</div>
+<a id="ga7b426601c886c46dcc7546e135d1b971" name="ga7b426601c886c46dcc7546e135d1b971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b426601c886c46dcc7546e135d1b971">&#9670;&#160;</a></span>rt_mq_send_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga77d62ff6c3c18cc822e8ad6f71a7b691" name="ga77d62ff6c3c18cc822e8ad6f71a7b691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77d62ff6c3c18cc822e8ad6f71a7b691">&#9670;&#160;</a></span>rt_mq_send_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0a041666764bd3a737e6451e6e40887a" name="ga0a041666764bd3a737e6451e6e40887a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a041666764bd3a737e6451e6e40887a">&#9670;&#160;</a></span>rt_mq_send_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac888fea9179aa21a44fccb70771fac69" name="gac888fea9179aa21a44fccb70771fac69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac888fea9179aa21a44fccb70771fac69">&#9670;&#160;</a></span>rt_mq_send_wait_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send_wait_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga52ebc10b837cd2245a9be2b26a4ecfb4" name="ga52ebc10b837cd2245a9be2b26a4ecfb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52ebc10b837cd2245a9be2b26a4ecfb4">&#9670;&#160;</a></span>rt_mq_send_wait_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_send_wait_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafb1abee716f2f5c24a36aff2ffd32c75" name="gafb1abee716f2f5c24a36aff2ffd32c75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb1abee716f2f5c24a36aff2ffd32c75">&#9670;&#160;</a></span>rt_mq_urgent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mq_urgent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga5b956264720da4e2dfbbd54e94e54f96">rt_mq_t</a>&#160;</td>
+          <td class="paramname"><em>mq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will send an urgent message to the messagequeue object. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is almost the same as the <a class="el" href="group__group__messagequeue.html#gab3d128f328e2e979f0ee86d633937e4e" title="This function will send a message to the messagequeue object. If there is a thread suspended on the m...">rt_mq_send()</a> function. The only difference is that when sending an urgent message, the message is placed at the head of the messagequeue so that the recipient can receive the urgent message first.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__messagequeue.html#gab3d128f328e2e979f0ee86d633937e4e" title="This function will send a message to the messagequeue object. If there is a thread suspended on the m...">rt_mq_send()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mq</td><td>is a pointer to the messagequeue object to be sent.</td></tr>
+    <tr><td class="paramname">buffer</td><td>is the content of the message.</td></tr>
+    <tr><td class="paramname">size</td><td>is the length of the message(Unit: Byte).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the mailbox detach failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga93476135d1236e75e41c379c15534b5b" name="ga93476135d1236e75e41c379c15534b5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93476135d1236e75e41c379c15534b5b">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[1/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga3b1ec7b2bfbc8029b0200755505d7c55">rt_mq_control</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga68a088043d6dd7676e2500a29127c73c" name="ga68a088043d6dd7676e2500a29127c73c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68a088043d6dd7676e2500a29127c73c">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[2/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga35acff654ecee2a76d5555e9683d8470">rt_mq_create</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga615c8481526e7684a61e2264f875cdb8" name="ga615c8481526e7684a61e2264f875cdb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga615c8481526e7684a61e2264f875cdb8">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[3/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gacbf0bfedc6677ca8357d8b345c9026c9">rt_mq_delete</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga41f55c01f1f379a8dc5346a3bcbeefe4" name="ga41f55c01f1f379a8dc5346a3bcbeefe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41f55c01f1f379a8dc5346a3bcbeefe4">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[4/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga1ed6238494fac3ab081a90d9c563a8f3">rt_mq_detach</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga93cfe66dd53511ed621985bdb06efd90" name="ga93cfe66dd53511ed621985bdb06efd90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93cfe66dd53511ed621985bdb06efd90">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[5/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gaac5b76df894964c908271ab0951f7e86">rt_mq_init</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8c628326db47605f25692e93d5d86564" name="ga8c628326db47605f25692e93d5d86564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c628326db47605f25692e93d5d86564">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[6/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gad6a078a9a93a84f5561753f0af6ee93a">rt_mq_recv</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9bf551e19d76cb80e09251cfe73b9bb3" name="ga9bf551e19d76cb80e09251cfe73b9bb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9bf551e19d76cb80e09251cfe73b9bb3">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[7/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga9db56a8a65402262485037ccb66ed265">rt_mq_recv_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gadccae9157c6937186b2a5f7191189437" name="gadccae9157c6937186b2a5f7191189437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadccae9157c6937186b2a5f7191189437">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[8/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga6938b9e0b2d88d6f28ee6b97cbffed54">rt_mq_recv_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaac92c6c82b64e37ecf737d5199fefa91" name="gaac92c6c82b64e37ecf737d5199fefa91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac92c6c82b64e37ecf737d5199fefa91">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[9/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gab3d128f328e2e979f0ee86d633937e4e">rt_mq_send</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga36a1839619742e385c7ca72406bc9df2" name="ga36a1839619742e385c7ca72406bc9df2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga36a1839619742e385c7ca72406bc9df2">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[10/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga7b426601c886c46dcc7546e135d1b971">rt_mq_send_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gacb696d8c1ff4d9ee454338805f5848cc" name="gacb696d8c1ff4d9ee454338805f5848cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb696d8c1ff4d9ee454338805f5848cc">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[11/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga77d62ff6c3c18cc822e8ad6f71a7b691">rt_mq_send_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga38150b4511cf6a2eb3bae015cab2257d" name="ga38150b4511cf6a2eb3bae015cab2257d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga38150b4511cf6a2eb3bae015cab2257d">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[12/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga0a041666764bd3a737e6451e6e40887a">rt_mq_send_wait</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga661311223232c5049e7673e605a0a5be" name="ga661311223232c5049e7673e605a0a5be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga661311223232c5049e7673e605a0a5be">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[13/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gac888fea9179aa21a44fccb70771fac69">rt_mq_send_wait_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf1cf16ac3ce97288d2dda8bb256b0740" name="gaf1cf16ac3ce97288d2dda8bb256b0740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1cf16ac3ce97288d2dda8bb256b0740">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[14/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#ga52ebc10b837cd2245a9be2b26a4ecfb4">rt_mq_send_wait_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4abcd39a1a5e2d2246231fd4f7a7e044" name="ga4abcd39a1a5e2d2246231fd4f7a7e044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4abcd39a1a5e2d2246231fd4f7a7e044">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[15/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__messagequeue.html#gafb1abee716f2f5c24a36aff2ffd32c75">rt_mq_urgent</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

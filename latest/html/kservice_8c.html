@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: src/kservice.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('kservice_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">kservice.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtdbg_8h_source.html">rtdbg.h</a>&gt;</code><br />
+<code>#include &lt;dlmodule.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for kservice.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="kservice_8c__incl.png" border="0" usemap="#asrc_2kservice_8c" alt=""/></div>
+<map name="asrc_2kservice_8c" id="asrc_2kservice_8c">
+<area shape="rect" title=" " alt="" coords="597,5,708,31"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="432,79,519,104"/>
+<area shape="poly" title=" " alt="" coords="625,33,518,76,516,71,623,28"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="205,225,268,251"/>
+<area shape="poly" title=" " alt="" coords="598,29,491,46,365,72,304,89,251,108,208,130,182,153,177,169,182,185,194,201,210,215,206,219,190,204,177,187,171,169,177,151,205,126,249,104,303,84,364,67,490,41,597,24"/>
+<area shape="rect" href="rtdbg_8h.html" title=" " alt="" coords="821,225,889,251"/>
+<area shape="poly" title=" " alt="" coords="670,29,732,79,769,113,804,150,827,182,845,212,841,214,823,184,800,154,765,117,728,83,667,33"/>
+<area shape="rect" title=" " alt="" coords="872,79,967,104"/>
+<area shape="poly" title=" " alt="" coords="696,28,863,72,862,78,695,33"/>
+<area shape="rect" title=" " alt="" coords="697,519,779,544"/>
+<area shape="poly" title=" " alt="" coords="505,102,547,120,597,147,650,182,697,224,737,275,749,300,757,324,763,378,765,445,765,471,752,507,747,506,759,470,759,445,758,378,751,325,744,302,733,278,693,227,646,186,594,152,544,125,503,107"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="314,299,378,324"/>
+<area shape="poly" title=" " alt="" coords="469,106,436,153,361,287,356,285,432,151,465,103"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="494,225,585,251"/>
+<area shape="poly" title=" " alt="" coords="487,103,518,151,537,211,532,213,513,153,483,106"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="447,152,504,177"/>
+<area shape="poly" title=" " alt="" coords="471,104,469,139,464,138,466,104"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="192,152,281,177"/>
+<area shape="poly" title=" " alt="" coords="438,107,289,151,288,145,436,101"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="609,225,683,251"/>
+<area shape="poly" title=" " alt="" coords="491,102,623,214,620,218,488,106"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="305,152,371,177"/>
+<area shape="poly" title=" " alt="" coords="454,106,374,148,371,143,452,102"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="305,372,387,397"/>
+<area shape="poly" title=" " alt="" coords="349,324,349,358,343,358,343,324"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="287,445,367,471"/>
+<area shape="poly" title=" " alt="" coords="332,326,312,347,295,373,293,388,295,404,311,433,306,435,290,406,287,388,290,371,307,343,329,322"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="392,445,492,471"/>
+<area shape="poly" title=" " alt="" coords="360,322,402,370,434,431,430,434,397,374,356,326"/>
+<area shape="rect" title=" " alt="" coords="463,372,573,397"/>
+<area shape="poly" title=" " alt="" coords="375,322,478,364,476,369,373,326"/>
+<area shape="poly" title=" " alt="" coords="345,398,336,433,331,432,340,397"/>
+<area shape="poly" title=" " alt="" coords="363,395,417,435,414,439,360,400"/>
+<area shape="poly" title=" " alt="" coords="368,466,380,468,684,519,683,524,379,473,367,471"/>
+<area shape="rect" title=" " alt="" coords="5,519,76,544"/>
+<area shape="poly" title=" " alt="" coords="288,472,90,521,89,515,286,467"/>
+<area shape="rect" title=" " alt="" coords="101,519,175,544"/>
+<area shape="poly" title=" " alt="" coords="298,473,183,516,181,511,296,468"/>
+<area shape="rect" title=" " alt="" coords="199,519,274,544"/>
+<area shape="poly" title=" " alt="" coords="314,473,264,512,261,508,311,469"/>
+<area shape="rect" title=" " alt="" coords="298,519,394,544"/>
+<area shape="poly" title=" " alt="" coords="333,470,342,505,337,506,328,472"/>
+<area shape="rect" title=" " alt="" coords="419,519,513,544"/>
+<area shape="poly" title=" " alt="" coords="351,468,432,510,430,515,348,473"/>
+<area shape="rect" title=" " alt="" coords="538,519,637,544"/>
+<area shape="poly" title=" " alt="" coords="368,468,533,512,531,518,367,473"/>
+<area shape="poly" title=" " alt="" coords="490,468,684,514,683,520,489,473"/>
+<area shape="poly" title=" " alt="" coords="509,253,391,296,389,291,507,248"/>
+<area shape="poly" title=" " alt="" coords="480,152,481,118,487,118,485,152"/>
+<area shape="poly" title=" " alt="" coords="472,179,454,214,427,252,403,275,378,293,375,289,399,271,423,249,450,211,468,177"/>
+<area shape="poly" title=" " alt="" coords="239,178,239,212,234,212,234,178"/>
+<area shape="poly" title=" " alt="" coords="256,248,318,289,315,293,253,253"/>
+<area shape="poly" title=" " alt="" coords="667,249,693,269,715,297,735,353,744,411,746,464,744,505,738,505,740,464,739,411,730,354,710,300,689,273,664,253"/>
+<area shape="poly" title=" " alt="" coords="609,251,392,302,391,297,608,246"/>
+<area shape="poly" title=" " alt="" coords="609,251,506,279,442,301,439,309,438,317,446,333,463,349,484,363,481,368,460,354,442,337,433,318,433,307,439,297,504,274,608,246"/>
+<area shape="rect" title=" " alt="" coords="453,299,567,324"/>
+<area shape="poly" title=" " alt="" coords="625,253,545,295,543,290,623,248"/>
+<area shape="rect" title=" " alt="" coords="591,299,701,324"/>
+<area shape="poly" title=" " alt="" coords="649,251,649,285,643,285,643,251"/>
+<area shape="poly" title=" " alt="" coords="341,178,347,285,342,285,336,178"/>
+<area shape="poly" title=" " alt="" coords="858,251,857,290,851,346,836,410,825,442,810,472,792,495,770,513,767,509,788,491,805,469,820,440,831,409,845,346,852,289,853,251"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a16b4d81d07b9ebef8af9118c45d186aa" id="r_a16b4d81d07b9ebef8af9118c45d186aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kservice_8c.html#a16b4d81d07b9ebef8af9118c45d186aa">RT_HW_INCLUDE_CPUPORT</a></td></tr>
+<tr class="separator:a16b4d81d07b9ebef8af9118c45d186aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4e2937b86d1338f765c02b4869648ca" id="r_ac4e2937b86d1338f765c02b4869648ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kservice_8c.html#ac4e2937b86d1338f765c02b4869648ca">DBG_TAG</a>&#160;&#160;&#160;&quot;kernel.service&quot;</td></tr>
+<tr class="separator:ac4e2937b86d1338f765c02b4869648ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5f21bfe809857ecc4dd3ecdba44f49" id="r_a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kservice_8c.html#a2d5f21bfe809857ecc4dd3ecdba44f49">DBG_LVL</a>&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9f7743bd75d5be061a83ae0da47bc323">DBG_WARNING</a></td></tr>
+<tr class="separator:a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ff899d05156923de4c9148ea03142c8" id="r_ga2ff899d05156923de4c9148ea03142c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga2ff899d05156923de4c9148ea03142c8">RT_HW_BACKTRACE_FRAME_GET_SELF</a>(frame)</td></tr>
+<tr class="separator:ga2ff899d05156923de4c9148ea03142c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc9951e74add8623b25536ebde71f320" id="r_gafc9951e74add8623b25536ebde71f320"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gafc9951e74add8623b25536ebde71f320">_MEM_INIT</a>(...)</td></tr>
+<tr class="separator:gafc9951e74add8623b25536ebde71f320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17dad0d6eeb067bd97089aa718761a4b" id="r_ga17dad0d6eeb067bd97089aa718761a4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga17dad0d6eeb067bd97089aa718761a4b">_MEM_MALLOC</a>(...)&#160;&#160;&#160;<a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></td></tr>
+<tr class="separator:ga17dad0d6eeb067bd97089aa718761a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd259a8b22a884d0b37ed1ad7a24c5c5" id="r_gafd259a8b22a884d0b37ed1ad7a24c5c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gafd259a8b22a884d0b37ed1ad7a24c5c5">_MEM_REALLOC</a>(...)&#160;&#160;&#160;<a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></td></tr>
+<tr class="separator:gafd259a8b22a884d0b37ed1ad7a24c5c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad53436ce29e8496f6d7ef86cec7043b0" id="r_gad53436ce29e8496f6d7ef86cec7043b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gad53436ce29e8496f6d7ef86cec7043b0">_MEM_FREE</a>(...)</td></tr>
+<tr class="separator:gad53436ce29e8496f6d7ef86cec7043b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5ca6dea47d7fdbaeef4a9c66a60dca4" id="r_gaf5ca6dea47d7fdbaeef4a9c66a60dca4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaf5ca6dea47d7fdbaeef4a9c66a60dca4">_MEM_INFO</a>(...)</td></tr>
+<tr class="separator:gaf5ca6dea47d7fdbaeef4a9c66a60dca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac782adf90d6c32c6e757e9227a76dab6" id="r_gac782adf90d6c32c6e757e9227a76dab6"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gac782adf90d6c32c6e757e9227a76dab6">rt_hw_us_delay</a> (<a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> us)</td></tr>
+<tr class="separator:gac782adf90d6c32c6e757e9227a76dab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd5718194efbe43640078a27590b8112" id="r_gadd5718194efbe43640078a27590b8112"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gadd5718194efbe43640078a27590b8112">rt_hw_cpu_reset</a> (void)</td></tr>
+<tr class="separator:gadd5718194efbe43640078a27590b8112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09e3207582f656b3cb8e5b123399b8ce" id="r_ga09e3207582f656b3cb8e5b123399b8ce"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga09e3207582f656b3cb8e5b123399b8ce">rt_hw_cpu_shutdown</a> (void)</td></tr>
+<tr class="separator:ga09e3207582f656b3cb8e5b123399b8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84493d8f8ff8f3c1c9a08d40b9d289c1" id="r_ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="memItemLeft" align="right" valign="top">rt_weak <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga84493d8f8ff8f3c1c9a08d40b9d289c1">rt_hw_backtrace_frame_get</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame)</td></tr>
+<tr class="memdesc:ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inner most frame of target thread.  <br /></td></tr>
+<tr class="separator:ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33db6a8d3ca19fc6872ac4d050eb5cb6" id="r_ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="memItemLeft" align="right" valign="top">rt_weak <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga33db6a8d3ca19fc6872ac4d050eb5cb6">rt_hw_backtrace_frame_unwind</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame)</td></tr>
+<tr class="memdesc:ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unwind the target frame.  <br /></td></tr>
+<tr class="separator:ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b54be7c40727730394de885792f5f6c" id="r_ga4b54be7c40727730394de885792f5f6c"><td class="memItemLeft" align="right" valign="top">rt_weak const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga4b54be7c40727730394de885792f5f6c">rt_hw_cpu_arch</a> (void)</td></tr>
+<tr class="separator:ga4b54be7c40727730394de885792f5f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11ecdcdb5b09e6e18b52625c1e904dca" id="r_ga11ecdcdb5b09e6e18b52625c1e904dca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga11ecdcdb5b09e6e18b52625c1e904dca">rt_show_version</a> (void)</td></tr>
+<tr class="memdesc:ga11ecdcdb5b09e6e18b52625c1e904dca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will show the version of rt-thread rtos.  <br /></td></tr>
+<tr class="separator:ga11ecdcdb5b09e6e18b52625c1e904dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafc7247c3c2221356093bc87ce5ed896" id="r_gaafc7247c3c2221356093bc87ce5ed896"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaafc7247c3c2221356093bc87ce5ed896">RTM_EXPORT</a> (<a class="el" href="group__group___kernel_service.html#ga11ecdcdb5b09e6e18b52625c1e904dca">rt_show_version</a>)</td></tr>
+<tr class="separator:gaafc7247c3c2221356093bc87ce5ed896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85be8bb029adb3d02ec13f1783c84e50" id="r_ga85be8bb029adb3d02ec13f1783c84e50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga85be8bb029adb3d02ec13f1783c84e50">rt_backtrace</a> (void)</td></tr>
+<tr class="memdesc:ga85be8bb029adb3d02ec13f1783c84e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print backtrace of current thread to system console device.  <br /></td></tr>
+<tr class="separator:ga85be8bb029adb3d02ec13f1783c84e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga392ed513713b39274f519f1465df2d21" id="r_ga392ed513713b39274f519f1465df2d21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga392ed513713b39274f519f1465df2d21">rt_backtrace_frame</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame)</td></tr>
+<tr class="memdesc:ga392ed513713b39274f519f1465df2d21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print backtrace from frame to system console device.  <br /></td></tr>
+<tr class="separator:ga392ed513713b39274f519f1465df2d21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d83c6b256f9de644586f4e438055d17" id="r_ga9d83c6b256f9de644586f4e438055d17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga9d83c6b256f9de644586f4e438055d17">rt_backtrace_formatted_print</a> (<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *buffer, long buflen)</td></tr>
+<tr class="memdesc:ga9d83c6b256f9de644586f4e438055d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print backtrace from buffer to system console.  <br /></td></tr>
+<tr class="separator:ga9d83c6b256f9de644586f4e438055d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8dd0b1b14bbf165eaba7d62b253ac4a3" id="r_ga8dd0b1b14bbf165eaba7d62b253ac4a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga8dd0b1b14bbf165eaba7d62b253ac4a3">rt_backtrace_to_buffer</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame, long skip, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *buffer, long buflen)</td></tr>
+<tr class="memdesc:ga8dd0b1b14bbf165eaba7d62b253ac4a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print backtrace from frame to the given buffer.  <br /></td></tr>
+<tr class="separator:ga8dd0b1b14bbf165eaba7d62b253ac4a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8fdd74e45a7037133c40b6f259f003e" id="r_gaf8fdd74e45a7037133c40b6f259f003e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaf8fdd74e45a7037133c40b6f259f003e">rt_backtrace_thread</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:gaf8fdd74e45a7037133c40b6f259f003e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print backtrace of a thread to system console device.  <br /></td></tr>
+<tr class="separator:gaf8fdd74e45a7037133c40b6f259f003e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2e6a282885b58caf74fa49ca16fad29" id="r_gae2e6a282885b58caf74fa49ca16fad29"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gae2e6a282885b58caf74fa49ca16fad29">_heap_lock_init</a> (void)</td></tr>
+<tr class="separator:gae2e6a282885b58caf74fa49ca16fad29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06164eb85cd7991c4b234de5f8443488" id="r_ga06164eb85cd7991c4b234de5f8443488"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga06164eb85cd7991c4b234de5f8443488">_heap_lock</a> (void)</td></tr>
+<tr class="separator:ga06164eb85cd7991c4b234de5f8443488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab700c43cdf8a1be02135168b64a11b03" id="r_gab700c43cdf8a1be02135168b64a11b03"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gab700c43cdf8a1be02135168b64a11b03">_heap_unlock</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> level)</td></tr>
+<tr class="separator:gab700c43cdf8a1be02135168b64a11b03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf70655467791a07c7da77f184914a580" id="r_gaf70655467791a07c7da77f184914a580"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaf70655467791a07c7da77f184914a580">rt_system_heap_init_generic</a> (void *begin_addr, void *end_addr)</td></tr>
+<tr class="memdesc:gaf70655467791a07c7da77f184914a580"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will do the generic system heap initialization.  <br /></td></tr>
+<tr class="separator:gaf70655467791a07c7da77f184914a580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7ccb4a60ea0018ba0060611b8b328026" id="r_ga7ccb4a60ea0018ba0060611b8b328026"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga7ccb4a60ea0018ba0060611b8b328026">rt_system_heap_init</a> (void *begin_addr, void *end_addr)</td></tr>
+<tr class="memdesc:ga7ccb4a60ea0018ba0060611b8b328026"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will init system heap. User can override this API to complete other works, like heap sanitizer initialization.  <br /></td></tr>
+<tr class="separator:ga7ccb4a60ea0018ba0060611b8b328026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf0126394c8c791134bd466db22ebc52" id="r_gadf0126394c8c791134bd466db22ebc52"><td class="memItemLeft" align="right" valign="top">rt_weak void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gadf0126394c8c791134bd466db22ebc52">rt_malloc</a> (<a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:gadf0126394c8c791134bd466db22ebc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate a block of memory with a minimum of 'size' bytes.  <br /></td></tr>
+<tr class="separator:gadf0126394c8c791134bd466db22ebc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ed95500cbb5b79f60d6eb244e922bdd" id="r_ga6ed95500cbb5b79f60d6eb244e922bdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga6ed95500cbb5b79f60d6eb244e922bdd">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga6f19fbf07d6cf7ac5c91af52352644f6">rt_malloc</a>)</td></tr>
+<tr class="separator:ga6ed95500cbb5b79f60d6eb244e922bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b6fee4e48940856bddf961a6c7e60a8" id="r_ga9b6fee4e48940856bddf961a6c7e60a8"><td class="memItemLeft" align="right" valign="top">rt_weak void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga9b6fee4e48940856bddf961a6c7e60a8">rt_realloc</a> (void *ptr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> newsize)</td></tr>
+<tr class="memdesc:ga9b6fee4e48940856bddf961a6c7e60a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will change the size of previously allocated memory block.  <br /></td></tr>
+<tr class="separator:ga9b6fee4e48940856bddf961a6c7e60a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42d249573eaf24e317460db30b17b205" id="r_ga42d249573eaf24e317460db30b17b205"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga42d249573eaf24e317460db30b17b205">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga9b2fb264e7eb28d173c0fce864fe7e43">rt_realloc</a>)</td></tr>
+<tr class="separator:ga42d249573eaf24e317460db30b17b205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05a3a8b359922afdb3785c312026d3af" id="r_ga05a3a8b359922afdb3785c312026d3af"><td class="memItemLeft" align="right" valign="top">rt_weak void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga05a3a8b359922afdb3785c312026d3af">rt_calloc</a> (<a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> count, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:ga05a3a8b359922afdb3785c312026d3af"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will contiguously allocate enough space for count objects that are size bytes of memory each and returns a pointer to the allocated memory.  <br /></td></tr>
+<tr class="separator:ga05a3a8b359922afdb3785c312026d3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccc9a775ac3fbd81f4f880e1cfde211b" id="r_gaccc9a775ac3fbd81f4f880e1cfde211b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaccc9a775ac3fbd81f4f880e1cfde211b">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga89c02c2964ca603cf87912871bafa1b4">rt_calloc</a>)</td></tr>
+<tr class="separator:gaccc9a775ac3fbd81f4f880e1cfde211b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8aa75e756b7e1496052e0a02e89834d" id="r_gad8aa75e756b7e1496052e0a02e89834d"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gad8aa75e756b7e1496052e0a02e89834d">rt_free</a> (void *ptr)</td></tr>
+<tr class="memdesc:gad8aa75e756b7e1496052e0a02e89834d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will release the previously allocated memory block by rt_malloc. The released memory block is taken back to system heap.  <br /></td></tr>
+<tr class="separator:gad8aa75e756b7e1496052e0a02e89834d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44f99711c3416f6a39983d273e9dfcbe" id="r_ga44f99711c3416f6a39983d273e9dfcbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga44f99711c3416f6a39983d273e9dfcbe">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga6c1c24262479e6946fd04823878177f9">rt_free</a>)</td></tr>
+<tr class="separator:ga44f99711c3416f6a39983d273e9dfcbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8ab019984cc19958c95b5c2eb32256d" id="r_gad8ab019984cc19958c95b5c2eb32256d"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gad8ab019984cc19958c95b5c2eb32256d">rt_memory_info</a> (<a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> *total, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> *used, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> *max_used)</td></tr>
+<tr class="memdesc:gad8ab019984cc19958c95b5c2eb32256d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will caculate the total memory, the used memory, and the max used memory.  <br /></td></tr>
+<tr class="separator:gad8ab019984cc19958c95b5c2eb32256d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae69b5c67da0d114a23dd12856c726321" id="r_gae69b5c67da0d114a23dd12856c726321"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gae69b5c67da0d114a23dd12856c726321">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga6a043ee84954692789696a255ea65699">rt_memory_info</a>)</td></tr>
+<tr class="separator:gae69b5c67da0d114a23dd12856c726321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7da67e3734ef4b8368a39174f76fe2ce" id="r_ga7da67e3734ef4b8368a39174f76fe2ce"><td class="memItemLeft" align="right" valign="top">rt_weak void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga7da67e3734ef4b8368a39174f76fe2ce">rt_malloc_align</a> (<a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> align)</td></tr>
+<tr class="memdesc:ga7da67e3734ef4b8368a39174f76fe2ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function allocates a memory block, which address is aligned to the specified alignment size.  <br /></td></tr>
+<tr class="separator:ga7da67e3734ef4b8368a39174f76fe2ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d8b7c81f8cc0ba94113f56558aa96f2" id="r_ga9d8b7c81f8cc0ba94113f56558aa96f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga9d8b7c81f8cc0ba94113f56558aa96f2">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#ga1dc9ac8a12cf36f08d0a3ebf7fe9ce4e">rt_malloc_align</a>)</td></tr>
+<tr class="separator:ga9d8b7c81f8cc0ba94113f56558aa96f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga50b04c4685e08f3c7923caaab600f6fc" id="r_ga50b04c4685e08f3c7923caaab600f6fc"><td class="memItemLeft" align="right" valign="top">rt_weak void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga50b04c4685e08f3c7923caaab600f6fc">rt_free_align</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga50b04c4685e08f3c7923caaab600f6fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function release the memory block, which is allocated by rt_malloc_align function and address is aligned.  <br /></td></tr>
+<tr class="separator:ga50b04c4685e08f3c7923caaab600f6fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga372da2fa37d359c9a39430a3863398ce" id="r_ga372da2fa37d359c9a39430a3863398ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga372da2fa37d359c9a39430a3863398ce">RTM_EXPORT</a> (<a class="el" href="group__group___m_m.html#gabf1ea8f43781620e7b08fb1868e32b92">rt_free_align</a>)</td></tr>
+<tr class="separator:ga372da2fa37d359c9a39430a3863398ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf225812decad1a6d9036626273ba9e65" id="r_gaf225812decad1a6d9036626273ba9e65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaf225812decad1a6d9036626273ba9e65">__rt_ffs</a> (int value)</td></tr>
+<tr class="memdesc:gaf225812decad1a6d9036626273ba9e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function finds the first bit set (beginning with the least significant bit) in value and return the index of that bit.  <br /></td></tr>
+<tr class="separator:gaf225812decad1a6d9036626273ba9e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader"></div></td></tr>
+<tr class="memitem:ga72505214bf21fc23dc1595b0442a90af" id="r_ga72505214bf21fc23dc1595b0442a90af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga72505214bf21fc23dc1595b0442a90af">rt_malloc_sethook</a> (void(*hook)(void **ptr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size))</td></tr>
+<tr class="memdesc:ga72505214bf21fc23dc1595b0442a90af"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set a hook function, which will be invoked when a memory block is allocated from heap memory.  <br /></td></tr>
+<tr class="separator:ga72505214bf21fc23dc1595b0442a90af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3ec40fa39f9939814ccec29d2f975a3b" id="r_ga3ec40fa39f9939814ccec29d2f975a3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga3ec40fa39f9939814ccec29d2f975a3b">rt_realloc_set_entry_hook</a> (void(*hook)(void **ptr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size))</td></tr>
+<tr class="memdesc:ga3ec40fa39f9939814ccec29d2f975a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set a hook function, which will be invoked when a memory block is allocated from heap memory.  <br /></td></tr>
+<tr class="separator:ga3ec40fa39f9939814ccec29d2f975a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga032f9f93a115d5549fb24d79df801cac" id="r_ga032f9f93a115d5549fb24d79df801cac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga032f9f93a115d5549fb24d79df801cac">rt_realloc_set_exit_hook</a> (void(*hook)(void **ptr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size))</td></tr>
+<tr class="memdesc:ga032f9f93a115d5549fb24d79df801cac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set a hook function, which will be invoked when a memory block is allocated from heap memory.  <br /></td></tr>
+<tr class="separator:ga032f9f93a115d5549fb24d79df801cac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3bb7426719e954462af2dbe10fc033f2" id="r_ga3bb7426719e954462af2dbe10fc033f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga3bb7426719e954462af2dbe10fc033f2">rt_free_sethook</a> (void(*hook)(void **ptr))</td></tr>
+<tr class="memdesc:ga3bb7426719e954462af2dbe10fc033f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set a hook function, which will be invoked when a memory block is released to heap memory.  <br /></td></tr>
+<tr class="separator:ga3bb7426719e954462af2dbe10fc033f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ga950236813017695daf4f92a27f735ba8" id="r_ga950236813017695daf4f92a27f735ba8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga950236813017695daf4f92a27f735ba8">__lowest_bit_bitmap</a> []</td></tr>
+<tr class="separator:ga950236813017695daf4f92a27f735ba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2d5f21bfe809857ecc4dd3ecdba44f49" name="a2d5f21bfe809857ecc4dd3ecdba44f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5f21bfe809857ecc4dd3ecdba44f49">&#9670;&#160;</a></span>DBG_LVL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_LVL&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9f7743bd75d5be061a83ae0da47bc323">DBG_WARNING</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e2937b86d1338f765c02b4869648ca" name="ac4e2937b86d1338f765c02b4869648ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e2937b86d1338f765c02b4869648ca">&#9670;&#160;</a></span>DBG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TAG&#160;&#160;&#160;&quot;kernel.service&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16b4d81d07b9ebef8af9118c45d186aa" name="a16b4d81d07b9ebef8af9118c45d186aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16b4d81d07b9ebef8af9118c45d186aa">&#9670;&#160;</a></span>RT_HW_INCLUDE_CPUPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_HW_INCLUDE_CPUPORT</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="kservice_8c.html">kservice.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/lcd.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('lcd_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">lcd.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="lcd_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2023, RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2022-03-05     bernard      first version.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef RT_LCD_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define RT_LCD_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">/* ioctls</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">   0x46 is &#39;F&#39;                                                          */</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="lcd_8h.html#a140bb702dad2959090d3117088b3b412">   17</a></span><span class="preprocessor">#define FBIOGET_VSCREENINFO     0x4600</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="lcd_8h.html#a17ec7c2cf2f365da211bc8697de28860">   18</a></span><span class="preprocessor">#define FBIOPUT_VSCREENINFO     0x4601</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="lcd_8h.html#a692fc640698d6b00cd291f2b1ce1b1b8">   19</a></span><span class="preprocessor">#define FBIOGET_FSCREENINFO     0x4602</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="lcd_8h.html#a6dd877fd1d91cf9a296ae42ef14314fb">   20</a></span><span class="preprocessor">#define FBIOGET_PIXELINFO       0x4603</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="lcd_8h.html#a3dfe7eef1dda19060e8b56a6ce3b4bf6">   21</a></span><span class="preprocessor">#define FBIOGETCMAP             0x4604</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="lcd_8h.html#a56022c754c0ec921f89279be72931e61">   22</a></span><span class="preprocessor">#define FBIOPUTCMAP             0x4605</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="lcd_8h.html#aecf4c24ba1829e6b29e97cccdb8502b5">   23</a></span><span class="preprocessor">#define FBIOPAN_DISPLAY         0x4606</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="lcd_8h.html#a1fc98d8d1d5915222f30e806cdd40652">   24</a></span><span class="preprocessor">#define FBIO_CURSOR             0x4608</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/* #define FBIOGET_MONITORSPEC  0x460C */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">/* #define FBIOPUT_MONITORSPEC  0x460D */</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment">/* #define FBIOSWITCH_MONIBIT   0x460E */</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="lcd_8h.html#ad9a0150590f09256c8080da23f789b4e">   29</a></span><span class="preprocessor">#define FBIOGET_CON2FBMAP       0x460F</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="lcd_8h.html#af9b19e26b10cb94a17a60a4534b52536">   30</a></span><span class="preprocessor">#define FBIOPUT_CON2FBMAP       0x4610</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="lcd_8h.html#a2e9785ea13352724cda5c8f6d91c47c5">   31</a></span><span class="preprocessor">#define FBIOBLANK               0x4611          </span><span class="comment">/* arg: 0 or vesa level + 1 */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="lcd_8h.html#ae60ea3e8f9f1a24412c191441668022d">   32</a></span><span class="preprocessor">#define FBIOGET_VBLANK          0x4612</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="lcd_8h.html#ab772a5bda02457d0b2b3f61e657eab89">   33</a></span><span class="preprocessor">#define FBIO_ALLOC              0x4613</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="lcd_8h.html#a5a4f8606f96fdbf7ebfeecb35acf5caa">   34</a></span><span class="preprocessor">#define FBIO_FREE               0x4614</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="lcd_8h.html#a75c331d9831f37b17f59047a3764994f">   35</a></span><span class="preprocessor">#define FBIOGET_GLYPH           0x4615</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="lcd_8h.html#ac609c676eda6ae6f24ae0ee448d80680">   36</a></span><span class="preprocessor">#define FBIOGET_HWCINFO         0x4616</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="lcd_8h.html#ab2beb13c10206f228574db9e80eabf0d">   37</a></span><span class="preprocessor">#define FBIOPUT_MODEINFO        0x4617</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="lcd_8h.html#a784549e02ac13b57d1020593bd257d72">   38</a></span><span class="preprocessor">#define FBIOGET_DISPINFO        0x4618</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="lcd_8h.html#ad169cbc3efb007545485b3ca1b5d7e6a">   39</a></span><span class="preprocessor">#define FBIO_WAITFORVSYNC       0x4620</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structfb__bitfield.html">   41</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfb__bitfield.html">fb_bitfield</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structfb__bitfield.html#a8c3f5dd88d0654bc82bf1266a3ae174c">   43</a></span>    uint32_t <a class="code hl_variable" href="structfb__bitfield.html#a8c3f5dd88d0654bc82bf1266a3ae174c">offset</a>;        <span class="comment">/* beginning of bitfield */</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structfb__bitfield.html#a0305f2d4da30305ba667a3152f9fb0e0">   44</a></span>    uint32_t <a class="code hl_variable" href="structfb__bitfield.html#a0305f2d4da30305ba667a3152f9fb0e0">length</a>;        <span class="comment">/* length of bitfield */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structfb__bitfield.html#a660a398bd23cf251663533421cdf6a45">   45</a></span>    uint32_t <a class="code hl_variable" href="structfb__bitfield.html#a660a398bd23cf251663533421cdf6a45">msb_right</a>;     <span class="comment">/* != 0 : Most significant bit is */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="comment">/* right */</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>};</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="};">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html">   49</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfb__var__screeninfo.html">fb_var_screeninfo</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>{</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a7910f9f5ebbd980c786bd78e150bf566">   51</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a7910f9f5ebbd980c786bd78e150bf566">xres</a>;               <span class="comment">/* visible resolution */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a735b9efc7bac06df00381ca6c26495ad">   52</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a735b9efc7bac06df00381ca6c26495ad">yres</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a4ac425f50236989ec07a3fb6c06e1639">   53</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a4ac425f50236989ec07a3fb6c06e1639">xres_virtual</a>;       <span class="comment">/* virtual resolution  */</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#abf9d34fca458bf4c889fbadbd4ade879">   54</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#abf9d34fca458bf4c889fbadbd4ade879">yres_virtual</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a88db82b2f4e784c6dbe7b22ddc994bfc">   55</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a88db82b2f4e784c6dbe7b22ddc994bfc">xoffset</a>;            <span class="comment">/* offset from virtual to visible */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a289291b32052686e6cc2230da03074c6">   56</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a289291b32052686e6cc2230da03074c6">yoffset</a>;            <span class="comment">/* resolution */</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a016ff47aeb2bec45d2f4c1966d1333f0">   58</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a016ff47aeb2bec45d2f4c1966d1333f0">bits_per_pixel</a>;     <span class="comment">/* guess what */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a08ea939cdd44af54f3ae50089cca70c5">   59</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a08ea939cdd44af54f3ae50089cca70c5">grayscale</a>;          <span class="comment">/* 0 = color, 1 = grayscale, */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment">/* &gt;1 = FOURCC */</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a5dba7c2e5f6997c1c58f61cd4bb7e4bf">   61</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfb__bitfield.html">fb_bitfield</a> <a class="code hl_variable" href="structfb__var__screeninfo.html#a5dba7c2e5f6997c1c58f61cd4bb7e4bf">red</a>;      <span class="comment">/* bitfield in fb mem if true color, */</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a9833949668fa64f31d1e145307817542">   62</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfb__bitfield.html">fb_bitfield</a> <a class="code hl_variable" href="structfb__var__screeninfo.html#a9833949668fa64f31d1e145307817542">green</a>;    <span class="comment">/* else only length is significant */</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a31a26814ea828584debac212337a3806">   63</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfb__bitfield.html">fb_bitfield</a> <a class="code hl_variable" href="structfb__var__screeninfo.html#a31a26814ea828584debac212337a3806">blue</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a61d4784b3011538ed42dd54e0673b9a2">   64</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfb__bitfield.html">fb_bitfield</a> <a class="code hl_variable" href="structfb__var__screeninfo.html#a61d4784b3011538ed42dd54e0673b9a2">transp</a>;   <span class="comment">/* transparency */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a026e577b89d06724d938c2d500d3b9dc">   66</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a026e577b89d06724d938c2d500d3b9dc">nonstd</a>;             <span class="comment">/* != 0 Non standard pixel format */</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a2baadf417e831e418a95de2979f189aa">   68</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a2baadf417e831e418a95de2979f189aa">activate</a>;           <span class="comment">/* see FB_ACTIVATE_* */</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a138f40a2f0c699766a13668c8479b321">   70</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a138f40a2f0c699766a13668c8479b321">height</a>;             <span class="comment">/* height of picture in mm */</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a29e0d93655b2e8c523233c2e2e97dbca">   71</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a29e0d93655b2e8c523233c2e2e97dbca">width</a>;              <span class="comment">/* width of picture in mm */</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a8958de11a812e2f921f4fb10413af06d">   73</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a8958de11a812e2f921f4fb10413af06d">accel_flags</a>;        <span class="comment">/* (OBSOLETE) see fb_info.flags */</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="comment">/* Timing: All values in pixclocks, except pixclock (of course) */</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a5b50844e72ee57abc017398ab9e6e1fd">   76</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a5b50844e72ee57abc017398ab9e6e1fd">pixclock</a>;          <span class="comment">/* pixel clock in ps (pico seconds) */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a4d2887b7a600df9e6c76472cc893128e">   77</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a4d2887b7a600df9e6c76472cc893128e">left_margin</a>;       <span class="comment">/* time from sync to picture */</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a357eb2d967fa79bea907e808a7954264">   78</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a357eb2d967fa79bea907e808a7954264">right_margin</a>;      <span class="comment">/* time from picture to sync */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a9c636ec36be0dff3a6ae74eace2169f8">   79</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a9c636ec36be0dff3a6ae74eace2169f8">upper_margin</a>;      <span class="comment">/* time from sync to picture */</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#ae17bf9ac5556c42fc22e79fd23cd69c8">   80</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#ae17bf9ac5556c42fc22e79fd23cd69c8">lower_margin</a>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#ad17f520855ba98765c208993a8c1651c">   81</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#ad17f520855ba98765c208993a8c1651c">hsync_len</a>;         <span class="comment">/* length of horizontal sync */</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#adca4b6384613705a10a4d6571f172ea3">   82</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#adca4b6384613705a10a4d6571f172ea3">vsync_len</a>;         <span class="comment">/* length of vertical sync */</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#acae623070885b9b4485feb50905d3c6a">   83</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#acae623070885b9b4485feb50905d3c6a">sync</a>;              <span class="comment">/* see FB_SYNC_* */</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a21f9923fdcf05956455ec77662dd5e44">   84</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a21f9923fdcf05956455ec77662dd5e44">vmode</a>;             <span class="comment">/* see FB_VMODE_* */</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#a2c0bb83c0630d894cdab1c83aa9df472">   85</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#a2c0bb83c0630d894cdab1c83aa9df472">rotate</a>;            <span class="comment">/* angle we rotate counter clockwise */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#ae5dd5e2cc68d02bd8a81ab99ad1a8ab9">   86</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#ae5dd5e2cc68d02bd8a81ab99ad1a8ab9">colorspace</a>;        <span class="comment">/* colorspace for FOURCC-based modes */</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structfb__var__screeninfo.html#afb70f6cf742d76f82402e9513fa9b007">   87</a></span>    uint32_t <a class="code hl_variable" href="structfb__var__screeninfo.html#afb70f6cf742d76f82402e9513fa9b007">reserved</a>[4];       <span class="comment">/* Reserved for future compatibility */</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="};">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html">   90</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structfb__fix__screeninfo.html">fb_fix_screeninfo</a></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>{</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a8e40083abdd2a2e560ebad25a75626d4">   92</a></span>    <span class="keywordtype">char</span> <span class="keywordtype">id</span>[16];               <span class="comment">/* identification string eg &quot;TT Builtin&quot; */</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a2d6b15a9cc46b488b05eb30003c76b4a">   93</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structfb__fix__screeninfo.html#a2d6b15a9cc46b488b05eb30003c76b4a">smem_start</a>;  <span class="comment">/* Start of frame buffer mem */</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">/* (physical address) */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#ad775a2111ea44d807ea96854f02989e7">   95</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#ad775a2111ea44d807ea96854f02989e7">smem_len</a>;         <span class="comment">/* Length of frame buffer mem */</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a62fa12f41c4892509862466643708350">   96</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a62fa12f41c4892509862466643708350">type</a>;             <span class="comment">/* see FB_TYPE_* */</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a80766dac81294c7de818531badcbab8e">   97</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a80766dac81294c7de818531badcbab8e">type_aux</a>;         <span class="comment">/* Interleave for interleaved Planes */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a21c977d5e9c783bd160f290b3223f972">   98</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a21c977d5e9c783bd160f290b3223f972">visual</a>;           <span class="comment">/* see FB_VISUAL_* */</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a7288c088bb369b337751b3f82cabefa1">   99</a></span>    uint16_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a7288c088bb369b337751b3f82cabefa1">xpanstep</a>;         <span class="comment">/* zero if no hardware panning */</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a0e40b9992a07f343d49035b4595a3432">  100</a></span>    uint16_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a0e40b9992a07f343d49035b4595a3432">ypanstep</a>;         <span class="comment">/* zero if no hardware panning */</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#afe7972c21f0ff97db608e0fb0bd48b7d">  101</a></span>    uint16_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#afe7972c21f0ff97db608e0fb0bd48b7d">ywrapstep</a>;        <span class="comment">/* zero if no hardware ywrap */</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a8de0ff19d08381b293dc00736699aa8e">  102</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a8de0ff19d08381b293dc00736699aa8e">line_length</a>;      <span class="comment">/* length of a line in bytes */</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a401d77fa4f32c1f8572d31a22e21f04c">  103</a></span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code hl_variable" href="structfb__fix__screeninfo.html#a401d77fa4f32c1f8572d31a22e21f04c">mmio_start</a>;  <span class="comment">/* Start of Memory Mapped I/O */</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="comment">/* (physical address) */</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a7ca4b1c82dc2aecafd0ddc1d5d294f64">  105</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a7ca4b1c82dc2aecafd0ddc1d5d294f64">mmio_len</a>;         <span class="comment">/* Length of Memory Mapped I/O */</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#acad23358c9cbf72f5be27413143532cf">  106</a></span>    uint32_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#acad23358c9cbf72f5be27413143532cf">accel</a>;            <span class="comment">/* Indicate to driver which */</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="comment">/*  specific chip/card we have  */</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a6d5fd7e300adb656901ef19034b35aa5">  108</a></span>    uint16_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a6d5fd7e300adb656901ef19034b35aa5">capabilities</a>;     <span class="comment">/* see FB_CAP_* */</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structfb__fix__screeninfo.html#a5f393beb2fe8868f6a03dce9c6f00762">  109</a></span>    uint16_t <a class="code hl_variable" href="structfb__fix__screeninfo.html#a5f393beb2fe8868f6a03dce9c6f00762">reserved</a>[2];      <span class="comment">/* Reserved for future compatibility */</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>};</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="astructfb__bitfield_html"><div class="ttname"><a href="structfb__bitfield.html">fb_bitfield</a></div><div class="ttdef"><b>Definition</b> lcd.h:42</div></div>
+<div class="ttc" id="astructfb__bitfield_html_a0305f2d4da30305ba667a3152f9fb0e0"><div class="ttname"><a href="structfb__bitfield.html#a0305f2d4da30305ba667a3152f9fb0e0">fb_bitfield::length</a></div><div class="ttdeci">uint32_t length</div><div class="ttdef"><b>Definition</b> lcd.h:44</div></div>
+<div class="ttc" id="astructfb__bitfield_html_a660a398bd23cf251663533421cdf6a45"><div class="ttname"><a href="structfb__bitfield.html#a660a398bd23cf251663533421cdf6a45">fb_bitfield::msb_right</a></div><div class="ttdeci">uint32_t msb_right</div><div class="ttdef"><b>Definition</b> lcd.h:45</div></div>
+<div class="ttc" id="astructfb__bitfield_html_a8c3f5dd88d0654bc82bf1266a3ae174c"><div class="ttname"><a href="structfb__bitfield.html#a8c3f5dd88d0654bc82bf1266a3ae174c">fb_bitfield::offset</a></div><div class="ttdeci">uint32_t offset</div><div class="ttdef"><b>Definition</b> lcd.h:43</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html"><div class="ttname"><a href="structfb__fix__screeninfo.html">fb_fix_screeninfo</a></div><div class="ttdef"><b>Definition</b> lcd.h:91</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a0e40b9992a07f343d49035b4595a3432"><div class="ttname"><a href="structfb__fix__screeninfo.html#a0e40b9992a07f343d49035b4595a3432">fb_fix_screeninfo::ypanstep</a></div><div class="ttdeci">uint16_t ypanstep</div><div class="ttdef"><b>Definition</b> lcd.h:100</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a21c977d5e9c783bd160f290b3223f972"><div class="ttname"><a href="structfb__fix__screeninfo.html#a21c977d5e9c783bd160f290b3223f972">fb_fix_screeninfo::visual</a></div><div class="ttdeci">uint32_t visual</div><div class="ttdef"><b>Definition</b> lcd.h:98</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a2d6b15a9cc46b488b05eb30003c76b4a"><div class="ttname"><a href="structfb__fix__screeninfo.html#a2d6b15a9cc46b488b05eb30003c76b4a">fb_fix_screeninfo::smem_start</a></div><div class="ttdeci">unsigned long smem_start</div><div class="ttdef"><b>Definition</b> lcd.h:93</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a401d77fa4f32c1f8572d31a22e21f04c"><div class="ttname"><a href="structfb__fix__screeninfo.html#a401d77fa4f32c1f8572d31a22e21f04c">fb_fix_screeninfo::mmio_start</a></div><div class="ttdeci">unsigned long mmio_start</div><div class="ttdef"><b>Definition</b> lcd.h:103</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a5f393beb2fe8868f6a03dce9c6f00762"><div class="ttname"><a href="structfb__fix__screeninfo.html#a5f393beb2fe8868f6a03dce9c6f00762">fb_fix_screeninfo::reserved</a></div><div class="ttdeci">uint16_t reserved[2]</div><div class="ttdef"><b>Definition</b> lcd.h:109</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a62fa12f41c4892509862466643708350"><div class="ttname"><a href="structfb__fix__screeninfo.html#a62fa12f41c4892509862466643708350">fb_fix_screeninfo::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition</b> lcd.h:96</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a6d5fd7e300adb656901ef19034b35aa5"><div class="ttname"><a href="structfb__fix__screeninfo.html#a6d5fd7e300adb656901ef19034b35aa5">fb_fix_screeninfo::capabilities</a></div><div class="ttdeci">uint16_t capabilities</div><div class="ttdef"><b>Definition</b> lcd.h:108</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a7288c088bb369b337751b3f82cabefa1"><div class="ttname"><a href="structfb__fix__screeninfo.html#a7288c088bb369b337751b3f82cabefa1">fb_fix_screeninfo::xpanstep</a></div><div class="ttdeci">uint16_t xpanstep</div><div class="ttdef"><b>Definition</b> lcd.h:99</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a7ca4b1c82dc2aecafd0ddc1d5d294f64"><div class="ttname"><a href="structfb__fix__screeninfo.html#a7ca4b1c82dc2aecafd0ddc1d5d294f64">fb_fix_screeninfo::mmio_len</a></div><div class="ttdeci">uint32_t mmio_len</div><div class="ttdef"><b>Definition</b> lcd.h:105</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a80766dac81294c7de818531badcbab8e"><div class="ttname"><a href="structfb__fix__screeninfo.html#a80766dac81294c7de818531badcbab8e">fb_fix_screeninfo::type_aux</a></div><div class="ttdeci">uint32_t type_aux</div><div class="ttdef"><b>Definition</b> lcd.h:97</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_a8de0ff19d08381b293dc00736699aa8e"><div class="ttname"><a href="structfb__fix__screeninfo.html#a8de0ff19d08381b293dc00736699aa8e">fb_fix_screeninfo::line_length</a></div><div class="ttdeci">uint32_t line_length</div><div class="ttdef"><b>Definition</b> lcd.h:102</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_acad23358c9cbf72f5be27413143532cf"><div class="ttname"><a href="structfb__fix__screeninfo.html#acad23358c9cbf72f5be27413143532cf">fb_fix_screeninfo::accel</a></div><div class="ttdeci">uint32_t accel</div><div class="ttdef"><b>Definition</b> lcd.h:106</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_ad775a2111ea44d807ea96854f02989e7"><div class="ttname"><a href="structfb__fix__screeninfo.html#ad775a2111ea44d807ea96854f02989e7">fb_fix_screeninfo::smem_len</a></div><div class="ttdeci">uint32_t smem_len</div><div class="ttdef"><b>Definition</b> lcd.h:95</div></div>
+<div class="ttc" id="astructfb__fix__screeninfo_html_afe7972c21f0ff97db608e0fb0bd48b7d"><div class="ttname"><a href="structfb__fix__screeninfo.html#afe7972c21f0ff97db608e0fb0bd48b7d">fb_fix_screeninfo::ywrapstep</a></div><div class="ttdeci">uint16_t ywrapstep</div><div class="ttdef"><b>Definition</b> lcd.h:101</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html"><div class="ttname"><a href="structfb__var__screeninfo.html">fb_var_screeninfo</a></div><div class="ttdef"><b>Definition</b> lcd.h:50</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a016ff47aeb2bec45d2f4c1966d1333f0"><div class="ttname"><a href="structfb__var__screeninfo.html#a016ff47aeb2bec45d2f4c1966d1333f0">fb_var_screeninfo::bits_per_pixel</a></div><div class="ttdeci">uint32_t bits_per_pixel</div><div class="ttdef"><b>Definition</b> lcd.h:58</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a026e577b89d06724d938c2d500d3b9dc"><div class="ttname"><a href="structfb__var__screeninfo.html#a026e577b89d06724d938c2d500d3b9dc">fb_var_screeninfo::nonstd</a></div><div class="ttdeci">uint32_t nonstd</div><div class="ttdef"><b>Definition</b> lcd.h:66</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a08ea939cdd44af54f3ae50089cca70c5"><div class="ttname"><a href="structfb__var__screeninfo.html#a08ea939cdd44af54f3ae50089cca70c5">fb_var_screeninfo::grayscale</a></div><div class="ttdeci">uint32_t grayscale</div><div class="ttdef"><b>Definition</b> lcd.h:59</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a138f40a2f0c699766a13668c8479b321"><div class="ttname"><a href="structfb__var__screeninfo.html#a138f40a2f0c699766a13668c8479b321">fb_var_screeninfo::height</a></div><div class="ttdeci">uint32_t height</div><div class="ttdef"><b>Definition</b> lcd.h:70</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a21f9923fdcf05956455ec77662dd5e44"><div class="ttname"><a href="structfb__var__screeninfo.html#a21f9923fdcf05956455ec77662dd5e44">fb_var_screeninfo::vmode</a></div><div class="ttdeci">uint32_t vmode</div><div class="ttdef"><b>Definition</b> lcd.h:84</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a289291b32052686e6cc2230da03074c6"><div class="ttname"><a href="structfb__var__screeninfo.html#a289291b32052686e6cc2230da03074c6">fb_var_screeninfo::yoffset</a></div><div class="ttdeci">uint32_t yoffset</div><div class="ttdef"><b>Definition</b> lcd.h:56</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a29e0d93655b2e8c523233c2e2e97dbca"><div class="ttname"><a href="structfb__var__screeninfo.html#a29e0d93655b2e8c523233c2e2e97dbca">fb_var_screeninfo::width</a></div><div class="ttdeci">uint32_t width</div><div class="ttdef"><b>Definition</b> lcd.h:71</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a2baadf417e831e418a95de2979f189aa"><div class="ttname"><a href="structfb__var__screeninfo.html#a2baadf417e831e418a95de2979f189aa">fb_var_screeninfo::activate</a></div><div class="ttdeci">uint32_t activate</div><div class="ttdef"><b>Definition</b> lcd.h:68</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a2c0bb83c0630d894cdab1c83aa9df472"><div class="ttname"><a href="structfb__var__screeninfo.html#a2c0bb83c0630d894cdab1c83aa9df472">fb_var_screeninfo::rotate</a></div><div class="ttdeci">uint32_t rotate</div><div class="ttdef"><b>Definition</b> lcd.h:85</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a31a26814ea828584debac212337a3806"><div class="ttname"><a href="structfb__var__screeninfo.html#a31a26814ea828584debac212337a3806">fb_var_screeninfo::blue</a></div><div class="ttdeci">struct fb_bitfield blue</div><div class="ttdef"><b>Definition</b> lcd.h:63</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a357eb2d967fa79bea907e808a7954264"><div class="ttname"><a href="structfb__var__screeninfo.html#a357eb2d967fa79bea907e808a7954264">fb_var_screeninfo::right_margin</a></div><div class="ttdeci">uint32_t right_margin</div><div class="ttdef"><b>Definition</b> lcd.h:78</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a4ac425f50236989ec07a3fb6c06e1639"><div class="ttname"><a href="structfb__var__screeninfo.html#a4ac425f50236989ec07a3fb6c06e1639">fb_var_screeninfo::xres_virtual</a></div><div class="ttdeci">uint32_t xres_virtual</div><div class="ttdef"><b>Definition</b> lcd.h:53</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a4d2887b7a600df9e6c76472cc893128e"><div class="ttname"><a href="structfb__var__screeninfo.html#a4d2887b7a600df9e6c76472cc893128e">fb_var_screeninfo::left_margin</a></div><div class="ttdeci">uint32_t left_margin</div><div class="ttdef"><b>Definition</b> lcd.h:77</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a5b50844e72ee57abc017398ab9e6e1fd"><div class="ttname"><a href="structfb__var__screeninfo.html#a5b50844e72ee57abc017398ab9e6e1fd">fb_var_screeninfo::pixclock</a></div><div class="ttdeci">uint32_t pixclock</div><div class="ttdef"><b>Definition</b> lcd.h:76</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a5dba7c2e5f6997c1c58f61cd4bb7e4bf"><div class="ttname"><a href="structfb__var__screeninfo.html#a5dba7c2e5f6997c1c58f61cd4bb7e4bf">fb_var_screeninfo::red</a></div><div class="ttdeci">struct fb_bitfield red</div><div class="ttdef"><b>Definition</b> lcd.h:61</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a61d4784b3011538ed42dd54e0673b9a2"><div class="ttname"><a href="structfb__var__screeninfo.html#a61d4784b3011538ed42dd54e0673b9a2">fb_var_screeninfo::transp</a></div><div class="ttdeci">struct fb_bitfield transp</div><div class="ttdef"><b>Definition</b> lcd.h:64</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a735b9efc7bac06df00381ca6c26495ad"><div class="ttname"><a href="structfb__var__screeninfo.html#a735b9efc7bac06df00381ca6c26495ad">fb_var_screeninfo::yres</a></div><div class="ttdeci">uint32_t yres</div><div class="ttdef"><b>Definition</b> lcd.h:52</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a7910f9f5ebbd980c786bd78e150bf566"><div class="ttname"><a href="structfb__var__screeninfo.html#a7910f9f5ebbd980c786bd78e150bf566">fb_var_screeninfo::xres</a></div><div class="ttdeci">uint32_t xres</div><div class="ttdef"><b>Definition</b> lcd.h:51</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a88db82b2f4e784c6dbe7b22ddc994bfc"><div class="ttname"><a href="structfb__var__screeninfo.html#a88db82b2f4e784c6dbe7b22ddc994bfc">fb_var_screeninfo::xoffset</a></div><div class="ttdeci">uint32_t xoffset</div><div class="ttdef"><b>Definition</b> lcd.h:55</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a8958de11a812e2f921f4fb10413af06d"><div class="ttname"><a href="structfb__var__screeninfo.html#a8958de11a812e2f921f4fb10413af06d">fb_var_screeninfo::accel_flags</a></div><div class="ttdeci">uint32_t accel_flags</div><div class="ttdef"><b>Definition</b> lcd.h:73</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a9833949668fa64f31d1e145307817542"><div class="ttname"><a href="structfb__var__screeninfo.html#a9833949668fa64f31d1e145307817542">fb_var_screeninfo::green</a></div><div class="ttdeci">struct fb_bitfield green</div><div class="ttdef"><b>Definition</b> lcd.h:62</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_a9c636ec36be0dff3a6ae74eace2169f8"><div class="ttname"><a href="structfb__var__screeninfo.html#a9c636ec36be0dff3a6ae74eace2169f8">fb_var_screeninfo::upper_margin</a></div><div class="ttdeci">uint32_t upper_margin</div><div class="ttdef"><b>Definition</b> lcd.h:79</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_abf9d34fca458bf4c889fbadbd4ade879"><div class="ttname"><a href="structfb__var__screeninfo.html#abf9d34fca458bf4c889fbadbd4ade879">fb_var_screeninfo::yres_virtual</a></div><div class="ttdeci">uint32_t yres_virtual</div><div class="ttdef"><b>Definition</b> lcd.h:54</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_acae623070885b9b4485feb50905d3c6a"><div class="ttname"><a href="structfb__var__screeninfo.html#acae623070885b9b4485feb50905d3c6a">fb_var_screeninfo::sync</a></div><div class="ttdeci">uint32_t sync</div><div class="ttdef"><b>Definition</b> lcd.h:83</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_ad17f520855ba98765c208993a8c1651c"><div class="ttname"><a href="structfb__var__screeninfo.html#ad17f520855ba98765c208993a8c1651c">fb_var_screeninfo::hsync_len</a></div><div class="ttdeci">uint32_t hsync_len</div><div class="ttdef"><b>Definition</b> lcd.h:81</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_adca4b6384613705a10a4d6571f172ea3"><div class="ttname"><a href="structfb__var__screeninfo.html#adca4b6384613705a10a4d6571f172ea3">fb_var_screeninfo::vsync_len</a></div><div class="ttdeci">uint32_t vsync_len</div><div class="ttdef"><b>Definition</b> lcd.h:82</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_ae17bf9ac5556c42fc22e79fd23cd69c8"><div class="ttname"><a href="structfb__var__screeninfo.html#ae17bf9ac5556c42fc22e79fd23cd69c8">fb_var_screeninfo::lower_margin</a></div><div class="ttdeci">uint32_t lower_margin</div><div class="ttdef"><b>Definition</b> lcd.h:80</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_ae5dd5e2cc68d02bd8a81ab99ad1a8ab9"><div class="ttname"><a href="structfb__var__screeninfo.html#ae5dd5e2cc68d02bd8a81ab99ad1a8ab9">fb_var_screeninfo::colorspace</a></div><div class="ttdeci">uint32_t colorspace</div><div class="ttdef"><b>Definition</b> lcd.h:86</div></div>
+<div class="ttc" id="astructfb__var__screeninfo_html_afb70f6cf742d76f82402e9513fa9b007"><div class="ttname"><a href="structfb__var__screeninfo.html#afb70f6cf742d76f82402e9513fa9b007">fb_var_screeninfo::reserved</a></div><div class="ttdeci">uint32_t reserved[4]</div><div class="ttdef"><b>Definition</b> lcd.h:87</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="lcd_8h.html">lcd.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

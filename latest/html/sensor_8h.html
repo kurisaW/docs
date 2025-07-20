@@ -1,0 +1,1737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/sensor.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('sensor_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">sensor.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="dev__pin_8h_source.html">dev_pin.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for sensor.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="sensor_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2sensor_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2sensor_8h" id="acomponents_2drivers_2include_2drivers_2sensor_8h">
+<area shape="rect" title=" " alt="" coords="207,5,387,45"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="254,167,341,192"/>
+<area shape="poly" title=" " alt="" coords="294,46,286,80,285,118,292,153,287,154,280,119,281,79,289,45"/>
+<area shape="rect" href="dev__pin_8h.html" title=" " alt="" coords="295,93,380,119"/>
+<area shape="poly" title=" " alt="" coords="309,44,328,80,323,82,305,47"/>
+<area shape="rect" title=" " alt="" coords="53,607,136,632"/>
+<area shape="poly" title=" " alt="" coords="254,185,181,195,140,204,100,217,64,236,35,259,15,288,8,325,8,474,14,510,31,543,52,572,73,595,69,599,48,576,26,546,9,512,3,474,3,324,10,286,31,255,61,231,98,213,139,199,180,190,253,180"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,387,480,412"/>
+<area shape="poly" title=" " alt="" coords="341,177,379,181,422,191,462,209,479,222,494,238,503,255,507,274,501,312,486,347,468,377,463,374,481,345,496,310,501,274,498,257,490,242,476,226,459,214,420,196,379,186,341,183"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="556,313,647,339"/>
+<area shape="poly" title=" " alt="" coords="341,180,385,185,436,195,489,212,539,238,570,267,591,299,587,302,566,271,536,242,487,217,435,201,384,191,340,185"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="221,240,278,265"/>
+<area shape="poly" title=" " alt="" coords="285,194,259,230,254,226,280,191"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="302,240,391,265"/>
+<area shape="poly" title=" " alt="" coords="308,191,333,227,329,230,303,194"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="152,313,227,339"/>
+<area shape="poly" title=" " alt="" coords="271,194,239,214,210,242,198,271,193,300,187,299,192,269,206,238,235,209,268,190"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="415,240,481,265"/>
+<area shape="poly" title=" " alt="" coords="323,190,412,232,410,236,320,194"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,460,489,485"/>
+<area shape="poly" title=" " alt="" coords="451,412,451,446,445,446,445,412"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,533,505,559"/>
+<area shape="poly" title=" " alt="" coords="465,410,487,431,504,459,507,477,503,494,487,524,482,522,498,492,501,476,499,461,482,435,462,414"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,533,402,559"/>
+<area shape="poly" title=" " alt="" coords="438,414,397,462,364,522,360,519,392,458,434,410"/>
+<area shape="rect" title=" " alt="" coords="221,460,331,485"/>
+<area shape="poly" title=" " alt="" coords="421,414,318,457,316,452,419,410"/>
+<area shape="poly" title=" " alt="" coords="453,485,462,520,457,521,448,486"/>
+<area shape="poly" title=" " alt="" coords="434,488,380,527,377,523,431,483"/>
+<area shape="poly" title=" " alt="" coords="426,559,414,561,150,611,149,606,413,556,425,554"/>
+<area shape="rect" title=" " alt="" coords="761,607,831,632"/>
+<area shape="poly" title=" " alt="" coords="506,553,748,604,747,609,505,558"/>
+<area shape="rect" title=" " alt="" coords="200,607,275,632"/>
+<area shape="poly" title=" " alt="" coords="429,561,288,605,287,600,428,556"/>
+<area shape="rect" title=" " alt="" coords="299,607,373,632"/>
+<area shape="poly" title=" " alt="" coords="446,561,371,602,368,597,443,556"/>
+<area shape="rect" title=" " alt="" coords="397,607,493,632"/>
+<area shape="poly" title=" " alt="" coords="465,560,455,594,450,593,459,558"/>
+<area shape="rect" title=" " alt="" coords="518,607,613,632"/>
+<area shape="poly" title=" " alt="" coords="483,557,539,596,536,601,480,561"/>
+<area shape="rect" title=" " alt="" coords="637,607,736,632"/>
+<area shape="poly" title=" " alt="" coords="502,556,639,600,637,605,500,561"/>
+<area shape="poly" title=" " alt="" coords="311,561,150,606,149,600,310,556"/>
+<area shape="poly" title=" " alt="" coords="578,341,486,383,484,378,576,336"/>
+<area shape="poly" title=" " alt="" coords="262,238,288,203,292,206,266,241"/>
+<area shape="poly" title=" " alt="" coords="259,264,285,299,323,337,363,361,404,380,402,385,361,366,320,341,281,303,255,267"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="334,313,397,339"/>
+<area shape="poly" title=" " alt="" coords="352,265,361,300,356,301,347,266"/>
+<area shape="poly" title=" " alt="" coords="380,337,426,375,422,380,377,341"/>
+<area shape="poly" title=" " alt="" coords="153,340,114,358,97,371,84,388,72,414,66,441,65,498,75,551,88,593,82,595,70,553,60,499,60,440,67,412,79,385,93,367,112,353,151,335"/>
+<area shape="poly" title=" " alt="" coords="228,335,403,383,402,388,226,340"/>
+<area shape="poly" title=" " alt="" coords="228,333,302,355,335,369,356,385,361,405,352,425,335,441,314,455,311,451,331,437,348,422,356,405,351,388,332,374,300,360,226,338"/>
+<area shape="rect" title=" " alt="" coords="93,387,208,412"/>
+<area shape="poly" title=" " alt="" coords="185,340,166,376,161,373,181,338"/>
+<area shape="rect" title=" " alt="" coords="232,387,341,412"/>
+<area shape="poly" title=" " alt="" coords="207,337,261,376,258,380,203,341"/>
+<area shape="poly" title=" " alt="" coords="451,266,451,373,445,373,445,266"/>
+<area shape="poly" title=" " alt="" coords="333,120,313,156,308,153,328,118"/>
+</map>
+</div>
+</div>
+<p><a href="sensor_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html">rt_sensor_info</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__intf.html">rt_sensor_intf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__config.html">rt_sensor_config</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__device.html">rt_sensor_device</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__module.html">rt_sensor_module</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsensor__3__axis.html">sensor_3_axis</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsensor__bp.html">sensor_bp</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcoordinates.html">coordinates</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__data.html">rt_sensor_data</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__ops.html">rt_sensor_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a337b1d4df01a1b055b813c229b9c24a3" id="r_a337b1d4df01a1b055b813c229b9c24a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a337b1d4df01a1b055b813c229b9c24a3">rt_sensor_get_ts</a>()&#160;&#160;&#160;<a class="el" href="group__group___clock.html#ga6e2aa36f263bddcddae01a91986fcdae">rt_tick_get</a>()   /* API for the sensor to get the timestamp */</td></tr>
+<tr class="separator:a337b1d4df01a1b055b813c229b9c24a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa097c1b98d868be4d34872196bf56d76" id="r_aa097c1b98d868be4d34872196bf56d76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aa097c1b98d868be4d34872196bf56d76">RT_PIN_NONE</a>&#160;&#160;&#160;0xFFFF    /* RT PIN NONE */</td></tr>
+<tr class="separator:aa097c1b98d868be4d34872196bf56d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e8db4ce1d56b2085b2a0643b56c73f" id="r_a77e8db4ce1d56b2085b2a0643b56c73f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a77e8db4ce1d56b2085b2a0643b56c73f">RT_DEVICE_FLAG_FIFO_RX</a>&#160;&#160;&#160;0x200     /* Flag to use when the sensor is <a class="el" href="group__group___fs_posix_api.html#ga94873fa89201b877351b663b9f5b040d">open</a> by fifo mode */</td></tr>
+<tr class="separator:a77e8db4ce1d56b2085b2a0643b56c73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a387dc2832d1f48f95a3f4a05f2cbc926" id="r_a387dc2832d1f48f95a3f4a05f2cbc926"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a387dc2832d1f48f95a3f4a05f2cbc926">RT_SENSOR_MODULE_MAX</a>&#160;&#160;&#160;(3)       /* The maximum number of members of a sensor module */</td></tr>
+<tr class="separator:a387dc2832d1f48f95a3f4a05f2cbc926"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db4d0a6b875fa7744ab34bdaecc9901" id="r_a7db4d0a6b875fa7744ab34bdaecc9901"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a7db4d0a6b875fa7744ab34bdaecc9901">RT_SENSOR_CLASS_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a7db4d0a6b875fa7744ab34bdaecc9901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab415bca91983d4852838503571f1ba2a" id="r_ab415bca91983d4852838503571f1ba2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ab415bca91983d4852838503571f1ba2a">RT_SENSOR_CLASS_ACCE</a>&#160;&#160;&#160;(1)  /* Accelerometer     */</td></tr>
+<tr class="separator:ab415bca91983d4852838503571f1ba2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5fd7bff93063692020d8d8baceb9db" id="r_a7e5fd7bff93063692020d8d8baceb9db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a7e5fd7bff93063692020d8d8baceb9db">RT_SENSOR_CLASS_GYRO</a>&#160;&#160;&#160;(2)  /* Gyroscope         */</td></tr>
+<tr class="separator:a7e5fd7bff93063692020d8d8baceb9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a12ff9ee8333e02b83d7e8e939f9463" id="r_a7a12ff9ee8333e02b83d7e8e939f9463"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a7a12ff9ee8333e02b83d7e8e939f9463">RT_SENSOR_CLASS_MAG</a>&#160;&#160;&#160;(3)  /* Magnetometer      */</td></tr>
+<tr class="separator:a7a12ff9ee8333e02b83d7e8e939f9463"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ba87f581688b9bfcabfd2acc84300cb" id="r_a3ba87f581688b9bfcabfd2acc84300cb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a3ba87f581688b9bfcabfd2acc84300cb">RT_SENSOR_CLASS_TEMP</a>&#160;&#160;&#160;(4)  /* Temperature       */</td></tr>
+<tr class="separator:a3ba87f581688b9bfcabfd2acc84300cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42bcf26fd8cc8f13aed6b300c0b5481" id="r_ad42bcf26fd8cc8f13aed6b300c0b5481"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ad42bcf26fd8cc8f13aed6b300c0b5481">RT_SENSOR_CLASS_HUMI</a>&#160;&#160;&#160;(5)  /* Relative Humidity */</td></tr>
+<tr class="separator:ad42bcf26fd8cc8f13aed6b300c0b5481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacb0d4096baf4ba04c8e1b54670b20a6" id="r_aacb0d4096baf4ba04c8e1b54670b20a6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aacb0d4096baf4ba04c8e1b54670b20a6">RT_SENSOR_CLASS_BARO</a>&#160;&#160;&#160;(6)  /* Barometer         */</td></tr>
+<tr class="separator:aacb0d4096baf4ba04c8e1b54670b20a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8028038bd58848b6ef3c3455406de1b" id="r_af8028038bd58848b6ef3c3455406de1b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#af8028038bd58848b6ef3c3455406de1b">RT_SENSOR_CLASS_LIGHT</a>&#160;&#160;&#160;(7)  /* Ambient light     */</td></tr>
+<tr class="separator:af8028038bd58848b6ef3c3455406de1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af39324818bc9343960f2b62c8d956e0a" id="r_af39324818bc9343960f2b62c8d956e0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#af39324818bc9343960f2b62c8d956e0a">RT_SENSOR_CLASS_PROXIMITY</a>&#160;&#160;&#160;(8)  /* Proximity         */</td></tr>
+<tr class="separator:af39324818bc9343960f2b62c8d956e0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d053882e38127fc07cd4d7b232cb18" id="r_a12d053882e38127fc07cd4d7b232cb18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a12d053882e38127fc07cd4d7b232cb18">RT_SENSOR_CLASS_HR</a>&#160;&#160;&#160;(9)  /* Heart Rate        */</td></tr>
+<tr class="separator:a12d053882e38127fc07cd4d7b232cb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fde72171abe873c4cb0ee36482d6085" id="r_a8fde72171abe873c4cb0ee36482d6085"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8fde72171abe873c4cb0ee36482d6085">RT_SENSOR_CLASS_TVOC</a>&#160;&#160;&#160;(10) /* TVOC Level        */</td></tr>
+<tr class="separator:a8fde72171abe873c4cb0ee36482d6085"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeceed20b92337ebd7d114980c298f313" id="r_aeceed20b92337ebd7d114980c298f313"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aeceed20b92337ebd7d114980c298f313">RT_SENSOR_CLASS_NOISE</a>&#160;&#160;&#160;(11) /* Noise Loudness    */</td></tr>
+<tr class="separator:aeceed20b92337ebd7d114980c298f313"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a394e178ac9125c134ebf1c103fd21774" id="r_a394e178ac9125c134ebf1c103fd21774"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a394e178ac9125c134ebf1c103fd21774">RT_SENSOR_CLASS_STEP</a>&#160;&#160;&#160;(12) /* Step sensor       */</td></tr>
+<tr class="separator:a394e178ac9125c134ebf1c103fd21774"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af90e764a4e77bdc2bbac98b6674f42d1" id="r_af90e764a4e77bdc2bbac98b6674f42d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#af90e764a4e77bdc2bbac98b6674f42d1">RT_SENSOR_CLASS_FORCE</a>&#160;&#160;&#160;(13) /* Force sensor      */</td></tr>
+<tr class="separator:af90e764a4e77bdc2bbac98b6674f42d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0cb17865a4c25d89a38194b4ce2afd9" id="r_ab0cb17865a4c25d89a38194b4ce2afd9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ab0cb17865a4c25d89a38194b4ce2afd9">RT_SENSOR_CLASS_DUST</a>&#160;&#160;&#160;(14) /* Dust sensor       */</td></tr>
+<tr class="separator:ab0cb17865a4c25d89a38194b4ce2afd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06416df169b061698d1dd96b4cc7bc5" id="r_ad06416df169b061698d1dd96b4cc7bc5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ad06416df169b061698d1dd96b4cc7bc5">RT_SENSOR_CLASS_ECO2</a>&#160;&#160;&#160;(15) /* eCO2 sensor       */</td></tr>
+<tr class="separator:ad06416df169b061698d1dd96b4cc7bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87a541172597cb418b38c59e0f843952" id="r_a87a541172597cb418b38c59e0f843952"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a87a541172597cb418b38c59e0f843952">RT_SENSOR_CLASS_GNSS</a>&#160;&#160;&#160;(16) /* GPS/GNSS sensor   */</td></tr>
+<tr class="separator:a87a541172597cb418b38c59e0f843952"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae57a978f5a394e4a357c3d95d7ed1685" id="r_ae57a978f5a394e4a357c3d95d7ed1685"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ae57a978f5a394e4a357c3d95d7ed1685">RT_SENSOR_CLASS_TOF</a>&#160;&#160;&#160;(17) /* TOF sensor        */</td></tr>
+<tr class="separator:ae57a978f5a394e4a357c3d95d7ed1685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e29028b903e6b4fe4f11c7bc0b2b596" id="r_a3e29028b903e6b4fe4f11c7bc0b2b596"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a3e29028b903e6b4fe4f11c7bc0b2b596">RT_SENSOR_CLASS_SPO2</a>&#160;&#160;&#160;(18) /* SpO2 sensor       */</td></tr>
+<tr class="separator:a3e29028b903e6b4fe4f11c7bc0b2b596"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2102c739f47982b203e21f6884be23d1" id="r_a2102c739f47982b203e21f6884be23d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a2102c739f47982b203e21f6884be23d1">RT_SENSOR_CLASS_IAQ</a>&#160;&#160;&#160;(19) /* IAQ sensor.       */</td></tr>
+<tr class="separator:a2102c739f47982b203e21f6884be23d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4df6ce5fff585134a5493d1f0e069e6d" id="r_a4df6ce5fff585134a5493d1f0e069e6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a4df6ce5fff585134a5493d1f0e069e6d">RT_SENSOR_CLASS_ETOH</a>&#160;&#160;&#160;(20) /* EtOH sensor.      */</td></tr>
+<tr class="separator:a4df6ce5fff585134a5493d1f0e069e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2001d7cdd670022cef56fb38006a5204" id="r_a2001d7cdd670022cef56fb38006a5204"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a2001d7cdd670022cef56fb38006a5204">RT_SENSOR_CLASS_BP</a>&#160;&#160;&#160;(21) /* Blood Pressure    */</td></tr>
+<tr class="separator:a2001d7cdd670022cef56fb38006a5204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49385c47437b53048d9c818b044cd89" id="r_ab49385c47437b53048d9c818b044cd89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ab49385c47437b53048d9c818b044cd89">RT_SENSOR_CLASS_VOLTAGE</a>&#160;&#160;&#160;(22) /* Voltage sensor    */</td></tr>
+<tr class="separator:ab49385c47437b53048d9c818b044cd89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19c3898d3e90e3a80cc8d9882cdcc033" id="r_a19c3898d3e90e3a80cc8d9882cdcc033"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a19c3898d3e90e3a80cc8d9882cdcc033">RT_SENSOR_CLASS_CURRENT</a>&#160;&#160;&#160;(23) /* Current sensor    */</td></tr>
+<tr class="separator:a19c3898d3e90e3a80cc8d9882cdcc033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85205ffef8d60d7a94d7a48f17e165b" id="r_ab85205ffef8d60d7a94d7a48f17e165b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ab85205ffef8d60d7a94d7a48f17e165b">RT_SENSOR_CLASS_POWER</a>&#160;&#160;&#160;(24) /* Power sensor      */</td></tr>
+<tr class="separator:ab85205ffef8d60d7a94d7a48f17e165b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6ec4ee46c96e6d466c159158ca35e7" id="r_a1b6ec4ee46c96e6d466c159158ca35e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a1b6ec4ee46c96e6d466c159158ca35e7">RT_SENSOR_VENDOR_UNKNOWN</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a1b6ec4ee46c96e6d466c159158ca35e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98c780bedb7a9c80b30c43b62b294311" id="r_a98c780bedb7a9c80b30c43b62b294311"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a98c780bedb7a9c80b30c43b62b294311">RT_SENSOR_VENDOR_STM</a>&#160;&#160;&#160;(1)  /* STMicroelectronics */</td></tr>
+<tr class="separator:a98c780bedb7a9c80b30c43b62b294311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afafb7f67f265ca41dd38d38c3df65758" id="r_afafb7f67f265ca41dd38d38c3df65758"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#afafb7f67f265ca41dd38d38c3df65758">RT_SENSOR_VENDOR_BOSCH</a>&#160;&#160;&#160;(2)  /* Bosch */</td></tr>
+<tr class="separator:afafb7f67f265ca41dd38d38c3df65758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb31eeac3a2e1669a104cfc1f15f42c8" id="r_aeb31eeac3a2e1669a104cfc1f15f42c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aeb31eeac3a2e1669a104cfc1f15f42c8">RT_SENSOR_VENDOR_INVENSENSE</a>&#160;&#160;&#160;(3)  /* Invensense */</td></tr>
+<tr class="separator:aeb31eeac3a2e1669a104cfc1f15f42c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8998ef86d060178aa6ac2b8e1133a416" id="r_a8998ef86d060178aa6ac2b8e1133a416"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8998ef86d060178aa6ac2b8e1133a416">RT_SENSOR_VENDOR_SEMTECH</a>&#160;&#160;&#160;(4)  /* Semtech */</td></tr>
+<tr class="separator:a8998ef86d060178aa6ac2b8e1133a416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad794a44907e2c44791c4a22a72b3364e" id="r_ad794a44907e2c44791c4a22a72b3364e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ad794a44907e2c44791c4a22a72b3364e">RT_SENSOR_VENDOR_GOERTEK</a>&#160;&#160;&#160;(5)  /* Goertek */</td></tr>
+<tr class="separator:ad794a44907e2c44791c4a22a72b3364e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a380938be00670ba494420e50ce15fcc6" id="r_a380938be00670ba494420e50ce15fcc6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a380938be00670ba494420e50ce15fcc6">RT_SENSOR_VENDOR_MIRAMEMS</a>&#160;&#160;&#160;(6)  /* MiraMEMS */</td></tr>
+<tr class="separator:a380938be00670ba494420e50ce15fcc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9de3a29b892317c57a04e03a4edeba2" id="r_af9de3a29b892317c57a04e03a4edeba2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#af9de3a29b892317c57a04e03a4edeba2">RT_SENSOR_VENDOR_DALLAS</a>&#160;&#160;&#160;(7)  /* Dallas */</td></tr>
+<tr class="separator:af9de3a29b892317c57a04e03a4edeba2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ff450e29ecb207c513d90efceab0234" id="r_a5ff450e29ecb207c513d90efceab0234"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a5ff450e29ecb207c513d90efceab0234">RT_SENSOR_VENDOR_ASAIR</a>&#160;&#160;&#160;(8)  /* Aosong */</td></tr>
+<tr class="separator:a5ff450e29ecb207c513d90efceab0234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528ce6e97df13b3e2d47d320bd824276" id="r_a528ce6e97df13b3e2d47d320bd824276"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a528ce6e97df13b3e2d47d320bd824276">RT_SENSOR_VENDOR_SHARP</a>&#160;&#160;&#160;(9)  /* Sharp */</td></tr>
+<tr class="separator:a528ce6e97df13b3e2d47d320bd824276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c46c1acfeabddaa6afffa1f194ef180" id="r_a5c46c1acfeabddaa6afffa1f194ef180"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a5c46c1acfeabddaa6afffa1f194ef180">RT_SENSOR_VENDOR_SENSIRION</a>&#160;&#160;&#160;(10) /* Sensirion */</td></tr>
+<tr class="separator:a5c46c1acfeabddaa6afffa1f194ef180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8032283b385d522d8bd1884b444ad23c" id="r_a8032283b385d522d8bd1884b444ad23c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8032283b385d522d8bd1884b444ad23c">RT_SENSOR_VENDOR_TI</a>&#160;&#160;&#160;(11) /* Texas Instruments */</td></tr>
+<tr class="separator:a8032283b385d522d8bd1884b444ad23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d44ed6b5ea7f22a088d98f418c5a0ad" id="r_a8d44ed6b5ea7f22a088d98f418c5a0ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8d44ed6b5ea7f22a088d98f418c5a0ad">RT_SENSOR_VENDOR_PLANTOWER</a>&#160;&#160;&#160;(12) /* Plantower */</td></tr>
+<tr class="separator:a8d44ed6b5ea7f22a088d98f418c5a0ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60953b31bfe90b6cc2e916df7adffa13" id="r_a60953b31bfe90b6cc2e916df7adffa13"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a60953b31bfe90b6cc2e916df7adffa13">RT_SENSOR_VENDOR_AMS</a>&#160;&#160;&#160;(13) /* ams AG */</td></tr>
+<tr class="separator:a60953b31bfe90b6cc2e916df7adffa13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf3bb2cb1c3e71b6ebda2c6d81fe25d" id="r_a1cf3bb2cb1c3e71b6ebda2c6d81fe25d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a1cf3bb2cb1c3e71b6ebda2c6d81fe25d">RT_SENSOR_VENDOR_MAXIM</a>&#160;&#160;&#160;(14) /* Maxim Integrated */</td></tr>
+<tr class="separator:a1cf3bb2cb1c3e71b6ebda2c6d81fe25d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aede4b67fffe497a26d7569f6e692d891" id="r_aede4b67fffe497a26d7569f6e692d891"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aede4b67fffe497a26d7569f6e692d891">RT_SENSOR_VENDOR_MELEXIS</a>&#160;&#160;&#160;(15) /* Melexis */</td></tr>
+<tr class="separator:aede4b67fffe497a26d7569f6e692d891"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60526975b52313e5881fce85ca50ab29" id="r_a60526975b52313e5881fce85ca50ab29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a60526975b52313e5881fce85ca50ab29">RT_SENSOR_UNIT_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a60526975b52313e5881fce85ca50ab29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452a2c41d3d4f1f687689446ce3cc283" id="r_a452a2c41d3d4f1f687689446ce3cc283"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a452a2c41d3d4f1f687689446ce3cc283">RT_SENSOR_UNIT_MG</a>&#160;&#160;&#160;(1)  /* Accelerometer           unit: mG         */</td></tr>
+<tr class="separator:a452a2c41d3d4f1f687689446ce3cc283"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaea1c6891f1ff37dba01ed3ef84f2bf7" id="r_aaea1c6891f1ff37dba01ed3ef84f2bf7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aaea1c6891f1ff37dba01ed3ef84f2bf7">RT_SENSOR_UNIT_MDPS</a>&#160;&#160;&#160;(2)  /* Gyroscope               unit: mdps       */</td></tr>
+<tr class="separator:aaea1c6891f1ff37dba01ed3ef84f2bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502b53479f0490d3cd80e3c3fe40546b" id="r_a502b53479f0490d3cd80e3c3fe40546b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a502b53479f0490d3cd80e3c3fe40546b">RT_SENSOR_UNIT_MGAUSS</a>&#160;&#160;&#160;(3)  /* Magnetometer            unit: mGauss     */</td></tr>
+<tr class="separator:a502b53479f0490d3cd80e3c3fe40546b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd38a8227cd8a7bc0f93b6dd8a3ef5ff" id="r_afd38a8227cd8a7bc0f93b6dd8a3ef5ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#afd38a8227cd8a7bc0f93b6dd8a3ef5ff">RT_SENSOR_UNIT_LUX</a>&#160;&#160;&#160;(4)  /* Ambient light           unit: lux        */</td></tr>
+<tr class="separator:afd38a8227cd8a7bc0f93b6dd8a3ef5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1249a64eef024f43177e4f103f9ec2" id="r_a2a1249a64eef024f43177e4f103f9ec2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a2a1249a64eef024f43177e4f103f9ec2">RT_SENSOR_UNIT_CM</a>&#160;&#160;&#160;(5)  /* Distance                unit: cm         */</td></tr>
+<tr class="separator:a2a1249a64eef024f43177e4f103f9ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fbc377cd3f834a0a6a7f9d7cba4fd05" id="r_a6fbc377cd3f834a0a6a7f9d7cba4fd05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a6fbc377cd3f834a0a6a7f9d7cba4fd05">RT_SENSOR_UNIT_PA</a>&#160;&#160;&#160;(6)  /* Barometer               unit: pa         */</td></tr>
+<tr class="separator:a6fbc377cd3f834a0a6a7f9d7cba4fd05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac221c28a8cfbdd63a54d0eefabd9045" id="r_aac221c28a8cfbdd63a54d0eefabd9045"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aac221c28a8cfbdd63a54d0eefabd9045">RT_SENSOR_UNIT_PERMILLAGE</a>&#160;&#160;&#160;(7)  /* Relative Humidity       unit: permillage */</td></tr>
+<tr class="separator:aac221c28a8cfbdd63a54d0eefabd9045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bc035476b186918af550cb7c524cdcc" id="r_a7bc035476b186918af550cb7c524cdcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a7bc035476b186918af550cb7c524cdcc">RT_SENSOR_UNIT_DCELSIUS</a>&#160;&#160;&#160;(8)  /* Temperature             unit: dCelsius   */</td></tr>
+<tr class="separator:a7bc035476b186918af550cb7c524cdcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7416709080ddeb5d5902fc5f1e85ca36" id="r_a7416709080ddeb5d5902fc5f1e85ca36"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a7416709080ddeb5d5902fc5f1e85ca36">RT_SENSOR_UNIT_HZ</a>&#160;&#160;&#160;(9)  /* Frequency               unit: HZ         */</td></tr>
+<tr class="separator:a7416709080ddeb5d5902fc5f1e85ca36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a765b87b2a8b613a628c45c7034002298" id="r_a765b87b2a8b613a628c45c7034002298"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a765b87b2a8b613a628c45c7034002298">RT_SENSOR_UNIT_ONE</a>&#160;&#160;&#160;(10) /* Dimensionless quantity  unit: 1          */</td></tr>
+<tr class="separator:a765b87b2a8b613a628c45c7034002298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bd5f74f96f4eb4eb3535a2ee5084c77" id="r_a4bd5f74f96f4eb4eb3535a2ee5084c77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a4bd5f74f96f4eb4eb3535a2ee5084c77">RT_SENSOR_UNIT_BPM</a>&#160;&#160;&#160;(11) /* Heart rate              unit: bpm        */</td></tr>
+<tr class="separator:a4bd5f74f96f4eb4eb3535a2ee5084c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64810bbf3d6ee05e04c6ede9a4fd5fb6" id="r_a64810bbf3d6ee05e04c6ede9a4fd5fb6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a64810bbf3d6ee05e04c6ede9a4fd5fb6">RT_SENSOR_UNIT_MM</a>&#160;&#160;&#160;(12) /* Distance                unit: mm         */</td></tr>
+<tr class="separator:a64810bbf3d6ee05e04c6ede9a4fd5fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedcec10fbcfed0ce99a54489f0c5a83" id="r_abedcec10fbcfed0ce99a54489f0c5a83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#abedcec10fbcfed0ce99a54489f0c5a83">RT_SENSOR_UNIT_MN</a>&#160;&#160;&#160;(13) /* Force                   unit: mN         */</td></tr>
+<tr class="separator:abedcec10fbcfed0ce99a54489f0c5a83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac73cf0f1d5bce7720451b51eec803fad" id="r_ac73cf0f1d5bce7720451b51eec803fad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ac73cf0f1d5bce7720451b51eec803fad">RT_SENSOR_UNIT_PPM</a>&#160;&#160;&#160;(14) /* Concentration           unit: ppm        */</td></tr>
+<tr class="separator:ac73cf0f1d5bce7720451b51eec803fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6886c19496ab0cc5c415f0c573f2b12" id="r_ae6886c19496ab0cc5c415f0c573f2b12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ae6886c19496ab0cc5c415f0c573f2b12">RT_SENSOR_UNIT_PPB</a>&#160;&#160;&#160;(15) /* Concentration           unit: ppb        */</td></tr>
+<tr class="separator:ae6886c19496ab0cc5c415f0c573f2b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4fd2e24a89a902554c3d04d04673e23" id="r_aa4fd2e24a89a902554c3d04d04673e23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aa4fd2e24a89a902554c3d04d04673e23">RT_SENSOR_UNIT_DMS</a>&#160;&#160;&#160;(16) /* Coordinates             unit: DMS        */</td></tr>
+<tr class="separator:aa4fd2e24a89a902554c3d04d04673e23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a011af551f13af2e928fdbd3fed71bb78" id="r_a011af551f13af2e928fdbd3fed71bb78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a011af551f13af2e928fdbd3fed71bb78">RT_SENSOR_UNIT_DD</a>&#160;&#160;&#160;(17) /* Coordinates             unit: DD         */</td></tr>
+<tr class="separator:a011af551f13af2e928fdbd3fed71bb78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f248e48549c6a1c99d1b1fc69b0ad12" id="r_a8f248e48549c6a1c99d1b1fc69b0ad12"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8f248e48549c6a1c99d1b1fc69b0ad12">RT_SENSOR_UNIT_MGM3</a>&#160;&#160;&#160;(18) /* Concentration           unit: mg/m3      */</td></tr>
+<tr class="separator:a8f248e48549c6a1c99d1b1fc69b0ad12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcc47a98123a076a6d1b959182dbfb8" id="r_a4dcc47a98123a076a6d1b959182dbfb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a4dcc47a98123a076a6d1b959182dbfb8">RT_SENSOR_UNIT_MMHG</a>&#160;&#160;&#160;(19) /* Blood Pressure          unit: mmHg       */</td></tr>
+<tr class="separator:a4dcc47a98123a076a6d1b959182dbfb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a364f8872f6f5e84de4a13161e247a" id="r_ae4a364f8872f6f5e84de4a13161e247a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ae4a364f8872f6f5e84de4a13161e247a">RT_SENSOR_UNIT_MV</a>&#160;&#160;&#160;(20) /* Voltage                 unit: mV         */</td></tr>
+<tr class="separator:ae4a364f8872f6f5e84de4a13161e247a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97db73bf1cb7610b9e8a8d1e15d4d3c2" id="r_a97db73bf1cb7610b9e8a8d1e15d4d3c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a97db73bf1cb7610b9e8a8d1e15d4d3c2">RT_SENSOR_UNIT_MA</a>&#160;&#160;&#160;(21) /* Current                 unit: mA         */</td></tr>
+<tr class="separator:a97db73bf1cb7610b9e8a8d1e15d4d3c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ff91a389b2e230219172ea34415e59" id="r_a34ff91a389b2e230219172ea34415e59"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a34ff91a389b2e230219172ea34415e59">RT_SENSOR_UNIT_MW</a>&#160;&#160;&#160;(22) /* Power                   unit: mW         */</td></tr>
+<tr class="separator:a34ff91a389b2e230219172ea34415e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1f5046c10f7d0f9847a47f95009d87" id="r_a1a1f5046c10f7d0f9847a47f95009d87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a1a1f5046c10f7d0f9847a47f95009d87">RT_SENSOR_INTF_I2C</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="separator:a1a1f5046c10f7d0f9847a47f95009d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57b371ba2729d001a10ac5a587e2effc" id="r_a57b371ba2729d001a10ac5a587e2effc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a57b371ba2729d001a10ac5a587e2effc">RT_SENSOR_INTF_SPI</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:a57b371ba2729d001a10ac5a587e2effc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2dc50f9bcf1d49906888b8ba606db4" id="r_acb2dc50f9bcf1d49906888b8ba606db4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#acb2dc50f9bcf1d49906888b8ba606db4">RT_SENSOR_INTF_UART</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:acb2dc50f9bcf1d49906888b8ba606db4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaa22e59a545332a3b8da64d14c64eb2" id="r_aaaa22e59a545332a3b8da64d14c64eb2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aaaa22e59a545332a3b8da64d14c64eb2">RT_SENSOR_INTF_ONEWIRE</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="separator:aaaa22e59a545332a3b8da64d14c64eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5649b44b9dc5f8a62088aca7b11f9519" id="r_a5649b44b9dc5f8a62088aca7b11f9519"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a5649b44b9dc5f8a62088aca7b11f9519">RT_SENSOR_POWER_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a5649b44b9dc5f8a62088aca7b11f9519"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad52f3f34638ca411f4b8d8cd8393cdee" id="r_ad52f3f34638ca411f4b8d8cd8393cdee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ad52f3f34638ca411f4b8d8cd8393cdee">RT_SENSOR_POWER_DOWN</a>&#160;&#160;&#160;(1)  /* power down mode   */</td></tr>
+<tr class="separator:ad52f3f34638ca411f4b8d8cd8393cdee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2387bae5d2b4a774dbb2432e79ba2fbe" id="r_a2387bae5d2b4a774dbb2432e79ba2fbe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a2387bae5d2b4a774dbb2432e79ba2fbe">RT_SENSOR_POWER_NORMAL</a>&#160;&#160;&#160;(2)  /* normal-power mode */</td></tr>
+<tr class="separator:a2387bae5d2b4a774dbb2432e79ba2fbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0774f2edeb7da8eb92d68638968a94bf" id="r_a0774f2edeb7da8eb92d68638968a94bf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a0774f2edeb7da8eb92d68638968a94bf">RT_SENSOR_POWER_LOW</a>&#160;&#160;&#160;(3)  /* low-power mode    */</td></tr>
+<tr class="separator:a0774f2edeb7da8eb92d68638968a94bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4bc4a8208f6d3e8467cf64ec432bddbb" id="r_a4bc4a8208f6d3e8467cf64ec432bddbb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a4bc4a8208f6d3e8467cf64ec432bddbb">RT_SENSOR_POWER_HIGH</a>&#160;&#160;&#160;(4)  /* high-power mode   */</td></tr>
+<tr class="separator:a4bc4a8208f6d3e8467cf64ec432bddbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33bb43a7706fb2d2269640e09b4a638a" id="r_a33bb43a7706fb2d2269640e09b4a638a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a33bb43a7706fb2d2269640e09b4a638a">RT_SENSOR_MODE_NONE</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:a33bb43a7706fb2d2269640e09b4a638a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2fa42789d0ba7681e3cc594c6e155b1" id="r_ac2fa42789d0ba7681e3cc594c6e155b1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ac2fa42789d0ba7681e3cc594c6e155b1">RT_SENSOR_MODE_POLLING</a>&#160;&#160;&#160;(1)  /* One shot only <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> a data */</td></tr>
+<tr class="separator:ac2fa42789d0ba7681e3cc594c6e155b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43068fdeef4463f602967bb1318880ad" id="r_a43068fdeef4463f602967bb1318880ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a43068fdeef4463f602967bb1318880ad">RT_SENSOR_MODE_INT</a>&#160;&#160;&#160;(2)  /* TODO: One shot interrupt only <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> a data */</td></tr>
+<tr class="separator:a43068fdeef4463f602967bb1318880ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61c4187850cfbc9a0940869340b98c9c" id="r_a61c4187850cfbc9a0940869340b98c9c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a61c4187850cfbc9a0940869340b98c9c">RT_SENSOR_MODE_FIFO</a>&#160;&#160;&#160;(3)  /* TODO: One shot interrupt <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> all fifo data */</td></tr>
+<tr class="separator:a61c4187850cfbc9a0940869340b98c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ba01e9eee4be3059e3a4526893157e4" id="r_a1ba01e9eee4be3059e3a4526893157e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a1ba01e9eee4be3059e3a4526893157e4">RT_SENSOR_CTRL_GET_ID</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 0)  /* Get device id */</td></tr>
+<tr class="separator:a1ba01e9eee4be3059e3a4526893157e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cef17a0954ce901966100902721ff83" id="r_a9cef17a0954ce901966100902721ff83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a9cef17a0954ce901966100902721ff83">RT_SENSOR_CTRL_GET_INFO</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 1)  /* Get sensor info */</td></tr>
+<tr class="separator:a9cef17a0954ce901966100902721ff83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89470fc36aa1bc7b972fdcf7f4238ba" id="r_ac89470fc36aa1bc7b972fdcf7f4238ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ac89470fc36aa1bc7b972fdcf7f4238ba">RT_SENSOR_CTRL_SET_RANGE</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 2)  /* Set the measure range of sensor. unit is info of sensor */</td></tr>
+<tr class="separator:ac89470fc36aa1bc7b972fdcf7f4238ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2b1986fa400625fedef3487b0f644bd" id="r_aa2b1986fa400625fedef3487b0f644bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#aa2b1986fa400625fedef3487b0f644bd">RT_SENSOR_CTRL_SET_ODR</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 3)  /* Set output date rate. unit is HZ */</td></tr>
+<tr class="separator:aa2b1986fa400625fedef3487b0f644bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3a1564ca7a3a572c7088844b57c416" id="r_abb3a1564ca7a3a572c7088844b57c416"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#abb3a1564ca7a3a572c7088844b57c416">RT_SENSOR_CTRL_SET_MODE</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 4)  /* Set sensor's work mode. ex. <a class="el" href="sensor_8h.html#ac2fa42789d0ba7681e3cc594c6e155b1">RT_SENSOR_MODE_POLLING</a>,<a class="el" href="sensor_8h.html#a43068fdeef4463f602967bb1318880ad">RT_SENSOR_MODE_INT</a> */</td></tr>
+<tr class="separator:abb3a1564ca7a3a572c7088844b57c416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0479deeef3757a61cc7999f321047e" id="r_a8b0479deeef3757a61cc7999f321047e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a8b0479deeef3757a61cc7999f321047e">RT_SENSOR_CTRL_SET_POWER</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 5)  /* Set power mode. args type of sensor power mode. ex. <a class="el" href="sensor_8h.html#ad52f3f34638ca411f4b8d8cd8393cdee">RT_SENSOR_POWER_DOWN</a>,<a class="el" href="sensor_8h.html#a2387bae5d2b4a774dbb2432e79ba2fbe">RT_SENSOR_POWER_NORMAL</a> */</td></tr>
+<tr class="separator:a8b0479deeef3757a61cc7999f321047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88ea785c3865c46789ec7beb77a894c0" id="r_a88ea785c3865c46789ec7beb77a894c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#a88ea785c3865c46789ec7beb77a894c0">RT_SENSOR_CTRL_SELF_TEST</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 6)  /* Take a self test */</td></tr>
+<tr class="separator:a88ea785c3865c46789ec7beb77a894c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf5737aac8d9bff21c707be3b87fc6c9" id="r_acf5737aac8d9bff21c707be3b87fc6c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#acf5737aac8d9bff21c707be3b87fc6c9">RT_SENSOR_CTRL_USER_CMD_START</a>&#160;&#160;&#160;0x100  /* User commands should be greater than 0x100 */</td></tr>
+<tr class="separator:acf5737aac8d9bff21c707be3b87fc6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ade7a6000477e703b383a74b3e16922af" id="r_ade7a6000477e703b383a74b3e16922af"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__sensor__device.html">rt_sensor_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ade7a6000477e703b383a74b3e16922af">rt_sensor_t</a></td></tr>
+<tr class="separator:ade7a6000477e703b383a74b3e16922af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ab00b22de94b72e9e8542e3962c3a1759" id="r_ab00b22de94b72e9e8542e3962c3a1759"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sensor_8h.html#ab00b22de94b72e9e8542e3962c3a1759">rt_hw_sensor_register</a> (<a class="el" href="sensor_8h.html#ade7a6000477e703b383a74b3e16922af">rt_sensor_t</a> sensor, const char *name, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> flag, void *data)</td></tr>
+<tr class="separator:ab00b22de94b72e9e8542e3962c3a1759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a77e8db4ce1d56b2085b2a0643b56c73f" name="a77e8db4ce1d56b2085b2a0643b56c73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e8db4ce1d56b2085b2a0643b56c73f">&#9670;&#160;</a></span>RT_DEVICE_FLAG_FIFO_RX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_DEVICE_FLAG_FIFO_RX&#160;&#160;&#160;0x200     /* Flag to use when the sensor is <a class="el" href="group__group___fs_posix_api.html#ga94873fa89201b877351b663b9f5b040d">open</a> by fifo mode */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa097c1b98d868be4d34872196bf56d76" name="aa097c1b98d868be4d34872196bf56d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa097c1b98d868be4d34872196bf56d76">&#9670;&#160;</a></span>RT_PIN_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PIN_NONE&#160;&#160;&#160;0xFFFF    /* RT PIN NONE */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab415bca91983d4852838503571f1ba2a" name="ab415bca91983d4852838503571f1ba2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab415bca91983d4852838503571f1ba2a">&#9670;&#160;</a></span>RT_SENSOR_CLASS_ACCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_ACCE&#160;&#160;&#160;(1)  /* Accelerometer     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aacb0d4096baf4ba04c8e1b54670b20a6" name="aacb0d4096baf4ba04c8e1b54670b20a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacb0d4096baf4ba04c8e1b54670b20a6">&#9670;&#160;</a></span>RT_SENSOR_CLASS_BARO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_BARO&#160;&#160;&#160;(6)  /* Barometer         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2001d7cdd670022cef56fb38006a5204" name="a2001d7cdd670022cef56fb38006a5204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2001d7cdd670022cef56fb38006a5204">&#9670;&#160;</a></span>RT_SENSOR_CLASS_BP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_BP&#160;&#160;&#160;(21) /* Blood Pressure    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19c3898d3e90e3a80cc8d9882cdcc033" name="a19c3898d3e90e3a80cc8d9882cdcc033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19c3898d3e90e3a80cc8d9882cdcc033">&#9670;&#160;</a></span>RT_SENSOR_CLASS_CURRENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_CURRENT&#160;&#160;&#160;(23) /* Current sensor    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0cb17865a4c25d89a38194b4ce2afd9" name="ab0cb17865a4c25d89a38194b4ce2afd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0cb17865a4c25d89a38194b4ce2afd9">&#9670;&#160;</a></span>RT_SENSOR_CLASS_DUST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_DUST&#160;&#160;&#160;(14) /* Dust sensor       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad06416df169b061698d1dd96b4cc7bc5" name="ad06416df169b061698d1dd96b4cc7bc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad06416df169b061698d1dd96b4cc7bc5">&#9670;&#160;</a></span>RT_SENSOR_CLASS_ECO2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_ECO2&#160;&#160;&#160;(15) /* eCO2 sensor       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4df6ce5fff585134a5493d1f0e069e6d" name="a4df6ce5fff585134a5493d1f0e069e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4df6ce5fff585134a5493d1f0e069e6d">&#9670;&#160;</a></span>RT_SENSOR_CLASS_ETOH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_ETOH&#160;&#160;&#160;(20) /* EtOH sensor.      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af90e764a4e77bdc2bbac98b6674f42d1" name="af90e764a4e77bdc2bbac98b6674f42d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af90e764a4e77bdc2bbac98b6674f42d1">&#9670;&#160;</a></span>RT_SENSOR_CLASS_FORCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_FORCE&#160;&#160;&#160;(13) /* Force sensor      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87a541172597cb418b38c59e0f843952" name="a87a541172597cb418b38c59e0f843952"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87a541172597cb418b38c59e0f843952">&#9670;&#160;</a></span>RT_SENSOR_CLASS_GNSS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_GNSS&#160;&#160;&#160;(16) /* GPS/GNSS sensor   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e5fd7bff93063692020d8d8baceb9db" name="a7e5fd7bff93063692020d8d8baceb9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5fd7bff93063692020d8d8baceb9db">&#9670;&#160;</a></span>RT_SENSOR_CLASS_GYRO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_GYRO&#160;&#160;&#160;(2)  /* Gyroscope         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a12d053882e38127fc07cd4d7b232cb18" name="a12d053882e38127fc07cd4d7b232cb18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d053882e38127fc07cd4d7b232cb18">&#9670;&#160;</a></span>RT_SENSOR_CLASS_HR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_HR&#160;&#160;&#160;(9)  /* Heart Rate        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad42bcf26fd8cc8f13aed6b300c0b5481" name="ad42bcf26fd8cc8f13aed6b300c0b5481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42bcf26fd8cc8f13aed6b300c0b5481">&#9670;&#160;</a></span>RT_SENSOR_CLASS_HUMI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_HUMI&#160;&#160;&#160;(5)  /* Relative Humidity */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2102c739f47982b203e21f6884be23d1" name="a2102c739f47982b203e21f6884be23d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2102c739f47982b203e21f6884be23d1">&#9670;&#160;</a></span>RT_SENSOR_CLASS_IAQ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_IAQ&#160;&#160;&#160;(19) /* IAQ sensor.       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8028038bd58848b6ef3c3455406de1b" name="af8028038bd58848b6ef3c3455406de1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8028038bd58848b6ef3c3455406de1b">&#9670;&#160;</a></span>RT_SENSOR_CLASS_LIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_LIGHT&#160;&#160;&#160;(7)  /* Ambient light     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a12ff9ee8333e02b83d7e8e939f9463" name="a7a12ff9ee8333e02b83d7e8e939f9463"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a12ff9ee8333e02b83d7e8e939f9463">&#9670;&#160;</a></span>RT_SENSOR_CLASS_MAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_MAG&#160;&#160;&#160;(3)  /* Magnetometer      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeceed20b92337ebd7d114980c298f313" name="aeceed20b92337ebd7d114980c298f313"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeceed20b92337ebd7d114980c298f313">&#9670;&#160;</a></span>RT_SENSOR_CLASS_NOISE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_NOISE&#160;&#160;&#160;(11) /* Noise Loudness    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7db4d0a6b875fa7744ab34bdaecc9901" name="a7db4d0a6b875fa7744ab34bdaecc9901"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db4d0a6b875fa7744ab34bdaecc9901">&#9670;&#160;</a></span>RT_SENSOR_CLASS_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab85205ffef8d60d7a94d7a48f17e165b" name="ab85205ffef8d60d7a94d7a48f17e165b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85205ffef8d60d7a94d7a48f17e165b">&#9670;&#160;</a></span>RT_SENSOR_CLASS_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_POWER&#160;&#160;&#160;(24) /* Power sensor      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af39324818bc9343960f2b62c8d956e0a" name="af39324818bc9343960f2b62c8d956e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af39324818bc9343960f2b62c8d956e0a">&#9670;&#160;</a></span>RT_SENSOR_CLASS_PROXIMITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_PROXIMITY&#160;&#160;&#160;(8)  /* Proximity         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e29028b903e6b4fe4f11c7bc0b2b596" name="a3e29028b903e6b4fe4f11c7bc0b2b596"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e29028b903e6b4fe4f11c7bc0b2b596">&#9670;&#160;</a></span>RT_SENSOR_CLASS_SPO2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_SPO2&#160;&#160;&#160;(18) /* SpO2 sensor       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a394e178ac9125c134ebf1c103fd21774" name="a394e178ac9125c134ebf1c103fd21774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a394e178ac9125c134ebf1c103fd21774">&#9670;&#160;</a></span>RT_SENSOR_CLASS_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_STEP&#160;&#160;&#160;(12) /* Step sensor       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ba87f581688b9bfcabfd2acc84300cb" name="a3ba87f581688b9bfcabfd2acc84300cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ba87f581688b9bfcabfd2acc84300cb">&#9670;&#160;</a></span>RT_SENSOR_CLASS_TEMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_TEMP&#160;&#160;&#160;(4)  /* Temperature       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae57a978f5a394e4a357c3d95d7ed1685" name="ae57a978f5a394e4a357c3d95d7ed1685"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae57a978f5a394e4a357c3d95d7ed1685">&#9670;&#160;</a></span>RT_SENSOR_CLASS_TOF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_TOF&#160;&#160;&#160;(17) /* TOF sensor        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8fde72171abe873c4cb0ee36482d6085" name="a8fde72171abe873c4cb0ee36482d6085"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fde72171abe873c4cb0ee36482d6085">&#9670;&#160;</a></span>RT_SENSOR_CLASS_TVOC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_TVOC&#160;&#160;&#160;(10) /* TVOC Level        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab49385c47437b53048d9c818b044cd89" name="ab49385c47437b53048d9c818b044cd89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49385c47437b53048d9c818b044cd89">&#9670;&#160;</a></span>RT_SENSOR_CLASS_VOLTAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CLASS_VOLTAGE&#160;&#160;&#160;(22) /* Voltage sensor    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1ba01e9eee4be3059e3a4526893157e4" name="a1ba01e9eee4be3059e3a4526893157e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba01e9eee4be3059e3a4526893157e4">&#9670;&#160;</a></span>RT_SENSOR_CTRL_GET_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_GET_ID&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 0)  /* Get device id */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9cef17a0954ce901966100902721ff83" name="a9cef17a0954ce901966100902721ff83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef17a0954ce901966100902721ff83">&#9670;&#160;</a></span>RT_SENSOR_CTRL_GET_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_GET_INFO&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 1)  /* Get sensor info */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88ea785c3865c46789ec7beb77a894c0" name="a88ea785c3865c46789ec7beb77a894c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88ea785c3865c46789ec7beb77a894c0">&#9670;&#160;</a></span>RT_SENSOR_CTRL_SELF_TEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_SELF_TEST&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 6)  /* Take a self test */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb3a1564ca7a3a572c7088844b57c416" name="abb3a1564ca7a3a572c7088844b57c416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3a1564ca7a3a572c7088844b57c416">&#9670;&#160;</a></span>RT_SENSOR_CTRL_SET_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_SET_MODE&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 4)  /* Set sensor's work mode. ex. <a class="el" href="sensor_8h.html#ac2fa42789d0ba7681e3cc594c6e155b1">RT_SENSOR_MODE_POLLING</a>,<a class="el" href="sensor_8h.html#a43068fdeef4463f602967bb1318880ad">RT_SENSOR_MODE_INT</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2b1986fa400625fedef3487b0f644bd" name="aa2b1986fa400625fedef3487b0f644bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2b1986fa400625fedef3487b0f644bd">&#9670;&#160;</a></span>RT_SENSOR_CTRL_SET_ODR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_SET_ODR&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 3)  /* Set output date rate. unit is HZ */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8b0479deeef3757a61cc7999f321047e" name="a8b0479deeef3757a61cc7999f321047e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0479deeef3757a61cc7999f321047e">&#9670;&#160;</a></span>RT_SENSOR_CTRL_SET_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_SET_POWER&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 5)  /* Set power mode. args type of sensor power mode. ex. <a class="el" href="sensor_8h.html#ad52f3f34638ca411f4b8d8cd8393cdee">RT_SENSOR_POWER_DOWN</a>,<a class="el" href="sensor_8h.html#a2387bae5d2b4a774dbb2432e79ba2fbe">RT_SENSOR_POWER_NORMAL</a> */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac89470fc36aa1bc7b972fdcf7f4238ba" name="ac89470fc36aa1bc7b972fdcf7f4238ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89470fc36aa1bc7b972fdcf7f4238ba">&#9670;&#160;</a></span>RT_SENSOR_CTRL_SET_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_SET_RANGE&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sensor) + 2)  /* Set the measure range of sensor. unit is info of sensor */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf5737aac8d9bff21c707be3b87fc6c9" name="acf5737aac8d9bff21c707be3b87fc6c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf5737aac8d9bff21c707be3b87fc6c9">&#9670;&#160;</a></span>RT_SENSOR_CTRL_USER_CMD_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_CTRL_USER_CMD_START&#160;&#160;&#160;0x100  /* User commands should be greater than 0x100 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a337b1d4df01a1b055b813c229b9c24a3" name="a337b1d4df01a1b055b813c229b9c24a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a337b1d4df01a1b055b813c229b9c24a3">&#9670;&#160;</a></span>rt_sensor_get_ts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_sensor_get_ts</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="group__group___clock.html#ga6e2aa36f263bddcddae01a91986fcdae">rt_tick_get</a>()   /* API for the sensor to get the timestamp */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a1f5046c10f7d0f9847a47f95009d87" name="a1a1f5046c10f7d0f9847a47f95009d87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1f5046c10f7d0f9847a47f95009d87">&#9670;&#160;</a></span>RT_SENSOR_INTF_I2C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_INTF_I2C&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaa22e59a545332a3b8da64d14c64eb2" name="aaaa22e59a545332a3b8da64d14c64eb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaa22e59a545332a3b8da64d14c64eb2">&#9670;&#160;</a></span>RT_SENSOR_INTF_ONEWIRE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_INTF_ONEWIRE&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57b371ba2729d001a10ac5a587e2effc" name="a57b371ba2729d001a10ac5a587e2effc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57b371ba2729d001a10ac5a587e2effc">&#9670;&#160;</a></span>RT_SENSOR_INTF_SPI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_INTF_SPI&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb2dc50f9bcf1d49906888b8ba606db4" name="acb2dc50f9bcf1d49906888b8ba606db4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2dc50f9bcf1d49906888b8ba606db4">&#9670;&#160;</a></span>RT_SENSOR_INTF_UART</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_INTF_UART&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61c4187850cfbc9a0940869340b98c9c" name="a61c4187850cfbc9a0940869340b98c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61c4187850cfbc9a0940869340b98c9c">&#9670;&#160;</a></span>RT_SENSOR_MODE_FIFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_MODE_FIFO&#160;&#160;&#160;(3)  /* TODO: One shot interrupt <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> all fifo data */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43068fdeef4463f602967bb1318880ad" name="a43068fdeef4463f602967bb1318880ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43068fdeef4463f602967bb1318880ad">&#9670;&#160;</a></span>RT_SENSOR_MODE_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_MODE_INT&#160;&#160;&#160;(2)  /* TODO: One shot interrupt only <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> a data */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33bb43a7706fb2d2269640e09b4a638a" name="a33bb43a7706fb2d2269640e09b4a638a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33bb43a7706fb2d2269640e09b4a638a">&#9670;&#160;</a></span>RT_SENSOR_MODE_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_MODE_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2fa42789d0ba7681e3cc594c6e155b1" name="ac2fa42789d0ba7681e3cc594c6e155b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2fa42789d0ba7681e3cc594c6e155b1">&#9670;&#160;</a></span>RT_SENSOR_MODE_POLLING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_MODE_POLLING&#160;&#160;&#160;(1)  /* One shot only <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> a data */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a387dc2832d1f48f95a3f4a05f2cbc926" name="a387dc2832d1f48f95a3f4a05f2cbc926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a387dc2832d1f48f95a3f4a05f2cbc926">&#9670;&#160;</a></span>RT_SENSOR_MODULE_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_MODULE_MAX&#160;&#160;&#160;(3)       /* The maximum number of members of a sensor module */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad52f3f34638ca411f4b8d8cd8393cdee" name="ad52f3f34638ca411f4b8d8cd8393cdee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad52f3f34638ca411f4b8d8cd8393cdee">&#9670;&#160;</a></span>RT_SENSOR_POWER_DOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_POWER_DOWN&#160;&#160;&#160;(1)  /* power down mode   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bc4a8208f6d3e8467cf64ec432bddbb" name="a4bc4a8208f6d3e8467cf64ec432bddbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bc4a8208f6d3e8467cf64ec432bddbb">&#9670;&#160;</a></span>RT_SENSOR_POWER_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_POWER_HIGH&#160;&#160;&#160;(4)  /* high-power mode   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0774f2edeb7da8eb92d68638968a94bf" name="a0774f2edeb7da8eb92d68638968a94bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0774f2edeb7da8eb92d68638968a94bf">&#9670;&#160;</a></span>RT_SENSOR_POWER_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_POWER_LOW&#160;&#160;&#160;(3)  /* low-power mode    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5649b44b9dc5f8a62088aca7b11f9519" name="a5649b44b9dc5f8a62088aca7b11f9519"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5649b44b9dc5f8a62088aca7b11f9519">&#9670;&#160;</a></span>RT_SENSOR_POWER_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_POWER_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2387bae5d2b4a774dbb2432e79ba2fbe" name="a2387bae5d2b4a774dbb2432e79ba2fbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2387bae5d2b4a774dbb2432e79ba2fbe">&#9670;&#160;</a></span>RT_SENSOR_POWER_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_POWER_NORMAL&#160;&#160;&#160;(2)  /* normal-power mode */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4bd5f74f96f4eb4eb3535a2ee5084c77" name="a4bd5f74f96f4eb4eb3535a2ee5084c77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd5f74f96f4eb4eb3535a2ee5084c77">&#9670;&#160;</a></span>RT_SENSOR_UNIT_BPM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_BPM&#160;&#160;&#160;(11) /* Heart rate              unit: bpm        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a1249a64eef024f43177e4f103f9ec2" name="a2a1249a64eef024f43177e4f103f9ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a1249a64eef024f43177e4f103f9ec2">&#9670;&#160;</a></span>RT_SENSOR_UNIT_CM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_CM&#160;&#160;&#160;(5)  /* Distance                unit: cm         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7bc035476b186918af550cb7c524cdcc" name="a7bc035476b186918af550cb7c524cdcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bc035476b186918af550cb7c524cdcc">&#9670;&#160;</a></span>RT_SENSOR_UNIT_DCELSIUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_DCELSIUS&#160;&#160;&#160;(8)  /* Temperature             unit: dCelsius   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a011af551f13af2e928fdbd3fed71bb78" name="a011af551f13af2e928fdbd3fed71bb78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a011af551f13af2e928fdbd3fed71bb78">&#9670;&#160;</a></span>RT_SENSOR_UNIT_DD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_DD&#160;&#160;&#160;(17) /* Coordinates             unit: DD         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4fd2e24a89a902554c3d04d04673e23" name="aa4fd2e24a89a902554c3d04d04673e23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fd2e24a89a902554c3d04d04673e23">&#9670;&#160;</a></span>RT_SENSOR_UNIT_DMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_DMS&#160;&#160;&#160;(16) /* Coordinates             unit: DMS        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7416709080ddeb5d5902fc5f1e85ca36" name="a7416709080ddeb5d5902fc5f1e85ca36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7416709080ddeb5d5902fc5f1e85ca36">&#9670;&#160;</a></span>RT_SENSOR_UNIT_HZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_HZ&#160;&#160;&#160;(9)  /* Frequency               unit: HZ         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd38a8227cd8a7bc0f93b6dd8a3ef5ff" name="afd38a8227cd8a7bc0f93b6dd8a3ef5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd38a8227cd8a7bc0f93b6dd8a3ef5ff">&#9670;&#160;</a></span>RT_SENSOR_UNIT_LUX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_LUX&#160;&#160;&#160;(4)  /* Ambient light           unit: lux        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97db73bf1cb7610b9e8a8d1e15d4d3c2" name="a97db73bf1cb7610b9e8a8d1e15d4d3c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97db73bf1cb7610b9e8a8d1e15d4d3c2">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MA&#160;&#160;&#160;(21) /* Current                 unit: mA         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaea1c6891f1ff37dba01ed3ef84f2bf7" name="aaea1c6891f1ff37dba01ed3ef84f2bf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea1c6891f1ff37dba01ed3ef84f2bf7">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MDPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MDPS&#160;&#160;&#160;(2)  /* Gyroscope               unit: mdps       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a452a2c41d3d4f1f687689446ce3cc283" name="a452a2c41d3d4f1f687689446ce3cc283"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452a2c41d3d4f1f687689446ce3cc283">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MG&#160;&#160;&#160;(1)  /* Accelerometer           unit: mG         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a502b53479f0490d3cd80e3c3fe40546b" name="a502b53479f0490d3cd80e3c3fe40546b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502b53479f0490d3cd80e3c3fe40546b">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MGAUSS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MGAUSS&#160;&#160;&#160;(3)  /* Magnetometer            unit: mGauss     */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f248e48549c6a1c99d1b1fc69b0ad12" name="a8f248e48549c6a1c99d1b1fc69b0ad12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f248e48549c6a1c99d1b1fc69b0ad12">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MGM3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MGM3&#160;&#160;&#160;(18) /* Concentration           unit: mg/m3      */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64810bbf3d6ee05e04c6ede9a4fd5fb6" name="a64810bbf3d6ee05e04c6ede9a4fd5fb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64810bbf3d6ee05e04c6ede9a4fd5fb6">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MM&#160;&#160;&#160;(12) /* Distance                unit: mm         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dcc47a98123a076a6d1b959182dbfb8" name="a4dcc47a98123a076a6d1b959182dbfb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dcc47a98123a076a6d1b959182dbfb8">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MMHG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MMHG&#160;&#160;&#160;(19) /* Blood Pressure          unit: mmHg       */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abedcec10fbcfed0ce99a54489f0c5a83" name="abedcec10fbcfed0ce99a54489f0c5a83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedcec10fbcfed0ce99a54489f0c5a83">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MN&#160;&#160;&#160;(13) /* Force                   unit: mN         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4a364f8872f6f5e84de4a13161e247a" name="ae4a364f8872f6f5e84de4a13161e247a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a364f8872f6f5e84de4a13161e247a">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MV&#160;&#160;&#160;(20) /* Voltage                 unit: mV         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a34ff91a389b2e230219172ea34415e59" name="a34ff91a389b2e230219172ea34415e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34ff91a389b2e230219172ea34415e59">&#9670;&#160;</a></span>RT_SENSOR_UNIT_MW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_MW&#160;&#160;&#160;(22) /* Power                   unit: mW         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60526975b52313e5881fce85ca50ab29" name="a60526975b52313e5881fce85ca50ab29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60526975b52313e5881fce85ca50ab29">&#9670;&#160;</a></span>RT_SENSOR_UNIT_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_NONE&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a765b87b2a8b613a628c45c7034002298" name="a765b87b2a8b613a628c45c7034002298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765b87b2a8b613a628c45c7034002298">&#9670;&#160;</a></span>RT_SENSOR_UNIT_ONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_ONE&#160;&#160;&#160;(10) /* Dimensionless quantity  unit: 1          */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fbc377cd3f834a0a6a7f9d7cba4fd05" name="a6fbc377cd3f834a0a6a7f9d7cba4fd05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fbc377cd3f834a0a6a7f9d7cba4fd05">&#9670;&#160;</a></span>RT_SENSOR_UNIT_PA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_PA&#160;&#160;&#160;(6)  /* Barometer               unit: pa         */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aac221c28a8cfbdd63a54d0eefabd9045" name="aac221c28a8cfbdd63a54d0eefabd9045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac221c28a8cfbdd63a54d0eefabd9045">&#9670;&#160;</a></span>RT_SENSOR_UNIT_PERMILLAGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_PERMILLAGE&#160;&#160;&#160;(7)  /* Relative Humidity       unit: permillage */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6886c19496ab0cc5c415f0c573f2b12" name="ae6886c19496ab0cc5c415f0c573f2b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6886c19496ab0cc5c415f0c573f2b12">&#9670;&#160;</a></span>RT_SENSOR_UNIT_PPB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_PPB&#160;&#160;&#160;(15) /* Concentration           unit: ppb        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac73cf0f1d5bce7720451b51eec803fad" name="ac73cf0f1d5bce7720451b51eec803fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac73cf0f1d5bce7720451b51eec803fad">&#9670;&#160;</a></span>RT_SENSOR_UNIT_PPM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_UNIT_PPM&#160;&#160;&#160;(14) /* Concentration           unit: ppm        */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60953b31bfe90b6cc2e916df7adffa13" name="a60953b31bfe90b6cc2e916df7adffa13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60953b31bfe90b6cc2e916df7adffa13">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_AMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_AMS&#160;&#160;&#160;(13) /* ams AG */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ff450e29ecb207c513d90efceab0234" name="a5ff450e29ecb207c513d90efceab0234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ff450e29ecb207c513d90efceab0234">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_ASAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_ASAIR&#160;&#160;&#160;(8)  /* Aosong */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afafb7f67f265ca41dd38d38c3df65758" name="afafb7f67f265ca41dd38d38c3df65758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afafb7f67f265ca41dd38d38c3df65758">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_BOSCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_BOSCH&#160;&#160;&#160;(2)  /* Bosch */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af9de3a29b892317c57a04e03a4edeba2" name="af9de3a29b892317c57a04e03a4edeba2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9de3a29b892317c57a04e03a4edeba2">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_DALLAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_DALLAS&#160;&#160;&#160;(7)  /* Dallas */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad794a44907e2c44791c4a22a72b3364e" name="ad794a44907e2c44791c4a22a72b3364e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad794a44907e2c44791c4a22a72b3364e">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_GOERTEK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_GOERTEK&#160;&#160;&#160;(5)  /* Goertek */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb31eeac3a2e1669a104cfc1f15f42c8" name="aeb31eeac3a2e1669a104cfc1f15f42c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb31eeac3a2e1669a104cfc1f15f42c8">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_INVENSENSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_INVENSENSE&#160;&#160;&#160;(3)  /* Invensense */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1cf3bb2cb1c3e71b6ebda2c6d81fe25d" name="a1cf3bb2cb1c3e71b6ebda2c6d81fe25d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cf3bb2cb1c3e71b6ebda2c6d81fe25d">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_MAXIM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_MAXIM&#160;&#160;&#160;(14) /* Maxim Integrated */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aede4b67fffe497a26d7569f6e692d891" name="aede4b67fffe497a26d7569f6e692d891"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aede4b67fffe497a26d7569f6e692d891">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_MELEXIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_MELEXIS&#160;&#160;&#160;(15) /* Melexis */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a380938be00670ba494420e50ce15fcc6" name="a380938be00670ba494420e50ce15fcc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a380938be00670ba494420e50ce15fcc6">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_MIRAMEMS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_MIRAMEMS&#160;&#160;&#160;(6)  /* MiraMEMS */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8d44ed6b5ea7f22a088d98f418c5a0ad" name="a8d44ed6b5ea7f22a088d98f418c5a0ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d44ed6b5ea7f22a088d98f418c5a0ad">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_PLANTOWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_PLANTOWER&#160;&#160;&#160;(12) /* Plantower */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8998ef86d060178aa6ac2b8e1133a416" name="a8998ef86d060178aa6ac2b8e1133a416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8998ef86d060178aa6ac2b8e1133a416">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_SEMTECH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_SEMTECH&#160;&#160;&#160;(4)  /* Semtech */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5c46c1acfeabddaa6afffa1f194ef180" name="a5c46c1acfeabddaa6afffa1f194ef180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c46c1acfeabddaa6afffa1f194ef180">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_SENSIRION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_SENSIRION&#160;&#160;&#160;(10) /* Sensirion */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a528ce6e97df13b3e2d47d320bd824276" name="a528ce6e97df13b3e2d47d320bd824276"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528ce6e97df13b3e2d47d320bd824276">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_SHARP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_SHARP&#160;&#160;&#160;(9)  /* Sharp */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98c780bedb7a9c80b30c43b62b294311" name="a98c780bedb7a9c80b30c43b62b294311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98c780bedb7a9c80b30c43b62b294311">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_STM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_STM&#160;&#160;&#160;(1)  /* STMicroelectronics */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8032283b385d522d8bd1884b444ad23c" name="a8032283b385d522d8bd1884b444ad23c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8032283b385d522d8bd1884b444ad23c">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_TI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_TI&#160;&#160;&#160;(11) /* Texas Instruments */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b6ec4ee46c96e6d466c159158ca35e7" name="a1b6ec4ee46c96e6d466c159158ca35e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6ec4ee46c96e6d466c159158ca35e7">&#9670;&#160;</a></span>RT_SENSOR_VENDOR_UNKNOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SENSOR_VENDOR_UNKNOWN&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ade7a6000477e703b383a74b3e16922af" name="ade7a6000477e703b383a74b3e16922af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade7a6000477e703b383a74b3e16922af">&#9670;&#160;</a></span>rt_sensor_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__sensor__device.html">rt_sensor_device</a>* <a class="el" href="sensor_8h.html#ade7a6000477e703b383a74b3e16922af">rt_sensor_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab00b22de94b72e9e8542e3962c3a1759" name="ab00b22de94b72e9e8542e3962c3a1759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab00b22de94b72e9e8542e3962c3a1759">&#9670;&#160;</a></span>rt_hw_sensor_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_hw_sensor_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="sensor_8h.html#ade7a6000477e703b383a74b3e16922af">rt_sensor_t</a>&#160;</td>
+          <td class="paramname"><em>sensor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="sensor_8h.html">sensor.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/serial_bypass.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('serial__bypass_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">serial_bypass.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="serial__bypass_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2024 RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2024-11-20     zhujiale     the first version</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __RTT_BYPASS_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __RTT_BYPASS_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="rttypes_8h.html">rttypes.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="rtdevice_8h.html">rtdevice.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">   16</a></span><span class="keyword">typedef</span> <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*<a class="code hl_typedef" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <span class="keywordtype">char</span> buf, <span class="keywordtype">void</span>* data);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#aaaac8fa7a7eb4459b05c350401b335bc">   18</a></span><span class="preprocessor">#define RT_BYPASS_LEVEL_MAX 4</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#ada969ad158a95c1f2f3dbea84b32e05a">   19</a></span><span class="preprocessor">#define RT_BYPASS_LEVEL_1 0</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a5776ae4222d4c0518cde74ee19f96243">   20</a></span><span class="preprocessor">#define RT_BYPASS_LEVEL_2 1</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a5218dfb98a0b0222c9eb4fd667fdf94e">   21</a></span><span class="preprocessor">#define RT_BYPASS_LEVEL_3 2</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a22c9ec3922fe9e289bcc60652f02fa7c">   22</a></span><span class="preprocessor">#define RT_BYPASS_LEVEL_4 3</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a9205b73bd9f8188d183bd833d87fa34f">   23</a></span><span class="preprocessor">#define RT_BYPASS_MAX_LEVEL 4</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">/*The protect level can be register but can not be unregister we should use it carefully*/</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#afd01df6d89e321ebd816a65c6d8b786d">   26</a></span><span class="preprocessor">#define RT_BYPASS_PROTECT_LEVEL_1 10</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#af8f3ab5347064f2ccf22129e3f47aa87">   27</a></span><span class="preprocessor">#define RT_BYPASS_PROTECT_LEVEL_2 11</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#aafd9fe8e2582caf58123a8ca51d550e6">   28</a></span><span class="preprocessor">#define RT_BYPASS_PROTECT_LEVEL_3 12</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a21f125b778afe33a25fd1b7103f231d2">   29</a></span><span class="preprocessor">#define RT_BYPASS_PROTECT_LEVEL_4 13</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="};">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html">   31</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass__func.html">rt_serial_bypass_func</a> {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/*The function pointer of the bypassed data processing*/</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html#ab88542722b35cc8a84f5b8ace99ec492">   33</a></span>    <a class="code hl_typedef" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a> <a class="code hl_variable" href="structrt__serial__bypass__func.html#ab88542722b35cc8a84f5b8ace99ec492">bypass</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="comment">/*The smaller the array of levels, the higher the priority of execution*/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html#aa6a3a27a4d7bc4b8400d41681e043805">   35</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__serial__bypass__func.html#aa6a3a27a4d7bc4b8400d41681e043805">level</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html#a104db5e2d91fc982fdba38ef7ec005a2">   36</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structrt__serial__bypass__func.html#a104db5e2d91fc982fdba38ef7ec005a2">node</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html#acd6869b95b9930d284c735d5c3d06879">   37</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structrt__serial__bypass__func.html#acd6869b95b9930d284c735d5c3d06879">name</a>[RT_NAME_MAX];</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__func.html#afb08b78318359b60b7e8ddd82b71cfaa">   38</a></span>    <span class="keywordtype">void</span>* <a class="code hl_variable" href="structrt__serial__bypass__func.html#afb08b78318359b60b7e8ddd82b71cfaa">data</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="};">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__head.html">   41</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass__head.html">rt_serial_bypass_head</a></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__head.html#ad610971dfdd8b7466c395490e7317ac6">   43</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structrt__serial__bypass__head.html#ad610971dfdd8b7466c395490e7317ac6">head</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structrt__serial__bypass__head.html#a91c2fc8a227bdfd5e4675abb0827fb19">   44</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__spinlock.html">rt_spinlock</a> <a class="code hl_variable" href="structrt__serial__bypass__head.html#a91c2fc8a227bdfd5e4675abb0827fb19">spinlock</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>};</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="};">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html">   47</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass.html">rt_serial_bypass</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#a7206a7341a7c1dc7b696ede04ae36964">   48</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__work.html">rt_work</a> <a class="code hl_variable" href="structrt__serial__bypass.html#a7206a7341a7c1dc7b696ede04ae36964">work</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#a9e4dcbc415fe88d5928a8d6b0cabb07d">   50</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__spinlock.html">rt_spinlock</a> <a class="code hl_variable" href="structrt__serial__bypass.html#a9e4dcbc415fe88d5928a8d6b0cabb07d">spinlock</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#ac52af9805b832ec627170c059df497c2">   51</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__workqueue.html">rt_workqueue</a>* <a class="code hl_variable" href="structrt__serial__bypass.html#ac52af9805b832ec627170c059df497c2">lower_workq</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#a67194cf79585d042ad53f0143f98cae3">   52</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass__head.html">rt_serial_bypass_head</a>* <a class="code hl_variable" href="structrt__serial__bypass.html#a67194cf79585d042ad53f0143f98cae3">upper_h</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#a7c76f2587e93cfe76a78b0269409705f">   53</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass__head.html">rt_serial_bypass_head</a>* <a class="code hl_variable" href="structrt__serial__bypass.html#a7c76f2587e93cfe76a78b0269409705f">lower_h</a>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#af2bbc984b7342599749f3b9ce9ad6c3a">   54</a></span>    <a class="code hl_struct" href="structrt__mutex.html">rt_mutex_t</a>  <a class="code hl_variable" href="structrt__serial__bypass.html#af2bbc984b7342599749f3b9ce9ad6c3a">mutex</a>;</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structrt__serial__bypass.html#a4b91a08391f6e2acfe1e5d323325e31e">   55</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__ringbuffer.html">rt_ringbuffer</a>* <a class="code hl_variable" href="structrt__serial__bypass.html#a4b91a08391f6e2acfe1e5d323325e31e">pipe</a>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>};</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a335a1d2056a29c4a978e3959f891eacb">   58</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="serial__bypass_8h.html#a335a1d2056a29c4a978e3959f891eacb">serial_bypass_list</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a4d4a740bb3ca4b1fd65ad9d0f9856bbc">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="serial__bypass_8h.html#a4d4a740bb3ca4b1fd65ad9d0f9856bbc">rt_bypass_work_straight</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a0c29c88f5266240e8f4d388af141eb07">   61</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="serial__bypass_8h.html#a0c29c88f5266240e8f4d388af141eb07">rt_bypass_putchar</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> ch);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a61b20cd45e538f5a83a06727bf840b13">   62</a></span><a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> <a class="code hl_function" href="serial__bypass_8h.html#a61b20cd45e538f5a83a06727bf840b13">rt_bypass_getchar</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>* ch);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#ae3713796f2ebcb160f752156e4186ffa">   64</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="serial__bypass_8h.html#ae3713796f2ebcb160f752156e4186ffa">rt_bypass_upper_unregister</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#a65a0778f20b58017d1db34774e971dd8">   65</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="serial__bypass_8h.html#a65a0778f20b58017d1db34774e971dd8">rt_bypass_lower_unregister</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#adf621807935818e24a830b65294b43c3">   67</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="serial__bypass_8h.html#adf621807935818e24a830b65294b43c3">rt_bypass_upper_register</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level, <a class="code hl_typedef" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a> func, <span class="keywordtype">void</span>* data);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="serial__bypass_8h.html#acd39b721fdf61b54e776c38291324d4d">   68</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="serial__bypass_8h.html#acd39b721fdf61b54e776c38291324d4d">rt_bypass_lower_register</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a>* serial, <span class="keyword">const</span> <span class="keywordtype">char</span>* name, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level, <a class="code hl_typedef" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a> func, <span class="keywordtype">void</span>* data);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="artdevice_8h_html"><div class="ttname"><a href="rtdevice_8h.html">rtdevice.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html"><div class="ttname"><a href="rttypes_8h.html">rttypes.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="arttypes_8h_html_a585e2ad0fbab0f83817cb61373465df6"><div class="ttname"><a href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a></div><div class="ttdeci">unsigned char rt_uint8_t</div><div class="ttdef"><b>Definition</b> rttypes.h:57</div></div>
+<div class="ttc" id="arttypes_8h_html_a8011d259fdfc54b8a9aa006b4d49ac14"><div class="ttname"><a href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a></div><div class="ttdeci">rt_ubase_t rt_size_t</div><div class="ttdef"><b>Definition</b> rttypes.h:84</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a0c29c88f5266240e8f4d388af141eb07"><div class="ttname"><a href="serial__bypass_8h.html#a0c29c88f5266240e8f4d388af141eb07">rt_bypass_putchar</a></div><div class="ttdeci">void rt_bypass_putchar(struct rt_serial_device *serial, rt_uint8_t ch)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a1a46d97b75299d439c51f5896cca7da0"><div class="ttname"><a href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a></div><div class="ttdeci">rt_err_t(* bypass_function_t)(struct rt_serial_device *serial, char buf, void *data)</div><div class="ttdef"><b>Definition</b> serial_bypass.h:16</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a335a1d2056a29c4a978e3959f891eacb"><div class="ttname"><a href="serial__bypass_8h.html#a335a1d2056a29c4a978e3959f891eacb">serial_bypass_list</a></div><div class="ttdeci">int serial_bypass_list(int argc, char **argv)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a4d4a740bb3ca4b1fd65ad9d0f9856bbc"><div class="ttname"><a href="serial__bypass_8h.html#a4d4a740bb3ca4b1fd65ad9d0f9856bbc">rt_bypass_work_straight</a></div><div class="ttdeci">void rt_bypass_work_straight(struct rt_serial_device *serial)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a61b20cd45e538f5a83a06727bf840b13"><div class="ttname"><a href="serial__bypass_8h.html#a61b20cd45e538f5a83a06727bf840b13">rt_bypass_getchar</a></div><div class="ttdeci">rt_size_t rt_bypass_getchar(struct rt_serial_device *serial, rt_uint8_t *ch)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_a65a0778f20b58017d1db34774e971dd8"><div class="ttname"><a href="serial__bypass_8h.html#a65a0778f20b58017d1db34774e971dd8">rt_bypass_lower_unregister</a></div><div class="ttdeci">rt_err_t rt_bypass_lower_unregister(struct rt_serial_device *serial, rt_uint8_t level)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_acd39b721fdf61b54e776c38291324d4d"><div class="ttname"><a href="serial__bypass_8h.html#acd39b721fdf61b54e776c38291324d4d">rt_bypass_lower_register</a></div><div class="ttdeci">rt_err_t rt_bypass_lower_register(struct rt_serial_device *serial, const char *name, rt_uint8_t level, bypass_function_t func, void *data)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_adf621807935818e24a830b65294b43c3"><div class="ttname"><a href="serial__bypass_8h.html#adf621807935818e24a830b65294b43c3">rt_bypass_upper_register</a></div><div class="ttdeci">rt_err_t rt_bypass_upper_register(struct rt_serial_device *serial, const char *name, rt_uint8_t level, bypass_function_t func, void *data)</div></div>
+<div class="ttc" id="aserial__bypass_8h_html_ae3713796f2ebcb160f752156e4186ffa"><div class="ttname"><a href="serial__bypass_8h.html#ae3713796f2ebcb160f752156e4186ffa">rt_bypass_upper_unregister</a></div><div class="ttdeci">rt_err_t rt_bypass_upper_unregister(struct rt_serial_device *serial, rt_uint8_t level)</div></div>
+<div class="ttc" id="astructrt__list__node_html"><div class="ttname"><a href="structrt__list__node.html">rt_list_node</a></div><div class="ttdef"><b>Definition</b> rttypes.h:126</div></div>
+<div class="ttc" id="astructrt__mutex_html"><div class="ttname"><a href="structrt__mutex.html">rt_mutex</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1028</div></div>
+<div class="ttc" id="astructrt__ringbuffer_html"><div class="ttname"><a href="structrt__ringbuffer.html">rt_ringbuffer</a></div><div class="ttdef"><b>Definition</b> ringbuffer.h:23</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html"><div class="ttname"><a href="structrt__serial__bypass__func.html">rt_serial_bypass_func</a></div><div class="ttdef"><b>Definition</b> serial_bypass.h:31</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html_a104db5e2d91fc982fdba38ef7ec005a2"><div class="ttname"><a href="structrt__serial__bypass__func.html#a104db5e2d91fc982fdba38ef7ec005a2">rt_serial_bypass_func::node</a></div><div class="ttdeci">rt_list_t node</div><div class="ttdef"><b>Definition</b> serial_bypass.h:36</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html_aa6a3a27a4d7bc4b8400d41681e043805"><div class="ttname"><a href="structrt__serial__bypass__func.html#aa6a3a27a4d7bc4b8400d41681e043805">rt_serial_bypass_func::level</a></div><div class="ttdeci">rt_uint8_t level</div><div class="ttdef"><b>Definition</b> serial_bypass.h:35</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html_ab88542722b35cc8a84f5b8ace99ec492"><div class="ttname"><a href="structrt__serial__bypass__func.html#ab88542722b35cc8a84f5b8ace99ec492">rt_serial_bypass_func::bypass</a></div><div class="ttdeci">bypass_function_t bypass</div><div class="ttdef"><b>Definition</b> serial_bypass.h:33</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html_acd6869b95b9930d284c735d5c3d06879"><div class="ttname"><a href="structrt__serial__bypass__func.html#acd6869b95b9930d284c735d5c3d06879">rt_serial_bypass_func::name</a></div><div class="ttdeci">char name[RT_NAME_MAX]</div><div class="ttdef"><b>Definition</b> serial_bypass.h:37</div></div>
+<div class="ttc" id="astructrt__serial__bypass__func_html_afb08b78318359b60b7e8ddd82b71cfaa"><div class="ttname"><a href="structrt__serial__bypass__func.html#afb08b78318359b60b7e8ddd82b71cfaa">rt_serial_bypass_func::data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition</b> serial_bypass.h:38</div></div>
+<div class="ttc" id="astructrt__serial__bypass__head_html"><div class="ttname"><a href="structrt__serial__bypass__head.html">rt_serial_bypass_head</a></div><div class="ttdef"><b>Definition</b> serial_bypass.h:42</div></div>
+<div class="ttc" id="astructrt__serial__bypass__head_html_a91c2fc8a227bdfd5e4675abb0827fb19"><div class="ttname"><a href="structrt__serial__bypass__head.html#a91c2fc8a227bdfd5e4675abb0827fb19">rt_serial_bypass_head::spinlock</a></div><div class="ttdeci">struct rt_spinlock spinlock</div><div class="ttdef"><b>Definition</b> serial_bypass.h:44</div></div>
+<div class="ttc" id="astructrt__serial__bypass__head_html_ad610971dfdd8b7466c395490e7317ac6"><div class="ttname"><a href="structrt__serial__bypass__head.html#ad610971dfdd8b7466c395490e7317ac6">rt_serial_bypass_head::head</a></div><div class="ttdeci">rt_list_t head</div><div class="ttdef"><b>Definition</b> serial_bypass.h:43</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html"><div class="ttname"><a href="structrt__serial__bypass.html">rt_serial_bypass</a></div><div class="ttdef"><b>Definition</b> serial_bypass.h:47</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_a4b91a08391f6e2acfe1e5d323325e31e"><div class="ttname"><a href="structrt__serial__bypass.html#a4b91a08391f6e2acfe1e5d323325e31e">rt_serial_bypass::pipe</a></div><div class="ttdeci">struct rt_ringbuffer * pipe</div><div class="ttdef"><b>Definition</b> serial_bypass.h:55</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_a67194cf79585d042ad53f0143f98cae3"><div class="ttname"><a href="structrt__serial__bypass.html#a67194cf79585d042ad53f0143f98cae3">rt_serial_bypass::upper_h</a></div><div class="ttdeci">struct rt_serial_bypass_head * upper_h</div><div class="ttdef"><b>Definition</b> serial_bypass.h:52</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_a7206a7341a7c1dc7b696ede04ae36964"><div class="ttname"><a href="structrt__serial__bypass.html#a7206a7341a7c1dc7b696ede04ae36964">rt_serial_bypass::work</a></div><div class="ttdeci">struct rt_work work</div><div class="ttdef"><b>Definition</b> serial_bypass.h:48</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_a7c76f2587e93cfe76a78b0269409705f"><div class="ttname"><a href="structrt__serial__bypass.html#a7c76f2587e93cfe76a78b0269409705f">rt_serial_bypass::lower_h</a></div><div class="ttdeci">struct rt_serial_bypass_head * lower_h</div><div class="ttdef"><b>Definition</b> serial_bypass.h:53</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_a9e4dcbc415fe88d5928a8d6b0cabb07d"><div class="ttname"><a href="structrt__serial__bypass.html#a9e4dcbc415fe88d5928a8d6b0cabb07d">rt_serial_bypass::spinlock</a></div><div class="ttdeci">struct rt_spinlock spinlock</div><div class="ttdef"><b>Definition</b> serial_bypass.h:50</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_ac52af9805b832ec627170c059df497c2"><div class="ttname"><a href="structrt__serial__bypass.html#ac52af9805b832ec627170c059df497c2">rt_serial_bypass::lower_workq</a></div><div class="ttdeci">struct rt_workqueue * lower_workq</div><div class="ttdef"><b>Definition</b> serial_bypass.h:51</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html_af2bbc984b7342599749f3b9ce9ad6c3a"><div class="ttname"><a href="structrt__serial__bypass.html#af2bbc984b7342599749f3b9ce9ad6c3a">rt_serial_bypass::mutex</a></div><div class="ttdeci">rt_mutex_t mutex</div><div class="ttdef"><b>Definition</b> serial_bypass.h:54</div></div>
+<div class="ttc" id="astructrt__serial__device_html"><div class="ttname"><a href="structrt__serial__device.html">rt_serial_device</a></div><div class="ttdoc">serial device structure</div><div class="ttdef"><b>Definition</b> dev_serial.h:254</div></div>
+<div class="ttc" id="astructrt__spinlock_html"><div class="ttname"><a href="structrt__spinlock.html">rt_spinlock</a></div><div class="ttdef"><b>Definition</b> rttypes.h:175</div></div>
+<div class="ttc" id="astructrt__work_html"><div class="ttname"><a href="structrt__work.html">rt_work</a></div><div class="ttdef"><b>Definition</b> workqueue.h:50</div></div>
+<div class="ttc" id="astructrt__workqueue_html"><div class="ttname"><a href="structrt__workqueue.html">rt_workqueue</a></div><div class="ttdef"><b>Definition</b> workqueue.h:38</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="serial__bypass_8h.html">serial_bypass.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

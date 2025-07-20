@@ -1,0 +1,1317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/mmcsd_cmd.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('mmcsd__cmd_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">mmcsd_cmd.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="mmcsd__cmd_8h__dep__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2mmcsd__cmd_8hdep" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2mmcsd__cmd_8hdep" id="acomponents_2drivers_2include_2drivers_2mmcsd__cmd_8hdep">
+<area shape="rect" title=" " alt="" coords="5,5,227,45"/>
+<area shape="rect" href="dev__mmcsd__core_8h.html" title=" " alt="" coords="41,93,191,148"/>
+<area shape="poly" title=" " alt="" coords="119,59,119,93,113,93,113,59"/>
+</map>
+</div>
+</div>
+<p><a href="mmcsd__cmd_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a939c1c73db7a96767f5d06dfe7591b01" id="r_a939c1c73db7a96767f5d06dfe7591b01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a939c1c73db7a96767f5d06dfe7591b01">GO_IDLE_STATE</a>&#160;&#160;&#160;0   /* bc                          */</td></tr>
+<tr class="separator:a939c1c73db7a96767f5d06dfe7591b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2397afdad46162ab52c4008d8f5dab23" id="r_a2397afdad46162ab52c4008d8f5dab23"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a2397afdad46162ab52c4008d8f5dab23">SEND_OP_COND</a>&#160;&#160;&#160;1   /* bcr  [31:0] OCR         R3  */</td></tr>
+<tr class="separator:a2397afdad46162ab52c4008d8f5dab23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a716cb32b99c6d689d29f3e3e1121768e" id="r_a716cb32b99c6d689d29f3e3e1121768e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a716cb32b99c6d689d29f3e3e1121768e">ALL_SEND_CID</a>&#160;&#160;&#160;2   /* bcr                     R2  */</td></tr>
+<tr class="separator:a716cb32b99c6d689d29f3e3e1121768e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e54a25ec21da14b9dd8cd19ad526dd4" id="r_a5e54a25ec21da14b9dd8cd19ad526dd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a5e54a25ec21da14b9dd8cd19ad526dd4">SET_RELATIVE_ADDR</a>&#160;&#160;&#160;3   /* ac   [31:16] RCA        R1  */</td></tr>
+<tr class="separator:a5e54a25ec21da14b9dd8cd19ad526dd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a021016c82b1ccebf19cfaf2cdb09bedb" id="r_a021016c82b1ccebf19cfaf2cdb09bedb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a021016c82b1ccebf19cfaf2cdb09bedb">SET_DSR</a>&#160;&#160;&#160;4   /* bc   [31:16] RCA            */</td></tr>
+<tr class="separator:a021016c82b1ccebf19cfaf2cdb09bedb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac279a93dfd1f02dac2359cfaa1422b93" id="r_ac279a93dfd1f02dac2359cfaa1422b93"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ac279a93dfd1f02dac2359cfaa1422b93">SWITCH</a>&#160;&#160;&#160;6   /* ac   [31:0] See below   R1b */</td></tr>
+<tr class="separator:ac279a93dfd1f02dac2359cfaa1422b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4a7d0cab1c8ebf1cda8f488221267a5" id="r_ad4a7d0cab1c8ebf1cda8f488221267a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad4a7d0cab1c8ebf1cda8f488221267a5">SELECT_CARD</a>&#160;&#160;&#160;7   /* ac   [31:16] RCA        R1  */</td></tr>
+<tr class="separator:ad4a7d0cab1c8ebf1cda8f488221267a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1656e2a04678390f994265a9a8c281c8" id="r_a1656e2a04678390f994265a9a8c281c8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a1656e2a04678390f994265a9a8c281c8">SEND_EXT_CSD</a>&#160;&#160;&#160;8   /* adtc                    R1  */</td></tr>
+<tr class="separator:a1656e2a04678390f994265a9a8c281c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85a884eec438d450dc1c05e8d9d29044" id="r_a85a884eec438d450dc1c05e8d9d29044"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a85a884eec438d450dc1c05e8d9d29044">SEND_CSD</a>&#160;&#160;&#160;9   /* ac   [31:16] RCA        R2  */</td></tr>
+<tr class="separator:a85a884eec438d450dc1c05e8d9d29044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a264ef466ea3f1a08a8c9de81e0e3f24d" id="r_a264ef466ea3f1a08a8c9de81e0e3f24d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a264ef466ea3f1a08a8c9de81e0e3f24d">SEND_CID</a>&#160;&#160;&#160;10   /* ac   [31:16] RCA        R2  */</td></tr>
+<tr class="separator:a264ef466ea3f1a08a8c9de81e0e3f24d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab14945254c721d91efe10e9aae7152e2" id="r_ab14945254c721d91efe10e9aae7152e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ab14945254c721d91efe10e9aae7152e2">VOLTAGE_SWITCH</a>&#160;&#160;&#160;11   /* ac   [31:0]             R1  */</td></tr>
+<tr class="separator:ab14945254c721d91efe10e9aae7152e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f220568605a0eaa9a5cbb3d3cc82408" id="r_a0f220568605a0eaa9a5cbb3d3cc82408"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a0f220568605a0eaa9a5cbb3d3cc82408">STOP_TRANSMISSION</a>&#160;&#160;&#160;12   /* ac                      R1b */</td></tr>
+<tr class="separator:a0f220568605a0eaa9a5cbb3d3cc82408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f98c79059221d788e2219865d770648" id="r_a7f98c79059221d788e2219865d770648"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a7f98c79059221d788e2219865d770648">SEND_STATUS</a>&#160;&#160;&#160;13   /* ac   [31:16] RCA        R1  */</td></tr>
+<tr class="separator:a7f98c79059221d788e2219865d770648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5811ddb8fa6fc4cee3c40e4fb7481e43" id="r_a5811ddb8fa6fc4cee3c40e4fb7481e43"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a5811ddb8fa6fc4cee3c40e4fb7481e43">GO_INACTIVE_STATE</a>&#160;&#160;&#160;15   /* ac   [31:16] RCA            */</td></tr>
+<tr class="separator:a5811ddb8fa6fc4cee3c40e4fb7481e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806d8b861338d5a55b2d211917473f32" id="r_a806d8b861338d5a55b2d211917473f32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a806d8b861338d5a55b2d211917473f32">SPI_READ_OCR</a>&#160;&#160;&#160;58   /* spi                  spi_R3 */</td></tr>
+<tr class="separator:a806d8b861338d5a55b2d211917473f32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab27f738ba078a4173da17da169c5ca71" id="r_ab27f738ba078a4173da17da169c5ca71"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ab27f738ba078a4173da17da169c5ca71">SPI_CRC_ON_OFF</a>&#160;&#160;&#160;59   /* spi  [0:0] flag      spi_R1 */</td></tr>
+<tr class="separator:ab27f738ba078a4173da17da169c5ca71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1648cc28b9d8d608cf1b7e86c9490f" id="r_aeb1648cc28b9d8d608cf1b7e86c9490f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aeb1648cc28b9d8d608cf1b7e86c9490f">SET_BLOCKLEN</a>&#160;&#160;&#160;16   /* ac   [31:0] block len   R1  */</td></tr>
+<tr class="separator:aeb1648cc28b9d8d608cf1b7e86c9490f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a078b4c06f187324dd4e14cf59a6c87c2" id="r_a078b4c06f187324dd4e14cf59a6c87c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a078b4c06f187324dd4e14cf59a6c87c2">READ_SINGLE_BLOCK</a>&#160;&#160;&#160;17   /* adtc [31:0] data addr   R1  */</td></tr>
+<tr class="separator:a078b4c06f187324dd4e14cf59a6c87c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabe53fef5bf56df76bcb430f5b1db1c9" id="r_aabe53fef5bf56df76bcb430f5b1db1c9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aabe53fef5bf56df76bcb430f5b1db1c9">READ_MULTIPLE_BLOCK</a>&#160;&#160;&#160;18   /* adtc [31:0] data addr   R1  */</td></tr>
+<tr class="separator:aabe53fef5bf56df76bcb430f5b1db1c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa60709163d3f9e278c28cc30a517d009" id="r_aa60709163d3f9e278c28cc30a517d009"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aa60709163d3f9e278c28cc30a517d009">SEND_TUNING_BLOCK</a>&#160;&#160;&#160;19   /* adtc                    R1 */</td></tr>
+<tr class="separator:aa60709163d3f9e278c28cc30a517d009"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af36660a94ef67d95bcc9a04a15fec4d2" id="r_af36660a94ef67d95bcc9a04a15fec4d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#af36660a94ef67d95bcc9a04a15fec4d2">SEND_TUNING_BLOCK_HS200</a>&#160;&#160;&#160;21 /* adtc R1*/</td></tr>
+<tr class="separator:af36660a94ef67d95bcc9a04a15fec4d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49666334ded4e4d46d2d41098503eb39" id="r_a49666334ded4e4d46d2d41098503eb39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a49666334ded4e4d46d2d41098503eb39">WRITE_DAT_UNTIL_STOP</a>&#160;&#160;&#160;20   /* adtc [31:0] data addr   R1  */</td></tr>
+<tr class="separator:a49666334ded4e4d46d2d41098503eb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b1914f5151eca07229eaf7dd941fd87" id="r_a1b1914f5151eca07229eaf7dd941fd87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a1b1914f5151eca07229eaf7dd941fd87">SET_BLOCK_COUNT</a>&#160;&#160;&#160;23   /* adtc [31:0] data addr   R1  */</td></tr>
+<tr class="separator:a1b1914f5151eca07229eaf7dd941fd87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7217bf0edddda1e17d347f7c5b717f27" id="r_a7217bf0edddda1e17d347f7c5b717f27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a7217bf0edddda1e17d347f7c5b717f27">WRITE_BLOCK</a>&#160;&#160;&#160;24   /* adtc [31:0] data addr   R1  */</td></tr>
+<tr class="separator:a7217bf0edddda1e17d347f7c5b717f27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2554a9322c0074e535e521612079b18e" id="r_a2554a9322c0074e535e521612079b18e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a2554a9322c0074e535e521612079b18e">WRITE_MULTIPLE_BLOCK</a>&#160;&#160;&#160;25   /* adtc                    R1  */</td></tr>
+<tr class="separator:a2554a9322c0074e535e521612079b18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0d922484d27d5d6d2cec0965df84102" id="r_ad0d922484d27d5d6d2cec0965df84102"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad0d922484d27d5d6d2cec0965df84102">PROGRAM_CID</a>&#160;&#160;&#160;26   /* adtc                    R1  */</td></tr>
+<tr class="separator:ad0d922484d27d5d6d2cec0965df84102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad413e308add4fc65ba1c0a4161f14b1c" id="r_ad413e308add4fc65ba1c0a4161f14b1c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad413e308add4fc65ba1c0a4161f14b1c">PROGRAM_CSD</a>&#160;&#160;&#160;27   /* adtc                    R1  */</td></tr>
+<tr class="separator:ad413e308add4fc65ba1c0a4161f14b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae08d8bcda78be54b2f5938b8db275e21" id="r_ae08d8bcda78be54b2f5938b8db275e21"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ae08d8bcda78be54b2f5938b8db275e21">SET_WRITE_PROT</a>&#160;&#160;&#160;28   /* ac   [31:0] data addr   R1b */</td></tr>
+<tr class="separator:ae08d8bcda78be54b2f5938b8db275e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb178e567309c65f48f96647df3c608d" id="r_acb178e567309c65f48f96647df3c608d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#acb178e567309c65f48f96647df3c608d">CLR_WRITE_PROT</a>&#160;&#160;&#160;29   /* ac   [31:0] data addr   R1b */</td></tr>
+<tr class="separator:acb178e567309c65f48f96647df3c608d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d6d3ed1de3a3d7f4f6720b9243ac1e" id="r_ac2d6d3ed1de3a3d7f4f6720b9243ac1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ac2d6d3ed1de3a3d7f4f6720b9243ac1e">SEND_WRITE_PROT</a>&#160;&#160;&#160;30   /* adtc [31:0] wpdata addr R1  */</td></tr>
+<tr class="separator:ac2d6d3ed1de3a3d7f4f6720b9243ac1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad503f631303c844fa8e555ef7a209bb9" id="r_ad503f631303c844fa8e555ef7a209bb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad503f631303c844fa8e555ef7a209bb9">ERASE_GROUP_START</a>&#160;&#160;&#160;35   /* ac   [31:0] data addr   R1  */</td></tr>
+<tr class="separator:ad503f631303c844fa8e555ef7a209bb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a695d09d6b23544dc1fe952b8d3159613" id="r_a695d09d6b23544dc1fe952b8d3159613"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a695d09d6b23544dc1fe952b8d3159613">ERASE_GROUP_END</a>&#160;&#160;&#160;36   /* ac   [31:0] data addr   R1  */</td></tr>
+<tr class="separator:a695d09d6b23544dc1fe952b8d3159613"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4522ecaa66a6e2edacf9cd78b07f89" id="r_a0d4522ecaa66a6e2edacf9cd78b07f89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a0d4522ecaa66a6e2edacf9cd78b07f89">ERASE</a>&#160;&#160;&#160;38   /* ac                      R1b */</td></tr>
+<tr class="separator:a0d4522ecaa66a6e2edacf9cd78b07f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad330257613128aa8584201ccba35776a" id="r_ad330257613128aa8584201ccba35776a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad330257613128aa8584201ccba35776a">FAST_IO</a>&#160;&#160;&#160;39   /* ac   &lt;Complex&gt;          R4  */</td></tr>
+<tr class="separator:ad330257613128aa8584201ccba35776a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf033a04d267fa6d805cfaea59cc9b7e" id="r_adf033a04d267fa6d805cfaea59cc9b7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#adf033a04d267fa6d805cfaea59cc9b7e">GO_IRQ_STATE</a>&#160;&#160;&#160;40   /* bcr                     R5  */</td></tr>
+<tr class="separator:adf033a04d267fa6d805cfaea59cc9b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74c0e2b8dd2aa10ae94ccb3ae228e0f" id="r_aa74c0e2b8dd2aa10ae94ccb3ae228e0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aa74c0e2b8dd2aa10ae94ccb3ae228e0f">LOCK_UNLOCK</a>&#160;&#160;&#160;42   /* adtc                    R1b */</td></tr>
+<tr class="separator:aa74c0e2b8dd2aa10ae94ccb3ae228e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdb057504ceebb40cb4a5df3197a8fb5" id="r_acdb057504ceebb40cb4a5df3197a8fb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#acdb057504ceebb40cb4a5df3197a8fb5">APP_CMD</a>&#160;&#160;&#160;55   /* ac   [31:16] RCA        R1  */</td></tr>
+<tr class="separator:acdb057504ceebb40cb4a5df3197a8fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1471068f8c9a067974d41646b027e4c" id="r_af1471068f8c9a067974d41646b027e4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#af1471068f8c9a067974d41646b027e4c">GEN_CMD</a>&#160;&#160;&#160;56   /* adtc [0] RD/WR          R1  */</td></tr>
+<tr class="separator:af1471068f8c9a067974d41646b027e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa736c1b1cdeaadb038ed76511c1d0e8b" id="r_aa736c1b1cdeaadb038ed76511c1d0e8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aa736c1b1cdeaadb038ed76511c1d0e8b">SD_SEND_RELATIVE_ADDR</a>&#160;&#160;&#160;3   /* bcr                     R6  */</td></tr>
+<tr class="separator:aa736c1b1cdeaadb038ed76511c1d0e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3489fd50dc7627f56a8a2085a6170de8" id="r_a3489fd50dc7627f56a8a2085a6170de8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a3489fd50dc7627f56a8a2085a6170de8">SD_SEND_IF_COND</a>&#160;&#160;&#160;8   /* bcr  [11:0] See below   R7  */</td></tr>
+<tr class="separator:a3489fd50dc7627f56a8a2085a6170de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f2060c321bd21ef4547e7a85f4fefb9" id="r_a7f2060c321bd21ef4547e7a85f4fefb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a7f2060c321bd21ef4547e7a85f4fefb9">SD_SWITCH</a>&#160;&#160;&#160;6   /* adtc [31:0] See below   R1  */</td></tr>
+<tr class="separator:a7f2060c321bd21ef4547e7a85f4fefb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4789af331712cf3fa2e7574f8f6665a3" id="r_a4789af331712cf3fa2e7574f8f6665a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a4789af331712cf3fa2e7574f8f6665a3">SD_APP_SET_BUS_WIDTH</a>&#160;&#160;&#160;6   /* ac   [1:0] bus width    R1  */</td></tr>
+<tr class="separator:a4789af331712cf3fa2e7574f8f6665a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c5d492c6f838e58320882c723fb39a" id="r_a02c5d492c6f838e58320882c723fb39a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a02c5d492c6f838e58320882c723fb39a">SD_APP_SEND_NUM_WR_BLKS</a>&#160;&#160;&#160;22   /* adtc                    R1  */</td></tr>
+<tr class="separator:a02c5d492c6f838e58320882c723fb39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612ec5173527128c99c16e0f4bb2299d" id="r_a612ec5173527128c99c16e0f4bb2299d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a612ec5173527128c99c16e0f4bb2299d">SD_APP_OP_COND</a>&#160;&#160;&#160;41   /* bcr  [31:0] OCR         R3  */</td></tr>
+<tr class="separator:a612ec5173527128c99c16e0f4bb2299d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7fddd85b54689da83a09fb0226a7ae" id="r_a3f7fddd85b54689da83a09fb0226a7ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a3f7fddd85b54689da83a09fb0226a7ae">SD_APP_SEND_SCR</a>&#160;&#160;&#160;51   /* adtc                    R1  */</td></tr>
+<tr class="separator:a3f7fddd85b54689da83a09fb0226a7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4017a2775f8a4731e194126b30f478d7" id="r_a4017a2775f8a4731e194126b30f478d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a4017a2775f8a4731e194126b30f478d7">SCR_SPEC_VER_0</a>&#160;&#160;&#160;0   /* Implements system specification 1.0 - 1.01 */</td></tr>
+<tr class="separator:a4017a2775f8a4731e194126b30f478d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6c473573af04d0b85d73e312fba600" id="r_a1b6c473573af04d0b85d73e312fba600"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a1b6c473573af04d0b85d73e312fba600">SCR_SPEC_VER_1</a>&#160;&#160;&#160;1   /* Implements system specification 1.10 */</td></tr>
+<tr class="separator:a1b6c473573af04d0b85d73e312fba600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88109661ba93731ce71f7d9982933133" id="r_a88109661ba93731ce71f7d9982933133"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a88109661ba93731ce71f7d9982933133">SCR_SPEC_VER_2</a>&#160;&#160;&#160;2   /* Implements system specification 2.00 */</td></tr>
+<tr class="separator:a88109661ba93731ce71f7d9982933133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64814c32dc57808fdff6ed4e15713de7" id="r_a64814c32dc57808fdff6ed4e15713de7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a64814c32dc57808fdff6ed4e15713de7">SD_IO_SEND_OP_COND</a>&#160;&#160;&#160;5 /* bcr  [23:0] OCR         R4  */</td></tr>
+<tr class="separator:a64814c32dc57808fdff6ed4e15713de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421e9bd32ed436448733a99522eab25f" id="r_a421e9bd32ed436448733a99522eab25f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a421e9bd32ed436448733a99522eab25f">SD_IO_RW_DIRECT</a>&#160;&#160;&#160;52 /* ac   [31:0] See below   R5  */</td></tr>
+<tr class="separator:a421e9bd32ed436448733a99522eab25f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05ff10823aceec760957d8732f6be944" id="r_a05ff10823aceec760957d8732f6be944"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a05ff10823aceec760957d8732f6be944">SD_IO_RW_EXTENDED</a>&#160;&#160;&#160;53 /* adtc [31:0] See below   R5  */</td></tr>
+<tr class="separator:a05ff10823aceec760957d8732f6be944"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a290aa2d10efd728c0a9961078f3ec8d8" id="r_a290aa2d10efd728c0a9961078f3ec8d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a290aa2d10efd728c0a9961078f3ec8d8">SDIO_ARG_CMD52_READ</a>&#160;&#160;&#160;(0&lt;&lt;31)</td></tr>
+<tr class="separator:a290aa2d10efd728c0a9961078f3ec8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1b2daff06de71113301a8fff9ff8869" id="r_ac1b2daff06de71113301a8fff9ff8869"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ac1b2daff06de71113301a8fff9ff8869">SDIO_ARG_CMD52_WRITE</a>&#160;&#160;&#160;(1u&lt;&lt;31)</td></tr>
+<tr class="separator:ac1b2daff06de71113301a8fff9ff8869"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d850dc6cb1aae5357c377ce726b328c" id="r_a5d850dc6cb1aae5357c377ce726b328c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a5d850dc6cb1aae5357c377ce726b328c">SDIO_ARG_CMD52_FUNC_SHIFT</a>&#160;&#160;&#160;28</td></tr>
+<tr class="separator:a5d850dc6cb1aae5357c377ce726b328c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5a2a760c2e2edf0c2e1f8d6529d47d" id="r_a2a5a2a760c2e2edf0c2e1f8d6529d47d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a2a5a2a760c2e2edf0c2e1f8d6529d47d">SDIO_ARG_CMD52_FUNC_MASK</a>&#160;&#160;&#160;0x7</td></tr>
+<tr class="separator:a2a5a2a760c2e2edf0c2e1f8d6529d47d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54102ff8d0f6cbec3b27361491758857" id="r_a54102ff8d0f6cbec3b27361491758857"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a54102ff8d0f6cbec3b27361491758857">SDIO_ARG_CMD52_RAW_FLAG</a>&#160;&#160;&#160;(1u&lt;&lt;27)</td></tr>
+<tr class="separator:a54102ff8d0f6cbec3b27361491758857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4f35903f5b5cc6c145fb7ae4df75f1" id="r_a4d4f35903f5b5cc6c145fb7ae4df75f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a4d4f35903f5b5cc6c145fb7ae4df75f1">SDIO_ARG_CMD52_REG_SHIFT</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:a4d4f35903f5b5cc6c145fb7ae4df75f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07f2ba58dbd6458bf08bfffbd95883de" id="r_a07f2ba58dbd6458bf08bfffbd95883de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a07f2ba58dbd6458bf08bfffbd95883de">SDIO_ARG_CMD52_REG_MASK</a>&#160;&#160;&#160;0x1ffff</td></tr>
+<tr class="separator:a07f2ba58dbd6458bf08bfffbd95883de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa3cbd08e33321f14f37360497c6f17" id="r_a3fa3cbd08e33321f14f37360497c6f17"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a3fa3cbd08e33321f14f37360497c6f17">SDIO_ARG_CMD52_DATA_SHIFT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a3fa3cbd08e33321f14f37360497c6f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad931267a9c2c66177694f754a73e121d" id="r_ad931267a9c2c66177694f754a73e121d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad931267a9c2c66177694f754a73e121d">SDIO_ARG_CMD52_DATA_MASK</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="separator:ad931267a9c2c66177694f754a73e121d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb7cd903af2405bc07ec3a00159702d6" id="r_aeb7cd903af2405bc07ec3a00159702d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aeb7cd903af2405bc07ec3a00159702d6">SDIO_R5_DATA</a>(resp)&#160;&#160;&#160;((resp)[0] &amp; 0xff)</td></tr>
+<tr class="separator:aeb7cd903af2405bc07ec3a00159702d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf3582f5411c1f08187825e8348bfa5d" id="r_adf3582f5411c1f08187825e8348bfa5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#adf3582f5411c1f08187825e8348bfa5d">SDIO_ARG_CMD53_READ</a>&#160;&#160;&#160;(0&lt;&lt;31)</td></tr>
+<tr class="separator:adf3582f5411c1f08187825e8348bfa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411963bab186b506931fbf56786be47f" id="r_a411963bab186b506931fbf56786be47f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a411963bab186b506931fbf56786be47f">SDIO_ARG_CMD53_WRITE</a>&#160;&#160;&#160;(1u&lt;&lt;31)</td></tr>
+<tr class="separator:a411963bab186b506931fbf56786be47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b94eb676140bdc6c5757246c92d3e7" id="r_ad4b94eb676140bdc6c5757246c92d3e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ad4b94eb676140bdc6c5757246c92d3e7">SDIO_ARG_CMD53_FUNC_SHIFT</a>&#160;&#160;&#160;28</td></tr>
+<tr class="separator:ad4b94eb676140bdc6c5757246c92d3e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abef7220f5b7f077775c81c4a7ba29c5b" id="r_abef7220f5b7f077775c81c4a7ba29c5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#abef7220f5b7f077775c81c4a7ba29c5b">SDIO_ARG_CMD53_FUNC_MASK</a>&#160;&#160;&#160;0x7</td></tr>
+<tr class="separator:abef7220f5b7f077775c81c4a7ba29c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab99cee009f9692e481057277b7f0e0e6" id="r_ab99cee009f9692e481057277b7f0e0e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ab99cee009f9692e481057277b7f0e0e6">SDIO_ARG_CMD53_BLOCK_MODE</a>&#160;&#160;&#160;(1u&lt;&lt;27)</td></tr>
+<tr class="separator:ab99cee009f9692e481057277b7f0e0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1a8d3935e41d2e324c6a59d2c72f52f" id="r_ae1a8d3935e41d2e324c6a59d2c72f52f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#ae1a8d3935e41d2e324c6a59d2c72f52f">SDIO_ARG_CMD53_INCREMENT</a>&#160;&#160;&#160;(1u&lt;&lt;26)</td></tr>
+<tr class="separator:ae1a8d3935e41d2e324c6a59d2c72f52f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5675d5b983458478b4b1ccf1dbe190b" id="r_aa5675d5b983458478b4b1ccf1dbe190b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#aa5675d5b983458478b4b1ccf1dbe190b">SDIO_ARG_CMD53_REG_SHIFT</a>&#160;&#160;&#160;9</td></tr>
+<tr class="separator:aa5675d5b983458478b4b1ccf1dbe190b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1521d5d3dfdec2aa8e15861527a4d2b8" id="r_a1521d5d3dfdec2aa8e15861527a4d2b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a1521d5d3dfdec2aa8e15861527a4d2b8">SDIO_ARG_CMD53_REG_MASK</a>&#160;&#160;&#160;0x1ffff</td></tr>
+<tr class="separator:a1521d5d3dfdec2aa8e15861527a4d2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a039fa989524fb878bada05af35cb3f70" id="r_a039fa989524fb878bada05af35cb3f70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a039fa989524fb878bada05af35cb3f70">SDIO_ARG_CMD53_LENGTH_SHIFT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a039fa989524fb878bada05af35cb3f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e4f4f43060013996237a75dcb22a94e" id="r_a6e4f4f43060013996237a75dcb22a94e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a6e4f4f43060013996237a75dcb22a94e">SDIO_ARG_CMD53_LENGTH_MASK</a>&#160;&#160;&#160;0x1ff</td></tr>
+<tr class="separator:a6e4f4f43060013996237a75dcb22a94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93a237b70be4b1bd0edae0d96f626390" id="r_a93a237b70be4b1bd0edae0d96f626390"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mmcsd__cmd_8h.html#a93a237b70be4b1bd0edae0d96f626390">SDIO_ARG_CMD53_LENGTH_MAX</a>&#160;&#160;&#160;511</td></tr>
+<tr class="separator:a93a237b70be4b1bd0edae0d96f626390"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a716cb32b99c6d689d29f3e3e1121768e" name="a716cb32b99c6d689d29f3e3e1121768e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a716cb32b99c6d689d29f3e3e1121768e">&#9670;&#160;</a></span>ALL_SEND_CID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ALL_SEND_CID&#160;&#160;&#160;2   /* bcr                     R2  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdb057504ceebb40cb4a5df3197a8fb5" name="acdb057504ceebb40cb4a5df3197a8fb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdb057504ceebb40cb4a5df3197a8fb5">&#9670;&#160;</a></span>APP_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define APP_CMD&#160;&#160;&#160;55   /* ac   [31:16] RCA        R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb178e567309c65f48f96647df3c608d" name="acb178e567309c65f48f96647df3c608d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb178e567309c65f48f96647df3c608d">&#9670;&#160;</a></span>CLR_WRITE_PROT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLR_WRITE_PROT&#160;&#160;&#160;29   /* ac   [31:0] data addr   R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d4522ecaa66a6e2edacf9cd78b07f89" name="a0d4522ecaa66a6e2edacf9cd78b07f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4522ecaa66a6e2edacf9cd78b07f89">&#9670;&#160;</a></span>ERASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERASE&#160;&#160;&#160;38   /* ac                      R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a695d09d6b23544dc1fe952b8d3159613" name="a695d09d6b23544dc1fe952b8d3159613"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a695d09d6b23544dc1fe952b8d3159613">&#9670;&#160;</a></span>ERASE_GROUP_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERASE_GROUP_END&#160;&#160;&#160;36   /* ac   [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad503f631303c844fa8e555ef7a209bb9" name="ad503f631303c844fa8e555ef7a209bb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad503f631303c844fa8e555ef7a209bb9">&#9670;&#160;</a></span>ERASE_GROUP_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ERASE_GROUP_START&#160;&#160;&#160;35   /* ac   [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad330257613128aa8584201ccba35776a" name="ad330257613128aa8584201ccba35776a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad330257613128aa8584201ccba35776a">&#9670;&#160;</a></span>FAST_IO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FAST_IO&#160;&#160;&#160;39   /* ac   &lt;Complex&gt;          R4  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af1471068f8c9a067974d41646b027e4c" name="af1471068f8c9a067974d41646b027e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1471068f8c9a067974d41646b027e4c">&#9670;&#160;</a></span>GEN_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GEN_CMD&#160;&#160;&#160;56   /* adtc [0] RD/WR          R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a939c1c73db7a96767f5d06dfe7591b01" name="a939c1c73db7a96767f5d06dfe7591b01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a939c1c73db7a96767f5d06dfe7591b01">&#9670;&#160;</a></span>GO_IDLE_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GO_IDLE_STATE&#160;&#160;&#160;0   /* bc                          */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5811ddb8fa6fc4cee3c40e4fb7481e43" name="a5811ddb8fa6fc4cee3c40e4fb7481e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5811ddb8fa6fc4cee3c40e4fb7481e43">&#9670;&#160;</a></span>GO_INACTIVE_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GO_INACTIVE_STATE&#160;&#160;&#160;15   /* ac   [31:16] RCA            */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf033a04d267fa6d805cfaea59cc9b7e" name="adf033a04d267fa6d805cfaea59cc9b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf033a04d267fa6d805cfaea59cc9b7e">&#9670;&#160;</a></span>GO_IRQ_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GO_IRQ_STATE&#160;&#160;&#160;40   /* bcr                     R5  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa74c0e2b8dd2aa10ae94ccb3ae228e0f" name="aa74c0e2b8dd2aa10ae94ccb3ae228e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74c0e2b8dd2aa10ae94ccb3ae228e0f">&#9670;&#160;</a></span>LOCK_UNLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOCK_UNLOCK&#160;&#160;&#160;42   /* adtc                    R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0d922484d27d5d6d2cec0965df84102" name="ad0d922484d27d5d6d2cec0965df84102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0d922484d27d5d6d2cec0965df84102">&#9670;&#160;</a></span>PROGRAM_CID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROGRAM_CID&#160;&#160;&#160;26   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad413e308add4fc65ba1c0a4161f14b1c" name="ad413e308add4fc65ba1c0a4161f14b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad413e308add4fc65ba1c0a4161f14b1c">&#9670;&#160;</a></span>PROGRAM_CSD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PROGRAM_CSD&#160;&#160;&#160;27   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aabe53fef5bf56df76bcb430f5b1db1c9" name="aabe53fef5bf56df76bcb430f5b1db1c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabe53fef5bf56df76bcb430f5b1db1c9">&#9670;&#160;</a></span>READ_MULTIPLE_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_MULTIPLE_BLOCK&#160;&#160;&#160;18   /* adtc [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a078b4c06f187324dd4e14cf59a6c87c2" name="a078b4c06f187324dd4e14cf59a6c87c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a078b4c06f187324dd4e14cf59a6c87c2">&#9670;&#160;</a></span>READ_SINGLE_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_SINGLE_BLOCK&#160;&#160;&#160;17   /* adtc [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4017a2775f8a4731e194126b30f478d7" name="a4017a2775f8a4731e194126b30f478d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4017a2775f8a4731e194126b30f478d7">&#9670;&#160;</a></span>SCR_SPEC_VER_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCR_SPEC_VER_0&#160;&#160;&#160;0   /* Implements system specification 1.0 - 1.01 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b6c473573af04d0b85d73e312fba600" name="a1b6c473573af04d0b85d73e312fba600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6c473573af04d0b85d73e312fba600">&#9670;&#160;</a></span>SCR_SPEC_VER_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCR_SPEC_VER_1&#160;&#160;&#160;1   /* Implements system specification 1.10 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88109661ba93731ce71f7d9982933133" name="a88109661ba93731ce71f7d9982933133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88109661ba93731ce71f7d9982933133">&#9670;&#160;</a></span>SCR_SPEC_VER_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SCR_SPEC_VER_2&#160;&#160;&#160;2   /* Implements system specification 2.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a612ec5173527128c99c16e0f4bb2299d" name="a612ec5173527128c99c16e0f4bb2299d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612ec5173527128c99c16e0f4bb2299d">&#9670;&#160;</a></span>SD_APP_OP_COND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_APP_OP_COND&#160;&#160;&#160;41   /* bcr  [31:0] OCR         R3  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a02c5d492c6f838e58320882c723fb39a" name="a02c5d492c6f838e58320882c723fb39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c5d492c6f838e58320882c723fb39a">&#9670;&#160;</a></span>SD_APP_SEND_NUM_WR_BLKS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_APP_SEND_NUM_WR_BLKS&#160;&#160;&#160;22   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3f7fddd85b54689da83a09fb0226a7ae" name="a3f7fddd85b54689da83a09fb0226a7ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7fddd85b54689da83a09fb0226a7ae">&#9670;&#160;</a></span>SD_APP_SEND_SCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_APP_SEND_SCR&#160;&#160;&#160;51   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4789af331712cf3fa2e7574f8f6665a3" name="a4789af331712cf3fa2e7574f8f6665a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4789af331712cf3fa2e7574f8f6665a3">&#9670;&#160;</a></span>SD_APP_SET_BUS_WIDTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_APP_SET_BUS_WIDTH&#160;&#160;&#160;6   /* ac   [1:0] bus width    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a421e9bd32ed436448733a99522eab25f" name="a421e9bd32ed436448733a99522eab25f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421e9bd32ed436448733a99522eab25f">&#9670;&#160;</a></span>SD_IO_RW_DIRECT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_IO_RW_DIRECT&#160;&#160;&#160;52 /* ac   [31:0] See below   R5  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05ff10823aceec760957d8732f6be944" name="a05ff10823aceec760957d8732f6be944"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05ff10823aceec760957d8732f6be944">&#9670;&#160;</a></span>SD_IO_RW_EXTENDED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_IO_RW_EXTENDED&#160;&#160;&#160;53 /* adtc [31:0] See below   R5  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64814c32dc57808fdff6ed4e15713de7" name="a64814c32dc57808fdff6ed4e15713de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64814c32dc57808fdff6ed4e15713de7">&#9670;&#160;</a></span>SD_IO_SEND_OP_COND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_IO_SEND_OP_COND&#160;&#160;&#160;5 /* bcr  [23:0] OCR         R4  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3489fd50dc7627f56a8a2085a6170de8" name="a3489fd50dc7627f56a8a2085a6170de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3489fd50dc7627f56a8a2085a6170de8">&#9670;&#160;</a></span>SD_SEND_IF_COND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SEND_IF_COND&#160;&#160;&#160;8   /* bcr  [11:0] See below   R7  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa736c1b1cdeaadb038ed76511c1d0e8b" name="aa736c1b1cdeaadb038ed76511c1d0e8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa736c1b1cdeaadb038ed76511c1d0e8b">&#9670;&#160;</a></span>SD_SEND_RELATIVE_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SEND_RELATIVE_ADDR&#160;&#160;&#160;3   /* bcr                     R6  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f2060c321bd21ef4547e7a85f4fefb9" name="a7f2060c321bd21ef4547e7a85f4fefb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f2060c321bd21ef4547e7a85f4fefb9">&#9670;&#160;</a></span>SD_SWITCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SD_SWITCH&#160;&#160;&#160;6   /* adtc [31:0] See below   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad931267a9c2c66177694f754a73e121d" name="ad931267a9c2c66177694f754a73e121d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad931267a9c2c66177694f754a73e121d">&#9670;&#160;</a></span>SDIO_ARG_CMD52_DATA_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_DATA_MASK&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fa3cbd08e33321f14f37360497c6f17" name="a3fa3cbd08e33321f14f37360497c6f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa3cbd08e33321f14f37360497c6f17">&#9670;&#160;</a></span>SDIO_ARG_CMD52_DATA_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_DATA_SHIFT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a5a2a760c2e2edf0c2e1f8d6529d47d" name="a2a5a2a760c2e2edf0c2e1f8d6529d47d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5a2a760c2e2edf0c2e1f8d6529d47d">&#9670;&#160;</a></span>SDIO_ARG_CMD52_FUNC_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_FUNC_MASK&#160;&#160;&#160;0x7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d850dc6cb1aae5357c377ce726b328c" name="a5d850dc6cb1aae5357c377ce726b328c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d850dc6cb1aae5357c377ce726b328c">&#9670;&#160;</a></span>SDIO_ARG_CMD52_FUNC_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_FUNC_SHIFT&#160;&#160;&#160;28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54102ff8d0f6cbec3b27361491758857" name="a54102ff8d0f6cbec3b27361491758857"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54102ff8d0f6cbec3b27361491758857">&#9670;&#160;</a></span>SDIO_ARG_CMD52_RAW_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_RAW_FLAG&#160;&#160;&#160;(1u&lt;&lt;27)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a290aa2d10efd728c0a9961078f3ec8d8" name="a290aa2d10efd728c0a9961078f3ec8d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a290aa2d10efd728c0a9961078f3ec8d8">&#9670;&#160;</a></span>SDIO_ARG_CMD52_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_READ&#160;&#160;&#160;(0&lt;&lt;31)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07f2ba58dbd6458bf08bfffbd95883de" name="a07f2ba58dbd6458bf08bfffbd95883de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07f2ba58dbd6458bf08bfffbd95883de">&#9670;&#160;</a></span>SDIO_ARG_CMD52_REG_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_REG_MASK&#160;&#160;&#160;0x1ffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d4f35903f5b5cc6c145fb7ae4df75f1" name="a4d4f35903f5b5cc6c145fb7ae4df75f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4f35903f5b5cc6c145fb7ae4df75f1">&#9670;&#160;</a></span>SDIO_ARG_CMD52_REG_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_REG_SHIFT&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac1b2daff06de71113301a8fff9ff8869" name="ac1b2daff06de71113301a8fff9ff8869"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b2daff06de71113301a8fff9ff8869">&#9670;&#160;</a></span>SDIO_ARG_CMD52_WRITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD52_WRITE&#160;&#160;&#160;(1u&lt;&lt;31)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab99cee009f9692e481057277b7f0e0e6" name="ab99cee009f9692e481057277b7f0e0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab99cee009f9692e481057277b7f0e0e6">&#9670;&#160;</a></span>SDIO_ARG_CMD53_BLOCK_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_BLOCK_MODE&#160;&#160;&#160;(1u&lt;&lt;27)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abef7220f5b7f077775c81c4a7ba29c5b" name="abef7220f5b7f077775c81c4a7ba29c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abef7220f5b7f077775c81c4a7ba29c5b">&#9670;&#160;</a></span>SDIO_ARG_CMD53_FUNC_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_FUNC_MASK&#160;&#160;&#160;0x7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4b94eb676140bdc6c5757246c92d3e7" name="ad4b94eb676140bdc6c5757246c92d3e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b94eb676140bdc6c5757246c92d3e7">&#9670;&#160;</a></span>SDIO_ARG_CMD53_FUNC_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_FUNC_SHIFT&#160;&#160;&#160;28</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae1a8d3935e41d2e324c6a59d2c72f52f" name="ae1a8d3935e41d2e324c6a59d2c72f52f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1a8d3935e41d2e324c6a59d2c72f52f">&#9670;&#160;</a></span>SDIO_ARG_CMD53_INCREMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_INCREMENT&#160;&#160;&#160;(1u&lt;&lt;26)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e4f4f43060013996237a75dcb22a94e" name="a6e4f4f43060013996237a75dcb22a94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e4f4f43060013996237a75dcb22a94e">&#9670;&#160;</a></span>SDIO_ARG_CMD53_LENGTH_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_LENGTH_MASK&#160;&#160;&#160;0x1ff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a93a237b70be4b1bd0edae0d96f626390" name="a93a237b70be4b1bd0edae0d96f626390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93a237b70be4b1bd0edae0d96f626390">&#9670;&#160;</a></span>SDIO_ARG_CMD53_LENGTH_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_LENGTH_MAX&#160;&#160;&#160;511</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a039fa989524fb878bada05af35cb3f70" name="a039fa989524fb878bada05af35cb3f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a039fa989524fb878bada05af35cb3f70">&#9670;&#160;</a></span>SDIO_ARG_CMD53_LENGTH_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_LENGTH_SHIFT&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf3582f5411c1f08187825e8348bfa5d" name="adf3582f5411c1f08187825e8348bfa5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf3582f5411c1f08187825e8348bfa5d">&#9670;&#160;</a></span>SDIO_ARG_CMD53_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_READ&#160;&#160;&#160;(0&lt;&lt;31)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1521d5d3dfdec2aa8e15861527a4d2b8" name="a1521d5d3dfdec2aa8e15861527a4d2b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1521d5d3dfdec2aa8e15861527a4d2b8">&#9670;&#160;</a></span>SDIO_ARG_CMD53_REG_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_REG_MASK&#160;&#160;&#160;0x1ffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5675d5b983458478b4b1ccf1dbe190b" name="aa5675d5b983458478b4b1ccf1dbe190b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5675d5b983458478b4b1ccf1dbe190b">&#9670;&#160;</a></span>SDIO_ARG_CMD53_REG_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_REG_SHIFT&#160;&#160;&#160;9</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a411963bab186b506931fbf56786be47f" name="a411963bab186b506931fbf56786be47f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411963bab186b506931fbf56786be47f">&#9670;&#160;</a></span>SDIO_ARG_CMD53_WRITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ARG_CMD53_WRITE&#160;&#160;&#160;(1u&lt;&lt;31)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb7cd903af2405bc07ec3a00159702d6" name="aeb7cd903af2405bc07ec3a00159702d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb7cd903af2405bc07ec3a00159702d6">&#9670;&#160;</a></span>SDIO_R5_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_R5_DATA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">resp</td><td>)</td>
+          <td>&#160;&#160;&#160;((resp)[0] &amp; 0xff)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4a7d0cab1c8ebf1cda8f488221267a5" name="ad4a7d0cab1c8ebf1cda8f488221267a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4a7d0cab1c8ebf1cda8f488221267a5">&#9670;&#160;</a></span>SELECT_CARD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SELECT_CARD&#160;&#160;&#160;7   /* ac   [31:16] RCA        R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a264ef466ea3f1a08a8c9de81e0e3f24d" name="a264ef466ea3f1a08a8c9de81e0e3f24d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264ef466ea3f1a08a8c9de81e0e3f24d">&#9670;&#160;</a></span>SEND_CID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_CID&#160;&#160;&#160;10   /* ac   [31:16] RCA        R2  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85a884eec438d450dc1c05e8d9d29044" name="a85a884eec438d450dc1c05e8d9d29044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85a884eec438d450dc1c05e8d9d29044">&#9670;&#160;</a></span>SEND_CSD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_CSD&#160;&#160;&#160;9   /* ac   [31:16] RCA        R2  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1656e2a04678390f994265a9a8c281c8" name="a1656e2a04678390f994265a9a8c281c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1656e2a04678390f994265a9a8c281c8">&#9670;&#160;</a></span>SEND_EXT_CSD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_EXT_CSD&#160;&#160;&#160;8   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2397afdad46162ab52c4008d8f5dab23" name="a2397afdad46162ab52c4008d8f5dab23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2397afdad46162ab52c4008d8f5dab23">&#9670;&#160;</a></span>SEND_OP_COND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_OP_COND&#160;&#160;&#160;1   /* bcr  [31:0] OCR         R3  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f98c79059221d788e2219865d770648" name="a7f98c79059221d788e2219865d770648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f98c79059221d788e2219865d770648">&#9670;&#160;</a></span>SEND_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_STATUS&#160;&#160;&#160;13   /* ac   [31:16] RCA        R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa60709163d3f9e278c28cc30a517d009" name="aa60709163d3f9e278c28cc30a517d009"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa60709163d3f9e278c28cc30a517d009">&#9670;&#160;</a></span>SEND_TUNING_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_TUNING_BLOCK&#160;&#160;&#160;19   /* adtc                    R1 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af36660a94ef67d95bcc9a04a15fec4d2" name="af36660a94ef67d95bcc9a04a15fec4d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af36660a94ef67d95bcc9a04a15fec4d2">&#9670;&#160;</a></span>SEND_TUNING_BLOCK_HS200</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_TUNING_BLOCK_HS200&#160;&#160;&#160;21 /* adtc R1*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2d6d3ed1de3a3d7f4f6720b9243ac1e" name="ac2d6d3ed1de3a3d7f4f6720b9243ac1e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d6d3ed1de3a3d7f4f6720b9243ac1e">&#9670;&#160;</a></span>SEND_WRITE_PROT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEND_WRITE_PROT&#160;&#160;&#160;30   /* adtc [31:0] wpdata addr R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b1914f5151eca07229eaf7dd941fd87" name="a1b1914f5151eca07229eaf7dd941fd87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b1914f5151eca07229eaf7dd941fd87">&#9670;&#160;</a></span>SET_BLOCK_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_BLOCK_COUNT&#160;&#160;&#160;23   /* adtc [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb1648cc28b9d8d608cf1b7e86c9490f" name="aeb1648cc28b9d8d608cf1b7e86c9490f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1648cc28b9d8d608cf1b7e86c9490f">&#9670;&#160;</a></span>SET_BLOCKLEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_BLOCKLEN&#160;&#160;&#160;16   /* ac   [31:0] block len   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a021016c82b1ccebf19cfaf2cdb09bedb" name="a021016c82b1ccebf19cfaf2cdb09bedb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a021016c82b1ccebf19cfaf2cdb09bedb">&#9670;&#160;</a></span>SET_DSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_DSR&#160;&#160;&#160;4   /* bc   [31:16] RCA            */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e54a25ec21da14b9dd8cd19ad526dd4" name="a5e54a25ec21da14b9dd8cd19ad526dd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e54a25ec21da14b9dd8cd19ad526dd4">&#9670;&#160;</a></span>SET_RELATIVE_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_RELATIVE_ADDR&#160;&#160;&#160;3   /* ac   [31:16] RCA        R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae08d8bcda78be54b2f5938b8db275e21" name="ae08d8bcda78be54b2f5938b8db275e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae08d8bcda78be54b2f5938b8db275e21">&#9670;&#160;</a></span>SET_WRITE_PROT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SET_WRITE_PROT&#160;&#160;&#160;28   /* ac   [31:0] data addr   R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab27f738ba078a4173da17da169c5ca71" name="ab27f738ba078a4173da17da169c5ca71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab27f738ba078a4173da17da169c5ca71">&#9670;&#160;</a></span>SPI_CRC_ON_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_CRC_ON_OFF&#160;&#160;&#160;59   /* spi  [0:0] flag      spi_R1 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a806d8b861338d5a55b2d211917473f32" name="a806d8b861338d5a55b2d211917473f32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a806d8b861338d5a55b2d211917473f32">&#9670;&#160;</a></span>SPI_READ_OCR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_READ_OCR&#160;&#160;&#160;58   /* spi                  spi_R3 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f220568605a0eaa9a5cbb3d3cc82408" name="a0f220568605a0eaa9a5cbb3d3cc82408"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f220568605a0eaa9a5cbb3d3cc82408">&#9670;&#160;</a></span>STOP_TRANSMISSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STOP_TRANSMISSION&#160;&#160;&#160;12   /* ac                      R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac279a93dfd1f02dac2359cfaa1422b93" name="ac279a93dfd1f02dac2359cfaa1422b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac279a93dfd1f02dac2359cfaa1422b93">&#9670;&#160;</a></span>SWITCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SWITCH&#160;&#160;&#160;6   /* ac   [31:0] See below   R1b */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab14945254c721d91efe10e9aae7152e2" name="ab14945254c721d91efe10e9aae7152e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab14945254c721d91efe10e9aae7152e2">&#9670;&#160;</a></span>VOLTAGE_SWITCH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define VOLTAGE_SWITCH&#160;&#160;&#160;11   /* ac   [31:0]             R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7217bf0edddda1e17d347f7c5b717f27" name="a7217bf0edddda1e17d347f7c5b717f27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7217bf0edddda1e17d347f7c5b717f27">&#9670;&#160;</a></span>WRITE_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_BLOCK&#160;&#160;&#160;24   /* adtc [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49666334ded4e4d46d2d41098503eb39" name="a49666334ded4e4d46d2d41098503eb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49666334ded4e4d46d2d41098503eb39">&#9670;&#160;</a></span>WRITE_DAT_UNTIL_STOP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_DAT_UNTIL_STOP&#160;&#160;&#160;20   /* adtc [31:0] data addr   R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2554a9322c0074e535e521612079b18e" name="a2554a9322c0074e535e521612079b18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2554a9322c0074e535e521612079b18e">&#9670;&#160;</a></span>WRITE_MULTIPLE_BLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_MULTIPLE_BLOCK&#160;&#160;&#160;25   /* adtc                    R1  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="mmcsd__cmd_8h.html">mmcsd_cmd.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

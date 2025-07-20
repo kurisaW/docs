@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/dev_serial.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dev__serial_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dev_serial.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="dev__serial_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2024 RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2012-05-15     lgnq         first version.</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * 2012-05-28     bernard      change interfaces</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> * 2013-02-20     bernard      use RT_SERIAL_RB_BUFSZ to define</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> *                             the size of ring buffer.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef __DEV_SERIAL_H__</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define __DEV_SERIAL_H__</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga71e021ed54a8c00c6140abb3ac3b0bee">  114</a></span><span class="preprocessor">#define BAUD_RATE_2400                  2400</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="group__group___serial.html#gab6cd2f63da1f6fd1dae9e24f6c3f494c">  115</a></span><span class="preprocessor">#define BAUD_RATE_4800                  4800</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga7ac7dae9d640cde3f5996d014c1a6690">  116</a></span><span class="preprocessor">#define BAUD_RATE_9600                  9600</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga1382d18d3d2ab799989a87436a6e4c7e">  117</a></span><span class="preprocessor">#define BAUD_RATE_19200                 19200</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga2e187b6db95fce15c2ca648fd820f4e0">  118</a></span><span class="preprocessor">#define BAUD_RATE_38400                 38400</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="group__group___serial.html#gabc334064d5fb441f788e7e1aa8b91868">  119</a></span><span class="preprocessor">#define BAUD_RATE_57600                 57600</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga57f0128ee3ce2a14c3f74ac63fe89bea">  120</a></span><span class="preprocessor">#define BAUD_RATE_115200                115200</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga486fcf1846dedc18567bfb8a4b7f813d">  121</a></span><span class="preprocessor">#define BAUD_RATE_230400                230400</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__group___serial.html#gaa795c0ef5b188e7bc43826680f1ebf2c">  122</a></span><span class="preprocessor">#define BAUD_RATE_460800                460800</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga2ab45fe6c314f32e081aa7a7d712a838">  123</a></span><span class="preprocessor">#define BAUD_RATE_500000                500000</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__group___serial.html#gaac1372f85233cdcd3e2ed53a8ba50634">  124</a></span><span class="preprocessor">#define BAUD_RATE_576000                576000</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga212b7f9d8f516adda1fbde34dca54753">  125</a></span><span class="preprocessor">#define BAUD_RATE_921600                921600</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="group__group___serial.html#gac9d6e6c865f8879222adfae138d1aeef">  126</a></span><span class="preprocessor">#define BAUD_RATE_1000000               1000000</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__group___serial.html#gaacac7a9ca8271f3d99af392a96cbe9ec">  127</a></span><span class="preprocessor">#define BAUD_RATE_1152000               1152000</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga522e2a5af2c6a4ea3f20d55d2a30dd0c">  128</a></span><span class="preprocessor">#define BAUD_RATE_1500000               1500000</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga62c9c9efbdc9f0e2ced776d3952493ff">  129</a></span><span class="preprocessor">#define BAUD_RATE_2000000               2000000</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga71c81a46ee6782572e0f48ebf625c52a">  130</a></span><span class="preprocessor">#define BAUD_RATE_2500000               2500000</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga114ee452aaa5f2895d00339b14a4310e">  131</a></span><span class="preprocessor">#define BAUD_RATE_3000000               3000000</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga69d7e29b6b484569fd51442326a06ad2">  132</a></span><span class="preprocessor">#define BAUD_RATE_3500000               3500000</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="group__group___serial.html#gac56f7e3bf855e4b9ff77078763bbc6c8">  133</a></span><span class="preprocessor">#define BAUD_RATE_4000000               4000000</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga478b73f27ad4ca6d242aa9edd39a1fb0">  135</a></span><span class="preprocessor">#define DATA_BITS_5                     5</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga8ba29ac86e888dc8336438d0fe8ce402">  136</a></span><span class="preprocessor">#define DATA_BITS_6                     6</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group__group___serial.html#gae0c2eb27b42e266c3393b8d31e7c8fb7">  137</a></span><span class="preprocessor">#define DATA_BITS_7                     7</span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="group__group___serial.html#gaeab62dea72ea7d592d7a78688a1e2fd5">  138</a></span><span class="preprocessor">#define DATA_BITS_8                     8</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga98115e71578c3ac1e9988859d182844b">  139</a></span><span class="preprocessor">#define DATA_BITS_9                     9</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga33fc07920aa0109f30e77b49faeaf1bd">  141</a></span><span class="preprocessor">#define STOP_BITS_1                     0</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga0b0ddb41f741fcffa6bc7840a10f3ba2">  142</a></span><span class="preprocessor">#define STOP_BITS_2                     1</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga3c3ee549b0ba319063d4da145f0622e0">  143</a></span><span class="preprocessor">#define STOP_BITS_3                     2</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga21834a69808d61e512e7864ccd2737cb">  144</a></span><span class="preprocessor">#define STOP_BITS_4                     3</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="preprocessor">#ifdef _WIN32</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga8342f22c7fd72713629efcf411a0d04b">  149</a></span><span class="preprocessor">#define PARITY_NONE                     0</span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga25e17ce6ba7124885e170c47bcd833e5">  150</a></span><span class="preprocessor">#define PARITY_ODD                      1</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga64de75e13d62a653f2a2b5c41e0374c2">  151</a></span><span class="preprocessor">#define PARITY_EVEN                     2</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="group__group___serial.html#gafcf7e733e2bbf9fcdc653ee6363b5d11">  154</a></span><span class="preprocessor">#define BIT_ORDER_LSB                   0</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga8427fb10048668273afc1fabf0af559a">  155</a></span><span class="preprocessor">#define BIT_ORDER_MSB                   1</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga738d8703e0740488ade616c0467c3379">  157</a></span><span class="preprocessor">#define NRZ_NORMAL                      0       </span><span class="comment">/* Non Return to Zero : normal mode */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga6fcb077cfa3b34c2474a3fcd54a1cc4a">  158</a></span><span class="preprocessor">#define NRZ_INVERTED                    1       </span><span class="comment">/* Non Return to Zero : inverted mode */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="preprocessor">#ifndef RT_SERIAL_RB_BUFSZ</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="group__group___serial.html#gab147be3ed48ff137c29b6002a9826264">  161</a></span><span class="preprocessor">#define RT_SERIAL_RB_BUFSZ              64</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga1ed83d2c3000965617f194025e15cb84">  164</a></span><span class="preprocessor">#define RT_SERIAL_EVENT_RX_IND          0x01    </span><span class="comment">/* Rx indication */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="group__group___serial.html#gac2ee4f7014b5f3340fa03a86d3f037fd">  165</a></span><span class="preprocessor">#define RT_SERIAL_EVENT_TX_DONE         0x02    </span><span class="comment">/* Tx complete   */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga7fe00d8cb129e1e6caf0946a831fd149">  166</a></span><span class="preprocessor">#define RT_SERIAL_EVENT_RX_DMADONE      0x03    </span><span class="comment">/* Rx DMA transfer done */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group__group___serial.html#gacc8cb164b3853a4138a8b10ed0b48711">  167</a></span><span class="preprocessor">#define RT_SERIAL_EVENT_TX_DMADONE      0x04    </span><span class="comment">/* Tx DMA transfer done */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno"><a class="line" href="group__group___serial.html#gafdfd884edcd8c756d7ac2ff5013b8e54">  168</a></span><span class="preprocessor">#define RT_SERIAL_EVENT_RX_TIMEOUT      0x05    </span><span class="comment">/* Rx timeout    */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga10e33784339cabb36aa0927adf0f2b28">  170</a></span><span class="preprocessor">#define RT_SERIAL_DMA_RX                0x01</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga6e290c010b1f6b8d1e1822c3fe46d199">  171</a></span><span class="preprocessor">#define RT_SERIAL_DMA_TX                0x02</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="group__group___serial.html#gab60538c79aa0a9bb403241ef930db6d2">  173</a></span><span class="preprocessor">#define RT_SERIAL_RX_INT                0x01</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="group__group___serial.html#gad4cdb2c2035426ba2c5010749754042b">  174</a></span><span class="preprocessor">#define RT_SERIAL_TX_INT                0x02</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno"><a class="line" href="group__group___serial.html#gae9be73190611210296fc4113eb6643dd">  176</a></span><span class="preprocessor">#define RT_SERIAL_ERR_OVERRUN           0x01</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="group__group___serial.html#gade145bc8ea66fd5e67bff436ab17aa5a">  177</a></span><span class="preprocessor">#define RT_SERIAL_ERR_FRAMING           0x02</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga805731855af6089eadaf384db3e642ac">  178</a></span><span class="preprocessor">#define RT_SERIAL_ERR_PARITY            0x03</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga5247223c2a596309fe84e0041e467236">  180</a></span><span class="preprocessor">#define RT_SERIAL_TX_DATAQUEUE_SIZE     2048</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga396ca01c0321f5d91cd8f4df3f21e5ae">  181</a></span><span class="preprocessor">#define RT_SERIAL_TX_DATAQUEUE_LWM      30</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga738837273dfdc6b2bd33269e33b97926">  183</a></span><span class="preprocessor">#define RT_SERIAL_FLOWCONTROL_CTSRTS    1</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga6db84a08fa81d7bb34a002e397d0fcc1">  184</a></span><span class="preprocessor">#define RT_SERIAL_FLOWCONTROL_NONE      0</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">/* Default config for serial_configure structure */</span></div>
+<div class="foldopen" id="foldopen00187" data-start="" data-end="">
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="group__group___serial.html#gade5137ad7558e5cb769fff6d04f2b09b">  187</a></span><span class="preprocessor">#define RT_SERIAL_CONFIG_DEFAULT           \</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="preprocessor">{                                          \</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">    BAUD_RATE_115200, </span><span class="comment">/* 115200 bits/s */</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="preprocessor">    DATA_BITS_8,      </span><span class="comment">/* 8 databits */</span><span class="preprocessor">     \</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="preprocessor">    STOP_BITS_1,      </span><span class="comment">/* 1 stopbit */</span><span class="preprocessor">      \</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="preprocessor">    PARITY_NONE,      </span><span class="comment">/* No parity  */</span><span class="preprocessor">     \</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span><span class="preprocessor">    BIT_ORDER_LSB,    </span><span class="comment">/* LSB first sent */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span><span class="preprocessor">    NRZ_NORMAL,       </span><span class="comment">/* Normal mode */</span><span class="preprocessor">    \</span></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="preprocessor">    RT_SERIAL_RB_BUFSZ, </span><span class="comment">/* Buffer size */</span><span class="preprocessor">  \</span></div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">    RT_SERIAL_FLOWCONTROL_NONE, </span><span class="comment">/* Off flowcontrol */</span><span class="preprocessor"> \</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="preprocessor">    0                                      \</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="preprocessor">}</span></div>
+</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga437e284adbcdbb12ed6c01d2234788da">  204</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__group___serial.html#ga437e284adbcdbb12ed6c01d2234788da">rt_hw_serial_rxind_hookproto_t</a>)(<a class="code hl_struct" href="structrt__device.html">rt_device_t</a> dev, <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga1f49abd2e83ce6601438ea578d084863">  205</a></span><a class="code hl_define" href="group__group___kernel_object.html#gaef913773c621b3b7e95a1952c910469a">RT_OBJECT_HOOKLIST_DECLARE</a>(<a class="code hl_typedef" href="group__group___serial.html#ga437e284adbcdbb12ed6c01d2234788da">rt_hw_serial_rxind_hookproto_t</a>, rt_hw_serial_rxind);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="};">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="structserial__configure.html">  207</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structserial__configure.html">serial_configure</a></div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>{</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno"><a class="line" href="structserial__configure.html#af68e16be9d4505d3798fb9a330c1dbe1">  209</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#af68e16be9d4505d3798fb9a330c1dbe1">baud_rate</a>;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="structserial__configure.html#abaa303fb64b7abd4058a8d8a27a59408">  211</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#abaa303fb64b7abd4058a8d8a27a59408">data_bits</a>               :4;</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="structserial__configure.html#a67d193bfb3d7ccd74d5b56c212e6e314">  212</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#a67d193bfb3d7ccd74d5b56c212e6e314">stop_bits</a>               :2;</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="structserial__configure.html#a562595b2d0f90c5f2a44526371170df6">  213</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#a562595b2d0f90c5f2a44526371170df6">parity</a>                  :2;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno"><a class="line" href="structserial__configure.html#aeaf59faa53bfdad01889a868bbb2a57f">  214</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#aeaf59faa53bfdad01889a868bbb2a57f">bit_order</a>               :1;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="structserial__configure.html#ac95e0fdc2332c819f4e92487a501ebfe">  215</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#ac95e0fdc2332c819f4e92487a501ebfe">invert</a>                  :1;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="structserial__configure.html#ac593dd1606f3b9a1362b3131ee556959">  216</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#ac593dd1606f3b9a1362b3131ee556959">bufsz</a>                   :16;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="structserial__configure.html#a65e72b2610ac75542626d9c10e7af96c">  217</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#a65e72b2610ac75542626d9c10e7af96c">flowcontrol</a>             :1;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="structserial__configure.html#a82796d71a2ecef41eb64f1949ba4f0a9">  218</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structserial__configure.html#a82796d71a2ecef41eb64f1949ba4f0a9">reserved</a>                :5;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>};</div>
+</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span><span class="comment"> * Serial FIFO mode</span></div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00224" data-start="{" data-end="};">
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="structrt__serial__rx__fifo.html">  224</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__rx__fifo.html">rt_serial_rx_fifo</a></div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>{</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="comment">/* software fifo */</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="structrt__serial__rx__fifo.html#a584aba5204bc8a811c818c8c54143bb0">  227</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *<a class="code hl_variable" href="structrt__serial__rx__fifo.html#a584aba5204bc8a811c818c8c54143bb0">buffer</a>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno"><a class="line" href="structrt__serial__rx__fifo.html#afb44d6ba481e713afbfcdab7b394da66">  229</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> <a class="code hl_variable" href="structrt__serial__rx__fifo.html#ab1eda7cea909c6e18a4f886dde80295b">put_index</a>, <a class="code hl_variable" href="structrt__serial__rx__fifo.html#afb44d6ba481e713afbfcdab7b394da66">get_index</a>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="structrt__serial__rx__fifo.html#ae523f78a2202b18a0261c24ba97d3899">  231</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_variable" href="structrt__serial__rx__fifo.html#ae523f78a2202b18a0261c24ba97d3899">is_full</a>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>};</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="};">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="structrt__serial__tx__fifo.html">  234</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__tx__fifo.html">rt_serial_tx_fifo</a></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>{</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno"><a class="line" href="structrt__serial__tx__fifo.html#a2a0e917985973fc69320534a67b30cf1">  236</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__completion.html">rt_completion</a> <a class="code hl_variable" href="structrt__serial__tx__fifo.html#a2a0e917985973fc69320534a67b30cf1">completion</a>;</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>};</div>
+</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span> </div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment"> * Serial DMA mode</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="comment"> */</span></div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="};">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="structrt__serial__rx__dma.html">  242</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__rx__dma.html">rt_serial_rx_dma</a></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>{</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno"><a class="line" href="structrt__serial__rx__dma.html#a7c46119a80c5dde4e90a1a637f7ccdea">  244</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_variable" href="structrt__serial__rx__dma.html#a7c46119a80c5dde4e90a1a637f7ccdea">activated</a>;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>};</div>
+</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="foldopen" id="foldopen00247" data-start="{" data-end="};">
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno"><a class="line" href="structrt__serial__tx__dma.html">  247</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__tx__dma.html">rt_serial_tx_dma</a></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>{</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno"><a class="line" href="structrt__serial__tx__dma.html#aaa61bc13288fbf192cf018859c8924d6">  249</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_variable" href="structrt__serial__tx__dma.html#aaa61bc13288fbf192cf018859c8924d6">activated</a>;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno"><a class="line" href="structrt__serial__tx__dma.html#a1f8f58afae7d765bad335217fc4ff79a">  250</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__data__queue.html">rt_data_queue</a> <a class="code hl_variable" href="structrt__serial__tx__dma.html#a1f8f58afae7d765bad335217fc4ff79a">data_queue</a>;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>};</div>
+</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span> </div>
+<div class="foldopen" id="foldopen00253" data-start="{" data-end="};">
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="structrt__serial__device.html">  253</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>{</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#a2f430c8de917b0670107b5d3424a66b3">  255</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__device.html">rt_device</a>          <a class="code hl_variable" href="structrt__serial__device.html#a2f430c8de917b0670107b5d3424a66b3">parent</a>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#a7297e5daa4fe95fecf66686b954e7ff6">  257</a></span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structrt__uart__ops.html">rt_uart_ops</a> *<a class="code hl_variable" href="structrt__serial__device.html#a7297e5daa4fe95fecf66686b954e7ff6">ops</a>;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#af44d6e1239a2a99eefcf4c4e97a5a372">  258</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structserial__configure.html">serial_configure</a>   <a class="code hl_variable" href="structrt__serial__device.html#af44d6e1239a2a99eefcf4c4e97a5a372">config</a>;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#aba6b7d31e26ed64474cbf3223499f90e">  260</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__serial__device.html#aba6b7d31e26ed64474cbf3223499f90e">serial_rx</a>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#a2c1614a2677417ada4b294de8c63eab9">  261</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__serial__device.html#a2c1614a2677417ada4b294de8c63eab9">serial_tx</a>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#af25561f880f92a06cc369fafc0e14323">  263</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__spinlock.html">rt_spinlock</a> <a class="code hl_variable" href="structrt__serial__device.html#af25561f880f92a06cc369fafc0e14323">spinlock</a>;</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#ifdef RT_USING_SERIAL_BYPASS</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__bypass.html">rt_serial_bypass</a>* bypass;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="structrt__serial__device.html#aa89606e34709dd97deeddfdbb8dd042c">  267</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__device__notify.html">rt_device_notify</a> <a class="code hl_variable" href="structrt__serial__device.html#aa89606e34709dd97deeddfdbb8dd042c">rx_notify</a>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>};</div>
+</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga9a9cbb8b07aa4e3b7a81cdc36f463fdf">  269</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_t</a>;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span> </div>
+<div class="foldopen" id="foldopen00274" data-start="{" data-end="};">
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html">  274</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__uart__ops.html">rt_uart_ops</a></div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>{</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html#a306ffe62ce25c9ec4c3486b9912d97ac">  276</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> (*<a class="code hl_variable" href="structrt__uart__ops.html#a306ffe62ce25c9ec4c3486b9912d97ac">configure</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial, <span class="keyword">struct </span><a class="code hl_struct" href="structserial__configure.html">serial_configure</a> *cfg);</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html#a5b78ae1fc67707252a1842ffae3f5758">  277</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> (*<a class="code hl_variable" href="structrt__uart__ops.html#a5b78ae1fc67707252a1842ffae3f5758">control</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial, <span class="keywordtype">int</span> cmd, <span class="keywordtype">void</span> *arg);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html#a9b65b4161683b9ce5460903a78e2e00e">  279</a></span>    int (*<a class="code hl_variable" href="structrt__uart__ops.html#a9b65b4161683b9ce5460903a78e2e00e">putc</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial, <span class="keywordtype">char</span> c);</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html#a747fc4d7fd3589d2b0dbbb4d3fa1c5d0">  280</a></span>    int (*<a class="code hl_variable" href="structrt__uart__ops.html#a747fc4d7fd3589d2b0dbbb4d3fa1c5d0">getc</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial);</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="structrt__uart__ops.html#a5e02588d94e6d8c8c287e2bd24fdbf35">  282</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> (*<a class="code hl_variable" href="structrt__uart__ops.html#a5e02588d94e6d8c8c287e2bd24fdbf35">dma_transmit</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial, <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <span class="keywordtype">int</span> direction);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>};</div>
+</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno"><a class="line" href="group__group___serial.html#gafb9bdb7a21535be6bd03f0b93e933759">  291</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__group___serial.html#gafb9bdb7a21535be6bd03f0b93e933759">rt_hw_serial_isr</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial, <span class="keywordtype">int</span> event);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga40673abd2e54628aa2d900ff773bdf30">  305</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="group__group___serial.html#ga40673abd2e54628aa2d900ff773bdf30">rt_hw_serial_register</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial,</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                               <span class="keyword">const</span> <span class="keywordtype">char</span>              *name,</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>                               <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>              flag,</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                               <span class="keywordtype">void</span>                    *data);</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno"><a class="line" href="group__group___serial.html#ga8362962e31383fffcc422f8a65b1816d">  318</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="group__group___serial.html#ga8362962e31383fffcc422f8a65b1816d">rt_hw_serial_register_tty</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__serial__device.html">rt_serial_device</a> *serial);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span> </div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__group___kernel_object_html_gaef913773c621b3b7e95a1952c910469a"><div class="ttname"><a href="group__group___kernel_object.html#gaef913773c621b3b7e95a1952c910469a">RT_OBJECT_HOOKLIST_DECLARE</a></div><div class="ttdeci">#define RT_OBJECT_HOOKLIST_DECLARE(handler_type, name)</div><div class="ttdef"><b>Definition</b> rtdef.h:509</div></div>
+<div class="ttc" id="agroup__group___serial_html_ga40673abd2e54628aa2d900ff773bdf30"><div class="ttname"><a href="group__group___serial.html#ga40673abd2e54628aa2d900ff773bdf30">rt_hw_serial_register</a></div><div class="ttdeci">rt_err_t rt_hw_serial_register(struct rt_serial_device *serial, const char *name, rt_uint32_t flag, void *data)</div><div class="ttdoc">Register a serial device to device list.</div></div>
+<div class="ttc" id="agroup__group___serial_html_ga437e284adbcdbb12ed6c01d2234788da"><div class="ttname"><a href="group__group___serial.html#ga437e284adbcdbb12ed6c01d2234788da">rt_hw_serial_rxind_hookproto_t</a></div><div class="ttdeci">void(* rt_hw_serial_rxind_hookproto_t)(rt_device_t dev, rt_size_t size)</div><div class="ttdoc">Sets a hook function when RX indicate is called.</div><div class="ttdef"><b>Definition</b> dev_serial.h:204</div></div>
+<div class="ttc" id="agroup__group___serial_html_ga8362962e31383fffcc422f8a65b1816d"><div class="ttname"><a href="group__group___serial.html#ga8362962e31383fffcc422f8a65b1816d">rt_hw_serial_register_tty</a></div><div class="ttdeci">rt_err_t rt_hw_serial_register_tty(struct rt_serial_device *serial)</div><div class="ttdoc">register a serial device to system device list and add a device object to system object list</div></div>
+<div class="ttc" id="agroup__group___serial_html_gafb9bdb7a21535be6bd03f0b93e933759"><div class="ttname"><a href="group__group___serial.html#gafb9bdb7a21535be6bd03f0b93e933759">rt_hw_serial_isr</a></div><div class="ttdeci">void rt_hw_serial_isr(struct rt_serial_device *serial, int event)</div><div class="ttdoc">Serial interrupt service routine.</div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a0838be0f1d323925555279fa1016892e"><div class="ttname"><a href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a></div><div class="ttdeci">rt_base_t rt_ssize_t</div><div class="ttdef"><b>Definition</b> rttypes.h:85</div></div>
+<div class="ttc" id="arttypes_8h_html_a3e03a3519ef7e33d13ebd34c482db49c"><div class="ttname"><a href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a></div><div class="ttdeci">int rt_bool_t</div><div class="ttdef"><b>Definition</b> rttypes.h:41</div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="arttypes_8h_html_a585e2ad0fbab0f83817cb61373465df6"><div class="ttname"><a href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a></div><div class="ttdeci">unsigned char rt_uint8_t</div><div class="ttdef"><b>Definition</b> rttypes.h:57</div></div>
+<div class="ttc" id="arttypes_8h_html_a5acba55f46553417996ac70828b874da"><div class="ttname"><a href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a></div><div class="ttdeci">unsigned short rt_uint16_t</div><div class="ttdef"><b>Definition</b> rttypes.h:58</div></div>
+<div class="ttc" id="arttypes_8h_html_a8011d259fdfc54b8a9aa006b4d49ac14"><div class="ttname"><a href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a></div><div class="ttdeci">rt_ubase_t rt_size_t</div><div class="ttdef"><b>Definition</b> rttypes.h:84</div></div>
+<div class="ttc" id="arttypes_8h_html_aa0f407376acf6e5854ea411316811418"><div class="ttname"><a href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a></div><div class="ttdeci">unsigned int rt_uint32_t</div><div class="ttdef"><b>Definition</b> rttypes.h:59</div></div>
+<div class="ttc" id="astructrt__completion_html"><div class="ttname"><a href="structrt__completion.html">rt_completion</a></div><div class="ttdef"><b>Definition</b> completion.h:27</div></div>
+<div class="ttc" id="astructrt__data__queue_html"><div class="ttname"><a href="structrt__data__queue.html">rt_data_queue</a></div><div class="ttdef"><b>Definition</b> dataqueue.h:24</div></div>
+<div class="ttc" id="astructrt__device__notify_html"><div class="ttname"><a href="structrt__device__notify.html">rt_device_notify</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1430</div></div>
+<div class="ttc" id="astructrt__device_html"><div class="ttname"><a href="structrt__device.html">rt_device</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1373</div></div>
+<div class="ttc" id="astructrt__serial__bypass_html"><div class="ttname"><a href="structrt__serial__bypass.html">rt_serial_bypass</a></div><div class="ttdef"><b>Definition</b> serial_bypass.h:47</div></div>
+<div class="ttc" id="astructrt__serial__device_html"><div class="ttname"><a href="structrt__serial__device.html">rt_serial_device</a></div><div class="ttdoc">serial device structure</div><div class="ttdef"><b>Definition</b> dev_serial.h:254</div></div>
+<div class="ttc" id="astructrt__serial__device_html_a2c1614a2677417ada4b294de8c63eab9"><div class="ttname"><a href="structrt__serial__device.html#a2c1614a2677417ada4b294de8c63eab9">rt_serial_device::serial_tx</a></div><div class="ttdeci">void * serial_tx</div><div class="ttdef"><b>Definition</b> dev_serial.h:261</div></div>
+<div class="ttc" id="astructrt__serial__device_html_a2f430c8de917b0670107b5d3424a66b3"><div class="ttname"><a href="structrt__serial__device.html#a2f430c8de917b0670107b5d3424a66b3">rt_serial_device::parent</a></div><div class="ttdeci">struct rt_device parent</div><div class="ttdef"><b>Definition</b> dev_serial.h:255</div></div>
+<div class="ttc" id="astructrt__serial__device_html_a7297e5daa4fe95fecf66686b954e7ff6"><div class="ttname"><a href="structrt__serial__device.html#a7297e5daa4fe95fecf66686b954e7ff6">rt_serial_device::ops</a></div><div class="ttdeci">const struct rt_uart_ops * ops</div><div class="ttdef"><b>Definition</b> dev_serial.h:257</div></div>
+<div class="ttc" id="astructrt__serial__device_html_aa89606e34709dd97deeddfdbb8dd042c"><div class="ttname"><a href="structrt__serial__device.html#aa89606e34709dd97deeddfdbb8dd042c">rt_serial_device::rx_notify</a></div><div class="ttdeci">struct rt_device_notify rx_notify</div><div class="ttdef"><b>Definition</b> dev_serial.h:267</div></div>
+<div class="ttc" id="astructrt__serial__device_html_aba6b7d31e26ed64474cbf3223499f90e"><div class="ttname"><a href="structrt__serial__device.html#aba6b7d31e26ed64474cbf3223499f90e">rt_serial_device::serial_rx</a></div><div class="ttdeci">void * serial_rx</div><div class="ttdef"><b>Definition</b> dev_serial.h:260</div></div>
+<div class="ttc" id="astructrt__serial__device_html_af25561f880f92a06cc369fafc0e14323"><div class="ttname"><a href="structrt__serial__device.html#af25561f880f92a06cc369fafc0e14323">rt_serial_device::spinlock</a></div><div class="ttdeci">struct rt_spinlock spinlock</div><div class="ttdef"><b>Definition</b> dev_serial.h:263</div></div>
+<div class="ttc" id="astructrt__serial__device_html_af44d6e1239a2a99eefcf4c4e97a5a372"><div class="ttname"><a href="structrt__serial__device.html#af44d6e1239a2a99eefcf4c4e97a5a372">rt_serial_device::config</a></div><div class="ttdeci">struct serial_configure config</div><div class="ttdef"><b>Definition</b> dev_serial.h:258</div></div>
+<div class="ttc" id="astructrt__serial__rx__dma_html"><div class="ttname"><a href="structrt__serial__rx__dma.html">rt_serial_rx_dma</a></div><div class="ttdef"><b>Definition</b> dev_serial.h:243</div></div>
+<div class="ttc" id="astructrt__serial__rx__dma_html_a7c46119a80c5dde4e90a1a637f7ccdea"><div class="ttname"><a href="structrt__serial__rx__dma.html#a7c46119a80c5dde4e90a1a637f7ccdea">rt_serial_rx_dma::activated</a></div><div class="ttdeci">rt_bool_t activated</div><div class="ttdef"><b>Definition</b> dev_serial.h:244</div></div>
+<div class="ttc" id="astructrt__serial__rx__fifo_html"><div class="ttname"><a href="structrt__serial__rx__fifo.html">rt_serial_rx_fifo</a></div><div class="ttdoc">Serial Receive FIFO mode.</div><div class="ttdef"><b>Definition</b> dev_serial.h:225</div></div>
+<div class="ttc" id="astructrt__serial__rx__fifo_html_a584aba5204bc8a811c818c8c54143bb0"><div class="ttname"><a href="structrt__serial__rx__fifo.html#a584aba5204bc8a811c818c8c54143bb0">rt_serial_rx_fifo::buffer</a></div><div class="ttdeci">rt_uint8_t * buffer</div><div class="ttdef"><b>Definition</b> dev_serial.h:227</div></div>
+<div class="ttc" id="astructrt__serial__rx__fifo_html_ab1eda7cea909c6e18a4f886dde80295b"><div class="ttname"><a href="structrt__serial__rx__fifo.html#ab1eda7cea909c6e18a4f886dde80295b">rt_serial_rx_fifo::put_index</a></div><div class="ttdeci">rt_uint16_t put_index</div><div class="ttdef"><b>Definition</b> dev_serial.h:229</div></div>
+<div class="ttc" id="astructrt__serial__rx__fifo_html_ae523f78a2202b18a0261c24ba97d3899"><div class="ttname"><a href="structrt__serial__rx__fifo.html#ae523f78a2202b18a0261c24ba97d3899">rt_serial_rx_fifo::is_full</a></div><div class="ttdeci">rt_bool_t is_full</div><div class="ttdef"><b>Definition</b> dev_serial.h:231</div></div>
+<div class="ttc" id="astructrt__serial__rx__fifo_html_afb44d6ba481e713afbfcdab7b394da66"><div class="ttname"><a href="structrt__serial__rx__fifo.html#afb44d6ba481e713afbfcdab7b394da66">rt_serial_rx_fifo::get_index</a></div><div class="ttdeci">rt_uint16_t get_index</div><div class="ttdef"><b>Definition</b> dev_serial.h:229</div></div>
+<div class="ttc" id="astructrt__serial__tx__dma_html"><div class="ttname"><a href="structrt__serial__tx__dma.html">rt_serial_tx_dma</a></div><div class="ttdef"><b>Definition</b> dev_serial.h:248</div></div>
+<div class="ttc" id="astructrt__serial__tx__dma_html_a1f8f58afae7d765bad335217fc4ff79a"><div class="ttname"><a href="structrt__serial__tx__dma.html#a1f8f58afae7d765bad335217fc4ff79a">rt_serial_tx_dma::data_queue</a></div><div class="ttdeci">struct rt_data_queue data_queue</div><div class="ttdef"><b>Definition</b> dev_serial.h:250</div></div>
+<div class="ttc" id="astructrt__serial__tx__dma_html_aaa61bc13288fbf192cf018859c8924d6"><div class="ttname"><a href="structrt__serial__tx__dma.html#aaa61bc13288fbf192cf018859c8924d6">rt_serial_tx_dma::activated</a></div><div class="ttdeci">rt_bool_t activated</div><div class="ttdef"><b>Definition</b> dev_serial.h:249</div></div>
+<div class="ttc" id="astructrt__serial__tx__fifo_html"><div class="ttname"><a href="structrt__serial__tx__fifo.html">rt_serial_tx_fifo</a></div><div class="ttdoc">Serial Transmit FIFO mode.</div><div class="ttdef"><b>Definition</b> dev_serial.h:235</div></div>
+<div class="ttc" id="astructrt__serial__tx__fifo_html_a2a0e917985973fc69320534a67b30cf1"><div class="ttname"><a href="structrt__serial__tx__fifo.html#a2a0e917985973fc69320534a67b30cf1">rt_serial_tx_fifo::completion</a></div><div class="ttdeci">struct rt_completion completion</div><div class="ttdef"><b>Definition</b> dev_serial.h:236</div></div>
+<div class="ttc" id="astructrt__spinlock_html"><div class="ttname"><a href="structrt__spinlock.html">rt_spinlock</a></div><div class="ttdef"><b>Definition</b> rttypes.h:175</div></div>
+<div class="ttc" id="astructrt__uart__ops_html"><div class="ttname"><a href="structrt__uart__ops.html">rt_uart_ops</a></div><div class="ttdoc">Configure the serial device.</div><div class="ttdef"><b>Definition</b> dev_serial.h:275</div></div>
+<div class="ttc" id="astructrt__uart__ops_html_a306ffe62ce25c9ec4c3486b9912d97ac"><div class="ttname"><a href="structrt__uart__ops.html#a306ffe62ce25c9ec4c3486b9912d97ac">rt_uart_ops::configure</a></div><div class="ttdeci">rt_err_t(* configure)(struct rt_serial_device *serial, struct serial_configure *cfg)</div><div class="ttdef"><b>Definition</b> dev_serial.h:276</div></div>
+<div class="ttc" id="astructrt__uart__ops_html_a5b78ae1fc67707252a1842ffae3f5758"><div class="ttname"><a href="structrt__uart__ops.html#a5b78ae1fc67707252a1842ffae3f5758">rt_uart_ops::control</a></div><div class="ttdeci">rt_err_t(* control)(struct rt_serial_device *serial, int cmd, void *arg)</div><div class="ttdef"><b>Definition</b> dev_serial.h:277</div></div>
+<div class="ttc" id="astructrt__uart__ops_html_a5e02588d94e6d8c8c287e2bd24fdbf35"><div class="ttname"><a href="structrt__uart__ops.html#a5e02588d94e6d8c8c287e2bd24fdbf35">rt_uart_ops::dma_transmit</a></div><div class="ttdeci">rt_ssize_t(* dma_transmit)(struct rt_serial_device *serial, rt_uint8_t *buf, rt_size_t size, int direction)</div><div class="ttdef"><b>Definition</b> dev_serial.h:282</div></div>
+<div class="ttc" id="astructrt__uart__ops_html_a747fc4d7fd3589d2b0dbbb4d3fa1c5d0"><div class="ttname"><a href="structrt__uart__ops.html#a747fc4d7fd3589d2b0dbbb4d3fa1c5d0">rt_uart_ops::getc</a></div><div class="ttdeci">int(* getc)(struct rt_serial_device *serial)</div><div class="ttdef"><b>Definition</b> dev_serial.h:280</div></div>
+<div class="ttc" id="astructrt__uart__ops_html_a9b65b4161683b9ce5460903a78e2e00e"><div class="ttname"><a href="structrt__uart__ops.html#a9b65b4161683b9ce5460903a78e2e00e">rt_uart_ops::putc</a></div><div class="ttdeci">int(* putc)(struct rt_serial_device *serial, char c)</div><div class="ttdef"><b>Definition</b> dev_serial.h:279</div></div>
+<div class="ttc" id="astructserial__configure_html"><div class="ttname"><a href="structserial__configure.html">serial_configure</a></div><div class="ttdef"><b>Definition</b> dev_serial.h:208</div></div>
+<div class="ttc" id="astructserial__configure_html_a562595b2d0f90c5f2a44526371170df6"><div class="ttname"><a href="structserial__configure.html#a562595b2d0f90c5f2a44526371170df6">serial_configure::parity</a></div><div class="ttdeci">rt_uint32_t parity</div><div class="ttdef"><b>Definition</b> dev_serial.h:213</div></div>
+<div class="ttc" id="astructserial__configure_html_a65e72b2610ac75542626d9c10e7af96c"><div class="ttname"><a href="structserial__configure.html#a65e72b2610ac75542626d9c10e7af96c">serial_configure::flowcontrol</a></div><div class="ttdeci">rt_uint32_t flowcontrol</div><div class="ttdef"><b>Definition</b> dev_serial.h:217</div></div>
+<div class="ttc" id="astructserial__configure_html_a67d193bfb3d7ccd74d5b56c212e6e314"><div class="ttname"><a href="structserial__configure.html#a67d193bfb3d7ccd74d5b56c212e6e314">serial_configure::stop_bits</a></div><div class="ttdeci">rt_uint32_t stop_bits</div><div class="ttdef"><b>Definition</b> dev_serial.h:212</div></div>
+<div class="ttc" id="astructserial__configure_html_a82796d71a2ecef41eb64f1949ba4f0a9"><div class="ttname"><a href="structserial__configure.html#a82796d71a2ecef41eb64f1949ba4f0a9">serial_configure::reserved</a></div><div class="ttdeci">rt_uint32_t reserved</div><div class="ttdef"><b>Definition</b> dev_serial.h:218</div></div>
+<div class="ttc" id="astructserial__configure_html_abaa303fb64b7abd4058a8d8a27a59408"><div class="ttname"><a href="structserial__configure.html#abaa303fb64b7abd4058a8d8a27a59408">serial_configure::data_bits</a></div><div class="ttdeci">rt_uint32_t data_bits</div><div class="ttdef"><b>Definition</b> dev_serial.h:211</div></div>
+<div class="ttc" id="astructserial__configure_html_ac593dd1606f3b9a1362b3131ee556959"><div class="ttname"><a href="structserial__configure.html#ac593dd1606f3b9a1362b3131ee556959">serial_configure::bufsz</a></div><div class="ttdeci">rt_uint32_t bufsz</div><div class="ttdef"><b>Definition</b> dev_serial.h:216</div></div>
+<div class="ttc" id="astructserial__configure_html_ac95e0fdc2332c819f4e92487a501ebfe"><div class="ttname"><a href="structserial__configure.html#ac95e0fdc2332c819f4e92487a501ebfe">serial_configure::invert</a></div><div class="ttdeci">rt_uint32_t invert</div><div class="ttdef"><b>Definition</b> dev_serial.h:215</div></div>
+<div class="ttc" id="astructserial__configure_html_aeaf59faa53bfdad01889a868bbb2a57f"><div class="ttname"><a href="structserial__configure.html#aeaf59faa53bfdad01889a868bbb2a57f">serial_configure::bit_order</a></div><div class="ttdeci">rt_uint32_t bit_order</div><div class="ttdef"><b>Definition</b> dev_serial.h:214</div></div>
+<div class="ttc" id="astructserial__configure_html_af68e16be9d4505d3798fb9a330c1dbe1"><div class="ttname"><a href="structserial__configure.html#af68e16be9d4505d3798fb9a330c1dbe1">serial_configure::baud_rate</a></div><div class="ttdeci">rt_uint32_t baud_rate</div><div class="ttdef"><b>Definition</b> dev_serial.h:209</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="dev__serial_8h.html">dev_serial.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

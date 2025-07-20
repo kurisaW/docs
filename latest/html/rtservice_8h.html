@@ -1,0 +1,383 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: include/rtservice.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('rtservice_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">rtservice.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for rtservice.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="rtservice_8h__incl.png" border="0" usemap="#ainclude_2rtservice_8h" alt=""/></div>
+<map name="ainclude_2rtservice_8h" id="ainclude_2rtservice_8h">
+<area shape="rect" title=" " alt="" coords="183,5,326,31"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="223,79,287,104"/>
+<area shape="poly" title=" " alt="" coords="257,31,257,65,252,65,252,31"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="175,152,257,177"/>
+<area shape="poly" title=" " alt="" coords="251,106,231,141,226,139,246,103"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="255,225,335,251"/>
+<area shape="poly" title=" " alt="" coords="261,104,290,211,285,213,255,105"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="87,225,187,251"/>
+<area shape="poly" title=" " alt="" coords="228,106,195,126,165,154,150,183,143,212,138,211,145,181,161,150,192,121,226,102"/>
+<area shape="rect" title=" " alt="" coords="333,152,443,177"/>
+<area shape="poly" title=" " alt="" coords="277,102,355,143,353,148,275,106"/>
+<area shape="poly" title=" " alt="" coords="230,175,274,214,270,218,227,179"/>
+<area shape="poly" title=" " alt="" coords="205,179,162,218,158,214,202,175"/>
+<area shape="rect" title=" " alt="" coords="5,299,88,324"/>
+<area shape="poly" title=" " alt="" coords="256,253,101,297,99,292,254,248"/>
+<area shape="rect" title=" " alt="" coords="113,299,183,324"/>
+<area shape="poly" title=" " alt="" coords="272,253,185,295,183,290,270,248"/>
+<area shape="rect" title=" " alt="" coords="208,299,283,324"/>
+<area shape="poly" title=" " alt="" coords="289,253,263,289,259,286,284,249"/>
+<area shape="rect" title=" " alt="" coords="307,299,381,324"/>
+<area shape="poly" title=" " alt="" coords="305,249,330,286,326,289,301,253"/>
+<area shape="rect" title=" " alt="" coords="405,299,501,324"/>
+<area shape="poly" title=" " alt="" coords="321,248,416,291,414,295,319,253"/>
+<area shape="rect" title=" " alt="" coords="526,299,621,324"/>
+<area shape="poly" title=" " alt="" coords="336,247,516,293,515,298,335,252"/>
+<area shape="rect" title=" " alt="" coords="645,299,744,324"/>
+<area shape="poly" title=" " alt="" coords="335,244,632,296,631,301,334,249"/>
+<area shape="poly" title=" " alt="" coords="124,253,74,292,71,288,121,249"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="rtservice_8h__dep__incl.png" border="0" usemap="#ainclude_2rtservice_8hdep" alt=""/></div>
+<map name="ainclude_2rtservice_8hdep" id="ainclude_2rtservice_8hdep">
+<area shape="rect" title=" " alt="" coords="495,5,637,31"/>
+<area shape="rect" href="dfs__mnt_8h.html" title=" " alt="" coords="347,159,513,199"/>
+<area shape="poly" title=" " alt="" coords="549,43,448,161,444,157,545,39"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="5,262,156,302"/>
+<area shape="poly" title=" " alt="" coords="534,40,117,264,114,260,531,35"/>
+<area shape="rect" href="clk_8c.html" title=" " alt="" coords="537,159,688,199"/>
+<area shape="poly" title=" " alt="" coords="576,43,610,158,605,160,571,45"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="3120,79,3257,104"/>
+<area shape="poly" title=" " alt="" coords="651,19,3120,85,3120,91,651,24"/>
+<area shape="poly" title=" " alt="" coords="350,206,168,257,143,264,142,259,167,252,349,200"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="1116,262,1267,302"/>
+<area shape="poly" title=" " alt="" coords="506,200,525,204,677,225,797,231,917,235,1070,252,1116,260,1115,266,1070,257,917,241,797,236,677,230,524,209,505,205"/>
+<area shape="rect" href="dfs__file_8c.html" title=" " alt="" coords="529,262,680,302"/>
+<area shape="poly" title=" " alt="" coords="476,204,573,260,571,264,473,209"/>
+<area shape="rect" href="dfs__file__mmap_8c.html" title=" " alt="" coords="705,262,883,302"/>
+<area shape="poly" title=" " alt="" coords="512,200,726,259,725,264,510,205"/>
+<area shape="rect" href="dfs__fs_8c.html" title=" " alt="" coords="908,262,1059,302"/>
+<area shape="poly" title=" " alt="" coords="507,200,525,204,629,221,710,227,792,235,896,252,925,259,924,264,895,257,791,240,710,233,628,226,524,209,506,205"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="1571,262,1721,302"/>
+<area shape="poly" title=" " alt="" coords="504,200,525,204,676,224,804,233,918,235,1024,233,1130,230,1244,230,1373,236,1525,252,1571,260,1570,265,1524,257,1373,242,1244,235,1130,235,1024,238,918,240,804,238,675,229,524,209,503,205"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="1357,262,1513,302"/>
+<area shape="poly" title=" " alt="" coords="505,200,525,204,639,220,735,230,900,234,1066,236,1164,241,1278,252,1358,264,1357,269,1278,257,1163,247,1066,242,900,240,735,235,638,226,524,209,504,205"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="180,262,331,302"/>
+<area shape="poly" title=" " alt="" coords="387,209,289,264,287,260,384,204"/>
+<area shape="rect" href="dfs__vnode_8c.html" title=" " alt="" coords="355,262,505,302"/>
+<area shape="poly" title=" " alt="" coords="433,213,433,262,427,262,427,213"/>
+<area shape="poly" title=" " alt="" coords="3106,96,2562,101,1755,112,979,130,693,141,525,155,490,162,489,157,524,149,693,136,979,125,1755,107,2562,96,3106,91"/>
+<area shape="poly" title=" " alt="" coords="3106,97,2229,115,1770,133,1616,143,1542,154,1526,166,1516,180,1507,195,1490,209,1450,226,1393,242,1267,270,1266,264,1391,237,1448,221,1487,204,1503,191,1512,177,1522,162,1540,150,1615,138,1770,127,2229,110,3106,91"/>
+<area shape="poly" title=" " alt="" coords="3107,96,2807,101,2407,111,2037,128,1903,140,1825,155,1803,165,1787,177,1752,209,1674,264,1671,260,1748,205,1784,173,1800,161,1824,149,1903,135,2037,123,2407,105,2807,95,3106,91"/>
+<area shape="poly" title=" " alt="" coords="3106,96,2593,101,1841,112,1120,130,856,141,700,155,668,162,667,157,699,149,855,136,1120,124,1841,107,2593,96,3106,91"/>
+<area shape="rect" href="dfs__pcache_8h.html" title=" " alt="" coords="1553,159,1739,199"/>
+<area shape="poly" title=" " alt="" coords="3106,97,2432,114,2043,131,1881,142,1758,155,1718,162,1717,157,1758,149,1881,137,2043,126,2432,109,3106,91"/>
+<area shape="rect" href="clk-fixed-rate_8c.html" title=" " alt="" coords="5000,159,5151,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3620,93,4114,101,4615,119,4823,132,4981,149,5016,157,5015,162,4980,155,4823,138,4615,124,4114,106,3620,98,3271,95"/>
+<area shape="rect" href="adc_8h.html" title=" " alt="" coords="5175,159,5336,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3651,91,4199,98,4485,105,4755,116,4987,130,5162,149,5197,157,5196,162,5162,155,4987,136,4755,121,4485,111,4198,104,3651,96,3271,95"/>
+<area shape="rect" href="ahci_8h.html" title=" " alt="" coords="5361,159,5526,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3683,90,4284,96,4600,104,4898,114,5154,129,5348,149,5383,157,5382,162,5347,155,5154,135,4898,120,4600,109,4284,102,3683,95,3271,95"/>
+<area shape="rect" href="blk_8h.html" title=" " alt="" coords="1865,159,2024,199"/>
+<area shape="poly" title=" " alt="" coords="3107,97,2567,116,2264,133,2139,143,2044,155,2008,162,2007,157,2043,149,2138,138,2264,128,2567,111,3106,92"/>
+<area shape="rect" href="nvme_8h.html" title=" " alt="" coords="1749,262,1924,302"/>
+<area shape="poly" title=" " alt="" coords="3106,96,2797,101,2390,111,2028,128,1909,140,1872,147,1854,154,1839,178,1832,207,1832,236,1835,261,1830,262,1826,237,1827,206,1834,176,1851,150,1870,142,1908,135,2028,123,2390,105,2797,95,3106,91"/>
+<area shape="rect" href="numa_8h.html" title=" " alt="" coords="5809,152,5963,207"/>
+<area shape="poly" title=" " alt="" coords="3271,91,3806,96,4595,106,5354,124,5632,136,5797,149,5809,151,5808,157,5796,155,5632,141,5353,129,4595,112,3806,101,3271,96"/>
+<area shape="rect" href="power__domain_8h.html" title=" " alt="" coords="5987,152,6142,207"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3838,95,4684,105,5499,123,5799,135,5976,149,5987,151,5987,157,5975,155,5798,140,5499,128,4684,111,3838,100,3271,96"/>
+<area shape="rect" href="cputimer_8h.html" title=" " alt="" coords="6166,159,6361,199"/>
+<area shape="poly" title=" " alt="" coords="3271,91,4771,107,5643,125,5965,136,6154,149,6195,157,6194,162,6154,155,5964,142,5643,130,4771,113,3271,96"/>
+<area shape="rect" href="crypto_8h.html" title=" " alt="" coords="6385,159,6563,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3909,95,4880,105,5821,122,6168,135,6373,149,6411,157,6410,162,6372,155,6168,140,5821,128,4880,110,3909,100,3271,96"/>
+<area shape="rect" href="dac_8h.html" title=" " alt="" coords="712,159,873,199"/>
+<area shape="poly" title=" " alt="" coords="3106,96,1935,115,1273,132,1030,143,886,155,852,162,851,157,886,149,1029,137,1272,127,1935,109,3106,91"/>
+<area shape="rect" href="dev__can_8h.html" title=" " alt="" coords="898,159,1090,199"/>
+<area shape="poly" title=" " alt="" coords="3107,95,2708,97,2127,105,1536,123,1289,137,1102,155,1063,162,1062,157,1102,149,1288,132,1536,118,2127,100,2708,92,3107,90"/>
+<area shape="rect" href="dev__i2c_8h.html" title=" " alt="" coords="1115,159,1303,199"/>
+<area shape="poly" title=" " alt="" coords="3106,96,2743,99,2225,107,1699,125,1480,138,1314,155,1276,162,1275,157,1314,149,1479,133,1699,120,2225,102,2743,93,3106,90"/>
+<area shape="rect" href="dev__i2c__dm_8h.html" title=" " alt="" coords="1327,152,1477,207"/>
+<area shape="poly" title=" " alt="" coords="3107,96,2775,99,2310,108,1840,125,1645,138,1497,155,1478,158,1477,153,1496,149,1644,133,1840,120,2310,102,2775,93,3106,90"/>
+<area shape="rect" href="dev__mmc_8h.html" title=" " alt="" coords="1957,262,2159,302"/>
+<area shape="poly" title=" " alt="" coords="3106,95,2864,97,2556,105,2407,112,2277,123,2178,137,2145,145,2123,154,2099,177,2082,207,2070,237,2064,263,2059,261,2065,235,2077,204,2095,174,2121,150,2143,140,2177,131,2277,117,2407,107,2556,100,2864,92,3106,90"/>
+<area shape="rect" href="dev__mmcsd__core_8h.html" title=" " alt="" coords="2184,255,2335,309"/>
+<area shape="poly" title=" " alt="" coords="3106,97,2858,103,2544,115,2269,132,2180,142,2153,148,2140,154,2132,166,2130,178,2140,205,2163,232,2192,252,2189,257,2159,236,2136,208,2125,178,2127,164,2136,150,2151,143,2179,137,2269,126,2544,109,2858,98,3106,92"/>
+<area shape="rect" href="dev__pin_8h.html" title=" " alt="" coords="3467,159,3657,199"/>
+<area shape="poly" title=" " alt="" coords="3254,104,3455,149,3485,157,3484,162,3453,155,3253,110"/>
+<area shape="rect" href="dev__spi_8h.html" title=" " alt="" coords="3197,262,3385,302"/>
+<area shape="poly" title=" " alt="" coords="3200,116,3218,158,3242,205,3279,260,3274,263,3237,208,3213,161,3195,118"/>
+<area shape="rect" href="dev__touch_8h.html" title=" " alt="" coords="3552,255,3703,309"/>
+<area shape="poly" title=" " alt="" coords="3271,94,3509,114,3614,130,3650,139,3670,150,3678,163,3682,176,3679,204,3667,232,3651,256,3647,253,3662,229,3674,203,3677,176,3674,165,3667,154,3649,144,3613,135,3509,119,3271,100"/>
+<area shape="rect" href="dev__pwm_8h.html" title=" " alt="" coords="2349,159,2551,199"/>
+<area shape="poly" title=" " alt="" coords="3106,100,2862,118,2712,134,2562,155,2525,162,2524,157,2562,149,2712,128,2861,113,3106,94"/>
+<area shape="rect" href="dev__sd_8h.html" title=" " alt="" coords="2534,262,2718,302"/>
+<area shape="poly" title=" " alt="" coords="3169,116,3133,154,3113,184,3104,197,3087,209,3058,222,3020,233,2923,252,2816,266,2718,276,2718,271,2815,261,2922,247,3018,228,3056,217,3085,204,3100,193,3109,181,3129,150,3165,112"/>
+<area shape="rect" href="dev__sdio_8h.html" title=" " alt="" coords="2929,255,3080,309"/>
+<area shape="poly" title=" " alt="" coords="3183,118,3164,163,3150,187,3133,209,3101,236,3067,257,3064,252,3098,231,3129,205,3146,184,3160,160,3179,116"/>
+<area shape="rect" href="dev__serial_8h.html" title=" " alt="" coords="2575,152,2725,207"/>
+<area shape="poly" title=" " alt="" coords="3107,102,2936,121,2836,136,2737,155,2726,157,2725,152,2736,149,2835,131,2935,116,3106,97"/>
+<area shape="rect" href="dev__serial__v2_8h.html" title=" " alt="" coords="2749,152,2900,207"/>
+<area shape="poly" title=" " alt="" coords="3116,109,2912,155,2901,158,2900,152,2911,149,3115,104"/>
+<area shape="rect" href="dev__watchdog_8h.html" title=" " alt="" coords="2924,152,3075,207"/>
+<area shape="poly" title=" " alt="" coords="3152,112,3058,154,3056,150,3150,107"/>
+<area shape="rect" href="dma_8h.html" title=" " alt="" coords="4655,262,4821,302"/>
+<area shape="poly" title=" " alt="" coords="3271,91,3616,95,4080,104,4497,122,4636,134,4679,141,4702,150,4723,175,4735,205,4740,236,4741,262,4736,262,4735,236,4730,207,4718,177,4699,154,4678,147,4635,140,4497,127,4080,110,3616,100,3271,96"/>
+<area shape="rect" href="hwtimer_8h.html" title=" " alt="" coords="3252,159,3443,199"/>
+<area shape="poly" title=" " alt="" coords="3223,108,3314,157,3311,162,3221,113"/>
+<area shape="rect" href="lptimer_8h.html" title=" " alt="" coords="5601,159,5785,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3722,90,4391,97,4745,104,5078,115,5366,130,5582,149,5623,157,5622,162,5582,155,5365,135,5078,120,4745,110,4391,102,3722,96,3271,95"/>
+<area shape="rect" href="pm_8h.html" title=" " alt="" coords="5548,262,5707,302"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3782,92,4518,99,4883,107,5198,117,5428,131,5501,140,5539,150,5559,168,5581,198,5619,260,5615,263,5577,201,5555,172,5537,154,5500,145,5428,136,5198,122,4883,112,4518,105,3782,97,3271,95"/>
+<area shape="rect" href="mmcsd__host_8h.html" title=" " alt="" coords="2151,152,2325,207"/>
+<area shape="poly" title=" " alt="" coords="3106,96,2961,100,2769,109,2554,126,2337,155,2326,157,2325,151,2336,149,2553,121,2769,104,2960,94,3106,91"/>
+<area shape="rect" href="mtd__nand_8h.html" title=" " alt="" coords="3731,152,3883,207"/>
+<area shape="poly" title=" " alt="" coords="3271,95,3473,114,3593,129,3713,149,3732,153,3731,159,3712,155,3593,135,3472,119,3271,101"/>
+<area shape="rect" href="mtd__nor_8h.html" title=" " alt="" coords="3908,159,4099,199"/>
+<area shape="poly" title=" " alt="" coords="3272,93,3549,110,3722,126,3896,149,3933,157,3932,162,3895,155,3722,131,3549,115,3271,98"/>
+<area shape="rect" href="ofw_8h.html" title=" " alt="" coords="4765,159,4925,199"/>
+<area shape="poly" title=" " alt="" coords="3271,91,3579,95,4005,105,4433,122,4611,135,4746,149,4782,157,4781,162,4746,155,4611,140,4433,128,4005,110,3579,100,3271,96"/>
+<area shape="rect" href="drivers_2phye_8h.html" title=" " alt="" coords="4857,262,5027,302"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3666,90,4209,97,4473,104,4699,115,4862,130,4913,139,4938,150,4954,176,4959,207,4956,237,4951,262,4946,261,4951,236,4954,207,4949,178,4935,154,4911,144,4861,135,4699,120,4473,110,4209,102,3666,96,3271,95"/>
+<area shape="rect" href="phy_8h.html" title=" " alt="" coords="4123,159,4283,199"/>
+<area shape="poly" title=" " alt="" coords="3271,90,3427,92,3637,100,3873,118,3993,132,4110,149,4144,157,4142,162,4110,155,3992,137,3872,123,3636,105,3427,97,3271,95"/>
+<area shape="rect" href="pulse__encoder_8h.html" title=" " alt="" coords="4308,152,4469,207"/>
+<area shape="poly" title=" " alt="" coords="3271,92,3793,111,4083,128,4204,138,4296,149,4308,152,4307,157,4295,155,4204,143,4083,133,3792,116,3271,97"/>
+<area shape="rect" href="regulator_8h.html" title=" " alt="" coords="4493,159,4689,199"/>
+<area shape="poly" title=" " alt="" coords="3271,92,3880,110,4227,127,4371,138,4481,149,4521,157,4520,162,4480,155,4371,143,4227,133,3880,116,3271,97"/>
+<area shape="poly" title=" " alt="" coords="1649,213,1649,262,1643,262,1643,213"/>
+<area shape="poly" title=" " alt="" coords="1595,208,1476,264,1474,260,1593,203"/>
+<area shape="poly" title=" " alt="" coords="1916,211,1859,264,1855,260,1912,207"/>
+<area shape="poly" title=" " alt="" coords="3499,207,3343,264,3341,259,3497,202"/>
+<area shape="poly" title=" " alt="" coords="3584,209,3612,253,3608,256,3580,212"/>
+<area shape="poly" title=" " alt="" coords="5675,212,5642,263,5637,260,5671,209"/>
+<area shape="poly" title=" " alt="" coords="2180,216,2093,264,2091,259,2178,211"/>
+<area shape="poly" title=" " alt="" coords="2249,219,2256,254,2251,255,2244,221"/>
+<area shape="poly" title=" " alt="" coords="2340,205,2553,259,2552,265,2338,210"/>
+<area shape="poly" title=" " alt="" coords="2339,204,2467,222,2630,241,2929,271,2929,276,2629,246,2466,228,2339,209"/>
+<area shape="poly" title=" " alt="" coords="4816,211,4760,264,4756,260,4813,207"/>
+<area shape="poly" title=" " alt="" coords="4875,208,4926,260,4922,264,4871,211"/>
+</map>
+</div>
+</div>
+<p><a href="rtservice_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaff9df70e97252587b08e02b53549cadf" id="r_gaff9df70e97252587b08e02b53549cadf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaff9df70e97252587b08e02b53549cadf">rt_container_of</a>(ptr,  type,  member)&#160;&#160;&#160;    ((type *)((char *)(ptr) - (unsigned long)(&amp;((type *)0)-&gt;member)))</td></tr>
+<tr class="separator:gaff9df70e97252587b08e02b53549cadf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4cc6d94199b8cd5c2b90dc398a44f654" id="r_ga4cc6d94199b8cd5c2b90dc398a44f654"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga4cc6d94199b8cd5c2b90dc398a44f654">RT_LIST_OBJECT_INIT</a>(object)&#160;&#160;&#160;{ &amp;(object), &amp;(object) }</td></tr>
+<tr class="memdesc:ga4cc6d94199b8cd5c2b90dc398a44f654"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a list object  <br /></td></tr>
+<tr class="separator:ga4cc6d94199b8cd5c2b90dc398a44f654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52568d5666fbf7f7f5d0b96149d5ebd1" id="r_ga52568d5666fbf7f7f5d0b96149d5ebd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga52568d5666fbf7f7f5d0b96149d5ebd1">rt_list_entry</a>(node,  type,  member)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#gaff9df70e97252587b08e02b53549cadf">rt_container_of</a>(node, type, member)</td></tr>
+<tr class="memdesc:ga52568d5666fbf7f7f5d0b96149d5ebd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the struct for this entry  <br /></td></tr>
+<tr class="separator:ga52568d5666fbf7f7f5d0b96149d5ebd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ab8ba0c731fbda9ea8f46dd1b4d8bcb" id="r_ga0ab8ba0c731fbda9ea8f46dd1b4d8bcb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga0ab8ba0c731fbda9ea8f46dd1b4d8bcb">rt_list_for_each</a>(pos,  head)&#160;&#160;&#160;    for (pos = (head)-&gt;next; pos != (head); pos = pos-&gt;next)</td></tr>
+<tr class="separator:ga0ab8ba0c731fbda9ea8f46dd1b4d8bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d7db0f15a4af9e51928d87ae72a0f6f" id="r_ga5d7db0f15a4af9e51928d87ae72a0f6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga5d7db0f15a4af9e51928d87ae72a0f6f">rt_list_for_each_safe</a>(pos,  n,  head)</td></tr>
+<tr class="separator:ga5d7db0f15a4af9e51928d87ae72a0f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4234544ef8a8375d0d10791d9fa5dc4" id="r_gaa4234544ef8a8375d0d10791d9fa5dc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaa4234544ef8a8375d0d10791d9fa5dc4">rt_list_for_each_entry</a>(pos,  head,  member)</td></tr>
+<tr class="separator:gaa4234544ef8a8375d0d10791d9fa5dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadbad60e0073fd449b74371acf4d03e6b" id="r_gadbad60e0073fd449b74371acf4d03e6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gadbad60e0073fd449b74371acf4d03e6b">rt_list_for_each_entry_safe</a>(pos,  n,  head,  member)</td></tr>
+<tr class="separator:gadbad60e0073fd449b74371acf4d03e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52bdf2acff151d0e73c603b704dcdf6d" id="r_ga52bdf2acff151d0e73c603b704dcdf6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga52bdf2acff151d0e73c603b704dcdf6d">rt_list_first_entry</a>(ptr,  type,  member)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#ga52568d5666fbf7f7f5d0b96149d5ebd1">rt_list_entry</a>((ptr)-&gt;next, type, member)</td></tr>
+<tr class="separator:ga52bdf2acff151d0e73c603b704dcdf6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fe543680ad8206918cf0deede51f8bc" id="r_ga3fe543680ad8206918cf0deede51f8bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga3fe543680ad8206918cf0deede51f8bc">RT_SLIST_OBJECT_INIT</a>(object)&#160;&#160;&#160;{ <a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a> }</td></tr>
+<tr class="separator:ga3fe543680ad8206918cf0deede51f8bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8388bfc9039b65b59378adb640d2bbb8" id="r_ga8388bfc9039b65b59378adb640d2bbb8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga8388bfc9039b65b59378adb640d2bbb8">rt_slist_entry</a>(node,  type,  member)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#gaff9df70e97252587b08e02b53549cadf">rt_container_of</a>(node, type, member)</td></tr>
+<tr class="memdesc:ga8388bfc9039b65b59378adb640d2bbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the struct for this single list node  <br /></td></tr>
+<tr class="separator:ga8388bfc9039b65b59378adb640d2bbb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4192e74f3d24b5883a2999b395ae8609" id="r_ga4192e74f3d24b5883a2999b395ae8609"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga4192e74f3d24b5883a2999b395ae8609">rt_slist_for_each</a>(pos,  head)&#160;&#160;&#160;    for (pos = (head)-&gt;next; pos != <a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>; pos = pos-&gt;next)</td></tr>
+<tr class="separator:ga4192e74f3d24b5883a2999b395ae8609"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe9005513eb61a43a272b38ebd033d63" id="r_gabe9005513eb61a43a272b38ebd033d63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gabe9005513eb61a43a272b38ebd033d63">rt_slist_for_each_entry</a>(pos,  head,  member)</td></tr>
+<tr class="separator:gabe9005513eb61a43a272b38ebd033d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32eb29b1f9872bd3584952cb62f48a7c" id="r_ga32eb29b1f9872bd3584952cb62f48a7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga32eb29b1f9872bd3584952cb62f48a7c">rt_slist_first_entry</a>(ptr,  type,  member)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#ga8388bfc9039b65b59378adb640d2bbb8">rt_slist_entry</a>((ptr)-&gt;next, type, member)</td></tr>
+<tr class="separator:ga32eb29b1f9872bd3584952cb62f48a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26eca6eeceb3adb9ed0254eb2398f534" id="r_ga26eca6eeceb3adb9ed0254eb2398f534"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga26eca6eeceb3adb9ed0254eb2398f534">rt_slist_tail_entry</a>(ptr,  type,  member)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#ga8388bfc9039b65b59378adb640d2bbb8">rt_slist_entry</a>(<a class="el" href="group__group___kernel_service.html#ga29e5af137780afcc68ee755837a04ff6">rt_slist_tail</a>(ptr), type, member)</td></tr>
+<tr class="separator:ga26eca6eeceb3adb9ed0254eb2398f534"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga7103f52aa8c7402c9e87f03942d8bc9f" id="r_ga7103f52aa8c7402c9e87f03942d8bc9f"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga7103f52aa8c7402c9e87f03942d8bc9f">rt_list_init</a> (<a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *l)</td></tr>
+<tr class="memdesc:ga7103f52aa8c7402c9e87f03942d8bc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a list  <br /></td></tr>
+<tr class="separator:ga7103f52aa8c7402c9e87f03942d8bc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d57c901bb0ee4e1b9ed92a5a196cc39" id="r_ga7d57c901bb0ee4e1b9ed92a5a196cc39"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga7d57c901bb0ee4e1b9ed92a5a196cc39">rt_list_insert_after</a> (<a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *l, <a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *n)</td></tr>
+<tr class="memdesc:ga7d57c901bb0ee4e1b9ed92a5a196cc39"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a node after a list  <br /></td></tr>
+<tr class="separator:ga7d57c901bb0ee4e1b9ed92a5a196cc39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31047c521c265353f8372043fb6ff5ef" id="r_ga31047c521c265353f8372043fb6ff5ef"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga31047c521c265353f8372043fb6ff5ef">rt_list_insert_before</a> (<a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *l, <a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *n)</td></tr>
+<tr class="memdesc:ga31047c521c265353f8372043fb6ff5ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">insert a node before a list  <br /></td></tr>
+<tr class="separator:ga31047c521c265353f8372043fb6ff5ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0525e5898dd57464613551b887256c28" id="r_ga0525e5898dd57464613551b887256c28"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga0525e5898dd57464613551b887256c28">rt_list_remove</a> (<a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *n)</td></tr>
+<tr class="memdesc:ga0525e5898dd57464613551b887256c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove node from list.  <br /></td></tr>
+<tr class="separator:ga0525e5898dd57464613551b887256c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b25b69a89568b7f2bf6ed5e9e70da74" id="r_ga2b25b69a89568b7f2bf6ed5e9e70da74"><td class="memItemLeft" align="right" valign="top">rt_inline int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga2b25b69a89568b7f2bf6ed5e9e70da74">rt_list_isempty</a> (const <a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *l)</td></tr>
+<tr class="memdesc:ga2b25b69a89568b7f2bf6ed5e9e70da74"><td class="mdescLeft">&#160;</td><td class="mdescRight">tests whether a list is empty  <br /></td></tr>
+<tr class="separator:ga2b25b69a89568b7f2bf6ed5e9e70da74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeffe8ba587aebd47af354bce96959236" id="r_gaeffe8ba587aebd47af354bce96959236"><td class="memItemLeft" align="right" valign="top">rt_inline unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gaeffe8ba587aebd47af354bce96959236">rt_list_len</a> (const <a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *l)</td></tr>
+<tr class="memdesc:gaeffe8ba587aebd47af354bce96959236"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the list length  <br /></td></tr>
+<tr class="separator:gaeffe8ba587aebd47af354bce96959236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0efaa6a7aa794800ffe9524020f03f5f" id="r_ga0efaa6a7aa794800ffe9524020f03f5f"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga0efaa6a7aa794800ffe9524020f03f5f">rt_slist_init</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="memdesc:ga0efaa6a7aa794800ffe9524020f03f5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize a single list  <br /></td></tr>
+<tr class="separator:ga0efaa6a7aa794800ffe9524020f03f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb8e810867bb7ae805bd408f0e984426" id="r_gadb8e810867bb7ae805bd408f0e984426"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gadb8e810867bb7ae805bd408f0e984426">rt_slist_append</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l, <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *n)</td></tr>
+<tr class="separator:gadb8e810867bb7ae805bd408f0e984426"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0dcb52f45a21a13ccba01e69e15dae43" id="r_ga0dcb52f45a21a13ccba01e69e15dae43"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga0dcb52f45a21a13ccba01e69e15dae43">rt_slist_insert</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l, <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *n)</td></tr>
+<tr class="separator:ga0dcb52f45a21a13ccba01e69e15dae43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c98989f687835054c7044cbe6f89c20" id="r_ga6c98989f687835054c7044cbe6f89c20"><td class="memItemLeft" align="right" valign="top">rt_inline unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga6c98989f687835054c7044cbe6f89c20">rt_slist_len</a> (const <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="separator:ga6c98989f687835054c7044cbe6f89c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5339f18bb9f82c50c8145c48bb5af901" id="r_ga5339f18bb9f82c50c8145c48bb5af901"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga5339f18bb9f82c50c8145c48bb5af901">rt_slist_pop</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="separator:ga5339f18bb9f82c50c8145c48bb5af901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9dabf54c3bc63b766f72532a5af2f3bb" id="r_ga9dabf54c3bc63b766f72532a5af2f3bb"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga9dabf54c3bc63b766f72532a5af2f3bb">rt_slist_remove</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l, <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *n)</td></tr>
+<tr class="separator:ga9dabf54c3bc63b766f72532a5af2f3bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a4e0adfe71c18b4899215c8589e63f5" id="r_ga2a4e0adfe71c18b4899215c8589e63f5"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga2a4e0adfe71c18b4899215c8589e63f5">rt_slist_first</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="separator:ga2a4e0adfe71c18b4899215c8589e63f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29e5af137780afcc68ee755837a04ff6" id="r_ga29e5af137780afcc68ee755837a04ff6"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga29e5af137780afcc68ee755837a04ff6">rt_slist_tail</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="separator:ga29e5af137780afcc68ee755837a04ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81cf5fa6a2eca42593620f854bdd83bd" id="r_ga81cf5fa6a2eca42593620f854bdd83bd"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga81cf5fa6a2eca42593620f854bdd83bd">rt_slist_next</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *n)</td></tr>
+<tr class="separator:ga81cf5fa6a2eca42593620f854bdd83bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad25f026c11b3e1ff4d3954840c209b2e" id="r_gad25f026c11b3e1ff4d3954840c209b2e"><td class="memItemLeft" align="right" valign="top">rt_inline int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gad25f026c11b3e1ff4d3954840c209b2e">rt_slist_isempty</a> (<a class="el" href="rttypes_8h.html#af1dfcf30fd6cf658b0cc48dbf0d063da">rt_slist_t</a> *l)</td></tr>
+<tr class="separator:gad25f026c11b3e1ff4d3954840c209b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="rtservice_8h.html">rtservice.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

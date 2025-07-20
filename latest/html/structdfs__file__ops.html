@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: dfs_file_ops Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structdfs__file__ops.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">dfs_file_ops Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="dfs__file_8h_source.html">dfs_file.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:aa66691ebcd972014563ea4071587d34c" id="r_aa66691ebcd972014563ea4071587d34c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#aa66691ebcd972014563ea4071587d34c">open</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td></tr>
+<tr class="separator:aa66691ebcd972014563ea4071587d34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab355cff329dc4a512f90abb0376eb6f2" id="r_ab355cff329dc4a512f90abb0376eb6f2"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#ab355cff329dc4a512f90abb0376eb6f2">close</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td></tr>
+<tr class="separator:ab355cff329dc4a512f90abb0376eb6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94bf780c5aeffd2f48f787bd7bc65e96" id="r_a94bf780c5aeffd2f48f787bd7bc65e96"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a94bf780c5aeffd2f48f787bd7bc65e96">ioctl</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, int cmd, void *arg)</td></tr>
+<tr class="separator:a94bf780c5aeffd2f48f787bd7bc65e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f65f998f17528e432b75835210fc09" id="r_a78f65f998f17528e432b75835210fc09"><td class="memItemLeft" align="right" valign="top">ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a78f65f998f17528e432b75835210fc09">read</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, void *buf, size_t count, off_t *pos)</td></tr>
+<tr class="separator:a78f65f998f17528e432b75835210fc09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecbaa2fa66030a7d64c09995ae9fce7" id="r_a3ecbaa2fa66030a7d64c09995ae9fce7"><td class="memItemLeft" align="right" valign="top">ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a3ecbaa2fa66030a7d64c09995ae9fce7">write</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, const void *buf, size_t count, off_t *pos)</td></tr>
+<tr class="separator:a3ecbaa2fa66030a7d64c09995ae9fce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6110c4f5a83340f1c22627060ccc2e8c" id="r_a6110c4f5a83340f1c22627060ccc2e8c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a6110c4f5a83340f1c22627060ccc2e8c">flush</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td></tr>
+<tr class="separator:a6110c4f5a83340f1c22627060ccc2e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609185eadf06b52f40d0ecf3ad808f21" id="r_a609185eadf06b52f40d0ecf3ad808f21"><td class="memItemLeft" align="right" valign="top">off_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a609185eadf06b52f40d0ecf3ad808f21">lseek</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, off_t offset, int wherece)</td></tr>
+<tr class="separator:a609185eadf06b52f40d0ecf3ad808f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08190160f187e6b6cf541329de124ef5" id="r_a08190160f187e6b6cf541329de124ef5"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a08190160f187e6b6cf541329de124ef5">truncate</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, off_t offset)</td></tr>
+<tr class="separator:a08190160f187e6b6cf541329de124ef5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01a5759c2a097d18dd96dc3c8899bcc" id="r_ad01a5759c2a097d18dd96dc3c8899bcc"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#ad01a5759c2a097d18dd96dc3c8899bcc">getdents</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct dirent *dirp, uint32_t count)</td></tr>
+<tr class="separator:ad01a5759c2a097d18dd96dc3c8899bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe2a5eac4650c6c9435cdf19d34d40c" id="r_abfe2a5eac4650c6c9435cdf19d34d40c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#abfe2a5eac4650c6c9435cdf19d34d40c">poll</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct <a class="el" href="structrt__pollreq.html">rt_pollreq</a> *req)</td></tr>
+<tr class="separator:abfe2a5eac4650c6c9435cdf19d34d40c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54349e58f32e0fd8736cb6c0135fb530" id="r_a54349e58f32e0fd8736cb6c0135fb530"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a54349e58f32e0fd8736cb6c0135fb530">mmap</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct lwp_avl_struct *mmap)</td></tr>
+<tr class="separator:a54349e58f32e0fd8736cb6c0135fb530"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9347e3a6ce67ad39d8c79cac205132c" id="r_ae9347e3a6ce67ad39d8c79cac205132c"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#ae9347e3a6ce67ad39d8c79cac205132c">lock</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct file_lock *<a class="el" href="structdfs__file__ops.html#a190c8f982c98b91b5abe9dd426221014">flock</a>)</td></tr>
+<tr class="separator:ae9347e3a6ce67ad39d8c79cac205132c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190c8f982c98b91b5abe9dd426221014" id="r_a190c8f982c98b91b5abe9dd426221014"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__file__ops.html#a190c8f982c98b91b5abe9dd426221014">flock</a> )(struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, int, struct file_lock *flock)</td></tr>
+<tr class="separator:a190c8f982c98b91b5abe9dd426221014"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ab355cff329dc4a512f90abb0376eb6f2" name="ab355cff329dc4a512f90abb0376eb6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab355cff329dc4a512f90abb0376eb6f2">&#9670;&#160;</a></span>close</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::close) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190c8f982c98b91b5abe9dd426221014" name="a190c8f982c98b91b5abe9dd426221014"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190c8f982c98b91b5abe9dd426221014">&#9670;&#160;</a></span>flock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::flock) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, int, struct file_lock *flock)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6110c4f5a83340f1c22627060ccc2e8c" name="a6110c4f5a83340f1c22627060ccc2e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6110c4f5a83340f1c22627060ccc2e8c">&#9670;&#160;</a></span>flush</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::flush) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad01a5759c2a097d18dd96dc3c8899bcc" name="ad01a5759c2a097d18dd96dc3c8899bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01a5759c2a097d18dd96dc3c8899bcc">&#9670;&#160;</a></span>getdents</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::getdents) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct dirent *dirp, uint32_t count)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94bf780c5aeffd2f48f787bd7bc65e96" name="a94bf780c5aeffd2f48f787bd7bc65e96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94bf780c5aeffd2f48f787bd7bc65e96">&#9670;&#160;</a></span>ioctl</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::ioctl) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, int cmd, void *arg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9347e3a6ce67ad39d8c79cac205132c" name="ae9347e3a6ce67ad39d8c79cac205132c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9347e3a6ce67ad39d8c79cac205132c">&#9670;&#160;</a></span>lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::lock) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct file_lock *<a class="el" href="structdfs__file__ops.html#a190c8f982c98b91b5abe9dd426221014">flock</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a609185eadf06b52f40d0ecf3ad808f21" name="a609185eadf06b52f40d0ecf3ad808f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609185eadf06b52f40d0ecf3ad808f21">&#9670;&#160;</a></span>lseek</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">off_t(* dfs_file_ops::lseek) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, off_t offset, int wherece)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54349e58f32e0fd8736cb6c0135fb530" name="a54349e58f32e0fd8736cb6c0135fb530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54349e58f32e0fd8736cb6c0135fb530">&#9670;&#160;</a></span>mmap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::mmap) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct lwp_avl_struct *mmap)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa66691ebcd972014563ea4071587d34c" name="aa66691ebcd972014563ea4071587d34c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa66691ebcd972014563ea4071587d34c">&#9670;&#160;</a></span>open</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::open) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abfe2a5eac4650c6c9435cdf19d34d40c" name="abfe2a5eac4650c6c9435cdf19d34d40c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe2a5eac4650c6c9435cdf19d34d40c">&#9670;&#160;</a></span>poll</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::poll) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct <a class="el" href="structrt__pollreq.html">rt_pollreq</a> *req)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78f65f998f17528e432b75835210fc09" name="a78f65f998f17528e432b75835210fc09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f65f998f17528e432b75835210fc09">&#9670;&#160;</a></span>read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t(* dfs_file_ops::read) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, void *buf, size_t count, off_t *pos)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08190160f187e6b6cf541329de124ef5" name="a08190160f187e6b6cf541329de124ef5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08190160f187e6b6cf541329de124ef5">&#9670;&#160;</a></span>truncate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* dfs_file_ops::truncate) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, off_t offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ecbaa2fa66030a7d64c09995ae9fce7" name="a3ecbaa2fa66030a7d64c09995ae9fce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecbaa2fa66030a7d64c09995ae9fce7">&#9670;&#160;</a></span>write</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t(* dfs_file_ops::write) (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, const void *buf, size_t count, off_t *pos)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/dfs/dfs_v2/include/<a class="el" href="dfs__file_8h_source.html">dfs_file.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structdfs__file__ops.html">dfs_file_ops</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

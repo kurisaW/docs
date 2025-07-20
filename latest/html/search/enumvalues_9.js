@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['uio_5frequest_5fread_5fbest_0',['UIO_REQUEST_READ_BEST',['../usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2faa341a8f1f4e765267045bb30a4a961ed',1,'usb_device.h']]],
+  ['uio_5frequest_5fread_5ffull_1',['UIO_REQUEST_READ_FULL',['../usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2fa0a3d091cfe59d66d7c35ec6cdc744048',1,'usb_device.h']]],
+  ['uio_5frequest_5fwrite_2',['UIO_REQUEST_WRITE',['../usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2fa8cbe5ad9f3e5234464be6854c6dc9503',1,'usb_device.h']]],
+  ['unknown_5fpulse_5fencoder_5ftype_3',['UNKNOWN_PULSE_ENCODER_TYPE',['../pulse__encoder_8h.html#aa584bf812eda0999ff91aeb6b2eafc38aca5c4405f9148e7ccb13ff9a60a5c9e4',1,'pulse_encoder.h']]],
+  ['usb_5fmsg_5fcallback_4',['USB_MSG_CALLBACK',['../usb__host_8h.html#a3cae6957cb22866cf3917485c49bd529a41190cc1256e68c622bdecdca898c2bc',1,'usb_host.h']]],
+  ['usb_5fmsg_5fconnect_5fchange_5',['USB_MSG_CONNECT_CHANGE',['../usb__host_8h.html#a3cae6957cb22866cf3917485c49bd529a1df69c4f44400cb358585dea08a90702',1,'usb_host.h']]],
+  ['usb_5fmsg_5fdata_5fnotify_6',['USB_MSG_DATA_NOTIFY',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da959037b23baccef6850e47af252cd703',1,'usb_device.h']]],
+  ['usb_5fmsg_5fep0_5fout_7',['USB_MSG_EP0_OUT',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7dacab85e42ec6858d00b52ad5dec0c1ac4',1,'usb_device.h']]],
+  ['usb_5fmsg_5fep_5fclear_5ffeature_8',['USB_MSG_EP_CLEAR_FEATURE',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7dabdaeba566d0b353c33384d2316d382c0',1,'usb_device.h']]],
+  ['usb_5fmsg_5fplug_5fin_9',['USB_MSG_PLUG_IN',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da6a6a86543fd3b6d3717eba918d27c54c',1,'usb_device.h']]],
+  ['usb_5fmsg_5fplug_5fout_10',['USB_MSG_PLUG_OUT',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da1796f1e73c9117c8633f35603e94968a',1,'usb_device.h']]],
+  ['usb_5fmsg_5freset_11',['USB_MSG_RESET',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da1c804c2132a34ff6444aa113ae953c35',1,'usb_device.h']]],
+  ['usb_5fmsg_5fsetup_5fnotify_12',['USB_MSG_SETUP_NOTIFY',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7daf2feb52e76e626a639f3809b9bff6ae8',1,'usb_device.h']]],
+  ['usb_5fmsg_5fsof_13',['USB_MSG_SOF',['../usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da072176a68482368c2303acec68d245f7',1,'usb_device.h']]],
+  ['usb_5fstate_5faddress_14',['USB_STATE_ADDRESS',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467a5d31ab5318c171fbd8ac973ae8d7ef96',1,'usb_common.h']]],
+  ['usb_5fstate_5fattached_15',['USB_STATE_ATTACHED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467ab4c4f1184ed4e5f31fcba4f2283f0359',1,'usb_common.h']]],
+  ['usb_5fstate_5fconfigured_16',['USB_STATE_CONFIGURED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467a6566e87fb6d54f2da5b7564743df7a47',1,'usb_common.h']]],
+  ['usb_5fstate_5fdefault_17',['USB_STATE_DEFAULT',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467abb0f4a1c2f62f028bec1d0b55b5d5554',1,'usb_common.h']]],
+  ['usb_5fstate_5fnotattached_18',['USB_STATE_NOTATTACHED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467a318cc3c9c54aaddbdd9e71f59f9a338b',1,'usb_common.h']]],
+  ['usb_5fstate_5fpowered_19',['USB_STATE_POWERED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467a25b72bb35524040c703e9474ad03cf38',1,'usb_common.h']]],
+  ['usb_5fstate_5freconnecting_20',['USB_STATE_RECONNECTING',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467af3af9ddf278683fa0c1b0e62189bffce',1,'usb_common.h']]],
+  ['usb_5fstate_5fsuspended_21',['USB_STATE_SUSPENDED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467a64dad39ce2fa9e96d554703f6a65f7ab',1,'usb_common.h']]],
+  ['usb_5fstate_5funauthenticated_22',['USB_STATE_UNAUTHENTICATED',['../usb__common_8h.html#ab1b0e5bef70d27ab2b3c1e8860315467ad2200989f28754c5f3bb5bc2293832b0',1,'usb_common.h']]]
+];

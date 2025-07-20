@@ -1,0 +1,2252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/dev_sdio.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dev__sdio_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dev_sdio.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mmcsd__host_8h_source.html">drivers/mmcsd_host.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="mmcsd__card_8h_source.html">drivers/mmcsd_card.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="sdio__func__ids_8h_source.html">drivers/sdio_func_ids.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dev_sdio.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dev__sdio_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2dev__sdio_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2dev__sdio_8h" id="acomponents_2drivers_2include_2drivers_2dev__sdio_8h">
+<area shape="rect" title=" " alt="" coords="273,5,423,60"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="254,255,341,280"/>
+<area shape="poly" title=" " alt="" coords="329,62,295,115,279,148,267,182,265,197,268,213,282,242,277,244,263,215,260,198,261,181,274,146,290,113,325,59"/>
+<area shape="rect" href="mmcsd__host_8h.html" title=" " alt="" coords="275,181,442,207"/>
+<area shape="poly" title=" " alt="" coords="332,61,317,96,315,114,317,133,327,152,340,170,335,173,322,155,312,134,309,114,312,94,327,59"/>
+<area shape="rect" href="mmcsd__card_8h.html" title=" " alt="" coords="326,108,493,133"/>
+<area shape="poly" title=" " alt="" coords="369,59,395,95,391,98,365,62"/>
+<area shape="rect" href="sdio__func__ids_8h.html" title=" " alt="" coords="517,108,688,133"/>
+<area shape="poly" title=" " alt="" coords="424,57,557,101,555,106,423,62"/>
+<area shape="rect" title=" " alt="" coords="53,695,136,720"/>
+<area shape="poly" title=" " alt="" coords="254,273,181,283,140,292,100,305,64,324,35,347,15,376,8,413,8,562,14,598,31,631,52,660,73,683,69,687,48,664,26,634,9,600,3,562,3,412,10,374,31,343,61,319,98,301,139,287,180,278,253,268"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,475,480,500"/>
+<area shape="poly" title=" " alt="" coords="341,265,380,269,422,278,463,297,480,310,496,326,504,343,508,362,502,400,487,435,468,465,463,462,482,433,497,398,503,362,499,345,491,330,477,314,460,301,420,284,379,274,341,271"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="556,401,647,427"/>
+<area shape="poly" title=" " alt="" coords="341,268,385,273,436,283,489,300,539,326,570,355,591,387,587,390,566,359,536,330,487,305,435,289,384,279,340,273"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="221,328,278,353"/>
+<area shape="poly" title=" " alt="" coords="285,282,259,318,254,314,280,279"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="302,328,391,353"/>
+<area shape="poly" title=" " alt="" coords="308,279,333,315,329,318,303,282"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="152,401,227,427"/>
+<area shape="poly" title=" " alt="" coords="271,282,239,302,210,330,198,359,193,388,187,387,192,357,206,326,235,297,268,278"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="415,328,481,353"/>
+<area shape="poly" title=" " alt="" coords="323,278,412,320,410,324,320,282"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,548,489,573"/>
+<area shape="poly" title=" " alt="" coords="451,500,451,534,445,534,445,500"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,621,505,647"/>
+<area shape="poly" title=" " alt="" coords="465,498,487,519,504,547,507,565,503,582,487,612,482,610,498,580,501,564,499,549,482,523,462,502"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,621,402,647"/>
+<area shape="poly" title=" " alt="" coords="438,502,397,550,364,610,360,607,392,546,434,498"/>
+<area shape="rect" title=" " alt="" coords="221,548,331,573"/>
+<area shape="poly" title=" " alt="" coords="421,502,318,545,316,540,419,498"/>
+<area shape="poly" title=" " alt="" coords="453,573,462,608,457,609,448,574"/>
+<area shape="poly" title=" " alt="" coords="434,576,380,615,377,611,431,571"/>
+<area shape="poly" title=" " alt="" coords="426,647,415,649,150,699,149,694,414,644,424,642"/>
+<area shape="rect" title=" " alt="" coords="761,695,831,720"/>
+<area shape="poly" title=" " alt="" coords="506,641,748,692,747,697,505,646"/>
+<area shape="rect" title=" " alt="" coords="200,695,275,720"/>
+<area shape="poly" title=" " alt="" coords="429,649,288,693,287,688,428,644"/>
+<area shape="rect" title=" " alt="" coords="299,695,373,720"/>
+<area shape="poly" title=" " alt="" coords="446,649,371,690,368,685,443,644"/>
+<area shape="rect" title=" " alt="" coords="397,695,493,720"/>
+<area shape="poly" title=" " alt="" coords="465,648,455,682,450,681,459,646"/>
+<area shape="rect" title=" " alt="" coords="518,695,613,720"/>
+<area shape="poly" title=" " alt="" coords="483,645,539,684,536,689,480,649"/>
+<area shape="rect" title=" " alt="" coords="637,695,736,720"/>
+<area shape="poly" title=" " alt="" coords="502,644,639,688,637,693,500,649"/>
+<area shape="poly" title=" " alt="" coords="311,649,150,694,149,688,310,644"/>
+<area shape="poly" title=" " alt="" coords="578,429,486,471,484,466,576,424"/>
+<area shape="poly" title=" " alt="" coords="262,326,288,291,292,294,266,329"/>
+<area shape="poly" title=" " alt="" coords="259,352,286,387,324,425,364,449,404,468,402,472,361,454,321,429,282,391,255,355"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="334,401,397,427"/>
+<area shape="poly" title=" " alt="" coords="352,353,361,388,356,389,347,354"/>
+<area shape="poly" title=" " alt="" coords="380,425,426,463,422,468,377,429"/>
+<area shape="poly" title=" " alt="" coords="153,428,114,446,97,459,84,476,72,502,66,529,65,586,75,639,88,681,82,683,70,641,60,587,60,528,67,500,79,473,93,455,112,441,151,423"/>
+<area shape="poly" title=" " alt="" coords="228,423,403,471,402,476,226,428"/>
+<area shape="poly" title=" " alt="" coords="228,421,302,443,335,457,356,473,361,493,352,513,335,529,314,543,311,539,331,525,348,510,356,493,351,476,332,462,300,448,226,426"/>
+<area shape="rect" title=" " alt="" coords="93,475,208,500"/>
+<area shape="poly" title=" " alt="" coords="185,428,166,464,161,461,181,426"/>
+<area shape="rect" title=" " alt="" coords="232,475,341,500"/>
+<area shape="poly" title=" " alt="" coords="207,425,261,464,258,468,203,429"/>
+<area shape="poly" title=" " alt="" coords="451,354,451,461,445,461,445,354"/>
+<area shape="poly" title=" " alt="" coords="351,209,318,246,314,242,347,205"/>
+<area shape="poly" title=" " alt="" coords="403,135,377,172,373,169,399,132"/>
+</map>
+</div>
+</div>
+<p><a href="dev__sdio_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sdio__device__id.html">rt_sdio_device_id</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sdio__driver.html">rt_sdio_driver</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ad6b90a5fd09894cdb37ba6c6eeb3ad79" id="r_ad6b90a5fd09894cdb37ba6c6eeb3ad79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ad6b90a5fd09894cdb37ba6c6eeb3ad79">SDIO_REG_CCCR_CCCR_REV</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ad6b90a5fd09894cdb37ba6c6eeb3ad79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3faddf01289d928d2cb951cc199818c" id="r_ab3faddf01289d928d2cb951cc199818c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab3faddf01289d928d2cb951cc199818c">SDIO_CCCR_REV_1_00</a>&#160;&#160;&#160;0   /* CCCR/FBR Version 1.00 */</td></tr>
+<tr class="separator:ab3faddf01289d928d2cb951cc199818c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1bf496f2434d4490fca734d577523c2" id="r_ab1bf496f2434d4490fca734d577523c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab1bf496f2434d4490fca734d577523c2">SDIO_CCCR_REV_1_10</a>&#160;&#160;&#160;1   /* CCCR/FBR Version 1.10 */</td></tr>
+<tr class="separator:ab1bf496f2434d4490fca734d577523c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a412d390d48257650d97be0e3da25c300" id="r_a412d390d48257650d97be0e3da25c300"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a412d390d48257650d97be0e3da25c300">SDIO_CCCR_REV_1_20</a>&#160;&#160;&#160;2   /* CCCR/FBR Version 1.20 */</td></tr>
+<tr class="separator:a412d390d48257650d97be0e3da25c300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36734ecf50583393f4da3ab4bef812ab" id="r_a36734ecf50583393f4da3ab4bef812ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a36734ecf50583393f4da3ab4bef812ab">SDIO_CCCR_REV_3_00</a>&#160;&#160;&#160;3   /* CCCR/FBR Version 2.00 */</td></tr>
+<tr class="separator:a36734ecf50583393f4da3ab4bef812ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affb7f82544dca023112246ef11a8c069" id="r_affb7f82544dca023112246ef11a8c069"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#affb7f82544dca023112246ef11a8c069">SDIO_SDIO_REV_1_00</a>&#160;&#160;&#160;0   /* SDIO Spec Version 1.00 */</td></tr>
+<tr class="separator:affb7f82544dca023112246ef11a8c069"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a8890129d6cd00eb1fbb9e386542e40" id="r_a6a8890129d6cd00eb1fbb9e386542e40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a6a8890129d6cd00eb1fbb9e386542e40">SDIO_SDIO_REV_1_10</a>&#160;&#160;&#160;1   /* SDIO Spec Version 1.10 */</td></tr>
+<tr class="separator:a6a8890129d6cd00eb1fbb9e386542e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91cd12402846c93f4ba0d0afcabf0ca3" id="r_a91cd12402846c93f4ba0d0afcabf0ca3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a91cd12402846c93f4ba0d0afcabf0ca3">SDIO_SDIO_REV_1_20</a>&#160;&#160;&#160;2   /* SDIO Spec Version 1.20 */</td></tr>
+<tr class="separator:a91cd12402846c93f4ba0d0afcabf0ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a3c4ecc3e4a44d06d1399671ab5018d" id="r_a6a3c4ecc3e4a44d06d1399671ab5018d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a6a3c4ecc3e4a44d06d1399671ab5018d">SDIO_SDIO_REV_2_00</a>&#160;&#160;&#160;3   /* SDIO Spec Version 2.00 */</td></tr>
+<tr class="separator:a6a3c4ecc3e4a44d06d1399671ab5018d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9893f9db7dad7db9566d8ad4cbd8fcc" id="r_ac9893f9db7dad7db9566d8ad4cbd8fcc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ac9893f9db7dad7db9566d8ad4cbd8fcc">SDIO_REG_CCCR_SD_REV</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ac9893f9db7dad7db9566d8ad4cbd8fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6a126e4949df74e7983c541a07e501a" id="r_af6a126e4949df74e7983c541a07e501a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#af6a126e4949df74e7983c541a07e501a">SDIO_SD_REV_1_01</a>&#160;&#160;&#160;0   /* SD Physical Spec Version 1.01 */</td></tr>
+<tr class="separator:af6a126e4949df74e7983c541a07e501a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260c6eeb9330a1a6b543d6e2e58c8ce0" id="r_a260c6eeb9330a1a6b543d6e2e58c8ce0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a260c6eeb9330a1a6b543d6e2e58c8ce0">SDIO_SD_REV_1_10</a>&#160;&#160;&#160;1   /* SD Physical Spec Version 1.10 */</td></tr>
+<tr class="separator:a260c6eeb9330a1a6b543d6e2e58c8ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16d009d7db47a503e15509e4f6b6d8b" id="r_af16d009d7db47a503e15509e4f6b6d8b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#af16d009d7db47a503e15509e4f6b6d8b">SDIO_SD_REV_2_00</a>&#160;&#160;&#160;2   /* SD Physical Spec Version 2.00 */</td></tr>
+<tr class="separator:af16d009d7db47a503e15509e4f6b6d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa4c89b06957dd1d56b563e2e0a1c812" id="r_aaa4c89b06957dd1d56b563e2e0a1c812"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aaa4c89b06957dd1d56b563e2e0a1c812">SDIO_REG_CCCR_IO_EN</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:aaa4c89b06957dd1d56b563e2e0a1c812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10f36ede3ce35c6b2939e5bdac6c7b48" id="r_a10f36ede3ce35c6b2939e5bdac6c7b48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a10f36ede3ce35c6b2939e5bdac6c7b48">SDIO_REG_CCCR_IO_RDY</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:a10f36ede3ce35c6b2939e5bdac6c7b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4487a4c8087cc46677b70bc902a89c68" id="r_a4487a4c8087cc46677b70bc902a89c68"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a4487a4c8087cc46677b70bc902a89c68">SDIO_REG_CCCR_INT_EN</a>&#160;&#160;&#160;0x04    /* Function/Master Interrupt Enable */</td></tr>
+<tr class="separator:a4487a4c8087cc46677b70bc902a89c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e90b6e876b7bd03688ec4c653fa48d1" id="r_a3e90b6e876b7bd03688ec4c653fa48d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a3e90b6e876b7bd03688ec4c653fa48d1">SDIO_REG_CCCR_INT_PEND</a>&#160;&#160;&#160;0x05    /* Function Interrupt Pending */</td></tr>
+<tr class="separator:a3e90b6e876b7bd03688ec4c653fa48d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539875bd7ebc70f0d2ba093067e4171c" id="r_a539875bd7ebc70f0d2ba093067e4171c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a539875bd7ebc70f0d2ba093067e4171c">SDIO_REG_CCCR_IO_ABORT</a>&#160;&#160;&#160;0x06    /* function abort/card reset */</td></tr>
+<tr class="separator:a539875bd7ebc70f0d2ba093067e4171c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d689462a30ecae28ffbcff820a5450" id="r_a38d689462a30ecae28ffbcff820a5450"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a38d689462a30ecae28ffbcff820a5450">SDIO_REG_CCCR_BUS_IF</a>&#160;&#160;&#160;0x07    /* bus interface controls */</td></tr>
+<tr class="separator:a38d689462a30ecae28ffbcff820a5450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae27e74a6d04d8c65c1b2a75b722d1cfe" id="r_ae27e74a6d04d8c65c1b2a75b722d1cfe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ae27e74a6d04d8c65c1b2a75b722d1cfe">SDIO_BUS_WIDTH_1BIT</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ae27e74a6d04d8c65c1b2a75b722d1cfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc2873eb55123885733c214ed4c3fc0d" id="r_adc2873eb55123885733c214ed4c3fc0d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#adc2873eb55123885733c214ed4c3fc0d">SDIO_BUS_WIDTH_4BIT</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:adc2873eb55123885733c214ed4c3fc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94dd328fa957515a8f3c9b4eb3e59d9e" id="r_a94dd328fa957515a8f3c9b4eb3e59d9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a94dd328fa957515a8f3c9b4eb3e59d9e">SDIO_BUS_ECSI</a>&#160;&#160;&#160;0x20    /* Enable continuous SPI interrupt */</td></tr>
+<tr class="separator:a94dd328fa957515a8f3c9b4eb3e59d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd4e308d871a9389c97c72fdcc4c4830" id="r_acd4e308d871a9389c97c72fdcc4c4830"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#acd4e308d871a9389c97c72fdcc4c4830">SDIO_BUS_SCSI</a>&#160;&#160;&#160;0x40    /* Support continuous SPI interrupt */</td></tr>
+<tr class="separator:acd4e308d871a9389c97c72fdcc4c4830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3459cc7dfef603d1f5b6827fa557b83a" id="r_a3459cc7dfef603d1f5b6827fa557b83a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a3459cc7dfef603d1f5b6827fa557b83a">SDIO_BUS_ASYNC_INT</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a3459cc7dfef603d1f5b6827fa557b83a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab88be085ef7f6512dbbce27ec6025be9" id="r_ab88be085ef7f6512dbbce27ec6025be9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab88be085ef7f6512dbbce27ec6025be9">SDIO_BUS_CD_DISABLE</a>&#160;&#160;&#160;0x80   /* disable pull-up on DAT3 (pin 1) */</td></tr>
+<tr class="separator:ab88be085ef7f6512dbbce27ec6025be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a259ada0cfe0a95a1cdcee6ca338499d1" id="r_a259ada0cfe0a95a1cdcee6ca338499d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a259ada0cfe0a95a1cdcee6ca338499d1">SDIO_REG_CCCR_CARD_CAPS</a>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:a259ada0cfe0a95a1cdcee6ca338499d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3d94abc2a80848fd6474ec1e36d0ae" id="r_afe3d94abc2a80848fd6474ec1e36d0ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#afe3d94abc2a80848fd6474ec1e36d0ae">SDIO_CCCR_CAP_SDC</a>&#160;&#160;&#160;0x01    /* can do CMD52 while data transfer */</td></tr>
+<tr class="separator:afe3d94abc2a80848fd6474ec1e36d0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa49ca38400efee75d36346fd1307f8cf" id="r_aa49ca38400efee75d36346fd1307f8cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aa49ca38400efee75d36346fd1307f8cf">SDIO_CCCR_CAP_SMB</a>&#160;&#160;&#160;0x02    /* can do multi-block xfers (CMD53) */</td></tr>
+<tr class="separator:aa49ca38400efee75d36346fd1307f8cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf6da6e966340bf8bc9df6b1cb85537" id="r_adbf6da6e966340bf8bc9df6b1cb85537"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#adbf6da6e966340bf8bc9df6b1cb85537">SDIO_CCCR_CAP_SRW</a>&#160;&#160;&#160;0x04    /* supports <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a>-wait protocol */</td></tr>
+<tr class="separator:adbf6da6e966340bf8bc9df6b1cb85537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f7363936fde6a94dce93bcbca1e13f1" id="r_a7f7363936fde6a94dce93bcbca1e13f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a7f7363936fde6a94dce93bcbca1e13f1">SDIO_CCCR_CAP_SBS</a>&#160;&#160;&#160;0x08    /* supports suspend/resume */</td></tr>
+<tr class="separator:a7f7363936fde6a94dce93bcbca1e13f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a5741617a1870148692ff101fbca9ee" id="r_a7a5741617a1870148692ff101fbca9ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a7a5741617a1870148692ff101fbca9ee">SDIO_CCCR_CAP_S4MI</a>&#160;&#160;&#160;0x10    /* interrupt during 4-bit CMD53 */</td></tr>
+<tr class="separator:a7a5741617a1870148692ff101fbca9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8003817b3f4217eb08e7dd347477e53a" id="r_a8003817b3f4217eb08e7dd347477e53a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a8003817b3f4217eb08e7dd347477e53a">SDIO_CCCR_CAP_E4MI</a>&#160;&#160;&#160;0x20    /* enable ints during 4-bit CMD53 */</td></tr>
+<tr class="separator:a8003817b3f4217eb08e7dd347477e53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c52619c88c01fdbe38ceaa94835922d" id="r_a1c52619c88c01fdbe38ceaa94835922d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a1c52619c88c01fdbe38ceaa94835922d">SDIO_CCCR_CAP_LSC</a>&#160;&#160;&#160;0x40    /* low speed card */</td></tr>
+<tr class="separator:a1c52619c88c01fdbe38ceaa94835922d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a688d7850d25f4240c285ba926e8861b2" id="r_a688d7850d25f4240c285ba926e8861b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a688d7850d25f4240c285ba926e8861b2">SDIO_CCCR_CAP_4BLS</a>&#160;&#160;&#160;0x80    /* 4 bit low speed card */</td></tr>
+<tr class="separator:a688d7850d25f4240c285ba926e8861b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20a088253fe692284675f5ec10842b4f" id="r_a20a088253fe692284675f5ec10842b4f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a20a088253fe692284675f5ec10842b4f">SDIO_REG_CCCR_CIS_PTR</a>&#160;&#160;&#160;0x09    /* common CIS pointer (3 bytes) */</td></tr>
+<tr class="separator:a20a088253fe692284675f5ec10842b4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dff6619430c293e6956e058a4eeb3f7" id="r_a9dff6619430c293e6956e058a4eeb3f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a9dff6619430c293e6956e058a4eeb3f7">SDIO_REG_CCCR_BUS_SUSPEND</a>&#160;&#160;&#160;0x0c</td></tr>
+<tr class="separator:a9dff6619430c293e6956e058a4eeb3f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe34ecc99454ce993d176b1d2d1de476" id="r_afe34ecc99454ce993d176b1d2d1de476"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#afe34ecc99454ce993d176b1d2d1de476">SDIO_REG_CCCR_FUNC_SEL</a>&#160;&#160;&#160;0x0d</td></tr>
+<tr class="separator:afe34ecc99454ce993d176b1d2d1de476"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a965ae90771227734eaaf63383a4da879" id="r_a965ae90771227734eaaf63383a4da879"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a965ae90771227734eaaf63383a4da879">SDIO_REG_CCCR_EXEC_FLAG</a>&#160;&#160;&#160;0x0e</td></tr>
+<tr class="separator:a965ae90771227734eaaf63383a4da879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86c08e0708d158349dcc35072712af1a" id="r_a86c08e0708d158349dcc35072712af1a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a86c08e0708d158349dcc35072712af1a">SDIO_REG_CCCR_READY_FLAG</a>&#160;&#160;&#160;0x0f</td></tr>
+<tr class="separator:a86c08e0708d158349dcc35072712af1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff26558ac6e9198b74809fafa3ff37b2" id="r_aff26558ac6e9198b74809fafa3ff37b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aff26558ac6e9198b74809fafa3ff37b2">SDIO_REG_CCCR_FN0_BLKSIZE</a>&#160;&#160;&#160;0x10 /* 2bytes, 0x10~0x11 */</td></tr>
+<tr class="separator:aff26558ac6e9198b74809fafa3ff37b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a7f53caeb302cd79cbde8ede3ebde2" id="r_ad2a7f53caeb302cd79cbde8ede3ebde2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ad2a7f53caeb302cd79cbde8ede3ebde2">SDIO_REG_CCCR_POWER_CTRL</a>&#160;&#160;&#160;0x12</td></tr>
+<tr class="separator:ad2a7f53caeb302cd79cbde8ede3ebde2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a353d2401da7eaa192b65840ad92678de" id="r_a353d2401da7eaa192b65840ad92678de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a353d2401da7eaa192b65840ad92678de">SDIO_POWER_SMPC</a>&#160;&#160;&#160;0x01    /* Supports Master Power Control */</td></tr>
+<tr class="separator:a353d2401da7eaa192b65840ad92678de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ef60f97841889e33a3e0a3d54291ae" id="r_ae5ef60f97841889e33a3e0a3d54291ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ae5ef60f97841889e33a3e0a3d54291ae">SDIO_POWER_EMPC</a>&#160;&#160;&#160;0x02    /* Enable Master Power Control */</td></tr>
+<tr class="separator:ae5ef60f97841889e33a3e0a3d54291ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69acc9e54d94df3aa52a1d32d0b13faa" id="r_a69acc9e54d94df3aa52a1d32d0b13faa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a69acc9e54d94df3aa52a1d32d0b13faa">SDIO_REG_CCCR_SPEED</a>&#160;&#160;&#160;0x13</td></tr>
+<tr class="separator:a69acc9e54d94df3aa52a1d32d0b13faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81908430ede0b63646c49029abf8a0db" id="r_a81908430ede0b63646c49029abf8a0db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a81908430ede0b63646c49029abf8a0db">SDIO_SPEED_SHS</a>&#160;&#160;&#160;0x01    /* Supports High-Speed mode */</td></tr>
+<tr class="separator:a81908430ede0b63646c49029abf8a0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3fad31cd7de24980578c1c018478c6" id="r_abb3fad31cd7de24980578c1c018478c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#abb3fad31cd7de24980578c1c018478c6">SDIO_SPEED_EHS</a>&#160;&#160;&#160;0x02    /* Enable High-Speed mode */</td></tr>
+<tr class="separator:abb3fad31cd7de24980578c1c018478c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c31b3cadc6d9372acd16eb3f6ee4558" id="r_a6c31b3cadc6d9372acd16eb3f6ee4558"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a6c31b3cadc6d9372acd16eb3f6ee4558">SDIO_REG_FBR_BASE</a>(f)&#160;&#160;&#160;((f) * 0x100) /* base of function f's FBRs */</td></tr>
+<tr class="separator:a6c31b3cadc6d9372acd16eb3f6ee4558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af45ccdfb45508408114fb91cdc84d0ce" id="r_af45ccdfb45508408114fb91cdc84d0ce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#af45ccdfb45508408114fb91cdc84d0ce">SDIO_REG_FBR_STD_FUNC_IF</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:af45ccdfb45508408114fb91cdc84d0ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6107a416f5af92839d84905dd713e038" id="r_a6107a416f5af92839d84905dd713e038"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a6107a416f5af92839d84905dd713e038">SDIO_FBR_SUPPORTS_CSA</a>&#160;&#160;&#160;0x40    /* supports Code Storage Area */</td></tr>
+<tr class="separator:a6107a416f5af92839d84905dd713e038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3535f14398ea46226b3337941b9e4637" id="r_a3535f14398ea46226b3337941b9e4637"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a3535f14398ea46226b3337941b9e4637">SDIO_FBR_ENABLE_CSA</a>&#160;&#160;&#160;0x80    /* enable Code Storage Area */</td></tr>
+<tr class="separator:a3535f14398ea46226b3337941b9e4637"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26c387fc7b70a29f0037f3cf84f744d5" id="r_a26c387fc7b70a29f0037f3cf84f744d5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a26c387fc7b70a29f0037f3cf84f744d5">SDIO_REG_FBR_STD_IF_EXT</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:a26c387fc7b70a29f0037f3cf84f744d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a348b5a16dedc279956b29c2744f8f5d9" id="r_a348b5a16dedc279956b29c2744f8f5d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a348b5a16dedc279956b29c2744f8f5d9">SDIO_REG_FBR_POWER</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:a348b5a16dedc279956b29c2744f8f5d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c51d8d8d7af24a28607b9f234aaeb05" id="r_a8c51d8d8d7af24a28607b9f234aaeb05"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a8c51d8d8d7af24a28607b9f234aaeb05">SDIO_FBR_POWER_SPS</a>&#160;&#160;&#160;0x01    /* Supports Power Selection */</td></tr>
+<tr class="separator:a8c51d8d8d7af24a28607b9f234aaeb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca856861cb9ca32b620b2a148ec73b18" id="r_aca856861cb9ca32b620b2a148ec73b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aca856861cb9ca32b620b2a148ec73b18">SDIO_FBR_POWER_EPS</a>&#160;&#160;&#160;0x02    /* Enable (low) Power Selection */</td></tr>
+<tr class="separator:aca856861cb9ca32b620b2a148ec73b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44b026e4b90c3b81628ea7301923d945" id="r_a44b026e4b90c3b81628ea7301923d945"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a44b026e4b90c3b81628ea7301923d945">SDIO_REG_FBR_CIS</a>&#160;&#160;&#160;0x09    /* CIS pointer (3 bytes) */</td></tr>
+<tr class="separator:a44b026e4b90c3b81628ea7301923d945"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28c819019b0260de0880cfcd22e1a9bd" id="r_a28c819019b0260de0880cfcd22e1a9bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a28c819019b0260de0880cfcd22e1a9bd">SDIO_REG_FBR_CSA</a>&#160;&#160;&#160;0x0C    /* CSA pointer (3 bytes) */</td></tr>
+<tr class="separator:a28c819019b0260de0880cfcd22e1a9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad54680a12662f52365193b02d484676a" id="r_ad54680a12662f52365193b02d484676a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ad54680a12662f52365193b02d484676a">SDIO_REG_FBR_CSA_DATA</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:ad54680a12662f52365193b02d484676a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add689f9f95e75eaeeb7399b60482cfd0" id="r_add689f9f95e75eaeeb7399b60482cfd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#add689f9f95e75eaeeb7399b60482cfd0">SDIO_REG_FBR_BLKSIZE</a>&#160;&#160;&#160;0x10    /* block size (2 bytes) */</td></tr>
+<tr class="separator:add689f9f95e75eaeeb7399b60482cfd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63323d48f25522cf360323ea211adb8f" id="r_a63323d48f25522cf360323ea211adb8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a63323d48f25522cf360323ea211adb8f">CISTPL_NULL</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a63323d48f25522cf360323ea211adb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f83e4bdfc4ae662c4a952a307dbfc9d" id="r_a8f83e4bdfc4ae662c4a952a307dbfc9d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a8f83e4bdfc4ae662c4a952a307dbfc9d">CISTPL_CHECKSUM</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:a8f83e4bdfc4ae662c4a952a307dbfc9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ce88e01940df49789578a0a8a17d60" id="r_a35ce88e01940df49789578a0a8a17d60"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a35ce88e01940df49789578a0a8a17d60">CISTPL_VERS_1</a>&#160;&#160;&#160;0x15</td></tr>
+<tr class="separator:a35ce88e01940df49789578a0a8a17d60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a371a087a67afaf0ce4f91fd2c46f50af" id="r_a371a087a67afaf0ce4f91fd2c46f50af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a371a087a67afaf0ce4f91fd2c46f50af">CISTPL_ALTSTR</a>&#160;&#160;&#160;0x16</td></tr>
+<tr class="separator:a371a087a67afaf0ce4f91fd2c46f50af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a254d188fdc3d26e69e7a9cd16801bbb0" id="r_a254d188fdc3d26e69e7a9cd16801bbb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a254d188fdc3d26e69e7a9cd16801bbb0">CISTPL_MANFID</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:a254d188fdc3d26e69e7a9cd16801bbb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f38d2fc8e1f138fa9c6710d7bd47ae" id="r_ac0f38d2fc8e1f138fa9c6710d7bd47ae"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ac0f38d2fc8e1f138fa9c6710d7bd47ae">CISTPL_FUNCID</a>&#160;&#160;&#160;0x21</td></tr>
+<tr class="separator:ac0f38d2fc8e1f138fa9c6710d7bd47ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99af349641e81e3aadae8c3d734bb411" id="r_a99af349641e81e3aadae8c3d734bb411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a99af349641e81e3aadae8c3d734bb411">CISTPL_FUNCE</a>&#160;&#160;&#160;0x22</td></tr>
+<tr class="separator:a99af349641e81e3aadae8c3d734bb411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca9f21c63eaacfe4b31a9fdbc36f0df9" id="r_aca9f21c63eaacfe4b31a9fdbc36f0df9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aca9f21c63eaacfe4b31a9fdbc36f0df9">CISTPL_SDIO_STD</a>&#160;&#160;&#160;0x91</td></tr>
+<tr class="separator:aca9f21c63eaacfe4b31a9fdbc36f0df9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6484fa02370db96dfc8a1c3df02e5b7" id="r_ac6484fa02370db96dfc8a1c3df02e5b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ac6484fa02370db96dfc8a1c3df02e5b7">CISTPL_SDIO_EXT</a>&#160;&#160;&#160;0x92</td></tr>
+<tr class="separator:ac6484fa02370db96dfc8a1c3df02e5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab55b15a6e3e612bbf7acf72c959acf83" id="r_ab55b15a6e3e612bbf7acf72c959acf83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab55b15a6e3e612bbf7acf72c959acf83">CISTPL_END</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="separator:ab55b15a6e3e612bbf7acf72c959acf83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad3d0df94a246de976fb11462e18cb5d" id="r_aad3d0df94a246de976fb11462e18cb5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aad3d0df94a246de976fb11462e18cb5d">SDIO_ANY_FUNC_ID</a>&#160;&#160;&#160;0xff</td></tr>
+<tr class="separator:aad3d0df94a246de976fb11462e18cb5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf43a4fd4429e9e60f495bb2c2e79c2b" id="r_aaf43a4fd4429e9e60f495bb2c2e79c2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aaf43a4fd4429e9e60f495bb2c2e79c2b">SDIO_ANY_MAN_ID</a>&#160;&#160;&#160;0xffff</td></tr>
+<tr class="separator:aaf43a4fd4429e9e60f495bb2c2e79c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98223ebc658a12941ac99d5550e882aa" id="r_a98223ebc658a12941ac99d5550e882aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a98223ebc658a12941ac99d5550e882aa">SDIO_ANY_PROD_ID</a>&#160;&#160;&#160;0xffff</td></tr>
+<tr class="separator:a98223ebc658a12941ac99d5550e882aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5abee2071d1981a8f92735f75eb38399" id="r_a5abee2071d1981a8f92735f75eb38399"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a5abee2071d1981a8f92735f75eb38399">sdio_io_send_op_cond</a> (struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *host, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> ocr, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> *cmd5_resp)</td></tr>
+<tr class="separator:a5abee2071d1981a8f92735f75eb38399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b97147598ef81cec0bc5b60a02aa4dc" id="r_a7b97147598ef81cec0bc5b60a02aa4dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a7b97147598ef81cec0bc5b60a02aa4dc">sdio_io_rw_direct</a> (struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a> *card, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rw, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> fn, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> reg_addr, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *pdata, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> raw)</td></tr>
+<tr class="separator:a7b97147598ef81cec0bc5b60a02aa4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a73598b72dd1c545129207cc265c74d" id="r_a3a73598b72dd1c545129207cc265c74d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a3a73598b72dd1c545129207cc265c74d">sdio_io_rw_extended</a> (struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a> *card, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rw, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> fn, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> op_code, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> blocks, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> blksize)</td></tr>
+<tr class="separator:a3a73598b72dd1c545129207cc265c74d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a647bd4f4c636a330fb5e8f20b2a61b1a" id="r_a647bd4f4c636a330fb5e8f20b2a61b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a647bd4f4c636a330fb5e8f20b2a61b1a">sdio_io_rw_extended_block</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rw, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> op_code, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> len)</td></tr>
+<tr class="separator:a647bd4f4c636a330fb5e8f20b2a61b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18aa1f89ee5fefeceeb6e2b4e1654b66" id="r_a18aa1f89ee5fefeceeb6e2b4e1654b66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a18aa1f89ee5fefeceeb6e2b4e1654b66">sdio_io_readb</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> reg, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *err)</td></tr>
+<tr class="separator:a18aa1f89ee5fefeceeb6e2b4e1654b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc0e6d46d20bc08735e164dd93a5da31" id="r_abc0e6d46d20bc08735e164dd93a5da31"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#abc0e6d46d20bc08735e164dd93a5da31">sdio_io_writeb</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> reg, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> data)</td></tr>
+<tr class="separator:abc0e6d46d20bc08735e164dd93a5da31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8445d447ddcf18dd5534175b52602736" id="r_a8445d447ddcf18dd5534175b52602736"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a8445d447ddcf18dd5534175b52602736">sdio_io_readw</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *err)</td></tr>
+<tr class="separator:a8445d447ddcf18dd5534175b52602736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff2cd6349edb805aebfcf1899b8ebf2" id="r_a0ff2cd6349edb805aebfcf1899b8ebf2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a0ff2cd6349edb805aebfcf1899b8ebf2">sdio_io_writew</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> data, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr)</td></tr>
+<tr class="separator:a0ff2cd6349edb805aebfcf1899b8ebf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7af7b5027bb0e424f56e1515414d39f5" id="r_a7af7b5027bb0e424f56e1515414d39f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a7af7b5027bb0e424f56e1515414d39f5">sdio_io_readl</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *err)</td></tr>
+<tr class="separator:a7af7b5027bb0e424f56e1515414d39f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73152acdefd19405d572f9d21220d1ae" id="r_a73152acdefd19405d572f9d21220d1ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a73152acdefd19405d572f9d21220d1ae">sdio_io_writel</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> data, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr)</td></tr>
+<tr class="separator:a73152acdefd19405d572f9d21220d1ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b05eee52c82c46f2ddbc138dd681ed8" id="r_a7b05eee52c82c46f2ddbc138dd681ed8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a7b05eee52c82c46f2ddbc138dd681ed8">sdio_io_read_multi_fifo_b</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> len)</td></tr>
+<tr class="separator:a7b05eee52c82c46f2ddbc138dd681ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ef9f1e7d958545872970d61cb26e6c5" id="r_a9ef9f1e7d958545872970d61cb26e6c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a9ef9f1e7d958545872970d61cb26e6c5">sdio_io_write_multi_fifo_b</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> len)</td></tr>
+<tr class="separator:a9ef9f1e7d958545872970d61cb26e6c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4b201877a4c836beabefa8e967f9318" id="r_ab4b201877a4c836beabefa8e967f9318"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab4b201877a4c836beabefa8e967f9318">sdio_io_read_multi_incr_b</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> len)</td></tr>
+<tr class="separator:ab4b201877a4c836beabefa8e967f9318"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258ec3e77801957bc5f463f142dded53" id="r_a258ec3e77801957bc5f463f142dded53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a258ec3e77801957bc5f463f142dded53">sdio_io_write_multi_incr_b</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> len)</td></tr>
+<tr class="separator:a258ec3e77801957bc5f463f142dded53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac150b82e82d2db9e785d20d16a68ca7a" id="r_ac150b82e82d2db9e785d20d16a68ca7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ac150b82e82d2db9e785d20d16a68ca7a">init_sdio</a> (struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *host, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> ocr)</td></tr>
+<tr class="separator:ac150b82e82d2db9e785d20d16a68ca7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab15f26b4eeabfd77c57704f557988465" id="r_ab15f26b4eeabfd77c57704f557988465"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ab15f26b4eeabfd77c57704f557988465">sdio_attach_irq</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="mmcsd__card_8h.html#acf7d072a75be082310047c19ec200889">rt_sdio_irq_handler_t</a> *handler)</td></tr>
+<tr class="separator:ab15f26b4eeabfd77c57704f557988465"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3695135120118b34fcb38123a9530abd" id="r_a3695135120118b34fcb38123a9530abd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a3695135120118b34fcb38123a9530abd">sdio_detach_irq</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func)</td></tr>
+<tr class="separator:a3695135120118b34fcb38123a9530abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af47cb6f33e83c8f78f7274e4403e1784" id="r_af47cb6f33e83c8f78f7274e4403e1784"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#af47cb6f33e83c8f78f7274e4403e1784">sdio_irq_wakeup</a> (struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *host)</td></tr>
+<tr class="separator:af47cb6f33e83c8f78f7274e4403e1784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd0a0bd07ff5cb2f472fbe73e4e1614" id="r_acbd0a0bd07ff5cb2f472fbe73e4e1614"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#acbd0a0bd07ff5cb2f472fbe73e4e1614">sdio_enable_func</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func)</td></tr>
+<tr class="separator:acbd0a0bd07ff5cb2f472fbe73e4e1614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2777ff4e25a4e0dbad09708e4fb4bfae" id="r_a2777ff4e25a4e0dbad09708e4fb4bfae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a2777ff4e25a4e0dbad09708e4fb4bfae">sdio_disable_func</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func)</td></tr>
+<tr class="separator:a2777ff4e25a4e0dbad09708e4fb4bfae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0161daa13af05c7d5538fb56c834ddce" id="r_a0161daa13af05c7d5538fb56c834ddce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a0161daa13af05c7d5538fb56c834ddce">sdio_set_drvdata</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, void *data)</td></tr>
+<tr class="separator:a0161daa13af05c7d5538fb56c834ddce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1874b8a4833c94216626079496b63a9" id="r_ad1874b8a4833c94216626079496b63a9"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#ad1874b8a4833c94216626079496b63a9">sdio_get_drvdata</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func)</td></tr>
+<tr class="separator:ad1874b8a4833c94216626079496b63a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a895f4fbb7877f42978bfe5f9af06b2a6" id="r_a895f4fbb7877f42978bfe5f9af06b2a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a895f4fbb7877f42978bfe5f9af06b2a6">sdio_set_block_size</a> (struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *func, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> blksize)</td></tr>
+<tr class="separator:a895f4fbb7877f42978bfe5f9af06b2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82e2afecb257491536c7b603e3c20279" id="r_a82e2afecb257491536c7b603e3c20279"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a82e2afecb257491536c7b603e3c20279">sdio_register_driver</a> (struct <a class="el" href="structrt__sdio__driver.html">rt_sdio_driver</a> *driver)</td></tr>
+<tr class="separator:a82e2afecb257491536c7b603e3c20279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79fd99a314aeb8494d25cd9e2732637d" id="r_a79fd99a314aeb8494d25cd9e2732637d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#a79fd99a314aeb8494d25cd9e2732637d">sdio_unregister_driver</a> (struct <a class="el" href="structrt__sdio__driver.html">rt_sdio_driver</a> *driver)</td></tr>
+<tr class="separator:a79fd99a314aeb8494d25cd9e2732637d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0d201a31f70838cb72aef4cfd7beb87" id="r_aa0d201a31f70838cb72aef4cfd7beb87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__sdio_8h.html#aa0d201a31f70838cb72aef4cfd7beb87">rt_sdio_init</a> (void)</td></tr>
+<tr class="separator:aa0d201a31f70838cb72aef4cfd7beb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a371a087a67afaf0ce4f91fd2c46f50af" name="a371a087a67afaf0ce4f91fd2c46f50af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a371a087a67afaf0ce4f91fd2c46f50af">&#9670;&#160;</a></span>CISTPL_ALTSTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_ALTSTR&#160;&#160;&#160;0x16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f83e4bdfc4ae662c4a952a307dbfc9d" name="a8f83e4bdfc4ae662c4a952a307dbfc9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f83e4bdfc4ae662c4a952a307dbfc9d">&#9670;&#160;</a></span>CISTPL_CHECKSUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_CHECKSUM&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab55b15a6e3e612bbf7acf72c959acf83" name="ab55b15a6e3e612bbf7acf72c959acf83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab55b15a6e3e612bbf7acf72c959acf83">&#9670;&#160;</a></span>CISTPL_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_END&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99af349641e81e3aadae8c3d734bb411" name="a99af349641e81e3aadae8c3d734bb411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99af349641e81e3aadae8c3d734bb411">&#9670;&#160;</a></span>CISTPL_FUNCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_FUNCE&#160;&#160;&#160;0x22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac0f38d2fc8e1f138fa9c6710d7bd47ae" name="ac0f38d2fc8e1f138fa9c6710d7bd47ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0f38d2fc8e1f138fa9c6710d7bd47ae">&#9670;&#160;</a></span>CISTPL_FUNCID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_FUNCID&#160;&#160;&#160;0x21</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a254d188fdc3d26e69e7a9cd16801bbb0" name="a254d188fdc3d26e69e7a9cd16801bbb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a254d188fdc3d26e69e7a9cd16801bbb0">&#9670;&#160;</a></span>CISTPL_MANFID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_MANFID&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a63323d48f25522cf360323ea211adb8f" name="a63323d48f25522cf360323ea211adb8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63323d48f25522cf360323ea211adb8f">&#9670;&#160;</a></span>CISTPL_NULL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_NULL&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6484fa02370db96dfc8a1c3df02e5b7" name="ac6484fa02370db96dfc8a1c3df02e5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6484fa02370db96dfc8a1c3df02e5b7">&#9670;&#160;</a></span>CISTPL_SDIO_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_SDIO_EXT&#160;&#160;&#160;0x92</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca9f21c63eaacfe4b31a9fdbc36f0df9" name="aca9f21c63eaacfe4b31a9fdbc36f0df9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca9f21c63eaacfe4b31a9fdbc36f0df9">&#9670;&#160;</a></span>CISTPL_SDIO_STD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_SDIO_STD&#160;&#160;&#160;0x91</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35ce88e01940df49789578a0a8a17d60" name="a35ce88e01940df49789578a0a8a17d60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35ce88e01940df49789578a0a8a17d60">&#9670;&#160;</a></span>CISTPL_VERS_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CISTPL_VERS_1&#160;&#160;&#160;0x15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad3d0df94a246de976fb11462e18cb5d" name="aad3d0df94a246de976fb11462e18cb5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad3d0df94a246de976fb11462e18cb5d">&#9670;&#160;</a></span>SDIO_ANY_FUNC_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ANY_FUNC_ID&#160;&#160;&#160;0xff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf43a4fd4429e9e60f495bb2c2e79c2b" name="aaf43a4fd4429e9e60f495bb2c2e79c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf43a4fd4429e9e60f495bb2c2e79c2b">&#9670;&#160;</a></span>SDIO_ANY_MAN_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ANY_MAN_ID&#160;&#160;&#160;0xffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a98223ebc658a12941ac99d5550e882aa" name="a98223ebc658a12941ac99d5550e882aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98223ebc658a12941ac99d5550e882aa">&#9670;&#160;</a></span>SDIO_ANY_PROD_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_ANY_PROD_ID&#160;&#160;&#160;0xffff</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3459cc7dfef603d1f5b6827fa557b83a" name="a3459cc7dfef603d1f5b6827fa557b83a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3459cc7dfef603d1f5b6827fa557b83a">&#9670;&#160;</a></span>SDIO_BUS_ASYNC_INT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_ASYNC_INT&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab88be085ef7f6512dbbce27ec6025be9" name="ab88be085ef7f6512dbbce27ec6025be9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab88be085ef7f6512dbbce27ec6025be9">&#9670;&#160;</a></span>SDIO_BUS_CD_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_CD_DISABLE&#160;&#160;&#160;0x80   /* disable pull-up on DAT3 (pin 1) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94dd328fa957515a8f3c9b4eb3e59d9e" name="a94dd328fa957515a8f3c9b4eb3e59d9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94dd328fa957515a8f3c9b4eb3e59d9e">&#9670;&#160;</a></span>SDIO_BUS_ECSI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_ECSI&#160;&#160;&#160;0x20    /* Enable continuous SPI interrupt */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd4e308d871a9389c97c72fdcc4c4830" name="acd4e308d871a9389c97c72fdcc4c4830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4e308d871a9389c97c72fdcc4c4830">&#9670;&#160;</a></span>SDIO_BUS_SCSI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_SCSI&#160;&#160;&#160;0x40    /* Support continuous SPI interrupt */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae27e74a6d04d8c65c1b2a75b722d1cfe" name="ae27e74a6d04d8c65c1b2a75b722d1cfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae27e74a6d04d8c65c1b2a75b722d1cfe">&#9670;&#160;</a></span>SDIO_BUS_WIDTH_1BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_WIDTH_1BIT&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc2873eb55123885733c214ed4c3fc0d" name="adc2873eb55123885733c214ed4c3fc0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc2873eb55123885733c214ed4c3fc0d">&#9670;&#160;</a></span>SDIO_BUS_WIDTH_4BIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_BUS_WIDTH_4BIT&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a688d7850d25f4240c285ba926e8861b2" name="a688d7850d25f4240c285ba926e8861b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a688d7850d25f4240c285ba926e8861b2">&#9670;&#160;</a></span>SDIO_CCCR_CAP_4BLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_4BLS&#160;&#160;&#160;0x80    /* 4 bit low speed card */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8003817b3f4217eb08e7dd347477e53a" name="a8003817b3f4217eb08e7dd347477e53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8003817b3f4217eb08e7dd347477e53a">&#9670;&#160;</a></span>SDIO_CCCR_CAP_E4MI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_E4MI&#160;&#160;&#160;0x20    /* enable ints during 4-bit CMD53 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c52619c88c01fdbe38ceaa94835922d" name="a1c52619c88c01fdbe38ceaa94835922d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c52619c88c01fdbe38ceaa94835922d">&#9670;&#160;</a></span>SDIO_CCCR_CAP_LSC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_LSC&#160;&#160;&#160;0x40    /* low speed card */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a5741617a1870148692ff101fbca9ee" name="a7a5741617a1870148692ff101fbca9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5741617a1870148692ff101fbca9ee">&#9670;&#160;</a></span>SDIO_CCCR_CAP_S4MI</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_S4MI&#160;&#160;&#160;0x10    /* interrupt during 4-bit CMD53 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f7363936fde6a94dce93bcbca1e13f1" name="a7f7363936fde6a94dce93bcbca1e13f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f7363936fde6a94dce93bcbca1e13f1">&#9670;&#160;</a></span>SDIO_CCCR_CAP_SBS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_SBS&#160;&#160;&#160;0x08    /* supports suspend/resume */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe3d94abc2a80848fd6474ec1e36d0ae" name="afe3d94abc2a80848fd6474ec1e36d0ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3d94abc2a80848fd6474ec1e36d0ae">&#9670;&#160;</a></span>SDIO_CCCR_CAP_SDC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_SDC&#160;&#160;&#160;0x01    /* can do CMD52 while data transfer */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa49ca38400efee75d36346fd1307f8cf" name="aa49ca38400efee75d36346fd1307f8cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa49ca38400efee75d36346fd1307f8cf">&#9670;&#160;</a></span>SDIO_CCCR_CAP_SMB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_SMB&#160;&#160;&#160;0x02    /* can do multi-block xfers (CMD53) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbf6da6e966340bf8bc9df6b1cb85537" name="adbf6da6e966340bf8bc9df6b1cb85537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf6da6e966340bf8bc9df6b1cb85537">&#9670;&#160;</a></span>SDIO_CCCR_CAP_SRW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_CAP_SRW&#160;&#160;&#160;0x04    /* supports <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a>-wait protocol */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3faddf01289d928d2cb951cc199818c" name="ab3faddf01289d928d2cb951cc199818c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3faddf01289d928d2cb951cc199818c">&#9670;&#160;</a></span>SDIO_CCCR_REV_1_00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_REV_1_00&#160;&#160;&#160;0   /* CCCR/FBR Version 1.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1bf496f2434d4490fca734d577523c2" name="ab1bf496f2434d4490fca734d577523c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1bf496f2434d4490fca734d577523c2">&#9670;&#160;</a></span>SDIO_CCCR_REV_1_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_REV_1_10&#160;&#160;&#160;1   /* CCCR/FBR Version 1.10 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a412d390d48257650d97be0e3da25c300" name="a412d390d48257650d97be0e3da25c300"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a412d390d48257650d97be0e3da25c300">&#9670;&#160;</a></span>SDIO_CCCR_REV_1_20</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_REV_1_20&#160;&#160;&#160;2   /* CCCR/FBR Version 1.20 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36734ecf50583393f4da3ab4bef812ab" name="a36734ecf50583393f4da3ab4bef812ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36734ecf50583393f4da3ab4bef812ab">&#9670;&#160;</a></span>SDIO_CCCR_REV_3_00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_CCCR_REV_3_00&#160;&#160;&#160;3   /* CCCR/FBR Version 2.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3535f14398ea46226b3337941b9e4637" name="a3535f14398ea46226b3337941b9e4637"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3535f14398ea46226b3337941b9e4637">&#9670;&#160;</a></span>SDIO_FBR_ENABLE_CSA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_FBR_ENABLE_CSA&#160;&#160;&#160;0x80    /* enable Code Storage Area */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca856861cb9ca32b620b2a148ec73b18" name="aca856861cb9ca32b620b2a148ec73b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca856861cb9ca32b620b2a148ec73b18">&#9670;&#160;</a></span>SDIO_FBR_POWER_EPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_FBR_POWER_EPS&#160;&#160;&#160;0x02    /* Enable (low) Power Selection */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c51d8d8d7af24a28607b9f234aaeb05" name="a8c51d8d8d7af24a28607b9f234aaeb05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c51d8d8d7af24a28607b9f234aaeb05">&#9670;&#160;</a></span>SDIO_FBR_POWER_SPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_FBR_POWER_SPS&#160;&#160;&#160;0x01    /* Supports Power Selection */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6107a416f5af92839d84905dd713e038" name="a6107a416f5af92839d84905dd713e038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6107a416f5af92839d84905dd713e038">&#9670;&#160;</a></span>SDIO_FBR_SUPPORTS_CSA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_FBR_SUPPORTS_CSA&#160;&#160;&#160;0x40    /* supports Code Storage Area */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5ef60f97841889e33a3e0a3d54291ae" name="ae5ef60f97841889e33a3e0a3d54291ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ef60f97841889e33a3e0a3d54291ae">&#9670;&#160;</a></span>SDIO_POWER_EMPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_POWER_EMPC&#160;&#160;&#160;0x02    /* Enable Master Power Control */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a353d2401da7eaa192b65840ad92678de" name="a353d2401da7eaa192b65840ad92678de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a353d2401da7eaa192b65840ad92678de">&#9670;&#160;</a></span>SDIO_POWER_SMPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_POWER_SMPC&#160;&#160;&#160;0x01    /* Supports Master Power Control */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38d689462a30ecae28ffbcff820a5450" name="a38d689462a30ecae28ffbcff820a5450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d689462a30ecae28ffbcff820a5450">&#9670;&#160;</a></span>SDIO_REG_CCCR_BUS_IF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_BUS_IF&#160;&#160;&#160;0x07    /* bus interface controls */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9dff6619430c293e6956e058a4eeb3f7" name="a9dff6619430c293e6956e058a4eeb3f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dff6619430c293e6956e058a4eeb3f7">&#9670;&#160;</a></span>SDIO_REG_CCCR_BUS_SUSPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_BUS_SUSPEND&#160;&#160;&#160;0x0c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a259ada0cfe0a95a1cdcee6ca338499d1" name="a259ada0cfe0a95a1cdcee6ca338499d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a259ada0cfe0a95a1cdcee6ca338499d1">&#9670;&#160;</a></span>SDIO_REG_CCCR_CARD_CAPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_CARD_CAPS&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6b90a5fd09894cdb37ba6c6eeb3ad79" name="ad6b90a5fd09894cdb37ba6c6eeb3ad79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b90a5fd09894cdb37ba6c6eeb3ad79">&#9670;&#160;</a></span>SDIO_REG_CCCR_CCCR_REV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_CCCR_REV&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20a088253fe692284675f5ec10842b4f" name="a20a088253fe692284675f5ec10842b4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20a088253fe692284675f5ec10842b4f">&#9670;&#160;</a></span>SDIO_REG_CCCR_CIS_PTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_CIS_PTR&#160;&#160;&#160;0x09    /* common CIS pointer (3 bytes) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a965ae90771227734eaaf63383a4da879" name="a965ae90771227734eaaf63383a4da879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a965ae90771227734eaaf63383a4da879">&#9670;&#160;</a></span>SDIO_REG_CCCR_EXEC_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_EXEC_FLAG&#160;&#160;&#160;0x0e</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aff26558ac6e9198b74809fafa3ff37b2" name="aff26558ac6e9198b74809fafa3ff37b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff26558ac6e9198b74809fafa3ff37b2">&#9670;&#160;</a></span>SDIO_REG_CCCR_FN0_BLKSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_FN0_BLKSIZE&#160;&#160;&#160;0x10 /* 2bytes, 0x10~0x11 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe34ecc99454ce993d176b1d2d1de476" name="afe34ecc99454ce993d176b1d2d1de476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe34ecc99454ce993d176b1d2d1de476">&#9670;&#160;</a></span>SDIO_REG_CCCR_FUNC_SEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_FUNC_SEL&#160;&#160;&#160;0x0d</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4487a4c8087cc46677b70bc902a89c68" name="a4487a4c8087cc46677b70bc902a89c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4487a4c8087cc46677b70bc902a89c68">&#9670;&#160;</a></span>SDIO_REG_CCCR_INT_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_INT_EN&#160;&#160;&#160;0x04    /* Function/Master Interrupt Enable */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e90b6e876b7bd03688ec4c653fa48d1" name="a3e90b6e876b7bd03688ec4c653fa48d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e90b6e876b7bd03688ec4c653fa48d1">&#9670;&#160;</a></span>SDIO_REG_CCCR_INT_PEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_INT_PEND&#160;&#160;&#160;0x05    /* Function Interrupt Pending */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a539875bd7ebc70f0d2ba093067e4171c" name="a539875bd7ebc70f0d2ba093067e4171c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539875bd7ebc70f0d2ba093067e4171c">&#9670;&#160;</a></span>SDIO_REG_CCCR_IO_ABORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_IO_ABORT&#160;&#160;&#160;0x06    /* function abort/card reset */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa4c89b06957dd1d56b563e2e0a1c812" name="aaa4c89b06957dd1d56b563e2e0a1c812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa4c89b06957dd1d56b563e2e0a1c812">&#9670;&#160;</a></span>SDIO_REG_CCCR_IO_EN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_IO_EN&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10f36ede3ce35c6b2939e5bdac6c7b48" name="a10f36ede3ce35c6b2939e5bdac6c7b48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10f36ede3ce35c6b2939e5bdac6c7b48">&#9670;&#160;</a></span>SDIO_REG_CCCR_IO_RDY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_IO_RDY&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2a7f53caeb302cd79cbde8ede3ebde2" name="ad2a7f53caeb302cd79cbde8ede3ebde2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a7f53caeb302cd79cbde8ede3ebde2">&#9670;&#160;</a></span>SDIO_REG_CCCR_POWER_CTRL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_POWER_CTRL&#160;&#160;&#160;0x12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86c08e0708d158349dcc35072712af1a" name="a86c08e0708d158349dcc35072712af1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86c08e0708d158349dcc35072712af1a">&#9670;&#160;</a></span>SDIO_REG_CCCR_READY_FLAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_READY_FLAG&#160;&#160;&#160;0x0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9893f9db7dad7db9566d8ad4cbd8fcc" name="ac9893f9db7dad7db9566d8ad4cbd8fcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9893f9db7dad7db9566d8ad4cbd8fcc">&#9670;&#160;</a></span>SDIO_REG_CCCR_SD_REV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_SD_REV&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69acc9e54d94df3aa52a1d32d0b13faa" name="a69acc9e54d94df3aa52a1d32d0b13faa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69acc9e54d94df3aa52a1d32d0b13faa">&#9670;&#160;</a></span>SDIO_REG_CCCR_SPEED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_CCCR_SPEED&#160;&#160;&#160;0x13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6c31b3cadc6d9372acd16eb3f6ee4558" name="a6c31b3cadc6d9372acd16eb3f6ee4558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c31b3cadc6d9372acd16eb3f6ee4558">&#9670;&#160;</a></span>SDIO_REG_FBR_BASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_BASE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">f</td><td>)</td>
+          <td>&#160;&#160;&#160;((f) * 0x100) /* base of function f's FBRs */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="add689f9f95e75eaeeb7399b60482cfd0" name="add689f9f95e75eaeeb7399b60482cfd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add689f9f95e75eaeeb7399b60482cfd0">&#9670;&#160;</a></span>SDIO_REG_FBR_BLKSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_BLKSIZE&#160;&#160;&#160;0x10    /* block size (2 bytes) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44b026e4b90c3b81628ea7301923d945" name="a44b026e4b90c3b81628ea7301923d945"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44b026e4b90c3b81628ea7301923d945">&#9670;&#160;</a></span>SDIO_REG_FBR_CIS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_CIS&#160;&#160;&#160;0x09    /* CIS pointer (3 bytes) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a28c819019b0260de0880cfcd22e1a9bd" name="a28c819019b0260de0880cfcd22e1a9bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28c819019b0260de0880cfcd22e1a9bd">&#9670;&#160;</a></span>SDIO_REG_FBR_CSA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_CSA&#160;&#160;&#160;0x0C    /* CSA pointer (3 bytes) */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad54680a12662f52365193b02d484676a" name="ad54680a12662f52365193b02d484676a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54680a12662f52365193b02d484676a">&#9670;&#160;</a></span>SDIO_REG_FBR_CSA_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_CSA_DATA&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a348b5a16dedc279956b29c2744f8f5d9" name="a348b5a16dedc279956b29c2744f8f5d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a348b5a16dedc279956b29c2744f8f5d9">&#9670;&#160;</a></span>SDIO_REG_FBR_POWER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_POWER&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af45ccdfb45508408114fb91cdc84d0ce" name="af45ccdfb45508408114fb91cdc84d0ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af45ccdfb45508408114fb91cdc84d0ce">&#9670;&#160;</a></span>SDIO_REG_FBR_STD_FUNC_IF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_STD_FUNC_IF&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a26c387fc7b70a29f0037f3cf84f744d5" name="a26c387fc7b70a29f0037f3cf84f744d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26c387fc7b70a29f0037f3cf84f744d5">&#9670;&#160;</a></span>SDIO_REG_FBR_STD_IF_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_REG_FBR_STD_IF_EXT&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6a126e4949df74e7983c541a07e501a" name="af6a126e4949df74e7983c541a07e501a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a126e4949df74e7983c541a07e501a">&#9670;&#160;</a></span>SDIO_SD_REV_1_01</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SD_REV_1_01&#160;&#160;&#160;0   /* SD Physical Spec Version 1.01 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a260c6eeb9330a1a6b543d6e2e58c8ce0" name="a260c6eeb9330a1a6b543d6e2e58c8ce0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260c6eeb9330a1a6b543d6e2e58c8ce0">&#9670;&#160;</a></span>SDIO_SD_REV_1_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SD_REV_1_10&#160;&#160;&#160;1   /* SD Physical Spec Version 1.10 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af16d009d7db47a503e15509e4f6b6d8b" name="af16d009d7db47a503e15509e4f6b6d8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af16d009d7db47a503e15509e4f6b6d8b">&#9670;&#160;</a></span>SDIO_SD_REV_2_00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SD_REV_2_00&#160;&#160;&#160;2   /* SD Physical Spec Version 2.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affb7f82544dca023112246ef11a8c069" name="affb7f82544dca023112246ef11a8c069"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affb7f82544dca023112246ef11a8c069">&#9670;&#160;</a></span>SDIO_SDIO_REV_1_00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SDIO_REV_1_00&#160;&#160;&#160;0   /* SDIO Spec Version 1.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a8890129d6cd00eb1fbb9e386542e40" name="a6a8890129d6cd00eb1fbb9e386542e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8890129d6cd00eb1fbb9e386542e40">&#9670;&#160;</a></span>SDIO_SDIO_REV_1_10</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SDIO_REV_1_10&#160;&#160;&#160;1   /* SDIO Spec Version 1.10 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91cd12402846c93f4ba0d0afcabf0ca3" name="a91cd12402846c93f4ba0d0afcabf0ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91cd12402846c93f4ba0d0afcabf0ca3">&#9670;&#160;</a></span>SDIO_SDIO_REV_1_20</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SDIO_REV_1_20&#160;&#160;&#160;2   /* SDIO Spec Version 1.20 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a3c4ecc3e4a44d06d1399671ab5018d" name="a6a3c4ecc3e4a44d06d1399671ab5018d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a3c4ecc3e4a44d06d1399671ab5018d">&#9670;&#160;</a></span>SDIO_SDIO_REV_2_00</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SDIO_REV_2_00&#160;&#160;&#160;3   /* SDIO Spec Version 2.00 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abb3fad31cd7de24980578c1c018478c6" name="abb3fad31cd7de24980578c1c018478c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3fad31cd7de24980578c1c018478c6">&#9670;&#160;</a></span>SDIO_SPEED_EHS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SPEED_EHS&#160;&#160;&#160;0x02    /* Enable High-Speed mode */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81908430ede0b63646c49029abf8a0db" name="a81908430ede0b63646c49029abf8a0db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81908430ede0b63646c49029abf8a0db">&#9670;&#160;</a></span>SDIO_SPEED_SHS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SDIO_SPEED_SHS&#160;&#160;&#160;0x01    /* Supports High-Speed mode */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac150b82e82d2db9e785d20d16a68ca7a" name="ac150b82e82d2db9e785d20d16a68ca7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac150b82e82d2db9e785d20d16a68ca7a">&#9670;&#160;</a></span>init_sdio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> init_sdio </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>ocr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0d201a31f70838cb72aef4cfd7beb87" name="aa0d201a31f70838cb72aef4cfd7beb87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0d201a31f70838cb72aef4cfd7beb87">&#9670;&#160;</a></span>rt_sdio_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_sdio_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab15f26b4eeabfd77c57704f557988465" name="ab15f26b4eeabfd77c57704f557988465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab15f26b4eeabfd77c57704f557988465">&#9670;&#160;</a></span>sdio_attach_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_attach_irq </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="mmcsd__card_8h.html#acf7d072a75be082310047c19ec200889">rt_sdio_irq_handler_t</a> *&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3695135120118b34fcb38123a9530abd" name="a3695135120118b34fcb38123a9530abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3695135120118b34fcb38123a9530abd">&#9670;&#160;</a></span>sdio_detach_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_detach_irq </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2777ff4e25a4e0dbad09708e4fb4bfae" name="a2777ff4e25a4e0dbad09708e4fb4bfae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2777ff4e25a4e0dbad09708e4fb4bfae">&#9670;&#160;</a></span>sdio_disable_func()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_disable_func </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acbd0a0bd07ff5cb2f472fbe73e4e1614" name="acbd0a0bd07ff5cb2f472fbe73e4e1614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd0a0bd07ff5cb2f472fbe73e4e1614">&#9670;&#160;</a></span>sdio_enable_func()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_enable_func </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1874b8a4833c94216626079496b63a9" name="ad1874b8a4833c94216626079496b63a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1874b8a4833c94216626079496b63a9">&#9670;&#160;</a></span>sdio_get_drvdata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * sdio_get_drvdata </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b05eee52c82c46f2ddbc138dd681ed8" name="a7b05eee52c82c46f2ddbc138dd681ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b05eee52c82c46f2ddbc138dd681ed8">&#9670;&#160;</a></span>sdio_io_read_multi_fifo_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_read_multi_fifo_b </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4b201877a4c836beabefa8e967f9318" name="ab4b201877a4c836beabefa8e967f9318"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4b201877a4c836beabefa8e967f9318">&#9670;&#160;</a></span>sdio_io_read_multi_incr_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_read_multi_incr_b </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18aa1f89ee5fefeceeb6e2b4e1654b66" name="a18aa1f89ee5fefeceeb6e2b4e1654b66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18aa1f89ee5fefeceeb6e2b4e1654b66">&#9670;&#160;</a></span>sdio_io_readb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sdio_io_readb </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7af7b5027bb0e424f56e1515414d39f5" name="a7af7b5027bb0e424f56e1515414d39f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af7b5027bb0e424f56e1515414d39f5">&#9670;&#160;</a></span>sdio_io_readl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> sdio_io_readl </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8445d447ddcf18dd5534175b52602736" name="a8445d447ddcf18dd5534175b52602736"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8445d447ddcf18dd5534175b52602736">&#9670;&#160;</a></span>sdio_io_readw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> sdio_io_readw </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> *&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7b97147598ef81cec0bc5b60a02aa4dc" name="a7b97147598ef81cec0bc5b60a02aa4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b97147598ef81cec0bc5b60a02aa4dc">&#9670;&#160;</a></span>sdio_io_rw_direct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_rw_direct </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a> *&#160;</td>
+          <td class="paramname"><em>card</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>rw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>reg_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>pdata</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>raw</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3a73598b72dd1c545129207cc265c74d" name="a3a73598b72dd1c545129207cc265c74d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a73598b72dd1c545129207cc265c74d">&#9670;&#160;</a></span>sdio_io_rw_extended()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_rw_extended </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a> *&#160;</td>
+          <td class="paramname"><em>card</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>rw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>op_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>blksize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a647bd4f4c636a330fb5e8f20b2a61b1a" name="a647bd4f4c636a330fb5e8f20b2a61b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a647bd4f4c636a330fb5e8f20b2a61b1a">&#9670;&#160;</a></span>sdio_io_rw_extended_block()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_rw_extended_block </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>rw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>op_code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5abee2071d1981a8f92735f75eb38399" name="a5abee2071d1981a8f92735f75eb38399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5abee2071d1981a8f92735f75eb38399">&#9670;&#160;</a></span>sdio_io_send_op_cond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_send_op_cond </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>ocr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> *&#160;</td>
+          <td class="paramname"><em>cmd5_resp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ef9f1e7d958545872970d61cb26e6c5" name="a9ef9f1e7d958545872970d61cb26e6c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ef9f1e7d958545872970d61cb26e6c5">&#9670;&#160;</a></span>sdio_io_write_multi_fifo_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_write_multi_fifo_b </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a258ec3e77801957bc5f463f142dded53" name="a258ec3e77801957bc5f463f142dded53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a258ec3e77801957bc5f463f142dded53">&#9670;&#160;</a></span>sdio_io_write_multi_incr_b()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_write_multi_incr_b </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc0e6d46d20bc08735e164dd93a5da31" name="abc0e6d46d20bc08735e164dd93a5da31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc0e6d46d20bc08735e164dd93a5da31">&#9670;&#160;</a></span>sdio_io_writeb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_writeb </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73152acdefd19405d572f9d21220d1ae" name="a73152acdefd19405d572f9d21220d1ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73152acdefd19405d572f9d21220d1ae">&#9670;&#160;</a></span>sdio_io_writel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_writel </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ff2cd6349edb805aebfcf1899b8ebf2" name="a0ff2cd6349edb805aebfcf1899b8ebf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ff2cd6349edb805aebfcf1899b8ebf2">&#9670;&#160;</a></span>sdio_io_writew()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_io_writew </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af47cb6f33e83c8f78f7274e4403e1784" name="af47cb6f33e83c8f78f7274e4403e1784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af47cb6f33e83c8f78f7274e4403e1784">&#9670;&#160;</a></span>sdio_irq_wakeup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sdio_irq_wakeup </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a> *&#160;</td>
+          <td class="paramname"><em>host</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82e2afecb257491536c7b603e3c20279" name="a82e2afecb257491536c7b603e3c20279"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82e2afecb257491536c7b603e3c20279">&#9670;&#160;</a></span>sdio_register_driver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_register_driver </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__driver.html">rt_sdio_driver</a> *&#160;</td>
+          <td class="paramname"><em>driver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a895f4fbb7877f42978bfe5f9af06b2a6" name="a895f4fbb7877f42978bfe5f9af06b2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a895f4fbb7877f42978bfe5f9af06b2a6">&#9670;&#160;</a></span>sdio_set_block_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_set_block_size </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>blksize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0161daa13af05c7d5538fb56c834ddce" name="a0161daa13af05c7d5538fb56c834ddce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0161daa13af05c7d5538fb56c834ddce">&#9670;&#160;</a></span>sdio_set_drvdata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sdio_set_drvdata </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__function.html">rt_sdio_function</a> *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a79fd99a314aeb8494d25cd9e2732637d" name="a79fd99a314aeb8494d25cd9e2732637d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79fd99a314aeb8494d25cd9e2732637d">&#9670;&#160;</a></span>sdio_unregister_driver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> sdio_unregister_driver </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__sdio__driver.html">rt_sdio_driver</a> *&#160;</td>
+          <td class="paramname"><em>driver</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="dev__sdio_8h.html">dev_sdio.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

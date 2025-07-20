@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/dev_spi.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dev__spi_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dev_spi.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="dev__pin_8h_source.html">drivers/dev_pin.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="driver_8h_source.html">drivers/core/driver.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dev_spi.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dev__spi_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2dev__spi_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2dev__spi_8h" id="acomponents_2drivers_2include_2drivers_2dev__spi_8h">
+<area shape="rect" title=" " alt="" coords="265,5,453,45"/>
+<area shape="rect" title=" " alt="" coords="198,93,269,119"/>
+<area shape="poly" title=" " alt="" coords="330,48,265,88,262,84,327,43"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="263,167,350,192"/>
+<area shape="poly" title=" " alt="" coords="353,47,335,94,316,154,311,152,329,92,348,45"/>
+<area shape="rect" href="dev__pin_8h.html" title=" " alt="" coords="345,93,479,119"/>
+<area shape="poly" title=" " alt="" coords="374,44,398,80,394,83,369,47"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="521,167,673,192"/>
+<area shape="poly" title=" " alt="" coords="403,43,447,65,493,91,539,124,577,155,573,160,535,128,491,96,445,69,401,48"/>
+<area shape="rect" title=" " alt="" coords="56,607,139,632"/>
+<area shape="poly" title=" " alt="" coords="263,185,188,193,145,202,104,216,66,234,36,257,15,288,10,305,8,325,8,474,15,510,31,544,53,573,75,596,71,599,49,576,27,546,10,512,3,474,3,325,5,304,11,285,32,254,63,229,102,211,144,197,187,188,263,179"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,387,480,412"/>
+<area shape="poly" title=" " alt="" coords="351,183,378,189,407,200,433,216,454,239,468,273,471,309,467,345,459,374,454,373,461,344,466,309,463,274,450,241,430,220,404,205,376,195,349,188"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="496,313,587,339"/>
+<area shape="poly" title=" " alt="" coords="351,182,386,188,425,199,464,215,499,238,523,267,537,299,532,301,518,270,496,242,461,220,423,204,384,193,350,187"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="181,240,238,265"/>
+<area shape="poly" title=" " alt="" coords="286,194,230,233,227,229,283,190"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="262,240,351,265"/>
+<area shape="poly" title=" " alt="" coords="309,192,309,226,304,226,304,192"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="117,313,192,339"/>
+<area shape="poly" title=" " alt="" coords="264,190,213,208,190,223,170,242,158,270,155,299,150,299,153,268,166,238,186,218,211,203,262,185"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="375,240,441,265"/>
+<area shape="poly" title=" " alt="" coords="324,190,382,230,379,234,321,194"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,460,489,485"/>
+<area shape="poly" title=" " alt="" coords="451,412,451,446,445,446,445,412"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,533,505,559"/>
+<area shape="poly" title=" " alt="" coords="465,410,487,431,504,459,507,477,503,494,487,524,482,522,498,492,501,476,499,461,482,435,462,414"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,533,402,559"/>
+<area shape="poly" title=" " alt="" coords="438,414,397,462,364,522,360,519,392,458,434,410"/>
+<area shape="rect" title=" " alt="" coords="221,460,331,485"/>
+<area shape="poly" title=" " alt="" coords="421,414,318,457,316,452,419,410"/>
+<area shape="poly" title=" " alt="" coords="453,485,462,520,457,521,448,486"/>
+<area shape="poly" title=" " alt="" coords="434,488,380,527,377,523,431,483"/>
+<area shape="poly" title=" " alt="" coords="426,559,414,561,152,611,151,606,413,556,425,554"/>
+<area shape="rect" title=" " alt="" coords="210,607,281,632"/>
+<area shape="poly" title=" " alt="" coords="431,561,294,605,293,600,429,556"/>
+<area shape="rect" title=" " alt="" coords="305,607,380,632"/>
+<area shape="poly" title=" " alt="" coords="447,561,376,602,373,597,444,556"/>
+<area shape="rect" title=" " alt="" coords="404,607,479,632"/>
+<area shape="poly" title=" " alt="" coords="464,560,452,594,447,593,459,558"/>
+<area shape="rect" title=" " alt="" coords="503,607,599,632"/>
+<area shape="poly" title=" " alt="" coords="481,557,528,596,525,600,477,561"/>
+<area shape="rect" title=" " alt="" coords="623,607,718,632"/>
+<area shape="poly" title=" " alt="" coords="499,556,625,600,624,605,497,561"/>
+<area shape="rect" title=" " alt="" coords="743,607,841,632"/>
+<area shape="poly" title=" " alt="" coords="506,553,730,602,729,607,505,559"/>
+<area shape="poly" title=" " alt="" coords="312,561,152,606,151,600,310,556"/>
+<area shape="poly" title=" " alt="" coords="528,341,476,380,472,376,525,337"/>
+<area shape="poly" title=" " alt="" coords="231,238,286,198,289,203,234,242"/>
+<area shape="poly" title=" " alt="" coords="219,264,247,299,288,336,346,366,403,385,402,390,344,371,285,341,243,303,215,267"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="299,313,362,339"/>
+<area shape="poly" title=" " alt="" coords="313,265,325,299,320,301,308,267"/>
+<area shape="poly" title=" " alt="" coords="351,336,418,377,416,382,348,341"/>
+<area shape="poly" title=" " alt="" coords="133,341,106,360,84,388,74,414,69,442,69,499,79,552,91,593,85,594,73,553,64,500,64,442,69,413,79,385,102,356,130,337"/>
+<area shape="poly" title=" " alt="" coords="193,334,403,385,402,390,192,339"/>
+<area shape="poly" title=" " alt="" coords="193,331,286,351,329,366,355,385,361,395,361,406,352,425,334,442,313,456,310,451,331,437,348,422,356,405,355,397,351,388,326,371,284,356,192,336"/>
+<area shape="rect" title=" " alt="" coords="93,387,208,412"/>
+<area shape="poly" title=" " alt="" coords="157,339,155,373,149,373,151,339"/>
+<area shape="rect" title=" " alt="" coords="232,387,341,412"/>
+<area shape="poly" title=" " alt="" coords="177,336,254,378,252,382,175,341"/>
+<area shape="poly" title=" " alt="" coords="414,265,444,373,439,374,409,266"/>
+<area shape="poly" title=" " alt="" coords="397,121,336,161,334,157,394,116"/>
+<area shape="poly" title=" " alt="" coords="604,192,612,220,618,259,616,301,611,321,601,340,579,363,552,379,522,390,494,396,493,391,521,385,550,374,576,359,596,337,606,319,611,300,613,259,607,221,599,193"/>
+</map>
+</div>
+</div>
+<p><a href="dev__spi_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__spi__message.html">rt_spi_message</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI message structure.  <a href="structrt__spi__message.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__spi__configuration.html">rt_spi_configuration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI configuration structure.  <a href="structrt__spi__configuration.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__spi__bus.html">rt_spi_bus</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI bus structure.  <a href="structrt__spi__bus.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__spi__ops.html">rt_spi_ops</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI operators.  <a href="structrt__spi__ops.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__spi__device.html">rt_spi_device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI Virtual BUS, one device must connected to a virtual BUS.  <a href="structrt__spi__device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__qspi__message.html">rt_qspi_message</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">QSPI message structure.  <a href="structrt__qspi__message.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__qspi__configuration.html">rt_qspi_configuration</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">QSPI configuration structure.  <a href="structrt__qspi__configuration.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__qspi__device.html">rt_qspi_device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">QSPI operators.  <a href="structrt__qspi__device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga00061586e69a79a37b833aff4cac2911" id="r_ga00061586e69a79a37b833aff4cac2911"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga00061586e69a79a37b833aff4cac2911">RT_SPI_CPHA</a>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
+<tr class="separator:ga00061586e69a79a37b833aff4cac2911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86d38968d21a3ea85c29101dbd88ec2c" id="r_ga86d38968d21a3ea85c29101dbd88ec2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga86d38968d21a3ea85c29101dbd88ec2c">RT_SPI_CPOL</a>&#160;&#160;&#160;(1&lt;&lt;1)</td></tr>
+<tr class="separator:ga86d38968d21a3ea85c29101dbd88ec2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64a90e0abff1332eef7c00d95698fe72" id="r_ga64a90e0abff1332eef7c00d95698fe72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga64a90e0abff1332eef7c00d95698fe72">RT_SPI_LSB</a>&#160;&#160;&#160;(0&lt;&lt;2)</td></tr>
+<tr class="separator:ga64a90e0abff1332eef7c00d95698fe72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga23dd8556f00b78154bf22210e8b5a3ff" id="r_ga23dd8556f00b78154bf22210e8b5a3ff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga23dd8556f00b78154bf22210e8b5a3ff">RT_SPI_MSB</a>&#160;&#160;&#160;(1&lt;&lt;2)</td></tr>
+<tr class="separator:ga23dd8556f00b78154bf22210e8b5a3ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga073843328664d4cf3954d732c7339725" id="r_ga073843328664d4cf3954d732c7339725"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga073843328664d4cf3954d732c7339725">RT_SPI_MASTER</a>&#160;&#160;&#160;(0&lt;&lt;3)</td></tr>
+<tr class="separator:ga073843328664d4cf3954d732c7339725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fd4b2c3eeacd7ab88a1bd32af87274e" id="r_ga9fd4b2c3eeacd7ab88a1bd32af87274e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga9fd4b2c3eeacd7ab88a1bd32af87274e">RT_SPI_SLAVE</a>&#160;&#160;&#160;(1&lt;&lt;3)</td></tr>
+<tr class="separator:ga9fd4b2c3eeacd7ab88a1bd32af87274e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0feae68713f405825236899c5a4065fa" id="r_ga0feae68713f405825236899c5a4065fa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga0feae68713f405825236899c5a4065fa">RT_SPI_CS_HIGH</a>&#160;&#160;&#160;(1&lt;&lt;4)</td></tr>
+<tr class="separator:ga0feae68713f405825236899c5a4065fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga067dcd5576bc996c79d2b26df13f7baf" id="r_ga067dcd5576bc996c79d2b26df13f7baf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga067dcd5576bc996c79d2b26df13f7baf">RT_SPI_NO_CS</a>&#160;&#160;&#160;(1&lt;&lt;5)</td></tr>
+<tr class="separator:ga067dcd5576bc996c79d2b26df13f7baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1ea047c3249adb142f982e96c6f0573" id="r_gad1ea047c3249adb142f982e96c6f0573"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gad1ea047c3249adb142f982e96c6f0573">RT_SPI_3WIRE</a>&#160;&#160;&#160;(1&lt;&lt;6)</td></tr>
+<tr class="separator:gad1ea047c3249adb142f982e96c6f0573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3639467e5a2f91df552d6397776c0733" id="r_ga3639467e5a2f91df552d6397776c0733"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga3639467e5a2f91df552d6397776c0733">RT_SPI_READY</a>&#160;&#160;&#160;(1&lt;&lt;7)</td></tr>
+<tr class="separator:ga3639467e5a2f91df552d6397776c0733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91ba6845e1ca48167d3a3905deea9224" id="r_ga91ba6845e1ca48167d3a3905deea9224"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga91ba6845e1ca48167d3a3905deea9224">RT_SPI_MODE_MASK</a>&#160;&#160;&#160;(<a class="el" href="group__group___s_p_i.html#ga00061586e69a79a37b833aff4cac2911">RT_SPI_CPHA</a> | <a class="el" href="group__group___s_p_i.html#ga86d38968d21a3ea85c29101dbd88ec2c">RT_SPI_CPOL</a> | <a class="el" href="group__group___s_p_i.html#ga23dd8556f00b78154bf22210e8b5a3ff">RT_SPI_MSB</a> | <a class="el" href="group__group___s_p_i.html#ga9fd4b2c3eeacd7ab88a1bd32af87274e">RT_SPI_SLAVE</a> | <a class="el" href="group__group___s_p_i.html#ga0feae68713f405825236899c5a4065fa">RT_SPI_CS_HIGH</a> | <a class="el" href="group__group___s_p_i.html#ga067dcd5576bc996c79d2b26df13f7baf">RT_SPI_NO_CS</a> | <a class="el" href="group__group___s_p_i.html#gad1ea047c3249adb142f982e96c6f0573">RT_SPI_3WIRE</a> | <a class="el" href="group__group___s_p_i.html#ga3639467e5a2f91df552d6397776c0733">RT_SPI_READY</a>)</td></tr>
+<tr class="separator:ga91ba6845e1ca48167d3a3905deea9224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga752d48503bb3e4bf018cf9db58ef796d" id="r_ga752d48503bb3e4bf018cf9db58ef796d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga752d48503bb3e4bf018cf9db58ef796d">RT_SPI_MODE_0</a>&#160;&#160;&#160;(0 | 0)</td></tr>
+<tr class="separator:ga752d48503bb3e4bf018cf9db58ef796d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga85c54fa886731f59d90b895a985d2878" id="r_ga85c54fa886731f59d90b895a985d2878"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga85c54fa886731f59d90b895a985d2878">RT_SPI_MODE_1</a>&#160;&#160;&#160;(0 | <a class="el" href="group__group___s_p_i.html#ga00061586e69a79a37b833aff4cac2911">RT_SPI_CPHA</a>)</td></tr>
+<tr class="separator:ga85c54fa886731f59d90b895a985d2878"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3517d43e92dbf77abb4eb12050657a8" id="r_gab3517d43e92dbf77abb4eb12050657a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gab3517d43e92dbf77abb4eb12050657a8">RT_SPI_MODE_2</a>&#160;&#160;&#160;(<a class="el" href="group__group___s_p_i.html#ga86d38968d21a3ea85c29101dbd88ec2c">RT_SPI_CPOL</a> | 0)</td></tr>
+<tr class="separator:gab3517d43e92dbf77abb4eb12050657a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94b472b0f1a1cf600ec30ecd7e30e0a4" id="r_ga94b472b0f1a1cf600ec30ecd7e30e0a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga94b472b0f1a1cf600ec30ecd7e30e0a4">RT_SPI_MODE_3</a>&#160;&#160;&#160;(<a class="el" href="group__group___s_p_i.html#ga86d38968d21a3ea85c29101dbd88ec2c">RT_SPI_CPOL</a> | <a class="el" href="group__group___s_p_i.html#ga00061586e69a79a37b833aff4cac2911">RT_SPI_CPHA</a>)</td></tr>
+<tr class="separator:ga94b472b0f1a1cf600ec30ecd7e30e0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c982db4cc401896c70d6c9b72ce911c" id="r_ga3c982db4cc401896c70d6c9b72ce911c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga3c982db4cc401896c70d6c9b72ce911c">RT_SPI_BUS_MODE_SPI</a>&#160;&#160;&#160;(1&lt;&lt;0)</td></tr>
+<tr class="separator:ga3c982db4cc401896c70d6c9b72ce911c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabaef8a7f95e7e3678eeba137b88d2f54" id="r_gabaef8a7f95e7e3678eeba137b88d2f54"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gabaef8a7f95e7e3678eeba137b88d2f54">RT_SPI_BUS_MODE_QSPI</a>&#160;&#160;&#160;(1&lt;&lt;1)</td></tr>
+<tr class="separator:gabaef8a7f95e7e3678eeba137b88d2f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga743de9071e29f37bd17cb5eeba8590b4" id="r_ga743de9071e29f37bd17cb5eeba8590b4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga743de9071e29f37bd17cb5eeba8590b4">RT_SPI_CS_CNT_MAX</a>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:ga743de9071e29f37bd17cb5eeba8590b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19033009b27f79330ea0e31538575da8" id="r_ga19033009b27f79330ea0e31538575da8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga19033009b27f79330ea0e31538575da8">SPI_DEVICE</a>(dev)&#160;&#160;&#160;((struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *)(dev))</td></tr>
+<tr class="separator:ga19033009b27f79330ea0e31538575da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga819ded0df4aefcabf5d7b2a254ce415e" id="r_ga819ded0df4aefcabf5d7b2a254ce415e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga819ded0df4aefcabf5d7b2a254ce415e">rt_spi_bus_register</a> (struct <a class="el" href="structrt__spi__bus.html">rt_spi_bus</a> *bus, const char *name, const struct <a class="el" href="structrt__spi__ops.html">rt_spi_ops</a> *ops)</td></tr>
+<tr class="memdesc:ga819ded0df4aefcabf5d7b2a254ce415e"><td class="mdescLeft">&#160;</td><td class="mdescRight">register a SPI bus  <br /></td></tr>
+<tr class="separator:ga819ded0df4aefcabf5d7b2a254ce415e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ab153eb02cfb523b4fdc4d40e79c96c" id="r_ga1ab153eb02cfb523b4fdc4d40e79c96c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga1ab153eb02cfb523b4fdc4d40e79c96c">rt_spi_bus_attach_device</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const char *name, const char *bus_name, void *user_data)</td></tr>
+<tr class="memdesc:ga1ab153eb02cfb523b4fdc4d40e79c96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">attach a device on SPI bus  <br /></td></tr>
+<tr class="separator:ga1ab153eb02cfb523b4fdc4d40e79c96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06c4f872ba0d92da656b92be3cceb6ea" id="r_ga06c4f872ba0d92da656b92be3cceb6ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga06c4f872ba0d92da656b92be3cceb6ea">rt_spi_bus_attach_device_cspin</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const char *name, const char *bus_name, <a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> cs_pin, void *user_data)</td></tr>
+<tr class="memdesc:ga06c4f872ba0d92da656b92be3cceb6ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">attach a device on SPI bus with CS pin  <br /></td></tr>
+<tr class="separator:ga06c4f872ba0d92da656b92be3cceb6ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8fec99dcd6c2e3f8ed1d0f84b2a7c03" id="r_gab8fec99dcd6c2e3f8ed1d0f84b2a7c03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gab8fec99dcd6c2e3f8ed1d0f84b2a7c03">rt_spi_bus_configure</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device)</td></tr>
+<tr class="memdesc:gab8fec99dcd6c2e3f8ed1d0f84b2a7c03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reconfigure the SPI bus for the specified device.  <br /></td></tr>
+<tr class="separator:gab8fec99dcd6c2e3f8ed1d0f84b2a7c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19faa07950f052fcd3fb2a0af26a2db0" id="r_ga19faa07950f052fcd3fb2a0af26a2db0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga19faa07950f052fcd3fb2a0af26a2db0">rt_spi_take_bus</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device)</td></tr>
+<tr class="memdesc:ga19faa07950f052fcd3fb2a0af26a2db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function takes SPI bus.  <br /></td></tr>
+<tr class="separator:ga19faa07950f052fcd3fb2a0af26a2db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa7025986fe1543c10f23c776687dcf56" id="r_gaa7025986fe1543c10f23c776687dcf56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gaa7025986fe1543c10f23c776687dcf56">rt_spi_release_bus</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device)</td></tr>
+<tr class="memdesc:gaa7025986fe1543c10f23c776687dcf56"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function releases SPI bus.  <br /></td></tr>
+<tr class="separator:gaa7025986fe1543c10f23c776687dcf56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee394d6fc071e0060608004feafd1bee" id="r_gaee394d6fc071e0060608004feafd1bee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gaee394d6fc071e0060608004feafd1bee">rt_spi_take</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device)</td></tr>
+<tr class="memdesc:gaee394d6fc071e0060608004feafd1bee"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function take SPI device (takes CS of SPI device).  <br /></td></tr>
+<tr class="separator:gaee394d6fc071e0060608004feafd1bee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac86c852bfaef894264800afd569ac66d" id="r_gac86c852bfaef894264800afd569ac66d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gac86c852bfaef894264800afd569ac66d">rt_spi_release</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device)</td></tr>
+<tr class="memdesc:gac86c852bfaef894264800afd569ac66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function releases SPI device (releases CS of SPI device).  <br /></td></tr>
+<tr class="separator:gac86c852bfaef894264800afd569ac66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga454653047b1964d01154a7657b675c2b" id="r_ga454653047b1964d01154a7657b675c2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga454653047b1964d01154a7657b675c2b">rt_spi_configure</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, struct <a class="el" href="structrt__spi__configuration.html">rt_spi_configuration</a> *cfg)</td></tr>
+<tr class="memdesc:ga454653047b1964d01154a7657b675c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can set configuration on SPI device.  <br /></td></tr>
+<tr class="separator:ga454653047b1964d01154a7657b675c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae02064c17425153edcf867cf7710af10" id="r_gae02064c17425153edcf867cf7710af10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gae02064c17425153edcf867cf7710af10">rt_spi_send_then_recv</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const void *send_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> send_length, void *recv_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> recv_length)</td></tr>
+<tr class="memdesc:gae02064c17425153edcf867cf7710af10"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can send data then receive data from SPI device.  <br /></td></tr>
+<tr class="separator:gae02064c17425153edcf867cf7710af10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f6e4ea6c445fdca36f299dae7bd69ae" id="r_ga5f6e4ea6c445fdca36f299dae7bd69ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga5f6e4ea6c445fdca36f299dae7bd69ae">rt_spi_send_then_send</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const void *send_buf1, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> send_length1, const void *send_buf2, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> send_length2)</td></tr>
+<tr class="memdesc:ga5f6e4ea6c445fdca36f299dae7bd69ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can send data then send data from SPI device.  <br /></td></tr>
+<tr class="separator:ga5f6e4ea6c445fdca36f299dae7bd69ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1116efe0655d4df542483b72aa689040" id="r_ga1116efe0655d4df542483b72aa689040"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga1116efe0655d4df542483b72aa689040">rt_spi_transfer</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const void *send_buf, void *recv_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> length)</td></tr>
+<tr class="memdesc:ga1116efe0655d4df542483b72aa689040"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function transmits data to SPI device.  <br /></td></tr>
+<tr class="separator:ga1116efe0655d4df542483b72aa689040"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d5fd38857ce4f0a987621667c3b050d" id="r_ga6d5fd38857ce4f0a987621667c3b050d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga6d5fd38857ce4f0a987621667c3b050d">rt_spi_sendrecv8</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> senddata, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *recvdata)</td></tr>
+<tr class="memdesc:ga6d5fd38857ce4f0a987621667c3b050d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI device transmits 8 bytes of data.  <br /></td></tr>
+<tr class="separator:ga6d5fd38857ce4f0a987621667c3b050d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5097f22fc4832731801106edf1849a01" id="r_ga5097f22fc4832731801106edf1849a01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga5097f22fc4832731801106edf1849a01">rt_spi_sendrecv16</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> senddata, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> *recvdata)</td></tr>
+<tr class="memdesc:ga5097f22fc4832731801106edf1849a01"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SPI device transmits 16 bytes of data.  <br /></td></tr>
+<tr class="separator:ga5097f22fc4832731801106edf1849a01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab70450113c592807628dbf7101bc3ede" id="r_gab70450113c592807628dbf7101bc3ede"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__spi__message.html">rt_spi_message</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gab70450113c592807628dbf7101bc3ede">rt_spi_transfer_message</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, struct <a class="el" href="structrt__spi__message.html">rt_spi_message</a> *message)</td></tr>
+<tr class="memdesc:gab70450113c592807628dbf7101bc3ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function transfers a message list to the SPI device.  <br /></td></tr>
+<tr class="separator:gab70450113c592807628dbf7101bc3ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf73c4e6ac2190b3360045945fe898271" id="r_gaf73c4e6ac2190b3360045945fe898271"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#gaf73c4e6ac2190b3360045945fe898271">rt_spi_recv</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, void *recv_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> length)</td></tr>
+<tr class="memdesc:gaf73c4e6ac2190b3360045945fe898271"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function receives data from SPI device.  <br /></td></tr>
+<tr class="separator:gaf73c4e6ac2190b3360045945fe898271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d272f7d685a4dc19b2bca56c192d817" id="r_ga8d272f7d685a4dc19b2bca56c192d817"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga8d272f7d685a4dc19b2bca56c192d817">rt_spi_send</a> (struct <a class="el" href="structrt__spi__device.html">rt_spi_device</a> *device, const void *send_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> length)</td></tr>
+<tr class="memdesc:ga8d272f7d685a4dc19b2bca56c192d817"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function sends data to SPI device.  <br /></td></tr>
+<tr class="separator:ga8d272f7d685a4dc19b2bca56c192d817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33ed1148c095fdc28bec6f57c40c0245" id="r_ga33ed1148c095fdc28bec6f57c40c0245"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga33ed1148c095fdc28bec6f57c40c0245">rt_spi_message_append</a> (struct <a class="el" href="structrt__spi__message.html">rt_spi_message</a> *list, struct <a class="el" href="structrt__spi__message.html">rt_spi_message</a> *message)</td></tr>
+<tr class="memdesc:ga33ed1148c095fdc28bec6f57c40c0245"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function appends a message to the SPI message list.  <br /></td></tr>
+<tr class="separator:ga33ed1148c095fdc28bec6f57c40c0245"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4f65a1f11e6a175a22bbdd16f88aeb62" id="r_ga4f65a1f11e6a175a22bbdd16f88aeb62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga4f65a1f11e6a175a22bbdd16f88aeb62">rt_qspi_configure</a> (struct <a class="el" href="structrt__qspi__device.html">rt_qspi_device</a> *device, struct <a class="el" href="structrt__qspi__configuration.html">rt_qspi_configuration</a> *cfg)</td></tr>
+<tr class="memdesc:ga4f65a1f11e6a175a22bbdd16f88aeb62"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can set configuration on QSPI device.  <br /></td></tr>
+<tr class="separator:ga4f65a1f11e6a175a22bbdd16f88aeb62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga198e29f11e253d910a5da22fbd20f450" id="r_ga198e29f11e253d910a5da22fbd20f450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga198e29f11e253d910a5da22fbd20f450">rt_qspi_bus_register</a> (struct <a class="el" href="structrt__spi__bus.html">rt_spi_bus</a> *bus, const char *name, const struct <a class="el" href="structrt__spi__ops.html">rt_spi_ops</a> *ops)</td></tr>
+<tr class="memdesc:ga198e29f11e253d910a5da22fbd20f450"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can register a SPI bus for QSPI mode.  <br /></td></tr>
+<tr class="separator:ga198e29f11e253d910a5da22fbd20f450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e8f5c61e348dbc6474fe7fc08d7d14f" id="r_ga2e8f5c61e348dbc6474fe7fc08d7d14f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga2e8f5c61e348dbc6474fe7fc08d7d14f">rt_qspi_transfer_message</a> (struct <a class="el" href="structrt__qspi__device.html">rt_qspi_device</a> *device, struct <a class="el" href="structrt__qspi__message.html">rt_qspi_message</a> *message)</td></tr>
+<tr class="memdesc:ga2e8f5c61e348dbc6474fe7fc08d7d14f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function transmits data to QSPI device.  <br /></td></tr>
+<tr class="separator:ga2e8f5c61e348dbc6474fe7fc08d7d14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b0d7af83a8a10fd7b96c1e32ff79ab6" id="r_ga5b0d7af83a8a10fd7b96c1e32ff79ab6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga5b0d7af83a8a10fd7b96c1e32ff79ab6">rt_qspi_send_then_recv</a> (struct <a class="el" href="structrt__qspi__device.html">rt_qspi_device</a> *device, const void *send_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> send_length, void *recv_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> recv_length)</td></tr>
+<tr class="memdesc:ga5b0d7af83a8a10fd7b96c1e32ff79ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can send data then receive data from QSPI device.  <br /></td></tr>
+<tr class="separator:ga5b0d7af83a8a10fd7b96c1e32ff79ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9cf74e21fa2af5effce91908af7f6f94" id="r_ga9cf74e21fa2af5effce91908af7f6f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___s_p_i.html#ga9cf74e21fa2af5effce91908af7f6f94">rt_qspi_send</a> (struct <a class="el" href="structrt__qspi__device.html">rt_qspi_device</a> *device, const void *send_buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> length)</td></tr>
+<tr class="memdesc:ga9cf74e21fa2af5effce91908af7f6f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can send data to QSPI device.  <br /></td></tr>
+<tr class="separator:ga9cf74e21fa2af5effce91908af7f6f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="dev__spi_8h.html">dev_spi.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

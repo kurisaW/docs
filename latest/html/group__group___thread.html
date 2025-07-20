@@ -1,0 +1,2343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: Group_Thread</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group___thread.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Group_Thread</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__cpu__usage__stats.html">rt_cpu_usage_stats</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__cpu.html">rt_cpu</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__interrupt__context.html">rt_interrupt_context</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thread.html">rt_thread</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gae743a0f57a34ce46c0687ff787972ded" id="r_gae743a0f57a34ce46c0687ff787972ded"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae743a0f57a34ce46c0687ff787972ded">RT_THREAD_INIT</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gae743a0f57a34ce46c0687ff787972ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c39773ce3aefe35d15e68f34ddedc9a" id="r_ga1c39773ce3aefe35d15e68f34ddedc9a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga1c39773ce3aefe35d15e68f34ddedc9a">RT_THREAD_CLOSE</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ga1c39773ce3aefe35d15e68f34ddedc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d2482a36a666c7e796f0fee67c0d3f3" id="r_ga3d2482a36a666c7e796f0fee67c0d3f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga3d2482a36a666c7e796f0fee67c0d3f3">RT_THREAD_READY</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga3d2482a36a666c7e796f0fee67c0d3f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76fc51507d2201f644b94b916560778b" id="r_ga76fc51507d2201f644b94b916560778b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga76fc51507d2201f644b94b916560778b">RT_THREAD_RUNNING</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:ga76fc51507d2201f644b94b916560778b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5c600bb0d749d4ff921f989c1f47eda" id="r_gae5c600bb0d749d4ff921f989c1f47eda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:gae5c600bb0d749d4ff921f989c1f47eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad0156f4be4d8f3b4d8131f185bdaf3b6" id="r_gad0156f4be4d8f3b4d8131f185bdaf3b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gad0156f4be4d8f3b4d8131f185bdaf3b6">RT_SIGNAL_COMMON_WAKEUP_MASK</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:gad0156f4be4d8f3b4d8131f185bdaf3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ed9c9c7aee211a59eadef4314c455ed" id="r_ga2ed9c9c7aee211a59eadef4314c455ed"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga2ed9c9c7aee211a59eadef4314c455ed">RT_SIGNAL_KILL_WAKEUP_MASK</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ga2ed9c9c7aee211a59eadef4314c455ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga52105c3a810895c9c9103064b9be1141" id="r_ga52105c3a810895c9c9103064b9be1141"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga52105c3a810895c9c9103064b9be1141">RT_THREAD_SUSPEND_INTERRUPTIBLE</a>&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a>)</td></tr>
+<tr class="separator:ga52105c3a810895c9c9103064b9be1141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad67bab390563b8b80a2ee7a847660f85" id="r_gad67bab390563b8b80a2ee7a847660f85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gad67bab390563b8b80a2ee7a847660f85">RT_THREAD_SUSPEND</a>&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga52105c3a810895c9c9103064b9be1141">RT_THREAD_SUSPEND_INTERRUPTIBLE</a></td></tr>
+<tr class="separator:gad67bab390563b8b80a2ee7a847660f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga740d81278ba15e5a8ed943a2b9d5fe79" id="r_ga740d81278ba15e5a8ed943a2b9d5fe79"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga740d81278ba15e5a8ed943a2b9d5fe79">RT_THREAD_SUSPEND_KILLABLE</a>&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a> | <a class="el" href="group__group___thread.html#gad0156f4be4d8f3b4d8131f185bdaf3b6">RT_SIGNAL_COMMON_WAKEUP_MASK</a>)</td></tr>
+<tr class="separator:ga740d81278ba15e5a8ed943a2b9d5fe79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ee5f39c3bc12f74abdb1a513a853133" id="r_ga6ee5f39c3bc12f74abdb1a513a853133"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga6ee5f39c3bc12f74abdb1a513a853133">RT_THREAD_SUSPEND_UNINTERRUPTIBLE</a>&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a> | <a class="el" href="group__group___thread.html#gad0156f4be4d8f3b4d8131f185bdaf3b6">RT_SIGNAL_COMMON_WAKEUP_MASK</a> | <a class="el" href="group__group___thread.html#ga2ed9c9c7aee211a59eadef4314c455ed">RT_SIGNAL_KILL_WAKEUP_MASK</a>)</td></tr>
+<tr class="separator:ga6ee5f39c3bc12f74abdb1a513a853133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga407702e2a2b59775f1fdf83d34ee10f0" id="r_ga407702e2a2b59775f1fdf83d34ee10f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga407702e2a2b59775f1fdf83d34ee10f0">RT_THREAD_STAT_MASK</a>&#160;&#160;&#160;0x07</td></tr>
+<tr class="separator:ga407702e2a2b59775f1fdf83d34ee10f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f8bae7391260aaaa55256c41ebf07c1" id="r_ga8f8bae7391260aaaa55256c41ebf07c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga8f8bae7391260aaaa55256c41ebf07c1">RT_THREAD_STAT_YIELD</a>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:ga8f8bae7391260aaaa55256c41ebf07c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga790bfc4df4e349e15c4bdf6de05a2493" id="r_ga790bfc4df4e349e15c4bdf6de05a2493"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga790bfc4df4e349e15c4bdf6de05a2493">RT_THREAD_STAT_YIELD_MASK</a>&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga8f8bae7391260aaaa55256c41ebf07c1">RT_THREAD_STAT_YIELD</a></td></tr>
+<tr class="separator:ga790bfc4df4e349e15c4bdf6de05a2493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafcb3ce12c6600fa83a4cd66e8b86ce35" id="r_gafcb3ce12c6600fa83a4cd66e8b86ce35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gafcb3ce12c6600fa83a4cd66e8b86ce35">RT_THREAD_STAT_SIGNAL</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:gafcb3ce12c6600fa83a4cd66e8b86ce35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac01665f490c11e38df118d8c6c0f2bd0" id="r_gac01665f490c11e38df118d8c6c0f2bd0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gac01665f490c11e38df118d8c6c0f2bd0">RT_THREAD_STAT_SIGNAL_READY</a>&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gafcb3ce12c6600fa83a4cd66e8b86ce35">RT_THREAD_STAT_SIGNAL</a> | <a class="el" href="group__group___thread.html#ga3d2482a36a666c7e796f0fee67c0d3f3">RT_THREAD_READY</a>)</td></tr>
+<tr class="separator:gac01665f490c11e38df118d8c6c0f2bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fff76fd7571a9684f61a718e66cb104" id="r_ga4fff76fd7571a9684f61a718e66cb104"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga4fff76fd7571a9684f61a718e66cb104">RT_THREAD_STAT_SIGNAL_WAIT</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:ga4fff76fd7571a9684f61a718e66cb104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa3e5d5ab9fb99840ad871e6092335d7a" id="r_gaa3e5d5ab9fb99840ad871e6092335d7a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaa3e5d5ab9fb99840ad871e6092335d7a">RT_THREAD_STAT_SIGNAL_PENDING</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:gaa3e5d5ab9fb99840ad871e6092335d7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b9421cbb0ee9127324cda53241fd797" id="r_ga2b9421cbb0ee9127324cda53241fd797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga2b9421cbb0ee9127324cda53241fd797">RT_THREAD_STAT_SIGNAL_MASK</a>&#160;&#160;&#160;0xf0</td></tr>
+<tr class="separator:ga2b9421cbb0ee9127324cda53241fd797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae94f55354bd0e145bd855bd38db5c442" id="r_gae94f55354bd0e145bd855bd38db5c442"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae94f55354bd0e145bd855bd38db5c442">RT_THREAD_CTRL_STARTUP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gae94f55354bd0e145bd855bd38db5c442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad875eaaa2400aef8f6078f5d1f8297b3" id="r_gad875eaaa2400aef8f6078f5d1f8297b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gad875eaaa2400aef8f6078f5d1f8297b3">RT_THREAD_CTRL_CLOSE</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gad875eaaa2400aef8f6078f5d1f8297b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad59e5c8ec96f8b3231947b0c665e5fba" id="r_gad59e5c8ec96f8b3231947b0c665e5fba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gad59e5c8ec96f8b3231947b0c665e5fba">RT_THREAD_CTRL_CHANGE_PRIORITY</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:gad59e5c8ec96f8b3231947b0c665e5fba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga45ba1445796c920c2ae943b419e19d4b" id="r_ga45ba1445796c920c2ae943b419e19d4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga45ba1445796c920c2ae943b419e19d4b">RT_THREAD_CTRL_INFO</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:ga45ba1445796c920c2ae943b419e19d4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33e2bf49443c5a96c293a554203de8e3" id="r_ga33e2bf49443c5a96c293a554203de8e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga33e2bf49443c5a96c293a554203de8e3">RT_THREAD_CTRL_BIND_CPU</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:ga33e2bf49443c5a96c293a554203de8e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19ea24b0cf98816e6470dd0dbf98faa7" id="r_ga19ea24b0cf98816e6470dd0dbf98faa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga19ea24b0cf98816e6470dd0dbf98faa7">RT_THREAD_CTRL_RESET_PRIORITY</a>&#160;&#160;&#160;0x05</td></tr>
+<tr class="separator:ga19ea24b0cf98816e6470dd0dbf98faa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafeb9cafb39b06b4de8c0ab8a86ff255a" id="r_gafeb9cafb39b06b4de8c0ab8a86ff255a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gafeb9cafb39b06b4de8c0ab8a86ff255a">rt_current_thread</a>&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga6133c1b6b27d972447156db15e7c1ce7">rt_thread_self</a>()</td></tr>
+<tr class="separator:gafeb9cafb39b06b4de8c0ab8a86ff255a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5895f22603ddbc38750fc5e99768f81" id="r_gac5895f22603ddbc38750fc5e99768f81"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gac5895f22603ddbc38750fc5e99768f81">LWP_IS_USER_MODE</a>(t)&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:gac5895f22603ddbc38750fc5e99768f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94d3b85f04028c8d67de67151c21c60d" id="r_ga94d3b85f04028c8d67de67151c21c60d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga94d3b85f04028c8d67de67151c21c60d">RT_SCHEDULER_STACK_CHECK</a>(thr)</td></tr>
+<tr class="separator:ga94d3b85f04028c8d67de67151c21c60d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga29ae838c0c506273defaf944c2b20a87" id="r_ga29ae838c0c506273defaf944c2b20a87"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__cpu__usage__stats.html">rt_cpu_usage_stats</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga29ae838c0c506273defaf944c2b20a87">rt_cpu_usage_stats_t</a></td></tr>
+<tr class="separator:ga29ae838c0c506273defaf944c2b20a87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabef03afaa26fb8d3ee8da876bc8070a0" id="r_gabef03afaa26fb8d3ee8da876bc8070a0"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__cpu.html">rt_cpu</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gabef03afaa26fb8d3ee8da876bc8070a0">rt_cpu_t</a></td></tr>
+<tr class="separator:gabef03afaa26fb8d3ee8da876bc8070a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae496369bc5dcfd1c6de1425d7f45f79d" id="r_gae496369bc5dcfd1c6de1425d7f45f79d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__interrupt__context.html">rt_interrupt_context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae496369bc5dcfd1c6de1425d7f45f79d">rt_interrupt_context_t</a></td></tr>
+<tr class="separator:gae496369bc5dcfd1c6de1425d7f45f79d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e0d871619ef3b8dd5c4b6ab1e8bddad" id="r_ga4e0d871619ef3b8dd5c4b6ab1e8bddad"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga4e0d871619ef3b8dd5c4b6ab1e8bddad">rt_thread_cleanup_t</a>) (struct <a class="el" href="structrt__thread.html">rt_thread</a> *tid)</td></tr>
+<tr class="separator:ga4e0d871619ef3b8dd5c4b6ab1e8bddad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad617ac6bd69bf546743549542a86fbf9" id="r_gad617ac6bd69bf546743549542a86fbf9"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a></td></tr>
+<tr class="separator:gad617ac6bd69bf546743549542a86fbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7834be0d0c62aaa32ae47ade3ac21e68" id="r_ga7834be0d0c62aaa32ae47ade3ac21e68"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga7834be0d0c62aaa32ae47ade3ac21e68">rt_thread_inited_hookproto_t</a>) (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:ga7834be0d0c62aaa32ae47ade3ac21e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets a hook function when a thread is initialized.  <br /></td></tr>
+<tr class="separator:ga7834be0d0c62aaa32ae47ade3ac21e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga9334a5b9057f32da96db9b5c6a045d67" id="r_ga9334a5b9057f32da96db9b5c6a045d67"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__group___thread.html#gga9334a5b9057f32da96db9b5c6a045d67a871587c9d7bcf1cd9f7107c5221a5a29">RT_INTERRUPTIBLE</a> = 0
+, <a class="el" href="group__group___thread.html#gga9334a5b9057f32da96db9b5c6a045d67a3bea1dae51f66e74cde0247ed99f8ac4">RT_KILLABLE</a>
+, <a class="el" href="group__group___thread.html#gga9334a5b9057f32da96db9b5c6a045d67abf7d28fdc945b303ffeb9aaa21b4bd9d">RT_UNINTERRUPTIBLE</a>
+ }</td></tr>
+<tr class="separator:ga9334a5b9057f32da96db9b5c6a045d67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gacd985aa60939b95e510f144610f001b9" id="r_gacd985aa60939b95e510f144610f001b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gacd985aa60939b95e510f144610f001b9">rt_thread_init</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread, const char *name, void(*entry)(void *parameter), void *parameter, void *stack_start, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> stack_size, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> priority, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> tick)</td></tr>
+<tr class="memdesc:gacd985aa60939b95e510f144610f001b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will initialize a thread. It's used to initialize a static thread object.  <br /></td></tr>
+<tr class="separator:gacd985aa60939b95e510f144610f001b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga514825b80304477ecf377d721da409b0" id="r_ga514825b80304477ecf377d721da409b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga514825b80304477ecf377d721da409b0">rt_thread_detach</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:ga514825b80304477ecf377d721da409b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will detach a thread. The thread object will be removed from thread queue and detached/deleted from the system object management.  <br /></td></tr>
+<tr class="separator:ga514825b80304477ecf377d721da409b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb215b161f17c26b5e19c28cd0119e7b" id="r_gacb215b161f17c26b5e19c28cd0119e7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gacb215b161f17c26b5e19c28cd0119e7b">rt_thread_create</a> (const char *name, void(*entry)(void *parameter), void *parameter, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> stack_size, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> priority, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> tick)</td></tr>
+<tr class="memdesc:gacb215b161f17c26b5e19c28cd0119e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a thread object and allocate thread object memory. and stack.  <br /></td></tr>
+<tr class="separator:gacb215b161f17c26b5e19c28cd0119e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d64eb4d0a485461049616808f4ce177" id="r_ga6d64eb4d0a485461049616808f4ce177"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga6d64eb4d0a485461049616808f4ce177">rt_thread_delete</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:ga6d64eb4d0a485461049616808f4ce177"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will delete a thread. The thread object will be removed from thread queue and deleted from system object management in the idle thread.  <br /></td></tr>
+<tr class="separator:ga6d64eb4d0a485461049616808f4ce177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0c482e895baff359b920966f2822ee06" id="r_ga0c482e895baff359b920966f2822ee06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga0c482e895baff359b920966f2822ee06">rt_thread_close</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:ga0c482e895baff359b920966f2822ee06"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will close a thread. The thread object will be removed from thread queue and detached/deleted from the system object management. It's different from rt_thread_delete or rt_thread_detach that this will not enqueue the closing thread to cleanup queue.  <br /></td></tr>
+<tr class="separator:ga0c482e895baff359b920966f2822ee06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6133c1b6b27d972447156db15e7c1ce7" id="r_ga6133c1b6b27d972447156db15e7c1ce7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga6133c1b6b27d972447156db15e7c1ce7">rt_thread_self</a> (void)</td></tr>
+<tr class="memdesc:ga6133c1b6b27d972447156db15e7c1ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return self thread object.  <br /></td></tr>
+<tr class="separator:ga6133c1b6b27d972447156db15e7c1ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga789a0782597b4d7f7c6c16eacc6084a8" id="r_ga789a0782597b4d7f7c6c16eacc6084a8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga789a0782597b4d7f7c6c16eacc6084a8">rt_thread_find</a> (char *name)</td></tr>
+<tr class="memdesc:ga789a0782597b4d7f7c6c16eacc6084a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will find the specified thread.  <br /></td></tr>
+<tr class="separator:ga789a0782597b4d7f7c6c16eacc6084a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04b743537fd099e204fc292e57b4aa5a" id="r_ga04b743537fd099e204fc292e57b4aa5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga04b743537fd099e204fc292e57b4aa5a">rt_thread_startup</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:ga04b743537fd099e204fc292e57b4aa5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will start a thread and put it to system ready queue.  <br /></td></tr>
+<tr class="separator:ga04b743537fd099e204fc292e57b4aa5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5703a0d7351b37a1c00874a362626ea3" id="r_ga5703a0d7351b37a1c00874a362626ea3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga5703a0d7351b37a1c00874a362626ea3">rt_thread_yield</a> (void)</td></tr>
+<tr class="memdesc:ga5703a0d7351b37a1c00874a362626ea3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will let current thread yield processor, and scheduler will choose the highest thread to run. After yield processor, the current thread is still in READY state.  <br /></td></tr>
+<tr class="separator:ga5703a0d7351b37a1c00874a362626ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b18459cac67e3695447e69b997fc74e" id="r_ga6b18459cac67e3695447e69b997fc74e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga6b18459cac67e3695447e69b997fc74e">rt_thread_delay</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> tick)</td></tr>
+<tr class="memdesc:ga6b18459cac67e3695447e69b997fc74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will let current thread delay for some ticks.  <br /></td></tr>
+<tr class="separator:ga6b18459cac67e3695447e69b997fc74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga309d01453eb09acaee5012a2e159961c" id="r_ga309d01453eb09acaee5012a2e159961c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga309d01453eb09acaee5012a2e159961c">rt_thread_delay_until</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> *tick, <a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> inc_tick)</td></tr>
+<tr class="memdesc:ga309d01453eb09acaee5012a2e159961c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will let current thread delay until (*tick + inc_tick).  <br /></td></tr>
+<tr class="separator:ga309d01453eb09acaee5012a2e159961c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4ba0dbf06d5fa05f469da371ff6d2876" id="r_ga4ba0dbf06d5fa05f469da371ff6d2876"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga4ba0dbf06d5fa05f469da371ff6d2876">rt_thread_mdelay</a> (<a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> ms)</td></tr>
+<tr class="memdesc:ga4ba0dbf06d5fa05f469da371ff6d2876"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will let current thread delay for some milliseconds.  <br /></td></tr>
+<tr class="separator:ga4ba0dbf06d5fa05f469da371ff6d2876"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga34c65d3f7d01310fe7b54b2e706b1bdc" id="r_ga34c65d3f7d01310fe7b54b2e706b1bdc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga34c65d3f7d01310fe7b54b2e706b1bdc">rt_thread_control</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, int cmd, void *arg)</td></tr>
+<tr class="memdesc:ga34c65d3f7d01310fe7b54b2e706b1bdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will control thread behaviors according to control command.  <br /></td></tr>
+<tr class="separator:ga34c65d3f7d01310fe7b54b2e706b1bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab75228a43588dc35570bce6a2c18f3f0" id="r_gab75228a43588dc35570bce6a2c18f3f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gab75228a43588dc35570bce6a2c18f3f0">rt_thread_suspend</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="separator:gab75228a43588dc35570bce6a2c18f3f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga537adfa695f87cdea6310ec3f66fced0" id="r_ga537adfa695f87cdea6310ec3f66fced0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga537adfa695f87cdea6310ec3f66fced0">rt_thread_suspend_with_flag</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, int suspend_flag)</td></tr>
+<tr class="memdesc:ga537adfa695f87cdea6310ec3f66fced0"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will suspend the specified thread and change it to suspend state.  <br /></td></tr>
+<tr class="separator:ga537adfa695f87cdea6310ec3f66fced0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4f29aff4fec96d92f6321fa7b00c379" id="r_gab4f29aff4fec96d92f6321fa7b00c379"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gab4f29aff4fec96d92f6321fa7b00c379">rt_thread_resume</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td></tr>
+<tr class="memdesc:gab4f29aff4fec96d92f6321fa7b00c379"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will resume a thread and put it to system ready queue.  <br /></td></tr>
+<tr class="separator:gab4f29aff4fec96d92f6321fa7b00c379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e2474c7ee1c6eb90f676ecbbc904363" id="r_ga0e2474c7ee1c6eb90f676ecbbc904363"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga0e2474c7ee1c6eb90f676ecbbc904363">rt_thread_get_name</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, char *name, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> name_size)</td></tr>
+<tr class="memdesc:ga0e2474c7ee1c6eb90f676ecbbc904363"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return the name of the specified thread.  <br /></td></tr>
+<tr class="separator:ga0e2474c7ee1c6eb90f676ecbbc904363"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c6bd85fb0e9179bfbb1b176539d097f" id="r_ga4c6bd85fb0e9179bfbb1b176539d097f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga4c6bd85fb0e9179bfbb1b176539d097f">rt_thread_alloc_sig</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> tid)</td></tr>
+<tr class="separator:ga4c6bd85fb0e9179bfbb1b176539d097f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d7cbacfe5c3634d14f8e12bb558184a" id="r_ga8d7cbacfe5c3634d14f8e12bb558184a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga8d7cbacfe5c3634d14f8e12bb558184a">rt_thread_free_sig</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> tid)</td></tr>
+<tr class="separator:ga8d7cbacfe5c3634d14f8e12bb558184a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2135a51adac8206aa7876466ae00ee20" id="r_ga2135a51adac8206aa7876466ae00ee20"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga2135a51adac8206aa7876466ae00ee20">rt_thread_kill</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> tid, int sig)</td></tr>
+<tr class="memdesc:ga2135a51adac8206aa7876466ae00ee20"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function can be used to send any signal to any thread.  <br /></td></tr>
+<tr class="separator:ga2135a51adac8206aa7876466ae00ee20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga83bae9e21b23cfbf2e1c4f09654e3012" id="r_ga83bae9e21b23cfbf2e1c4f09654e3012"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga83bae9e21b23cfbf2e1c4f09654e3012">rt_thread_suspend_sethook</a> (void(*hook)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread))</td></tr>
+<tr class="separator:ga83bae9e21b23cfbf2e1c4f09654e3012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae051e428ad5b79744249d2658d5084b5" id="r_gae051e428ad5b79744249d2658d5084b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae051e428ad5b79744249d2658d5084b5">rt_thread_resume_sethook</a> (void(*hook)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread))</td></tr>
+<tr class="separator:gae051e428ad5b79744249d2658d5084b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64f2c17d6cef710eb12414f23640116a" id="r_ga64f2c17d6cef710eb12414f23640116a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga64f2c17d6cef710eb12414f23640116a">RT_OBJECT_HOOKLIST_DECLARE</a> (<a class="el" href="group__group___thread.html#ga7834be0d0c62aaa32ae47ade3ac21e68">rt_thread_inited_hookproto_t</a>, rt_thread_inited)</td></tr>
+<tr class="separator:ga64f2c17d6cef710eb12414f23640116a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae0dcacf89c3d97272b185f7162a3e0c3" id="r_gae0dcacf89c3d97272b185f7162a3e0c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae0dcacf89c3d97272b185f7162a3e0c3">rt_thread_idle_init</a> (void)</td></tr>
+<tr class="memdesc:gae0dcacf89c3d97272b185f7162a3e0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will initialize idle thread, then start it.  <br /></td></tr>
+<tr class="separator:gae0dcacf89c3d97272b185f7162a3e0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab943d93390d71c999debbf98fee44a0e" id="r_gab943d93390d71c999debbf98fee44a0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gab943d93390d71c999debbf98fee44a0e">rt_thread_idle_sethook</a> (void(*hook)(void))</td></tr>
+<tr class="separator:gab943d93390d71c999debbf98fee44a0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf48521904309636f9ccdbf562199c0a5" id="r_gaf48521904309636f9ccdbf562199c0a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaf48521904309636f9ccdbf562199c0a5">rt_thread_idle_delhook</a> (void(*hook)(void))</td></tr>
+<tr class="memdesc:gaf48521904309636f9ccdbf562199c0a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete the idle hook on hook list.  <br /></td></tr>
+<tr class="separator:gaf48521904309636f9ccdbf562199c0a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd22f9965fffe9e940fd364f0838731f" id="r_gadd22f9965fffe9e940fd364f0838731f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gadd22f9965fffe9e940fd364f0838731f">rt_thread_idle_gethandler</a> (void)</td></tr>
+<tr class="memdesc:gadd22f9965fffe9e940fd364f0838731f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will get the handler of the idle thread.  <br /></td></tr>
+<tr class="separator:gadd22f9965fffe9e940fd364f0838731f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5aa2c0c67999e20ce8693ad3c8e624f0" id="r_ga5aa2c0c67999e20ce8693ad3c8e624f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga5aa2c0c67999e20ce8693ad3c8e624f0">rt_system_scheduler_init</a> (void)</td></tr>
+<tr class="memdesc:ga5aa2c0c67999e20ce8693ad3c8e624f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the system scheduler.  <br /></td></tr>
+<tr class="separator:ga5aa2c0c67999e20ce8693ad3c8e624f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aa8a561e0caf5e13126834c4f4bb681" id="r_ga9aa8a561e0caf5e13126834c4f4bb681"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga9aa8a561e0caf5e13126834c4f4bb681">rt_system_scheduler_start</a> (void)</td></tr>
+<tr class="memdesc:ga9aa8a561e0caf5e13126834c4f4bb681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the system scheduler and switch to the highest priority thread.  <br /></td></tr>
+<tr class="separator:ga9aa8a561e0caf5e13126834c4f4bb681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9f99bb5e2e2032b10ddda7a03eefe24" id="r_gae9f99bb5e2e2032b10ddda7a03eefe24"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae9f99bb5e2e2032b10ddda7a03eefe24">rt_schedule</a> (void)</td></tr>
+<tr class="separator:gae9f99bb5e2e2032b10ddda7a03eefe24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb4158a39c5ea956a96b22190ce0ed89" id="r_gabb4158a39c5ea956a96b22190ce0ed89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gabb4158a39c5ea956a96b22190ce0ed89">rt_scheduler_do_irq_switch</a> (void *context)</td></tr>
+<tr class="separator:gabb4158a39c5ea956a96b22190ce0ed89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76da2e5b2bc5193a710491a6b2cbbff6" id="r_ga76da2e5b2bc5193a710491a6b2cbbff6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga76da2e5b2bc5193a710491a6b2cbbff6">rt_enter_critical</a> (void)</td></tr>
+<tr class="separator:ga76da2e5b2bc5193a710491a6b2cbbff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35c56c2d56e2bb0f2df95abc752143df" id="r_ga35c56c2d56e2bb0f2df95abc752143df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga35c56c2d56e2bb0f2df95abc752143df">rt_exit_critical</a> (void)</td></tr>
+<tr class="separator:ga35c56c2d56e2bb0f2df95abc752143df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga28198f1a056fd2b1289b574641324d02" id="r_ga28198f1a056fd2b1289b574641324d02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga28198f1a056fd2b1289b574641324d02">rt_exit_critical_safe</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> critical_level)</td></tr>
+<tr class="separator:ga28198f1a056fd2b1289b574641324d02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3f894e8efadefda238a5e5ab45c7e21" id="r_gaf3f894e8efadefda238a5e5ab45c7e21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaf3f894e8efadefda238a5e5ab45c7e21">rt_critical_level</a> (void)</td></tr>
+<tr class="separator:gaf3f894e8efadefda238a5e5ab45c7e21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1af67d388db8019327b5f86428e2ed14" id="r_ga1af67d388db8019327b5f86428e2ed14"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga1af67d388db8019327b5f86428e2ed14">rt_scheduler_sethook</a> (void(*hook)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> from, <a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> to))</td></tr>
+<tr class="separator:ga1af67d388db8019327b5f86428e2ed14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4685884789cfcd32a5a7626184cb4d7b" id="r_ga4685884789cfcd32a5a7626184cb4d7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga4685884789cfcd32a5a7626184cb4d7b">rt_scheduler_switch_sethook</a> (void(*hook)(struct <a class="el" href="structrt__thread.html">rt_thread</a> *tid))</td></tr>
+<tr class="separator:ga4685884789cfcd32a5a7626184cb4d7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf46cd7a5a8dcda6487729d64b8a88b12" id="r_gaf46cd7a5a8dcda6487729d64b8a88b12"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaf46cd7a5a8dcda6487729d64b8a88b12">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#gacd985aa60939b95e510f144610f001b9">rt_thread_init</a>)</td></tr>
+<tr class="separator:gaf46cd7a5a8dcda6487729d64b8a88b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86932b5c5c1daea7c0c48b3bd9db23af" id="r_ga86932b5c5c1daea7c0c48b3bd9db23af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga86932b5c5c1daea7c0c48b3bd9db23af">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga6133c1b6b27d972447156db15e7c1ce7">rt_thread_self</a>)</td></tr>
+<tr class="separator:ga86932b5c5c1daea7c0c48b3bd9db23af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa931773299f9e42ff9420505d3be53f7" id="r_gaa931773299f9e42ff9420505d3be53f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaa931773299f9e42ff9420505d3be53f7">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga04b743537fd099e204fc292e57b4aa5a">rt_thread_startup</a>)</td></tr>
+<tr class="separator:gaa931773299f9e42ff9420505d3be53f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10b5652221e6004b03784f7555894148" id="r_ga10b5652221e6004b03784f7555894148"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga10b5652221e6004b03784f7555894148">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga0c482e895baff359b920966f2822ee06">rt_thread_close</a>)</td></tr>
+<tr class="separator:ga10b5652221e6004b03784f7555894148"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba6ba9c744e797ac9aa446cecc1c38b8" id="r_gaba6ba9c744e797ac9aa446cecc1c38b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaba6ba9c744e797ac9aa446cecc1c38b8">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga514825b80304477ecf377d721da409b0">rt_thread_detach</a>)</td></tr>
+<tr class="separator:gaba6ba9c744e797ac9aa446cecc1c38b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3de035a2ad924c2934e795ebd26f431" id="r_gab3de035a2ad924c2934e795ebd26f431"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gab3de035a2ad924c2934e795ebd26f431">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#gacb215b161f17c26b5e19c28cd0119e7b">rt_thread_create</a>)</td></tr>
+<tr class="separator:gab3de035a2ad924c2934e795ebd26f431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c8b81f1c968b60efe958a68f780e294" id="r_ga1c8b81f1c968b60efe958a68f780e294"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga1c8b81f1c968b60efe958a68f780e294">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga6d64eb4d0a485461049616808f4ce177">rt_thread_delete</a>)</td></tr>
+<tr class="separator:ga1c8b81f1c968b60efe958a68f780e294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5a78508d606c1c29afaeea1f729ebe9" id="r_gac5a78508d606c1c29afaeea1f729ebe9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gac5a78508d606c1c29afaeea1f729ebe9">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga5703a0d7351b37a1c00874a362626ea3">rt_thread_yield</a>)</td></tr>
+<tr class="separator:gac5a78508d606c1c29afaeea1f729ebe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa471279204d5c1d4628df0465f069065" id="r_gaa471279204d5c1d4628df0465f069065"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaa471279204d5c1d4628df0465f069065">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga6b18459cac67e3695447e69b997fc74e">rt_thread_delay</a>)</td></tr>
+<tr class="separator:gaa471279204d5c1d4628df0465f069065"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa99bb4b68afc457ec6c55b43031b532f" id="r_gaa99bb4b68afc457ec6c55b43031b532f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaa99bb4b68afc457ec6c55b43031b532f">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga309d01453eb09acaee5012a2e159961c">rt_thread_delay_until</a>)</td></tr>
+<tr class="separator:gaa99bb4b68afc457ec6c55b43031b532f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf1f9239305a6fe77b00739b24409d0f" id="r_gabf1f9239305a6fe77b00739b24409d0f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gabf1f9239305a6fe77b00739b24409d0f">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga4ba0dbf06d5fa05f469da371ff6d2876">rt_thread_mdelay</a>)</td></tr>
+<tr class="separator:gabf1f9239305a6fe77b00739b24409d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea74536a31a3bebc1900639922c05d2f" id="r_gaea74536a31a3bebc1900639922c05d2f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gaea74536a31a3bebc1900639922c05d2f">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga34c65d3f7d01310fe7b54b2e706b1bdc">rt_thread_control</a>)</td></tr>
+<tr class="separator:gaea74536a31a3bebc1900639922c05d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga41e560062d5e4b929ad2868e4ccc90f2" id="r_ga41e560062d5e4b929ad2868e4ccc90f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga41e560062d5e4b929ad2868e4ccc90f2">rt_thread_suspend_to_list</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, <a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *susp_list, int ipc_flags, int suspend_flag)</td></tr>
+<tr class="memdesc:ga41e560062d5e4b929ad2868e4ccc90f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will suspend the specified thread and change it to suspend state.  <br /></td></tr>
+<tr class="separator:ga41e560062d5e4b929ad2868e4ccc90f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d1dc22c7ae36f66895e68cbc2b70c1" id="r_ga87d1dc22c7ae36f66895e68cbc2b70c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga87d1dc22c7ae36f66895e68cbc2b70c1">RTM_EXPORT</a> (<a class="el" href="group__group___i_p_c.html#ga41e560062d5e4b929ad2868e4ccc90f2">rt_thread_suspend_to_list</a>)</td></tr>
+<tr class="separator:ga87d1dc22c7ae36f66895e68cbc2b70c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae160c313915fefa655416f812c481999" id="r_gae160c313915fefa655416f812c481999"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#gae160c313915fefa655416f812c481999">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga537adfa695f87cdea6310ec3f66fced0">rt_thread_suspend_with_flag</a>)</td></tr>
+<tr class="separator:gae160c313915fefa655416f812c481999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e556384976ee307f4805cae8c8efdcd" id="r_ga3e556384976ee307f4805cae8c8efdcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga3e556384976ee307f4805cae8c8efdcd">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#gab75228a43588dc35570bce6a2c18f3f0">rt_thread_suspend</a>)</td></tr>
+<tr class="separator:ga3e556384976ee307f4805cae8c8efdcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14855dffdd71dc43f7863cacb916c3b5" id="r_ga14855dffdd71dc43f7863cacb916c3b5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga14855dffdd71dc43f7863cacb916c3b5">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#gab4f29aff4fec96d92f6321fa7b00c379">rt_thread_resume</a>)</td></tr>
+<tr class="separator:ga14855dffdd71dc43f7863cacb916c3b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9852687a217c61cd829c50bfb44f1ca6" id="r_ga9852687a217c61cd829c50bfb44f1ca6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga9852687a217c61cd829c50bfb44f1ca6">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga789a0782597b4d7f7c6c16eacc6084a8">rt_thread_find</a>)</td></tr>
+<tr class="separator:ga9852687a217c61cd829c50bfb44f1ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9328077144256d26375180e97b6f6b38" id="r_ga9328077144256d26375180e97b6f6b38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___thread.html#ga9328077144256d26375180e97b6f6b38">RTM_EXPORT</a> (<a class="el" href="group__group___thread.html#ga0e2474c7ee1c6eb90f676ecbbc904363">rt_thread_get_name</a>)</td></tr>
+<tr class="separator:ga9328077144256d26375180e97b6f6b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gac5895f22603ddbc38750fc5e99768f81" name="gac5895f22603ddbc38750fc5e99768f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5895f22603ddbc38750fc5e99768f81">&#9670;&#160;</a></span>LWP_IS_USER_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LWP_IS_USER_MODE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t</td><td>)</td>
+          <td>&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafeb9cafb39b06b4de8c0ab8a86ff255a" name="gafeb9cafb39b06b4de8c0ab8a86ff255a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafeb9cafb39b06b4de8c0ab8a86ff255a">&#9670;&#160;</a></span>rt_current_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_current_thread&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga6133c1b6b27d972447156db15e7c1ce7">rt_thread_self</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga94d3b85f04028c8d67de67151c21c60d" name="ga94d3b85f04028c8d67de67151c21c60d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94d3b85f04028c8d67de67151c21c60d">&#9670;&#160;</a></span>RT_SCHEDULER_STACK_CHECK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SCHEDULER_STACK_CHECK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">thr</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad0156f4be4d8f3b4d8131f185bdaf3b6" name="gad0156f4be4d8f3b4d8131f185bdaf3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad0156f4be4d8f3b4d8131f185bdaf3b6">&#9670;&#160;</a></span>RT_SIGNAL_COMMON_WAKEUP_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SIGNAL_COMMON_WAKEUP_MASK&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2ed9c9c7aee211a59eadef4314c455ed" name="ga2ed9c9c7aee211a59eadef4314c455ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2ed9c9c7aee211a59eadef4314c455ed">&#9670;&#160;</a></span>RT_SIGNAL_KILL_WAKEUP_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_SIGNAL_KILL_WAKEUP_MASK&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1c39773ce3aefe35d15e68f34ddedc9a" name="ga1c39773ce3aefe35d15e68f34ddedc9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c39773ce3aefe35d15e68f34ddedc9a">&#9670;&#160;</a></span>RT_THREAD_CLOSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CLOSE&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Closed status </p>
+
+</div>
+</div>
+<a id="ga33e2bf49443c5a96c293a554203de8e3" name="ga33e2bf49443c5a96c293a554203de8e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33e2bf49443c5a96c293a554203de8e3">&#9670;&#160;</a></span>RT_THREAD_CTRL_BIND_CPU</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_BIND_CPU&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set thread bind cpu. </p>
+
+</div>
+</div>
+<a id="gad59e5c8ec96f8b3231947b0c665e5fba" name="gad59e5c8ec96f8b3231947b0c665e5fba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad59e5c8ec96f8b3231947b0c665e5fba">&#9670;&#160;</a></span>RT_THREAD_CTRL_CHANGE_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_CHANGE_PRIORITY&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Change thread priority. </p>
+
+</div>
+</div>
+<a id="gad875eaaa2400aef8f6078f5d1f8297b3" name="gad875eaaa2400aef8f6078f5d1f8297b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad875eaaa2400aef8f6078f5d1f8297b3">&#9670;&#160;</a></span>RT_THREAD_CTRL_CLOSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_CLOSE&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Close thread. </p>
+
+</div>
+</div>
+<a id="ga45ba1445796c920c2ae943b419e19d4b" name="ga45ba1445796c920c2ae943b419e19d4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga45ba1445796c920c2ae943b419e19d4b">&#9670;&#160;</a></span>RT_THREAD_CTRL_INFO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_INFO&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get thread information. </p>
+
+</div>
+</div>
+<a id="ga19ea24b0cf98816e6470dd0dbf98faa7" name="ga19ea24b0cf98816e6470dd0dbf98faa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19ea24b0cf98816e6470dd0dbf98faa7">&#9670;&#160;</a></span>RT_THREAD_CTRL_RESET_PRIORITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_RESET_PRIORITY&#160;&#160;&#160;0x05</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Reset thread priority. </p>
+
+</div>
+</div>
+<a id="gae94f55354bd0e145bd855bd38db5c442" name="gae94f55354bd0e145bd855bd38db5c442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae94f55354bd0e145bd855bd38db5c442">&#9670;&#160;</a></span>RT_THREAD_CTRL_STARTUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_CTRL_STARTUP&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>thread control command definitions Startup thread. </p>
+
+</div>
+</div>
+<a id="gae743a0f57a34ce46c0687ff787972ded" name="gae743a0f57a34ce46c0687ff787972ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae743a0f57a34ce46c0687ff787972ded">&#9670;&#160;</a></span>RT_THREAD_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_INIT&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Initialized status </p>
+
+</div>
+</div>
+<a id="ga3d2482a36a666c7e796f0fee67c0d3f3" name="ga3d2482a36a666c7e796f0fee67c0d3f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d2482a36a666c7e796f0fee67c0d3f3">&#9670;&#160;</a></span>RT_THREAD_READY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_READY&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Ready status </p>
+
+</div>
+</div>
+<a id="ga76fc51507d2201f644b94b916560778b" name="ga76fc51507d2201f644b94b916560778b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga76fc51507d2201f644b94b916560778b">&#9670;&#160;</a></span>RT_THREAD_RUNNING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_RUNNING&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Running status </p>
+
+</div>
+</div>
+<a id="ga407702e2a2b59775f1fdf83d34ee10f0" name="ga407702e2a2b59775f1fdf83d34ee10f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga407702e2a2b59775f1fdf83d34ee10f0">&#9670;&#160;</a></span>RT_THREAD_STAT_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_MASK&#160;&#160;&#160;0x07</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafcb3ce12c6600fa83a4cd66e8b86ce35" name="gafcb3ce12c6600fa83a4cd66e8b86ce35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafcb3ce12c6600fa83a4cd66e8b86ce35">&#9670;&#160;</a></span>RT_THREAD_STAT_SIGNAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_SIGNAL&#160;&#160;&#160;0x10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>task hold signals </p>
+
+</div>
+</div>
+<a id="ga2b9421cbb0ee9127324cda53241fd797" name="ga2b9421cbb0ee9127324cda53241fd797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b9421cbb0ee9127324cda53241fd797">&#9670;&#160;</a></span>RT_THREAD_STAT_SIGNAL_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_SIGNAL_MASK&#160;&#160;&#160;0xf0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa3e5d5ab9fb99840ad871e6092335d7a" name="gaa3e5d5ab9fb99840ad871e6092335d7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa3e5d5ab9fb99840ad871e6092335d7a">&#9670;&#160;</a></span>RT_THREAD_STAT_SIGNAL_PENDING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_SIGNAL_PENDING&#160;&#160;&#160;0x40</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>signals is held and it has not been procressed </p>
+
+</div>
+</div>
+<a id="gac01665f490c11e38df118d8c6c0f2bd0" name="gac01665f490c11e38df118d8c6c0f2bd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac01665f490c11e38df118d8c6c0f2bd0">&#9670;&#160;</a></span>RT_THREAD_STAT_SIGNAL_READY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_SIGNAL_READY&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gafcb3ce12c6600fa83a4cd66e8b86ce35">RT_THREAD_STAT_SIGNAL</a> | <a class="el" href="group__group___thread.html#ga3d2482a36a666c7e796f0fee67c0d3f3">RT_THREAD_READY</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4fff76fd7571a9684f61a718e66cb104" name="ga4fff76fd7571a9684f61a718e66cb104"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fff76fd7571a9684f61a718e66cb104">&#9670;&#160;</a></span>RT_THREAD_STAT_SIGNAL_WAIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_SIGNAL_WAIT&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>task is waiting for signals </p>
+
+</div>
+</div>
+<a id="ga8f8bae7391260aaaa55256c41ebf07c1" name="ga8f8bae7391260aaaa55256c41ebf07c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f8bae7391260aaaa55256c41ebf07c1">&#9670;&#160;</a></span>RT_THREAD_STAT_YIELD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_YIELD&#160;&#160;&#160;0x08</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>indicate whether remaining_tick has been reloaded since last schedule </p>
+
+</div>
+</div>
+<a id="ga790bfc4df4e349e15c4bdf6de05a2493" name="ga790bfc4df4e349e15c4bdf6de05a2493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga790bfc4df4e349e15c4bdf6de05a2493">&#9670;&#160;</a></span>RT_THREAD_STAT_YIELD_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_STAT_YIELD_MASK&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga8f8bae7391260aaaa55256c41ebf07c1">RT_THREAD_STAT_YIELD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad67bab390563b8b80a2ee7a847660f85" name="gad67bab390563b8b80a2ee7a847660f85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad67bab390563b8b80a2ee7a847660f85">&#9670;&#160;</a></span>RT_THREAD_SUSPEND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_SUSPEND&#160;&#160;&#160;<a class="el" href="group__group___thread.html#ga52105c3a810895c9c9103064b9be1141">RT_THREAD_SUSPEND_INTERRUPTIBLE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga52105c3a810895c9c9103064b9be1141" name="ga52105c3a810895c9c9103064b9be1141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52105c3a810895c9c9103064b9be1141">&#9670;&#160;</a></span>RT_THREAD_SUSPEND_INTERRUPTIBLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_SUSPEND_INTERRUPTIBLE&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suspend interruptable 0x4 </p>
+
+</div>
+</div>
+<a id="ga740d81278ba15e5a8ed943a2b9d5fe79" name="ga740d81278ba15e5a8ed943a2b9d5fe79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga740d81278ba15e5a8ed943a2b9d5fe79">&#9670;&#160;</a></span>RT_THREAD_SUSPEND_KILLABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_SUSPEND_KILLABLE&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a> | <a class="el" href="group__group___thread.html#gad0156f4be4d8f3b4d8131f185bdaf3b6">RT_SIGNAL_COMMON_WAKEUP_MASK</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suspend with killable 0x6 </p>
+
+</div>
+</div>
+<a id="gae5c600bb0d749d4ff921f989c1f47eda" name="gae5c600bb0d749d4ff921f989c1f47eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5c600bb0d749d4ff921f989c1f47eda">&#9670;&#160;</a></span>RT_THREAD_SUSPEND_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_SUSPEND_MASK&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6ee5f39c3bc12f74abdb1a513a853133" name="ga6ee5f39c3bc12f74abdb1a513a853133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ee5f39c3bc12f74abdb1a513a853133">&#9670;&#160;</a></span>RT_THREAD_SUSPEND_UNINTERRUPTIBLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_THREAD_SUSPEND_UNINTERRUPTIBLE&#160;&#160;&#160;(<a class="el" href="group__group___thread.html#gae5c600bb0d749d4ff921f989c1f47eda">RT_THREAD_SUSPEND_MASK</a> | <a class="el" href="group__group___thread.html#gad0156f4be4d8f3b4d8131f185bdaf3b6">RT_SIGNAL_COMMON_WAKEUP_MASK</a> | <a class="el" href="group__group___thread.html#ga2ed9c9c7aee211a59eadef4314c455ed">RT_SIGNAL_KILL_WAKEUP_MASK</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Suspend with uninterruptable 0x7 </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gabef03afaa26fb8d3ee8da876bc8070a0" name="gabef03afaa26fb8d3ee8da876bc8070a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabef03afaa26fb8d3ee8da876bc8070a0">&#9670;&#160;</a></span>rt_cpu_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__cpu.html">rt_cpu</a>* <a class="el" href="group__group___thread.html#gabef03afaa26fb8d3ee8da876bc8070a0">rt_cpu_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga29ae838c0c506273defaf944c2b20a87" name="ga29ae838c0c506273defaf944c2b20a87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29ae838c0c506273defaf944c2b20a87">&#9670;&#160;</a></span>rt_cpu_usage_stats_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__cpu__usage__stats.html">rt_cpu_usage_stats</a>* <a class="el" href="group__group___thread.html#ga29ae838c0c506273defaf944c2b20a87">rt_cpu_usage_stats_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae496369bc5dcfd1c6de1425d7f45f79d" name="gae496369bc5dcfd1c6de1425d7f45f79d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae496369bc5dcfd1c6de1425d7f45f79d">&#9670;&#160;</a></span>rt_interrupt_context_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__interrupt__context.html">rt_interrupt_context</a> * <a class="el" href="group__group___thread.html#gae496369bc5dcfd1c6de1425d7f45f79d">rt_interrupt_context_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>interrupt/exception frame handling </p>
+
+</div>
+</div>
+<a id="ga4e0d871619ef3b8dd5c4b6ab1e8bddad" name="ga4e0d871619ef3b8dd5c4b6ab1e8bddad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e0d871619ef3b8dd5c4b6ab1e8bddad">&#9670;&#160;</a></span>rt_thread_cleanup_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* rt_thread_cleanup_t) (struct <a class="el" href="structrt__thread.html">rt_thread</a> *tid)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga7834be0d0c62aaa32ae47ade3ac21e68" name="ga7834be0d0c62aaa32ae47ade3ac21e68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7834be0d0c62aaa32ae47ade3ac21e68">&#9670;&#160;</a></span>rt_thread_inited_hookproto_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* rt_thread_inited_hookproto_t) (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sets a hook function when a thread is initialized. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the target thread that initializing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gad617ac6bd69bf546743549542a86fbf9" name="gad617ac6bd69bf546743549542a86fbf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad617ac6bd69bf546743549542a86fbf9">&#9670;&#160;</a></span>rt_thread_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__thread.html">rt_thread</a>* <a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga9334a5b9057f32da96db9b5c6a045d67" name="ga9334a5b9057f32da96db9b5c6a045d67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9334a5b9057f32da96db9b5c6a045d67">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga9334a5b9057f32da96db9b5c6a045d67a871587c9d7bcf1cd9f7107c5221a5a29" name="gga9334a5b9057f32da96db9b5c6a045d67a871587c9d7bcf1cd9f7107c5221a5a29"></a>RT_INTERRUPTIBLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga9334a5b9057f32da96db9b5c6a045d67a3bea1dae51f66e74cde0247ed99f8ac4" name="gga9334a5b9057f32da96db9b5c6a045d67a3bea1dae51f66e74cde0247ed99f8ac4"></a>RT_KILLABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga9334a5b9057f32da96db9b5c6a045d67abf7d28fdc945b303ffeb9aaa21b4bd9d" name="gga9334a5b9057f32da96db9b5c6a045d67abf7d28fdc945b303ffeb9aaa21b4bd9d"></a>RT_UNINTERRUPTIBLE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaf3f894e8efadefda238a5e5ab45c7e21" name="gaf3f894e8efadefda238a5e5ab45c7e21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3f894e8efadefda238a5e5ab45c7e21">&#9670;&#160;</a></span>rt_critical_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> rt_critical_level </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga76da2e5b2bc5193a710491a6b2cbbff6" name="ga76da2e5b2bc5193a710491a6b2cbbff6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga76da2e5b2bc5193a710491a6b2cbbff6">&#9670;&#160;</a></span>rt_enter_critical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> rt_enter_critical </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga35c56c2d56e2bb0f2df95abc752143df" name="ga35c56c2d56e2bb0f2df95abc752143df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35c56c2d56e2bb0f2df95abc752143df">&#9670;&#160;</a></span>rt_exit_critical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_exit_critical </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga28198f1a056fd2b1289b574641324d02" name="ga28198f1a056fd2b1289b574641324d02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga28198f1a056fd2b1289b574641324d02">&#9670;&#160;</a></span>rt_exit_critical_safe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_exit_critical_safe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>critical_level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga64f2c17d6cef710eb12414f23640116a" name="ga64f2c17d6cef710eb12414f23640116a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga64f2c17d6cef710eb12414f23640116a">&#9670;&#160;</a></span>RT_OBJECT_HOOKLIST_DECLARE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RT_OBJECT_HOOKLIST_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga7834be0d0c62aaa32ae47ade3ac21e68">rt_thread_inited_hookproto_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">rt_thread_inited&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae9f99bb5e2e2032b10ddda7a03eefe24" name="gae9f99bb5e2e2032b10ddda7a03eefe24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9f99bb5e2e2032b10ddda7a03eefe24">&#9670;&#160;</a></span>rt_schedule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_schedule </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabb4158a39c5ea956a96b22190ce0ed89" name="gabb4158a39c5ea956a96b22190ce0ed89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb4158a39c5ea956a96b22190ce0ed89">&#9670;&#160;</a></span>rt_scheduler_do_irq_switch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_scheduler_do_irq_switch </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1af67d388db8019327b5f86428e2ed14" name="ga1af67d388db8019327b5f86428e2ed14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1af67d388db8019327b5f86428e2ed14">&#9670;&#160;</a></span>rt_scheduler_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_scheduler_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> from, <a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> to)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4685884789cfcd32a5a7626184cb4d7b" name="ga4685884789cfcd32a5a7626184cb4d7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4685884789cfcd32a5a7626184cb4d7b">&#9670;&#160;</a></span>rt_scheduler_switch_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_scheduler_switch_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(struct <a class="el" href="structrt__thread.html">rt_thread</a> *tid)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5aa2c0c67999e20ce8693ad3c8e624f0" name="ga5aa2c0c67999e20ce8693ad3c8e624f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5aa2c0c67999e20ce8693ad3c8e624f0">&#9670;&#160;</a></span>rt_system_scheduler_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_system_scheduler_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the system scheduler. </p>
+<p>This function performs the following initialization tasks:</p><ul>
+<li>Initializes the global scheduler spinlock for multi-core synchronization.</li>
+<li>Initializes the global priority table for saving ready threads of all priority levels.</li>
+<li>For each CPU core:<ul>
+<li>Initializes per-CPU priority tables</li>
+<li>Sets initial CPU state (irq_switch_flag, current_priority, etc.)</li>
+<li>Initializes per-CPU ready tables (if priority &gt; 32)</li>
+<li>Initializes per-CPU spinlock (if RT_USING_SMART is defined)</li>
+</ul>
+</li>
+<li>Initializes the global ready priority group and tables (if priority &gt; 32) as bitmaps for all priorities.</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function must be called before any thread scheduling can occur. It prepares the scheduler data structures for multi-core operation.</dd></dl>
+<p>Initialize the system scheduler.</p>
+<p>This function performs the following initialization tasks:</p><ul>
+<li>Resets the scheduler lock nest counter to 0</li>
+<li>Initializes the priority table for all priority levels</li>
+<li>Clears the ready priority group bitmap</li>
+<li>For systems with &gt;32 priority levels, initializes the ready table</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function must be called before any thread scheduling can occur. It prepares the scheduler data structures for single-core operation </dd></dl>
+
+</div>
+</div>
+<a id="ga9aa8a561e0caf5e13126834c4f4bb681" name="ga9aa8a561e0caf5e13126834c4f4bb681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa8a561e0caf5e13126834c4f4bb681">&#9670;&#160;</a></span>rt_system_scheduler_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_system_scheduler_start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start the system scheduler and switch to the highest priority thread. </p>
+<p>This function performs the following operations:</p><ul>
+<li>Releases legacy CPU lock (if any)</li>
+<li>Disables interrupts to ensure atomic operation</li>
+<li>Acquires scheduler lock for thread safety</li>
+<li>Selects the highest priority thread from ready queue</li>
+<li>Removes the selected thread from ready queue</li>
+<li>Assigns current CPU core to the selected thread</li>
+<li>Performs context switch to the selected thread</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function will not return after successful execution. It performs the initial thread switch during system startup. The scheduler must be initialized before calling this function.</dd></dl>
+<p>This function:</p><ul>
+<li>Gets the highest priority ready thread using _scheduler_get_highest_priority_thread()</li>
+<li>Sets it as the current thread for the CPU</li>
+<li>Removes the thread from ready queue and sets its status to RUNNING</li>
+<li>Performs a context switch to the selected thread using <a class="el" href="rthw_8h.html#a3bbe3104ec0718435fa63f83c0c66787">rt_hw_context_switch_to()</a></li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function does not return as it switches to the first thread to run. Must be called after <a class="el" href="group__group___thread.html#ga5aa2c0c67999e20ce8693ad3c8e624f0" title="Initialize the system scheduler for single-core systems.">rt_system_scheduler_init()</a>. The selected thread will begin execution immediately </dd></dl>
+<p>legacy rt_cpus_lock. some bsp codes still use it as for it's critical region. Since scheduler is never touching this, here we just release it on the entry.</p>
+<p>for the accessing of the scheduler context. Noted that we don't have current_thread at this point</p>
+
+</div>
+</div>
+<a id="ga4c6bd85fb0e9179bfbb1b176539d097f" name="ga4c6bd85fb0e9179bfbb1b176539d097f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c6bd85fb0e9179bfbb1b176539d097f">&#9670;&#160;</a></span>rt_thread_alloc_sig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_thread_alloc_sig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>tid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0c482e895baff359b920966f2822ee06" name="ga0c482e895baff359b920966f2822ee06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0c482e895baff359b920966f2822ee06">&#9670;&#160;</a></span>rt_thread_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will close a thread. The thread object will be removed from thread queue and detached/deleted from the system object management. It's different from rt_thread_delete or rt_thread_detach that this will not enqueue the closing thread to cleanup queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the thread to be closed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga34c65d3f7d01310fe7b54b2e706b1bdc" name="ga34c65d3f7d01310fe7b54b2e706b1bdc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga34c65d3f7d01310fe7b54b2e706b1bdc">&#9670;&#160;</a></span>rt_thread_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will control thread behaviors according to control command. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the specified thread to be controlled.</td></tr>
+    <tr><td class="paramname">cmd</td><td>is the control command, which includes. <pre class="fragment">         RT_THREAD_CTRL_CHANGE_PRIORITY for changing priority level of thread.
+
+         RT_THREAD_CTRL_STARTUP for starting a thread.
+
+         RT_THREAD_CTRL_CLOSE for delete a thread.
+
+         RT_THREAD_CTRL_BIND_CPU for bind the thread to a CPU.
+
+         RT_THREAD_CTRL_RESET_PRIORITY for reset priority level of thread.
+</pre> </td></tr>
+    <tr><td class="paramname">arg</td><td>is the argument of control command.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="gacb215b161f17c26b5e19c28cd0119e7b" name="gacb215b161f17c26b5e19c28cd0119e7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb215b161f17c26b5e19c28cd0119e7b">&#9670;&#160;</a></span>rt_thread_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> rt_thread_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *parameter)&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>stack_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>tick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will create a thread object and allocate thread object memory. and stack. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the name of thread, which shall be unique.</td></tr>
+    <tr><td class="paramname">entry</td><td>is the entry function of thread.</td></tr>
+    <tr><td class="paramname">parameter</td><td>is the parameter of thread enter function.</td></tr>
+    <tr><td class="paramname">stack_size</td><td>is the size of thread stack.</td></tr>
+    <tr><td class="paramname">priority</td><td>is the priority of thread.</td></tr>
+    <tr><td class="paramname">tick</td><td>is the time slice if there are same priority thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the return value is a <a class="el" href="structrt__thread.html">rt_thread</a> structure pointer, the function is successfully executed. If the return value is RT_NULL, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga6b18459cac67e3695447e69b997fc74e" name="ga6b18459cac67e3695447e69b997fc74e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b18459cac67e3695447e69b997fc74e">&#9670;&#160;</a></span>rt_thread_delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_delay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td>
+          <td class="paramname"><em>tick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will let current thread delay for some ticks. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>is the delay ticks.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga309d01453eb09acaee5012a2e159961c" name="ga309d01453eb09acaee5012a2e159961c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga309d01453eb09acaee5012a2e159961c">&#9670;&#160;</a></span>rt_thread_delay_until()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_delay_until </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> *&#160;</td>
+          <td class="paramname"><em>tick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td>
+          <td class="paramname"><em>inc_tick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will let current thread delay until (*tick + inc_tick). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>is the tick of last wakeup.</td></tr>
+    <tr><td class="paramname">inc_tick</td><td>is the increment tick.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga6d64eb4d0a485461049616808f4ce177" name="ga6d64eb4d0a485461049616808f4ce177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d64eb4d0a485461049616808f4ce177">&#9670;&#160;</a></span>rt_thread_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will delete a thread. The thread object will be removed from thread queue and deleted from system object management in the idle thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the thread to be deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga514825b80304477ecf377d721da409b0" name="ga514825b80304477ecf377d721da409b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga514825b80304477ecf377d721da409b0">&#9670;&#160;</a></span>rt_thread_detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will detach a thread. The thread object will be removed from thread queue and detached/deleted from the system object management. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the thread to be deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga789a0782597b4d7f7c6c16eacc6084a8" name="ga789a0782597b4d7f7c6c16eacc6084a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga789a0782597b4d7f7c6c16eacc6084a8">&#9670;&#160;</a></span>rt_thread_find()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> rt_thread_find </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will find the specified thread. </p>
+<dl class="section note"><dt>Note</dt><dd>Please don't invoke this function in interrupt status.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is the name of thread finding.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the return value is a <a class="el" href="structrt__thread.html">rt_thread</a> structure pointer, the function is successfully executed. If the return value is RT_NULL, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga8d7cbacfe5c3634d14f8e12bb558184a" name="ga8d7cbacfe5c3634d14f8e12bb558184a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8d7cbacfe5c3634d14f8e12bb558184a">&#9670;&#160;</a></span>rt_thread_free_sig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_thread_free_sig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>tid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0e2474c7ee1c6eb90f676ecbbc904363" name="ga0e2474c7ee1c6eb90f676ecbbc904363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e2474c7ee1c6eb90f676ecbbc904363">&#9670;&#160;</a></span>rt_thread_get_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_get_name </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>name_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will return the name of the specified thread. </p>
+<dl class="section note"><dt>Note</dt><dd>Please don't invoke this function in interrupt status</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>the thread to retrieve thread name </td></tr>
+    <tr><td class="paramname">name</td><td>buffer to store the thread name string </td></tr>
+    <tr><td class="paramname">name_size</td><td>maximum size of the buffer to store the thread name</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>If the return value is RT_EOK, the function is successfully executed If the return value is -RT_EINVAL, it means this operation failed </dd></dl>
+
+</div>
+</div>
+<a id="gaf48521904309636f9ccdbf562199c0a5" name="gaf48521904309636f9ccdbf562199c0a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf48521904309636f9ccdbf562199c0a5">&#9670;&#160;</a></span>rt_thread_idle_delhook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_idle_delhook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>delete the idle hook on hook list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hook</td><td>the specified hook function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>RT_EOK: delete OK. -RT_ENOSYS: hook was not found. </dd></dl>
+
+</div>
+</div>
+<a id="gadd22f9965fffe9e940fd364f0838731f" name="gadd22f9965fffe9e940fd364f0838731f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd22f9965fffe9e940fd364f0838731f">&#9670;&#160;</a></span>rt_thread_idle_gethandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> rt_thread_idle_gethandler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will get the handler of the idle thread. </p>
+
+</div>
+</div>
+<a id="gae0dcacf89c3d97272b185f7162a3e0c3" name="gae0dcacf89c3d97272b185f7162a3e0c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae0dcacf89c3d97272b185f7162a3e0c3">&#9670;&#160;</a></span>rt_thread_idle_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_thread_idle_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will initialize idle thread, then start it. </p>
+<dl class="section note"><dt>Note</dt><dd>this function must be invoked when system init. </dd></dl>
+
+</div>
+</div>
+<a id="gab943d93390d71c999debbf98fee44a0e" name="gab943d93390d71c999debbf98fee44a0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab943d93390d71c999debbf98fee44a0e">&#9670;&#160;</a></span>rt_thread_idle_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_idle_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gacd985aa60939b95e510f144610f001b9" name="gacd985aa60939b95e510f144610f001b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd985aa60939b95e510f144610f001b9">&#9670;&#160;</a></span>rt_thread_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *parameter)&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>stack_start</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>stack_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>tick</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will initialize a thread. It's used to initialize a static thread object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the static thread object.</td></tr>
+    <tr><td class="paramname">name</td><td>is the name of thread, which shall be unique.</td></tr>
+    <tr><td class="paramname">entry</td><td>is the entry function of thread.</td></tr>
+    <tr><td class="paramname">parameter</td><td>is the parameter of thread enter function.</td></tr>
+    <tr><td class="paramname">stack_start</td><td>is the start address of thread stack.</td></tr>
+    <tr><td class="paramname">stack_size</td><td>is the size of thread stack.</td></tr>
+    <tr><td class="paramname">priority</td><td>is the priority of thread.</td></tr>
+    <tr><td class="paramname">tick</td><td>is the time slice if there are same priority thread.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga2135a51adac8206aa7876466ae00ee20" name="ga2135a51adac8206aa7876466ae00ee20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2135a51adac8206aa7876466ae00ee20">&#9670;&#160;</a></span>rt_thread_kill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thread_kill </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>tid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sig</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function can be used to send any signal to any thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tid</td><td>is a pointer to the thread that receives the signal.</td></tr>
+    <tr><td class="paramname">sig</td><td>is a specific signal value (range: 0 ~ RT_SIG_MAX).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the signal send failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga4ba0dbf06d5fa05f469da371ff6d2876" name="ga4ba0dbf06d5fa05f469da371ff6d2876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4ba0dbf06d5fa05f469da371ff6d2876">&#9670;&#160;</a></span>rt_thread_mdelay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_mdelay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will let current thread delay for some milliseconds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>is the delay ms time.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="gab4f29aff4fec96d92f6321fa7b00c379" name="gab4f29aff4fec96d92f6321fa7b00c379"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab4f29aff4fec96d92f6321fa7b00c379">&#9670;&#160;</a></span>rt_thread_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_resume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will resume a thread and put it to system ready queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the thread to be resumed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+<p>RT_ESCHEDLOCKED indicates that the current thread is in a critical section, rather than 'thread' can't be resumed. Therefore, we can ignore this error.</p>
+
+</div>
+</div>
+<a id="gae051e428ad5b79744249d2658d5084b5" name="gae051e428ad5b79744249d2658d5084b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae051e428ad5b79744249d2658d5084b5">&#9670;&#160;</a></span>rt_thread_resume_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_thread_resume_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6133c1b6b27d972447156db15e7c1ce7" name="ga6133c1b6b27d972447156db15e7c1ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6133c1b6b27d972447156db15e7c1ce7">&#9670;&#160;</a></span>rt_thread_self()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> rt_thread_self </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will return self thread object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The self thread object. </dd></dl>
+
+</div>
+</div>
+<a id="ga04b743537fd099e204fc292e57b4aa5a" name="ga04b743537fd099e204fc292e57b4aa5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04b743537fd099e204fc292e57b4aa5a">&#9670;&#160;</a></span>rt_thread_startup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_startup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will start a thread and put it to system ready queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>is the thread to be started.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="gab75228a43588dc35570bce6a2c18f3f0" name="gab75228a43588dc35570bce6a2c18f3f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab75228a43588dc35570bce6a2c18f3f0">&#9670;&#160;</a></span>rt_thread_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_suspend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga83bae9e21b23cfbf2e1c4f09654e3012" name="ga83bae9e21b23cfbf2e1c4f09654e3012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83bae9e21b23cfbf2e1c4f09654e3012">&#9670;&#160;</a></span>rt_thread_suspend_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_thread_suspend_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga41e560062d5e4b929ad2868e4ccc90f2" name="ga41e560062d5e4b929ad2868e4ccc90f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41e560062d5e4b929ad2868e4ccc90f2">&#9670;&#160;</a></span>rt_thread_suspend_to_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_suspend_to_list </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> *&#160;</td>
+          <td class="paramname"><em>susp_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>ipc_flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>suspend_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will suspend the specified thread and change it to suspend state. </p>
+<dl class="section note"><dt>Note</dt><dd>This function ONLY can suspend current thread itself. rt_thread_suspend(rt_thread_self());</dd></dl>
+<p>Do not use the rt_thread_suspend to suspend other threads. You have no way of knowing what code a thread is executing when you suspend it. If you suspend a thread while sharing a resouce with other threads and occupying this resouce, starvation can occur very easily.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>the thread to be suspended. </td></tr>
+    <tr><td class="paramname">susp_list</td><td>the list thread enqueued to. RT_NULL if no list. </td></tr>
+    <tr><td class="paramname">ipc_flags</td><td>is a flag for the thread object to be suspended. It determines how the thread is suspended. The flag can be ONE of the following values: RT_IPC_FLAG_PRIO The pending threads will queue in order of priority. RT_IPC_FLAG_FIFO The pending threads will queue in the first-in-first-out method (also known as first-come-first-served (FCFS) scheduling strategy). NOTE: RT_IPC_FLAG_FIFO is a non-real-time scheduling mode. It is strongly recommended to use RT_IPC_FLAG_PRIO to ensure the thread is real-time UNLESS your applications concern about the first-in-first-out principle, and you clearly understand that all threads involved in this semaphore will become non-real-time threads. </td></tr>
+    <tr><td class="paramname">suspend_flag</td><td>status flag of the thread to be suspended.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+<p>enqueue thread on the push list before leaving critical region of scheduler, so we won't miss notification of async events.</p>
+
+</div>
+</div>
+<a id="ga537adfa695f87cdea6310ec3f66fced0" name="ga537adfa695f87cdea6310ec3f66fced0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga537adfa695f87cdea6310ec3f66fced0">&#9670;&#160;</a></span>rt_thread_suspend_with_flag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_suspend_with_flag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>suspend_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will suspend the specified thread and change it to suspend state. </p>
+<dl class="section note"><dt>Note</dt><dd>This function ONLY can suspend current thread itself. rt_thread_suspend(rt_thread_self());</dd></dl>
+<p>Do not use the rt_thread_suspend to suspend other threads. You have no way of knowing what code a thread is executing when you suspend it. If you suspend a thread while sharing a resouce with other threads and occupying this resouce, starvation can occur very easily.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>the thread to be suspended. </td></tr>
+    <tr><td class="paramname">suspend_flag</td><td>status flag of the thread to be suspended.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga5703a0d7351b37a1c00874a362626ea3" name="ga5703a0d7351b37a1c00874a362626ea3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5703a0d7351b37a1c00874a362626ea3">&#9670;&#160;</a></span>rt_thread_yield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_thread_yield </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will let current thread yield processor, and scheduler will choose the highest thread to run. After yield processor, the current thread is still in READY state. </p>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. If the return value is RT_EOK, the function is successfully executed. If the return value is any other values, it means this operation failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga10b5652221e6004b03784f7555894148" name="ga10b5652221e6004b03784f7555894148"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10b5652221e6004b03784f7555894148">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[1/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga0c482e895baff359b920966f2822ee06">rt_thread_close</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaea74536a31a3bebc1900639922c05d2f" name="gaea74536a31a3bebc1900639922c05d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea74536a31a3bebc1900639922c05d2f">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[2/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga34c65d3f7d01310fe7b54b2e706b1bdc">rt_thread_control</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab3de035a2ad924c2934e795ebd26f431" name="gab3de035a2ad924c2934e795ebd26f431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3de035a2ad924c2934e795ebd26f431">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[3/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gacb215b161f17c26b5e19c28cd0119e7b">rt_thread_create</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa471279204d5c1d4628df0465f069065" name="gaa471279204d5c1d4628df0465f069065"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa471279204d5c1d4628df0465f069065">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[4/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga6b18459cac67e3695447e69b997fc74e">rt_thread_delay</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa99bb4b68afc457ec6c55b43031b532f" name="gaa99bb4b68afc457ec6c55b43031b532f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa99bb4b68afc457ec6c55b43031b532f">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[5/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga309d01453eb09acaee5012a2e159961c">rt_thread_delay_until</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1c8b81f1c968b60efe958a68f780e294" name="ga1c8b81f1c968b60efe958a68f780e294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c8b81f1c968b60efe958a68f780e294">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[6/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga6d64eb4d0a485461049616808f4ce177">rt_thread_delete</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaba6ba9c744e797ac9aa446cecc1c38b8" name="gaba6ba9c744e797ac9aa446cecc1c38b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba6ba9c744e797ac9aa446cecc1c38b8">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[7/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga514825b80304477ecf377d721da409b0">rt_thread_detach</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9852687a217c61cd829c50bfb44f1ca6" name="ga9852687a217c61cd829c50bfb44f1ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9852687a217c61cd829c50bfb44f1ca6">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[8/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga789a0782597b4d7f7c6c16eacc6084a8">rt_thread_find</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9328077144256d26375180e97b6f6b38" name="ga9328077144256d26375180e97b6f6b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9328077144256d26375180e97b6f6b38">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[9/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga0e2474c7ee1c6eb90f676ecbbc904363">rt_thread_get_name</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf46cd7a5a8dcda6487729d64b8a88b12" name="gaf46cd7a5a8dcda6487729d64b8a88b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf46cd7a5a8dcda6487729d64b8a88b12">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[10/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gacd985aa60939b95e510f144610f001b9">rt_thread_init</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabf1f9239305a6fe77b00739b24409d0f" name="gabf1f9239305a6fe77b00739b24409d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf1f9239305a6fe77b00739b24409d0f">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[11/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga4ba0dbf06d5fa05f469da371ff6d2876">rt_thread_mdelay</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga14855dffdd71dc43f7863cacb916c3b5" name="ga14855dffdd71dc43f7863cacb916c3b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14855dffdd71dc43f7863cacb916c3b5">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[12/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gab4f29aff4fec96d92f6321fa7b00c379">rt_thread_resume</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga86932b5c5c1daea7c0c48b3bd9db23af" name="ga86932b5c5c1daea7c0c48b3bd9db23af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86932b5c5c1daea7c0c48b3bd9db23af">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[13/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga6133c1b6b27d972447156db15e7c1ce7">rt_thread_self</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa931773299f9e42ff9420505d3be53f7" name="gaa931773299f9e42ff9420505d3be53f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa931773299f9e42ff9420505d3be53f7">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[14/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga04b743537fd099e204fc292e57b4aa5a">rt_thread_startup</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3e556384976ee307f4805cae8c8efdcd" name="ga3e556384976ee307f4805cae8c8efdcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e556384976ee307f4805cae8c8efdcd">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[15/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gab75228a43588dc35570bce6a2c18f3f0">rt_thread_suspend</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga87d1dc22c7ae36f66895e68cbc2b70c1" name="ga87d1dc22c7ae36f66895e68cbc2b70c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87d1dc22c7ae36f66895e68cbc2b70c1">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[16/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___i_p_c.html#ga41e560062d5e4b929ad2868e4ccc90f2">rt_thread_suspend_to_list</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae160c313915fefa655416f812c481999" name="gae160c313915fefa655416f812c481999"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae160c313915fefa655416f812c481999">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[17/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga537adfa695f87cdea6310ec3f66fced0">rt_thread_suspend_with_flag</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac5a78508d606c1c29afaeea1f729ebe9" name="gac5a78508d606c1c29afaeea1f729ebe9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5a78508d606c1c29afaeea1f729ebe9">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[18/18]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#ga5703a0d7351b37a1c00874a362626ea3">rt_thread_yield</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

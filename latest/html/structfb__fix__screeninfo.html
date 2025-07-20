@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: fb_fix_screeninfo Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structfb__fix__screeninfo.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">fb_fix_screeninfo Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="lcd_8h_source.html">lcd.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a8e40083abdd2a2e560ebad25a75626d4" id="r_a8e40083abdd2a2e560ebad25a75626d4"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a8e40083abdd2a2e560ebad25a75626d4">id</a> [16]</td></tr>
+<tr class="separator:a8e40083abdd2a2e560ebad25a75626d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d6b15a9cc46b488b05eb30003c76b4a" id="r_a2d6b15a9cc46b488b05eb30003c76b4a"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a2d6b15a9cc46b488b05eb30003c76b4a">smem_start</a></td></tr>
+<tr class="separator:a2d6b15a9cc46b488b05eb30003c76b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad775a2111ea44d807ea96854f02989e7" id="r_ad775a2111ea44d807ea96854f02989e7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#ad775a2111ea44d807ea96854f02989e7">smem_len</a></td></tr>
+<tr class="separator:ad775a2111ea44d807ea96854f02989e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62fa12f41c4892509862466643708350" id="r_a62fa12f41c4892509862466643708350"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a62fa12f41c4892509862466643708350">type</a></td></tr>
+<tr class="separator:a62fa12f41c4892509862466643708350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80766dac81294c7de818531badcbab8e" id="r_a80766dac81294c7de818531badcbab8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a80766dac81294c7de818531badcbab8e">type_aux</a></td></tr>
+<tr class="separator:a80766dac81294c7de818531badcbab8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21c977d5e9c783bd160f290b3223f972" id="r_a21c977d5e9c783bd160f290b3223f972"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a21c977d5e9c783bd160f290b3223f972">visual</a></td></tr>
+<tr class="separator:a21c977d5e9c783bd160f290b3223f972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7288c088bb369b337751b3f82cabefa1" id="r_a7288c088bb369b337751b3f82cabefa1"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a7288c088bb369b337751b3f82cabefa1">xpanstep</a></td></tr>
+<tr class="separator:a7288c088bb369b337751b3f82cabefa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e40b9992a07f343d49035b4595a3432" id="r_a0e40b9992a07f343d49035b4595a3432"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a0e40b9992a07f343d49035b4595a3432">ypanstep</a></td></tr>
+<tr class="separator:a0e40b9992a07f343d49035b4595a3432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe7972c21f0ff97db608e0fb0bd48b7d" id="r_afe7972c21f0ff97db608e0fb0bd48b7d"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#afe7972c21f0ff97db608e0fb0bd48b7d">ywrapstep</a></td></tr>
+<tr class="separator:afe7972c21f0ff97db608e0fb0bd48b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de0ff19d08381b293dc00736699aa8e" id="r_a8de0ff19d08381b293dc00736699aa8e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a8de0ff19d08381b293dc00736699aa8e">line_length</a></td></tr>
+<tr class="separator:a8de0ff19d08381b293dc00736699aa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a401d77fa4f32c1f8572d31a22e21f04c" id="r_a401d77fa4f32c1f8572d31a22e21f04c"><td class="memItemLeft" align="right" valign="top">unsigned long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a401d77fa4f32c1f8572d31a22e21f04c">mmio_start</a></td></tr>
+<tr class="separator:a401d77fa4f32c1f8572d31a22e21f04c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ca4b1c82dc2aecafd0ddc1d5d294f64" id="r_a7ca4b1c82dc2aecafd0ddc1d5d294f64"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a7ca4b1c82dc2aecafd0ddc1d5d294f64">mmio_len</a></td></tr>
+<tr class="separator:a7ca4b1c82dc2aecafd0ddc1d5d294f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad23358c9cbf72f5be27413143532cf" id="r_acad23358c9cbf72f5be27413143532cf"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#acad23358c9cbf72f5be27413143532cf">accel</a></td></tr>
+<tr class="separator:acad23358c9cbf72f5be27413143532cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5fd7e300adb656901ef19034b35aa5" id="r_a6d5fd7e300adb656901ef19034b35aa5"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a6d5fd7e300adb656901ef19034b35aa5">capabilities</a></td></tr>
+<tr class="separator:a6d5fd7e300adb656901ef19034b35aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f393beb2fe8868f6a03dce9c6f00762" id="r_a5f393beb2fe8868f6a03dce9c6f00762"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfb__fix__screeninfo.html#a5f393beb2fe8868f6a03dce9c6f00762">reserved</a> [2]</td></tr>
+<tr class="separator:a5f393beb2fe8868f6a03dce9c6f00762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="acad23358c9cbf72f5be27413143532cf" name="acad23358c9cbf72f5be27413143532cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad23358c9cbf72f5be27413143532cf">&#9670;&#160;</a></span>accel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::accel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d5fd7e300adb656901ef19034b35aa5" name="a6d5fd7e300adb656901ef19034b35aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5fd7e300adb656901ef19034b35aa5">&#9670;&#160;</a></span>capabilities</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fb_fix_screeninfo::capabilities</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e40083abdd2a2e560ebad25a75626d4" name="a8e40083abdd2a2e560ebad25a75626d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e40083abdd2a2e560ebad25a75626d4">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char fb_fix_screeninfo::id[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de0ff19d08381b293dc00736699aa8e" name="a8de0ff19d08381b293dc00736699aa8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de0ff19d08381b293dc00736699aa8e">&#9670;&#160;</a></span>line_length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::line_length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ca4b1c82dc2aecafd0ddc1d5d294f64" name="a7ca4b1c82dc2aecafd0ddc1d5d294f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca4b1c82dc2aecafd0ddc1d5d294f64">&#9670;&#160;</a></span>mmio_len</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::mmio_len</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a401d77fa4f32c1f8572d31a22e21f04c" name="a401d77fa4f32c1f8572d31a22e21f04c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a401d77fa4f32c1f8572d31a22e21f04c">&#9670;&#160;</a></span>mmio_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long fb_fix_screeninfo::mmio_start</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f393beb2fe8868f6a03dce9c6f00762" name="a5f393beb2fe8868f6a03dce9c6f00762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f393beb2fe8868f6a03dce9c6f00762">&#9670;&#160;</a></span>reserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fb_fix_screeninfo::reserved[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad775a2111ea44d807ea96854f02989e7" name="ad775a2111ea44d807ea96854f02989e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad775a2111ea44d807ea96854f02989e7">&#9670;&#160;</a></span>smem_len</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::smem_len</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d6b15a9cc46b488b05eb30003c76b4a" name="a2d6b15a9cc46b488b05eb30003c76b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6b15a9cc46b488b05eb30003c76b4a">&#9670;&#160;</a></span>smem_start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned long fb_fix_screeninfo::smem_start</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62fa12f41c4892509862466643708350" name="a62fa12f41c4892509862466643708350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62fa12f41c4892509862466643708350">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80766dac81294c7de818531badcbab8e" name="a80766dac81294c7de818531badcbab8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80766dac81294c7de818531badcbab8e">&#9670;&#160;</a></span>type_aux</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::type_aux</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21c977d5e9c783bd160f290b3223f972" name="a21c977d5e9c783bd160f290b3223f972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c977d5e9c783bd160f290b3223f972">&#9670;&#160;</a></span>visual</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t fb_fix_screeninfo::visual</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7288c088bb369b337751b3f82cabefa1" name="a7288c088bb369b337751b3f82cabefa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7288c088bb369b337751b3f82cabefa1">&#9670;&#160;</a></span>xpanstep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fb_fix_screeninfo::xpanstep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0e40b9992a07f343d49035b4595a3432" name="a0e40b9992a07f343d49035b4595a3432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e40b9992a07f343d49035b4595a3432">&#9670;&#160;</a></span>ypanstep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fb_fix_screeninfo::ypanstep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe7972c21f0ff97db608e0fb0bd48b7d" name="afe7972c21f0ff97db608e0fb0bd48b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe7972c21f0ff97db608e0fb0bd48b7d">&#9670;&#160;</a></span>ywrapstep</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t fb_fix_screeninfo::ywrapstep</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="lcd_8h_source.html">lcd.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structfb__fix__screeninfo.html">fb_fix_screeninfo</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

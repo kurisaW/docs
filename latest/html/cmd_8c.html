@@ -1,0 +1,564 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/finsh/cmd.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cmd_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">cmd.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="finsh_8h_source.html">finsh.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for cmd.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="cmd_8c__incl.png" border="0" usemap="#acomponents_2finsh_2cmd_8c" alt=""/></div>
+<map name="acomponents_2finsh_2cmd_8c" id="acomponents_2finsh_2cmd_8c">
+<area shape="rect" title=" " alt="" coords="554,5,734,31"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="518,225,581,251"/>
+<area shape="poly" title=" " alt="" coords="650,30,657,58,662,96,661,138,648,179,624,205,595,223,592,219,621,201,643,176,656,137,657,96,652,59,645,32"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="322,79,409,104"/>
+<area shape="poly" title=" " alt="" coords="600,33,423,78,422,73,599,28"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="567,152,633,177"/>
+<area shape="poly" title=" " alt="" coords="643,32,610,140,605,138,638,30"/>
+<area shape="rect" title=" " alt="" coords="709,79,779,104"/>
+<area shape="poly" title=" " alt="" coords="662,29,718,68,715,73,659,33"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,299,480,324"/>
+<area shape="poly" title=" " alt="" coords="535,253,477,293,474,288,532,248"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,372,489,397"/>
+<area shape="poly" title=" " alt="" coords="451,324,451,358,445,358,445,324"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,445,505,471"/>
+<area shape="poly" title=" " alt="" coords="465,322,487,343,504,371,507,389,503,406,487,436,482,434,498,404,501,388,499,373,482,347,462,326"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,445,402,471"/>
+<area shape="poly" title=" " alt="" coords="438,326,397,374,364,434,360,431,392,370,434,322"/>
+<area shape="rect" title=" " alt="" coords="221,372,331,397"/>
+<area shape="poly" title=" " alt="" coords="421,326,318,369,316,364,419,322"/>
+<area shape="poly" title=" " alt="" coords="453,397,462,432,457,433,448,398"/>
+<area shape="poly" title=" " alt="" coords="434,400,380,439,377,435,431,395"/>
+<area shape="rect" title=" " alt="" coords="44,519,127,544"/>
+<area shape="poly" title=" " alt="" coords="426,471,415,473,141,523,140,518,414,468,424,466"/>
+<area shape="rect" title=" " alt="" coords="751,519,822,544"/>
+<area shape="poly" title=" " alt="" coords="506,465,738,516,737,521,505,470"/>
+<area shape="rect" title=" " alt="" coords="191,519,265,544"/>
+<area shape="poly" title=" " alt="" coords="428,473,280,517,278,512,426,468"/>
+<area shape="rect" title=" " alt="" coords="289,519,364,544"/>
+<area shape="poly" title=" " alt="" coords="444,473,363,515,360,510,442,468"/>
+<area shape="rect" title=" " alt="" coords="388,519,484,544"/>
+<area shape="poly" title=" " alt="" coords="463,472,448,507,444,505,458,470"/>
+<area shape="rect" title=" " alt="" coords="509,519,603,544"/>
+<area shape="poly" title=" " alt="" coords="482,469,532,508,529,512,478,473"/>
+<area shape="rect" title=" " alt="" coords="628,519,727,544"/>
+<area shape="poly" title=" " alt="" coords="500,468,631,512,629,517,499,473"/>
+<area shape="poly" title=" " alt="" coords="310,473,141,518,140,513,308,468"/>
+<area shape="poly" title=" " alt="" coords="368,104,371,168,379,210,393,249,407,270,424,288,420,292,403,274,388,252,373,211,366,169,362,104"/>
+<area shape="poly" title=" " alt="" coords="322,103,233,123,129,153,81,171,43,192,17,214,10,225,8,237,8,386,14,421,28,454,47,483,66,507,62,510,43,487,24,457,9,423,3,386,3,236,5,223,13,210,40,187,79,166,127,148,231,118,321,98"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="403,225,493,251"/>
+<area shape="poly" title=" " alt="" coords="374,103,437,212,432,215,370,106"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="270,152,327,177"/>
+<area shape="poly" title=" " alt="" coords="350,106,313,143,309,139,346,102"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="454,152,543,177"/>
+<area shape="poly" title=" " alt="" coords="388,102,466,143,464,148,386,106"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="199,225,273,251"/>
+<area shape="poly" title=" " alt="" coords="330,107,292,125,274,138,260,154,246,182,240,212,234,211,240,180,255,150,271,134,289,121,327,102"/>
+<area shape="poly" title=" " alt="" coords="404,101,555,147,554,152,402,107"/>
+<area shape="poly" title=" " alt="" coords="451,251,451,285,445,285,445,251"/>
+<area shape="poly" title=" " alt="" coords="305,177,322,211,349,249,378,272,409,290,406,295,375,277,345,252,317,214,301,179"/>
+<area shape="poly" title=" " alt="" coords="314,150,351,113,355,117,318,154"/>
+<area shape="poly" title=" " alt="" coords="509,176,535,213,531,216,505,179"/>
+<area shape="poly" title=" " alt="" coords="271,248,404,292,402,298,269,253"/>
+<area shape="poly" title=" " alt="" coords="199,245,169,250,137,260,107,277,83,300,70,325,63,352,60,409,68,463,79,505,74,507,62,464,54,409,57,351,65,323,79,297,104,272,135,255,168,245,198,239"/>
+<area shape="poly" title=" " alt="" coords="275,245,319,263,339,278,356,297,360,318,351,337,334,354,313,368,311,363,330,350,347,334,355,317,351,300,336,282,316,268,273,250"/>
+<area shape="rect" title=" " alt="" coords="93,299,208,324"/>
+<area shape="poly" title=" " alt="" coords="224,253,177,292,173,288,221,249"/>
+<area shape="rect" title=" " alt="" coords="232,299,341,324"/>
+<area shape="poly" title=" " alt="" coords="247,249,273,286,268,289,242,253"/>
+<area shape="poly" title=" " alt="" coords="605,178,608,213,604,233,596,252,574,274,548,289,495,307,493,302,546,284,571,269,591,249,599,232,602,213,600,178"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structlist__get__next__t.html">list_get_next_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae39649348eb8a83875832cafb565431f" id="r_ae39649348eb8a83875832cafb565431f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#ae39649348eb8a83875832cafb565431f">LIST_DFS_OPT_ID</a>&#160;&#160;&#160;0x100</td></tr>
+<tr class="separator:ae39649348eb8a83875832cafb565431f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76413ee631f0e502e641f83130e52a0b" id="r_a76413ee631f0e502e641f83130e52a0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a76413ee631f0e502e641f83130e52a0b">LIST_FIND_OBJ_NR</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:a76413ee631f0e502e641f83130e52a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9c6954c3b6571f32dd10a76af6490725" id="r_a9c6954c3b6571f32dd10a76af6490725"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a9c6954c3b6571f32dd10a76af6490725">MSH_CMD_EXPORT</a> (clear, clear the terminal screen)</td></tr>
+<tr class="separator:a9c6954c3b6571f32dd10a76af6490725"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a539fbbde476b988cb2ca6fab6f4ba90a" id="r_a539fbbde476b988cb2ca6fab6f4ba90a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a539fbbde476b988cb2ca6fab6f4ba90a">MSH_CMD_EXPORT</a> (version, show RT-Thread version information)</td></tr>
+<tr class="separator:a539fbbde476b988cb2ca6fab6f4ba90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef09bba5eb3837940bf6e1338fe38efd" id="r_aef09bba5eb3837940bf6e1338fe38efd"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#aef09bba5eb3837940bf6e1338fe38efd">object_split</a> (int len)</td></tr>
+<tr class="separator:aef09bba5eb3837940bf6e1338fe38efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a095a3fb98a5980d17d061638ea14ab52" id="r_a095a3fb98a5980d17d061638ea14ab52"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a095a3fb98a5980d17d061638ea14ab52">list_thread</a> (void)</td></tr>
+<tr class="separator:a095a3fb98a5980d17d061638ea14ab52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4298356441eaeaf9f0f4adeee2333a7c" id="r_a4298356441eaeaf9f0f4adeee2333a7c"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a4298356441eaeaf9f0f4adeee2333a7c">list_sem</a> (void)</td></tr>
+<tr class="separator:a4298356441eaeaf9f0f4adeee2333a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd12f6c9f4e8b6edf07f5f1c136202ec" id="r_afd12f6c9f4e8b6edf07f5f1c136202ec"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#afd12f6c9f4e8b6edf07f5f1c136202ec">list_event</a> (void)</td></tr>
+<tr class="separator:afd12f6c9f4e8b6edf07f5f1c136202ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af0b011ec6bcac521e67c4422bac8d203" id="r_af0b011ec6bcac521e67c4422bac8d203"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#af0b011ec6bcac521e67c4422bac8d203">list_mutex</a> (void)</td></tr>
+<tr class="separator:af0b011ec6bcac521e67c4422bac8d203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a819fb964549a07446b6d3d00910e3e33" id="r_a819fb964549a07446b6d3d00910e3e33"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a819fb964549a07446b6d3d00910e3e33">list_mailbox</a> (void)</td></tr>
+<tr class="separator:a819fb964549a07446b6d3d00910e3e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8ac4c024e68dc853c215f36b2209da" id="r_abf8ac4c024e68dc853c215f36b2209da"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#abf8ac4c024e68dc853c215f36b2209da">list_msgqueue</a> (void)</td></tr>
+<tr class="separator:abf8ac4c024e68dc853c215f36b2209da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71574796d43bf060309bfad310433f28" id="r_a71574796d43bf060309bfad310433f28"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#a71574796d43bf060309bfad310433f28">list_mempool</a> (void)</td></tr>
+<tr class="separator:a71574796d43bf060309bfad310433f28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af29379a759855d6a032877660af086c3" id="r_af29379a759855d6a032877660af086c3"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#af29379a759855d6a032877660af086c3">list_timer</a> (void)</td></tr>
+<tr class="separator:af29379a759855d6a032877660af086c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac423df6de5569a6487df095c52269511" id="r_ac423df6de5569a6487df095c52269511"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#ac423df6de5569a6487df095c52269511">list_device</a> (void)</td></tr>
+<tr class="separator:ac423df6de5569a6487df095c52269511"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad013ee37004b4711ee4f6f5052167121" id="r_ad013ee37004b4711ee4f6f5052167121"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cmd_8c.html#ad013ee37004b4711ee4f6f5052167121">MSH_CMD_EXPORT_ALIAS</a> (cmd_list, list, list objects, optenable)</td></tr>
+<tr class="separator:ad013ee37004b4711ee4f6f5052167121"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ae39649348eb8a83875832cafb565431f" name="ae39649348eb8a83875832cafb565431f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae39649348eb8a83875832cafb565431f">&#9670;&#160;</a></span>LIST_DFS_OPT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIST_DFS_OPT_ID&#160;&#160;&#160;0x100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76413ee631f0e502e641f83130e52a0b" name="a76413ee631f0e502e641f83130e52a0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76413ee631f0e502e641f83130e52a0b">&#9670;&#160;</a></span>LIST_FIND_OBJ_NR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LIST_FIND_OBJ_NR&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac423df6de5569a6487df095c52269511" name="ac423df6de5569a6487df095c52269511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac423df6de5569a6487df095c52269511">&#9670;&#160;</a></span>list_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_device </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd12f6c9f4e8b6edf07f5f1c136202ec" name="afd12f6c9f4e8b6edf07f5f1c136202ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd12f6c9f4e8b6edf07f5f1c136202ec">&#9670;&#160;</a></span>list_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_event </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a819fb964549a07446b6d3d00910e3e33" name="a819fb964549a07446b6d3d00910e3e33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819fb964549a07446b6d3d00910e3e33">&#9670;&#160;</a></span>list_mailbox()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_mailbox </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71574796d43bf060309bfad310433f28" name="a71574796d43bf060309bfad310433f28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71574796d43bf060309bfad310433f28">&#9670;&#160;</a></span>list_mempool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_mempool </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf8ac4c024e68dc853c215f36b2209da" name="abf8ac4c024e68dc853c215f36b2209da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8ac4c024e68dc853c215f36b2209da">&#9670;&#160;</a></span>list_msgqueue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_msgqueue </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af0b011ec6bcac521e67c4422bac8d203" name="af0b011ec6bcac521e67c4422bac8d203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0b011ec6bcac521e67c4422bac8d203">&#9670;&#160;</a></span>list_mutex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_mutex </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4298356441eaeaf9f0f4adeee2333a7c" name="a4298356441eaeaf9f0f4adeee2333a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4298356441eaeaf9f0f4adeee2333a7c">&#9670;&#160;</a></span>list_sem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_sem </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a095a3fb98a5980d17d061638ea14ab52" name="a095a3fb98a5980d17d061638ea14ab52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a095a3fb98a5980d17d061638ea14ab52">&#9670;&#160;</a></span>list_thread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_thread </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af29379a759855d6a032877660af086c3" name="af29379a759855d6a032877660af086c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29379a759855d6a032877660af086c3">&#9670;&#160;</a></span>list_timer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long list_timer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c6954c3b6571f32dd10a76af6490725" name="a9c6954c3b6571f32dd10a76af6490725"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c6954c3b6571f32dd10a76af6490725">&#9670;&#160;</a></span>MSH_CMD_EXPORT() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MSH_CMD_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype">clear&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">clear the terminal&#160;</td>
+          <td class="paramname"><em>screen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a539fbbde476b988cb2ca6fab6f4ba90a" name="a539fbbde476b988cb2ca6fab6f4ba90a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a539fbbde476b988cb2ca6fab6f4ba90a">&#9670;&#160;</a></span>MSH_CMD_EXPORT() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MSH_CMD_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype">version&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">show RT-Thread version&#160;</td>
+          <td class="paramname"><em>information</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad013ee37004b4711ee4f6f5052167121" name="ad013ee37004b4711ee4f6f5052167121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad013ee37004b4711ee4f6f5052167121">&#9670;&#160;</a></span>MSH_CMD_EXPORT_ALIAS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MSH_CMD_EXPORT_ALIAS </td>
+          <td>(</td>
+          <td class="paramtype">cmd_list&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">list&#160;</td>
+          <td class="paramname"><em>objects</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">optenable&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef09bba5eb3837940bf6e1338fe38efd" name="aef09bba5eb3837940bf6e1338fe38efd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef09bba5eb3837940bf6e1338fe38efd">&#9670;&#160;</a></span>object_split()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline void object_split </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>len</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_86d0af1c976cb2104552e4f347bf9ac9.html">finsh</a></li><li class="navelem"><a class="el" href="cmd_8c.html">cmd.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

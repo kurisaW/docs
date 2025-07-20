@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/reset.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('reset_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">reset.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="reset_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2022, RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2022-11-26     GuEe-GUI     first version</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __RESET_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __RESET_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="rthw_8h.html">rthw.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="ofw_8h.html">drivers/ofw.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="reset_8h.html#af9afb449bbe358fab1bbd812f6004bcd">   18</a></span><span class="preprocessor">#define RT_RESET_CONTROLLER_OBJ_NAME    &quot;RSTC&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control__ops.html">rt_reset_control_ops</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html">   22</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__controller.html">rt_reset_controller</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a9098af5ae29b905920e3e1a06a66001e">   24</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__object.html">rt_object</a> <a class="code hl_variable" href="structrt__reset__controller.html#a9098af5ae29b905920e3e1a06a66001e">parent</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a914b13f97bb0a1ef32e7feec24d44a79">   26</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structrt__reset__controller.html#a914b13f97bb0a1ef32e7feec24d44a79">rstc_nodes</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a5c1fb05adca9490c1fe52cc551800dfd">   28</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structrt__reset__controller.html#a5c1fb05adca9490c1fe52cc551800dfd">name</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a1e22021fa6afea983e6a3eff83d03ab4">   29</a></span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control__ops.html">rt_reset_control_ops</a> *<a class="code hl_variable" href="structrt__reset__controller.html#a1e22021fa6afea983e6a3eff83d03ab4">ops</a>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a6d954321f3101ac505989ea85a0895cb">   31</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__ofw__node.html">rt_ofw_node</a> *<a class="code hl_variable" href="structrt__reset__controller.html#a6d954321f3101ac505989ea85a0895cb">ofw_node</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#a8dc12e7188191630c041ad96e8f48a26">   32</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__reset__controller.html#a8dc12e7188191630c041ad96e8f48a26">priv</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structrt__reset__controller.html#ad6ffb430695e7c8d40f83a07e7c43487">   34</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__spinlock.html">rt_spinlock</a> <a class="code hl_variable" href="structrt__reset__controller.html#ad6ffb430695e7c8d40f83a07e7c43487">spinlock</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>};</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00037" data-start="{" data-end="};">
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structrt__reset__control.html">   37</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#aeb08ec7b92d27e970661fab4ed5b078e">   39</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structrt__reset__control.html#aeb08ec7b92d27e970661fab4ed5b078e">list</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#a2db575c67b409d45479f22b928c9e088">   41</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__controller.html">rt_reset_controller</a> *<a class="code hl_variable" href="structrt__reset__control.html#a2db575c67b409d45479f22b928c9e088">rstcer</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#a4b3fcd04bd2801ae7a95be83b8ed27c5">   43</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structrt__reset__control.html#a4b3fcd04bd2801ae7a95be83b8ed27c5">id</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#aa999e8608b54f520e6f44992ff16f0d0">   44</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_variable" href="structrt__reset__control.html#aa999e8608b54f520e6f44992ff16f0d0">con_id</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#ad4c671ebc64feab13d3dd7b1c26f4867">   45</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_variable" href="structrt__reset__control.html#ad4c671ebc64feab13d3dd7b1c26f4867">is_array</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structrt__reset__control.html#a23051e80bc14b9b3dadfba8a9608d991">   47</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__reset__control.html#a23051e80bc14b9b3dadfba8a9608d991">priv</a>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>};</div>
+</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="};">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html">   50</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control__ops.html">rt_reset_control_ops</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>{</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="comment">/*</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">     * rt_ofw_cell_args return:</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">     *  args[0] = rstc.id</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html#a4c8663a16b84b866d06c02f3a7a25029">   56</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>    (*<a class="code hl_variable" href="structrt__reset__control__ops.html#a4c8663a16b84b866d06c02f3a7a25029">ofw_parse</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc, <span class="keyword">struct </span><a class="code hl_struct" href="structrt__ofw__cell__args.html">rt_ofw_cell_args</a> *args);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">/* API */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html#a8e5da04c00bd72f82d0cda0d0dde6107">   58</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>    (*<a class="code hl_variable" href="structrt__reset__control__ops.html#a8e5da04c00bd72f82d0cda0d0dde6107">reset</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html#a84d4693cfad50558e28acb8909e3ff1d">   59</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>    (*<a class="code hl_variable" href="structrt__reset__control__ops.html#a84d4693cfad50558e28acb8909e3ff1d">assert</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html#a0cba947dcf15ec1f4d8e026e53fd8eb5">   60</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>    (*<a class="code hl_variable" href="structrt__reset__control__ops.html#a0cba947dcf15ec1f4d8e026e53fd8eb5">deassert</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structrt__reset__control__ops.html#a5e1f71fad4a669f410aaa6a40d6fcbd1">   61</a></span>    int         (*<a class="code hl_variable" href="structrt__reset__control__ops.html#a5e1f71fad4a669f410aaa6a40d6fcbd1">status</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="reset_8h.html#afa3edf5d56baa51bd12b3b351d399369">   64</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="reset_8h.html#afa3edf5d56baa51bd12b3b351d399369">rt_reset_controller_register</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__controller.html">rt_reset_controller</a> *<a class="code hl_variable" href="structrt__reset__control.html#a2db575c67b409d45479f22b928c9e088">rstcer</a>);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="reset_8h.html#a4e323f989ea0c2d8d10ea0f779e47b89">   65</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="reset_8h.html#a4e323f989ea0c2d8d10ea0f779e47b89">rt_reset_controller_unregister</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__controller.html">rt_reset_controller</a> *<a class="code hl_variable" href="structrt__reset__control.html#a2db575c67b409d45479f22b928c9e088">rstcer</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="reset_8h.html#afc88f13fb0cb362098cbaddaf0ec129e">   67</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="reset_8h.html#afc88f13fb0cb362098cbaddaf0ec129e">rt_reset_control_reset</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="reset_8h.html#acf711f7e26cd776b432396acc33e366c">   68</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="reset_8h.html#acf711f7e26cd776b432396acc33e366c">rt_reset_control_assert</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="reset_8h.html#afd29d9d5e622da257784707a7f1211db">   69</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="reset_8h.html#afd29d9d5e622da257784707a7f1211db">rt_reset_control_deassert</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="reset_8h.html#ae97175ad293b9954f375a392b58fda1b">   70</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="reset_8h.html#ae97175ad293b9954f375a392b58fda1b">rt_reset_control_status</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="reset_8h.html#a83a248fe0bb91cec74e83af9097fc768">   72</a></span><a class="code hl_typedef" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> <a class="code hl_function" href="reset_8h.html#a83a248fe0bb91cec74e83af9097fc768">rt_reset_control_get_count</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__device.html">rt_device</a> *dev);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="reset_8h.html#aedaa36a3d2adf4421360e443a70fc731">   73</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#aedaa36a3d2adf4421360e443a70fc731">rt_reset_control_get_array</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__device.html">rt_device</a> *dev);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="reset_8h.html#ae17c4d74ce8a0df05354b7cced6cfbe7">   74</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#ae17c4d74ce8a0df05354b7cced6cfbe7">rt_reset_control_get_by_index</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__device.html">rt_device</a> *dev, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="reset_8h.html#a4da0c18069eaac6701fe3b841641e449">   75</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#a4da0c18069eaac6701fe3b841641e449">rt_reset_control_get_by_name</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__device.html">rt_device</a> *dev, <span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="reset_8h.html#a97cbdbf38276c9a5816d6fa28380e5c9">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="reset_8h.html#a97cbdbf38276c9a5816d6fa28380e5c9">rt_reset_control_put</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *rstc);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="reset_8h.html#a1264d1911f4769fa0eced00d7431502f">   78</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#a1264d1911f4769fa0eced00d7431502f">rt_ofw_get_reset_control_array</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__ofw__node.html">rt_ofw_node</a> *np);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="reset_8h.html#ada01c52603596793946c06d37c7418c7">   79</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#ada01c52603596793946c06d37c7418c7">rt_ofw_get_reset_control_by_index</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__ofw__node.html">rt_ofw_node</a> *np, <span class="keywordtype">int</span> index);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="reset_8h.html#a23ae0e0ed0b189c1fb19d5cac764f9d7">   80</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__reset__control.html">rt_reset_control</a> *<a class="code hl_function" href="reset_8h.html#a23ae0e0ed0b189c1fb19d5cac764f9d7">rt_ofw_get_reset_control_by_name</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__ofw__node.html">rt_ofw_node</a> *np, <span class="keyword">const</span> <span class="keywordtype">char</span> *name);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#endif </span><span class="comment">/* __RESET_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aofw_8h_html"><div class="ttname"><a href="ofw_8h.html">ofw.h</a></div></div>
+<div class="ttc" id="areset_8h_html_a1264d1911f4769fa0eced00d7431502f"><div class="ttname"><a href="reset_8h.html#a1264d1911f4769fa0eced00d7431502f">rt_ofw_get_reset_control_array</a></div><div class="ttdeci">struct rt_reset_control * rt_ofw_get_reset_control_array(struct rt_ofw_node *np)</div></div>
+<div class="ttc" id="areset_8h_html_a23ae0e0ed0b189c1fb19d5cac764f9d7"><div class="ttname"><a href="reset_8h.html#a23ae0e0ed0b189c1fb19d5cac764f9d7">rt_ofw_get_reset_control_by_name</a></div><div class="ttdeci">struct rt_reset_control * rt_ofw_get_reset_control_by_name(struct rt_ofw_node *np, const char *name)</div></div>
+<div class="ttc" id="areset_8h_html_a4da0c18069eaac6701fe3b841641e449"><div class="ttname"><a href="reset_8h.html#a4da0c18069eaac6701fe3b841641e449">rt_reset_control_get_by_name</a></div><div class="ttdeci">struct rt_reset_control * rt_reset_control_get_by_name(struct rt_device *dev, const char *name)</div></div>
+<div class="ttc" id="areset_8h_html_a4e323f989ea0c2d8d10ea0f779e47b89"><div class="ttname"><a href="reset_8h.html#a4e323f989ea0c2d8d10ea0f779e47b89">rt_reset_controller_unregister</a></div><div class="ttdeci">rt_err_t rt_reset_controller_unregister(struct rt_reset_controller *rstcer)</div></div>
+<div class="ttc" id="areset_8h_html_a83a248fe0bb91cec74e83af9097fc768"><div class="ttname"><a href="reset_8h.html#a83a248fe0bb91cec74e83af9097fc768">rt_reset_control_get_count</a></div><div class="ttdeci">rt_ssize_t rt_reset_control_get_count(struct rt_device *dev)</div></div>
+<div class="ttc" id="areset_8h_html_a97cbdbf38276c9a5816d6fa28380e5c9"><div class="ttname"><a href="reset_8h.html#a97cbdbf38276c9a5816d6fa28380e5c9">rt_reset_control_put</a></div><div class="ttdeci">void rt_reset_control_put(struct rt_reset_control *rstc)</div></div>
+<div class="ttc" id="areset_8h_html_acf711f7e26cd776b432396acc33e366c"><div class="ttname"><a href="reset_8h.html#acf711f7e26cd776b432396acc33e366c">rt_reset_control_assert</a></div><div class="ttdeci">rt_err_t rt_reset_control_assert(struct rt_reset_control *rstc)</div></div>
+<div class="ttc" id="areset_8h_html_ada01c52603596793946c06d37c7418c7"><div class="ttname"><a href="reset_8h.html#ada01c52603596793946c06d37c7418c7">rt_ofw_get_reset_control_by_index</a></div><div class="ttdeci">struct rt_reset_control * rt_ofw_get_reset_control_by_index(struct rt_ofw_node *np, int index)</div></div>
+<div class="ttc" id="areset_8h_html_ae17c4d74ce8a0df05354b7cced6cfbe7"><div class="ttname"><a href="reset_8h.html#ae17c4d74ce8a0df05354b7cced6cfbe7">rt_reset_control_get_by_index</a></div><div class="ttdeci">struct rt_reset_control * rt_reset_control_get_by_index(struct rt_device *dev, int index)</div></div>
+<div class="ttc" id="areset_8h_html_ae97175ad293b9954f375a392b58fda1b"><div class="ttname"><a href="reset_8h.html#ae97175ad293b9954f375a392b58fda1b">rt_reset_control_status</a></div><div class="ttdeci">int rt_reset_control_status(struct rt_reset_control *rstc)</div></div>
+<div class="ttc" id="areset_8h_html_aedaa36a3d2adf4421360e443a70fc731"><div class="ttname"><a href="reset_8h.html#aedaa36a3d2adf4421360e443a70fc731">rt_reset_control_get_array</a></div><div class="ttdeci">struct rt_reset_control * rt_reset_control_get_array(struct rt_device *dev)</div></div>
+<div class="ttc" id="areset_8h_html_afa3edf5d56baa51bd12b3b351d399369"><div class="ttname"><a href="reset_8h.html#afa3edf5d56baa51bd12b3b351d399369">rt_reset_controller_register</a></div><div class="ttdeci">rt_err_t rt_reset_controller_register(struct rt_reset_controller *rstcer)</div></div>
+<div class="ttc" id="areset_8h_html_afc88f13fb0cb362098cbaddaf0ec129e"><div class="ttname"><a href="reset_8h.html#afc88f13fb0cb362098cbaddaf0ec129e">rt_reset_control_reset</a></div><div class="ttdeci">rt_err_t rt_reset_control_reset(struct rt_reset_control *rstc)</div></div>
+<div class="ttc" id="areset_8h_html_afd29d9d5e622da257784707a7f1211db"><div class="ttname"><a href="reset_8h.html#afd29d9d5e622da257784707a7f1211db">rt_reset_control_deassert</a></div><div class="ttdeci">rt_err_t rt_reset_control_deassert(struct rt_reset_control *rstc)</div></div>
+<div class="ttc" id="arthw_8h_html"><div class="ttname"><a href="rthw_8h.html">rthw.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a0838be0f1d323925555279fa1016892e"><div class="ttname"><a href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a></div><div class="ttdeci">rt_base_t rt_ssize_t</div><div class="ttdef"><b>Definition</b> rttypes.h:85</div></div>
+<div class="ttc" id="arttypes_8h_html_a3e03a3519ef7e33d13ebd34c482db49c"><div class="ttname"><a href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a></div><div class="ttdeci">int rt_bool_t</div><div class="ttdef"><b>Definition</b> rttypes.h:41</div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="astructrt__device_html"><div class="ttname"><a href="structrt__device.html">rt_device</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1373</div></div>
+<div class="ttc" id="astructrt__list__node_html"><div class="ttname"><a href="structrt__list__node.html">rt_list_node</a></div><div class="ttdef"><b>Definition</b> rttypes.h:126</div></div>
+<div class="ttc" id="astructrt__object_html"><div class="ttname"><a href="structrt__object.html">rt_object</a></div><div class="ttdef"><b>Definition</b> rtdef.h:283</div></div>
+<div class="ttc" id="astructrt__ofw__cell__args_html"><div class="ttname"><a href="structrt__ofw__cell__args.html">rt_ofw_cell_args</a></div><div class="ttdef"><b>Definition</b> ofw.h:61</div></div>
+<div class="ttc" id="astructrt__ofw__node_html"><div class="ttname"><a href="structrt__ofw__node.html">rt_ofw_node</a></div><div class="ttdef"><b>Definition</b> ofw.h:33</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html"><div class="ttname"><a href="structrt__reset__control__ops.html">rt_reset_control_ops</a></div><div class="ttdef"><b>Definition</b> reset.h:51</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html_a0cba947dcf15ec1f4d8e026e53fd8eb5"><div class="ttname"><a href="structrt__reset__control__ops.html#a0cba947dcf15ec1f4d8e026e53fd8eb5">rt_reset_control_ops::deassert</a></div><div class="ttdeci">rt_err_t(* deassert)(struct rt_reset_control *rstc)</div><div class="ttdef"><b>Definition</b> reset.h:60</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html_a4c8663a16b84b866d06c02f3a7a25029"><div class="ttname"><a href="structrt__reset__control__ops.html#a4c8663a16b84b866d06c02f3a7a25029">rt_reset_control_ops::ofw_parse</a></div><div class="ttdeci">rt_err_t(* ofw_parse)(struct rt_reset_control *rstc, struct rt_ofw_cell_args *args)</div><div class="ttdef"><b>Definition</b> reset.h:56</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html_a5e1f71fad4a669f410aaa6a40d6fcbd1"><div class="ttname"><a href="structrt__reset__control__ops.html#a5e1f71fad4a669f410aaa6a40d6fcbd1">rt_reset_control_ops::status</a></div><div class="ttdeci">int(* status)(struct rt_reset_control *rstc)</div><div class="ttdef"><b>Definition</b> reset.h:61</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html_a84d4693cfad50558e28acb8909e3ff1d"><div class="ttname"><a href="structrt__reset__control__ops.html#a84d4693cfad50558e28acb8909e3ff1d">rt_reset_control_ops::assert</a></div><div class="ttdeci">rt_err_t(* assert)(struct rt_reset_control *rstc)</div><div class="ttdef"><b>Definition</b> reset.h:59</div></div>
+<div class="ttc" id="astructrt__reset__control__ops_html_a8e5da04c00bd72f82d0cda0d0dde6107"><div class="ttname"><a href="structrt__reset__control__ops.html#a8e5da04c00bd72f82d0cda0d0dde6107">rt_reset_control_ops::reset</a></div><div class="ttdeci">rt_err_t(* reset)(struct rt_reset_control *rstc)</div><div class="ttdef"><b>Definition</b> reset.h:58</div></div>
+<div class="ttc" id="astructrt__reset__control_html"><div class="ttname"><a href="structrt__reset__control.html">rt_reset_control</a></div><div class="ttdef"><b>Definition</b> reset.h:38</div></div>
+<div class="ttc" id="astructrt__reset__control_html_a23051e80bc14b9b3dadfba8a9608d991"><div class="ttname"><a href="structrt__reset__control.html#a23051e80bc14b9b3dadfba8a9608d991">rt_reset_control::priv</a></div><div class="ttdeci">void * priv</div><div class="ttdef"><b>Definition</b> reset.h:47</div></div>
+<div class="ttc" id="astructrt__reset__control_html_a2db575c67b409d45479f22b928c9e088"><div class="ttname"><a href="structrt__reset__control.html#a2db575c67b409d45479f22b928c9e088">rt_reset_control::rstcer</a></div><div class="ttdeci">struct rt_reset_controller * rstcer</div><div class="ttdef"><b>Definition</b> reset.h:41</div></div>
+<div class="ttc" id="astructrt__reset__control_html_a4b3fcd04bd2801ae7a95be83b8ed27c5"><div class="ttname"><a href="structrt__reset__control.html#a4b3fcd04bd2801ae7a95be83b8ed27c5">rt_reset_control::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>Definition</b> reset.h:43</div></div>
+<div class="ttc" id="astructrt__reset__control_html_aa999e8608b54f520e6f44992ff16f0d0"><div class="ttname"><a href="structrt__reset__control.html#aa999e8608b54f520e6f44992ff16f0d0">rt_reset_control::con_id</a></div><div class="ttdeci">const char * con_id</div><div class="ttdef"><b>Definition</b> reset.h:44</div></div>
+<div class="ttc" id="astructrt__reset__control_html_ad4c671ebc64feab13d3dd7b1c26f4867"><div class="ttname"><a href="structrt__reset__control.html#ad4c671ebc64feab13d3dd7b1c26f4867">rt_reset_control::is_array</a></div><div class="ttdeci">rt_bool_t is_array</div><div class="ttdef"><b>Definition</b> reset.h:45</div></div>
+<div class="ttc" id="astructrt__reset__control_html_aeb08ec7b92d27e970661fab4ed5b078e"><div class="ttname"><a href="structrt__reset__control.html#aeb08ec7b92d27e970661fab4ed5b078e">rt_reset_control::list</a></div><div class="ttdeci">rt_list_t list</div><div class="ttdef"><b>Definition</b> reset.h:39</div></div>
+<div class="ttc" id="astructrt__reset__controller_html"><div class="ttname"><a href="structrt__reset__controller.html">rt_reset_controller</a></div><div class="ttdef"><b>Definition</b> reset.h:23</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a1e22021fa6afea983e6a3eff83d03ab4"><div class="ttname"><a href="structrt__reset__controller.html#a1e22021fa6afea983e6a3eff83d03ab4">rt_reset_controller::ops</a></div><div class="ttdeci">const struct rt_reset_control_ops * ops</div><div class="ttdef"><b>Definition</b> reset.h:29</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a5c1fb05adca9490c1fe52cc551800dfd"><div class="ttname"><a href="structrt__reset__controller.html#a5c1fb05adca9490c1fe52cc551800dfd">rt_reset_controller::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> reset.h:28</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a6d954321f3101ac505989ea85a0895cb"><div class="ttname"><a href="structrt__reset__controller.html#a6d954321f3101ac505989ea85a0895cb">rt_reset_controller::ofw_node</a></div><div class="ttdeci">struct rt_ofw_node * ofw_node</div><div class="ttdef"><b>Definition</b> reset.h:31</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a8dc12e7188191630c041ad96e8f48a26"><div class="ttname"><a href="structrt__reset__controller.html#a8dc12e7188191630c041ad96e8f48a26">rt_reset_controller::priv</a></div><div class="ttdeci">void * priv</div><div class="ttdef"><b>Definition</b> reset.h:32</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a9098af5ae29b905920e3e1a06a66001e"><div class="ttname"><a href="structrt__reset__controller.html#a9098af5ae29b905920e3e1a06a66001e">rt_reset_controller::parent</a></div><div class="ttdeci">struct rt_object parent</div><div class="ttdef"><b>Definition</b> reset.h:24</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_a914b13f97bb0a1ef32e7feec24d44a79"><div class="ttname"><a href="structrt__reset__controller.html#a914b13f97bb0a1ef32e7feec24d44a79">rt_reset_controller::rstc_nodes</a></div><div class="ttdeci">rt_list_t rstc_nodes</div><div class="ttdef"><b>Definition</b> reset.h:26</div></div>
+<div class="ttc" id="astructrt__reset__controller_html_ad6ffb430695e7c8d40f83a07e7c43487"><div class="ttname"><a href="structrt__reset__controller.html#ad6ffb430695e7c8d40f83a07e7c43487">rt_reset_controller::spinlock</a></div><div class="ttdeci">struct rt_spinlock spinlock</div><div class="ttdef"><b>Definition</b> reset.h:34</div></div>
+<div class="ttc" id="astructrt__spinlock_html"><div class="ttname"><a href="structrt__spinlock.html">rt_spinlock</a></div><div class="ttdef"><b>Definition</b> rttypes.h:175</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="reset_8h.html">reset.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

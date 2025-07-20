@@ -1,0 +1,1248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: CAN Driver</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group___c_a_n___device.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">CAN Driver<div class="ingroups"><a class="el" href="group__group__device__driver.html">Group_device_driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>CAN driver api.  
+<a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for CAN Driver:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group___c_a_n___device.png" border="0" usemap="#agroup____group______c__a__n______device" alt=""/></div>
+<map name="agroup____group______c__a__n______device" id="agroup____group______c__a__n______device">
+<area shape="rect" title="CAN driver api." alt="" coords="209,5,304,31"/>
+<area shape="rect" href="group__group__device__driver.html" title=" " alt="" coords="5,5,161,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__filter__item.html">rt_can_filter_item</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN filter item.  <a href="structrt__can__filter__item.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__filter__config.html">rt_can_filter_config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN filter configuration.  <a href="structrt__can__filter__config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__bit__timing.html">rt_can_bit_timing</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN timing configuration.  <a href="structrt__can__bit__timing.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__bit__timing__config.html">rt_can_bit_timing_config</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN bit timing configuration list.  <a href="structrt__can__bit__timing__config.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcan__configure.html">can_configure</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN configuration.  <a href="structcan__configure.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__status.html">rt_can_status</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN status.  <a href="structrt__can__status.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__status__ind__type.html">rt_can_status_ind_type</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__device.html">rt_can_device</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__msg.html">rt_can_msg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__msg__list.html">rt_can_msg_list</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__rx__fifo.html">rt_can_rx_fifo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__sndbxinx__list.html">rt_can_sndbxinx_list</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__tx__fifo.html">rt_can_tx_fifo</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__can__ops.html">rt_can_ops</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN operators.  <a href="structrt__can__ops.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga93b60b4b7de8f8ca12fe1717577ec7b9" id="r_ga93b60b4b7de8f8ca12fe1717577ec7b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga93b60b4b7de8f8ca12fe1717577ec7b9">CAN_RX_FIFO0</a>&#160;&#160;&#160;(0x00000000U)</td></tr>
+<tr class="separator:ga93b60b4b7de8f8ca12fe1717577ec7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39b4c6726afe491b0766cae9e1cea678" id="r_ga39b4c6726afe491b0766cae9e1cea678"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga39b4c6726afe491b0766cae9e1cea678">CAN_RX_FIFO1</a>&#160;&#160;&#160;(0x00000001U)</td></tr>
+<tr class="separator:ga39b4c6726afe491b0766cae9e1cea678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77d5a22e76eab2c21e532f3ebfe7ced5" id="r_ga77d5a22e76eab2c21e532f3ebfe7ced5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,  ide,  rtr,  mode,  mask)&#160;&#160;&#160;      {(id), (ide), (rtr), (mode), (mask), -1, <a class="el" href="group__group___c_a_n___device.html#ga93b60b4b7de8f8ca12fe1717577ec7b9">CAN_RX_FIFO0</a> }/*0:<a class="el" href="group__group___c_a_n___device.html#ga93b60b4b7de8f8ca12fe1717577ec7b9">CAN_RX_FIFO0</a>*/</td></tr>
+<tr class="separator:ga77d5a22e76eab2c21e532f3ebfe7ced5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90b507bfeed0dbb7e3d671927b809cad" id="r_ga90b507bfeed0dbb7e3d671927b809cad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga90b507bfeed0dbb7e3d671927b809cad">RT_CAN_FILTER_STD_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,0,0,0xFFFFFFFF)</td></tr>
+<tr class="separator:ga90b507bfeed0dbb7e3d671927b809cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07e050dc1d585a87f4f2dd572fb1c4b3" id="r_ga07e050dc1d585a87f4f2dd572fb1c4b3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga07e050dc1d585a87f4f2dd572fb1c4b3">RT_CAN_FILTER_EXT_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,0,0,0xFFFFFFFF)</td></tr>
+<tr class="separator:ga07e050dc1d585a87f4f2dd572fb1c4b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1daba721db5b8cd6831ff9fe63213a5" id="r_gaf1daba721db5b8cd6831ff9fe63213a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaf1daba721db5b8cd6831ff9fe63213a5">RT_CAN_STD_RMT_FILTER_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,1,0,0xFFFFFFFF)</td></tr>
+<tr class="separator:gaf1daba721db5b8cd6831ff9fe63213a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d5390d9ddecb3e658d501af24169ee3" id="r_ga4d5390d9ddecb3e658d501af24169ee3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga4d5390d9ddecb3e658d501af24169ee3">RT_CAN_EXT_RMT_FILTER_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,1,0,0xFFFFFFFF)</td></tr>
+<tr class="separator:ga4d5390d9ddecb3e658d501af24169ee3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafd9a86b40061dd92afb62a2c2e05b08" id="r_gaafd9a86b40061dd92afb62a2c2e05b08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaafd9a86b40061dd92afb62a2c2e05b08">RT_CAN_STD_RMT_DATA_FILTER_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,0,1,0xFFFFFFFF)</td></tr>
+<tr class="separator:gaafd9a86b40061dd92afb62a2c2e05b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bc61f55230990804a539e570cf9da18" id="r_ga2bc61f55230990804a539e570cf9da18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga2bc61f55230990804a539e570cf9da18">RT_CAN_EXT_RMT_DATA_FILTER_INIT</a>(id)&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,0,1,0xFFFFFFFF)</td></tr>
+<tr class="separator:ga2bc61f55230990804a539e570cf9da18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa505b31bdf6106e9a6b93ce73a87616b" id="r_gaa505b31bdf6106e9a6b93ce73a87616b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaa505b31bdf6106e9a6b93ce73a87616b">CANDEFAULTCONFIG</a></td></tr>
+<tr class="separator:gaa505b31bdf6106e9a6b93ce73a87616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad20a8f9d901a540af1decbcd40a61432" id="r_gad20a8f9d901a540af1decbcd40a61432"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gad20a8f9d901a540af1decbcd40a61432">RT_CAN_CMD_SET_FILTER</a>&#160;&#160;&#160;0x13</td></tr>
+<tr class="separator:gad20a8f9d901a540af1decbcd40a61432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc67517babdcb78e33bd4852efa4effc" id="r_gafc67517babdcb78e33bd4852efa4effc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gafc67517babdcb78e33bd4852efa4effc">RT_CAN_CMD_SET_BAUD</a>&#160;&#160;&#160;0x14</td></tr>
+<tr class="separator:gafc67517babdcb78e33bd4852efa4effc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d623875c9cad0daf074a8d23701aeba" id="r_ga9d623875c9cad0daf074a8d23701aeba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga9d623875c9cad0daf074a8d23701aeba">RT_CAN_CMD_SET_MODE</a>&#160;&#160;&#160;0x15</td></tr>
+<tr class="separator:ga9d623875c9cad0daf074a8d23701aeba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade52f9ba6bddb4d307c9d6a0f7ca2ac7" id="r_gade52f9ba6bddb4d307c9d6a0f7ca2ac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gade52f9ba6bddb4d307c9d6a0f7ca2ac7">RT_CAN_CMD_SET_PRIV</a>&#160;&#160;&#160;0x16</td></tr>
+<tr class="separator:gade52f9ba6bddb4d307c9d6a0f7ca2ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab14564b9316ed0cb07cf7c78af0d5a73" id="r_gab14564b9316ed0cb07cf7c78af0d5a73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gab14564b9316ed0cb07cf7c78af0d5a73">RT_CAN_CMD_GET_STATUS</a>&#160;&#160;&#160;0x17</td></tr>
+<tr class="separator:gab14564b9316ed0cb07cf7c78af0d5a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga01b8853f8b903ce27bb5c67e6e5824a4" id="r_ga01b8853f8b903ce27bb5c67e6e5824a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga01b8853f8b903ce27bb5c67e6e5824a4">RT_CAN_CMD_SET_STATUS_IND</a>&#160;&#160;&#160;0x18</td></tr>
+<tr class="separator:ga01b8853f8b903ce27bb5c67e6e5824a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedf57588087fd0a8cf1563b40481368e" id="r_gaedf57588087fd0a8cf1563b40481368e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaedf57588087fd0a8cf1563b40481368e">RT_CAN_CMD_SET_BUS_HOOK</a>&#160;&#160;&#160;0x19</td></tr>
+<tr class="separator:gaedf57588087fd0a8cf1563b40481368e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5825513d6cd8bc0cdceb8828738e2794" id="r_ga5825513d6cd8bc0cdceb8828738e2794"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga5825513d6cd8bc0cdceb8828738e2794">RT_CAN_CMD_SET_CANFD</a>&#160;&#160;&#160;0x1A</td></tr>
+<tr class="separator:ga5825513d6cd8bc0cdceb8828738e2794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d894c1d628ac06b17a1b0ec5836bbc5" id="r_ga3d894c1d628ac06b17a1b0ec5836bbc5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga3d894c1d628ac06b17a1b0ec5836bbc5">RT_CAN_CMD_SET_BAUD_FD</a>&#160;&#160;&#160;0x1B</td></tr>
+<tr class="separator:ga3d894c1d628ac06b17a1b0ec5836bbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71b1e3b40e310592931172451d8aa3c3" id="r_ga71b1e3b40e310592931172451d8aa3c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga71b1e3b40e310592931172451d8aa3c3">RT_CAN_CMD_SET_BITTIMING</a>&#160;&#160;&#160;0x1C</td></tr>
+<tr class="separator:ga71b1e3b40e310592931172451d8aa3c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b31c7b54cf557d7063dc1a8e7d0d246" id="r_ga8b31c7b54cf557d7063dc1a8e7d0d246"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga8b31c7b54cf557d7063dc1a8e7d0d246">RT_CAN_CMD_START</a>&#160;&#160;&#160;0x1D</td></tr>
+<tr class="separator:ga8b31c7b54cf557d7063dc1a8e7d0d246"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fc6779be7f71f43a54032817afa8457" id="r_ga2fc6779be7f71f43a54032817afa8457"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga2fc6779be7f71f43a54032817afa8457">RT_DEVICE_CAN_INT_ERR</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="separator:ga2fc6779be7f71f43a54032817afa8457"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga416ec8279ce82bb22fdec15098d2047c" id="r_ga416ec8279ce82bb22fdec15098d2047c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga416ec8279ce82bb22fdec15098d2047c">RT_CAN_STDID</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga416ec8279ce82bb22fdec15098d2047c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1f5b1d9745c8bd300df2260d079f9073" id="r_ga1f5b1d9745c8bd300df2260d079f9073"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga1f5b1d9745c8bd300df2260d079f9073">RT_CAN_EXTID</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga1f5b1d9745c8bd300df2260d079f9073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4b7b68ffb9b44f693e32f4fff216a64" id="r_gac4b7b68ffb9b44f693e32f4fff216a64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gac4b7b68ffb9b44f693e32f4fff216a64">RT_CAN_DTR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gac4b7b68ffb9b44f693e32f4fff216a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae26d6fa3059eb6c3744b99198aa24687" id="r_gae26d6fa3059eb6c3744b99198aa24687"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gae26d6fa3059eb6c3744b99198aa24687">RT_CAN_RTR</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gae26d6fa3059eb6c3744b99198aa24687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b72d9f89f025976dec66ac24d0d6f49" id="r_ga8b72d9f89f025976dec66ac24d0d6f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga8b72d9f89f025976dec66ac24d0d6f49">RT_CAN_SND_RESULT_OK</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga8b72d9f89f025976dec66ac24d0d6f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa0cf68ca5de58cceb39dd380a44a7e70" id="r_gaa0cf68ca5de58cceb39dd380a44a7e70"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaa0cf68ca5de58cceb39dd380a44a7e70">RT_CAN_SND_RESULT_ERR</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gaa0cf68ca5de58cceb39dd380a44a7e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf90c6fd4cb69be352270c4190adb5207" id="r_gaf90c6fd4cb69be352270c4190adb5207"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaf90c6fd4cb69be352270c4190adb5207">RT_CAN_SND_RESULT_WAIT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gaf90c6fd4cb69be352270c4190adb5207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8da3b17b235020bc20bb7dcf8738ffa" id="r_gae8da3b17b235020bc20bb7dcf8738ffa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gae8da3b17b235020bc20bb7dcf8738ffa">RT_CAN_EVENT_RX_IND</a>&#160;&#160;&#160;0x01    /* Rx indication */</td></tr>
+<tr class="separator:gae8da3b17b235020bc20bb7dcf8738ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b2745878bfccc9255f962ff0c4fa852" id="r_ga6b2745878bfccc9255f962ff0c4fa852"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga6b2745878bfccc9255f962ff0c4fa852">RT_CAN_EVENT_TX_DONE</a>&#160;&#160;&#160;0x02    /* Tx complete   */</td></tr>
+<tr class="separator:ga6b2745878bfccc9255f962ff0c4fa852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5229843f0f274f3ace46bc218e5e4034" id="r_ga5229843f0f274f3ace46bc218e5e4034"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga5229843f0f274f3ace46bc218e5e4034">RT_CAN_EVENT_TX_FAIL</a>&#160;&#160;&#160;0x03    /* Tx fail   */</td></tr>
+<tr class="separator:ga5229843f0f274f3ace46bc218e5e4034"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac35f697c2a3c400cef52b727d746f2f5" id="r_gac35f697c2a3c400cef52b727d746f2f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gac35f697c2a3c400cef52b727d746f2f5">RT_CAN_EVENT_RX_TIMEOUT</a>&#160;&#160;&#160;0x05    /* Rx timeout    */</td></tr>
+<tr class="separator:gac35f697c2a3c400cef52b727d746f2f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ec4e06368d133e302b304f2ce24ace9" id="r_ga0ec4e06368d133e302b304f2ce24ace9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga0ec4e06368d133e302b304f2ce24ace9">RT_CAN_EVENT_RXOF_IND</a>&#160;&#160;&#160;0x06    /* Rx overflow */</td></tr>
+<tr class="separator:ga0ec4e06368d133e302b304f2ce24ace9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga097aa7630bdbe60a6c771f49a98a2042" id="r_ga097aa7630bdbe60a6c771f49a98a2042"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga097aa7630bdbe60a6c771f49a98a2042">rt_canstatus_ind</a>) (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *, void *)</td></tr>
+<tr class="separator:ga097aa7630bdbe60a6c771f49a98a2042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf447040370ce99a0d9fcbf6ba03650fe" id="r_gaf447040370ce99a0d9fcbf6ba03650fe"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__can__status__ind__type.html">rt_can_status_ind_type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gaf447040370ce99a0d9fcbf6ba03650fe">rt_can_status_ind_type_t</a></td></tr>
+<tr class="separator:gaf447040370ce99a0d9fcbf6ba03650fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a70139ff92320b0acd604f4be74567b" id="r_ga4a70139ff92320b0acd604f4be74567b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga4a70139ff92320b0acd604f4be74567b">rt_can_bus_hook</a>) (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *)</td></tr>
+<tr class="separator:ga4a70139ff92320b0acd604f4be74567b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6edc8c7dd3c78f41366742cd07b47669" id="r_ga6edc8c7dd3c78f41366742cd07b47669"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga6edc8c7dd3c78f41366742cd07b47669">rt_can_t</a></td></tr>
+<tr class="separator:ga6edc8c7dd3c78f41366742cd07b47669"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33a7f59b928daa8ab1369897b7e90e6f" id="r_ga33a7f59b928daa8ab1369897b7e90e6f"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__can__status.html">rt_can_status</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga33a7f59b928daa8ab1369897b7e90e6f">rt_can_status_t</a></td></tr>
+<tr class="separator:ga33a7f59b928daa8ab1369897b7e90e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27b5eab9448c7d3b6f5c3905e0a24e8d" id="r_ga27b5eab9448c7d3b6f5c3905e0a24e8d"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__can__msg.html">rt_can_msg</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga27b5eab9448c7d3b6f5c3905e0a24e8d">rt_can_msg_t</a></td></tr>
+<tr class="separator:ga27b5eab9448c7d3b6f5c3905e0a24e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga2db9822bd352087e8d22b5196b18c1bb" id="r_ga2db9822bd352087e8d22b5196b18c1bb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga2db9822bd352087e8d22b5196b18c1bb">RT_CAN_STATUS_MODE</a> { <a class="el" href="group__group___c_a_n___device.html#gga2db9822bd352087e8d22b5196b18c1bba50d1448013c6f17125caee18aa418af7">NORMAL</a> = 0
+, <a class="el" href="group__group___c_a_n___device.html#gga2db9822bd352087e8d22b5196b18c1bba48802d3fb796f5ef9b65a4ebab86dd7f">ERRWARNING</a> = 1
+, <a class="el" href="group__group___c_a_n___device.html#gga2db9822bd352087e8d22b5196b18c1bbab7a24f39cb68f6f0958504713f6c146d">ERRPASSIVE</a> = 2
+, <a class="el" href="group__group___c_a_n___device.html#gga2db9822bd352087e8d22b5196b18c1bba2adf02eebb602f30434fc0ab4357de78">BUSOFF</a> = 4
+ }</td></tr>
+<tr class="separator:ga2db9822bd352087e8d22b5196b18c1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67f53c87094ec2f61ae79908ede405d3" id="r_ga67f53c87094ec2f61ae79908ede405d3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga67f53c87094ec2f61ae79908ede405d3">RT_CAN_BUS_ERR</a> { <br />
+&#160;&#160;<a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3aa687ab05123620a051a840e5d6de9f21">RT_CAN_BUS_NO_ERR</a> = 0
+, <a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3ab0ec68ef51af89e367a678ef91dfa13d">RT_CAN_BUS_BIT_PAD_ERR</a> = 1
+, <a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3ae461cba4fb3ab42c5c787a449180f32f">RT_CAN_BUS_FORMAT_ERR</a> = 2
+, <a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3a88560722486c33f1aa2bfbac1ac924c9">RT_CAN_BUS_ACK_ERR</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3ae1c35dfc0360000a21c5e0f7bef4f2c7">RT_CAN_BUS_IMPLICIT_BIT_ERR</a> = 4
+, <a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3ade11f79f9e63d37625b746e847cd9707">RT_CAN_BUS_EXPLICIT_BIT_ERR</a> = 5
+, <a class="el" href="group__group___c_a_n___device.html#gga67f53c87094ec2f61ae79908ede405d3a0e9fe3a4470a063c616529553c1f1358">RT_CAN_BUS_CRC_ERR</a> = 6
+<br />
+ }</td></tr>
+<tr class="separator:ga67f53c87094ec2f61ae79908ede405d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gadf1896bf2a7af596844c4ec8f26f2713" id="r_gadf1896bf2a7af596844c4ec8f26f2713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#gadf1896bf2a7af596844c4ec8f26f2713">rt_hw_can_register</a> (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *can, const char *name, const struct <a class="el" href="structrt__can__ops.html">rt_can_ops</a> *ops, void *data)</td></tr>
+<tr class="memdesc:gadf1896bf2a7af596844c4ec8f26f2713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a CAN device to device list.  <br /></td></tr>
+<tr class="separator:gadf1896bf2a7af596844c4ec8f26f2713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cf63c299c84932dcb43481dbff6201f" id="r_ga1cf63c299c84932dcb43481dbff6201f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___c_a_n___device.html#ga1cf63c299c84932dcb43481dbff6201f">rt_hw_can_isr</a> (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *can, int event)</td></tr>
+<tr class="memdesc:ga1cf63c299c84932dcb43481dbff6201f"><td class="mdescLeft">&#160;</td><td class="mdescRight">CAN interrupt service routine.  <br /></td></tr>
+<tr class="separator:ga1cf63c299c84932dcb43481dbff6201f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>CAN driver api. </p>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="rtdevice_8h.html">rtdevice.h</a>&quot;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#define CAN_DEV_NAME       &quot;can1&quot;      </span><span class="comment">// CAN 设备名称</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keyword">struct </span><a class="code hl_struct" href="structrt__semaphore.html">rt_semaphore</a> rx_sem;     <span class="comment">// 用于接收消息的信号量</span></div>
+<div class="line"><span class="keyword">static</span> <a class="code hl_struct" href="structrt__device.html">rt_device_t</a> can_dev;            <span class="comment">// CAN 设备句柄</span></div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// 接收数据回调函数</span></div>
+<div class="line"><span class="keyword">static</span> <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> can_rx_call(<a class="code hl_struct" href="structrt__device.html">rt_device_t</a> dev, <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// CAN 接收到数据后产生中断，调用此回调函数，然后发送接收信号量</span></div>
+<div class="line">    <a class="code hl_function" href="group__group__semaphore.html#gad9a5760bc4c7faeb08a7d9c112506f76">rt_sem_release</a>(&amp;rx_sem);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> RT_EOK;</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> can_rx_thread(<span class="keywordtype">void</span> *parameter)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordtype">int</span> i;</div>
+<div class="line">    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> res;</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__can__msg.html">rt_can_msg</a> rxmsg = {0};</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 设置接收回调函数</span></div>
+<div class="line">    <a class="code hl_function" href="group__group__device__driver.html#ga07dfc7fd340b9449d2bd732159ed237f">rt_device_set_rx_indicate</a>(can_dev, can_rx_call);</div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifdef RT_CAN_USING_HDR</span></div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__can__filter__item.html">rt_can_filter_item</a> items[5] =</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_define" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(0x100, 0, 0, 0, 0x700, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>), <span class="comment">// std,match ID:0x100~0x1ff，hdr 为 - 1，设置默认过滤表</span></div>
+<div class="line">        <a class="code hl_define" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(0x300, 0, 0, 0, 0x700, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>), <span class="comment">// std,match ID:0x300~0x3ff，hdr 为 - 1</span></div>
+<div class="line">        <a class="code hl_define" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(0x211, 0, 0, 0, 0x7ff, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>), <span class="comment">// std,match ID:0x211，hdr 为 - 1</span></div>
+<div class="line">        <a class="code hl_define" href="group__group___c_a_n___device.html#ga90b507bfeed0dbb7e3d671927b809cad">RT_CAN_FILTER_STD_INIT</a>(0x486, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>),                  <span class="comment">// std,match ID:0x486，hdr 为 - 1</span></div>
+<div class="line">        {0x555, 0, 0, 0, 0x7ff, 7,}                                       <span class="comment">// std,match ID:0x555，hdr 为 7，指定设置 7 号过滤表</span></div>
+<div class="line">    };</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__can__filter__config.html">rt_can_filter_config</a> cfg = {5, 1, <a class="code hl_variable" href="structrt__can__filter__config.html#a84642e1e10d2f6d8f8b86ec87e696e0b">items</a>}; <span class="comment">// 一共有 5 个过滤表</span></div>
+<div class="line">    <span class="comment">// 设置硬件过滤表</span></div>
+<div class="line">    res = <a class="code hl_function" href="group__group__device__driver.html#ga40ed6da2d5ea7b1e28de21ff439db963">rt_device_control</a>(can_dev, <a class="code hl_define" href="group__group___c_a_n___device.html#gad20a8f9d901a540af1decbcd40a61432">RT_CAN_CMD_SET_FILTER</a>, &amp;cfg);</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga6a86c5965ba3874257e3cb99a3536b70">RT_ASSERT</a>(res == RT_EOK);</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line">    res = <a class="code hl_define" href="rttypes_8h.html#a5e3d4a1b993df67473bc161096dba218">RT_TRUE</a>;</div>
+<div class="line">    res = <a class="code hl_function" href="group__group__device__driver.html#ga40ed6da2d5ea7b1e28de21ff439db963">rt_device_control</a>(can_dev, <a class="code hl_define" href="group__group___c_a_n___device.html#ga8b31c7b54cf557d7063dc1a8e7d0d246">RT_CAN_CMD_START</a>, &amp;res);</div>
+<div class="line">    <span class="keywordflow">while</span> (1)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="comment">// hdr 值为 - 1，表示直接从 uselist 链表读取数据</span></div>
+<div class="line">        rxmsg.hdr = -1;</div>
+<div class="line">        <span class="comment">// 阻塞等待接收信号量</span></div>
+<div class="line">        <a class="code hl_function" href="group__group__semaphore.html#gad5de76667b198615400bab78afba6604">rt_sem_take</a>(&amp;rx_sem, <a class="code hl_define" href="group__group___i_p_c.html#ga923d8e409f9daa8843978d6805ebcdeb">RT_WAITING_FOREVER</a>);</div>
+<div class="line">        <span class="comment">// 从 CAN 读取一帧数据</span></div>
+<div class="line">        <a class="code hl_function" href="group__group__device__driver.html#ga51642e30d61927aece593ee23d090b17">rt_device_read</a>(can_dev, 0, &amp;rxmsg, <span class="keyword">sizeof</span>(rxmsg));</div>
+<div class="line">        <span class="comment">// 打印数据 ID 及内容</span></div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;ID:%x&quot;</span>, rxmsg.<a class="code hl_variable" href="structrt__can__msg.html#a4a54738bd76ab9d26ba95dc675894e54">id</a>);</div>
+<div class="line">        <span class="keywordflow">for</span> (i = 0; i &lt; 8; i++)</div>
+<div class="line">        {</div>
+<div class="line">            <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;%2x&quot;</span>, rxmsg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[i]);</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> can_sample(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__can__msg.html">rt_can_msg</a> msg = {0};</div>
+<div class="line">    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> res;</div>
+<div class="line">    <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>  size;</div>
+<div class="line">    <a class="code hl_struct" href="structrt__thread.html">rt_thread_t</a> thread;</div>
+<div class="line">    <span class="keywordtype">char</span> can_name[RT_NAME_MAX];</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (argc == 2)</div>
+<div class="line">    {</div>
+<div class="line">        rt_strncpy(can_name, argv[1], RT_NAME_MAX);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        rt_strncpy(can_name, CAN_DEV_NAME, RT_NAME_MAX);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="comment">// 查找 CAN 设备</span></div>
+<div class="line">    can_dev = <a class="code hl_function" href="group__group__device__driver.html#ga7fb604dd486fbf5e48004b4d94d8eb3e">rt_device_find</a>(can_name);</div>
+<div class="line">    <span class="keywordflow">if</span> (!can_dev)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;find %s failed!\n&quot;</span>, can_name);</div>
+<div class="line">        <span class="keywordflow">return</span> -RT_ERROR;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 初始化 CAN 接收信号量</span></div>
+<div class="line">    <a class="code hl_function" href="group__group__semaphore.html#ga023e00dd1ae86ddbeb2dbf92771e17ea">rt_sem_init</a>(&amp;rx_sem, <span class="stringliteral">&quot;rx_sem&quot;</span>, 0, <a class="code hl_define" href="group__group___i_p_c.html#ga1b618f6714ea8f49a45ea4d105aaf5d5">RT_IPC_FLAG_FIFO</a>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="comment">// 以中断接收及发送方式打开 CAN 设备</span></div>
+<div class="line">    res = <a class="code hl_function" href="group__group__device__driver.html#gac0cd9f7a81722d69e8720ea4750c17a2">rt_device_open</a>(can_dev, <a class="code hl_define" href="group__group__device__driver.html#gac6963e9aaa345ef576d8c3a378a670e5">RT_DEVICE_FLAG_INT_TX</a> | <a class="code hl_define" href="group__group__device__driver.html#ga3475a6ac901802ed9fe50f5c13f6274b">RT_DEVICE_FLAG_INT_RX</a>);</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga6a86c5965ba3874257e3cb99a3536b70">RT_ASSERT</a>(res == RT_EOK);</div>
+<div class="line">    <span class="comment">// 创建数据接收线程</span></div>
+<div class="line">    thread = <a class="code hl_function" href="group__group___thread.html#gacb215b161f17c26b5e19c28cd0119e7b">rt_thread_create</a>(<span class="stringliteral">&quot;can_rx&quot;</span>, can_rx_thread, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>, 1024, 25, 10);</div>
+<div class="line">    <span class="keywordflow">if</span> (thread != <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_function" href="group__group___thread.html#ga04b743537fd099e204fc292e57b4aa5a">rt_thread_startup</a>(thread);</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;create can_rx thread failed!\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a4a54738bd76ab9d26ba95dc675894e54">id</a> = 0x78;              <span class="comment">// ID 为 0x78</span></div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a623357b3c8347685816f6557ea238d12">ide</a> = <a class="code hl_define" href="group__group___c_a_n___device.html#ga416ec8279ce82bb22fdec15098d2047c">RT_CAN_STDID</a>;     <span class="comment">// 标准格式</span></div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a699e8110a76732865d24998f1bd84783">rtr</a> = <a class="code hl_define" href="group__group___c_a_n___device.html#gac4b7b68ffb9b44f693e32f4fff216a64">RT_CAN_DTR</a>;       <span class="comment">// 数据帧</span></div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a908b91ffecf6bb4c616cb7b1c189ced5">len</a> = 8;                <span class="comment">// 数据长度为 8</span></div>
+<div class="line">    <span class="comment">// 待发送的 8 字节数据</span></div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[0] = 0x00;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[1] = 0x11;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[2] = 0x22;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[3] = 0x33;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[4] = 0x44;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[5] = 0x55;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[6] = 0x66;</div>
+<div class="line">    msg.<a class="code hl_variable" href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">data</a>[7] = 0x77;</div>
+<div class="line">    <span class="comment">// 发送一帧 CAN 数据</span></div>
+<div class="line">    size = <a class="code hl_function" href="group__group__device__driver.html#ga4f1525de3aec696b4781b790df9759df">rt_device_write</a>(can_dev, 0, &amp;msg, <span class="keyword">sizeof</span>(msg));</div>
+<div class="line">    <span class="keywordflow">if</span> (size == 0)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;can dev write data failed!\n&quot;</span>);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> res;</div>
+<div class="line">}</div>
+<div class="line"><span class="comment">// 导出到 msh 命令列表中</span></div>
+<div class="line"><a class="code hl_define" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(can_sample, can device sample);</div>
+<div class="ttc" id="afinsh_8h_html_a91a67d7498e346a1e15a7ea7d58af654"><div class="ttname"><a href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a></div><div class="ttdeci">#define MSH_CMD_EXPORT(...)</div><div class="ttdoc">Exports a command to module shell.</div><div class="ttdef"><b>Definition</b> finsh.h:151</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_ga416ec8279ce82bb22fdec15098d2047c"><div class="ttname"><a href="group__group___c_a_n___device.html#ga416ec8279ce82bb22fdec15098d2047c">RT_CAN_STDID</a></div><div class="ttdeci">#define RT_CAN_STDID</div><div class="ttdef"><b>Definition</b> dev_can.h:431</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_ga77d5a22e76eab2c21e532f3ebfe7ced5"><div class="ttname"><a href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a></div><div class="ttdeci">#define RT_CAN_FILTER_ITEM_INIT(id, ide, rtr, mode, mask)</div><div class="ttdef"><b>Definition</b> dev_can.h:246</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_ga8b31c7b54cf557d7063dc1a8e7d0d246"><div class="ttname"><a href="group__group___c_a_n___device.html#ga8b31c7b54cf557d7063dc1a8e7d0d246">RT_CAN_CMD_START</a></div><div class="ttdeci">#define RT_CAN_CMD_START</div><div class="ttdef"><b>Definition</b> dev_can.h:345</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_ga90b507bfeed0dbb7e3d671927b809cad"><div class="ttname"><a href="group__group___c_a_n___device.html#ga90b507bfeed0dbb7e3d671927b809cad">RT_CAN_FILTER_STD_INIT</a></div><div class="ttdeci">#define RT_CAN_FILTER_STD_INIT(id)</div><div class="ttdef"><b>Definition</b> dev_can.h:248</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_gac4b7b68ffb9b44f693e32f4fff216a64"><div class="ttname"><a href="group__group___c_a_n___device.html#gac4b7b68ffb9b44f693e32f4fff216a64">RT_CAN_DTR</a></div><div class="ttdeci">#define RT_CAN_DTR</div><div class="ttdef"><b>Definition</b> dev_can.h:433</div></div>
+<div class="ttc" id="agroup__group___c_a_n___device_html_gad20a8f9d901a540af1decbcd40a61432"><div class="ttname"><a href="group__group___c_a_n___device.html#gad20a8f9d901a540af1decbcd40a61432">RT_CAN_CMD_SET_FILTER</a></div><div class="ttdeci">#define RT_CAN_CMD_SET_FILTER</div><div class="ttdef"><b>Definition</b> dev_can.h:335</div></div>
+<div class="ttc" id="agroup__group___i_p_c_html_ga1b618f6714ea8f49a45ea4d105aaf5d5"><div class="ttname"><a href="group__group___i_p_c.html#ga1b618f6714ea8f49a45ea4d105aaf5d5">RT_IPC_FLAG_FIFO</a></div><div class="ttdeci">#define RT_IPC_FLAG_FIFO</div><div class="ttdef"><b>Definition</b> rtdef.h:975</div></div>
+<div class="ttc" id="agroup__group___i_p_c_html_ga923d8e409f9daa8843978d6805ebcdeb"><div class="ttname"><a href="group__group___i_p_c.html#ga923d8e409f9daa8843978d6805ebcdeb">RT_WAITING_FOREVER</a></div><div class="ttdeci">#define RT_WAITING_FOREVER</div><div class="ttdef"><b>Definition</b> rtdef.h:983</div></div>
+<div class="ttc" id="agroup__group___kernel_service_html_ga2cc5c9066908cd34d36848d8a281b472"><div class="ttname"><a href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a></div><div class="ttdeci">#define rt_kprintf(...)</div><div class="ttdef"><b>Definition</b> rtthread.h:773</div></div>
+<div class="ttc" id="agroup__group___kernel_service_html_ga6a86c5965ba3874257e3cb99a3536b70"><div class="ttname"><a href="group__group___kernel_service.html#ga6a86c5965ba3874257e3cb99a3536b70">RT_ASSERT</a></div><div class="ttdeci">#define RT_ASSERT(EX)</div><div class="ttdef"><b>Definition</b> rtthread.h:814</div></div>
+<div class="ttc" id="agroup__group___thread_html_ga04b743537fd099e204fc292e57b4aa5a"><div class="ttname"><a href="group__group___thread.html#ga04b743537fd099e204fc292e57b4aa5a">rt_thread_startup</a></div><div class="ttdeci">rt_err_t rt_thread_startup(rt_thread_t thread)</div><div class="ttdoc">This function will start a thread and put it to system ready queue.</div><div class="ttdef"><b>Definition</b> thread.c:393</div></div>
+<div class="ttc" id="agroup__group___thread_html_gacb215b161f17c26b5e19c28cd0119e7b"><div class="ttname"><a href="group__group___thread.html#gacb215b161f17c26b5e19c28cd0119e7b">rt_thread_create</a></div><div class="ttdeci">rt_thread_t rt_thread_create(const char *name, void(*entry)(void *parameter), void *parameter, rt_uint32_t stack_size, rt_uint8_t priority, rt_uint32_t tick)</div><div class="ttdoc">This function will create a thread object and allocate thread object memory. and stack.</div><div class="ttdef"><b>Definition</b> thread.c:523</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga07dfc7fd340b9449d2bd732159ed237f"><div class="ttname"><a href="group__group__device__driver.html#ga07dfc7fd340b9449d2bd732159ed237f">rt_device_set_rx_indicate</a></div><div class="ttdeci">rt_err_t rt_device_set_rx_indicate(rt_device_t dev, rt_err_t(*rx_ind)(rt_device_t dev, rt_size_t size))</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga3475a6ac901802ed9fe50f5c13f6274b"><div class="ttname"><a href="group__group__device__driver.html#ga3475a6ac901802ed9fe50f5c13f6274b">RT_DEVICE_FLAG_INT_RX</a></div><div class="ttdeci">#define RT_DEVICE_FLAG_INT_RX</div><div class="ttdef"><b>Definition</b> rtdef.h:1300</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga40ed6da2d5ea7b1e28de21ff439db963"><div class="ttname"><a href="group__group__device__driver.html#ga40ed6da2d5ea7b1e28de21ff439db963">rt_device_control</a></div><div class="ttdeci">rt_err_t rt_device_control(rt_device_t dev, int cmd, void *arg)</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga4f1525de3aec696b4781b790df9759df"><div class="ttname"><a href="group__group__device__driver.html#ga4f1525de3aec696b4781b790df9759df">rt_device_write</a></div><div class="ttdeci">rt_ssize_t rt_device_write(rt_device_t dev, rt_off_t pos, const void *buffer, rt_size_t size)</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga51642e30d61927aece593ee23d090b17"><div class="ttname"><a href="group__group__device__driver.html#ga51642e30d61927aece593ee23d090b17">rt_device_read</a></div><div class="ttdeci">rt_ssize_t rt_device_read(rt_device_t dev, rt_off_t pos, void *buffer, rt_size_t size)</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga7fb604dd486fbf5e48004b4d94d8eb3e"><div class="ttname"><a href="group__group__device__driver.html#ga7fb604dd486fbf5e48004b4d94d8eb3e">rt_device_find</a></div><div class="ttdeci">rt_device_t rt_device_find(const char *name)</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_gac0cd9f7a81722d69e8720ea4750c17a2"><div class="ttname"><a href="group__group__device__driver.html#gac0cd9f7a81722d69e8720ea4750c17a2">rt_device_open</a></div><div class="ttdeci">rt_err_t rt_device_open(rt_device_t dev, rt_uint16_t oflag)</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_gac6963e9aaa345ef576d8c3a378a670e5"><div class="ttname"><a href="group__group__device__driver.html#gac6963e9aaa345ef576d8c3a378a670e5">RT_DEVICE_FLAG_INT_TX</a></div><div class="ttdeci">#define RT_DEVICE_FLAG_INT_TX</div><div class="ttdef"><b>Definition</b> rtdef.h:1302</div></div>
+<div class="ttc" id="agroup__group__semaphore_html_ga023e00dd1ae86ddbeb2dbf92771e17ea"><div class="ttname"><a href="group__group__semaphore.html#ga023e00dd1ae86ddbeb2dbf92771e17ea">rt_sem_init</a></div><div class="ttdeci">rt_err_t rt_sem_init(rt_sem_t sem, const char *name, rt_uint32_t value, rt_uint8_t flag)</div><div class="ttdoc">This function will initialize a static semaphore object.</div><div class="ttdef"><b>Definition</b> ipc.c:376</div></div>
+<div class="ttc" id="agroup__group__semaphore_html_gad5de76667b198615400bab78afba6604"><div class="ttname"><a href="group__group__semaphore.html#gad5de76667b198615400bab78afba6604">rt_sem_take</a></div><div class="ttdeci">rt_err_t rt_sem_take(rt_sem_t sem, rt_int32_t timeout)</div><div class="ttdef"><b>Definition</b> ipc.c:644</div></div>
+<div class="ttc" id="agroup__group__semaphore_html_gad9a5760bc4c7faeb08a7d9c112506f76"><div class="ttname"><a href="group__group__semaphore.html#gad9a5760bc4c7faeb08a7d9c112506f76">rt_sem_release</a></div><div class="ttdeci">rt_err_t rt_sem_release(rt_sem_t sem)</div><div class="ttdoc">This function will release a semaphore. If there is thread suspended on the semaphore,...</div><div class="ttdef"><b>Definition</b> ipc.c:695</div></div>
+<div class="ttc" id="artdevice_8h_html"><div class="ttname"><a href="rtdevice_8h.html">rtdevice.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="arttypes_8h_html_a5e3d4a1b993df67473bc161096dba218"><div class="ttname"><a href="rttypes_8h.html#a5e3d4a1b993df67473bc161096dba218">RT_TRUE</a></div><div class="ttdeci">#define RT_TRUE</div><div class="ttdef"><b>Definition</b> rttypes.h:116</div></div>
+<div class="ttc" id="arttypes_8h_html_a8011d259fdfc54b8a9aa006b4d49ac14"><div class="ttname"><a href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a></div><div class="ttdeci">rt_ubase_t rt_size_t</div><div class="ttdef"><b>Definition</b> rttypes.h:84</div></div>
+<div class="ttc" id="arttypes_8h_html_ab3633bbb2a09b3406b19463ffc634345"><div class="ttname"><a href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></div><div class="ttdeci">#define RT_NULL</div><div class="ttdef"><b>Definition</b> rttypes.h:120</div></div>
+<div class="ttc" id="astructrt__can__filter__config_html"><div class="ttname"><a href="structrt__can__filter__config.html">rt_can_filter_config</a></div><div class="ttdoc">CAN filter configuration.</div><div class="ttdef"><b>Definition</b> dev_can.h:267</div></div>
+<div class="ttc" id="astructrt__can__filter__config_html_a84642e1e10d2f6d8f8b86ec87e696e0b"><div class="ttname"><a href="structrt__can__filter__config.html#a84642e1e10d2f6d8f8b86ec87e696e0b">rt_can_filter_config::items</a></div><div class="ttdeci">struct rt_can_filter_item * items</div><div class="ttdef"><b>Definition</b> dev_can.h:270</div></div>
+<div class="ttc" id="astructrt__can__filter__item_html"><div class="ttname"><a href="structrt__can__filter__item.html">rt_can_filter_item</a></div><div class="ttdoc">CAN filter item.</div><div class="ttdef"><b>Definition</b> dev_can.h:214</div></div>
+<div class="ttc" id="astructrt__can__msg_html"><div class="ttname"><a href="structrt__can__msg.html">rt_can_msg</a></div><div class="ttdef"><b>Definition</b> dev_can.h:439</div></div>
+<div class="ttc" id="astructrt__can__msg_html_a4a54738bd76ab9d26ba95dc675894e54"><div class="ttname"><a href="structrt__can__msg.html#a4a54738bd76ab9d26ba95dc675894e54">rt_can_msg::id</a></div><div class="ttdeci">rt_uint32_t id</div><div class="ttdef"><b>Definition</b> dev_can.h:440</div></div>
+<div class="ttc" id="astructrt__can__msg_html_a623357b3c8347685816f6557ea238d12"><div class="ttname"><a href="structrt__can__msg.html#a623357b3c8347685816f6557ea238d12">rt_can_msg::ide</a></div><div class="ttdeci">rt_uint32_t ide</div><div class="ttdef"><b>Definition</b> dev_can.h:441</div></div>
+<div class="ttc" id="astructrt__can__msg_html_a699e8110a76732865d24998f1bd84783"><div class="ttname"><a href="structrt__can__msg.html#a699e8110a76732865d24998f1bd84783">rt_can_msg::rtr</a></div><div class="ttdeci">rt_uint32_t rtr</div><div class="ttdef"><b>Definition</b> dev_can.h:442</div></div>
+<div class="ttc" id="astructrt__can__msg_html_a908b91ffecf6bb4c616cb7b1c189ced5"><div class="ttname"><a href="structrt__can__msg.html#a908b91ffecf6bb4c616cb7b1c189ced5">rt_can_msg::len</a></div><div class="ttdeci">rt_uint32_t len</div><div class="ttdef"><b>Definition</b> dev_can.h:444</div></div>
+<div class="ttc" id="astructrt__can__msg_html_a94df3be03776c24cd440a9b018e4ad57"><div class="ttname"><a href="structrt__can__msg.html#a94df3be03776c24cd440a9b018e4ad57">rt_can_msg::data</a></div><div class="ttdeci">rt_uint8_t data[8]</div><div class="ttdef"><b>Definition</b> dev_can.h:459</div></div>
+<div class="ttc" id="astructrt__device_html"><div class="ttname"><a href="structrt__device.html">rt_device</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1373</div></div>
+<div class="ttc" id="astructrt__semaphore_html"><div class="ttname"><a href="structrt__semaphore.html">rt_semaphore</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1006</div></div>
+<div class="ttc" id="astructrt__thread_html"><div class="ttname"><a href="structrt__thread.html">rt_thread</a></div><div class="ttdef"><b>Definition</b> rtdef.h:855</div></div>
+</div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga93b60b4b7de8f8ca12fe1717577ec7b9" name="ga93b60b4b7de8f8ca12fe1717577ec7b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93b60b4b7de8f8ca12fe1717577ec7b9">&#9670;&#160;</a></span>CAN_RX_FIFO0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAN_RX_FIFO0&#160;&#160;&#160;(0x00000000U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CAN receive FIFO 0 </p>
+
+</div>
+</div>
+<a id="ga39b4c6726afe491b0766cae9e1cea678" name="ga39b4c6726afe491b0766cae9e1cea678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39b4c6726afe491b0766cae9e1cea678">&#9670;&#160;</a></span>CAN_RX_FIFO1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CAN_RX_FIFO1&#160;&#160;&#160;(0x00000001U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>CAN receive FIFO 1 </p>
+
+</div>
+</div>
+<a id="gaa505b31bdf6106e9a6b93ce73a87616b" name="gaa505b31bdf6106e9a6b93ce73a87616b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa505b31bdf6106e9a6b93ce73a87616b">&#9670;&#160;</a></span>CANDEFAULTCONFIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CANDEFAULTCONFIG</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{\</div>
+<div class="line">        <a class="code hl_enumvalue" href="dev__can_8h.html#aebeb709e551393ce819bbcfed008b2ebadae40d5ce67e398fa84340c38c83351c">CAN1MBaud</a>,\</div>
+<div class="line">        <a class="code hl_define" href="dev__can_8h.html#a1d67a1bfd510e161271842aa0a35103d">RT_CANMSG_BOX_SZ</a>,\</div>
+<div class="line">        <a class="code hl_define" href="dev__can_8h.html#a3a6addfff44e4b855cdc336cc5dfcad1">RT_CANSND_BOX_NUM</a>,\</div>
+<div class="line">        <a class="code hl_define" href="dev__can_8h.html#ac1880be3a362a9742280d25ce2747d6a">RT_CAN_MODE_NORMAL</a>,\</div>
+<div class="line">};</div>
+<div class="ttc" id="adev__can_8h_html_a1d67a1bfd510e161271842aa0a35103d"><div class="ttname"><a href="dev__can_8h.html#a1d67a1bfd510e161271842aa0a35103d">RT_CANMSG_BOX_SZ</a></div><div class="ttdeci">#define RT_CANMSG_BOX_SZ</div><div class="ttdef"><b>Definition</b> dev_can.h:19</div></div>
+<div class="ttc" id="adev__can_8h_html_a3a6addfff44e4b855cdc336cc5dfcad1"><div class="ttname"><a href="dev__can_8h.html#a3a6addfff44e4b855cdc336cc5dfcad1">RT_CANSND_BOX_NUM</a></div><div class="ttdeci">#define RT_CANSND_BOX_NUM</div><div class="ttdef"><b>Definition</b> dev_can.h:22</div></div>
+<div class="ttc" id="adev__can_8h_html_ac1880be3a362a9742280d25ce2747d6a"><div class="ttname"><a href="dev__can_8h.html#ac1880be3a362a9742280d25ce2747d6a">RT_CAN_MODE_NORMAL</a></div><div class="ttdeci">#define RT_CAN_MODE_NORMAL</div><div class="ttdef"><b>Definition</b> dev_can.h:58</div></div>
+<div class="ttc" id="adev__can_8h_html_aebeb709e551393ce819bbcfed008b2ebadae40d5ce67e398fa84340c38c83351c"><div class="ttname"><a href="dev__can_8h.html#aebeb709e551393ce819bbcfed008b2ebadae40d5ce67e398fa84340c38c83351c">CAN1MBaud</a></div><div class="ttdeci">@ CAN1MBaud</div><div class="ttdef"><b>Definition</b> dev_can.h:47</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="gab14564b9316ed0cb07cf7c78af0d5a73" name="gab14564b9316ed0cb07cf7c78af0d5a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab14564b9316ed0cb07cf7c78af0d5a73">&#9670;&#160;</a></span>RT_CAN_CMD_GET_STATUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_GET_STATUS&#160;&#160;&#160;0x17</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gafc67517babdcb78e33bd4852efa4effc" name="gafc67517babdcb78e33bd4852efa4effc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc67517babdcb78e33bd4852efa4effc">&#9670;&#160;</a></span>RT_CAN_CMD_SET_BAUD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_BAUD&#160;&#160;&#160;0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3d894c1d628ac06b17a1b0ec5836bbc5" name="ga3d894c1d628ac06b17a1b0ec5836bbc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d894c1d628ac06b17a1b0ec5836bbc5">&#9670;&#160;</a></span>RT_CAN_CMD_SET_BAUD_FD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_BAUD_FD&#160;&#160;&#160;0x1B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga71b1e3b40e310592931172451d8aa3c3" name="ga71b1e3b40e310592931172451d8aa3c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71b1e3b40e310592931172451d8aa3c3">&#9670;&#160;</a></span>RT_CAN_CMD_SET_BITTIMING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_BITTIMING&#160;&#160;&#160;0x1C</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaedf57588087fd0a8cf1563b40481368e" name="gaedf57588087fd0a8cf1563b40481368e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedf57588087fd0a8cf1563b40481368e">&#9670;&#160;</a></span>RT_CAN_CMD_SET_BUS_HOOK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_BUS_HOOK&#160;&#160;&#160;0x19</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5825513d6cd8bc0cdceb8828738e2794" name="ga5825513d6cd8bc0cdceb8828738e2794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5825513d6cd8bc0cdceb8828738e2794">&#9670;&#160;</a></span>RT_CAN_CMD_SET_CANFD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_CANFD&#160;&#160;&#160;0x1A</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad20a8f9d901a540af1decbcd40a61432" name="gad20a8f9d901a540af1decbcd40a61432"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad20a8f9d901a540af1decbcd40a61432">&#9670;&#160;</a></span>RT_CAN_CMD_SET_FILTER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_FILTER&#160;&#160;&#160;0x13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9d623875c9cad0daf074a8d23701aeba" name="ga9d623875c9cad0daf074a8d23701aeba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d623875c9cad0daf074a8d23701aeba">&#9670;&#160;</a></span>RT_CAN_CMD_SET_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_MODE&#160;&#160;&#160;0x15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gade52f9ba6bddb4d307c9d6a0f7ca2ac7" name="gade52f9ba6bddb4d307c9d6a0f7ca2ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade52f9ba6bddb4d307c9d6a0f7ca2ac7">&#9670;&#160;</a></span>RT_CAN_CMD_SET_PRIV</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_PRIV&#160;&#160;&#160;0x16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga01b8853f8b903ce27bb5c67e6e5824a4" name="ga01b8853f8b903ce27bb5c67e6e5824a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01b8853f8b903ce27bb5c67e6e5824a4">&#9670;&#160;</a></span>RT_CAN_CMD_SET_STATUS_IND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_SET_STATUS_IND&#160;&#160;&#160;0x18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8b31c7b54cf557d7063dc1a8e7d0d246" name="ga8b31c7b54cf557d7063dc1a8e7d0d246"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b31c7b54cf557d7063dc1a8e7d0d246">&#9670;&#160;</a></span>RT_CAN_CMD_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_CMD_START&#160;&#160;&#160;0x1D</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac4b7b68ffb9b44f693e32f4fff216a64" name="gac4b7b68ffb9b44f693e32f4fff216a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4b7b68ffb9b44f693e32f4fff216a64">&#9670;&#160;</a></span>RT_CAN_DTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_DTR&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae8da3b17b235020bc20bb7dcf8738ffa" name="gae8da3b17b235020bc20bb7dcf8738ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8da3b17b235020bc20bb7dcf8738ffa">&#9670;&#160;</a></span>RT_CAN_EVENT_RX_IND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EVENT_RX_IND&#160;&#160;&#160;0x01    /* Rx indication */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac35f697c2a3c400cef52b727d746f2f5" name="gac35f697c2a3c400cef52b727d746f2f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac35f697c2a3c400cef52b727d746f2f5">&#9670;&#160;</a></span>RT_CAN_EVENT_RX_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EVENT_RX_TIMEOUT&#160;&#160;&#160;0x05    /* Rx timeout    */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0ec4e06368d133e302b304f2ce24ace9" name="ga0ec4e06368d133e302b304f2ce24ace9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ec4e06368d133e302b304f2ce24ace9">&#9670;&#160;</a></span>RT_CAN_EVENT_RXOF_IND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EVENT_RXOF_IND&#160;&#160;&#160;0x06    /* Rx overflow */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6b2745878bfccc9255f962ff0c4fa852" name="ga6b2745878bfccc9255f962ff0c4fa852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b2745878bfccc9255f962ff0c4fa852">&#9670;&#160;</a></span>RT_CAN_EVENT_TX_DONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EVENT_TX_DONE&#160;&#160;&#160;0x02    /* Tx complete   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5229843f0f274f3ace46bc218e5e4034" name="ga5229843f0f274f3ace46bc218e5e4034"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5229843f0f274f3ace46bc218e5e4034">&#9670;&#160;</a></span>RT_CAN_EVENT_TX_FAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EVENT_TX_FAIL&#160;&#160;&#160;0x03    /* Tx fail   */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2bc61f55230990804a539e570cf9da18" name="ga2bc61f55230990804a539e570cf9da18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bc61f55230990804a539e570cf9da18">&#9670;&#160;</a></span>RT_CAN_EXT_RMT_DATA_FILTER_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EXT_RMT_DATA_FILTER_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,0,1,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4d5390d9ddecb3e658d501af24169ee3" name="ga4d5390d9ddecb3e658d501af24169ee3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d5390d9ddecb3e658d501af24169ee3">&#9670;&#160;</a></span>RT_CAN_EXT_RMT_FILTER_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EXT_RMT_FILTER_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,1,0,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1f5b1d9745c8bd300df2260d079f9073" name="ga1f5b1d9745c8bd300df2260d079f9073"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f5b1d9745c8bd300df2260d079f9073">&#9670;&#160;</a></span>RT_CAN_EXTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_EXTID&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga07e050dc1d585a87f4f2dd572fb1c4b3" name="ga07e050dc1d585a87f4f2dd572fb1c4b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07e050dc1d585a87f4f2dd572fb1c4b3">&#9670;&#160;</a></span>RT_CAN_FILTER_EXT_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_FILTER_EXT_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,1,0,0,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga77d5a22e76eab2c21e532f3ebfe7ced5" name="ga77d5a22e76eab2c21e532f3ebfe7ced5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77d5a22e76eab2c21e532f3ebfe7ced5">&#9670;&#160;</a></span>RT_CAN_FILTER_ITEM_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_FILTER_ITEM_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ide, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">rtr, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mode, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">mask&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;      {(id), (ide), (rtr), (mode), (mask), -1, <a class="el" href="group__group___c_a_n___device.html#ga93b60b4b7de8f8ca12fe1717577ec7b9">CAN_RX_FIFO0</a> }/*0:<a class="el" href="group__group___c_a_n___device.html#ga93b60b4b7de8f8ca12fe1717577ec7b9">CAN_RX_FIFO0</a>*/</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga90b507bfeed0dbb7e3d671927b809cad" name="ga90b507bfeed0dbb7e3d671927b809cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga90b507bfeed0dbb7e3d671927b809cad">&#9670;&#160;</a></span>RT_CAN_FILTER_STD_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_FILTER_STD_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,0,0,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae26d6fa3059eb6c3744b99198aa24687" name="gae26d6fa3059eb6c3744b99198aa24687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae26d6fa3059eb6c3744b99198aa24687">&#9670;&#160;</a></span>RT_CAN_RTR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_RTR&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa0cf68ca5de58cceb39dd380a44a7e70" name="gaa0cf68ca5de58cceb39dd380a44a7e70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa0cf68ca5de58cceb39dd380a44a7e70">&#9670;&#160;</a></span>RT_CAN_SND_RESULT_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_SND_RESULT_ERR&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8b72d9f89f025976dec66ac24d0d6f49" name="ga8b72d9f89f025976dec66ac24d0d6f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b72d9f89f025976dec66ac24d0d6f49">&#9670;&#160;</a></span>RT_CAN_SND_RESULT_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_SND_RESULT_OK&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf90c6fd4cb69be352270c4190adb5207" name="gaf90c6fd4cb69be352270c4190adb5207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf90c6fd4cb69be352270c4190adb5207">&#9670;&#160;</a></span>RT_CAN_SND_RESULT_WAIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_SND_RESULT_WAIT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaafd9a86b40061dd92afb62a2c2e05b08" name="gaafd9a86b40061dd92afb62a2c2e05b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaafd9a86b40061dd92afb62a2c2e05b08">&#9670;&#160;</a></span>RT_CAN_STD_RMT_DATA_FILTER_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_STD_RMT_DATA_FILTER_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,0,1,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf1daba721db5b8cd6831ff9fe63213a5" name="gaf1daba721db5b8cd6831ff9fe63213a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1daba721db5b8cd6831ff9fe63213a5">&#9670;&#160;</a></span>RT_CAN_STD_RMT_FILTER_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_STD_RMT_FILTER_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">id</td><td>)</td>
+          <td>&#160;&#160;&#160;     <a class="el" href="group__group___c_a_n___device.html#ga77d5a22e76eab2c21e532f3ebfe7ced5">RT_CAN_FILTER_ITEM_INIT</a>(id,0,1,0,0xFFFFFFFF)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga416ec8279ce82bb22fdec15098d2047c" name="ga416ec8279ce82bb22fdec15098d2047c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga416ec8279ce82bb22fdec15098d2047c">&#9670;&#160;</a></span>RT_CAN_STDID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CAN_STDID&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2fc6779be7f71f43a54032817afa8457" name="ga2fc6779be7f71f43a54032817afa8457"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fc6779be7f71f43a54032817afa8457">&#9670;&#160;</a></span>RT_DEVICE_CAN_INT_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_DEVICE_CAN_INT_ERR&#160;&#160;&#160;0x1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga4a70139ff92320b0acd604f4be74567b" name="ga4a70139ff92320b0acd604f4be74567b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a70139ff92320b0acd604f4be74567b">&#9670;&#160;</a></span>rt_can_bus_hook</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* rt_can_bus_hook) (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga27b5eab9448c7d3b6f5c3905e0a24e8d" name="ga27b5eab9448c7d3b6f5c3905e0a24e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27b5eab9448c7d3b6f5c3905e0a24e8d">&#9670;&#160;</a></span>rt_can_msg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__can__msg.html">rt_can_msg</a>* <a class="el" href="group__group___c_a_n___device.html#ga27b5eab9448c7d3b6f5c3905e0a24e8d">rt_can_msg_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf447040370ce99a0d9fcbf6ba03650fe" name="gaf447040370ce99a0d9fcbf6ba03650fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf447040370ce99a0d9fcbf6ba03650fe">&#9670;&#160;</a></span>rt_can_status_ind_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__can__status__ind__type.html">rt_can_status_ind_type</a> * <a class="el" href="group__group___c_a_n___device.html#gaf447040370ce99a0d9fcbf6ba03650fe">rt_can_status_ind_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga33a7f59b928daa8ab1369897b7e90e6f" name="ga33a7f59b928daa8ab1369897b7e90e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33a7f59b928daa8ab1369897b7e90e6f">&#9670;&#160;</a></span>rt_can_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__can__status.html">rt_can_status</a>* <a class="el" href="group__group___c_a_n___device.html#ga33a7f59b928daa8ab1369897b7e90e6f">rt_can_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6edc8c7dd3c78f41366742cd07b47669" name="ga6edc8c7dd3c78f41366742cd07b47669"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6edc8c7dd3c78f41366742cd07b47669">&#9670;&#160;</a></span>rt_can_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__can__device.html">rt_can_device</a>* <a class="el" href="group__group___c_a_n___device.html#ga6edc8c7dd3c78f41366742cd07b47669">rt_can_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga097aa7630bdbe60a6c771f49a98a2042" name="ga097aa7630bdbe60a6c771f49a98a2042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga097aa7630bdbe60a6c771f49a98a2042">&#9670;&#160;</a></span>rt_canstatus_ind</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_canstatus_ind) (struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *, void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga67f53c87094ec2f61ae79908ede405d3" name="ga67f53c87094ec2f61ae79908ede405d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67f53c87094ec2f61ae79908ede405d3">&#9670;&#160;</a></span>RT_CAN_BUS_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group___c_a_n___device.html#ga67f53c87094ec2f61ae79908ede405d3">RT_CAN_BUS_ERR</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3aa687ab05123620a051a840e5d6de9f21" name="gga67f53c87094ec2f61ae79908ede405d3aa687ab05123620a051a840e5d6de9f21"></a>RT_CAN_BUS_NO_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3ab0ec68ef51af89e367a678ef91dfa13d" name="gga67f53c87094ec2f61ae79908ede405d3ab0ec68ef51af89e367a678ef91dfa13d"></a>RT_CAN_BUS_BIT_PAD_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3ae461cba4fb3ab42c5c787a449180f32f" name="gga67f53c87094ec2f61ae79908ede405d3ae461cba4fb3ab42c5c787a449180f32f"></a>RT_CAN_BUS_FORMAT_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3a88560722486c33f1aa2bfbac1ac924c9" name="gga67f53c87094ec2f61ae79908ede405d3a88560722486c33f1aa2bfbac1ac924c9"></a>RT_CAN_BUS_ACK_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3ae1c35dfc0360000a21c5e0f7bef4f2c7" name="gga67f53c87094ec2f61ae79908ede405d3ae1c35dfc0360000a21c5e0f7bef4f2c7"></a>RT_CAN_BUS_IMPLICIT_BIT_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3ade11f79f9e63d37625b746e847cd9707" name="gga67f53c87094ec2f61ae79908ede405d3ade11f79f9e63d37625b746e847cd9707"></a>RT_CAN_BUS_EXPLICIT_BIT_ERR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga67f53c87094ec2f61ae79908ede405d3a0e9fe3a4470a063c616529553c1f1358" name="gga67f53c87094ec2f61ae79908ede405d3a0e9fe3a4470a063c616529553c1f1358"></a>RT_CAN_BUS_CRC_ERR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga2db9822bd352087e8d22b5196b18c1bb" name="ga2db9822bd352087e8d22b5196b18c1bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2db9822bd352087e8d22b5196b18c1bb">&#9670;&#160;</a></span>RT_CAN_STATUS_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group___c_a_n___device.html#ga2db9822bd352087e8d22b5196b18c1bb">RT_CAN_STATUS_MODE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2db9822bd352087e8d22b5196b18c1bba50d1448013c6f17125caee18aa418af7" name="gga2db9822bd352087e8d22b5196b18c1bba50d1448013c6f17125caee18aa418af7"></a>NORMAL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2db9822bd352087e8d22b5196b18c1bba48802d3fb796f5ef9b65a4ebab86dd7f" name="gga2db9822bd352087e8d22b5196b18c1bba48802d3fb796f5ef9b65a4ebab86dd7f"></a>ERRWARNING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2db9822bd352087e8d22b5196b18c1bbab7a24f39cb68f6f0958504713f6c146d" name="gga2db9822bd352087e8d22b5196b18c1bbab7a24f39cb68f6f0958504713f6c146d"></a>ERRPASSIVE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga2db9822bd352087e8d22b5196b18c1bba2adf02eebb602f30434fc0ab4357de78" name="gga2db9822bd352087e8d22b5196b18c1bba2adf02eebb602f30434fc0ab4357de78"></a>BUSOFF&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga1cf63c299c84932dcb43481dbff6201f" name="ga1cf63c299c84932dcb43481dbff6201f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cf63c299c84932dcb43481dbff6201f">&#9670;&#160;</a></span>rt_hw_can_isr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_can_isr </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *&#160;</td>
+          <td class="paramname"><em>can</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>event</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CAN interrupt service routine. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">can</td><td>the CAN device </td></tr>
+    <tr><td class="paramname">event</td><td>the event mask </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadf1896bf2a7af596844c4ec8f26f2713" name="gadf1896bf2a7af596844c4ec8f26f2713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf1896bf2a7af596844c4ec8f26f2713">&#9670;&#160;</a></span>rt_hw_can_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_hw_can_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__can__device.html">rt_can_device</a> *&#160;</td>
+          <td class="paramname"><em>can</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structrt__can__ops.html">rt_can_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a CAN device to device list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">can</td><td>the CAN device object </td></tr>
+    <tr><td class="paramname">name</td><td>the name of CAN device </td></tr>
+    <tr><td class="paramname">ops</td><td>the CAN device operators </td></tr>
+    <tr><td class="paramname">data</td><td>the private data of CAN device</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the error code, RT_EOK on successfully </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

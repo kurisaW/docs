@@ -1,0 +1,1119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/finsh/finsh.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('finsh_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">finsh.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for finsh.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="finsh_8h__incl.png" border="0" usemap="#acomponents_2finsh_2finsh_8h" alt=""/></div>
+<map name="acomponents_2finsh_2finsh_8h" id="acomponents_2finsh_2finsh_8h">
+<area shape="rect" title=" " alt="" coords="163,5,347,31"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="223,79,287,104"/>
+<area shape="poly" title=" " alt="" coords="257,31,257,65,252,65,252,31"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="175,152,257,177"/>
+<area shape="poly" title=" " alt="" coords="251,106,231,141,226,139,246,103"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="255,225,335,251"/>
+<area shape="poly" title=" " alt="" coords="261,104,290,211,285,213,255,105"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="87,225,187,251"/>
+<area shape="poly" title=" " alt="" coords="228,106,195,126,165,154,150,183,143,212,138,211,145,181,161,150,192,121,226,102"/>
+<area shape="rect" title=" " alt="" coords="333,152,443,177"/>
+<area shape="poly" title=" " alt="" coords="277,102,355,143,353,148,275,106"/>
+<area shape="poly" title=" " alt="" coords="230,175,274,214,270,218,227,179"/>
+<area shape="poly" title=" " alt="" coords="205,179,162,218,158,214,202,175"/>
+<area shape="rect" title=" " alt="" coords="5,299,88,324"/>
+<area shape="poly" title=" " alt="" coords="256,253,101,297,99,292,254,248"/>
+<area shape="rect" title=" " alt="" coords="113,299,183,324"/>
+<area shape="poly" title=" " alt="" coords="272,253,185,295,183,290,270,248"/>
+<area shape="rect" title=" " alt="" coords="208,299,283,324"/>
+<area shape="poly" title=" " alt="" coords="289,253,263,289,259,286,284,249"/>
+<area shape="rect" title=" " alt="" coords="307,299,381,324"/>
+<area shape="poly" title=" " alt="" coords="305,249,330,286,326,289,301,253"/>
+<area shape="rect" title=" " alt="" coords="405,299,501,324"/>
+<area shape="poly" title=" " alt="" coords="321,248,416,291,414,295,319,253"/>
+<area shape="rect" title=" " alt="" coords="526,299,621,324"/>
+<area shape="poly" title=" " alt="" coords="336,247,516,293,515,298,335,252"/>
+<area shape="rect" title=" " alt="" coords="645,299,744,324"/>
+<area shape="poly" title=" " alt="" coords="335,244,632,296,631,301,334,249"/>
+<area shape="poly" title=" " alt="" coords="124,253,74,292,71,288,121,249"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="finsh_8h__dep__incl.png" border="0" usemap="#acomponents_2finsh_2finsh_8hdep" alt=""/></div>
+<map name="acomponents_2finsh_2finsh_8hdep" id="acomponents_2finsh_2finsh_8hdep">
+<area shape="rect" title=" " alt="" coords="497,5,681,31"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="5,262,156,302"/>
+<area shape="poly" title=" " alt="" coords="483,24,422,30,356,40,288,57,223,81,195,96,175,110,139,154,121,181,107,211,88,263,83,261,102,209,117,179,135,150,172,106,192,91,221,76,286,52,355,35,422,24,483,19"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="180,262,331,302"/>
+<area shape="poly" title=" " alt="" coords="504,36,406,55,301,81,209,115,175,134,153,154,146,167,144,178,154,205,165,222,180,237,214,260,211,264,176,241,161,226,149,208,139,179,141,165,149,150,172,129,207,110,299,76,405,50,503,30"/>
+<area shape="rect" href="cmd_8c.html" title=" " alt="" coords="164,167,344,192"/>
+<area shape="poly" title=" " alt="" coords="553,39,279,169,277,164,551,34"/>
+<area shape="rect" href="shell_8h.html" title=" " alt="" coords="609,167,793,192"/>
+<area shape="poly" title=" " alt="" coords="607,40,695,165,690,168,602,43"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="3627,79,3764,104"/>
+<area shape="poly" title=" " alt="" coords="695,19,3626,86,3626,91,694,24"/>
+<area shape="rect" href="mem_8c.html" title=" " alt="" coords="6867,167,6958,192"/>
+<area shape="poly" title=" " alt="" coords="694,16,1895,17,2818,21,3830,30,4835,45,5737,69,6120,85,6442,103,6691,125,6784,137,6855,149,6893,164,6891,169,6853,155,6783,142,6690,130,6442,109,6120,90,5737,75,4835,51,3830,35,2818,26,1895,22,694,22"/>
+<area shape="rect" href="msh_8c.html" title=" " alt="" coords="736,269,916,295"/>
+<area shape="poly" title=" " alt="" coords="727,198,813,267,810,271,724,203"/>
+<area shape="rect" href="shell_8c.html" title=" " alt="" coords="529,269,712,295"/>
+<area shape="poly" title=" " alt="" coords="685,205,632,271,628,268,681,201"/>
+<area shape="poly" title=" " alt="" coords="3613,96,2948,100,1928,109,938,127,572,139,357,155,291,169,290,164,356,149,572,134,937,122,1928,104,2948,94,3613,90"/>
+<area shape="poly" title=" " alt="" coords="3613,96,2153,113,1307,131,995,142,812,155,741,169,740,164,811,149,995,137,1307,126,2153,108,3613,91"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3003,101,2102,113,1276,130,1005,142,926,148,891,154,865,180,847,212,836,244,830,270,825,269,831,243,842,210,861,176,889,150,925,143,1005,136,1276,125,2102,107,3003,96,3613,91"/>
+<area shape="rect" href="dfs__mnt_8h.html" title=" " alt="" coords="369,159,534,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,2983,100,2025,110,1097,128,754,140,553,155,516,162,515,157,552,149,754,135,1097,123,2025,105,2983,95,3613,90"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="355,262,505,302"/>
+<area shape="poly" title=" " alt="" coords="3613,95,2960,95,1979,101,1487,108,1061,118,747,134,649,144,598,154,581,165,572,178,563,193,548,209,506,239,466,264,463,259,503,235,544,205,558,189,567,175,578,161,596,150,648,138,747,129,1060,113,1487,102,1979,95,2960,90,3613,90"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="940,262,1091,302"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3004,98,2107,107,1664,114,1285,125,1018,138,940,146,908,154,900,166,898,178,908,205,920,222,935,237,970,260,967,264,932,241,916,226,904,208,893,178,895,164,904,150,939,141,1017,133,1285,119,1663,109,2107,102,3004,93,3613,90"/>
+<area shape="rect" href="dfs__pcache_8h.html" title=" " alt="" coords="919,159,1104,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,2304,114,1554,132,1278,143,1116,155,1077,162,1076,157,1115,149,1278,137,1554,126,2304,109,3613,91"/>
+<area shape="rect" href="clk-fixed-rate_8c.html" title=" " alt="" coords="1128,159,1279,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3115,102,2390,113,1696,130,1441,142,1290,155,1258,162,1257,157,1290,149,1440,136,1695,125,2390,107,3115,96,3613,91"/>
+<area shape="rect" href="clk_8c.html" title=" " alt="" coords="1303,159,1453,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,2478,114,1838,132,1603,142,1465,155,1433,162,1432,157,1464,149,1603,137,1838,126,2478,109,3613,91"/>
+<area shape="rect" href="adc_8h.html" title=" " alt="" coords="1477,159,1639,199"/>
+<area shape="poly" title=" " alt="" coords="3613,95,3220,96,2653,103,2355,110,2075,120,1834,135,1652,155,1617,162,1616,157,1651,149,1833,130,2074,115,2355,104,2653,97,3220,90,3613,90"/>
+<area shape="rect" href="ahci_8h.html" title=" " alt="" coords="1663,159,1829,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3255,98,2744,107,2226,125,2011,138,1848,155,1811,162,1810,157,1847,149,2010,133,2226,119,2744,102,3255,93,3613,90"/>
+<area shape="rect" href="blk_8h.html" title=" " alt="" coords="1904,159,2063,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3294,99,2850,108,2402,126,2216,139,2076,155,2042,162,2041,157,2075,149,2216,133,2402,120,2849,103,3294,94,3613,90"/>
+<area shape="rect" href="nvme_8h.html" title=" " alt="" coords="1837,262,2012,302"/>
+<area shape="poly" title=" " alt="" coords="3612,95,3206,95,2645,101,2371,108,2137,119,1969,134,1918,144,1893,154,1885,165,1882,178,1885,207,1897,236,1913,260,1908,263,1893,238,1880,208,1877,178,1881,163,1890,150,1916,138,1968,129,2137,113,2371,103,2645,95,3206,89,3612,90"/>
+<area shape="rect" href="numa_8h.html" title=" " alt="" coords="2087,152,2242,207"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3326,100,2933,110,2541,128,2378,140,2254,155,2243,157,2242,152,2254,149,2377,135,2540,122,2933,105,3326,95,3613,91"/>
+<area shape="rect" href="power__domain_8h.html" title=" " alt="" coords="2266,152,2421,207"/>
+<area shape="poly" title=" " alt="" coords="3613,97,3358,102,3017,113,2679,130,2539,141,2433,155,2422,157,2421,152,2432,149,2539,136,2679,125,3017,108,3358,97,3613,91"/>
+<area shape="rect" href="cputimer_8h.html" title=" " alt="" coords="2445,159,2639,199"/>
+<area shape="poly" title=" " alt="" coords="3613,95,3438,97,3199,106,2927,124,2788,137,2652,155,2613,162,2612,157,2651,149,2787,132,2926,118,3199,100,3438,92,3613,90"/>
+<area shape="rect" href="crypto_8h.html" title=" " alt="" coords="2663,159,2842,199"/>
+<area shape="poly" title=" " alt="" coords="3613,96,3469,100,3280,110,3068,127,2854,155,2819,162,2818,157,2854,149,3067,122,3280,104,3469,95,3612,91"/>
+<area shape="rect" href="dac_8h.html" title=" " alt="" coords="2867,159,3028,199"/>
+<area shape="poly" title=" " alt="" coords="3613,98,3357,114,3199,131,3041,155,3009,162,3008,157,3040,149,3198,125,3356,109,3613,93"/>
+<area shape="rect" href="dev__can_8h.html" title=" " alt="" coords="3053,159,3245,199"/>
+<area shape="poly" title=" " alt="" coords="3613,104,3448,124,3257,155,3223,162,3222,157,3256,149,3447,119,3613,99"/>
+<area shape="rect" href="dev__i2c_8h.html" title=" " alt="" coords="3269,159,3457,199"/>
+<area shape="poly" title=" " alt="" coords="3638,110,3437,162,3435,157,3637,105"/>
+<area shape="rect" href="dev__i2c__dm_8h.html" title=" " alt="" coords="3481,152,3632,207"/>
+<area shape="poly" title=" " alt="" coords="3666,114,3600,154,3598,150,3663,109"/>
+<area shape="rect" href="dev__mmc_8h.html" title=" " alt="" coords="3343,262,3546,302"/>
+<area shape="poly" title=" " alt="" coords="3693,118,3676,164,3663,188,3645,209,3623,223,3589,238,3512,264,3510,259,3588,233,3620,219,3642,205,3658,185,3671,161,3687,116"/>
+<area shape="rect" href="dev__mmcsd__core_8h.html" title=" " alt="" coords="3571,255,3721,309"/>
+<area shape="poly" title=" " alt="" coords="3700,118,3699,160,3691,207,3681,233,3667,256,3663,253,3676,231,3686,206,3694,160,3694,118"/>
+<area shape="rect" href="dev__pin_8h.html" title=" " alt="" coords="4110,159,4299,199"/>
+<area shape="poly" title=" " alt="" coords="3778,100,3925,121,4092,149,4127,157,4126,162,4091,155,3924,127,3777,106"/>
+<area shape="rect" href="dev__spi_8h.html" title=" " alt="" coords="4129,262,4317,302"/>
+<area shape="poly" title=" " alt="" coords="3778,98,3889,116,3950,130,4008,150,4036,162,4055,174,4099,204,4193,260,4190,264,4097,209,4053,179,4033,167,4006,154,3948,135,3888,121,3777,103"/>
+<area shape="rect" href="dev__touch_8h.html" title=" " alt="" coords="4341,255,4492,309"/>
+<area shape="poly" title=" " alt="" coords="3778,90,3910,93,4066,102,4211,120,4269,133,4313,150,4350,190,4399,253,4395,256,4346,194,4310,154,4268,138,4210,125,4065,108,3910,99,3778,96"/>
+<area shape="rect" href="dev__pwm_8h.html" title=" " alt="" coords="4375,159,4576,199"/>
+<area shape="poly" title=" " alt="" coords="3778,94,4036,113,4196,128,4356,149,4396,157,4395,162,4355,155,4195,134,4036,118,3777,99"/>
+<area shape="rect" href="dev__sd_8h.html" title=" " alt="" coords="3746,262,3930,302"/>
+<area shape="poly" title=" " alt="" coords="3778,99,3878,118,3920,132,3947,150,3955,165,3957,179,3947,208,3935,226,3919,241,3884,264,3881,260,3916,237,3931,222,3942,205,3952,178,3950,166,3943,154,3918,137,3877,123,3777,104"/>
+<area shape="rect" href="dev__sdio_8h.html" title=" " alt="" coords="3955,255,4105,309"/>
+<area shape="poly" title=" " alt="" coords="3778,100,3889,120,3937,133,3970,150,3992,173,4009,201,4027,254,4022,256,4004,203,3988,176,3967,154,3935,138,3888,125,3777,105"/>
+<area shape="rect" href="dev__serial_8h.html" title=" " alt="" coords="4600,152,4751,207"/>
+<area shape="poly" title=" " alt="" coords="3778,89,3930,92,4132,100,4359,118,4475,132,4588,149,4600,152,4599,157,4587,155,4474,137,4359,123,4132,105,3930,97,3778,95"/>
+<area shape="rect" href="dev__serial__v2_8h.html" title=" " alt="" coords="4775,152,4925,207"/>
+<area shape="poly" title=" " alt="" coords="3778,92,4280,111,4559,127,4675,138,4762,149,4775,152,4774,157,4762,155,4674,143,4559,133,4280,116,3778,97"/>
+<area shape="rect" href="dev__watchdog_8h.html" title=" " alt="" coords="4949,152,5100,207"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4029,97,4363,108,4695,125,4833,136,4937,149,4950,152,4949,157,4936,155,4832,141,4695,130,4363,113,4028,102,3778,97"/>
+<area shape="rect" href="dma_8h.html" title=" " alt="" coords="5065,262,5232,302"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4103,96,4535,106,4922,123,5051,135,5092,142,5113,150,5134,175,5146,205,5151,236,5152,262,5147,262,5146,236,5140,207,5129,178,5110,154,5090,147,5051,140,4922,129,4535,111,4103,101,3777,96"/>
+<area shape="rect" href="hwtimer_8h.html" title=" " alt="" coords="5411,159,5601,199"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4109,96,4576,106,5047,123,5243,135,5392,149,5433,157,5433,162,5391,155,5243,140,5046,129,4576,111,4109,101,3778,96"/>
+<area shape="rect" href="lptimer_8h.html" title=" " alt="" coords="5677,159,5861,199"/>
+<area shape="poly" title=" " alt="" coords="3778,90,4156,93,4700,102,5253,120,5484,133,5658,149,5699,157,5698,162,5658,155,5483,138,5253,125,4700,107,4156,99,3778,96"/>
+<area shape="rect" href="pm_8h.html" title=" " alt="" coords="5624,262,5783,302"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4204,95,4799,104,5342,122,5525,134,5583,141,5614,150,5634,168,5657,198,5695,260,5691,263,5652,201,5630,172,5611,154,5582,147,5525,140,5342,127,4798,110,4204,100,3778,96"/>
+<area shape="rect" href="mmcsd__host_8h.html" title=" " alt="" coords="3759,152,3933,207"/>
+<area shape="poly" title=" " alt="" coords="3729,109,3801,150,3799,154,3727,113"/>
+<area shape="rect" href="mtd__nand_8h.html" title=" " alt="" coords="5885,152,6037,207"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4886,109,5509,127,5738,137,5873,149,5885,152,5884,157,5872,155,5738,143,5509,132,4886,115,3778,96"/>
+<area shape="rect" href="mtd__nor_8h.html" title=" " alt="" coords="6061,159,6252,199"/>
+<area shape="poly" title=" " alt="" coords="3778,90,4222,90,4879,97,5227,104,5554,115,5836,130,6049,149,6089,157,6088,162,6048,155,5836,135,5554,120,5227,109,4879,102,4222,96,3778,95"/>
+<area shape="rect" href="ofw_8h.html" title=" " alt="" coords="5175,159,5335,199"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4068,96,4467,106,4865,124,5031,135,5157,149,5193,157,5192,162,5156,155,5031,141,4865,129,4467,112,4068,101,3778,96"/>
+<area shape="rect" href="drivers_2phye_8h.html" title=" " alt="" coords="5267,262,5438,302"/>
+<area shape="poly" title=" " alt="" coords="3778,90,4153,91,4664,99,4912,106,5124,116,5278,131,5325,140,5349,150,5365,176,5370,207,5367,237,5361,262,5356,261,5362,236,5364,207,5360,178,5346,154,5323,145,5277,136,5124,122,4912,111,4664,104,4153,97,3778,95"/>
+<area shape="rect" href="phy_8h.html" title=" " alt="" coords="6277,159,6437,199"/>
+<area shape="poly" title=" " alt="" coords="3778,91,5081,107,5827,125,6102,136,6264,149,6298,157,6297,162,6263,155,6101,142,5827,130,5081,113,3777,96"/>
+<area shape="rect" href="pulse__encoder_8h.html" title=" " alt="" coords="6461,152,6623,207"/>
+<area shape="poly" title=" " alt="" coords="3778,91,4339,95,5173,106,5978,124,6274,136,6449,149,6462,152,6461,157,6448,155,6274,141,5978,129,5173,111,4338,101,3778,96"/>
+<area shape="rect" href="regulator_8h.html" title=" " alt="" coords="6647,159,6843,199"/>
+<area shape="poly" title=" " alt="" coords="3778,91,5265,108,6129,125,6447,136,6634,149,6675,157,6674,162,6634,155,6446,142,6128,131,5265,113,3778,96"/>
+<area shape="poly" title=" " alt="" coords="3778,91,5439,109,6376,126,6697,137,6800,143,6855,149,6893,164,6891,169,6853,155,6799,148,6697,142,6376,132,5438,114,3777,96"/>
+<area shape="poly" title=" " alt="" coords="370,205,356,209,168,257,143,264,141,259,167,252,355,204,369,200"/>
+<area shape="poly" title=" " alt="" coords="404,208,293,264,291,260,401,203"/>
+<area shape="poly" title=" " alt="" coords="447,213,437,262,431,261,442,212"/>
+<area shape="poly" title=" " alt="" coords="548,196,597,204,763,225,836,234,928,252,957,259,955,264,927,257,835,240,762,230,596,209,547,201"/>
+<area shape="poly" title=" " alt="" coords="1015,213,1017,262,1012,262,1010,213"/>
+<area shape="poly" title=" " alt="" coords="1968,213,1938,263,1933,261,1963,210"/>
+<area shape="poly" title=" " alt="" coords="4213,212,4222,261,4217,262,4208,213"/>
+<area shape="poly" title=" " alt="" coords="4258,203,4363,252,4360,257,4256,208"/>
+<area shape="poly" title=" " alt="" coords="5751,212,5718,263,5713,260,5747,209"/>
+<area shape="poly" title=" " alt="" coords="3746,208,3521,265,3519,259,3745,203"/>
+<area shape="poly" title=" " alt="" coords="3783,215,3699,257,3697,252,3781,210"/>
+<area shape="poly" title=" " alt="" coords="3845,221,3842,262,3837,261,3840,220"/>
+<area shape="poly" title=" " alt="" coords="3907,211,3983,252,3980,257,3904,215"/>
+<area shape="poly" title=" " alt="" coords="5227,211,5170,264,5167,260,5223,207"/>
+<area shape="poly" title=" " alt="" coords="5285,208,5336,260,5333,264,5281,211"/>
+</map>
+</div>
+</div>
+<p><a href="finsh_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfinsh__syscall.html">finsh_syscall</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structfinsh__syscall__item.html">finsh_syscall_item</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4e2fbcdd1a54d7222a6907723e624168" id="r_a4e2fbcdd1a54d7222a6907723e624168"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a4e2fbcdd1a54d7222a6907723e624168">FINSH_COND</a>(opt)</td></tr>
+<tr class="separator:a4e2fbcdd1a54d7222a6907723e624168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a295586418fd3b32fc01a065e83c23a64" id="r_a295586418fd3b32fc01a065e83c23a64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a295586418fd3b32fc01a065e83c23a64">FINSH_DESC</a>(cmd,  desc)&#160;&#160;&#160;__fsym_##cmd##_desc,</td></tr>
+<tr class="separator:a295586418fd3b32fc01a065e83c23a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42291039355fdc137bd9b72f8e2804b7" id="r_a42291039355fdc137bd9b72f8e2804b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(name,  cmd,  desc,  opt)</td></tr>
+<tr class="memdesc:a42291039355fdc137bd9b72f8e2804b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro to export a command along with its name, description, and options to the symbol table in MSVC.  <br /></td></tr>
+<tr class="separator:a42291039355fdc137bd9b72f8e2804b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ea5eaa06b597710bad08b9f9a2ac9f8" id="r_a8ea5eaa06b597710bad08b9f9a2ac9f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a8ea5eaa06b597710bad08b9f9a2ac9f8">__MSH_GET_MACRO</a>(_1,  _2,  _3,  _FUN, ...)&#160;&#160;&#160;_FUN</td></tr>
+<tr class="memdesc:a8ea5eaa06b597710bad08b9f9a2ac9f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Macro definitions to simplify the declaration of exported functions or commands.  <br /></td></tr>
+<tr class="separator:a8ea5eaa06b597710bad08b9f9a2ac9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaac54a624cef2f6e5b27ddbe1187c275" id="r_aaac54a624cef2f6e5b27ddbe1187c275"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#aaac54a624cef2f6e5b27ddbe1187c275">__MSH_GET_EXPORT_MACRO</a>(_1,  _2,  _3,  _4,  _FUN, ...)&#160;&#160;&#160;_FUN</td></tr>
+<tr class="separator:aaac54a624cef2f6e5b27ddbe1187c275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64dc29d41d566dad989556b77aa79b35" id="r_a64dc29d41d566dad989556b77aa79b35"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a64dc29d41d566dad989556b77aa79b35">_MSH_FUNCTION_CMD2</a>(a0,  a1)&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a0, a1, 0)</td></tr>
+<tr class="separator:a64dc29d41d566dad989556b77aa79b35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0427613235f91c6ecab66112e16260e7" id="r_a0427613235f91c6ecab66112e16260e7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a0427613235f91c6ecab66112e16260e7">_MSH_FUNCTION_CMD2_OPT</a>(a0,  a1,  a2)&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a0, a1, a0##_msh_options)</td></tr>
+<tr class="separator:a0427613235f91c6ecab66112e16260e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e286f323215e8b8c309561bc345e3cd" id="r_a1e286f323215e8b8c309561bc345e3cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a1e286f323215e8b8c309561bc345e3cd">_MSH_FUNCTION_EXPORT_CMD3</a>(a0,  a1,  a2)&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a1, a2, 0)</td></tr>
+<tr class="separator:a1e286f323215e8b8c309561bc345e3cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ec10ce90981498c0aca9398bc242d2" id="r_ad3ec10ce90981498c0aca9398bc242d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#ad3ec10ce90981498c0aca9398bc242d2">_MSH_FUNCTION_EXPORT_CMD3_OPT</a>(a0,  a1,  a2,  a3)&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a1, a2, a0##_msh_options)</td></tr>
+<tr class="separator:ad3ec10ce90981498c0aca9398bc242d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944b96ca55cb370cfe92211c68a55664" id="r_a944b96ca55cb370cfe92211c68a55664"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a944b96ca55cb370cfe92211c68a55664">FINSH_FUNCTION_EXPORT</a>(name,  desc)</td></tr>
+<tr class="memdesc:a944b96ca55cb370cfe92211c68a55664"><td class="mdescLeft">&#160;</td><td class="mdescRight">This macro exports a system function to finsh shell.  <br /></td></tr>
+<tr class="separator:a944b96ca55cb370cfe92211c68a55664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b995a06148f4155bd274b3b4f893d76" id="r_a3b995a06148f4155bd274b3b4f893d76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a3b995a06148f4155bd274b3b4f893d76">FINSH_FUNCTION_EXPORT_ALIAS</a>(name,  alias,  desc)</td></tr>
+<tr class="memdesc:a3b995a06148f4155bd274b3b4f893d76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a system function with an alias name to finsh shell.  <br /></td></tr>
+<tr class="separator:a3b995a06148f4155bd274b3b4f893d76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91a67d7498e346a1e15a7ea7d58af654" id="r_a91a67d7498e346a1e15a7ea7d58af654"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(...)</td></tr>
+<tr class="memdesc:a91a67d7498e346a1e15a7ea7d58af654"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a command to module shell.  <br /></td></tr>
+<tr class="separator:a91a67d7498e346a1e15a7ea7d58af654"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a559519060a5c7f047b4f53ee96ac809b" id="r_a559519060a5c7f047b4f53ee96ac809b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a559519060a5c7f047b4f53ee96ac809b">MSH_CMD_EXPORT_ALIAS</a>(...)</td></tr>
+<tr class="memdesc:a559519060a5c7f047b4f53ee96ac809b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exports a command with alias to module shell.  <br /></td></tr>
+<tr class="separator:a559519060a5c7f047b4f53ee96ac809b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe8e3c3231a45bff1c9e165d1af59f5f" id="r_abe8e3c3231a45bff1c9e165d1af59f5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#abe8e3c3231a45bff1c9e165d1af59f5f">CMD_OPTIONS_STATEMENT</a>(command)</td></tr>
+<tr class="separator:abe8e3c3231a45bff1c9e165d1af59f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca4025845600b286e4f3b6608401bddb" id="r_aca4025845600b286e4f3b6608401bddb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#aca4025845600b286e4f3b6608401bddb">CMD_OPTIONS_NODE_START</a>(command)</td></tr>
+<tr class="separator:aca4025845600b286e4f3b6608401bddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319270a02ff05395fe2332f82020e740" id="r_a319270a02ff05395fe2332f82020e740"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a319270a02ff05395fe2332f82020e740">CMD_OPTIONS_NODE</a>(_id,  _name,  _des)</td></tr>
+<tr class="separator:a319270a02ff05395fe2332f82020e740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a787cfe31c0ecc0020be03fcbe6df0811" id="r_a787cfe31c0ecc0020be03fcbe6df0811"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a787cfe31c0ecc0020be03fcbe6df0811">CMD_OPTIONS_NODE_END</a></td></tr>
+<tr class="separator:a787cfe31c0ecc0020be03fcbe6df0811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a492c9d6fdb2d078d41f49b5a6dcf86e4" id="r_a492c9d6fdb2d078d41f49b5a6dcf86e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a492c9d6fdb2d078d41f49b5a6dcf86e4">MSH_OPT_ID_GET</a>(fun)&#160;&#160;&#160;((int)(-1UL))</td></tr>
+<tr class="separator:a492c9d6fdb2d078d41f49b5a6dcf86e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab06d72c3bc4536bec2ab4b9f7fdddf34" id="r_ab06d72c3bc4536bec2ab4b9f7fdddf34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#ab06d72c3bc4536bec2ab4b9f7fdddf34">MSH_OPT_DUMP</a>(fun)&#160;&#160;&#160;do{}while(0)</td></tr>
+<tr class="separator:ab06d72c3bc4536bec2ab4b9f7fdddf34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b22ccf9abeba1bc5471342556f5164" id="r_a65b22ccf9abeba1bc5471342556f5164"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a65b22ccf9abeba1bc5471342556f5164">FINSH_NEXT_SYSCALL</a>(index)&#160;&#160;&#160;index++</td></tr>
+<tr class="separator:a65b22ccf9abeba1bc5471342556f5164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a02a90a13808c3728ae2627069a256de8" id="r_a02a90a13808c3728ae2627069a256de8"><td class="memItemLeft" align="right" valign="top">typedef long(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a02a90a13808c3728ae2627069a256de8">syscall_func</a>) (void)</td></tr>
+<tr class="separator:a02a90a13808c3728ae2627069a256de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a4ca70de04431b9f767dff9f2ba7dcc8b" id="r_a4ca70de04431b9f767dff9f2ba7dcc8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a4ca70de04431b9f767dff9f2ba7dcc8b">finsh_set_device</a> (const char *device_name)</td></tr>
+<tr class="separator:a4ca70de04431b9f767dff9f2ba7dcc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a75fba8f6e2aa7636a4ae2259ef968a7c" id="r_a75fba8f6e2aa7636a4ae2259ef968a7c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__syscall__item.html">finsh_syscall_item</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a75fba8f6e2aa7636a4ae2259ef968a7c">global_syscall_list</a></td></tr>
+<tr class="separator:a75fba8f6e2aa7636a4ae2259ef968a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a6d87bb74cf8a72a6bea49337bca645" id="r_a7a6d87bb74cf8a72a6bea49337bca645"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a7a6d87bb74cf8a72a6bea49337bca645">_syscall_table_begin</a></td></tr>
+<tr class="separator:a7a6d87bb74cf8a72a6bea49337bca645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190582427dac18480d37339f1bed9aef" id="r_a190582427dac18480d37339f1bed9aef"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="finsh_8h.html#a190582427dac18480d37339f1bed9aef">_syscall_table_end</a></td></tr>
+<tr class="separator:a190582427dac18480d37339f1bed9aef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aaac54a624cef2f6e5b27ddbe1187c275" name="aaac54a624cef2f6e5b27ddbe1187c275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaac54a624cef2f6e5b27ddbe1187c275">&#9670;&#160;</a></span>__MSH_GET_EXPORT_MACRO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __MSH_GET_EXPORT_MACRO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_FUN, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;_FUN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ea5eaa06b597710bad08b9f9a2ac9f8" name="a8ea5eaa06b597710bad08b9f9a2ac9f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ea5eaa06b597710bad08b9f9a2ac9f8">&#9670;&#160;</a></span>__MSH_GET_MACRO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __MSH_GET_MACRO</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_FUN, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;_FUN</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Macro definitions to simplify the declaration of exported functions or commands. </p>
+
+</div>
+</div>
+<a id="a64dc29d41d566dad989556b77aa79b35" name="a64dc29d41d566dad989556b77aa79b35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64dc29d41d566dad989556b77aa79b35">&#9670;&#160;</a></span>_MSH_FUNCTION_CMD2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MSH_FUNCTION_CMD2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a0, a1, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0427613235f91c6ecab66112e16260e7" name="a0427613235f91c6ecab66112e16260e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0427613235f91c6ecab66112e16260e7">&#9670;&#160;</a></span>_MSH_FUNCTION_CMD2_OPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MSH_FUNCTION_CMD2_OPT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a0, a1, a0##_msh_options)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e286f323215e8b8c309561bc345e3cd" name="a1e286f323215e8b8c309561bc345e3cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e286f323215e8b8c309561bc345e3cd">&#9670;&#160;</a></span>_MSH_FUNCTION_EXPORT_CMD3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MSH_FUNCTION_EXPORT_CMD3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a1, a2, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3ec10ce90981498c0aca9398bc242d2" name="ad3ec10ce90981498c0aca9398bc242d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ec10ce90981498c0aca9398bc242d2">&#9670;&#160;</a></span>_MSH_FUNCTION_EXPORT_CMD3_OPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MSH_FUNCTION_EXPORT_CMD3_OPT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a0, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">a3&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;        <a class="el" href="finsh_8h.html#a42291039355fdc137bd9b72f8e2804b7">MSH_FUNCTION_EXPORT_CMD</a>(a0, a1, a2, a0##_msh_options)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a319270a02ff05395fe2332f82020e740" name="a319270a02ff05395fe2332f82020e740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319270a02ff05395fe2332f82020e740">&#9670;&#160;</a></span>CMD_OPTIONS_NODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_OPTIONS_NODE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_id, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_des&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a787cfe31c0ecc0020be03fcbe6df0811" name="a787cfe31c0ecc0020be03fcbe6df0811"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a787cfe31c0ecc0020be03fcbe6df0811">&#9670;&#160;</a></span>CMD_OPTIONS_NODE_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_OPTIONS_NODE_END</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca4025845600b286e4f3b6608401bddb" name="aca4025845600b286e4f3b6608401bddb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca4025845600b286e4f3b6608401bddb">&#9670;&#160;</a></span>CMD_OPTIONS_NODE_START</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_OPTIONS_NODE_START</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">command</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe8e3c3231a45bff1c9e165d1af59f5f" name="abe8e3c3231a45bff1c9e165d1af59f5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8e3c3231a45bff1c9e165d1af59f5f">&#9670;&#160;</a></span>CMD_OPTIONS_STATEMENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CMD_OPTIONS_STATEMENT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">command</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e2fbcdd1a54d7222a6907723e624168" name="a4e2fbcdd1a54d7222a6907723e624168"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2fbcdd1a54d7222a6907723e624168">&#9670;&#160;</a></span>FINSH_COND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINSH_COND</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">opt</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a295586418fd3b32fc01a065e83c23a64" name="a295586418fd3b32fc01a065e83c23a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a295586418fd3b32fc01a065e83c23a64">&#9670;&#160;</a></span>FINSH_DESC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINSH_DESC</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;__fsym_##cmd##_desc,</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a944b96ca55cb370cfe92211c68a55664" name="a944b96ca55cb370cfe92211c68a55664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944b96ca55cb370cfe92211c68a55664">&#9670;&#160;</a></span>FINSH_FUNCTION_EXPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINSH_FUNCTION_EXPORT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This macro exports a system function to finsh shell. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desc</td><td>Description of function, which will show in help. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b995a06148f4155bd274b3b4f893d76" name="a3b995a06148f4155bd274b3b4f893d76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b995a06148f4155bd274b3b4f893d76">&#9670;&#160;</a></span>FINSH_FUNCTION_EXPORT_ALIAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINSH_FUNCTION_EXPORT_ALIAS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">alias, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Exports a system function with an alias name to finsh shell. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name of function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">alias</td><td>Alias name of function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desc</td><td>Description of function, which will show in help. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a65b22ccf9abeba1bc5471342556f5164" name="a65b22ccf9abeba1bc5471342556f5164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b22ccf9abeba1bc5471342556f5164">&#9670;&#160;</a></span>FINSH_NEXT_SYSCALL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FINSH_NEXT_SYSCALL</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">index</td><td>)</td>
+          <td>&#160;&#160;&#160;index++</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a91a67d7498e346a1e15a7ea7d58af654" name="a91a67d7498e346a1e15a7ea7d58af654"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91a67d7498e346a1e15a7ea7d58af654">&#9670;&#160;</a></span>MSH_CMD_EXPORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSH_CMD_EXPORT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="finsh_8h.html#a8ea5eaa06b597710bad08b9f9a2ac9f8">__MSH_GET_MACRO</a>(__VA_ARGS__, <a class="code hl_define" href="finsh_8h.html#a0427613235f91c6ecab66112e16260e7">_MSH_FUNCTION_CMD2_OPT</a>,    \</div>
+<div class="line">        <a class="code hl_define" href="finsh_8h.html#a64dc29d41d566dad989556b77aa79b35">_MSH_FUNCTION_CMD2</a>)(__VA_ARGS__)</div>
+<div class="ttc" id="afinsh_8h_html_a0427613235f91c6ecab66112e16260e7"><div class="ttname"><a href="finsh_8h.html#a0427613235f91c6ecab66112e16260e7">_MSH_FUNCTION_CMD2_OPT</a></div><div class="ttdeci">#define _MSH_FUNCTION_CMD2_OPT(a0, a1, a2)</div><div class="ttdef"><b>Definition</b> finsh.h:102</div></div>
+<div class="ttc" id="afinsh_8h_html_a64dc29d41d566dad989556b77aa79b35"><div class="ttname"><a href="finsh_8h.html#a64dc29d41d566dad989556b77aa79b35">_MSH_FUNCTION_CMD2</a></div><div class="ttdeci">#define _MSH_FUNCTION_CMD2(a0, a1)</div><div class="ttdef"><b>Definition</b> finsh.h:99</div></div>
+<div class="ttc" id="afinsh_8h_html_a8ea5eaa06b597710bad08b9f9a2ac9f8"><div class="ttname"><a href="finsh_8h.html#a8ea5eaa06b597710bad08b9f9a2ac9f8">__MSH_GET_MACRO</a></div><div class="ttdeci">#define __MSH_GET_MACRO(_1, _2, _3, _FUN,...)</div><div class="ttdoc">Macro definitions to simplify the declaration of exported functions or commands.</div><div class="ttdef"><b>Definition</b> finsh.h:96</div></div>
+</div><!-- fragment -->
+<p>Exports a command to module shell. </p>
+<p><b>Parameters</b> </p>
+<p><code>[in]</code> <b>command</b> Name of the command.</p>
+<p><code>[in]</code> <b>desc</b> Description of the command, which will show in help list.</p>
+<p><code>[in]</code> <b>opt</b> This is an option, enter any content to enable option completion</p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be used in two ways: <div class="fragment"><div class="line"><a class="code hl_define" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(command, desc) </div>
+<div class="ttc" id="afinsh_8h_html_a91a67d7498e346a1e15a7ea7d58af654"><div class="ttname"><a href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a></div><div class="ttdeci">#define MSH_CMD_EXPORT(...)</div><div class="ttdoc">Exports a command to module shell.</div><div class="ttdef"><b>Definition</b> finsh.h:151</div></div>
+</div><!-- fragment --> or <div class="fragment"><div class="line"><a class="code hl_define" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(command, desc, opt) </div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a559519060a5c7f047b4f53ee96ac809b" name="a559519060a5c7f047b4f53ee96ac809b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a559519060a5c7f047b4f53ee96ac809b">&#9670;&#160;</a></span>MSH_CMD_EXPORT_ALIAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSH_CMD_EXPORT_ALIAS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <a class="code hl_define" href="finsh_8h.html#aaac54a624cef2f6e5b27ddbe1187c275">__MSH_GET_EXPORT_MACRO</a>(__VA_ARGS__, <a class="code hl_define" href="finsh_8h.html#ad3ec10ce90981498c0aca9398bc242d2">_MSH_FUNCTION_EXPORT_CMD3_OPT</a>,      \</div>
+<div class="line">            <a class="code hl_define" href="finsh_8h.html#a1e286f323215e8b8c309561bc345e3cd">_MSH_FUNCTION_EXPORT_CMD3</a>)(__VA_ARGS__)</div>
+<div class="ttc" id="afinsh_8h_html_a1e286f323215e8b8c309561bc345e3cd"><div class="ttname"><a href="finsh_8h.html#a1e286f323215e8b8c309561bc345e3cd">_MSH_FUNCTION_EXPORT_CMD3</a></div><div class="ttdeci">#define _MSH_FUNCTION_EXPORT_CMD3(a0, a1, a2)</div><div class="ttdef"><b>Definition</b> finsh.h:105</div></div>
+<div class="ttc" id="afinsh_8h_html_aaac54a624cef2f6e5b27ddbe1187c275"><div class="ttname"><a href="finsh_8h.html#aaac54a624cef2f6e5b27ddbe1187c275">__MSH_GET_EXPORT_MACRO</a></div><div class="ttdeci">#define __MSH_GET_EXPORT_MACRO(_1, _2, _3, _4, _FUN,...)</div><div class="ttdef"><b>Definition</b> finsh.h:97</div></div>
+<div class="ttc" id="afinsh_8h_html_ad3ec10ce90981498c0aca9398bc242d2"><div class="ttname"><a href="finsh_8h.html#ad3ec10ce90981498c0aca9398bc242d2">_MSH_FUNCTION_EXPORT_CMD3_OPT</a></div><div class="ttdeci">#define _MSH_FUNCTION_EXPORT_CMD3_OPT(a0, a1, a2, a3)</div><div class="ttdef"><b>Definition</b> finsh.h:108</div></div>
+</div><!-- fragment -->
+<p>Exports a command with alias to module shell. </p>
+<p><b>Parameters</b> </p>
+<p><code>[in]</code> <b>command</b> Name of the command.</p>
+<p><code>[in]</code> <b>alias</b> Alias of the command.</p>
+<p><code>[in]</code> <b>desc</b> Description of the command, which will show in help list.</p>
+<p><code>[in]</code> <b>opt</b> An option, enter any content to enable option completion.</p>
+<dl class="section note"><dt>Note</dt><dd>This macro can be used in two ways: <div class="fragment"><div class="line"><span class="preprocessor">#define MSH_CMD_EXPORT_ALIAS(command, alias, desc) </span></div>
+</div><!-- fragment --> or <div class="fragment"><div class="line"><span class="preprocessor">#define MSH_CMD_EXPORT_ALIAS(command, alias, desc, opt) </span></div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a id="a42291039355fdc137bd9b72f8e2804b7" name="a42291039355fdc137bd9b72f8e2804b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42291039355fdc137bd9b72f8e2804b7">&#9670;&#160;</a></span>MSH_FUNCTION_EXPORT_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSH_FUNCTION_EXPORT_CMD</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">name, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">cmd, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">opt&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                <span class="keyword">const</span> <span class="keywordtype">char</span> __fsym_##cmd##_name[] rt_section(<span class="stringliteral">&quot;.rodata.name&quot;</span>) = #cmd;    \</div>
+<div class="line">                <span class="keyword">const</span> <span class="keywordtype">char</span> __fsym_##cmd##_desc[] rt_section(<span class="stringliteral">&quot;.rodata.name&quot;</span>) = #desc;   \</div>
+<div class="line">                rt_used <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structfinsh__syscall.html">finsh_syscall</a> __fsym_##cmd rt_section(<span class="stringliteral">&quot;FSymTab&quot;</span>)= \</div>
+<div class="line">                {                           \</div>
+<div class="line">                    __fsym_##cmd##_name,    \</div>
+<div class="line">                    FINSH_DESC(cmd, <a class="code hl_variable" href="structfinsh__syscall.html#a8acc478b32896f620735b4152bedb665">desc</a>)   \</div>
+<div class="line">                    FINSH_COND(opt)         \</div>
+<div class="line">                    (<a class="code hl_typedef" href="finsh_8h.html#a02a90a13808c3728ae2627069a256de8">syscall_func</a>)&amp;<a class="code hl_variable" href="structfinsh__syscall.html#a67b06c8b276acc0ae06b5b938ad35361">name</a>     \</div>
+<div class="line">                };</div>
+<div class="ttc" id="afinsh_8h_html_a02a90a13808c3728ae2627069a256de8"><div class="ttname"><a href="finsh_8h.html#a02a90a13808c3728ae2627069a256de8">syscall_func</a></div><div class="ttdeci">long(* syscall_func)(void)</div><div class="ttdef"><b>Definition</b> finsh.h:31</div></div>
+<div class="ttc" id="astructfinsh__syscall_html"><div class="ttname"><a href="structfinsh__syscall.html">finsh_syscall</a></div><div class="ttdef"><b>Definition</b> finsh.h:181</div></div>
+<div class="ttc" id="astructfinsh__syscall_html_a67b06c8b276acc0ae06b5b938ad35361"><div class="ttname"><a href="structfinsh__syscall.html#a67b06c8b276acc0ae06b5b938ad35361">finsh_syscall::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition</b> finsh.h:182</div></div>
+<div class="ttc" id="astructfinsh__syscall_html_a8acc478b32896f620735b4152bedb665"><div class="ttname"><a href="structfinsh__syscall.html#a8acc478b32896f620735b4152bedb665">finsh_syscall::desc</a></div><div class="ttdeci">const char * desc</div><div class="ttdef"><b>Definition</b> finsh.h:184</div></div>
+</div><!-- fragment -->
+<p>Macro to export a command along with its name, description, and options to the symbol table in MSVC. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>The function name associated with the command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cmd</td><td>The command name. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">desc</td><td>The description of the command. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">opt</td><td>The options associated with the command, used for option completion. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab06d72c3bc4536bec2ab4b9f7fdddf34" name="ab06d72c3bc4536bec2ab4b9f7fdddf34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab06d72c3bc4536bec2ab4b9f7fdddf34">&#9670;&#160;</a></span>MSH_OPT_DUMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSH_OPT_DUMP</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fun</td><td>)</td>
+          <td>&#160;&#160;&#160;do{}while(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a492c9d6fdb2d078d41f49b5a6dcf86e4" name="a492c9d6fdb2d078d41f49b5a6dcf86e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a492c9d6fdb2d078d41f49b5a6dcf86e4">&#9670;&#160;</a></span>MSH_OPT_ID_GET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MSH_OPT_ID_GET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">fun</td><td>)</td>
+          <td>&#160;&#160;&#160;((int)(-1UL))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a02a90a13808c3728ae2627069a256de8" name="a02a90a13808c3728ae2627069a256de8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02a90a13808c3728ae2627069a256de8">&#9670;&#160;</a></span>syscall_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef long(* syscall_func) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a4ca70de04431b9f767dff9f2ba7dcc8b" name="a4ca70de04431b9f767dff9f2ba7dcc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca70de04431b9f767dff9f2ba7dcc8b">&#9670;&#160;</a></span>finsh_set_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finsh_set_device </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>device_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function sets the input device of finsh shell.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_name</td><td>the name of new input device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7a6d87bb74cf8a72a6bea49337bca645" name="a7a6d87bb74cf8a72a6bea49337bca645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6d87bb74cf8a72a6bea49337bca645">&#9670;&#160;</a></span>_syscall_table_begin</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a>* _syscall_table_begin</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a190582427dac18480d37339f1bed9aef" name="a190582427dac18480d37339f1bed9aef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190582427dac18480d37339f1bed9aef">&#9670;&#160;</a></span>_syscall_table_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a> * _syscall_table_end</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75fba8f6e2aa7636a4ae2259ef968a7c" name="a75fba8f6e2aa7636a4ae2259ef968a7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75fba8f6e2aa7636a4ae2259ef968a7c">&#9670;&#160;</a></span>global_syscall_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__syscall__item.html">finsh_syscall_item</a>* global_syscall_list</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_86d0af1c976cb2104552e4f347bf9ac9.html">finsh</a></li><li class="navelem"><a class="el" href="finsh_8h.html">finsh.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

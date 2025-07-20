@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: rt_sensor_info Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structrt__sensor__info.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">rt_sensor_info Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="sensor_8h_source.html">sensor.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ab794439b1b179c592766deda65097c9c" id="r_ab794439b1b179c592766deda65097c9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#ab794439b1b179c592766deda65097c9c">type</a></td></tr>
+<tr class="separator:ab794439b1b179c592766deda65097c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a766d93c8e0a6eab0397ab36536990fa7" id="r_a766d93c8e0a6eab0397ab36536990fa7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a766d93c8e0a6eab0397ab36536990fa7">vendor</a></td></tr>
+<tr class="separator:a766d93c8e0a6eab0397ab36536990fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a683965280dd2484c43e13b7cb96fa996" id="r_a683965280dd2484c43e13b7cb96fa996"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a683965280dd2484c43e13b7cb96fa996">model</a></td></tr>
+<tr class="separator:a683965280dd2484c43e13b7cb96fa996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d49b3c28cb344133b4d6d70a7f922c" id="r_ab9d49b3c28cb344133b4d6d70a7f922c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#ab9d49b3c28cb344133b4d6d70a7f922c">unit</a></td></tr>
+<tr class="separator:ab9d49b3c28cb344133b4d6d70a7f922c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7a78d29dd3bfc70349f7525690cc18" id="r_acf7a78d29dd3bfc70349f7525690cc18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#acf7a78d29dd3bfc70349f7525690cc18">intf_type</a></td></tr>
+<tr class="separator:acf7a78d29dd3bfc70349f7525690cc18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6a0bc74cdbe6fbee0ed5f33625a561f" id="r_ac6a0bc74cdbe6fbee0ed5f33625a561f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#ac6a0bc74cdbe6fbee0ed5f33625a561f">range_max</a></td></tr>
+<tr class="separator:ac6a0bc74cdbe6fbee0ed5f33625a561f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3aea2e9253914389d3343a4ddd0c2879" id="r_a3aea2e9253914389d3343a4ddd0c2879"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a3aea2e9253914389d3343a4ddd0c2879">range_min</a></td></tr>
+<tr class="separator:a3aea2e9253914389d3343a4ddd0c2879"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57323972b9f3d3904079c266c69513e9" id="r_a57323972b9f3d3904079c266c69513e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a57323972b9f3d3904079c266c69513e9">period_min</a></td></tr>
+<tr class="separator:a57323972b9f3d3904079c266c69513e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab96d4cfab71da4f9ebe89d3963dabac" id="r_aab96d4cfab71da4f9ebe89d3963dabac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#aab96d4cfab71da4f9ebe89d3963dabac">fifo_max</a></td></tr>
+<tr class="separator:aab96d4cfab71da4f9ebe89d3963dabac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0a500a8f419e1d2172c3305a5ca5b2" id="r_a0a0a500a8f419e1d2172c3305a5ca5b2"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a0a0a500a8f419e1d2172c3305a5ca5b2">name</a></td></tr>
+<tr class="separator:a0a0a500a8f419e1d2172c3305a5ca5b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c66c1d0a7188b5c4a0680221afbfb91" id="r_a9c66c1d0a7188b5c4a0680221afbfb91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a9c66c1d0a7188b5c4a0680221afbfb91">mode</a></td></tr>
+<tr class="separator:a9c66c1d0a7188b5c4a0680221afbfb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a980a7490c2e7f42ed6734106ef448d63" id="r_a980a7490c2e7f42ed6734106ef448d63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="sensor__v2_8h.html#a954ea12c757b9552eee764e46e79b4f1">rt_sensor_float_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#a980a7490c2e7f42ed6734106ef448d63">acquire_min</a></td></tr>
+<tr class="separator:a980a7490c2e7f42ed6734106ef448d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac39a02a14506db4a364aac5d66e93ae7" id="r_ac39a02a14506db4a364aac5d66e93ae7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__sensor__accuracy.html">rt_sensor_accuracy</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#ac39a02a14506db4a364aac5d66e93ae7">accuracy</a></td></tr>
+<tr class="separator:ac39a02a14506db4a364aac5d66e93ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8f025b4363e91b6f074676e20d16b9f" id="r_aa8f025b4363e91b6f074676e20d16b9f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__sensor__scale.html">rt_sensor_scale</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__sensor__info.html#aa8f025b4363e91b6f074676e20d16b9f">scale</a></td></tr>
+<tr class="separator:aa8f025b4363e91b6f074676e20d16b9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="ac39a02a14506db4a364aac5d66e93ae7" name="ac39a02a14506db4a364aac5d66e93ae7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac39a02a14506db4a364aac5d66e93ae7">&#9670;&#160;</a></span>accuracy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__sensor__accuracy.html">rt_sensor_accuracy</a> rt_sensor_info::accuracy</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a980a7490c2e7f42ed6734106ef448d63" name="a980a7490c2e7f42ed6734106ef448d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a980a7490c2e7f42ed6734106ef448d63">&#9670;&#160;</a></span>acquire_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sensor__v2_8h.html#a954ea12c757b9552eee764e46e79b4f1">rt_sensor_float_t</a> rt_sensor_info::acquire_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab96d4cfab71da4f9ebe89d3963dabac" name="aab96d4cfab71da4f9ebe89d3963dabac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab96d4cfab71da4f9ebe89d3963dabac">&#9670;&#160;</a></span>fifo_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sensor_info::fifo_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf7a78d29dd3bfc70349f7525690cc18" name="acf7a78d29dd3bfc70349f7525690cc18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf7a78d29dd3bfc70349f7525690cc18">&#9670;&#160;</a></span>intf_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sensor_info::intf_type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c66c1d0a7188b5c4a0680221afbfb91" name="a9c66c1d0a7188b5c4a0680221afbfb91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c66c1d0a7188b5c4a0680221afbfb91">&#9670;&#160;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> rt_sensor_info::mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a683965280dd2484c43e13b7cb96fa996" name="a683965280dd2484c43e13b7cb96fa996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a683965280dd2484c43e13b7cb96fa996">&#9670;&#160;</a></span>model</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* rt_sensor_info::model</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a0a500a8f419e1d2172c3305a5ca5b2" name="a0a0a500a8f419e1d2172c3305a5ca5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0a500a8f419e1d2172c3305a5ca5b2">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* rt_sensor_info::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a57323972b9f3d3904079c266c69513e9" name="a57323972b9f3d3904079c266c69513e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57323972b9f3d3904079c266c69513e9">&#9670;&#160;</a></span>period_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_sensor_info::period_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac6a0bc74cdbe6fbee0ed5f33625a561f" name="ac6a0bc74cdbe6fbee0ed5f33625a561f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6a0bc74cdbe6fbee0ed5f33625a561f">&#9670;&#160;</a></span>range_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rt_sensor_info::range_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3aea2e9253914389d3343a4ddd0c2879" name="a3aea2e9253914389d3343a4ddd0c2879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aea2e9253914389d3343a4ddd0c2879">&#9670;&#160;</a></span>range_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rt_sensor_info::range_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8f025b4363e91b6f074676e20d16b9f" name="aa8f025b4363e91b6f074676e20d16b9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8f025b4363e91b6f074676e20d16b9f">&#9670;&#160;</a></span>scale</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__sensor__scale.html">rt_sensor_scale</a> rt_sensor_info::scale</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab794439b1b179c592766deda65097c9c" name="ab794439b1b179c592766deda65097c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab794439b1b179c592766deda65097c9c">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sensor_info::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab9d49b3c28cb344133b4d6d70a7f922c" name="ab9d49b3c28cb344133b4d6d70a7f922c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d49b3c28cb344133b4d6d70a7f922c">&#9670;&#160;</a></span>unit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sensor_info::unit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a766d93c8e0a6eab0397ab36536990fa7" name="a766d93c8e0a6eab0397ab36536990fa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766d93c8e0a6eab0397ab36536990fa7">&#9670;&#160;</a></span>vendor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sensor_info::vendor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following files:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="sensor_8h_source.html">sensor.h</a></li>
+<li>components/drivers/include/drivers/<a class="el" href="sensor__v2_8h_source.html">sensor_v2.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structrt__sensor__info.html">rt_sensor_info</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

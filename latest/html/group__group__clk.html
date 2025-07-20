@@ -1,0 +1,1513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: clk</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group__clk.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">clk<div class="ingroups"><a class="el" href="group__group__device__driver.html">Group_device_driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>clk driver api  
+<a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for clk:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group__clk.png" border="0" usemap="#agroup____group____clk" alt=""/></div>
+<map name="agroup____group____clk" id="agroup____group____clk">
+<area shape="rect" title="clk driver api" alt="" coords="209,5,251,31"/>
+<area shape="rect" href="group__group__device__driver.html" title=" " alt="" coords="5,5,161,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk__node.html">rt_clk_node</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clk node, it is a pat of clk source or controller.  <a href="structrt__clk__node.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk__fixed__rate.html">rt_clk_fixed_rate</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant rate clk.  <a href="structrt__clk__fixed__rate.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk.html">rt_clk</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clk object, it can be clk source or controller.  <a href="structrt__clk.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk__array.html">rt_clk_array</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clk array.  <a href="structrt__clk__array.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk__ops.html">rt_clk_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clock notifier, it containers of clock list and callback function.  <a href="structrt__clk__notifier.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gac4e2937b86d1338f765c02b4869648ca" id="r_gac4e2937b86d1338f765c02b4869648ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gac4e2937b86d1338f765c02b4869648ca">DBG_TAG</a>&#160;&#160;&#160;&quot;rtdm.clk&quot;</td></tr>
+<tr class="separator:gac4e2937b86d1338f765c02b4869648ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d5f21bfe809857ecc4dd3ecdba44f49" id="r_ga2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga2d5f21bfe809857ecc4dd3ecdba44f49">DBG_LVL</a>&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td></tr>
+<tr class="separator:ga2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga955eae8131f2473afb19dc95446d087a" id="r_ga955eae8131f2473afb19dc95446d087a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga955eae8131f2473afb19dc95446d087a">RT_CLK_NODE_OBJ_NAME</a>&#160;&#160;&#160;&quot;CLKNP&quot;</td></tr>
+<tr class="separator:ga955eae8131f2473afb19dc95446d087a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga445eec5c577e5af5045af1c237cda9cc" id="r_ga445eec5c577e5af5045af1c237cda9cc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga445eec5c577e5af5045af1c237cda9cc">RT_CLK_MSG_PRE_RATE_CHANGE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td></tr>
+<tr class="separator:ga445eec5c577e5af5045af1c237cda9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3c1726fd783a9ad34d266dfcff3cb7e" id="r_gad3c1726fd783a9ad34d266dfcff3cb7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gad3c1726fd783a9ad34d266dfcff3cb7e">RT_CLK_MSG_POST_RATE_CHANGE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td></tr>
+<tr class="separator:gad3c1726fd783a9ad34d266dfcff3cb7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaabbf7b74677f9335561ac97553605d40" id="r_gaabbf7b74677f9335561ac97553605d40"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaabbf7b74677f9335561ac97553605d40">RT_CLK_MSG_ABORT_RATE_CHANGE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td></tr>
+<tr class="separator:gaabbf7b74677f9335561ac97553605d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gac26afc0ee8e81cbc9d4e1af780ff165b" id="r_gac26afc0ee8e81cbc9d4e1af780ff165b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gac26afc0ee8e81cbc9d4e1af780ff165b">rt_clk_notifier_callback</a>) (struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *notifier, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> msg, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> old_rate, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> new_rate)</td></tr>
+<tr class="separator:gac26afc0ee8e81cbc9d4e1af780ff165b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga1957d7b62fcb148f491580a09613afb6" id="r_ga1957d7b62fcb148f491580a09613afb6"><td class="memItemLeft" align="right" valign="top">rt_inline struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga1957d7b62fcb148f491580a09613afb6">clk_get</a> (struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *clk_np)</td></tr>
+<tr class="memdesc:ga1957d7b62fcb148f491580a09613afb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase reference count for clock node.  <br /></td></tr>
+<tr class="separator:ga1957d7b62fcb148f491580a09613afb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaefe5aef56a74b5bb7da943384e005e6c" id="r_gaefe5aef56a74b5bb7da943384e005e6c"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaefe5aef56a74b5bb7da943384e005e6c">clk_put</a> (struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *clk_np)</td></tr>
+<tr class="memdesc:gaefe5aef56a74b5bb7da943384e005e6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrease reference count for clock node.  <br /></td></tr>
+<tr class="separator:gaefe5aef56a74b5bb7da943384e005e6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga637353dc3e74dc379f67fd3ced8c8d3e" id="r_ga637353dc3e74dc379f67fd3ced8c8d3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga637353dc3e74dc379f67fd3ced8c8d3e">rt_clk_register</a> (struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *clk_np, struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *parent_np)</td></tr>
+<tr class="memdesc:ga637353dc3e74dc379f67fd3ced8c8d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register clock node into clock list.  <br /></td></tr>
+<tr class="separator:ga637353dc3e74dc379f67fd3ced8c8d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68734db2f14b7e4dbaf9fce89e827032" id="r_ga68734db2f14b7e4dbaf9fce89e827032"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga68734db2f14b7e4dbaf9fce89e827032">rt_clk_unregister</a> (struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *clk_np)</td></tr>
+<tr class="memdesc:ga68734db2f14b7e4dbaf9fce89e827032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister clock node from clock list.  <br /></td></tr>
+<tr class="separator:ga68734db2f14b7e4dbaf9fce89e827032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c363555c3bd236fd3728184f0d05740" id="r_ga4c363555c3bd236fd3728184f0d05740"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga4c363555c3bd236fd3728184f0d05740">rt_clk_notifier_register</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *notifier)</td></tr>
+<tr class="memdesc:ga4c363555c3bd236fd3728184f0d05740"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register clock notifier into notifier list.  <br /></td></tr>
+<tr class="separator:ga4c363555c3bd236fd3728184f0d05740"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga79f693d92530220801352fe6374734f8" id="r_ga79f693d92530220801352fe6374734f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga79f693d92530220801352fe6374734f8">rt_clk_notifier_unregister</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *notifier)</td></tr>
+<tr class="memdesc:ga79f693d92530220801352fe6374734f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unregister clock notifier into notifier list.  <br /></td></tr>
+<tr class="separator:ga79f693d92530220801352fe6374734f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9548b61a8029dd41f5a4e3b0ebb5fd7b" id="r_ga9548b61a8029dd41f5a4e3b0ebb5fd7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga9548b61a8029dd41f5a4e3b0ebb5fd7b">rt_clk_prepare</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:ga9548b61a8029dd41f5a4e3b0ebb5fd7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare clock.  <br /></td></tr>
+<tr class="separator:ga9548b61a8029dd41f5a4e3b0ebb5fd7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga195dd2f6157802aab26488219927299b" id="r_ga195dd2f6157802aab26488219927299b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga195dd2f6157802aab26488219927299b">rt_clk_unprepare</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="separator:ga195dd2f6157802aab26488219927299b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae22365ec67fb1eed4340bb20c2628c06" id="r_gae22365ec67fb1eed4340bb20c2628c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gae22365ec67fb1eed4340bb20c2628c06">rt_clk_enable</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:gae22365ec67fb1eed4340bb20c2628c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable clock.  <br /></td></tr>
+<tr class="separator:gae22365ec67fb1eed4340bb20c2628c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e3d7eb8b3202dabf4da48e20be86436" id="r_ga1e3d7eb8b3202dabf4da48e20be86436"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga1e3d7eb8b3202dabf4da48e20be86436">rt_clk_disable</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:ga1e3d7eb8b3202dabf4da48e20be86436"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable clock.  <br /></td></tr>
+<tr class="separator:ga1e3d7eb8b3202dabf4da48e20be86436"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1f8d703ae888c54a167d450e8a4f8bd" id="r_gaf1f8d703ae888c54a167d450e8a4f8bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaf1f8d703ae888c54a167d450e8a4f8bd">rt_clk_prepare_enable</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:gaf1f8d703ae888c54a167d450e8a4f8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare and enable clock.  <br /></td></tr>
+<tr class="separator:gaf1f8d703ae888c54a167d450e8a4f8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2265834a3565c46411cb5d4567685eeb" id="r_ga2265834a3565c46411cb5d4567685eeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga2265834a3565c46411cb5d4567685eeb">rt_clk_disable_unprepare</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:ga2265834a3565c46411cb5d4567685eeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable and unprepare clock.  <br /></td></tr>
+<tr class="separator:ga2265834a3565c46411cb5d4567685eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe67a7a6227dc2877da97573f85e77c1" id="r_gabe67a7a6227dc2877da97573f85e77c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gabe67a7a6227dc2877da97573f85e77c1">rt_clk_array_prepare</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:gabe67a7a6227dc2877da97573f85e77c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare clock array for mutipule out clock.  <br /></td></tr>
+<tr class="separator:gabe67a7a6227dc2877da97573f85e77c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab70acb63a7ec8868d9ed923510fc6f04" id="r_gab70acb63a7ec8868d9ed923510fc6f04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gab70acb63a7ec8868d9ed923510fc6f04">rt_clk_array_unprepare</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="separator:gab70acb63a7ec8868d9ed923510fc6f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga164a4d083d0f687d73778bf98e13fa21" id="r_ga164a4d083d0f687d73778bf98e13fa21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga164a4d083d0f687d73778bf98e13fa21">rt_clk_array_enable</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:ga164a4d083d0f687d73778bf98e13fa21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable clock array for mutipule out clock.  <br /></td></tr>
+<tr class="separator:ga164a4d083d0f687d73778bf98e13fa21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e07a7098425302bc18a1f16075821f3" id="r_ga7e07a7098425302bc18a1f16075821f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga7e07a7098425302bc18a1f16075821f3">rt_clk_array_disable</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:ga7e07a7098425302bc18a1f16075821f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable clock array for mutipule out clock.  <br /></td></tr>
+<tr class="separator:ga7e07a7098425302bc18a1f16075821f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3100bb8a1b6c38a9fcf42b65d564db7c" id="r_ga3100bb8a1b6c38a9fcf42b65d564db7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga3100bb8a1b6c38a9fcf42b65d564db7c">rt_clk_array_prepare_enable</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:ga3100bb8a1b6c38a9fcf42b65d564db7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepare and enable clock array.  <br /></td></tr>
+<tr class="separator:ga3100bb8a1b6c38a9fcf42b65d564db7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a2eb2afe7deefae4f8302abed3e6765" id="r_ga8a2eb2afe7deefae4f8302abed3e6765"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga8a2eb2afe7deefae4f8302abed3e6765">rt_clk_array_disable_unprepare</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:ga8a2eb2afe7deefae4f8302abed3e6765"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable and unprepare clock array.  <br /></td></tr>
+<tr class="separator:ga8a2eb2afe7deefae4f8302abed3e6765"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeeec02c4570398839c7f59577cd5e62d" id="r_gaeeec02c4570398839c7f59577cd5e62d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaeeec02c4570398839c7f59577cd5e62d">rt_clk_set_rate_range</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> min, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> max)</td></tr>
+<tr class="memdesc:gaeeec02c4570398839c7f59577cd5e62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clock rate range.  <br /></td></tr>
+<tr class="separator:gaeeec02c4570398839c7f59577cd5e62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb0d93a9bf8c79663113ae0b49a268d2" id="r_gafb0d93a9bf8c79663113ae0b49a268d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gafb0d93a9bf8c79663113ae0b49a268d2">rt_clk_set_min_rate</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rate)</td></tr>
+<tr class="memdesc:gafb0d93a9bf8c79663113ae0b49a268d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set minimum clock rate.  <br /></td></tr>
+<tr class="separator:gafb0d93a9bf8c79663113ae0b49a268d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf63875b2766be38821cf3a5454d2678" id="r_gaaf63875b2766be38821cf3a5454d2678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaaf63875b2766be38821cf3a5454d2678">rt_clk_set_max_rate</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rate)</td></tr>
+<tr class="memdesc:gaaf63875b2766be38821cf3a5454d2678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set maximum clock rate.  <br /></td></tr>
+<tr class="separator:gaaf63875b2766be38821cf3a5454d2678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3521a3819b187c54c0c23384481a298b" id="r_ga3521a3819b187c54c0c23384481a298b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga3521a3819b187c54c0c23384481a298b">rt_clk_set_rate</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rate)</td></tr>
+<tr class="memdesc:ga3521a3819b187c54c0c23384481a298b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clock rate.  <br /></td></tr>
+<tr class="separator:ga3521a3819b187c54c0c23384481a298b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88f0cf5eae072ad4db4274ce99944b9a" id="r_ga88f0cf5eae072ad4db4274ce99944b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga88f0cf5eae072ad4db4274ce99944b9a">rt_clk_get_rate</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:ga88f0cf5eae072ad4db4274ce99944b9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock rate.  <br /></td></tr>
+<tr class="separator:ga88f0cf5eae072ad4db4274ce99944b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga418650a4ba813f55e08083646f21d402" id="r_ga418650a4ba813f55e08083646f21d402"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga418650a4ba813f55e08083646f21d402">rt_clk_set_phase</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, int degrees)</td></tr>
+<tr class="memdesc:ga418650a4ba813f55e08083646f21d402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clock phase.  <br /></td></tr>
+<tr class="separator:ga418650a4ba813f55e08083646f21d402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff96b675a324325539408c4657001b4d" id="r_gaff96b675a324325539408c4657001b4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaff96b675a324325539408c4657001b4d">rt_clk_get_phase</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:gaff96b675a324325539408c4657001b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock phase.  <br /></td></tr>
+<tr class="separator:gaff96b675a324325539408c4657001b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadaa6273e1302424e6cce6b62a25d97b9" id="r_gadaa6273e1302424e6cce6b62a25d97b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gadaa6273e1302424e6cce6b62a25d97b9">rt_clk_round_rate</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rate)</td></tr>
+<tr class="memdesc:gadaa6273e1302424e6cce6b62a25d97b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if clock rate is in the minimum to maximun and get it.  <br /></td></tr>
+<tr class="separator:gadaa6273e1302424e6cce6b62a25d97b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51a4581b804f16c1834dbddca1d34943" id="r_ga51a4581b804f16c1834dbddca1d34943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga51a4581b804f16c1834dbddca1d34943">rt_clk_set_parent</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk, struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk_parent)</td></tr>
+<tr class="memdesc:ga51a4581b804f16c1834dbddca1d34943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set clock parent object.  <br /></td></tr>
+<tr class="separator:ga51a4581b804f16c1834dbddca1d34943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae49fb9a4359b2906eeae994ad8e011ac" id="r_gae49fb9a4359b2906eeae994ad8e011ac"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gae49fb9a4359b2906eeae994ad8e011ac">rt_clk_get_parent</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:gae49fb9a4359b2906eeae994ad8e011ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get parent clock pointer.  <br /></td></tr>
+<tr class="separator:gae49fb9a4359b2906eeae994ad8e011ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga558ad135fe6145fb6ef8fc3ed9dba381" id="r_ga558ad135fe6145fb6ef8fc3ed9dba381"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga558ad135fe6145fb6ef8fc3ed9dba381">rt_clk_get_array</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *dev)</td></tr>
+<tr class="memdesc:ga558ad135fe6145fb6ef8fc3ed9dba381"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock array pointer from ofw device node.  <br /></td></tr>
+<tr class="separator:ga558ad135fe6145fb6ef8fc3ed9dba381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51b0f0e66934388822535bd27e1a7356" id="r_ga51b0f0e66934388822535bd27e1a7356"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga51b0f0e66934388822535bd27e1a7356">rt_clk_get_by_index</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *dev, int index)</td></tr>
+<tr class="memdesc:ga51b0f0e66934388822535bd27e1a7356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock pointer from ofw device node by index.  <br /></td></tr>
+<tr class="separator:ga51b0f0e66934388822535bd27e1a7356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3317605223dcc914666518cf1ae4749d" id="r_ga3317605223dcc914666518cf1ae4749d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga3317605223dcc914666518cf1ae4749d">rt_clk_get_by_name</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *dev, const char *name)</td></tr>
+<tr class="memdesc:ga3317605223dcc914666518cf1ae4749d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get clock pointer from ofw device node by name.  <br /></td></tr>
+<tr class="separator:ga3317605223dcc914666518cf1ae4749d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga613eaa122814b6b46ee22ddfac93dd4b" id="r_ga613eaa122814b6b46ee22ddfac93dd4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga613eaa122814b6b46ee22ddfac93dd4b">rt_clk_array_put</a> (struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *clk_arr)</td></tr>
+<tr class="memdesc:ga613eaa122814b6b46ee22ddfac93dd4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put reference count of all colock in the clock array.  <br /></td></tr>
+<tr class="separator:ga613eaa122814b6b46ee22ddfac93dd4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c0538d884772577d1d662d169ae77ee" id="r_ga5c0538d884772577d1d662d169ae77ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga5c0538d884772577d1d662d169ae77ee">rt_clk_put</a> (struct <a class="el" href="structrt__clk.html">rt_clk</a> *clk)</td></tr>
+<tr class="memdesc:ga5c0538d884772577d1d662d169ae77ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put reference count of clock.  <br /></td></tr>
+<tr class="separator:ga5c0538d884772577d1d662d169ae77ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa364979a87ce7b104bc6b0d5a0892536" id="r_gaa364979a87ce7b104bc6b0d5a0892536"><td class="memItemLeft" align="right" valign="top">rt_inline struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#gaa364979a87ce7b104bc6b0d5a0892536">rt_ofw_get_clk</a> (struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *np, int index)</td></tr>
+<tr class="separator:gaa364979a87ce7b104bc6b0d5a0892536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11516113d2f164e70d8bec3cc5c764c5" id="r_ga11516113d2f164e70d8bec3cc5c764c5"><td class="memItemLeft" align="right" valign="top">rt_inline struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga11516113d2f164e70d8bec3cc5c764c5">rt_ofw_get_clk_by_name</a> (struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *np, const char *name)</td></tr>
+<tr class="separator:ga11516113d2f164e70d8bec3cc5c764c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82fa8f131dc3d6cbad3afd1061258c04" id="r_ga82fa8f131dc3d6cbad3afd1061258c04"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__clk.html#ga82fa8f131dc3d6cbad3afd1061258c04">rt_ofw_count_of_clk</a> (struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *clk_ofw_np)</td></tr>
+<tr class="separator:ga82fa8f131dc3d6cbad3afd1061258c04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>clk driver api </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga2d5f21bfe809857ecc4dd3ecdba44f49" name="ga2d5f21bfe809857ecc4dd3ecdba44f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d5f21bfe809857ecc4dd3ecdba44f49">&#9670;&#160;</a></span>DBG_LVL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_LVL&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac4e2937b86d1338f765c02b4869648ca" name="gac4e2937b86d1338f765c02b4869648ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4e2937b86d1338f765c02b4869648ca">&#9670;&#160;</a></span>DBG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TAG&#160;&#160;&#160;&quot;rtdm.clk&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaabbf7b74677f9335561ac97553605d40" name="gaabbf7b74677f9335561ac97553605d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaabbf7b74677f9335561ac97553605d40">&#9670;&#160;</a></span>RT_CLK_MSG_ABORT_RATE_CHANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CLK_MSG_ABORT_RATE_CHANGE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad3c1726fd783a9ad34d266dfcff3cb7e" name="gad3c1726fd783a9ad34d266dfcff3cb7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3c1726fd783a9ad34d266dfcff3cb7e">&#9670;&#160;</a></span>RT_CLK_MSG_POST_RATE_CHANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CLK_MSG_POST_RATE_CHANGE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga445eec5c577e5af5045af1c237cda9cc" name="ga445eec5c577e5af5045af1c237cda9cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga445eec5c577e5af5045af1c237cda9cc">&#9670;&#160;</a></span>RT_CLK_MSG_PRE_RATE_CHANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CLK_MSG_PRE_RATE_CHANGE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga955eae8131f2473afb19dc95446d087a" name="ga955eae8131f2473afb19dc95446d087a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga955eae8131f2473afb19dc95446d087a">&#9670;&#160;</a></span>RT_CLK_NODE_OBJ_NAME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CLK_NODE_OBJ_NAME&#160;&#160;&#160;&quot;CLKNP&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="gac26afc0ee8e81cbc9d4e1af780ff165b" name="gac26afc0ee8e81cbc9d4e1af780ff165b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac26afc0ee8e81cbc9d4e1af780ff165b">&#9670;&#160;</a></span>rt_clk_notifier_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_clk_notifier_callback) (struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *notifier, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> msg, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> old_rate, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> new_rate)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga1957d7b62fcb148f491580a09613afb6" name="ga1957d7b62fcb148f491580a09613afb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1957d7b62fcb148f491580a09613afb6">&#9670;&#160;</a></span>clk_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> * clk_get </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td>
+          <td class="paramname"><em>clk_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase reference count for clock node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_np</td><td>point to clock node</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct <a class="el" href="structrt__clk__node.html" title="Clk node, it is a pat of clk source or controller.">rt_clk_node</a> * point to clock node whose reference count has increased </dd></dl>
+
+</div>
+</div>
+<a id="gaefe5aef56a74b5bb7da943384e005e6c" name="gaefe5aef56a74b5bb7da943384e005e6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaefe5aef56a74b5bb7da943384e005e6c">&#9670;&#160;</a></span>clk_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline void clk_put </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td>
+          <td class="paramname"><em>clk_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrease reference count for clock node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_np</td><td>point to clock node </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7e07a7098425302bc18a1f16075821f3" name="ga7e07a7098425302bc18a1f16075821f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e07a7098425302bc18a1f16075821f3">&#9670;&#160;</a></span>rt_clk_array_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_array_disable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable clock array for mutipule out clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga8a2eb2afe7deefae4f8302abed3e6765" name="ga8a2eb2afe7deefae4f8302abed3e6765"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a2eb2afe7deefae4f8302abed3e6765">&#9670;&#160;</a></span>rt_clk_array_disable_unprepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_array_disable_unprepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable and unprepare clock array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga164a4d083d0f687d73778bf98e13fa21" name="ga164a4d083d0f687d73778bf98e13fa21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga164a4d083d0f687d73778bf98e13fa21">&#9670;&#160;</a></span>rt_clk_array_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_array_enable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable clock array for mutipule out clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on Enable clock array sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="gabe67a7a6227dc2877da97573f85e77c1" name="gabe67a7a6227dc2877da97573f85e77c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe67a7a6227dc2877da97573f85e77c1">&#9670;&#160;</a></span>rt_clk_array_prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_array_prepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare clock array for mutipule out clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on prepare clock array sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga3100bb8a1b6c38a9fcf42b65d564db7c" name="ga3100bb8a1b6c38a9fcf42b65d564db7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3100bb8a1b6c38a9fcf42b65d564db7c">&#9670;&#160;</a></span>rt_clk_array_prepare_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_array_prepare_enable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare and enable clock array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on prepare and enable clock array sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga613eaa122814b6b46ee22ddfac93dd4b" name="ga613eaa122814b6b46ee22ddfac93dd4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga613eaa122814b6b46ee22ddfac93dd4b">&#9670;&#160;</a></span>rt_clk_array_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_array_put </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Put reference count of all colock in the clock array. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_arr</td><td>point to clock array </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gab70acb63a7ec8868d9ed923510fc6f04" name="gab70acb63a7ec8868d9ed923510fc6f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab70acb63a7ec8868d9ed923510fc6f04">&#9670;&#160;</a></span>rt_clk_array_unprepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_array_unprepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> *&#160;</td>
+          <td class="paramname"><em>clk_arr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga1e3d7eb8b3202dabf4da48e20be86436" name="ga1e3d7eb8b3202dabf4da48e20be86436"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e3d7eb8b3202dabf4da48e20be86436">&#9670;&#160;</a></span>rt_clk_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_disable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga2265834a3565c46411cb5d4567685eeb" name="ga2265834a3565c46411cb5d4567685eeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2265834a3565c46411cb5d4567685eeb">&#9670;&#160;</a></span>rt_clk_disable_unprepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_disable_unprepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Disable and unprepare clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae22365ec67fb1eed4340bb20c2628c06" name="gae22365ec67fb1eed4340bb20c2628c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae22365ec67fb1eed4340bb20c2628c06">&#9670;&#160;</a></span>rt_clk_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_enable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enable clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on enable clock sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga558ad135fe6145fb6ef8fc3ed9dba381" name="ga558ad135fe6145fb6ef8fc3ed9dba381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga558ad135fe6145fb6ef8fc3ed9dba381">&#9670;&#160;</a></span>rt_clk_get_array()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__clk__array.html">rt_clk_array</a> * rt_clk_get_array </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get clock array pointer from ofw device node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>point to dev</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct rt_clk_array* if use ofw and under normal circumstance, it will return clock array pointer and other value is RT_NULL </dd></dl>
+
+</div>
+</div>
+<a id="ga51b0f0e66934388822535bd27e1a7356" name="ga51b0f0e66934388822535bd27e1a7356"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51b0f0e66934388822535bd27e1a7356">&#9670;&#160;</a></span>rt_clk_get_by_index()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__clk.html">rt_clk</a> * rt_clk_get_by_index </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get clock pointer from ofw device node by index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>point to dev </td></tr>
+    <tr><td class="paramname">index</td><td>index of clock object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct rt_clk* if use ofw and under normal circumstance, it will return clock pointer and other value is RT_NULL </dd></dl>
+
+</div>
+</div>
+<a id="ga3317605223dcc914666518cf1ae4749d" name="ga3317605223dcc914666518cf1ae4749d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3317605223dcc914666518cf1ae4749d">&#9670;&#160;</a></span>rt_clk_get_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__clk.html">rt_clk</a> * rt_clk_get_by_name </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get clock pointer from ofw device node by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>point to dev </td></tr>
+    <tr><td class="paramname">name</td><td>name of clock object</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct rt_clk* if use ofw and under normal circumstance, it will return clock pointer and other value is RT_NULL </dd></dl>
+
+</div>
+</div>
+<a id="gae49fb9a4359b2906eeae994ad8e011ac" name="gae49fb9a4359b2906eeae994ad8e011ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae49fb9a4359b2906eeae994ad8e011ac">&#9670;&#160;</a></span>rt_clk_get_parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__clk.html">rt_clk</a> * rt_clk_get_parent </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get parent clock pointer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>child clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>struct rt_clk* parent clock object pointer will be return, unless child clock node havn't parent node instead return RT_NULL </dd></dl>
+
+</div>
+</div>
+<a id="gaff96b675a324325539408c4657001b4d" name="gaff96b675a324325539408c4657001b4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff96b675a324325539408c4657001b4d">&#9670;&#160;</a></span>rt_clk_get_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> rt_clk_get_phase </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get clock phase. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_base_t clock phase or error code </dd></dl>
+
+</div>
+</div>
+<a id="ga88f0cf5eae072ad4db4274ce99944b9a" name="ga88f0cf5eae072ad4db4274ce99944b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88f0cf5eae072ad4db4274ce99944b9a">&#9670;&#160;</a></span>rt_clk_get_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rt_clk_get_rate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get clock rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_ubase_t clock rate or error code </dd></dl>
+
+</div>
+</div>
+<a id="ga4c363555c3bd236fd3728184f0d05740" name="ga4c363555c3bd236fd3728184f0d05740"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c363555c3bd236fd3728184f0d05740">&#9670;&#160;</a></span>rt_clk_notifier_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_notifier_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *&#160;</td>
+          <td class="paramname"><em>notifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register clock notifier into notifier list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">notifier</td><td>point to notifier for register</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RT_EOK</td><td></td></tr>
+    <tr><td class="paramname">-RT_EINVAL</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga79f693d92530220801352fe6374734f8" name="ga79f693d92530220801352fe6374734f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79f693d92530220801352fe6374734f8">&#9670;&#160;</a></span>rt_clk_notifier_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_notifier_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__notifier.html">rt_clk_notifier</a> *&#160;</td>
+          <td class="paramname"><em>notifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregister clock notifier into notifier list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">notifier</td><td>point to notifier for unregister</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RT_EOK</td><td></td></tr>
+    <tr><td class="paramname">-RT_EINVAL</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga9548b61a8029dd41f5a4e3b0ebb5fd7b" name="ga9548b61a8029dd41f5a4e3b0ebb5fd7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9548b61a8029dd41f5a4e3b0ebb5fd7b">&#9670;&#160;</a></span>rt_clk_prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_prepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on prepare clock sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="gaf1f8d703ae888c54a167d450e8a4f8bd" name="gaf1f8d703ae888c54a167d450e8a4f8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1f8d703ae888c54a167d450e8a4f8bd">&#9670;&#160;</a></span>rt_clk_prepare_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_prepare_enable </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prepare and enable clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on prepare and enable clock sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga5c0538d884772577d1d662d169ae77ee" name="ga5c0538d884772577d1d662d169ae77ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c0538d884772577d1d662d169ae77ee">&#9670;&#160;</a></span>rt_clk_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_clk_put </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Put reference count of clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga637353dc3e74dc379f67fd3ced8c8d3e" name="ga637353dc3e74dc379f67fd3ced8c8d3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga637353dc3e74dc379f67fd3ced8c8d3e">&#9670;&#160;</a></span>rt_clk_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td>
+          <td class="paramname"><em>clk_np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td>
+          <td class="paramname"><em>parent_np</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register clock node into clock list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_np</td><td>point to child node that will be registered node. </td></tr>
+    <tr><td class="paramname">parent_np</td><td>point to parent <a class="el" href="structrt__clk.html" title="Clk object, it can be clk source or controller.">rt_clk</a>. If it is RT_NULL, clock node will be linked to init node.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RT_EOK</td><td></td></tr>
+    <tr><td class="paramname">-RT_ENOMEM</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gadaa6273e1302424e6cce6b62a25d97b9" name="gadaa6273e1302424e6cce6b62a25d97b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadaa6273e1302424e6cce6b62a25d97b9">&#9670;&#160;</a></span>rt_clk_round_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> rt_clk_round_rate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if clock rate is in the minimum to maximun and get it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">rate</td><td>rate will be checked</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_base_t get the correct rate </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>if parameter rate less than the minimum or more than maximum, the retrun rate will be set to minimum ormaximum value </dd></dl>
+
+</div>
+</div>
+<a id="gaaf63875b2766be38821cf3a5454d2678" name="gaaf63875b2766be38821cf3a5454d2678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf63875b2766be38821cf3a5454d2678">&#9670;&#160;</a></span>rt_clk_set_max_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_max_rate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set maximum clock rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">rate</td><td>maximum clock rate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set maximum clock rate sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="gafb0d93a9bf8c79663113ae0b49a268d2" name="gafb0d93a9bf8c79663113ae0b49a268d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb0d93a9bf8c79663113ae0b49a268d2">&#9670;&#160;</a></span>rt_clk_set_min_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_min_rate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set minimum clock rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">rate</td><td>miminum clock rate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set minimum clock rate sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga51a4581b804f16c1834dbddca1d34943" name="ga51a4581b804f16c1834dbddca1d34943"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51a4581b804f16c1834dbddca1d34943">&#9670;&#160;</a></span>rt_clk_set_parent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_parent </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk_parent</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set clock parent object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">clk_parent</td><td>point to parent clock</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set clock parent sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga418650a4ba813f55e08083646f21d402" name="ga418650a4ba813f55e08083646f21d402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga418650a4ba813f55e08083646f21d402">&#9670;&#160;</a></span>rt_clk_set_phase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_phase </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>degrees</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set clock phase. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">degrees</td><td>target phase and the unit of phase is degree</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set clock phase sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga3521a3819b187c54c0c23384481a298b" name="ga3521a3819b187c54c0c23384481a298b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3521a3819b187c54c0c23384481a298b">&#9670;&#160;</a></span>rt_clk_set_rate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_rate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>rate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set clock rate. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">rate</td><td>target rate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set clock rate sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="gaeeec02c4570398839c7f59577cd5e62d" name="gaeeec02c4570398839c7f59577cd5e62d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeeec02c4570398839c7f59577cd5e62d">&#9670;&#160;</a></span>rt_clk_set_rate_range()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_set_rate_range </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set clock rate range. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk</td><td>point to clock </td></tr>
+    <tr><td class="paramname">min</td><td>minimum clock rate </td></tr>
+    <tr><td class="paramname">max</td><td>minimum clock rate</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t RT_EOK on set clock rate range sucessfully, and other value is failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga195dd2f6157802aab26488219927299b" name="ga195dd2f6157802aab26488219927299b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga195dd2f6157802aab26488219927299b">&#9670;&#160;</a></span>rt_clk_unprepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_unprepare </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk.html">rt_clk</a> *&#160;</td>
+          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga68734db2f14b7e4dbaf9fce89e827032" name="ga68734db2f14b7e4dbaf9fce89e827032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68734db2f14b7e4dbaf9fce89e827032">&#9670;&#160;</a></span>rt_clk_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_clk_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__clk__node.html">rt_clk_node</a> *&#160;</td>
+          <td class="paramname"><em>clk_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unregister clock node from clock list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">clk_np</td><td>point to child node that will be Unregistered node.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RT_EOK</td><td></td></tr>
+    <tr><td class="paramname">-RT_EBUSY</td><td></td></tr>
+    <tr><td class="paramname">-RT_EINVAL</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga82fa8f131dc3d6cbad3afd1061258c04" name="ga82fa8f131dc3d6cbad3afd1061258c04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82fa8f131dc3d6cbad3afd1061258c04">&#9670;&#160;</a></span>rt_ofw_count_of_clk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> rt_ofw_count_of_clk </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *&#160;</td>
+          <td class="paramname"><em>clk_ofw_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa364979a87ce7b104bc6b0d5a0892536" name="gaa364979a87ce7b104bc6b0d5a0892536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa364979a87ce7b104bc6b0d5a0892536">&#9670;&#160;</a></span>rt_ofw_get_clk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline struct <a class="el" href="structrt__clk.html">rt_clk</a> * rt_ofw_get_clk </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *&#160;</td>
+          <td class="paramname"><em>np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga11516113d2f164e70d8bec3cc5c764c5" name="ga11516113d2f164e70d8bec3cc5c764c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11516113d2f164e70d8bec3cc5c764c5">&#9670;&#160;</a></span>rt_ofw_get_clk_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline struct <a class="el" href="structrt__clk.html">rt_clk</a> * rt_ofw_get_clk_by_name </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__ofw__node.html">rt_ofw_node</a> *&#160;</td>
+          <td class="paramname"><em>np</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,644 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/dfs/dfs_v2/include/dfs_dentry.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dfs__dentry_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dfs_dentry.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dfs__file_8h_source.html">dfs_file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dfs__fs_8h_source.html">dfs_fs.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dfs_dentry.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dfs__dentry_8h__incl.png" border="0" usemap="#acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8h" alt=""/></div>
+<map name="acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8h" id="acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8h">
+<area shape="rect" title=" " alt="" coords="579,5,757,45"/>
+<area shape="rect" href="dfs__file_8h.html" title=" " alt="" coords="589,93,670,119"/>
+<area shape="poly" title=" " alt="" coords="661,47,644,82,639,80,656,44"/>
+<area shape="rect" href="dfs__fs_8h.html" title=" " alt="" coords="630,167,703,192"/>
+<area shape="poly" title=" " alt="" coords="677,45,684,79,685,119,677,154,672,153,680,118,679,80,672,46"/>
+<area shape="rect" href="dfs_8h.html" title=" " alt="" coords="602,240,657,265"/>
+<area shape="poly" title=" " alt="" coords="629,119,623,152,621,192,626,226,621,227,616,192,617,151,624,118"/>
+<area shape="poly" title=" " alt="" coords="631,118,649,154,644,157,626,120"/>
+<area shape="rect" title=" " alt="" coords="5,321,72,346"/>
+<area shape="poly" title=" " alt="" coords="602,257,515,261,388,271,241,288,91,316,81,319,79,314,90,311,240,283,388,266,515,256,601,252"/>
+<area shape="rect" title=" " alt="" coords="463,988,534,1013"/>
+<area shape="poly" title=" " alt="" coords="601,256,499,256,359,262,289,270,225,280,172,296,136,315,119,336,112,358,112,413,112,855,114,868,122,879,149,902,191,923,241,941,353,971,450,989,449,994,352,976,240,947,188,928,146,907,118,883,110,869,107,856,107,413,107,357,114,334,133,311,170,291,223,275,288,264,359,257,499,251,601,251"/>
+<area shape="rect" title=" " alt="" coords="147,321,218,346"/>
+<area shape="poly" title=" " alt="" coords="602,259,443,275,337,292,230,316,221,319,220,313,229,311,336,287,442,270,601,253"/>
+<area shape="rect" title=" " alt="" coords="242,321,313,346"/>
+<area shape="poly" title=" " alt="" coords="602,260,481,280,403,296,325,316,317,318,315,313,323,311,402,291,480,274,602,255"/>
+<area shape="rect" title=" " alt="" coords="337,313,525,353"/>
+<area shape="poly" title=" " alt="" coords="603,267,492,311,490,306,601,262"/>
+<area shape="rect" title=" " alt="" coords="549,321,611,346"/>
+<area shape="poly" title=" " alt="" coords="624,267,597,310,592,308,620,264"/>
+<area shape="rect" title=" " alt="" coords="636,321,721,346"/>
+<area shape="poly" title=" " alt="" coords="639,264,666,308,662,310,634,267"/>
+<area shape="rect" title=" " alt="" coords="746,321,843,346"/>
+<area shape="poly" title=" " alt="" coords="655,263,759,312,757,317,652,268"/>
+<area shape="rect" title=" " alt="" coords="868,321,959,346"/>
+<area shape="poly" title=" " alt="" coords="657,258,857,311,867,314,866,319,855,316,656,263"/>
+<area shape="rect" title=" " alt="" coords="906,988,1001,1013"/>
+<area shape="poly" title=" " alt="" coords="657,252,731,257,824,267,913,284,948,296,972,311,991,334,999,357,999,413,999,855,996,889,988,922,968,976,963,974,983,920,990,888,993,855,993,413,993,358,986,337,969,315,946,301,912,289,824,272,730,262,657,258"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="1381,621,1470,647"/>
+<area shape="poly" title=" " alt="" coords="657,251,723,253,813,261,916,279,967,293,1016,311,1080,343,1142,381,1201,422,1255,466,1347,548,1407,609,1403,613,1343,552,1252,470,1198,427,1139,385,1077,347,1014,316,965,298,914,284,813,266,722,258,657,256"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1953,321,2039,346"/>
+<area shape="poly" title=" " alt="" coords="657,253,1939,326,1939,331,657,258"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="1410,695,1473,720"/>
+<area shape="poly" title=" " alt="" coords="1431,646,1438,681,1433,682,1425,648"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="1891,768,1955,793"/>
+<area shape="poly" title=" " alt="" coords="1473,714,1492,717,1708,751,1877,772,1877,777,1707,756,1492,723,1472,719"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="1841,841,1924,867"/>
+<area shape="poly" title=" " alt="" coords="1918,795,1898,831,1894,828,1914,792"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="1077,915,1157,940"/>
+<area shape="poly" title=" " alt="" coords="1891,790,1171,919,1170,914,1890,785"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="1911,915,2011,940"/>
+<area shape="poly" title=" " alt="" coords="1928,793,1957,901,1952,902,1923,794"/>
+<area shape="rect" title=" " alt="" coords="1233,841,1343,867"/>
+<area shape="poly" title=" " alt="" coords="1891,788,1670,809,1363,844,1357,845,1356,839,1362,839,1669,804,1890,782"/>
+<area shape="poly" title=" " alt="" coords="1841,862,1172,924,1171,918,1841,857"/>
+<area shape="poly" title=" " alt="" coords="1897,865,1940,904,1937,907,1894,869"/>
+<area shape="poly" title=" " alt="" coords="1078,936,548,996,547,991,1077,931"/>
+<area shape="poly" title=" " alt="" coords="1092,942,994,985,991,980,1090,938"/>
+<area shape="rect" title=" " alt="" coords="2423,988,2505,1013"/>
+<area shape="poly" title=" " alt="" coords="1158,935,1176,937,1358,956,1544,971,1903,988,2207,996,2408,997,2408,1002,2207,1001,1903,994,1543,976,1358,961,1176,943,1157,940"/>
+<area shape="rect" title=" " alt="" coords="1367,988,1441,1013"/>
+<area shape="poly" title=" " alt="" coords="1158,936,1354,984,1353,989,1157,941"/>
+<area shape="rect" title=" " alt="" coords="1025,988,1100,1013"/>
+<area shape="poly" title=" " alt="" coords="1110,942,1082,979,1078,976,1106,939"/>
+<area shape="rect" title=" " alt="" coords="1124,988,1220,1013"/>
+<area shape="poly" title=" " alt="" coords="1128,939,1157,976,1153,979,1124,942"/>
+<area shape="rect" title=" " alt="" coords="1244,988,1343,1013"/>
+<area shape="poly" title=" " alt="" coords="1147,938,1253,980,1251,985,1145,942"/>
+<area shape="poly" title=" " alt="" coords="2012,933,2409,989,2408,994,2011,938"/>
+<area shape="poly" title=" " alt="" coords="1999,346,2005,412,2012,456,2024,499,2038,522,2046,532,2052,547,2054,561,2052,574,2042,618,2031,652,2015,684,1990,722,1972,743,1951,761,1948,757,1968,739,1986,718,2011,681,2026,650,2037,617,2047,573,2049,561,2047,549,2041,535,2034,525,2019,501,2007,457,1999,413,1994,346"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="1582,548,1669,573"/>
+<area shape="poly" title=" " alt="" coords="1953,336,1869,341,1819,348,1766,360,1714,377,1665,402,1622,435,1588,476,1583,491,1586,506,1606,537,1601,540,1581,508,1578,491,1583,473,1618,431,1662,398,1712,373,1764,355,1818,343,1869,335,1952,331"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="1183,695,1335,720"/>
+<area shape="poly" title=" " alt="" coords="1953,339,1635,360,1455,379,1381,390,1326,404,1273,416,1227,427,1209,435,1195,446,1186,463,1183,486,1183,562,1188,605,1208,645,1238,683,1233,687,1203,648,1183,607,1177,562,1177,486,1181,461,1191,443,1206,430,1225,422,1272,411,1325,399,1380,385,1454,373,1634,354,1952,334"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="1217,621,1356,647"/>
+<area shape="poly" title=" " alt="" coords="1953,339,1808,346,1619,359,1447,378,1387,390,1355,404,1335,425,1319,450,1307,478,1298,506,1290,563,1288,608,1283,608,1284,562,1293,505,1302,476,1314,447,1330,422,1352,399,1386,385,1447,373,1619,354,1807,341,1952,334"/>
+<area shape="rect" href="block_8h.html" title=" " alt="" coords="1867,548,2037,573"/>
+<area shape="poly" title=" " alt="" coords="1995,347,1980,402,1958,535,1952,534,1975,401,1990,346"/>
+<area shape="rect" href="char_8h.html" title=" " alt="" coords="2033,475,2196,500"/>
+<area shape="poly" title=" " alt="" coords="2007,344,2099,462,2095,465,2003,348"/>
+<area shape="rect" href="graphic_8h.html" title=" " alt="" coords="2315,548,2498,573"/>
+<area shape="poly" title=" " alt="" coords="2040,336,2195,358,2273,376,2303,387,2326,399,2356,430,2378,466,2394,503,2403,534,2398,536,2389,505,2373,469,2351,433,2322,403,2301,392,2271,381,2194,363,2039,342"/>
+<area shape="rect" href="mtd_8h.html" title=" " alt="" coords="2150,401,2311,427"/>
+<area shape="poly" title=" " alt="" coords="2031,343,2185,395,2183,400,2029,349"/>
+<area shape="rect" href="net_8h.html" title=" " alt="" coords="1365,401,1521,427"/>
+<area shape="poly" title=" " alt="" coords="1953,343,1535,402,1534,397,1952,338"/>
+<area shape="rect" href="ringbuffer_8h.html" title=" " alt="" coords="1729,475,1847,500"/>
+<area shape="poly" title=" " alt="" coords="1953,341,1918,348,1881,360,1844,378,1813,403,1797,431,1791,461,1786,460,1792,429,1809,400,1841,373,1879,355,1917,343,1952,336"/>
+<area shape="rect" href="completion_8h.html" title=" " alt="" coords="2540,695,2671,720"/>
+<area shape="poly" title=" " alt="" coords="2039,332,2205,338,2312,346,2422,358,2524,377,2610,404,2644,420,2670,439,2686,461,2692,486,2692,562,2687,607,2666,648,2650,669,2632,688,2629,684,2646,666,2662,645,2682,606,2687,562,2687,486,2681,463,2666,443,2641,425,2608,409,2523,382,2421,364,2311,351,2205,343,2039,337"/>
+<area shape="rect" href="dataqueue_8h.html" title=" " alt="" coords="3006,695,3133,720"/>
+<area shape="poly" title=" " alt="" coords="2039,331,2166,332,2350,340,2562,361,2671,377,2776,399,2814,405,2851,407,2920,412,2949,418,2972,431,2987,453,2992,486,2992,562,2998,597,3012,630,3031,659,3050,683,3046,686,3027,663,3008,633,2993,599,2987,562,2987,486,2982,455,2968,435,2947,423,2920,417,2851,413,2813,410,2776,404,2670,382,2561,366,2349,346,2166,338,2039,337"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="2522,621,2651,647"/>
+<area shape="poly" title=" " alt="" coords="2040,334,2168,342,2331,355,2477,374,2528,386,2556,399,2575,423,2588,449,2596,478,2600,507,2600,563,2595,608,2589,607,2595,563,2595,507,2591,479,2583,451,2570,425,2553,403,2526,391,2476,380,2330,361,2168,347,2039,340"/>
+<area shape="rect" href="condvar_8h.html" title=" " alt="" coords="1597,475,1705,500"/>
+<area shape="poly" title=" " alt="" coords="1953,348,1877,371,1792,404,1730,437,1679,469,1676,465,1728,432,1790,399,1875,366,1952,343"/>
+<area shape="rect" href="waitqueue_8h.html" title=" " alt="" coords="2340,695,2465,720"/>
+<area shape="poly" title=" " alt="" coords="2040,332,2104,336,2185,346,2272,366,2315,381,2356,399,2411,428,2452,456,2484,493,2513,547,2518,568,2517,589,2509,610,2497,629,2466,663,2434,689,2431,685,2463,659,2493,626,2504,607,2511,588,2513,569,2508,549,2480,496,2449,460,2408,432,2354,404,2313,386,2270,371,2184,352,2103,341,2039,338"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1823,401,1908,427"/>
+<area shape="poly" title=" " alt="" coords="1978,348,1898,396,1895,392,1975,344"/>
+<area shape="rect" href="poll_8h.html" title=" " alt="" coords="2695,695,2777,720"/>
+<area shape="poly" title=" " alt="" coords="2040,332,2217,335,2332,341,2450,353,2561,372,2654,399,2690,416,2718,436,2736,459,2743,486,2743,562,2740,681,2734,681,2737,562,2737,486,2731,462,2715,440,2688,421,2652,404,2560,377,2449,359,2331,347,2216,340,2040,337"/>
+<area shape="rect" href="ringblk__buf_8h.html" title=" " alt="" coords="2853,695,2982,720"/>
+<area shape="poly" title=" " alt="" coords="2040,334,2373,354,2563,373,2642,385,2701,399,2757,411,2807,420,2828,428,2844,441,2855,460,2859,486,2859,562,2863,596,2874,629,2903,682,2899,685,2869,631,2858,597,2853,562,2853,486,2850,462,2840,444,2825,433,2806,425,2756,416,2699,404,2641,391,2563,379,2373,360,2040,339"/>
+<area shape="poly" title=" " alt="" coords="1594,576,1472,619,1470,614,1592,571"/>
+<area shape="poly" title=" " alt="" coords="1615,575,1601,590,1589,608,1583,627,1588,645,1615,679,1649,706,1687,727,1727,744,1809,765,1877,775,1877,780,1808,771,1726,749,1685,732,1646,710,1611,682,1583,648,1578,627,1584,606,1597,587,1611,572"/>
+<area shape="poly" title=" " alt="" coords="1582,565,1446,571,1364,579,1285,592,1218,612,1191,624,1171,639,1158,655,1154,673,1158,694,1173,718,1194,740,1216,753,1238,758,1262,759,1315,757,1345,759,1378,765,1526,813,1638,857,1751,898,1819,918,1901,937,2043,962,2186,979,2409,995,2409,1000,2185,985,2042,968,1899,943,1818,923,1750,903,1636,862,1524,818,1377,771,1344,764,1315,763,1262,765,1237,764,1214,758,1191,744,1169,722,1153,696,1148,673,1154,653,1168,635,1189,620,1216,607,1284,587,1363,573,1445,565,1582,559"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="1679,621,1769,647"/>
+<area shape="poly" title=" " alt="" coords="1643,571,1698,611,1695,615,1640,576"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="1597,621,1654,647"/>
+<area shape="poly" title=" " alt="" coords="1621,574,1619,608,1614,608,1616,574"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="1033,695,1108,720"/>
+<area shape="poly" title=" " alt="" coords="1582,564,1473,566,1333,574,1264,581,1201,592,1149,606,1112,624,1100,636,1090,650,1078,682,1073,680,1085,648,1096,632,1109,619,1147,601,1200,587,1263,576,1333,569,1472,561,1582,559"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="1794,621,1859,647"/>
+<area shape="poly" title=" " alt="" coords="1659,571,1782,614,1780,619,1657,576"/>
+<area shape="poly" title=" " alt="" coords="1741,645,1897,757,1894,762,1738,649"/>
+<area shape="poly" title=" " alt="" coords="1650,644,1888,760,1886,764,1648,649"/>
+<area shape="poly" title=" " alt="" coords="1630,621,1631,587,1637,587,1635,621"/>
+<area shape="poly" title=" " alt="" coords="1108,711,1171,717,1580,752,1877,774,1877,779,1580,757,1170,723,1108,716"/>
+<area shape="poly" title=" " alt="" coords="1072,720,1073,755,1077,774,1086,792,1120,834,1154,864,1189,886,1226,901,1309,919,1414,937,1504,952,1624,963,1912,981,2200,991,2408,996,2408,1001,2200,996,1912,986,1623,969,1503,957,1413,943,1308,924,1224,906,1187,891,1151,869,1116,838,1082,795,1072,776,1068,755,1067,720"/>
+<area shape="poly" title=" " alt="" coords="1109,714,1358,766,1364,785,1357,804,1341,822,1322,836,1319,832,1337,818,1352,802,1359,785,1354,770,1108,719"/>
+<area shape="rect" title=" " alt="" coords="1229,768,1344,793"/>
+<area shape="poly" title=" " alt="" coords="1106,717,1240,761,1238,766,1105,723"/>
+<area shape="rect" title=" " alt="" coords="1096,768,1205,793"/>
+<area shape="poly" title=" " alt="" coords="1085,718,1129,757,1126,761,1082,722"/>
+<area shape="poly" title=" " alt="" coords="1836,646,1881,719,1908,755,1903,759,1876,721,1831,648"/>
+<area shape="poly" title=" " alt="" coords="1335,715,1354,717,1877,772,1876,777,1353,723,1335,721"/>
+<area shape="poly" title=" " alt="" coords="1313,644,1405,686,1403,691,1310,649"/>
+<area shape="poly" title=" " alt="" coords="1300,645,1341,682,1369,702,1400,718,1440,730,1495,740,1629,757,1877,775,1877,780,1628,762,1494,745,1439,735,1398,722,1366,706,1338,686,1296,649"/>
+<area shape="poly" title=" " alt="" coords="1285,648,1271,683,1266,681,1280,646"/>
+<area shape="poly" title=" " alt="" coords="1959,573,1974,637,1976,679,1969,721,1959,742,1946,759,1942,756,1955,739,1964,719,1971,679,1969,637,1954,574"/>
+<area shape="poly" title=" " alt="" coords="2119,500,2120,541,2117,599,2102,663,2088,694,2070,722,2048,742,2022,757,1969,775,1968,770,2020,752,2045,738,2066,718,2084,691,2097,662,2111,598,2115,541,2113,500"/>
+<area shape="poly" title=" " alt="" coords="2399,575,2330,645,2279,687,2221,722,2155,748,2086,765,2022,775,1968,780,1968,775,2021,770,2085,759,2153,743,2219,718,2276,683,2327,642,2395,572"/>
+<area shape="poly" title=" " alt="" coords="2240,426,2254,459,2257,480,2255,501,2228,574,2197,628,2156,673,2095,722,2064,741,2031,756,1969,774,1967,769,2030,751,2062,736,2092,718,2152,669,2193,624,2223,572,2249,499,2252,480,2249,461,2235,428"/>
+<area shape="poly" title=" " alt="" coords="1448,426,1466,481,1500,562,1524,606,1553,648,1587,686,1627,718,1657,735,1689,748,1757,767,1822,775,1877,778,1877,783,1822,781,1756,772,1688,753,1655,740,1624,722,1584,690,1549,651,1520,608,1495,564,1461,483,1443,428"/>
+<area shape="poly" title=" " alt="" coords="1791,500,1797,534,1813,572,1827,587,1842,595,1858,604,1874,620,1893,654,1907,690,1922,754,1917,755,1902,692,1888,656,1870,623,1855,608,1840,600,1824,591,1808,575,1792,535,1786,500"/>
+<area shape="poly" title=" " alt="" coords="1848,493,1963,513,2015,528,2051,546,2104,597,2122,622,2135,647,2144,675,2150,706,2153,779,2153,855,2155,875,2160,892,2180,922,2210,946,2247,964,2288,978,2331,987,2409,995,2408,1001,2330,992,2287,983,2245,969,2207,951,2176,926,2156,895,2150,876,2148,855,2148,779,2144,706,2139,676,2130,649,2117,624,2100,600,2048,550,2014,533,1962,519,1847,499"/>
+<area shape="poly" title=" " alt="" coords="1763,502,1666,545,1663,540,1761,498"/>
+<area shape="poly" title=" " alt="" coords="2540,718,1968,777,1968,772,2540,713"/>
+<area shape="poly" title=" " alt="" coords="2606,721,2580,815,2556,879,2524,941,2490,980,2486,977,2519,939,2551,877,2575,813,2600,719"/>
+<area shape="poly" title=" " alt="" coords="3006,721,2995,723,2688,749,2389,766,1969,781,1968,776,2389,761,2688,743,2994,717,3006,716"/>
+<area shape="poly" title=" " alt="" coords="3065,722,3039,765,2995,826,2936,890,2901,919,2864,942,2836,954,2798,964,2705,980,2520,998,2519,993,2704,974,2797,958,2834,949,2861,938,2898,914,2932,886,2991,822,3035,762,3061,719"/>
+<area shape="poly" title=" " alt="" coords="2523,649,2430,669,2329,697,2301,710,2272,723,2189,744,2106,760,1969,778,1968,773,2105,754,2188,738,2270,717,2298,705,2327,692,2429,664,2521,644"/>
+<area shape="poly" title=" " alt="" coords="2652,636,2687,642,2724,653,2760,669,2791,693,2807,713,2815,732,2817,779,2817,855,2815,878,2808,899,2798,917,2784,933,2749,959,2705,977,2657,990,2608,998,2520,1003,2519,998,2607,992,2656,985,2703,972,2746,954,2781,929,2794,914,2804,897,2810,877,2812,855,2812,779,2810,733,2803,715,2787,697,2757,674,2722,658,2686,647,2651,641"/>
+<area shape="poly" title=" " alt="" coords="2592,646,2601,681,2596,682,2587,648"/>
+<area shape="poly" title=" " alt="" coords="1649,501,1636,536,1631,534,1644,499"/>
+<area shape="poly" title=" " alt="" coords="2340,721,1969,775,1968,770,2340,715"/>
+<area shape="poly" title=" " alt="" coords="2408,720,2461,974,2456,975,2402,721"/>
+<area shape="poly" title=" " alt="" coords="1867,427,1863,500,1857,548,1856,561,1857,572,1866,587,1876,596,1888,605,1900,620,1919,655,1929,694,1932,725,1930,754,1924,754,1926,725,1924,695,1914,657,1895,623,1884,609,1872,600,1861,590,1852,574,1850,561,1852,548,1857,500,1862,427"/>
+<area shape="poly" title=" " alt="" coords="1908,412,1970,414,2047,423,2130,441,2171,455,2209,472,2241,495,2261,518,2279,544,2306,571,2355,605,2398,626,2439,650,2459,668,2479,693,2493,715,2501,734,2505,779,2505,855,2503,889,2496,922,2477,976,2472,974,2490,920,2497,888,2500,855,2500,779,2496,735,2489,717,2475,696,2455,672,2436,654,2396,631,2352,610,2302,575,2275,547,2257,521,2237,499,2207,477,2169,460,2128,446,2046,428,1969,419,1908,417"/>
+<area shape="poly" title=" " alt="" coords="1832,429,1699,473,1698,468,1830,424"/>
+<area shape="poly" title=" " alt="" coords="2696,721,2683,723,2474,748,2269,765,1968,781,1968,775,2269,759,2474,742,2682,717,2695,715"/>
+<area shape="poly" title=" " alt="" coords="2730,722,2660,817,2606,880,2547,942,2496,982,2492,978,2544,938,2602,877,2656,813,2726,719"/>
+<area shape="poly" title=" " alt="" coords="2852,717,2790,723,2310,757,1969,779,1968,774,2309,752,2789,717,2852,712"/>
+<area shape="poly" title=" " alt="" coords="2920,720,2916,763,2904,823,2893,856,2878,888,2859,917,2835,942,2811,956,2778,967,2693,984,2600,994,2519,1000,2519,995,2600,989,2692,979,2777,962,2809,951,2832,938,2855,914,2874,885,2888,854,2898,822,2911,762,2914,720"/>
+<area shape="poly" title=" " alt="" coords="665,168,647,131,652,129,670,165"/>
+<area shape="poly" title=" " alt="" coords="663,194,644,229,639,227,658,191"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="dfs__dentry_8h__dep__incl.png" border="0" usemap="#acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8hdep" alt=""/></div>
+<map name="acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8hdep" id="acomponents_2dfs_2dfs__v2_2include_2dfs__dentry_8hdep">
+<area shape="rect" title=" " alt="" coords="719,5,898,45"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="5,93,156,133"/>
+<area shape="poly" title=" " alt="" coords="706,37,460,59,314,75,168,96,157,98,156,93,167,91,313,70,459,53,705,31"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="180,93,331,133"/>
+<area shape="poly" title=" " alt="" coords="706,42,535,65,342,96,331,98,330,93,342,91,534,60,705,37"/>
+<area shape="rect" href="dfs__file_8c.html" title=" " alt="" coords="355,93,505,133"/>
+<area shape="poly" title=" " alt="" coords="713,51,506,98,505,92,712,46"/>
+<area shape="rect" href="dfs__file__mmap_8c.html" title=" " alt="" coords="530,93,709,133"/>
+<area shape="poly" title=" " alt="" coords="756,53,662,96,660,91,754,49"/>
+<area shape="rect" href="dfs__fs_8c.html" title=" " alt="" coords="733,93,884,133"/>
+<area shape="poly" title=" " alt="" coords="811,59,811,93,806,93,806,59"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="908,93,1059,133"/>
+<area shape="poly" title=" " alt="" coords="860,49,946,91,944,96,858,54"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="1083,93,1239,133"/>
+<area shape="poly" title=" " alt="" coords="900,46,1084,91,1083,96,898,51"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="1263,93,1413,133"/>
+<area shape="poly" title=" " alt="" coords="912,38,1072,61,1252,91,1263,93,1262,98,1251,96,1071,66,911,43"/>
+<area shape="rect" href="dfs__seq__file_8c.html" title=" " alt="" coords="1438,93,1598,133"/>
+<area shape="poly" title=" " alt="" coords="912,32,1148,55,1426,91,1438,93,1437,98,1426,96,1147,60,912,38"/>
+</map>
+</div>
+</div>
+<p><a href="dfs__dentry_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__dentry.html">dfs_dentry</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:acff01a09b928bc11c1c5c66b34af658c" id="r_acff01a09b928bc11c1c5c66b34af658c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#acff01a09b928bc11c1c5c66b34af658c">DENTRY_IS_MOUNTED</a>&#160;&#160;&#160;0x1 /* dentry is mounted */</td></tr>
+<tr class="separator:acff01a09b928bc11c1c5c66b34af658c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5976f6b0a551d4d1ed1831e87973ecb" id="r_ac5976f6b0a551d4d1ed1831e87973ecb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#ac5976f6b0a551d4d1ed1831e87973ecb">DENTRY_IS_ALLOCED</a>&#160;&#160;&#160;0x2 /* dentry is allocated */</td></tr>
+<tr class="separator:ac5976f6b0a551d4d1ed1831e87973ecb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c1d05c81cab09fcc14b69bff10b5b33" id="r_a7c1d05c81cab09fcc14b69bff10b5b33"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a7c1d05c81cab09fcc14b69bff10b5b33">DENTRY_IS_ADDHASH</a>&#160;&#160;&#160;0x4 /* dentry was added into hash table */</td></tr>
+<tr class="separator:a7c1d05c81cab09fcc14b69bff10b5b33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23033b92d28cb455901393ed684a9963" id="r_a23033b92d28cb455901393ed684a9963"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a23033b92d28cb455901393ed684a9963">DENTRY_IS_OPENED</a>&#160;&#160;&#160;0x8 /* dentry was opened. */</td></tr>
+<tr class="separator:a23033b92d28cb455901393ed684a9963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a001b4d63199dfd05cadc60771a124d83" id="r_a001b4d63199dfd05cadc60771a124d83"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a001b4d63199dfd05cadc60771a124d83">dfs_dentry_create</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, char *fullpath)</td></tr>
+<tr class="separator:a001b4d63199dfd05cadc60771a124d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a849e04a4c1953f3c9b524b12deff83b3" id="r_a849e04a4c1953f3c9b524b12deff83b3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a849e04a4c1953f3c9b524b12deff83b3">dfs_dentry_create_rela</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, char *rela_path)</td></tr>
+<tr class="separator:a849e04a4c1953f3c9b524b12deff83b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4024c30ce476ac021fdefb781c5012" id="r_a5d4024c30ce476ac021fdefb781c5012"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a5d4024c30ce476ac021fdefb781c5012">dfs_dentry_unref</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:a5d4024c30ce476ac021fdefb781c5012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1ced12b8ce8ae2f70e905692c48a6f1" id="r_ad1ced12b8ce8ae2f70e905692c48a6f1"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#ad1ced12b8ce8ae2f70e905692c48a6f1">dfs_dentry_ref</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:ad1ced12b8ce8ae2f70e905692c48a6f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72ff954fa582246b539cfc09eb346b58" id="r_a72ff954fa582246b539cfc09eb346b58"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a72ff954fa582246b539cfc09eb346b58">dfs_dentry_insert</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:a72ff954fa582246b539cfc09eb346b58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005c541c8afd1c7b52682369015adc5f" id="r_a005c541c8afd1c7b52682369015adc5f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a005c541c8afd1c7b52682369015adc5f">dfs_dentry_lookup</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, const char *path, uint32_t flags)</td></tr>
+<tr class="separator:a005c541c8afd1c7b52682369015adc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67c4bc328d888ba2c4fdcafa6fe733fc" id="r_a67c4bc328d888ba2c4fdcafa6fe733fc"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a67c4bc328d888ba2c4fdcafa6fe733fc">dfs_dentry_full_path</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:a67c4bc328d888ba2c4fdcafa6fe733fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa834b5a739f5b2cbd3547d99134f04eb" id="r_aa834b5a739f5b2cbd3547d99134f04eb"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#aa834b5a739f5b2cbd3547d99134f04eb">dfs_dentry_pathname</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:aa834b5a739f5b2cbd3547d99134f04eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d4ca666d1f50debde1df321e8503464" id="r_a5d4ca666d1f50debde1df321e8503464"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a5d4ca666d1f50debde1df321e8503464">dfs_dentry_full_path_crc32</a> (struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *dentry)</td></tr>
+<tr class="separator:a5d4ca666d1f50debde1df321e8503464"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a070f7646e619d7a05a50e43080e1677a" id="r_a070f7646e619d7a05a50e43080e1677a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__dentry_8h.html#a070f7646e619d7a05a50e43080e1677a">dfs_dentry_init</a> (void)</td></tr>
+<tr class="separator:a070f7646e619d7a05a50e43080e1677a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7c1d05c81cab09fcc14b69bff10b5b33" name="a7c1d05c81cab09fcc14b69bff10b5b33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1d05c81cab09fcc14b69bff10b5b33">&#9670;&#160;</a></span>DENTRY_IS_ADDHASH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DENTRY_IS_ADDHASH&#160;&#160;&#160;0x4 /* dentry was added into hash table */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5976f6b0a551d4d1ed1831e87973ecb" name="ac5976f6b0a551d4d1ed1831e87973ecb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5976f6b0a551d4d1ed1831e87973ecb">&#9670;&#160;</a></span>DENTRY_IS_ALLOCED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DENTRY_IS_ALLOCED&#160;&#160;&#160;0x2 /* dentry is allocated */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acff01a09b928bc11c1c5c66b34af658c" name="acff01a09b928bc11c1c5c66b34af658c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff01a09b928bc11c1c5c66b34af658c">&#9670;&#160;</a></span>DENTRY_IS_MOUNTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DENTRY_IS_MOUNTED&#160;&#160;&#160;0x1 /* dentry is mounted */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23033b92d28cb455901393ed684a9963" name="a23033b92d28cb455901393ed684a9963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23033b92d28cb455901393ed684a9963">&#9670;&#160;</a></span>DENTRY_IS_OPENED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DENTRY_IS_OPENED&#160;&#160;&#160;0x8 /* dentry was opened. */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a001b4d63199dfd05cadc60771a124d83" name="a001b4d63199dfd05cadc60771a124d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001b4d63199dfd05cadc60771a124d83">&#9670;&#160;</a></span>dfs_dentry_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> * dfs_dentry_create </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>fullpath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a849e04a4c1953f3c9b524b12deff83b3" name="a849e04a4c1953f3c9b524b12deff83b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a849e04a4c1953f3c9b524b12deff83b3">&#9670;&#160;</a></span>dfs_dentry_create_rela()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> * dfs_dentry_create_rela </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>rela_path</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a67c4bc328d888ba2c4fdcafa6fe733fc" name="a67c4bc328d888ba2c4fdcafa6fe733fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67c4bc328d888ba2c4fdcafa6fe733fc">&#9670;&#160;</a></span>dfs_dentry_full_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * dfs_dentry_full_path </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d4ca666d1f50debde1df321e8503464" name="a5d4ca666d1f50debde1df321e8503464"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4ca666d1f50debde1df321e8503464">&#9670;&#160;</a></span>dfs_dentry_full_path_crc32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t dfs_dentry_full_path_crc32 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a070f7646e619d7a05a50e43080e1677a" name="a070f7646e619d7a05a50e43080e1677a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a070f7646e619d7a05a50e43080e1677a">&#9670;&#160;</a></span>dfs_dentry_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_dentry_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72ff954fa582246b539cfc09eb346b58" name="a72ff954fa582246b539cfc09eb346b58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72ff954fa582246b539cfc09eb346b58">&#9670;&#160;</a></span>dfs_dentry_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void dfs_dentry_insert </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a005c541c8afd1c7b52682369015adc5f" name="a005c541c8afd1c7b52682369015adc5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005c541c8afd1c7b52682369015adc5f">&#9670;&#160;</a></span>dfs_dentry_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> * dfs_dentry_lookup </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa834b5a739f5b2cbd3547d99134f04eb" name="aa834b5a739f5b2cbd3547d99134f04eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa834b5a739f5b2cbd3547d99134f04eb">&#9670;&#160;</a></span>dfs_dentry_pathname()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * dfs_dentry_pathname </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad1ced12b8ce8ae2f70e905692c48a6f1" name="ad1ced12b8ce8ae2f70e905692c48a6f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1ced12b8ce8ae2f70e905692c48a6f1">&#9670;&#160;</a></span>dfs_dentry_ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> * dfs_dentry_ref </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d4024c30ce476ac021fdefb781c5012" name="a5d4024c30ce476ac021fdefb781c5012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d4024c30ce476ac021fdefb781c5012">&#9670;&#160;</a></span>dfs_dentry_unref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> * dfs_dentry_unref </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__dentry.html">dfs_dentry</a> *&#160;</td>
+          <td class="paramname"><em>dentry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_88fad670f0983a8d34917f1a982db765.html">dfs</a></li><li class="navelem"><a class="el" href="dir_0315ccb147cbbd68fff85702afb63e70.html">dfs_v2</a></li><li class="navelem"><a class="el" href="dir_89df34ed40a6a7fa38bf14ddadaf6de0.html">include</a></li><li class="navelem"><a class="el" href="dfs__dentry_8h.html">dfs_dentry.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

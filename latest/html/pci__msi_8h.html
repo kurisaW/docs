@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/pci_msi.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('pci__msi_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">pci_msi.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="pci_8h_source.html">drivers/pci.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for pci_msi.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="pci__msi_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2pci__msi_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2pci__msi_8h" id="acomponents_2drivers_2include_2drivers_2pci__msi_8h">
+<area shape="rect" title=" " alt="" coords="1150,5,1338,45"/>
+<area shape="rect" href="pci_8h.html" title=" " alt="" coords="1193,93,1295,119"/>
+<area shape="poly" title=" " alt="" coords="1247,46,1247,79,1241,79,1241,46"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="432,533,496,559"/>
+<area shape="poly" title=" " alt="" coords="1296,114,1352,130,1409,156,1435,174,1455,196,1468,222,1473,251,1473,401,1471,411,1464,420,1439,437,1400,452,1349,466,1219,490,1065,508,744,534,510,546,510,540,743,529,1064,503,1218,484,1348,461,1398,447,1436,432,1460,416,1466,409,1468,400,1468,252,1463,223,1451,199,1431,178,1407,161,1350,135,1295,119"/>
+<area shape="rect" title=" " alt="" coords="576,313,656,339"/>
+<area shape="poly" title=" " alt="" coords="1212,121,662,311,661,306,1210,116"/>
+<area shape="rect" title=" " alt="" coords="1295,313,1383,339"/>
+<area shape="poly" title=" " alt="" coords="1246,119,1248,184,1256,225,1272,264,1289,286,1309,304,1306,308,1285,290,1267,267,1251,226,1243,184,1241,119"/>
+<area shape="rect" href="ofw_8h.html" title=" " alt="" coords="395,240,501,265"/>
+<area shape="poly" title=" " alt="" coords="1192,111,1050,114,863,123,682,141,608,153,553,169,529,182,506,198,469,231,466,227,503,193,526,177,551,164,607,148,681,135,863,118,1050,109,1192,105"/>
+<area shape="rect" href="pic_8h.html" title=" " alt="" coords="565,167,667,192"/>
+<area shape="poly" title=" " alt="" coords="1193,116,681,173,681,168,1192,110"/>
+<area shape="rect" href="dm_8h.html" title=" " alt="" coords="923,240,1059,265"/>
+<area shape="poly" title=" " alt="" coords="1225,121,1024,236,1021,231,1222,117"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="1281,240,1433,265"/>
+<area shape="poly" title=" " alt="" coords="1255,117,1342,228,1338,231,1251,121"/>
+<area shape="rect" title=" " alt="" coords="1509,167,1635,192"/>
+<area shape="poly" title=" " alt="" coords="1296,116,1506,161,1505,166,1295,121"/>
+<area shape="rect" title=" " alt="" coords="1659,167,1794,192"/>
+<area shape="poly" title=" " alt="" coords="1296,112,1646,163,1645,169,1295,118"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="423,607,505,632"/>
+<area shape="poly" title=" " alt="" coords="467,559,467,593,461,593,461,559"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="441,680,521,705"/>
+<area shape="poly" title=" " alt="" coords="481,557,503,578,520,606,523,623,519,641,503,671,498,668,514,639,517,623,515,608,498,581,478,561"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="318,680,418,705"/>
+<area shape="poly" title=" " alt="" coords="454,561,413,608,380,669,376,666,408,605,450,557"/>
+<area shape="rect" title=" " alt="" coords="237,607,347,632"/>
+<area shape="poly" title=" " alt="" coords="437,561,334,604,332,599,435,556"/>
+<area shape="poly" title=" " alt="" coords="469,632,478,666,473,668,464,633"/>
+<area shape="poly" title=" " alt="" coords="450,634,396,674,393,669,447,630"/>
+<area shape="rect" title=" " alt="" coords="48,753,131,779"/>
+<area shape="poly" title=" " alt="" coords="442,706,430,708,144,758,143,753,429,703,441,700"/>
+<area shape="rect" title=" " alt="" coords="763,753,834,779"/>
+<area shape="poly" title=" " alt="" coords="522,700,750,751,749,756,521,705"/>
+<area shape="rect" title=" " alt="" coords="203,753,277,779"/>
+<area shape="poly" title=" " alt="" coords="443,708,292,752,290,747,442,703"/>
+<area shape="rect" title=" " alt="" coords="301,753,376,779"/>
+<area shape="poly" title=" " alt="" coords="460,708,375,749,373,745,457,703"/>
+<area shape="rect" title=" " alt="" coords="400,753,496,779"/>
+<area shape="poly" title=" " alt="" coords="478,707,462,742,457,740,473,705"/>
+<area shape="rect" title=" " alt="" coords="521,753,615,779"/>
+<area shape="poly" title=" " alt="" coords="497,703,545,742,542,747,494,707"/>
+<area shape="rect" title=" " alt="" coords="640,753,739,779"/>
+<area shape="poly" title=" " alt="" coords="516,703,643,746,642,751,514,708"/>
+<area shape="poly" title=" " alt="" coords="324,708,145,753,143,748,323,703"/>
+<area shape="poly" title=" " alt="" coords="476,263,577,305,575,310,474,268"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="209,313,295,339"/>
+<area shape="poly" title=" " alt="" coords="417,268,298,311,296,306,416,263"/>
+<area shape="rect" title=" " alt="" coords="320,313,371,339"/>
+<area shape="poly" title=" " alt="" coords="433,268,375,307,372,303,430,263"/>
+<area shape="rect" title=" " alt="" coords="395,313,501,339"/>
+<area shape="poly" title=" " alt="" coords="451,266,451,300,445,300,445,266"/>
+<area shape="poly" title=" " alt="" coords="248,340,235,368,224,406,221,447,226,466,235,484,247,493,264,502,312,518,419,537,418,542,311,523,262,507,244,498,231,487,221,468,216,448,218,405,230,366,243,338"/>
+<area shape="poly" title=" " alt="" coords="209,335,148,349,82,374,53,392,29,414,14,440,8,472,8,620,14,656,29,690,49,719,70,742,65,745,45,722,25,692,9,658,3,621,3,471,9,438,25,410,49,388,79,369,146,344,208,330"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="245,460,336,485"/>
+<area shape="poly" title=" " alt="" coords="258,338,287,446,281,447,253,340"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="341,387,398,412"/>
+<area shape="poly" title=" " alt="" coords="265,336,332,377,330,382,263,341"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="422,387,511,412"/>
+<area shape="poly" title=" " alt="" coords="287,336,420,380,418,385,286,341"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="96,460,171,485"/>
+<area shape="poly" title=" " alt="" coords="237,341,211,362,185,388,163,419,147,449,142,446,159,416,181,385,208,358,234,337"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="361,460,426,485"/>
+<area shape="poly" title=" " alt="" coords="264,337,330,410,372,449,368,453,326,414,260,341"/>
+<area shape="poly" title=" " alt="" coords="320,483,424,526,422,530,318,488"/>
+<area shape="poly" title=" " alt="" coords="389,410,415,431,440,459,454,489,462,519,457,520,449,491,435,461,411,435,386,414"/>
+<area shape="poly" title=" " alt="" coords="356,389,289,348,291,343,358,384"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="513,460,575,485"/>
+<area shape="poly" title=" " alt="" coords="481,410,523,449,519,452,477,414"/>
+<area shape="poly" title=" " alt="" coords="533,487,489,526,485,522,529,483"/>
+<area shape="poly" title=" " alt="" coords="172,479,419,532,418,538,171,485"/>
+<area shape="poly" title=" " alt="" coords="121,487,100,508,84,534,71,590,70,647,77,699,85,739,80,740,71,700,65,647,66,589,79,532,96,504,117,483"/>
+<area shape="poly" title=" " alt="" coords="171,479,281,504,329,518,355,532,361,551,355,569,341,586,323,601,320,597,337,583,350,567,356,550,351,535,327,523,280,509,170,484"/>
+<area shape="rect" title=" " alt="" coords="93,533,208,559"/>
+<area shape="poly" title=" " alt="" coords="139,485,147,520,142,521,134,486"/>
+<area shape="rect" title=" " alt="" coords="232,533,341,559"/>
+<area shape="poly" title=" " alt="" coords="159,483,250,525,248,530,157,488"/>
+<area shape="poly" title=" " alt="" coords="407,484,445,522,441,526,403,488"/>
+<area shape="poly" title=" " alt="" coords="619,192,619,300,613,300,613,192"/>
+<area shape="poly" title=" " alt="" coords="590,194,489,237,487,232,588,190"/>
+<area shape="poly" title=" " alt="" coords="613,193,590,245,567,314,554,386,548,447,543,446,548,385,561,313,585,243,608,191"/>
+<area shape="poly" title=" " alt="" coords="668,188,917,235,916,240,667,193"/>
+<area shape="poly" title=" " alt="" coords="1026,263,1056,276,1083,294,1099,315,1100,328,1094,340,1077,359,1053,377,991,410,912,441,825,468,647,512,510,539,509,534,646,507,823,463,911,435,989,405,1051,372,1073,355,1090,337,1095,327,1094,317,1079,298,1053,281,1024,268"/>
+<area shape="poly" title=" " alt="" coords="930,268,675,316,670,317,669,312,674,311,929,263"/>
+<area shape="poly" title=" " alt="" coords="1047,263,1282,310,1281,316,1046,268"/>
+<area shape="poly" title=" " alt="" coords="923,262,824,279,771,294,720,316,672,346,628,383,564,451,560,447,624,379,668,342,717,311,769,289,823,274,922,256"/>
+<area shape="rect" href="misc_8h.html" title=" " alt="" coords="1156,313,1271,339"/>
+<area shape="poly" title=" " alt="" coords="1027,263,1165,307,1164,312,1026,268"/>
+<area shape="rect" href="byteorder_8h.html" title=" " alt="" coords="731,313,877,339"/>
+<area shape="poly" title=" " alt="" coords="962,268,848,311,846,306,960,263"/>
+<area shape="rect" href="master__id_8h.html" title=" " alt="" coords="901,313,1081,339"/>
+<area shape="poly" title=" " alt="" coords="993,266,993,300,988,300,988,266"/>
+<area shape="poly" title=" " alt="" coords="1212,340,1181,419,1160,461,1139,488,1102,500,1038,511,858,528,661,540,510,546,510,541,661,534,858,523,1037,506,1101,495,1136,483,1156,458,1176,417,1207,338"/>
+<area shape="rect" title=" " alt="" coords="1207,387,1289,412"/>
+<area shape="poly" title=" " alt="" coords="1221,338,1239,373,1234,375,1217,340"/>
+<area shape="poly" title=" " alt="" coords="1371,264,1395,298,1401,319,1397,340,1377,376,1355,404,1331,426,1305,442,1244,466,1167,488,1109,501,1031,512,843,529,510,546,509,541,842,524,1030,507,1108,496,1166,483,1243,461,1303,437,1328,421,1351,401,1372,373,1392,338,1395,319,1390,300,1367,267"/>
+</map>
+</div>
+</div>
+<p><a href="pci__msi_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__msi__conf.html">rt_pci_msi_conf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__msix__conf.html">rt_pci_msix_conf</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a052c05733cd0000efd730d395c06162f" id="r_a052c05733cd0000efd730d395c06162f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a052c05733cd0000efd730d395c06162f">rt_pci_msi_first_desc</a>(pdev)</td></tr>
+<tr class="separator:a052c05733cd0000efd730d395c06162f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac59a02f9fc9bc60e743fceabc5be570d" id="r_ac59a02f9fc9bc60e743fceabc5be570d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#ac59a02f9fc9bc60e743fceabc5be570d">rt_pci_msi_for_each_desc</a>(pdev,  desc)&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#gaa4234544ef8a8375d0d10791d9fa5dc4">rt_list_for_each_entry</a>(desc, &amp;(pdev)-&gt;msi_desc_nodes, list)</td></tr>
+<tr class="separator:ac59a02f9fc9bc60e743fceabc5be570d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0887a42683151189f66ff7c21197f882" id="r_a0887a42683151189f66ff7c21197f882"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a0887a42683151189f66ff7c21197f882">rt_pci_msix_table_size</a>(flags)&#160;&#160;&#160;((flags &amp; PCIM_MSIXCTRL_TABLE_SIZE) + 1)</td></tr>
+<tr class="separator:a0887a42683151189f66ff7c21197f882"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae52a2e22351a83267f209b4820c2fe58" id="r_ae52a2e22351a83267f209b4820c2fe58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#ae52a2e22351a83267f209b4820c2fe58">rt_pci_msi_setup_irqs</a> (struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *pdev, int nvec, int type)</td></tr>
+<tr class="separator:ae52a2e22351a83267f209b4820c2fe58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f35ac8a11483f96c39d774d4e1d1864" id="r_a9f35ac8a11483f96c39d774d4e1d1864"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a9f35ac8a11483f96c39d774d4e1d1864">rt_pci_msi_shutdown</a> (struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *pdev)</td></tr>
+<tr class="separator:a9f35ac8a11483f96c39d774d4e1d1864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a793d872b6325a024a37d5d61f35aa1ca" id="r_a793d872b6325a024a37d5d61f35aa1ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a793d872b6325a024a37d5d61f35aa1ca">rt_pci_msix_shutdown</a> (struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *pdev)</td></tr>
+<tr class="separator:a793d872b6325a024a37d5d61f35aa1ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c218f9660da2a333cde42d6d0478ce2" id="r_a7c218f9660da2a333cde42d6d0478ce2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a7c218f9660da2a333cde42d6d0478ce2">rt_pci_msi_free_irqs</a> (struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *pdev)</td></tr>
+<tr class="separator:a7c218f9660da2a333cde42d6d0478ce2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75107a01425fd8e6bd7dad3dba9b9e8" id="r_ad75107a01425fd8e6bd7dad3dba9b9e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#ad75107a01425fd8e6bd7dad3dba9b9e8">rt_pci_msi_write_msg</a> (struct <a class="el" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *desc, struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg)</td></tr>
+<tr class="separator:ad75107a01425fd8e6bd7dad3dba9b9e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a208724588ac328b470f067a62a8f0cf6" id="r_a208724588ac328b470f067a62a8f0cf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a208724588ac328b470f067a62a8f0cf6">rt_pci_msi_mask_irq</a> (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a208724588ac328b470f067a62a8f0cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4d103c528c5e294f2ef4c177ee02dd" id="r_a1d4d103c528c5e294f2ef4c177ee02dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pci__msi_8h.html#a1d4d103c528c5e294f2ef4c177ee02dd">rt_pci_msi_unmask_irq</a> (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a1d4d103c528c5e294f2ef4c177ee02dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a052c05733cd0000efd730d395c06162f" name="a052c05733cd0000efd730d395c06162f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052c05733cd0000efd730d395c06162f">&#9670;&#160;</a></span>rt_pci_msi_first_desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_pci_msi_first_desc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pdev</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    (<a class="code hl_function" href="group__group___kernel_service.html#ga2b25b69a89568b7f2bf6ed5e9e70da74">rt_list_isempty</a>(&amp;(pdev)-&gt;msi_desc_nodes) ? <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a> : \</div>
+<div class="line">        rt_list_first_entry(&amp;(pdev)-&gt;msi_desc_nodes, <span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a>, list))</div>
+<div class="ttc" id="agroup__group___kernel_service_html_ga2b25b69a89568b7f2bf6ed5e9e70da74"><div class="ttname"><a href="group__group___kernel_service.html#ga2b25b69a89568b7f2bf6ed5e9e70da74">rt_list_isempty</a></div><div class="ttdeci">rt_inline int rt_list_isempty(const rt_list_t *l)</div><div class="ttdoc">tests whether a list is empty</div><div class="ttdef"><b>Definition</b> rtservice.h:101</div></div>
+<div class="ttc" id="arttypes_8h_html_ab3633bbb2a09b3406b19463ffc634345"><div class="ttname"><a href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></div><div class="ttdeci">#define RT_NULL</div><div class="ttdef"><b>Definition</b> rttypes.h:120</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html"><div class="ttname"><a href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a></div><div class="ttdef"><b>Definition</b> pci_msi.h:139</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac59a02f9fc9bc60e743fceabc5be570d" name="ac59a02f9fc9bc60e743fceabc5be570d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac59a02f9fc9bc60e743fceabc5be570d">&#9670;&#160;</a></span>rt_pci_msi_for_each_desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_pci_msi_for_each_desc</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">pdev, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">desc&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;    <a class="el" href="group__group___kernel_service.html#gaa4234544ef8a8375d0d10791d9fa5dc4">rt_list_for_each_entry</a>(desc, &amp;(pdev)-&gt;msi_desc_nodes, list)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0887a42683151189f66ff7c21197f882" name="a0887a42683151189f66ff7c21197f882"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0887a42683151189f66ff7c21197f882">&#9670;&#160;</a></span>rt_pci_msix_table_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_pci_msix_table_size</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">flags</td><td>)</td>
+          <td>&#160;&#160;&#160;((flags &amp; PCIM_MSIXCTRL_TABLE_SIZE) + 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a7c218f9660da2a333cde42d6d0478ce2" name="a7c218f9660da2a333cde42d6d0478ce2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c218f9660da2a333cde42d6d0478ce2">&#9670;&#160;</a></span>rt_pci_msi_free_irqs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msi_free_irqs </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a208724588ac328b470f067a62a8f0cf6" name="a208724588ac328b470f067a62a8f0cf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a208724588ac328b470f067a62a8f0cf6">&#9670;&#160;</a></span>rt_pci_msi_mask_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msi_mask_irq </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *&#160;</td>
+          <td class="paramname"><em>pirq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae52a2e22351a83267f209b4820c2fe58" name="ae52a2e22351a83267f209b4820c2fe58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae52a2e22351a83267f209b4820c2fe58">&#9670;&#160;</a></span>rt_pci_msi_setup_irqs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pci_msi_setup_irqs </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *&#160;</td>
+          <td class="paramname"><em>pdev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nvec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9f35ac8a11483f96c39d774d4e1d1864" name="a9f35ac8a11483f96c39d774d4e1d1864"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f35ac8a11483f96c39d774d4e1d1864">&#9670;&#160;</a></span>rt_pci_msi_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msi_shutdown </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d4d103c528c5e294f2ef4c177ee02dd" name="a1d4d103c528c5e294f2ef4c177ee02dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4d103c528c5e294f2ef4c177ee02dd">&#9670;&#160;</a></span>rt_pci_msi_unmask_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msi_unmask_irq </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *&#160;</td>
+          <td class="paramname"><em>pirq</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad75107a01425fd8e6bd7dad3dba9b9e8" name="ad75107a01425fd8e6bd7dad3dba9b9e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75107a01425fd8e6bd7dad3dba9b9e8">&#9670;&#160;</a></span>rt_pci_msi_write_msg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msi_write_msg </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *&#160;</td>
+          <td class="paramname"><em>msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a793d872b6325a024a37d5d61f35aa1ca" name="a793d872b6325a024a37d5d61f35aa1ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a793d872b6325a024a37d5d61f35aa1ca">&#9670;&#160;</a></span>rt_pci_msix_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pci_msix_shutdown </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__pci__device.html">rt_pci_device</a> *&#160;</td>
+          <td class="paramname"><em>pdev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="pci__msi_8h.html">pci_msi.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

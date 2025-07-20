@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/core/bus.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('bus_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">bus.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="driver_8h_source.html">drivers/core/driver.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for bus.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="bus_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2core_2bus_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2core_2bus_8h" id="acomponents_2drivers_2include_2drivers_2core_2bus_8h">
+<area shape="rect" title=" " alt="" coords="158,5,351,45"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="154,93,217,119"/>
+<area shape="poly" title=" " alt="" coords="240,47,207,84,203,81,236,44"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="223,167,287,192"/>
+<area shape="poly" title=" " alt="" coords="257,46,257,153,252,153,252,46"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="292,93,444,119"/>
+<area shape="poly" title=" " alt="" coords="284,43,341,83,338,87,281,48"/>
+<area shape="poly" title=" " alt="" coords="199,117,236,155,232,159,195,121"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="175,240,257,265"/>
+<area shape="poly" title=" " alt="" coords="251,194,231,229,226,227,246,191"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="255,313,335,339"/>
+<area shape="poly" title=" " alt="" coords="261,192,290,299,285,301,255,193"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="87,313,187,339"/>
+<area shape="poly" title=" " alt="" coords="228,194,195,214,165,242,150,271,143,300,138,299,145,269,161,238,192,209,226,190"/>
+<area shape="rect" title=" " alt="" coords="333,240,443,265"/>
+<area shape="poly" title=" " alt="" coords="277,190,355,231,353,236,275,194"/>
+<area shape="poly" title=" " alt="" coords="230,263,274,302,270,306,227,267"/>
+<area shape="poly" title=" " alt="" coords="205,267,162,306,158,302,202,263"/>
+<area shape="rect" title=" " alt="" coords="5,387,88,412"/>
+<area shape="poly" title=" " alt="" coords="256,341,101,385,99,380,254,336"/>
+<area shape="rect" title=" " alt="" coords="113,387,183,412"/>
+<area shape="poly" title=" " alt="" coords="272,341,185,383,183,378,270,336"/>
+<area shape="rect" title=" " alt="" coords="208,387,283,412"/>
+<area shape="poly" title=" " alt="" coords="289,341,263,377,259,374,284,337"/>
+<area shape="rect" title=" " alt="" coords="307,387,381,412"/>
+<area shape="poly" title=" " alt="" coords="305,337,330,374,326,377,301,341"/>
+<area shape="rect" title=" " alt="" coords="405,387,501,412"/>
+<area shape="poly" title=" " alt="" coords="321,336,416,379,414,383,319,341"/>
+<area shape="rect" title=" " alt="" coords="526,387,621,412"/>
+<area shape="poly" title=" " alt="" coords="336,335,516,381,515,386,335,340"/>
+<area shape="rect" title=" " alt="" coords="645,387,744,412"/>
+<area shape="poly" title=" " alt="" coords="335,332,632,384,631,389,334,337"/>
+<area shape="poly" title=" " alt="" coords="124,341,74,380,71,376,121,337"/>
+<area shape="poly" title=" " alt="" coords="351,121,286,162,283,157,348,116"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="bus_8h__dep__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2core_2bus_8hdep" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2core_2bus_8hdep" id="acomponents_2drivers_2include_2drivers_2core_2bus_8hdep">
+<area shape="rect" title=" " alt="" coords="1809,5,2003,45"/>
+<area shape="rect" href="dev__i2c__dm_8h.html" title=" " alt="" coords="1744,93,1895,148"/>
+<area shape="poly" title=" " alt="" coords="1881,57,1846,95,1842,91,1877,54"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1919,101,2069,141"/>
+<area shape="poly" title=" " alt="" coords="1935,53,1978,99,1974,102,1931,57"/>
+<area shape="rect" href="dfs_8h.html" title=" " alt="" coords="473,203,624,243"/>
+<area shape="poly" title=" " alt="" coords="1926,147,1908,151,1791,166,1636,179,1265,201,894,215,624,223,624,218,894,210,1265,196,1636,174,1790,161,1907,145,1925,142"/>
+<area shape="rect" href="dev__audio_8c.html" title=" " alt="" coords="1488,203,1639,243"/>
+<area shape="poly" title=" " alt="" coords="1922,147,1908,151,1783,175,1659,199,1630,206,1628,201,1657,193,1782,170,1907,145,1921,142"/>
+<area shape="rect" href="dev__audio__pipe_8c.html" title=" " alt="" coords="1651,306,1830,346"/>
+<area shape="poly" title=" " alt="" coords="1921,147,1908,151,1875,157,1845,158,1793,156,1769,158,1747,163,1725,176,1704,198,1697,210,1695,223,1699,252,1712,280,1727,304,1723,307,1707,283,1694,254,1689,223,1692,208,1700,194,1722,172,1745,158,1768,152,1793,151,1845,153,1875,151,1907,145,1919,142"/>
+<area shape="rect" href="dev__audio__pipe_8h.html" title=" " alt="" coords="1715,203,1895,243"/>
+<area shape="poly" title=" " alt="" coords="1948,150,1841,206,1839,201,1945,145"/>
+<area shape="rect" href="clk-fixed-rate_8c.html" title=" " alt="" coords="1919,203,2069,243"/>
+<area shape="poly" title=" " alt="" coords="1997,155,1997,203,1991,203,1991,155"/>
+<area shape="rect" href="clk_8c.html" title=" " alt="" coords="2093,203,2244,243"/>
+<area shape="poly" title=" " alt="" coords="2040,145,2137,201,2135,206,2037,150"/>
+<area shape="rect" href="dev__serial__v2_8h.html" title=" " alt="" coords="2268,196,2419,251"/>
+<area shape="poly" title=" " alt="" coords="2075,142,2257,193,2268,197,2267,202,2256,199,2074,147"/>
+<area shape="rect" href="serial__bypass_8h.html" title=" " alt="" coords="2443,196,2606,251"/>
+<area shape="poly" title=" " alt="" coords="2083,132,2246,157,2432,193,2443,196,2442,201,2431,199,2245,163,2082,137"/>
+<area shape="rect" href="serial__dm_8h.html" title=" " alt="" coords="2630,203,2833,243"/>
+<area shape="poly" title=" " alt="" coords="2084,127,2326,152,2472,171,2618,193,2655,201,2654,206,2618,199,2471,176,2325,157,2083,132"/>
+<area shape="rect" href="dfs__file_8h.html" title=" " alt="" coords="772,306,931,346"/>
+<area shape="poly" title=" " alt="" coords="619,245,795,303,794,308,617,250"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="1263,592,1413,632"/>
+<area shape="poly" title=" " alt="" coords="638,231,859,260,995,283,1134,311,1268,346,1386,386,1437,409,1480,433,1514,460,1539,488,1547,503,1550,517,1547,531,1539,546,1520,561,1489,575,1414,597,1413,592,1487,570,1517,557,1535,542,1542,529,1544,517,1542,505,1534,491,1511,464,1477,438,1435,414,1385,391,1267,351,1133,316,994,288,858,265,637,236"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="5,592,156,632"/>
+<area shape="poly" title=" " alt="" coords="460,239,380,261,339,279,302,301,262,334,225,373,192,414,163,457,118,536,91,593,86,591,113,533,159,454,188,411,221,369,258,330,299,296,337,274,378,256,459,234"/>
+<area shape="rect" href="dfs__file_8c.html" title=" " alt="" coords="529,592,680,632"/>
+<area shape="poly" title=" " alt="" coords="520,255,486,293,456,340,446,365,441,391,442,416,451,440,467,458,486,465,508,472,530,487,553,513,572,541,599,591,594,593,568,544,549,516,527,491,505,477,484,470,464,462,446,443,437,417,435,390,441,364,451,338,482,290,516,252"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="180,592,331,632"/>
+<area shape="poly" title=" " alt="" coords="461,239,398,261,368,279,343,300,316,335,296,374,281,416,270,458,260,536,257,592,252,592,254,535,265,457,276,414,291,372,312,332,339,297,365,274,395,257,459,234"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="355,592,505,632"/>
+<area shape="poly" title=" " alt="" coords="462,249,420,270,401,284,385,300,345,361,332,389,325,417,322,445,326,475,335,508,350,543,370,570,396,590,393,594,366,573,345,545,330,509,321,476,317,446,319,416,327,387,340,358,381,297,398,280,417,265,459,244"/>
+<area shape="rect" href="dfs__fs_8h.html" title=" " alt="" coords="1140,401,1291,441"/>
+<area shape="poly" title=" " alt="" coords="638,233,782,257,863,274,943,296,1010,320,1076,348,1181,399,1179,404,1074,353,1008,325,941,301,862,280,781,262,637,238"/>
+<area shape="rect" href="dfs__seq__file_8h.html" title=" " alt="" coords="1601,489,1752,544"/>
+<area shape="poly" title=" " alt="" coords="638,223,874,229,1170,241,1312,250,1436,262,1530,278,1562,287,1583,296,1606,316,1625,339,1652,392,1668,445,1676,489,1671,490,1663,447,1647,394,1620,342,1602,320,1581,301,1561,292,1529,283,1435,268,1312,256,1170,246,874,234,638,228"/>
+<area shape="rect" href="dfs__posix_8h.html" title=" " alt="" coords="461,401,636,441"/>
+<area shape="poly" title=" " alt="" coords="551,257,551,401,546,401,546,257"/>
+<area shape="rect" href="dfs__private_8h.html" title=" " alt="" coords="359,497,517,537"/>
+<area shape="poly" title=" " alt="" coords="467,251,433,271,407,300,396,325,391,351,392,379,396,406,412,457,430,495,425,497,407,459,391,407,386,379,386,351,391,323,402,297,430,267,464,246"/>
+<area shape="rect" href="dfs__dentry_8h.html" title=" " alt="" coords="777,497,955,537"/>
+<area shape="poly" title=" " alt="" coords="855,360,861,441,866,496,861,497,855,442,850,360"/>
+<area shape="poly" title=" " alt="" coords="945,328,1043,334,1149,347,1243,368,1279,382,1304,399,1321,421,1333,446,1346,500,1347,552,1344,592,1339,592,1342,552,1341,501,1328,448,1317,424,1300,403,1276,387,1241,373,1148,352,1043,340,944,333"/>
+<area shape="poly" title=" " alt="" coords="815,356,740,402,695,425,648,444,604,457,565,465,498,470,431,474,393,481,348,492,282,515,217,543,115,594,113,590,215,538,280,510,347,487,392,475,431,469,498,465,564,459,602,452,646,439,693,420,738,397,812,351"/>
+<area shape="poly" title=" " alt="" coords="824,358,780,403,689,510,622,593,617,590,685,506,776,400,820,354"/>
+<area shape="rect" href="dfs__file__mmap_8c.html" title=" " alt="" coords="705,592,883,632"/>
+<area shape="poly" title=" " alt="" coords="832,359,796,418,780,453,767,490,763,517,767,543,775,568,785,590,781,593,770,570,762,545,758,517,762,489,775,451,791,415,827,356"/>
+<area shape="rect" href="dfs__fs_8c.html" title=" " alt="" coords="1088,592,1239,632"/>
+<area shape="poly" title=" " alt="" coords="864,358,881,399,907,440,922,455,936,465,969,487,994,516,1020,542,1065,569,1111,589,1108,594,1062,574,1016,546,990,520,966,491,933,469,918,459,903,443,877,401,859,360"/>
+<area shape="poly" title=" " alt="" coords="932,347,1140,400,1139,405,930,352"/>
+<area shape="rect" href="dfs__vfs_8h.html" title=" " alt="" coords="1031,497,1189,537"/>
+<area shape="poly" title=" " alt="" coords="874,355,909,398,954,439,1006,471,1058,494,1056,499,1003,475,951,443,906,401,870,359"/>
+<area shape="poly" title=" " alt="" coords="778,353,611,404,609,399,776,348"/>
+<area shape="rect" href="dfs__vnode_8c.html" title=" " alt="" coords="965,401,1116,441"/>
+<area shape="poly" title=" " alt="" coords="903,350,1004,399,1001,404,901,354"/>
+<area shape="poly" title=" " alt="" coords="969,535,1251,589,1263,592,1262,597,1249,595,968,540"/>
+<area shape="poly" title=" " alt="" coords="763,528,493,553,330,572,168,595,157,597,156,591,167,589,329,566,492,547,762,523"/>
+<area shape="poly" title=" " alt="" coords="801,544,658,594,657,589,800,539"/>
+<area shape="poly" title=" " alt="" coords="845,549,811,594,806,590,841,546"/>
+<area shape="poly" title=" " alt="" coords="940,538,1104,589,1102,594,938,543"/>
+<area shape="poly" title=" " alt="" coords="763,533,568,559,342,595,331,597,330,591,342,589,567,554,763,528"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="908,592,1064,632"/>
+<area shape="poly" title=" " alt="" coords="903,543,963,590,960,594,900,547"/>
+<area shape="poly" title=" " alt="" coords="765,542,517,595,506,597,505,592,516,589,764,537"/>
+<area shape="rect" href="dfs__seq__file_8c.html" title=" " alt="" coords="1438,592,1598,632"/>
+<area shape="poly" title=" " alt="" coords="970,534,1018,541,1133,556,1222,564,1311,573,1425,589,1438,592,1437,597,1424,595,1310,579,1221,570,1132,561,1018,547,969,539"/>
+<area shape="poly" title=" " alt="" coords="1136,400,930,348,932,343,1137,395"/>
+<area shape="poly" title=" " alt="" coords="1132,447,937,499,936,494,1131,442"/>
+<area shape="poly" title=" " alt="" coords="1237,452,1328,590,1323,593,1233,454"/>
+<area shape="poly" title=" " alt="" coords="1126,444,1022,454,940,455,861,463,816,474,766,492,723,514,684,541,625,594,621,590,681,537,720,509,764,487,815,468,860,457,939,450,1022,448,1126,439"/>
+<area shape="poly" title=" " alt="" coords="1217,455,1214,498,1203,545,1192,571,1179,593,1174,590,1187,568,1198,543,1208,497,1212,455"/>
+<area shape="poly" title=" " alt="" coords="1305,438,1601,498,1600,503,1304,443"/>
+<area shape="poly" title=" " alt="" coords="1186,452,1133,499,1130,495,1182,448"/>
+<area shape="rect" href="blk_8h.html" title=" " alt="" coords="1367,497,1525,537"/>
+<area shape="poly" title=" " alt="" coords="1276,444,1400,494,1398,499,1274,449"/>
+<area shape="poly" title=" " alt="" coords="1621,553,1552,594,1549,590,1619,549"/>
+<area shape="rect" href="nvme_8h.html" title=" " alt="" coords="1623,592,1797,632"/>
+<area shape="poly" title=" " alt="" coords="1513,539,1658,589,1656,594,1511,544"/>
+<area shape="poly" title=" " alt="" coords="531,523,939,559,1250,589,1263,591,1262,597,1250,595,938,564,530,528"/>
+<area shape="poly" title=" " alt="" coords="353,543,154,595,152,589,352,538"/>
+<area shape="poly" title=" " alt="" coords="485,541,572,590,570,594,482,546"/>
+<area shape="poly" title=" " alt="" coords="531,523,777,549,1076,589,1088,592,1087,597,1075,595,777,554,530,529"/>
+<area shape="poly" title=" " alt="" coords="390,545,293,594,291,590,388,540"/>
+<area shape="poly" title=" " alt="" coords="438,551,434,592,429,592,433,550"/>
+<area shape="poly" title=" " alt="" coords="1788,256,1755,307,1750,305,1783,253"/>
+<area shape="rect" href="dev__audio_8h.html" title=" " alt="" coords="1855,299,2005,353"/>
+<area shape="poly" title=" " alt="" coords="1841,250,1899,296,1895,300,1837,254"/>
+</map>
+</div>
+</div>
+<p><a href="bus_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__bus.html">rt_bus</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a6e29758b17eacb31b3cf3b222b94ba6e" id="r_a6e29758b17eacb31b3cf3b222b94ba6e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__bus.html">rt_bus</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a></td></tr>
+<tr class="separator:a6e29758b17eacb31b3cf3b222b94ba6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a71085adaec0264b96233a36112386fe5" id="r_a71085adaec0264b96233a36112386fe5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a71085adaec0264b96233a36112386fe5">rt_bus_for_each_dev</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> bus, void *data, int(*fn)(<a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev, void *))</td></tr>
+<tr class="separator:a71085adaec0264b96233a36112386fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ae48727db6ceb943f53d9a68fe67aa8" id="r_a2ae48727db6ceb943f53d9a68fe67aa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a2ae48727db6ceb943f53d9a68fe67aa8">rt_bus_for_each_drv</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> bus, void *data, int(*fn)(<a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a> drv, void *))</td></tr>
+<tr class="separator:a2ae48727db6ceb943f53d9a68fe67aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82122ce3bbc0e793cfe746039da10bc8" id="r_a82122ce3bbc0e793cfe746039da10bc8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a82122ce3bbc0e793cfe746039da10bc8">rt_bus_add_driver</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> bus, <a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a> drv)</td></tr>
+<tr class="separator:a82122ce3bbc0e793cfe746039da10bc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b39826d258d8b8cf5a939706e946c06" id="r_a6b39826d258d8b8cf5a939706e946c06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a6b39826d258d8b8cf5a939706e946c06">rt_bus_add_device</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> bus, <a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev)</td></tr>
+<tr class="separator:a6b39826d258d8b8cf5a939706e946c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a725cc19f755aecbe7af7d60cc5dc6949" id="r_a725cc19f755aecbe7af7d60cc5dc6949"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a725cc19f755aecbe7af7d60cc5dc6949">rt_bus_remove_driver</a> (<a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a> drv)</td></tr>
+<tr class="separator:a725cc19f755aecbe7af7d60cc5dc6949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60ae9941196c8c19527717cec8ac0b42" id="r_a60ae9941196c8c19527717cec8ac0b42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a60ae9941196c8c19527717cec8ac0b42">rt_bus_remove_device</a> (<a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev)</td></tr>
+<tr class="separator:a60ae9941196c8c19527717cec8ac0b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cd9f6e67448d7501d0c1912866f46e" id="r_ab7cd9f6e67448d7501d0c1912866f46e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#ab7cd9f6e67448d7501d0c1912866f46e">rt_bus_shutdown</a> (void)</td></tr>
+<tr class="separator:ab7cd9f6e67448d7501d0c1912866f46e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2e8df0d0d4636c7628907672e7ade92" id="r_ab2e8df0d0d4636c7628907672e7ade92"><td class="memItemLeft" align="right" valign="top"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#ab2e8df0d0d4636c7628907672e7ade92">rt_bus_find_by_name</a> (const char *name)</td></tr>
+<tr class="separator:ab2e8df0d0d4636c7628907672e7ade92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37d0a889224d89f513452d182b6ee0df" id="r_a37d0a889224d89f513452d182b6ee0df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a37d0a889224d89f513452d182b6ee0df">rt_bus_reload_driver_device</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> new_bus, <a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev)</td></tr>
+<tr class="separator:a37d0a889224d89f513452d182b6ee0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86ba7ac04aa36c9974aa8b3a16668267" id="r_a86ba7ac04aa36c9974aa8b3a16668267"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bus_8h.html#a86ba7ac04aa36c9974aa8b3a16668267">rt_bus_register</a> (<a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> bus)</td></tr>
+<tr class="separator:a86ba7ac04aa36c9974aa8b3a16668267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a6e29758b17eacb31b3cf3b222b94ba6e" name="a6e29758b17eacb31b3cf3b222b94ba6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e29758b17eacb31b3cf3b222b94ba6e">&#9670;&#160;</a></span>rt_bus_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__bus.html">rt_bus</a>* <a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a6b39826d258d8b8cf5a939706e946c06" name="a6b39826d258d8b8cf5a939706e946c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b39826d258d8b8cf5a939706e946c06">&#9670;&#160;</a></span>rt_bus_add_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_add_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>bus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a82122ce3bbc0e793cfe746039da10bc8" name="a82122ce3bbc0e793cfe746039da10bc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82122ce3bbc0e793cfe746039da10bc8">&#9670;&#160;</a></span>rt_bus_add_driver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_add_driver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>bus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a>&#160;</td>
+          <td class="paramname"><em>drv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab2e8df0d0d4636c7628907672e7ade92" name="ab2e8df0d0d4636c7628907672e7ade92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2e8df0d0d4636c7628907672e7ade92">&#9670;&#160;</a></span>rt_bus_find_by_name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a> rt_bus_find_by_name </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71085adaec0264b96233a36112386fe5" name="a71085adaec0264b96233a36112386fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71085adaec0264b96233a36112386fe5">&#9670;&#160;</a></span>rt_bus_for_each_dev()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_for_each_dev </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>bus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(<a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev, void *)&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ae48727db6ceb943f53d9a68fe67aa8" name="a2ae48727db6ceb943f53d9a68fe67aa8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ae48727db6ceb943f53d9a68fe67aa8">&#9670;&#160;</a></span>rt_bus_for_each_drv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_for_each_drv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>bus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(<a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a> drv, void *)&#160;</td>
+          <td class="paramname"><em>fn</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86ba7ac04aa36c9974aa8b3a16668267" name="a86ba7ac04aa36c9974aa8b3a16668267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86ba7ac04aa36c9974aa8b3a16668267">&#9670;&#160;</a></span>rt_bus_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>bus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a37d0a889224d89f513452d182b6ee0df" name="a37d0a889224d89f513452d182b6ee0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d0a889224d89f513452d182b6ee0df">&#9670;&#160;</a></span>rt_bus_reload_driver_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_reload_driver_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="bus_8h.html#a6e29758b17eacb31b3cf3b222b94ba6e">rt_bus_t</a>&#160;</td>
+          <td class="paramname"><em>new_bus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60ae9941196c8c19527717cec8ac0b42" name="a60ae9941196c8c19527717cec8ac0b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60ae9941196c8c19527717cec8ac0b42">&#9670;&#160;</a></span>rt_bus_remove_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_remove_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a725cc19f755aecbe7af7d60cc5dc6949" name="a725cc19f755aecbe7af7d60cc5dc6949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a725cc19f755aecbe7af7d60cc5dc6949">&#9670;&#160;</a></span>rt_bus_remove_driver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_remove_driver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#gabc46402474b270ced270ae4aae26186d">rt_driver_t</a>&#160;</td>
+          <td class="paramname"><em>drv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7cd9f6e67448d7501d0c1912866f46e" name="ab7cd9f6e67448d7501d0c1912866f46e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7cd9f6e67448d7501d0c1912866f46e">&#9670;&#160;</a></span>rt_bus_shutdown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bus_shutdown </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="dir_7c7f50478dc644b79efafa79a5c91c35.html">core</a></li><li class="navelem"><a class="el" href="bus_8h.html">bus.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

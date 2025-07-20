@@ -1,0 +1,8 @@
+<map id="Group_IPC" name="Group_IPC">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,104,95,129"/>
+<area shape="rect" id="Node000004" href="$group__group__event.html" title=" " alt="" coords="177,5,235,31"/>
+<area shape="rect" id="Node000005" href="$group__group__mailbox.html" title=" " alt="" coords="169,55,243,80"/>
+<area shape="rect" id="Node000006" href="$group__group__messagequeue.html" title=" " alt="" coords="143,104,269,129"/>
+<area shape="rect" id="Node000003" href="$group__group__mutex.html" title=" " alt="" coords="175,153,237,179"/>
+<area shape="rect" id="Node000002" href="$group__group__semaphore.html" title=" " alt="" coords="158,203,254,228"/>
+</map>

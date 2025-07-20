@@ -1,0 +1,263 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/dfs/dfs_v2/include/dfs_mnt.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dfs__mnt_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">dfs_mnt.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="dfs__mnt_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2023, RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2023-05-05     Bernard      Implement dentry in dfs v2.0</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef DFS_MNT_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define DFS_MNT_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="rtservice_8h.html">rtservice.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__dentry.html">dfs_dentry</a>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__filesystem__ops.html">dfs_filesystem_ops</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structdfs__mnt.html">   26</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#ae4a3d5fd2b72c9038ad781d16117fe6e">   28</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *<a class="code hl_variable" href="structdfs__mnt.html#ae4a3d5fd2b72c9038ad781d16117fe6e">parent</a>;         <span class="comment">/* the parent mounted file system */</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a38f333080bd60a2d2dcad55cecc5e0b5">   30</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structdfs__mnt.html#a38f333080bd60a2d2dcad55cecc5e0b5">sibling</a>;              <span class="comment">/* the sibling node for mounted list */</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#ab76406a0ba3f4900e69d269ea1c9a5e3">   31</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structdfs__mnt.html#ab76406a0ba3f4900e69d269ea1c9a5e3">child</a>;                <span class="comment">/* the child node for mounted list */</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a00d0039c371ad56a0385fa31dd208f65">   33</a></span>    <span class="keywordtype">char</span> *<a class="code hl_variable" href="structdfs__mnt.html#a00d0039c371ad56a0385fa31dd208f65">fullpath</a>;                 <span class="comment">/* the fullpath of this mounted file system */</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a8d9c090f4e26e3c2381d405ceef6e860">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structdfs__mnt.html#a8d9c090f4e26e3c2381d405ceef6e860">flags</a>;                      <span class="comment">/* the falgs of this mounted file system */</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#aada7a578d5f5cb1a6721e215a73e916b">   36</a></span><span class="preprocessor">#define MNT_IS_ALLOCED 0x1          </span><span class="comment">/* the mnt struct is allocated */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a0a0dfa87b86be845e53630f5d7cfe40f">   37</a></span><span class="preprocessor">#define MNT_IS_ADDLIST 0x2          </span><span class="comment">/* the mnt struct is added into list */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a372f975fc6e040eb513743802bd4d58b">   38</a></span><span class="preprocessor">#define MNT_IS_MOUNTED 0x4          </span><span class="comment">/* the mnt struct is mounted */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a15df0b70082808c80bca00d061623ac6">   39</a></span><span class="preprocessor">#define MNT_IS_UMOUNT  0x8          </span><span class="comment">/* the mnt is unmount */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#ad7b5a6d06e233167c4550d1744fe8f16">   40</a></span><span class="preprocessor">#define MNT_IS_LOCKED  0x10         </span><span class="comment">/* the mnt is locked */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a7e5bac8c5f849afa8a92476de4c12846">   41</a></span><span class="preprocessor">#define MNT_FORCE      0x20         </span><span class="comment">/* the mnt force unmount */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a03c2a91e7563d2298420c06c5acef0e9">   42</a></span><span class="preprocessor">#define MNT_LAZY_UMNT  0x40         </span><span class="comment">/* the mnt has pending umount */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#afbcda3d4544fe395ef788a52b868ccd4">   43</a></span><span class="preprocessor">#define MNT_RDONLY     0x80         </span><span class="comment">/* the mnt is read only */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#ac5fbb889872a6933ea151089252410a4">   45</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a82bef06cae81d9d7d01a8aa0b8c936be">rt_atomic_t</a> <a class="code hl_variable" href="structdfs__mnt.html#ac5fbb889872a6933ea151089252410a4">ref_count</a>;          <span class="comment">/* reference count */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a02d82819802db6ef240c45710db6d6a3">   47</a></span>    <a class="code hl_struct" href="structrt__device.html">rt_device_t</a> <a class="code hl_variable" href="structdfs__mnt.html#a02d82819802db6ef240c45710db6d6a3">dev_id</a>;             <span class="comment">/* the mounted device id */</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a9dc3bdec44acc22fee710ac12414c04c">   48</a></span>    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code hl_struct" href="structdfs__filesystem__ops.html">dfs_filesystem_ops</a> *<a class="code hl_variable" href="structdfs__mnt.html#a9dc3bdec44acc22fee710ac12414c04c">fs_ops</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structdfs__mnt.html#a02a1004642abab2923c76e75d54ffab2">   50</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structdfs__mnt.html#a02a1004642abab2923c76e75d54ffab2">data</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>};</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *<a class="code hl_function" href="dfs__mnt_8h.html#af1ad6c48aafbb70018e7980a2b186df6">dfs_mnt_create</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a8a952647c4bdc2ac6c5786dc772201b3">dfs_mnt_destroy</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* mnt);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#ad5898f11d9fcbc8b4d800607df65c680">dfs_mnt_list</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* mnt);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a034a2422c7c289480cba9412a3718400">dfs_mnt_insert</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* mnt, <span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* <a class="code hl_variable" href="structdfs__mnt.html#ab76406a0ba3f4900e69d269ea1c9a5e3">child</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *<a class="code hl_function" href="dfs__mnt_8h.html#a33c762bdc4796218e14b35248a140529">dfs_mnt_dev_lookup</a>(<a class="code hl_struct" href="structrt__device.html">rt_device_t</a> <a class="code hl_variable" href="structdfs__mnt.html#a02d82819802db6ef240c45710db6d6a3">dev_id</a>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *<a class="code hl_function" href="dfs__mnt_8h.html#a65f11fff822f41388308153be5679730">dfs_mnt_lookup</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code hl_function" href="dfs__mnt_8h.html#a843a2171a19dc7568805221294a201cc">dfs_mnt_get_mounted_path</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__device.html">rt_device</a> *device);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* <a class="code hl_function" href="dfs__mnt_8h.html#afeda8e6e3efe5c527f272d5f2f746799">dfs_mnt_ref</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* mnt);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a411b6d43ecb660c045136b8308532818">dfs_mnt_unref</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* mnt);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a018ba6d952835502d72a9dc35b1c09ab">   65</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a018ba6d952835502d72a9dc35b1c09ab">dfs_mnt_umount</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt, <span class="keywordtype">int</span> <a class="code hl_variable" href="structdfs__mnt.html#a8d9c090f4e26e3c2381d405ceef6e860">flags</a>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a06fcbf0dcf67d2b5077d6727e11ce8b0">dfs_mnt_setflags</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt, <span class="keywordtype">int</span> <a class="code hl_variable" href="structdfs__mnt.html#a8d9c090f4e26e3c2381d405ceef6e860">flags</a>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_function" href="dfs__mnt_8h.html#a28e9651de4e16f838255cdd2ca0a8a06">dfs_mnt_has_child_mnt</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_variable" href="structdfs__mnt.html#a00d0039c371ad56a0385fa31dd208f65">fullpath</a>);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#a8e94506fe68d7c6f20baaa777ca02533">dfs_mnt_foreach</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a>* (*func)(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt, <span class="keywordtype">void</span> *parameter), <span class="keywordtype">void</span> *parameter);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#ada48ca62669281d48fd3633e7caa2371">   71</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="dfs__mnt_8h.html#ada48ca62669281d48fd3633e7caa2371">dfs_mnt_umount_iter</a>(<a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> (*filter)(<span class="keyword">struct</span> <a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt, <span class="keywordtype">void</span> *parameter), <span class="keywordtype">void</span> *parameter);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">   73</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structdfs__mnt.html">dfs_mnt</a> *mnt);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="dfs__mnt_8h.html#ada85737ad077d299c229e54512428800">   74</a></span><a class="code hl_define" href="group__group___kernel_object.html#gaef913773c621b3b7e95a1952c910469a">RT_OBJECT_HOOKLIST_DECLARE</a>(<a class="code hl_typedef" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a>, dfs_mnt_umnt);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>}</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="adfs__mnt_8h_html_a018ba6d952835502d72a9dc35b1c09ab"><div class="ttname"><a href="dfs__mnt_8h.html#a018ba6d952835502d72a9dc35b1c09ab">dfs_mnt_umount</a></div><div class="ttdeci">int dfs_mnt_umount(struct dfs_mnt *mnt, int flags)</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a034a2422c7c289480cba9412a3718400"><div class="ttname"><a href="dfs__mnt_8h.html#a034a2422c7c289480cba9412a3718400">dfs_mnt_insert</a></div><div class="ttdeci">int dfs_mnt_insert(struct dfs_mnt *mnt, struct dfs_mnt *child)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:62</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a06fcbf0dcf67d2b5077d6727e11ce8b0"><div class="ttname"><a href="dfs__mnt_8h.html#a06fcbf0dcf67d2b5077d6727e11ce8b0">dfs_mnt_setflags</a></div><div class="ttdeci">int dfs_mnt_setflags(struct dfs_mnt *mnt, int flags)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:289</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a28e9651de4e16f838255cdd2ca0a8a06"><div class="ttname"><a href="dfs__mnt_8h.html#a28e9651de4e16f838255cdd2ca0a8a06">dfs_mnt_has_child_mnt</a></div><div class="ttdeci">rt_bool_t dfs_mnt_has_child_mnt(struct dfs_mnt *mnt, const char *fullpath)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:431</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a2ac7a3662e8df9f2d2b58b3984bdf6d9"><div class="ttname"><a href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a></div><div class="ttdeci">void(* dfs_mnt_umnt_cb_t)(struct dfs_mnt *mnt)</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:73</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a33c762bdc4796218e14b35248a140529"><div class="ttname"><a href="dfs__mnt_8h.html#a33c762bdc4796218e14b35248a140529">dfs_mnt_dev_lookup</a></div><div class="ttdeci">struct dfs_mnt * dfs_mnt_dev_lookup(rt_device_t dev_id)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:163</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a411b6d43ecb660c045136b8308532818"><div class="ttname"><a href="dfs__mnt_8h.html#a411b6d43ecb660c045136b8308532818">dfs_mnt_unref</a></div><div class="ttdeci">int dfs_mnt_unref(struct dfs_mnt *mnt)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:250</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a65f11fff822f41388308153be5679730"><div class="ttname"><a href="dfs__mnt_8h.html#a65f11fff822f41388308153be5679730">dfs_mnt_lookup</a></div><div class="ttdeci">struct dfs_mnt * dfs_mnt_lookup(const char *path)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:194</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a843a2171a19dc7568805221294a201cc"><div class="ttname"><a href="dfs__mnt_8h.html#a843a2171a19dc7568805221294a201cc">dfs_mnt_get_mounted_path</a></div><div class="ttdeci">const char * dfs_mnt_get_mounted_path(struct rt_device *device)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:381</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a8a952647c4bdc2ac6c5786dc772201b3"><div class="ttname"><a href="dfs__mnt_8h.html#a8a952647c4bdc2ac6c5786dc772201b3">dfs_mnt_destroy</a></div><div class="ttdeci">int dfs_mnt_destroy(struct dfs_mnt *mnt)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:304</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_a8e94506fe68d7c6f20baaa777ca02533"><div class="ttname"><a href="dfs__mnt_8h.html#a8e94506fe68d7c6f20baaa777ca02533">dfs_mnt_foreach</a></div><div class="ttdeci">int dfs_mnt_foreach(struct dfs_mnt *(*func)(struct dfs_mnt *mnt, void *parameter), void *parameter)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:465</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_ad5898f11d9fcbc8b4d800607df65c680"><div class="ttname"><a href="dfs__mnt_8h.html#ad5898f11d9fcbc8b4d800607df65c680">dfs_mnt_list</a></div><div class="ttdeci">int dfs_mnt_list(struct dfs_mnt *mnt)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:452</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_ada48ca62669281d48fd3633e7caa2371"><div class="ttname"><a href="dfs__mnt_8h.html#ada48ca62669281d48fd3633e7caa2371">dfs_mnt_umount_iter</a></div><div class="ttdeci">int dfs_mnt_umount_iter(rt_bool_t(*filter)(struct dfs_mnt *mnt, void *parameter), void *parameter)</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_af1ad6c48aafbb70018e7980a2b186df6"><div class="ttname"><a href="dfs__mnt_8h.html#af1ad6c48aafbb70018e7980a2b186df6">dfs_mnt_create</a></div><div class="ttdeci">struct dfs_mnt * dfs_mnt_create(const char *path)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:41</div></div>
+<div class="ttc" id="adfs__mnt_8h_html_afeda8e6e3efe5c527f272d5f2f746799"><div class="ttname"><a href="dfs__mnt_8h.html#afeda8e6e3efe5c527f272d5f2f746799">dfs_mnt_ref</a></div><div class="ttdeci">struct dfs_mnt * dfs_mnt_ref(struct dfs_mnt *mnt)</div><div class="ttdef"><b>Definition</b> dfs_mnt.c:239</div></div>
+<div class="ttc" id="agroup__group___kernel_object_html_gaef913773c621b3b7e95a1952c910469a"><div class="ttname"><a href="group__group___kernel_object.html#gaef913773c621b3b7e95a1952c910469a">RT_OBJECT_HOOKLIST_DECLARE</a></div><div class="ttdeci">#define RT_OBJECT_HOOKLIST_DECLARE(handler_type, name)</div><div class="ttdef"><b>Definition</b> rtdef.h:509</div></div>
+<div class="ttc" id="artservice_8h_html"><div class="ttname"><a href="rtservice_8h.html">rtservice.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a3e03a3519ef7e33d13ebd34c482db49c"><div class="ttname"><a href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a></div><div class="ttdeci">int rt_bool_t</div><div class="ttdef"><b>Definition</b> rttypes.h:41</div></div>
+<div class="ttc" id="arttypes_8h_html_a82bef06cae81d9d7d01a8aa0b8c936be"><div class="ttname"><a href="rttypes_8h.html#a82bef06cae81d9d7d01a8aa0b8c936be">rt_atomic_t</a></div><div class="ttdeci">rt_base_t rt_atomic_t</div><div class="ttdef"><b>Definition</b> rttypes.h:111</div></div>
+<div class="ttc" id="astructdfs__dentry_html"><div class="ttname"><a href="structdfs__dentry.html">dfs_dentry</a></div><div class="ttdef"><b>Definition</b> dfs_dentry.h:26</div></div>
+<div class="ttc" id="astructdfs__filesystem__ops_html"><div class="ttname"><a href="structdfs__filesystem__ops.html">dfs_filesystem_ops</a></div><div class="ttdef"><b>Definition</b> dfs_fs.h:81</div></div>
+<div class="ttc" id="astructdfs__mnt_html"><div class="ttname"><a href="structdfs__mnt.html">dfs_mnt</a></div><div class="ttdef"><b>Definition</b> dfs_mnt.h:27</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a00d0039c371ad56a0385fa31dd208f65"><div class="ttname"><a href="structdfs__mnt.html#a00d0039c371ad56a0385fa31dd208f65">dfs_mnt::fullpath</a></div><div class="ttdeci">char * fullpath</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:33</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a02a1004642abab2923c76e75d54ffab2"><div class="ttname"><a href="structdfs__mnt.html#a02a1004642abab2923c76e75d54ffab2">dfs_mnt::data</a></div><div class="ttdeci">void * data</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:50</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a02d82819802db6ef240c45710db6d6a3"><div class="ttname"><a href="structdfs__mnt.html#a02d82819802db6ef240c45710db6d6a3">dfs_mnt::dev_id</a></div><div class="ttdeci">rt_device_t dev_id</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:47</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a38f333080bd60a2d2dcad55cecc5e0b5"><div class="ttname"><a href="structdfs__mnt.html#a38f333080bd60a2d2dcad55cecc5e0b5">dfs_mnt::sibling</a></div><div class="ttdeci">rt_list_t sibling</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:30</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a8d9c090f4e26e3c2381d405ceef6e860"><div class="ttname"><a href="structdfs__mnt.html#a8d9c090f4e26e3c2381d405ceef6e860">dfs_mnt::flags</a></div><div class="ttdeci">int flags</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:34</div></div>
+<div class="ttc" id="astructdfs__mnt_html_a9dc3bdec44acc22fee710ac12414c04c"><div class="ttname"><a href="structdfs__mnt.html#a9dc3bdec44acc22fee710ac12414c04c">dfs_mnt::fs_ops</a></div><div class="ttdeci">const struct dfs_filesystem_ops * fs_ops</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:48</div></div>
+<div class="ttc" id="astructdfs__mnt_html_ab76406a0ba3f4900e69d269ea1c9a5e3"><div class="ttname"><a href="structdfs__mnt.html#ab76406a0ba3f4900e69d269ea1c9a5e3">dfs_mnt::child</a></div><div class="ttdeci">rt_list_t child</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:31</div></div>
+<div class="ttc" id="astructdfs__mnt_html_ac5fbb889872a6933ea151089252410a4"><div class="ttname"><a href="structdfs__mnt.html#ac5fbb889872a6933ea151089252410a4">dfs_mnt::ref_count</a></div><div class="ttdeci">rt_atomic_t ref_count</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:45</div></div>
+<div class="ttc" id="astructdfs__mnt_html_ae4a3d5fd2b72c9038ad781d16117fe6e"><div class="ttname"><a href="structdfs__mnt.html#ae4a3d5fd2b72c9038ad781d16117fe6e">dfs_mnt::parent</a></div><div class="ttdeci">struct dfs_mnt * parent</div><div class="ttdef"><b>Definition</b> dfs_mnt.h:28</div></div>
+<div class="ttc" id="astructrt__device_html"><div class="ttname"><a href="structrt__device.html">rt_device</a></div><div class="ttdef"><b>Definition</b> rtdef.h:1373</div></div>
+<div class="ttc" id="astructrt__list__node_html"><div class="ttname"><a href="structrt__list__node.html">rt_list_node</a></div><div class="ttdef"><b>Definition</b> rttypes.h:126</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_88fad670f0983a8d34917f1a982db765.html">dfs</a></li><li class="navelem"><a class="el" href="dir_0315ccb147cbbd68fff85702afb63e70.html">dfs_v2</a></li><li class="navelem"><a class="el" href="dir_89df34ed40a6a7fa38bf14ddadaf6de0.html">include</a></li><li class="navelem"><a class="el" href="dfs__mnt_8h.html">dfs_mnt.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

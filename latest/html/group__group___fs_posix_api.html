@@ -1,0 +1,1975 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: Group_FsPosixApi</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group___fs_posix_api.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Group_FsPosixApi</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga301749b9aa4b9416c329bb8b19345216" id="r_ga301749b9aa4b9416c329bb8b19345216"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga301749b9aa4b9416c329bb8b19345216">AT_FDCWD</a>&#160;&#160;&#160;(-100)</td></tr>
+<tr class="separator:ga301749b9aa4b9416c329bb8b19345216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga94873fa89201b877351b663b9f5b040d" id="r_ga94873fa89201b877351b663b9f5b040d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga94873fa89201b877351b663b9f5b040d">open</a> (const char *file, int flags,...)</td></tr>
+<tr class="separator:ga94873fa89201b877351b663b9f5b040d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fcbedf40cd555214643bdeb43e726f2" id="r_ga5fcbedf40cd555214643bdeb43e726f2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga5fcbedf40cd555214643bdeb43e726f2">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga94873fa89201b877351b663b9f5b040d">open</a>)</td></tr>
+<tr class="separator:ga5fcbedf40cd555214643bdeb43e726f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07762abe1a0ed5e470177abe391f08cd" id="r_ga07762abe1a0ed5e470177abe391f08cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga07762abe1a0ed5e470177abe391f08cd">openat</a> (int dirfd, const char *path, int flag,...)</td></tr>
+<tr class="memdesc:ga07762abe1a0ed5e470177abe391f08cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens a file relative to a directory file descriptor.  <br /></td></tr>
+<tr class="separator:ga07762abe1a0ed5e470177abe391f08cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9620805b205f439cd8c11194b6b25064" id="r_ga9620805b205f439cd8c11194b6b25064"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga9620805b205f439cd8c11194b6b25064">utimensat</a> (int __fd, const char *__path, const struct timespec __times[2], int __flags)</td></tr>
+<tr class="separator:ga9620805b205f439cd8c11194b6b25064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafddc24a65767ae35f275be8ccf53e036" id="r_gafddc24a65767ae35f275be8ccf53e036"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gafddc24a65767ae35f275be8ccf53e036">creat</a> (const char *path, mode_t mode)</td></tr>
+<tr class="separator:gafddc24a65767ae35f275be8ccf53e036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65b0c570dd4a3e63d9385be76b6a24da" id="r_ga65b0c570dd4a3e63d9385be76b6a24da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga65b0c570dd4a3e63d9385be76b6a24da">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gafddc24a65767ae35f275be8ccf53e036">creat</a>)</td></tr>
+<tr class="separator:ga65b0c570dd4a3e63d9385be76b6a24da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafbcde67669a1b96577e735ddebd8634" id="r_gaafbcde67669a1b96577e735ddebd8634"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaafbcde67669a1b96577e735ddebd8634">close</a> (int fd)</td></tr>
+<tr class="separator:gaafbcde67669a1b96577e735ddebd8634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga870a4b6c82ebb4d3e64351a50174e5ff" id="r_ga870a4b6c82ebb4d3e64351a50174e5ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga870a4b6c82ebb4d3e64351a50174e5ff">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gaafbcde67669a1b96577e735ddebd8634">close</a>)</td></tr>
+<tr class="separator:ga870a4b6c82ebb4d3e64351a50174e5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1301f5639d6acac2e7138ae391e87a2d" id="r_ga1301f5639d6acac2e7138ae391e87a2d"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> (int fd, void *buf, size_t len)</td></tr>
+<tr class="separator:ga1301f5639d6acac2e7138ae391e87a2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab18e32b79a60a8e6a7e367cd2ef18449" id="r_gab18e32b79a60a8e6a7e367cd2ef18449"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gab18e32b79a60a8e6a7e367cd2ef18449">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a>)</td></tr>
+<tr class="separator:gab18e32b79a60a8e6a7e367cd2ef18449"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga002bcdf1c8657ced6227e79db68f883d" id="r_ga002bcdf1c8657ced6227e79db68f883d"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga002bcdf1c8657ced6227e79db68f883d">write</a> (int fd, const void *buf, size_t len)</td></tr>
+<tr class="separator:ga002bcdf1c8657ced6227e79db68f883d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08ac5ad08862de19b789d36e6252eb8a" id="r_ga08ac5ad08862de19b789d36e6252eb8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga08ac5ad08862de19b789d36e6252eb8a">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga002bcdf1c8657ced6227e79db68f883d">write</a>)</td></tr>
+<tr class="separator:ga08ac5ad08862de19b789d36e6252eb8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bd74caed008a66808d92d57fa74d9f6" id="r_ga8bd74caed008a66808d92d57fa74d9f6"><td class="memItemLeft" align="right" valign="top">off_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga8bd74caed008a66808d92d57fa74d9f6">lseek</a> (int fd, off_t offset, int whence)</td></tr>
+<tr class="separator:ga8bd74caed008a66808d92d57fa74d9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57570e8691310caaae479a28cb2d77bc" id="r_ga57570e8691310caaae479a28cb2d77bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga57570e8691310caaae479a28cb2d77bc">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga8bd74caed008a66808d92d57fa74d9f6">lseek</a>)</td></tr>
+<tr class="separator:ga57570e8691310caaae479a28cb2d77bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d1fdb1808b26467dc9ec0d61652595d" id="r_ga2d1fdb1808b26467dc9ec0d61652595d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga2d1fdb1808b26467dc9ec0d61652595d">rename</a> (const char *old_file, const char *new_file)</td></tr>
+<tr class="separator:ga2d1fdb1808b26467dc9ec0d61652595d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9254848efd9d625404d53236507aa332" id="r_ga9254848efd9d625404d53236507aa332"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga9254848efd9d625404d53236507aa332">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga2d1fdb1808b26467dc9ec0d61652595d">rename</a>)</td></tr>
+<tr class="separator:ga9254848efd9d625404d53236507aa332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf3cee068f32a919cdd638e0578c1e5f8" id="r_gaf3cee068f32a919cdd638e0578c1e5f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaf3cee068f32a919cdd638e0578c1e5f8">unlink</a> (const char *pathname)</td></tr>
+<tr class="separator:gaf3cee068f32a919cdd638e0578c1e5f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62eb9aba4ed849671a485d81934b03c6" id="r_ga62eb9aba4ed849671a485d81934b03c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga62eb9aba4ed849671a485d81934b03c6">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gaf3cee068f32a919cdd638e0578c1e5f8">unlink</a>)</td></tr>
+<tr class="separator:ga62eb9aba4ed849671a485d81934b03c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac21b705a5ebd42c4c46363250ab817bc" id="r_gac21b705a5ebd42c4c46363250ab817bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gac21b705a5ebd42c4c46363250ab817bc">stat</a> (const char *file, struct stat *buf)</td></tr>
+<tr class="separator:gac21b705a5ebd42c4c46363250ab817bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b6146108036454e1b00ac8829272fcd" id="r_ga5b6146108036454e1b00ac8829272fcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga5b6146108036454e1b00ac8829272fcd">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gac21b705a5ebd42c4c46363250ab817bc">stat</a>)</td></tr>
+<tr class="separator:ga5b6146108036454e1b00ac8829272fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1759a877da2f37512096f3a491e4112" id="r_gac1759a877da2f37512096f3a491e4112"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gac1759a877da2f37512096f3a491e4112">fstat</a> (int fildes, struct <a class="el" href="group__group___fs_posix_api.html#gac21b705a5ebd42c4c46363250ab817bc">stat</a> *buf)</td></tr>
+<tr class="separator:gac1759a877da2f37512096f3a491e4112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3672c591fd51cfbabdad20697d8ec00e" id="r_ga3672c591fd51cfbabdad20697d8ec00e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga3672c591fd51cfbabdad20697d8ec00e">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gac1759a877da2f37512096f3a491e4112">fstat</a>)</td></tr>
+<tr class="separator:ga3672c591fd51cfbabdad20697d8ec00e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga66e7cc4d869f1acc169fc67468d21162" id="r_ga66e7cc4d869f1acc169fc67468d21162"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga66e7cc4d869f1acc169fc67468d21162">fsync</a> (int fildes)</td></tr>
+<tr class="separator:ga66e7cc4d869f1acc169fc67468d21162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeecb44b77222a5f53d760889a6f062cd" id="r_gaeecb44b77222a5f53d760889a6f062cd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaeecb44b77222a5f53d760889a6f062cd">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga66e7cc4d869f1acc169fc67468d21162">fsync</a>)</td></tr>
+<tr class="separator:gaeecb44b77222a5f53d760889a6f062cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfc4bf677fc9f8be66d9624175cb3775" id="r_gacfc4bf677fc9f8be66d9624175cb3775"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gacfc4bf677fc9f8be66d9624175cb3775">fcntl</a> (int fildes, int cmd,...)</td></tr>
+<tr class="separator:gacfc4bf677fc9f8be66d9624175cb3775"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24a1f16c46bc1267f15c055e848e7af7" id="r_ga24a1f16c46bc1267f15c055e848e7af7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga24a1f16c46bc1267f15c055e848e7af7">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gacfc4bf677fc9f8be66d9624175cb3775">fcntl</a>)</td></tr>
+<tr class="separator:ga24a1f16c46bc1267f15c055e848e7af7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a417d26511063dead927c201c3d037c" id="r_ga8a417d26511063dead927c201c3d037c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga8a417d26511063dead927c201c3d037c">ioctl</a> (int fildes, int cmd,...)</td></tr>
+<tr class="separator:ga8a417d26511063dead927c201c3d037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga895e80d1cbc3c052b91eb42c7f72232b" id="r_ga895e80d1cbc3c052b91eb42c7f72232b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga895e80d1cbc3c052b91eb42c7f72232b">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga8a417d26511063dead927c201c3d037c">ioctl</a>)</td></tr>
+<tr class="separator:ga895e80d1cbc3c052b91eb42c7f72232b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fb7c60877eacbfbd66eff04533ab0fe" id="r_ga0fb7c60877eacbfbd66eff04533ab0fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga0fb7c60877eacbfbd66eff04533ab0fe">ftruncate</a> (int fd, off_t length)</td></tr>
+<tr class="separator:ga0fb7c60877eacbfbd66eff04533ab0fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga904daf7f314b5d81f1de289d29b70950" id="r_ga904daf7f314b5d81f1de289d29b70950"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga904daf7f314b5d81f1de289d29b70950">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga0fb7c60877eacbfbd66eff04533ab0fe">ftruncate</a>)</td></tr>
+<tr class="separator:ga904daf7f314b5d81f1de289d29b70950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7af18cc5fa39f42a3be1bf1eb24119d" id="r_gae7af18cc5fa39f42a3be1bf1eb24119d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gae7af18cc5fa39f42a3be1bf1eb24119d">statfs</a> (const char *path, struct statfs *buf)</td></tr>
+<tr class="separator:gae7af18cc5fa39f42a3be1bf1eb24119d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga772f91b508ed9d81d8b4255021087922" id="r_ga772f91b508ed9d81d8b4255021087922"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga772f91b508ed9d81d8b4255021087922">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gae7af18cc5fa39f42a3be1bf1eb24119d">statfs</a>)</td></tr>
+<tr class="separator:ga772f91b508ed9d81d8b4255021087922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f3bf977bc775035fd68751364bd1189" id="r_ga5f3bf977bc775035fd68751364bd1189"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga5f3bf977bc775035fd68751364bd1189">fstatfs</a> (int fildes, struct <a class="el" href="group__group___fs_posix_api.html#gae7af18cc5fa39f42a3be1bf1eb24119d">statfs</a> *buf)</td></tr>
+<tr class="separator:ga5f3bf977bc775035fd68751364bd1189"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab25951e72d145609f25edb76a1559888" id="r_gab25951e72d145609f25edb76a1559888"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gab25951e72d145609f25edb76a1559888">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga5f3bf977bc775035fd68751364bd1189">fstatfs</a>)</td></tr>
+<tr class="separator:gab25951e72d145609f25edb76a1559888"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga548e5b744ca2e97beb61ad7aa41114e2" id="r_ga548e5b744ca2e97beb61ad7aa41114e2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga548e5b744ca2e97beb61ad7aa41114e2">mkdir</a> (const char *path, mode_t mode)</td></tr>
+<tr class="separator:ga548e5b744ca2e97beb61ad7aa41114e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6a44da57f58a9f0be9eb89116f509fa" id="r_gaa6a44da57f58a9f0be9eb89116f509fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaa6a44da57f58a9f0be9eb89116f509fa">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga548e5b744ca2e97beb61ad7aa41114e2">mkdir</a>)</td></tr>
+<tr class="separator:gaa6a44da57f58a9f0be9eb89116f509fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f15896e06babeff5e3ef1dc506bcb01" id="r_ga5f15896e06babeff5e3ef1dc506bcb01"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga5f15896e06babeff5e3ef1dc506bcb01">FINSH_FUNCTION_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga548e5b744ca2e97beb61ad7aa41114e2">mkdir</a>, create a directory)</td></tr>
+<tr class="separator:ga5f15896e06babeff5e3ef1dc506bcb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga570282ae7ba596263ec812b368d99b34" id="r_ga570282ae7ba596263ec812b368d99b34"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga570282ae7ba596263ec812b368d99b34">rmdir</a> (const char *pathname)</td></tr>
+<tr class="separator:ga570282ae7ba596263ec812b368d99b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa36f310e8c37f7c2ec33c4c663b51965" id="r_gaa36f310e8c37f7c2ec33c4c663b51965"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaa36f310e8c37f7c2ec33c4c663b51965">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga570282ae7ba596263ec812b368d99b34">rmdir</a>)</td></tr>
+<tr class="separator:gaa36f310e8c37f7c2ec33c4c663b51965"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fcc7ee570eeaee1fe6264604b91257f" id="r_ga4fcc7ee570eeaee1fe6264604b91257f"><td class="memItemLeft" align="right" valign="top">DIR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga4fcc7ee570eeaee1fe6264604b91257f">opendir</a> (const char *name)</td></tr>
+<tr class="separator:ga4fcc7ee570eeaee1fe6264604b91257f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4387096a77190a9defa47dace438eab0" id="r_ga4387096a77190a9defa47dace438eab0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga4387096a77190a9defa47dace438eab0">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga4fcc7ee570eeaee1fe6264604b91257f">opendir</a>)</td></tr>
+<tr class="separator:ga4387096a77190a9defa47dace438eab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b3c134193620bc4adb692a71f8ac019" id="r_ga3b3c134193620bc4adb692a71f8ac019"><td class="memItemLeft" align="right" valign="top">struct dirent *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga3b3c134193620bc4adb692a71f8ac019">readdir</a> (DIR *d)</td></tr>
+<tr class="separator:ga3b3c134193620bc4adb692a71f8ac019"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabbcee19ca2142972ee54059e9dc34274" id="r_gabbcee19ca2142972ee54059e9dc34274"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gabbcee19ca2142972ee54059e9dc34274">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga3b3c134193620bc4adb692a71f8ac019">readdir</a>)</td></tr>
+<tr class="separator:gabbcee19ca2142972ee54059e9dc34274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf08168ca632ba3f9385aa53261ae63d" id="r_gaaf08168ca632ba3f9385aa53261ae63d"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaaf08168ca632ba3f9385aa53261ae63d">telldir</a> (DIR *d)</td></tr>
+<tr class="separator:gaaf08168ca632ba3f9385aa53261ae63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga833776cc76ad3dc50ad9bad4ca33f49c" id="r_ga833776cc76ad3dc50ad9bad4ca33f49c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga833776cc76ad3dc50ad9bad4ca33f49c">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gaaf08168ca632ba3f9385aa53261ae63d">telldir</a>)</td></tr>
+<tr class="separator:ga833776cc76ad3dc50ad9bad4ca33f49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d3df57fe3a6d2737e7c3bd1c269304b" id="r_ga5d3df57fe3a6d2737e7c3bd1c269304b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga5d3df57fe3a6d2737e7c3bd1c269304b">seekdir</a> (DIR *d, long offset)</td></tr>
+<tr class="separator:ga5d3df57fe3a6d2737e7c3bd1c269304b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga858b6c39b7483eee843127267925ba60" id="r_ga858b6c39b7483eee843127267925ba60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga858b6c39b7483eee843127267925ba60">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga5d3df57fe3a6d2737e7c3bd1c269304b">seekdir</a>)</td></tr>
+<tr class="separator:ga858b6c39b7483eee843127267925ba60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga08e6a89050229d246d07d9e17d57cb29" id="r_ga08e6a89050229d246d07d9e17d57cb29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga08e6a89050229d246d07d9e17d57cb29">rewinddir</a> (DIR *d)</td></tr>
+<tr class="separator:ga08e6a89050229d246d07d9e17d57cb29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3b3c8252c80e4e90d213215d2d4aac6e" id="r_ga3b3c8252c80e4e90d213215d2d4aac6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga3b3c8252c80e4e90d213215d2d4aac6e">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga08e6a89050229d246d07d9e17d57cb29">rewinddir</a>)</td></tr>
+<tr class="separator:ga3b3c8252c80e4e90d213215d2d4aac6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga058e669d865116ec6419ea3a52207830" id="r_ga058e669d865116ec6419ea3a52207830"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga058e669d865116ec6419ea3a52207830">closedir</a> (DIR *d)</td></tr>
+<tr class="separator:ga058e669d865116ec6419ea3a52207830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c39980edac0cc3409eb681c07a1706c" id="r_ga6c39980edac0cc3409eb681c07a1706c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga6c39980edac0cc3409eb681c07a1706c">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga058e669d865116ec6419ea3a52207830">closedir</a>)</td></tr>
+<tr class="separator:ga6c39980edac0cc3409eb681c07a1706c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6adc1f71f9027c8bdd8e88e8c843049" id="r_gaa6adc1f71f9027c8bdd8e88e8c843049"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaa6adc1f71f9027c8bdd8e88e8c843049">access</a> (const char *path, int amode)</td></tr>
+<tr class="separator:gaa6adc1f71f9027c8bdd8e88e8c843049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56f653c54be70947404b5c7931022624" id="r_ga56f653c54be70947404b5c7931022624"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga56f653c54be70947404b5c7931022624">setcwd</a> (char *buf)</td></tr>
+<tr class="separator:ga56f653c54be70947404b5c7931022624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82f113f11470fbb3f8606ad366ba447c" id="r_ga82f113f11470fbb3f8606ad366ba447c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga82f113f11470fbb3f8606ad366ba447c">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#ga56f653c54be70947404b5c7931022624">setcwd</a>)</td></tr>
+<tr class="separator:ga82f113f11470fbb3f8606ad366ba447c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccd163a8f517941cc628473b4812e0a1" id="r_gaccd163a8f517941cc628473b4812e0a1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaccd163a8f517941cc628473b4812e0a1">getcwd</a> (char *buf, size_t size)</td></tr>
+<tr class="separator:gaccd163a8f517941cc628473b4812e0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae17e02dc21ce2d8d4a075d757f7906f9" id="r_gae17e02dc21ce2d8d4a075d757f7906f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gae17e02dc21ce2d8d4a075d757f7906f9">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gaccd163a8f517941cc628473b4812e0a1">getcwd</a>)</td></tr>
+<tr class="separator:gae17e02dc21ce2d8d4a075d757f7906f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeac0e21c369f7387cc3f8a9f55b03329" id="r_gaeac0e21c369f7387cc3f8a9f55b03329"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gaeac0e21c369f7387cc3f8a9f55b03329">pread</a> (int fd, void *buf, size_t len, off_t offset)</td></tr>
+<tr class="separator:gaeac0e21c369f7387cc3f8a9f55b03329"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31ba375d097a84c710cc059e0f774559" id="r_ga31ba375d097a84c710cc059e0f774559"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#ga31ba375d097a84c710cc059e0f774559">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gaeac0e21c369f7387cc3f8a9f55b03329">pread</a>)</td></tr>
+<tr class="separator:ga31ba375d097a84c710cc059e0f774559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae70b9256c770cb7731fb9fb31f69e9cd" id="r_gae70b9256c770cb7731fb9fb31f69e9cd"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gae70b9256c770cb7731fb9fb31f69e9cd">pwrite</a> (int fd, const void *buf, size_t len, off_t offset)</td></tr>
+<tr class="separator:gae70b9256c770cb7731fb9fb31f69e9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad4f4c67a178fbbb693657940f59486e7" id="r_gad4f4c67a178fbbb693657940f59486e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___fs_posix_api.html#gad4f4c67a178fbbb693657940f59486e7">RTM_EXPORT</a> (<a class="el" href="group__group___fs_posix_api.html#gae70b9256c770cb7731fb9fb31f69e9cd">pwrite</a>)</td></tr>
+<tr class="separator:gad4f4c67a178fbbb693657940f59486e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga301749b9aa4b9416c329bb8b19345216" name="ga301749b9aa4b9416c329bb8b19345216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga301749b9aa4b9416c329bb8b19345216">&#9670;&#160;</a></span>AT_FDCWD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define AT_FDCWD&#160;&#160;&#160;(-100)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gaa6adc1f71f9027c8bdd8e88e8c843049" name="gaa6adc1f71f9027c8bdd8e88e8c843049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6adc1f71f9027c8bdd8e88e8c843049">&#9670;&#160;</a></span>access()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int access </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>amode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which shall check the file named by the pathname pointed to by the path argument for accessibility according to the bit pattern contained in amode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the specified file/dir path. </td></tr>
+    <tr><td class="paramname">amode</td><td>the value is either the bitwise-inclusive OR of the access permissions to be checked (R_OK, W_OK, X_OK) or the existence test (F_OK). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaafbcde67669a1b96577e735ddebd8634" name="gaafbcde67669a1b96577e735ddebd8634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaafbcde67669a1b96577e735ddebd8634">&#9670;&#160;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will close the open file descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga058e669d865116ec6419ea3a52207830" name="ga058e669d865116ec6419ea3a52207830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga058e669d865116ec6419ea3a52207830">&#9670;&#160;</a></span>closedir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int closedir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will close a directory stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the directory stream.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="gafddc24a65767ae35f275be8ccf53e036" name="gafddc24a65767ae35f275be8ccf53e036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafddc24a65767ae35f275be8ccf53e036">&#9670;&#160;</a></span>creat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int creat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will create a new file or rewrite an existing one</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path name of file. </td></tr>
+    <tr><td class="paramname">mode</td><td>the file permission bits to be used in creating the file (not used, can be 0)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the non-negative integer on successful open, others for failed. </dd></dl>
+
+</div>
+</div>
+<a id="gacfc4bf677fc9f8be66d9624175cb3775" name="gacfc4bf677fc9f8be66d9624175cb3775"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfc4bf677fc9f8be66d9624175cb3775">&#9670;&#160;</a></span>fcntl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fcntl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which shall perform a variety of control functions on devices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fildes</td><td>the file description </td></tr>
+    <tr><td class="paramname">cmd</td><td>the specified command, Common values include:<ul>
+<li><code>F_DUPFD</code>: Duplicate a file descriptor.</li>
+<li><code>F_GETFD</code>: Get the file descriptor flags.</li>
+<li><code>F_SETFD</code>: Set the file descriptor flags.</li>
+<li><code>F_GETFL</code>: Get the file status flags.</li>
+<li><code>F_SETFL</code>: Set the file status flags. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">...</td><td>represents the additional information that is needed by this specific device to perform the requested function. For example:<ul>
+<li>When <code>cmd</code> is <code>F_SETFL</code>, an additional integer argument specifies the new status flags.</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful completion. Otherwise, -1 shall be returned and errno set to indicate the error. </dd></dl>
+
+</div>
+</div>
+<a id="ga5f15896e06babeff5e3ef1dc506bcb01" name="ga5f15896e06babeff5e3ef1dc506bcb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f15896e06babeff5e3ef1dc506bcb01">&#9670;&#160;</a></span>FINSH_FUNCTION_EXPORT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FINSH_FUNCTION_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga548e5b744ca2e97beb61ad7aa41114e2">mkdir</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">create a&#160;</td>
+          <td class="paramname"><em>directory</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac1759a877da2f37512096f3a491e4112" name="gac1759a877da2f37512096f3a491e4112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1759a877da2f37512096f3a491e4112">&#9670;&#160;</a></span>fstat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fstat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="group__group___fs_posix_api.html#gac21b705a5ebd42c4c46363250ab817bc">stat</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will get file status.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fildes</td><td>the file description </td></tr>
+    <tr><td class="paramname">buf</td><td>the data buffer to save stat description.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga5f3bf977bc775035fd68751364bd1189" name="ga5f3bf977bc775035fd68751364bd1189"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f3bf977bc775035fd68751364bd1189">&#9670;&#160;</a></span>fstatfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fstatfs </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="group__group___fs_posix_api.html#gae7af18cc5fa39f42a3be1bf1eb24119d">statfs</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will return the information about a mounted file system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fildes</td><td>the file description. </td></tr>
+    <tr><td class="paramname">buf</td><td>the buffer to save the returned information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, others on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga66e7cc4d869f1acc169fc67468d21162" name="ga66e7cc4d869f1acc169fc67468d21162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66e7cc4d869f1acc169fc67468d21162">&#9670;&#160;</a></span>fsync()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fsync </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which shall request that all data for the open file descriptor named by fildes is to be transferred to the storage device associated with the file described by fildes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fildes</td><td>the file description</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful completion. Otherwise, -1 shall be returned and errno set to indicate the error. </dd></dl>
+
+</div>
+</div>
+<a id="ga0fb7c60877eacbfbd66eff04533ab0fe" name="ga0fb7c60877eacbfbd66eff04533ab0fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fb7c60877eacbfbd66eff04533ab0fe">&#9670;&#160;</a></span>ftruncate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ftruncate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which cause the regular file referenced by fd to be truncated to a size of precisely length bytes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor. </td></tr>
+    <tr><td class="paramname">length</td><td>the length to be truncated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Upon successful completion, <a class="el" href="group__group___fs_posix_api.html#ga0fb7c60877eacbfbd66eff04533ab0fe">ftruncate()</a> shall return 0; otherwise, -1 shall be returned and errno set to indicate the error. </dd></dl>
+
+</div>
+</div>
+<a id="gaccd163a8f517941cc628473b4812e0a1" name="gaccd163a8f517941cc628473b4812e0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaccd163a8f517941cc628473b4812e0a1">&#9670;&#160;</a></span>getcwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * getcwd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will return current working directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>the returned current directory. </td></tr>
+    <tr><td class="paramname">size</td><td>the buffer size.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the returned current directory. </dd></dl>
+
+</div>
+</div>
+<a id="ga8a417d26511063dead927c201c3d037c" name="ga8a417d26511063dead927c201c3d037c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a417d26511063dead927c201c3d037c">&#9670;&#160;</a></span>ioctl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ioctl </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fildes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which shall perform a variety of control functions on devices.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fildes</td><td>the file description </td></tr>
+    <tr><td class="paramname">cmd</td><td>the specified command </td></tr>
+    <tr><td class="paramname">...</td><td>represents the additional information that is needed by this specific device to perform the requested function.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful completion. Otherwise, -1 shall be returned and errno set to indicate the error. </dd></dl>
+
+</div>
+</div>
+<a id="ga8bd74caed008a66808d92d57fa74d9f6" name="ga8bd74caed008a66808d92d57fa74d9f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8bd74caed008a66808d92d57fa74d9f6">&#9670;&#160;</a></span>lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">off_t lseek </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will Reposition the file offset for an open file descriptor.</p>
+<p>The <code>lseek</code> function sets the file offset for the file descriptor <code>fd</code> to a new value, determined by the <code>offset</code> and <code>whence</code> parameters. It can be used to seek to specific positions in a file for reading or writing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor. </td></tr>
+    <tr><td class="paramname">offset</td><td>The offset, in bytes, to set the file position. The meaning of <code>offset</code> depends on the value of <code>whence</code>. </td></tr>
+    <tr><td class="paramname">whence</td><td>the directive of seek. It can be one of:<ul>
+<li><code>SEEK_SET</code>: Set the offset to <code>offset</code> bytes from the beginning of the file.</li>
+<li><code>SEEK_CUR</code>: Set the offset to its current location plus <code>offset</code> bytes.</li>
+<li><code>SEEK_END</code>: Set the offset to the size of the file plus <code>offset</code> bytes.</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the resulting read/write position in the file, or -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga548e5b744ca2e97beb61ad7aa41114e2" name="ga548e5b744ca2e97beb61ad7aa41114e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga548e5b744ca2e97beb61ad7aa41114e2">&#9670;&#160;</a></span>mkdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mkdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">mode_t&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will make a directory</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the directory path to be made. </td></tr>
+    <tr><td class="paramname">mode</td><td>The permission mode for the new directory (unused here, can be set to 0).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, others on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga94873fa89201b877351b663b9f5b040d" name="ga94873fa89201b877351b663b9f5b040d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga94873fa89201b877351b663b9f5b040d">&#9670;&#160;</a></span>open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int open </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will open a file and return a file descriptor according specified flags.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the path name of file. </td></tr>
+    <tr><td class="paramname">flags</td><td>the file open flags. Common values include:<ul>
+<li>Access modes (mutually exclusive):<ul>
+<li><code>O_RDONLY</code>: Open for read-only access.</li>
+<li><code>O_WRONLY</code>: Open for write-only access.</li>
+<li><code>O_RDWR</code>: Open for both reading and writing.</li>
+</ul>
+</li>
+<li>File status flags (can be combined with bitwise OR <code>|</code>):<ul>
+<li><code>O_CREAT</code>: Create the file if it does not exist. Requires a <code>mode</code> argument.</li>
+<li><code>O_TRUNC</code>: Truncate the file to zero length if it already exists.</li>
+<li><code>O_APPEND</code>: Append writes to the end of the file.</li>
+<li><code>O_EXCL</code>: Ensure that <code>O_CREAT</code> creates the file exclusively.</li>
+<li>Other platform-specific flags</li>
+</ul>
+</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the non-negative integer on successful open, others for failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga07762abe1a0ed5e470177abe391f08cd" name="ga07762abe1a0ed5e470177abe391f08cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07762abe1a0ed5e470177abe391f08cd">&#9670;&#160;</a></span>openat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int openat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dirfd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Opens a file relative to a directory file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dirfd</td><td>The file descriptor of the directory to base the relative path on. </td></tr>
+    <tr><td class="paramname">path</td><td>The path to the file to be opened, relative to the directory specified by <code>dirfd</code>. Can be an absolute path (in which case <code>dirfd</code> is ignored). </td></tr>
+    <tr><td class="paramname">flag</td><td>File access and status flags (e.g., <code>O_RDONLY</code>, <code>O_WRONLY</code>, <code>O_CREAT</code>).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, returns a new file descriptor for the opened file. On failure, returns <code>-1</code> and sets <code>errno</code> to indicate the error.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When using relative paths, ensure <code>dirfd</code> is a valid directory descriptor. When <code>pathname</code> is absolute, the <code>dirfd</code> argument is ignored. </dd></dl>
+
+</div>
+</div>
+<a id="ga4fcc7ee570eeaee1fe6264604b91257f" name="ga4fcc7ee570eeaee1fe6264604b91257f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fcc7ee570eeaee1fe6264604b91257f">&#9670;&#160;</a></span>opendir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DIR * opendir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will open a directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the path name to be open.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the DIR pointer of directory, NULL on open directory failed. </dd></dl>
+
+</div>
+</div>
+<a id="gaeac0e21c369f7387cc3f8a9f55b03329" name="gaeac0e21c369f7387cc3f8a9f55b03329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeac0e21c369f7387cc3f8a9f55b03329">&#9670;&#160;</a></span>pread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t pread </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will read specified data buffer length for an open file descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor. </td></tr>
+    <tr><td class="paramname">buf</td><td>the buffer to save the read data. </td></tr>
+    <tr><td class="paramname">len</td><td>the maximal length of data buffer </td></tr>
+    <tr><td class="paramname">offset</td><td>the file pos</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the actual read data buffer length. If the returned value is 0, it may be reach the end of file, please check errno. </dd></dl>
+
+</div>
+</div>
+<a id="gae70b9256c770cb7731fb9fb31f69e9cd" name="gae70b9256c770cb7731fb9fb31f69e9cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae70b9256c770cb7731fb9fb31f69e9cd">&#9670;&#160;</a></span>pwrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t pwrite </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">off_t&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will write specified data buffer length for an open file descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor </td></tr>
+    <tr><td class="paramname">buf</td><td>the data buffer to be written. </td></tr>
+    <tr><td class="paramname">len</td><td>the data buffer length. </td></tr>
+    <tr><td class="paramname">offset</td><td>the file pos</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the actual written data buffer length. </dd></dl>
+
+</div>
+</div>
+<a id="ga1301f5639d6acac2e7138ae391e87a2d" name="ga1301f5639d6acac2e7138ae391e87a2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1301f5639d6acac2e7138ae391e87a2d">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will read specified data buffer length for an open file descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor. </td></tr>
+    <tr><td class="paramname">buf</td><td>the buffer to save the read data. </td></tr>
+    <tr><td class="paramname">len</td><td>the maximal length of data buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the actual read data buffer length. If the returned value is 0, it may be reach the end of file, please check errno. </dd></dl>
+
+</div>
+</div>
+<a id="ga3b3c134193620bc4adb692a71f8ac019" name="ga3b3c134193620bc4adb692a71f8ac019"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b3c134193620bc4adb692a71f8ac019">&#9670;&#160;</a></span>readdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct dirent * readdir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will return a pointer to a dirent structure representing the next directory entry in the directory stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the directory stream pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the next directory entry, NULL on the end of directory or failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga2d1fdb1808b26467dc9ec0d61652595d" name="ga2d1fdb1808b26467dc9ec0d61652595d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d1fdb1808b26467dc9ec0d61652595d">&#9670;&#160;</a></span>rename()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rename </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>old_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>new_file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will rename old file name to new file name.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">old_file</td><td>the old file name. </td></tr>
+    <tr><td class="paramname">new_file</td><td>the new file name.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed.</dd></dl>
+<p>note: the old and new file name must be belong to a same file system. </p>
+
+</div>
+</div>
+<a id="ga08e6a89050229d246d07d9e17d57cb29" name="ga08e6a89050229d246d07d9e17d57cb29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08e6a89050229d246d07d9e17d57cb29">&#9670;&#160;</a></span>rewinddir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rewinddir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will reset directory stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the directory stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga570282ae7ba596263ec812b368d99b34" name="ga570282ae7ba596263ec812b368d99b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga570282ae7ba596263ec812b368d99b34">&#9670;&#160;</a></span>rmdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rmdir </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will remove a directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathname</td><td>the path name to be removed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, others on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga870a4b6c82ebb4d3e64351a50174e5ff" name="ga870a4b6c82ebb4d3e64351a50174e5ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga870a4b6c82ebb4d3e64351a50174e5ff">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[1/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gaafbcde67669a1b96577e735ddebd8634">close</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga6c39980edac0cc3409eb681c07a1706c" name="ga6c39980edac0cc3409eb681c07a1706c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6c39980edac0cc3409eb681c07a1706c">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[2/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga058e669d865116ec6419ea3a52207830">closedir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga65b0c570dd4a3e63d9385be76b6a24da" name="ga65b0c570dd4a3e63d9385be76b6a24da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65b0c570dd4a3e63d9385be76b6a24da">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[3/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gafddc24a65767ae35f275be8ccf53e036">creat</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga24a1f16c46bc1267f15c055e848e7af7" name="ga24a1f16c46bc1267f15c055e848e7af7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24a1f16c46bc1267f15c055e848e7af7">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[4/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gacfc4bf677fc9f8be66d9624175cb3775">fcntl</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3672c591fd51cfbabdad20697d8ec00e" name="ga3672c591fd51cfbabdad20697d8ec00e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3672c591fd51cfbabdad20697d8ec00e">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[5/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gac1759a877da2f37512096f3a491e4112">fstat</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab25951e72d145609f25edb76a1559888" name="gab25951e72d145609f25edb76a1559888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab25951e72d145609f25edb76a1559888">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[6/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga5f3bf977bc775035fd68751364bd1189">fstatfs</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaeecb44b77222a5f53d760889a6f062cd" name="gaeecb44b77222a5f53d760889a6f062cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeecb44b77222a5f53d760889a6f062cd">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[7/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga66e7cc4d869f1acc169fc67468d21162">fsync</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga904daf7f314b5d81f1de289d29b70950" name="ga904daf7f314b5d81f1de289d29b70950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga904daf7f314b5d81f1de289d29b70950">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[8/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga0fb7c60877eacbfbd66eff04533ab0fe">ftruncate</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae17e02dc21ce2d8d4a075d757f7906f9" name="gae17e02dc21ce2d8d4a075d757f7906f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae17e02dc21ce2d8d4a075d757f7906f9">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[9/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gaccd163a8f517941cc628473b4812e0a1">getcwd</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga895e80d1cbc3c052b91eb42c7f72232b" name="ga895e80d1cbc3c052b91eb42c7f72232b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga895e80d1cbc3c052b91eb42c7f72232b">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[10/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga8a417d26511063dead927c201c3d037c">ioctl</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga57570e8691310caaae479a28cb2d77bc" name="ga57570e8691310caaae479a28cb2d77bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57570e8691310caaae479a28cb2d77bc">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[11/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga8bd74caed008a66808d92d57fa74d9f6">lseek</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa6a44da57f58a9f0be9eb89116f509fa" name="gaa6a44da57f58a9f0be9eb89116f509fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6a44da57f58a9f0be9eb89116f509fa">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[12/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga548e5b744ca2e97beb61ad7aa41114e2">mkdir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5fcbedf40cd555214643bdeb43e726f2" name="ga5fcbedf40cd555214643bdeb43e726f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fcbedf40cd555214643bdeb43e726f2">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[13/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga94873fa89201b877351b663b9f5b040d">open</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4387096a77190a9defa47dace438eab0" name="ga4387096a77190a9defa47dace438eab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4387096a77190a9defa47dace438eab0">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[14/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga4fcc7ee570eeaee1fe6264604b91257f">opendir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga31ba375d097a84c710cc059e0f774559" name="ga31ba375d097a84c710cc059e0f774559"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31ba375d097a84c710cc059e0f774559">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[15/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gaeac0e21c369f7387cc3f8a9f55b03329">pread</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad4f4c67a178fbbb693657940f59486e7" name="gad4f4c67a178fbbb693657940f59486e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad4f4c67a178fbbb693657940f59486e7">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[16/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gae70b9256c770cb7731fb9fb31f69e9cd">pwrite</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab18e32b79a60a8e6a7e367cd2ef18449" name="gab18e32b79a60a8e6a7e367cd2ef18449"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab18e32b79a60a8e6a7e367cd2ef18449">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[17/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabbcee19ca2142972ee54059e9dc34274" name="gabbcee19ca2142972ee54059e9dc34274"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbcee19ca2142972ee54059e9dc34274">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[18/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga3b3c134193620bc4adb692a71f8ac019">readdir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9254848efd9d625404d53236507aa332" name="ga9254848efd9d625404d53236507aa332"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9254848efd9d625404d53236507aa332">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[19/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga2d1fdb1808b26467dc9ec0d61652595d">rename</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3b3c8252c80e4e90d213215d2d4aac6e" name="ga3b3c8252c80e4e90d213215d2d4aac6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b3c8252c80e4e90d213215d2d4aac6e">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[20/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga08e6a89050229d246d07d9e17d57cb29">rewinddir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa36f310e8c37f7c2ec33c4c663b51965" name="gaa36f310e8c37f7c2ec33c4c663b51965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa36f310e8c37f7c2ec33c4c663b51965">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[21/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga570282ae7ba596263ec812b368d99b34">rmdir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga858b6c39b7483eee843127267925ba60" name="ga858b6c39b7483eee843127267925ba60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga858b6c39b7483eee843127267925ba60">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[22/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga5d3df57fe3a6d2737e7c3bd1c269304b">seekdir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga82f113f11470fbb3f8606ad366ba447c" name="ga82f113f11470fbb3f8606ad366ba447c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82f113f11470fbb3f8606ad366ba447c">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[23/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga56f653c54be70947404b5c7931022624">setcwd</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5b6146108036454e1b00ac8829272fcd" name="ga5b6146108036454e1b00ac8829272fcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b6146108036454e1b00ac8829272fcd">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[24/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gac21b705a5ebd42c4c46363250ab817bc">stat</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga772f91b508ed9d81d8b4255021087922" name="ga772f91b508ed9d81d8b4255021087922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga772f91b508ed9d81d8b4255021087922">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[25/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gae7af18cc5fa39f42a3be1bf1eb24119d">statfs</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga833776cc76ad3dc50ad9bad4ca33f49c" name="ga833776cc76ad3dc50ad9bad4ca33f49c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga833776cc76ad3dc50ad9bad4ca33f49c">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[26/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gaaf08168ca632ba3f9385aa53261ae63d">telldir</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga62eb9aba4ed849671a485d81934b03c6" name="ga62eb9aba4ed849671a485d81934b03c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62eb9aba4ed849671a485d81934b03c6">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[27/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#gaf3cee068f32a919cdd638e0578c1e5f8">unlink</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga08ac5ad08862de19b789d36e6252eb8a" name="ga08ac5ad08862de19b789d36e6252eb8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga08ac5ad08862de19b789d36e6252eb8a">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[28/28]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___fs_posix_api.html#ga002bcdf1c8657ced6227e79db68f883d">write</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga5d3df57fe3a6d2737e7c3bd1c269304b" name="ga5d3df57fe3a6d2737e7c3bd1c269304b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5d3df57fe3a6d2737e7c3bd1c269304b">&#9670;&#160;</a></span>seekdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void seekdir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will set position of next directory structure in the directory stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the directory stream. </td></tr>
+    <tr><td class="paramname">offset</td><td>the offset in directory stream. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga56f653c54be70947404b5c7931022624" name="ga56f653c54be70947404b5c7931022624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56f653c54be70947404b5c7931022624">&#9670;&#160;</a></span>setcwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void setcwd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will set current working directory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>the current directory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gac21b705a5ebd42c4c46363250ab817bc" name="gac21b705a5ebd42c4c46363250ab817bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac21b705a5ebd42c4c46363250ab817bc">&#9670;&#160;</a></span>stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int stat </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct stat *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will get file information.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>the file name </td></tr>
+    <tr><td class="paramname">buf</td><td>the data buffer to save stat description.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="gae7af18cc5fa39f42a3be1bf1eb24119d" name="gae7af18cc5fa39f42a3be1bf1eb24119d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7af18cc5fa39f42a3be1bf1eb24119d">&#9670;&#160;</a></span>statfs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int statfs </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct statfs *&#160;</td>
+          <td class="paramname"><em>buf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will return the information about a mounted file system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the path which mounted file system. </td></tr>
+    <tr><td class="paramname">buf</td><td>the buffer to save the returned information.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, others on failed. </dd></dl>
+
+</div>
+</div>
+<a id="gaaf08168ca632ba3f9385aa53261ae63d" name="gaaf08168ca632ba3f9385aa53261ae63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaf08168ca632ba3f9385aa53261ae63d">&#9670;&#160;</a></span>telldir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long telldir </td>
+          <td>(</td>
+          <td class="paramtype">DIR *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will return current location in directory stream.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>the directory stream pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the current location in directory stream. </dd></dl>
+
+</div>
+</div>
+<a id="gaf3cee068f32a919cdd638e0578c1e5f8" name="gaf3cee068f32a919cdd638e0578c1e5f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3cee068f32a919cdd638e0578c1e5f8">&#9670;&#160;</a></span>unlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int unlink </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pathname</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will unlink (remove) a specified path file from file system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathname</td><td>the specified path name to be unlinked.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on successful, -1 on failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga9620805b205f439cd8c11194b6b25064" name="ga9620805b205f439cd8c11194b6b25064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9620805b205f439cd8c11194b6b25064">&#9670;&#160;</a></span>utimensat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int utimensat </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>__path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct timespec&#160;</td>
+          <td class="paramname"><em>__times</em>[2], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga002bcdf1c8657ced6227e79db68f883d" name="ga002bcdf1c8657ced6227e79db68f883d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga002bcdf1c8657ced6227e79db68f883d">&#9670;&#160;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function is a POSIX compliant version, which will write specified data buffer length for an open file descriptor.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fd</td><td>the file descriptor </td></tr>
+    <tr><td class="paramname">buf</td><td>the data buffer to be written. </td></tr>
+    <tr><td class="paramname">len</td><td>the data buffer length.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the actual written data buffer length. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

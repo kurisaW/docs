@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/led.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('led_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">led.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for led.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="led_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2led_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2led_8h" id="acomponents_2drivers_2include_2drivers_2led_8h">
+<area shape="rect" title=" " alt="" coords="175,5,334,45"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="189,93,251,119"/>
+<area shape="poly" title=" " alt="" coords="249,47,233,82,228,79,244,44"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="223,167,287,192"/>
+<area shape="poly" title=" " alt="" coords="261,45,265,79,265,119,261,153,256,153,260,119,259,80,255,46"/>
+<area shape="poly" title=" " alt="" coords="228,118,245,153,241,155,223,120"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="175,240,257,265"/>
+<area shape="poly" title=" " alt="" coords="251,194,231,229,226,227,246,191"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="255,313,335,339"/>
+<area shape="poly" title=" " alt="" coords="261,192,290,299,285,301,255,193"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="87,313,187,339"/>
+<area shape="poly" title=" " alt="" coords="228,194,195,214,165,242,150,271,143,300,138,299,145,269,161,238,192,209,226,190"/>
+<area shape="rect" title=" " alt="" coords="333,240,443,265"/>
+<area shape="poly" title=" " alt="" coords="277,190,355,231,353,236,275,194"/>
+<area shape="poly" title=" " alt="" coords="230,263,274,302,270,306,227,267"/>
+<area shape="poly" title=" " alt="" coords="205,267,162,306,158,302,202,263"/>
+<area shape="rect" title=" " alt="" coords="5,387,88,412"/>
+<area shape="poly" title=" " alt="" coords="256,341,101,385,99,380,254,336"/>
+<area shape="rect" title=" " alt="" coords="113,387,183,412"/>
+<area shape="poly" title=" " alt="" coords="272,341,185,383,183,378,270,336"/>
+<area shape="rect" title=" " alt="" coords="208,387,283,412"/>
+<area shape="poly" title=" " alt="" coords="289,341,263,377,259,374,284,337"/>
+<area shape="rect" title=" " alt="" coords="307,387,381,412"/>
+<area shape="poly" title=" " alt="" coords="305,337,330,374,326,377,301,341"/>
+<area shape="rect" title=" " alt="" coords="405,387,501,412"/>
+<area shape="poly" title=" " alt="" coords="321,336,416,379,414,383,319,341"/>
+<area shape="rect" title=" " alt="" coords="526,387,621,412"/>
+<area shape="poly" title=" " alt="" coords="336,335,516,381,515,386,335,340"/>
+<area shape="rect" title=" " alt="" coords="645,387,744,412"/>
+<area shape="poly" title=" " alt="" coords="335,332,632,384,631,389,334,337"/>
+<area shape="poly" title=" " alt="" coords="124,341,74,380,71,376,121,337"/>
+</map>
+</div>
+</div>
+<p><a href="led_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__led__device.html">rt_led_device</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__led__ops.html">rt_led_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ad0523d06a4f4281bc9f548baf1a2c293" id="r_ad0523d06a4f4281bc9f548baf1a2c293"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a> { <br />
+&#160;&#160;<a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293a5c41a64e78d0eee4ce7e02f560908e27">RT_LED_S_OFF</a>
+, <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293a033e81db0b42b49f4c20f969692040ce">RT_LED_S_ON</a>
+, <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293a55dddb046f248e865c30ad59186e515c">RT_LED_S_TOGGLE</a>
+, <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293a3a863766c6d250fa4ca7a0d793d6d672">RT_LED_S_BLINK</a>
+, <br />
+&#160;&#160;<a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293a3569355ee309fc3e857e4bd03dd6c63a">RT_LED_STATE_NR</a>
+<br />
+ }</td></tr>
+<tr class="separator:ad0523d06a4f4281bc9f548baf1a2c293"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:abd38e35ca88b0598b6358d1d6b56e0fa" id="r_abd38e35ca88b0598b6358d1d6b56e0fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#abd38e35ca88b0598b6358d1d6b56e0fa">rt_led_register</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led)</td></tr>
+<tr class="separator:abd38e35ca88b0598b6358d1d6b56e0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1948f4e08f33df9b9d1a999675d8a7" id="r_abc1948f4e08f33df9b9d1a999675d8a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#abc1948f4e08f33df9b9d1a999675d8a7">rt_led_unregister</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led)</td></tr>
+<tr class="separator:abc1948f4e08f33df9b9d1a999675d8a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cda32bf6215678724933e10aac8b56c" id="r_a0cda32bf6215678724933e10aac8b56c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#a0cda32bf6215678724933e10aac8b56c">rt_led_set_state</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led, enum <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a> state)</td></tr>
+<tr class="separator:a0cda32bf6215678724933e10aac8b56c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed09b51657d7c74d6935b64fe0cab956" id="r_aed09b51657d7c74d6935b64fe0cab956"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#aed09b51657d7c74d6935b64fe0cab956">rt_led_get_state</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led, enum <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a> *out_state)</td></tr>
+<tr class="separator:aed09b51657d7c74d6935b64fe0cab956"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a623a5a3f8f0f1fa3c593b5cb59e6f39e" id="r_a623a5a3f8f0f1fa3c593b5cb59e6f39e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#a623a5a3f8f0f1fa3c593b5cb59e6f39e">rt_led_set_period</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> period_ms)</td></tr>
+<tr class="separator:a623a5a3f8f0f1fa3c593b5cb59e6f39e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a877042a35d8cc4a56759c9abda3250d4" id="r_a877042a35d8cc4a56759c9abda3250d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="led_8h.html#a877042a35d8cc4a56759c9abda3250d4">rt_led_set_brightness</a> (struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *led, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> brightness)</td></tr>
+<tr class="separator:a877042a35d8cc4a56759c9abda3250d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ad0523d06a4f4281bc9f548baf1a2c293" name="ad0523d06a4f4281bc9f548baf1a2c293"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0523d06a4f4281bc9f548baf1a2c293">&#9670;&#160;</a></span>rt_led_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad0523d06a4f4281bc9f548baf1a2c293a5c41a64e78d0eee4ce7e02f560908e27" name="ad0523d06a4f4281bc9f548baf1a2c293a5c41a64e78d0eee4ce7e02f560908e27"></a>RT_LED_S_OFF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad0523d06a4f4281bc9f548baf1a2c293a033e81db0b42b49f4c20f969692040ce" name="ad0523d06a4f4281bc9f548baf1a2c293a033e81db0b42b49f4c20f969692040ce"></a>RT_LED_S_ON&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad0523d06a4f4281bc9f548baf1a2c293a55dddb046f248e865c30ad59186e515c" name="ad0523d06a4f4281bc9f548baf1a2c293a55dddb046f248e865c30ad59186e515c"></a>RT_LED_S_TOGGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad0523d06a4f4281bc9f548baf1a2c293a3a863766c6d250fa4ca7a0d793d6d672" name="ad0523d06a4f4281bc9f548baf1a2c293a3a863766c6d250fa4ca7a0d793d6d672"></a>RT_LED_S_BLINK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad0523d06a4f4281bc9f548baf1a2c293a3569355ee309fc3e857e4bd03dd6c63a" name="ad0523d06a4f4281bc9f548baf1a2c293a3569355ee309fc3e857e4bd03dd6c63a"></a>RT_LED_STATE_NR&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aed09b51657d7c74d6935b64fe0cab956" name="aed09b51657d7c74d6935b64fe0cab956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed09b51657d7c74d6935b64fe0cab956">&#9670;&#160;</a></span>rt_led_get_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_get_state </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a> *&#160;</td>
+          <td class="paramname"><em>out_state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd38e35ca88b0598b6358d1d6b56e0fa" name="abd38e35ca88b0598b6358d1d6b56e0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd38e35ca88b0598b6358d1d6b56e0fa">&#9670;&#160;</a></span>rt_led_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a877042a35d8cc4a56759c9abda3250d4" name="a877042a35d8cc4a56759c9abda3250d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a877042a35d8cc4a56759c9abda3250d4">&#9670;&#160;</a></span>rt_led_set_brightness()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_set_brightness </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>brightness</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a623a5a3f8f0f1fa3c593b5cb59e6f39e" name="a623a5a3f8f0f1fa3c593b5cb59e6f39e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a623a5a3f8f0f1fa3c593b5cb59e6f39e">&#9670;&#160;</a></span>rt_led_set_period()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_set_period </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>period_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0cda32bf6215678724933e10aac8b56c" name="a0cda32bf6215678724933e10aac8b56c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cda32bf6215678724933e10aac8b56c">&#9670;&#160;</a></span>rt_led_set_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_set_state </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">enum <a class="el" href="led_8h.html#ad0523d06a4f4281bc9f548baf1a2c293">rt_led_state</a>&#160;</td>
+          <td class="paramname"><em>state</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abc1948f4e08f33df9b9d1a999675d8a7" name="abc1948f4e08f33df9b9d1a999675d8a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1948f4e08f33df9b9d1a999675d8a7">&#9670;&#160;</a></span>rt_led_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_led_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__led__device.html">rt_led_device</a> *&#160;</td>
+          <td class="paramname"><em>led</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="led_8h.html">led.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

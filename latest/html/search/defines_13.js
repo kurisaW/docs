@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['vdd_5f165_5f195_0',['VDD_165_195',['../mmcsd__host_8h.html#a29e8ae7687e0f2097850858b23a8d832',1,'mmcsd_host.h']]],
+  ['vdd_5f20_5f21_1',['VDD_20_21',['../mmcsd__host_8h.html#ab170cec7da65871db06f88dcd900c802',1,'mmcsd_host.h']]],
+  ['vdd_5f21_5f22_2',['VDD_21_22',['../mmcsd__host_8h.html#aefe042c2c12a9b525a4f79ffa10326aa',1,'mmcsd_host.h']]],
+  ['vdd_5f22_5f23_3',['VDD_22_23',['../mmcsd__host_8h.html#a38b13b3f90bb8c4ad718456c556b3911',1,'mmcsd_host.h']]],
+  ['vdd_5f23_5f24_4',['VDD_23_24',['../mmcsd__host_8h.html#a9aadb56c551e23d14966c7764161ea21',1,'mmcsd_host.h']]],
+  ['vdd_5f24_5f25_5',['VDD_24_25',['../mmcsd__host_8h.html#a0d36649b68a315b899848092fe77593a',1,'mmcsd_host.h']]],
+  ['vdd_5f25_5f26_6',['VDD_25_26',['../mmcsd__host_8h.html#ae872cee79a377c7a596a3c5d553b8ef4',1,'mmcsd_host.h']]],
+  ['vdd_5f26_5f27_7',['VDD_26_27',['../mmcsd__host_8h.html#af98f71ad4ffd3312df2f4ba988d965de',1,'mmcsd_host.h']]],
+  ['vdd_5f27_5f28_8',['VDD_27_28',['../mmcsd__host_8h.html#a557e88f108ce6bce00b60badb074d93d',1,'mmcsd_host.h']]],
+  ['vdd_5f28_5f29_9',['VDD_28_29',['../mmcsd__host_8h.html#acd85da20cd2c00d59fe33bb867b6d212',1,'mmcsd_host.h']]],
+  ['vdd_5f29_5f30_10',['VDD_29_30',['../mmcsd__host_8h.html#a465b1e6febf580348fce932514441480',1,'mmcsd_host.h']]],
+  ['vdd_5f30_5f31_11',['VDD_30_31',['../mmcsd__host_8h.html#af0987ba3b225e14860d80a78900bfa33',1,'mmcsd_host.h']]],
+  ['vdd_5f31_5f32_12',['VDD_31_32',['../mmcsd__host_8h.html#af364d1bdf6b6869d4c375045933317ca',1,'mmcsd_host.h']]],
+  ['vdd_5f32_5f33_13',['VDD_32_33',['../mmcsd__host_8h.html#ac1f01d151814665a6968ea727f71b6f0',1,'mmcsd_host.h']]],
+  ['vdd_5f33_5f34_14',['VDD_33_34',['../mmcsd__host_8h.html#a53416716e8485c0e83b2680322da94a7',1,'mmcsd_host.h']]],
+  ['vdd_5f34_5f35_15',['VDD_34_35',['../mmcsd__host_8h.html#a26cdaf48c5cf621c3426900673c7f8a0',1,'mmcsd_host.h']]],
+  ['vdd_5f35_5f36_16',['VDD_35_36',['../mmcsd__host_8h.html#a0b3054536641266eac259054125369cf',1,'mmcsd_host.h']]],
+  ['voltage_5fswitch_17',['VOLTAGE_SWITCH',['../mmcsd__cmd_8h.html#ab14945254c721d91efe10e9aae7152e2',1,'mmcsd_cmd.h']]]
+];

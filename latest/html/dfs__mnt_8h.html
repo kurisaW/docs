@@ -1,0 +1,788 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/dfs/dfs_v2/include/dfs_mnt.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dfs__mnt_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dfs_mnt.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtservice_8h_source.html">rtservice.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dfs_mnt.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dfs__mnt_8h__incl.png" border="0" usemap="#acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8h" alt=""/></div>
+<map name="acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8h" id="acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8h">
+<area shape="rect" title=" " alt="" coords="388,5,553,45"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="551,167,641,192"/>
+<area shape="poly" title=" " alt="" coords="489,44,580,154,576,158,484,48"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="387,93,474,119"/>
+<area shape="poly" title=" " alt="" coords="463,47,445,82,440,80,459,44"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,313,480,339"/>
+<area shape="poly" title=" " alt="" coords="586,194,471,306,468,302,582,191"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,387,489,412"/>
+<area shape="poly" title=" " alt="" coords="451,339,451,373,445,373,445,339"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,460,505,485"/>
+<area shape="poly" title=" " alt="" coords="465,337,487,358,504,386,507,403,503,421,487,451,482,448,498,419,501,403,499,388,482,361,462,341"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,460,402,485"/>
+<area shape="poly" title=" " alt="" coords="438,341,397,388,364,449,360,446,392,385,434,337"/>
+<area shape="rect" title=" " alt="" coords="221,387,331,412"/>
+<area shape="poly" title=" " alt="" coords="421,341,318,384,316,379,419,336"/>
+<area shape="poly" title=" " alt="" coords="453,412,462,446,457,448,448,413"/>
+<area shape="poly" title=" " alt="" coords="434,414,380,454,377,449,431,410"/>
+<area shape="rect" title=" " alt="" coords="44,533,127,559"/>
+<area shape="poly" title=" " alt="" coords="426,486,414,488,141,538,140,533,413,483,425,480"/>
+<area shape="rect" title=" " alt="" coords="751,533,822,559"/>
+<area shape="poly" title=" " alt="" coords="506,480,738,531,737,536,505,485"/>
+<area shape="rect" title=" " alt="" coords="191,533,265,559"/>
+<area shape="poly" title=" " alt="" coords="428,488,280,532,278,527,426,483"/>
+<area shape="rect" title=" " alt="" coords="289,533,364,559"/>
+<area shape="poly" title=" " alt="" coords="444,488,363,529,360,525,442,483"/>
+<area shape="rect" title=" " alt="" coords="388,533,484,559"/>
+<area shape="poly" title=" " alt="" coords="463,487,448,522,444,520,458,485"/>
+<area shape="rect" title=" " alt="" coords="509,533,603,559"/>
+<area shape="poly" title=" " alt="" coords="482,483,532,522,529,527,478,487"/>
+<area shape="rect" title=" " alt="" coords="628,533,727,559"/>
+<area shape="poly" title=" " alt="" coords="500,483,631,526,629,531,499,488"/>
+<area shape="poly" title=" " alt="" coords="310,488,141,533,140,528,308,483"/>
+<area shape="poly" title=" " alt="" coords="458,116,558,159,555,164,456,121"/>
+<area shape="poly" title=" " alt="" coords="434,119,449,299,443,299,429,119"/>
+<area shape="poly" title=" " alt="" coords="388,115,282,132,156,160,99,179,51,200,19,225,11,238,8,252,8,400,14,436,28,469,47,498,66,521,62,525,43,501,24,471,9,437,3,401,3,251,6,236,15,221,48,196,97,174,155,155,281,127,387,110"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="469,167,526,192"/>
+<area shape="poly" title=" " alt="" coords="437,117,472,156,468,159,433,121"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="247,167,337,192"/>
+<area shape="poly" title=" " alt="" coords="410,121,328,163,326,158,407,116"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="159,240,233,265"/>
+<area shape="poly" title=" " alt="" coords="388,113,352,119,312,129,272,145,237,169,216,197,204,228,199,226,211,194,233,165,269,140,310,124,351,113,387,108"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="345,240,410,265"/>
+<area shape="poly" title=" " alt="" coords="429,120,389,228,384,226,424,118"/>
+<area shape="poly" title=" " alt="" coords="496,193,459,301,454,300,491,192"/>
+<area shape="poly" title=" " alt="" coords="491,168,456,130,460,126,495,165"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="258,240,321,265"/>
+<area shape="poly" title=" " alt="" coords="294,192,293,227,288,226,289,192"/>
+<area shape="poly" title=" " alt="" coords="316,263,411,305,409,310,314,268"/>
+<area shape="poly" title=" " alt="" coords="234,262,404,309,402,315,233,267"/>
+<area shape="poly" title=" " alt="" coords="159,265,117,283,98,297,84,315,72,340,65,367,62,424,69,477,79,519,74,520,64,478,56,424,59,366,67,338,79,312,95,293,115,278,157,260"/>
+<area shape="poly" title=" " alt="" coords="234,260,305,282,336,296,356,312,361,332,352,351,334,368,314,382,311,378,331,364,347,348,355,332,351,315,333,301,303,287,233,266"/>
+<area shape="rect" title=" " alt="" coords="93,313,208,339"/>
+<area shape="poly" title=" " alt="" coords="191,267,168,303,163,300,186,264"/>
+<area shape="rect" title=" " alt="" coords="232,313,341,339"/>
+<area shape="poly" title=" " alt="" coords="212,263,263,302,259,307,209,267"/>
+<area shape="poly" title=" " alt="" coords="391,264,429,302,425,306,387,268"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="dfs__mnt_8h__dep__incl.png" border="0" usemap="#acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8hdep" alt=""/></div>
+<map name="acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8hdep" id="acomponents_2dfs_2dfs__v2_2include_2dfs__mnt_8hdep">
+<area shape="rect" title=" " alt="" coords="726,5,891,45"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="5,93,156,133"/>
+<area shape="poly" title=" " alt="" coords="713,36,465,58,316,75,168,96,157,98,156,93,167,91,316,70,465,53,712,31"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="180,93,331,133"/>
+<area shape="poly" title=" " alt="" coords="713,41,540,64,342,96,331,98,330,93,342,91,539,59,712,36"/>
+<area shape="rect" href="dfs__file_8c.html" title=" " alt="" coords="355,93,505,133"/>
+<area shape="poly" title=" " alt="" coords="713,51,506,98,505,92,712,46"/>
+<area shape="rect" href="dfs__file__mmap_8c.html" title=" " alt="" coords="530,93,709,133"/>
+<area shape="poly" title=" " alt="" coords="756,53,662,96,660,91,754,49"/>
+<area shape="rect" href="dfs__fs_8c.html" title=" " alt="" coords="733,93,884,133"/>
+<area shape="poly" title=" " alt="" coords="811,59,811,93,806,93,806,59"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="908,93,1059,133"/>
+<area shape="poly" title=" " alt="" coords="860,49,946,91,944,96,858,54"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="1083,93,1239,133"/>
+<area shape="poly" title=" " alt="" coords="900,46,1084,91,1083,96,898,51"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="1263,93,1413,133"/>
+<area shape="poly" title=" " alt="" coords="906,37,1068,60,1252,91,1263,93,1262,98,1251,96,1067,65,905,42"/>
+<area shape="rect" href="dfs__vnode_8c.html" title=" " alt="" coords="1437,93,1588,133"/>
+<area shape="poly" title=" " alt="" coords="905,31,1143,54,1285,70,1426,91,1438,93,1437,98,1426,96,1284,76,1142,59,905,37"/>
+</map>
+</div>
+</div>
+<p><a href="dfs__mnt_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdfs__mnt.html">dfs_mnt</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aada7a578d5f5cb1a6721e215a73e916b" id="r_aada7a578d5f5cb1a6721e215a73e916b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#aada7a578d5f5cb1a6721e215a73e916b">MNT_IS_ALLOCED</a>&#160;&#160;&#160;0x1          /* the mnt struct is allocated */</td></tr>
+<tr class="separator:aada7a578d5f5cb1a6721e215a73e916b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0dfa87b86be845e53630f5d7cfe40f" id="r_a0a0dfa87b86be845e53630f5d7cfe40f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a0a0dfa87b86be845e53630f5d7cfe40f">MNT_IS_ADDLIST</a>&#160;&#160;&#160;0x2          /* the mnt struct is added into list */</td></tr>
+<tr class="separator:a0a0dfa87b86be845e53630f5d7cfe40f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a372f975fc6e040eb513743802bd4d58b" id="r_a372f975fc6e040eb513743802bd4d58b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a372f975fc6e040eb513743802bd4d58b">MNT_IS_MOUNTED</a>&#160;&#160;&#160;0x4          /* the mnt struct is mounted */</td></tr>
+<tr class="separator:a372f975fc6e040eb513743802bd4d58b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15df0b70082808c80bca00d061623ac6" id="r_a15df0b70082808c80bca00d061623ac6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a15df0b70082808c80bca00d061623ac6">MNT_IS_UMOUNT</a>&#160;&#160;&#160;0x8          /* the mnt is unmount */</td></tr>
+<tr class="separator:a15df0b70082808c80bca00d061623ac6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b5a6d06e233167c4550d1744fe8f16" id="r_ad7b5a6d06e233167c4550d1744fe8f16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#ad7b5a6d06e233167c4550d1744fe8f16">MNT_IS_LOCKED</a>&#160;&#160;&#160;0x10         /* the mnt is locked */</td></tr>
+<tr class="separator:ad7b5a6d06e233167c4550d1744fe8f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e5bac8c5f849afa8a92476de4c12846" id="r_a7e5bac8c5f849afa8a92476de4c12846"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a7e5bac8c5f849afa8a92476de4c12846">MNT_FORCE</a>&#160;&#160;&#160;0x20         /* the mnt force unmount */</td></tr>
+<tr class="separator:a7e5bac8c5f849afa8a92476de4c12846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c2a91e7563d2298420c06c5acef0e9" id="r_a03c2a91e7563d2298420c06c5acef0e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a03c2a91e7563d2298420c06c5acef0e9">MNT_LAZY_UMNT</a>&#160;&#160;&#160;0x40         /* the mnt has pending umount */</td></tr>
+<tr class="separator:a03c2a91e7563d2298420c06c5acef0e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbcda3d4544fe395ef788a52b868ccd4" id="r_afbcda3d4544fe395ef788a52b868ccd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#afbcda3d4544fe395ef788a52b868ccd4">MNT_RDONLY</a>&#160;&#160;&#160;0x80         /* the mnt is <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> only */</td></tr>
+<tr class="separator:afbcda3d4544fe395ef788a52b868ccd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a2ac7a3662e8df9f2d2b58b3984bdf6d9" id="r_a2ac7a3662e8df9f2d2b58b3984bdf6d9"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a>) (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td></tr>
+<tr class="separator:a2ac7a3662e8df9f2d2b58b3984bdf6d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:af1ad6c48aafbb70018e7980a2b186df6" id="r_af1ad6c48aafbb70018e7980a2b186df6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#af1ad6c48aafbb70018e7980a2b186df6">dfs_mnt_create</a> (const char *path)</td></tr>
+<tr class="separator:af1ad6c48aafbb70018e7980a2b186df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a952647c4bdc2ac6c5786dc772201b3" id="r_a8a952647c4bdc2ac6c5786dc772201b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a8a952647c4bdc2ac6c5786dc772201b3">dfs_mnt_destroy</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td></tr>
+<tr class="separator:a8a952647c4bdc2ac6c5786dc772201b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5898f11d9fcbc8b4d800607df65c680" id="r_ad5898f11d9fcbc8b4d800607df65c680"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#ad5898f11d9fcbc8b4d800607df65c680">dfs_mnt_list</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td></tr>
+<tr class="separator:ad5898f11d9fcbc8b4d800607df65c680"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a034a2422c7c289480cba9412a3718400" id="r_a034a2422c7c289480cba9412a3718400"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a034a2422c7c289480cba9412a3718400">dfs_mnt_insert</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *child)</td></tr>
+<tr class="separator:a034a2422c7c289480cba9412a3718400"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33c762bdc4796218e14b35248a140529" id="r_a33c762bdc4796218e14b35248a140529"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a33c762bdc4796218e14b35248a140529">dfs_mnt_dev_lookup</a> (<a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a> dev_id)</td></tr>
+<tr class="separator:a33c762bdc4796218e14b35248a140529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65f11fff822f41388308153be5679730" id="r_a65f11fff822f41388308153be5679730"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a65f11fff822f41388308153be5679730">dfs_mnt_lookup</a> (const char *path)</td></tr>
+<tr class="separator:a65f11fff822f41388308153be5679730"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a843a2171a19dc7568805221294a201cc" id="r_a843a2171a19dc7568805221294a201cc"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a843a2171a19dc7568805221294a201cc">dfs_mnt_get_mounted_path</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *device)</td></tr>
+<tr class="separator:a843a2171a19dc7568805221294a201cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeda8e6e3efe5c527f272d5f2f746799" id="r_afeda8e6e3efe5c527f272d5f2f746799"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#afeda8e6e3efe5c527f272d5f2f746799">dfs_mnt_ref</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td></tr>
+<tr class="separator:afeda8e6e3efe5c527f272d5f2f746799"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a411b6d43ecb660c045136b8308532818" id="r_a411b6d43ecb660c045136b8308532818"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a411b6d43ecb660c045136b8308532818">dfs_mnt_unref</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td></tr>
+<tr class="separator:a411b6d43ecb660c045136b8308532818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018ba6d952835502d72a9dc35b1c09ab" id="r_a018ba6d952835502d72a9dc35b1c09ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a018ba6d952835502d72a9dc35b1c09ab">dfs_mnt_umount</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, int flags)</td></tr>
+<tr class="separator:a018ba6d952835502d72a9dc35b1c09ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fcbf0dcf67d2b5077d6727e11ce8b0" id="r_a06fcbf0dcf67d2b5077d6727e11ce8b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a06fcbf0dcf67d2b5077d6727e11ce8b0">dfs_mnt_setflags</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, int flags)</td></tr>
+<tr class="separator:a06fcbf0dcf67d2b5077d6727e11ce8b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28e9651de4e16f838255cdd2ca0a8a06" id="r_a28e9651de4e16f838255cdd2ca0a8a06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a28e9651de4e16f838255cdd2ca0a8a06">dfs_mnt_has_child_mnt</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, const char *fullpath)</td></tr>
+<tr class="separator:a28e9651de4e16f838255cdd2ca0a8a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e94506fe68d7c6f20baaa777ca02533" id="r_a8e94506fe68d7c6f20baaa777ca02533"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#a8e94506fe68d7c6f20baaa777ca02533">dfs_mnt_foreach</a> (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *(*func)(struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, void *parameter), void *parameter)</td></tr>
+<tr class="separator:a8e94506fe68d7c6f20baaa777ca02533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada48ca62669281d48fd3633e7caa2371" id="r_ada48ca62669281d48fd3633e7caa2371"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#ada48ca62669281d48fd3633e7caa2371">dfs_mnt_umount_iter</a> (<a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>(*filter)(struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, void *parameter), void *parameter)</td></tr>
+<tr class="separator:ada48ca62669281d48fd3633e7caa2371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada85737ad077d299c229e54512428800" id="r_ada85737ad077d299c229e54512428800"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__mnt_8h.html#ada85737ad077d299c229e54512428800">RT_OBJECT_HOOKLIST_DECLARE</a> (<a class="el" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a>, dfs_mnt_umnt)</td></tr>
+<tr class="separator:ada85737ad077d299c229e54512428800"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7e5bac8c5f849afa8a92476de4c12846" name="a7e5bac8c5f849afa8a92476de4c12846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e5bac8c5f849afa8a92476de4c12846">&#9670;&#160;</a></span>MNT_FORCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_FORCE&#160;&#160;&#160;0x20         /* the mnt force unmount */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a0dfa87b86be845e53630f5d7cfe40f" name="a0a0dfa87b86be845e53630f5d7cfe40f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0dfa87b86be845e53630f5d7cfe40f">&#9670;&#160;</a></span>MNT_IS_ADDLIST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_IS_ADDLIST&#160;&#160;&#160;0x2          /* the mnt struct is added into list */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aada7a578d5f5cb1a6721e215a73e916b" name="aada7a578d5f5cb1a6721e215a73e916b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada7a578d5f5cb1a6721e215a73e916b">&#9670;&#160;</a></span>MNT_IS_ALLOCED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_IS_ALLOCED&#160;&#160;&#160;0x1          /* the mnt struct is allocated */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7b5a6d06e233167c4550d1744fe8f16" name="ad7b5a6d06e233167c4550d1744fe8f16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b5a6d06e233167c4550d1744fe8f16">&#9670;&#160;</a></span>MNT_IS_LOCKED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_IS_LOCKED&#160;&#160;&#160;0x10         /* the mnt is locked */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a372f975fc6e040eb513743802bd4d58b" name="a372f975fc6e040eb513743802bd4d58b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a372f975fc6e040eb513743802bd4d58b">&#9670;&#160;</a></span>MNT_IS_MOUNTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_IS_MOUNTED&#160;&#160;&#160;0x4          /* the mnt struct is mounted */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15df0b70082808c80bca00d061623ac6" name="a15df0b70082808c80bca00d061623ac6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15df0b70082808c80bca00d061623ac6">&#9670;&#160;</a></span>MNT_IS_UMOUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_IS_UMOUNT&#160;&#160;&#160;0x8          /* the mnt is unmount */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a03c2a91e7563d2298420c06c5acef0e9" name="a03c2a91e7563d2298420c06c5acef0e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03c2a91e7563d2298420c06c5acef0e9">&#9670;&#160;</a></span>MNT_LAZY_UMNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_LAZY_UMNT&#160;&#160;&#160;0x40         /* the mnt has pending umount */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbcda3d4544fe395ef788a52b868ccd4" name="afbcda3d4544fe395ef788a52b868ccd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbcda3d4544fe395ef788a52b868ccd4">&#9670;&#160;</a></span>MNT_RDONLY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MNT_RDONLY&#160;&#160;&#160;0x80         /* the mnt is <a class="el" href="group__group___fs_posix_api.html#ga1301f5639d6acac2e7138ae391e87a2d">read</a> only */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a2ac7a3662e8df9f2d2b58b3984bdf6d9" name="a2ac7a3662e8df9f2d2b58b3984bdf6d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ac7a3662e8df9f2d2b58b3984bdf6d9">&#9670;&#160;</a></span>dfs_mnt_umnt_cb_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* dfs_mnt_umnt_cb_t) (struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="af1ad6c48aafbb70018e7980a2b186df6" name="af1ad6c48aafbb70018e7980a2b186df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1ad6c48aafbb70018e7980a2b186df6">&#9670;&#160;</a></span>dfs_mnt_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> * dfs_mnt_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a952647c4bdc2ac6c5786dc772201b3" name="a8a952647c4bdc2ac6c5786dc772201b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a952647c4bdc2ac6c5786dc772201b3">&#9670;&#160;</a></span>dfs_mnt_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_destroy </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33c762bdc4796218e14b35248a140529" name="a33c762bdc4796218e14b35248a140529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33c762bdc4796218e14b35248a140529">&#9670;&#160;</a></span>dfs_mnt_dev_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> * dfs_mnt_dev_lookup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__device__driver.html#ga896a5cd63480a02303252f41782379b1">rt_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e94506fe68d7c6f20baaa777ca02533" name="a8e94506fe68d7c6f20baaa777ca02533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e94506fe68d7c6f20baaa777ca02533">&#9670;&#160;</a></span>dfs_mnt_foreach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_foreach </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *(*)(struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, void *parameter)&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parameter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a843a2171a19dc7568805221294a201cc" name="a843a2171a19dc7568805221294a201cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a843a2171a19dc7568805221294a201cc">&#9670;&#160;</a></span>dfs_mnt_get_mounted_path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * dfs_mnt_get_mounted_path </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function will return the mounted path for specified device.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device</td><td>the device object which is mounted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the mounted path or NULL if none device mounted. </dd></dl>
+
+</div>
+</div>
+<a id="a28e9651de4e16f838255cdd2ca0a8a06" name="a28e9651de4e16f838255cdd2ca0a8a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28e9651de4e16f838255cdd2ca0a8a06">&#9670;&#160;</a></span>dfs_mnt_has_child_mnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> dfs_mnt_has_child_mnt </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fullpath</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a034a2422c7c289480cba9412a3718400" name="a034a2422c7c289480cba9412a3718400"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a034a2422c7c289480cba9412a3718400">&#9670;&#160;</a></span>dfs_mnt_insert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_insert </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>child</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad5898f11d9fcbc8b4d800607df65c680" name="ad5898f11d9fcbc8b4d800607df65c680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5898f11d9fcbc8b4d800607df65c680">&#9670;&#160;</a></span>dfs_mnt_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_list </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65f11fff822f41388308153be5679730" name="a65f11fff822f41388308153be5679730"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65f11fff822f41388308153be5679730">&#9670;&#160;</a></span>dfs_mnt_lookup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> * dfs_mnt_lookup </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fullpath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>this function will return the file system mounted on specified path.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>the specified path string.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the found file system or NULL if no file system mounted on specified path </dd></dl>
+
+</div>
+</div>
+<a id="afeda8e6e3efe5c527f272d5f2f746799" name="afeda8e6e3efe5c527f272d5f2f746799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeda8e6e3efe5c527f272d5f2f746799">&#9670;&#160;</a></span>dfs_mnt_ref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> * dfs_mnt_ref </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06fcbf0dcf67d2b5077d6727e11ce8b0" name="a06fcbf0dcf67d2b5077d6727e11ce8b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fcbf0dcf67d2b5077d6727e11ce8b0">&#9670;&#160;</a></span>dfs_mnt_setflags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_setflags </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a018ba6d952835502d72a9dc35b1c09ab" name="a018ba6d952835502d72a9dc35b1c09ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a018ba6d952835502d72a9dc35b1c09ab">&#9670;&#160;</a></span>dfs_mnt_umount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_umount </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada48ca62669281d48fd3633e7caa2371" name="ada48ca62669281d48fd3633e7caa2371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada48ca62669281d48fd3633e7caa2371">&#9670;&#160;</a></span>dfs_mnt_umount_iter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_umount_iter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>(*)(struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *mnt, void *parameter)&#160;</td>
+          <td class="paramname"><em>filter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parameter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a411b6d43ecb660c045136b8308532818" name="a411b6d43ecb660c045136b8308532818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a411b6d43ecb660c045136b8308532818">&#9670;&#160;</a></span>dfs_mnt_unref()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_mnt_unref </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__mnt.html">dfs_mnt</a> *&#160;</td>
+          <td class="paramname"><em>mnt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ada85737ad077d299c229e54512428800" name="ada85737ad077d299c229e54512428800"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada85737ad077d299c229e54512428800">&#9670;&#160;</a></span>RT_OBJECT_HOOKLIST_DECLARE()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RT_OBJECT_HOOKLIST_DECLARE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="dfs__mnt_8h.html#a2ac7a3662e8df9f2d2b58b3984bdf6d9">dfs_mnt_umnt_cb_t</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">dfs_mnt_umnt&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_88fad670f0983a8d34917f1a982db765.html">dfs</a></li><li class="navelem"><a class="el" href="dir_0315ccb147cbbd68fff85702afb63e70.html">dfs_v2</a></li><li class="navelem"><a class="el" href="dir_89df34ed40a6a7fa38bf14ddadaf6de0.html">include</a></li><li class="navelem"><a class="el" href="dfs__mnt_8h.html">dfs_mnt.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

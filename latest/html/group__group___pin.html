@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: Pin</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group___pin.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">Pin<div class="ingroups"><a class="el" href="group__group__device__driver.html">Group_device_driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Pin driver api.  
+<a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for Pin:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group___pin.png" border="0" usemap="#agroup____group______pin" alt=""/></div>
+<map name="agroup____group______pin" id="agroup____group______pin">
+<area shape="rect" title="Pin driver api." alt="" coords="209,5,252,31"/>
+<area shape="rect" href="group__group__device__driver.html" title=" " alt="" coords="5,5,161,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__device__pin.html">rt_device_pin</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pin device structure  <a href="structrt__device__pin.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__device__pin__mode.html">rt_device_pin_mode</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pin mode structure  <a href="structrt__device__pin__mode.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__device__pin__value.html">rt_device_pin_value</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pin value structure  <a href="structrt__device__pin__value.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pin__irq__hdr.html">rt_pin_irq_hdr</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pin irq structure  <a href="structrt__pin__irq__hdr.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pin__ops.html">rt_pin_ops</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">pin device operations  <a href="structrt__pin__ops.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga61ae8c246db04e2ac956ccf175b217c6" id="r_ga61ae8c246db04e2ac956ccf175b217c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga61ae8c246db04e2ac956ccf175b217c6">PIN_NONE</a>&#160;&#160;&#160;(-RT_EEMPTY)</td></tr>
+<tr class="separator:ga61ae8c246db04e2ac956ccf175b217c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4569b310ad4177e935f20becec046af2" id="r_ga4569b310ad4177e935f20becec046af2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga4569b310ad4177e935f20becec046af2">PIN_LOW</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ga4569b310ad4177e935f20becec046af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae14869a27ae7d64d5790cdb2b866f737" id="r_gae14869a27ae7d64d5790cdb2b866f737"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gae14869a27ae7d64d5790cdb2b866f737">PIN_HIGH</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gae14869a27ae7d64d5790cdb2b866f737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac25f0f159ffa1179651fbde4ac338c5d" id="r_gac25f0f159ffa1179651fbde4ac338c5d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gac25f0f159ffa1179651fbde4ac338c5d">PIN_MODE_OUTPUT</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gac25f0f159ffa1179651fbde4ac338c5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9b96fab07f827dcc04beaae6bd09400f" id="r_ga9b96fab07f827dcc04beaae6bd09400f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga9b96fab07f827dcc04beaae6bd09400f">PIN_MODE_INPUT</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ga9b96fab07f827dcc04beaae6bd09400f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga520767b641f2966bcfbaea79837ab798" id="r_ga520767b641f2966bcfbaea79837ab798"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga520767b641f2966bcfbaea79837ab798">PIN_MODE_INPUT_PULLUP</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga520767b641f2966bcfbaea79837ab798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf4d746ef4f5a2d00d340646fe9d3bfa" id="r_gadf4d746ef4f5a2d00d340646fe9d3bfa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gadf4d746ef4f5a2d00d340646fe9d3bfa">PIN_MODE_INPUT_PULLDOWN</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:gadf4d746ef4f5a2d00d340646fe9d3bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35eda88d3f3c5101fa6e032c2cef5e89" id="r_ga35eda88d3f3c5101fa6e032c2cef5e89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga35eda88d3f3c5101fa6e032c2cef5e89">PIN_MODE_OUTPUT_OD</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:ga35eda88d3f3c5101fa6e032c2cef5e89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae44a5ad4f5830641eda4806e9f50a1c2" id="r_gae44a5ad4f5830641eda4806e9f50a1c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gae44a5ad4f5830641eda4806e9f50a1c2">PIN_IRQ_MODE_RISING</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gae44a5ad4f5830641eda4806e9f50a1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea72b7486ac7548f1e818310bd9bae62" id="r_gaea72b7486ac7548f1e818310bd9bae62"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gaea72b7486ac7548f1e818310bd9bae62">PIN_IRQ_MODE_FALLING</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gaea72b7486ac7548f1e818310bd9bae62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadc869f3d0d5714f5fe22bf03bba8004a" id="r_gadc869f3d0d5714f5fe22bf03bba8004a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gadc869f3d0d5714f5fe22bf03bba8004a">PIN_IRQ_MODE_RISING_FALLING</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:gadc869f3d0d5714f5fe22bf03bba8004a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab217d390495bc6107eaf3c7f84dc4fde" id="r_gab217d390495bc6107eaf3c7f84dc4fde"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gab217d390495bc6107eaf3c7f84dc4fde">PIN_IRQ_MODE_HIGH_LEVEL</a>&#160;&#160;&#160;0x03</td></tr>
+<tr class="separator:gab217d390495bc6107eaf3c7f84dc4fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga695a107bef2830a5d2f49d5feac9055e" id="r_ga695a107bef2830a5d2f49d5feac9055e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga695a107bef2830a5d2f49d5feac9055e">PIN_IRQ_MODE_LOW_LEVEL</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:ga695a107bef2830a5d2f49d5feac9055e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5baa602cd2fb45994d1f4e5e587f1ace" id="r_ga5baa602cd2fb45994d1f4e5e587f1ace"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga5baa602cd2fb45994d1f4e5e587f1ace">PIN_IRQ_DISABLE</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:ga5baa602cd2fb45994d1f4e5e587f1ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3f3a9a46d7592447337a3cfea0e3fd8" id="r_gae3f3a9a46d7592447337a3cfea0e3fd8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gae3f3a9a46d7592447337a3cfea0e3fd8">PIN_IRQ_ENABLE</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gae3f3a9a46d7592447337a3cfea0e3fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d5a445b2cff37bb53d39f219b443a7e" id="r_ga4d5a445b2cff37bb53d39f219b443a7e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga4d5a445b2cff37bb53d39f219b443a7e">PIN_IRQ_PIN_NONE</a>&#160;&#160;&#160;<a class="el" href="group__group___pin.html#ga61ae8c246db04e2ac956ccf175b217c6">PIN_NONE</a></td></tr>
+<tr class="separator:ga4d5a445b2cff37bb53d39f219b443a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga04252280d75185b75ad19875d9441e6f" id="r_ga04252280d75185b75ad19875d9441e6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga04252280d75185b75ad19875d9441e6f">rt_device_pin_register</a> (const char *name, const struct <a class="el" href="structrt__pin__ops.html">rt_pin_ops</a> *ops, void *user_data)</td></tr>
+<tr class="memdesc:ga04252280d75185b75ad19875d9441e6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">register a pin device  <br /></td></tr>
+<tr class="separator:ga04252280d75185b75ad19875d9441e6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7dda63a191c2832c70e925c077fb256d" id="r_ga7dda63a191c2832c70e925c077fb256d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga7dda63a191c2832c70e925c077fb256d">rt_pin_mode</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode)</td></tr>
+<tr class="memdesc:ga7dda63a191c2832c70e925c077fb256d"><td class="mdescLeft">&#160;</td><td class="mdescRight">set pin mode  <br /></td></tr>
+<tr class="separator:ga7dda63a191c2832c70e925c077fb256d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a2951d0455b9a902f03ba72bfb1e841" id="r_ga5a2951d0455b9a902f03ba72bfb1e841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga5a2951d0455b9a902f03ba72bfb1e841">rt_pin_write</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin, <a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> value)</td></tr>
+<tr class="memdesc:ga5a2951d0455b9a902f03ba72bfb1e841"><td class="mdescLeft">&#160;</td><td class="mdescRight">write pin value  <br /></td></tr>
+<tr class="separator:ga5a2951d0455b9a902f03ba72bfb1e841"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfb354fd5afd2be465c580982b5b2806" id="r_gacfb354fd5afd2be465c580982b5b2806"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gacfb354fd5afd2be465c580982b5b2806">rt_pin_read</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin)</td></tr>
+<tr class="memdesc:gacfb354fd5afd2be465c580982b5b2806"><td class="mdescLeft">&#160;</td><td class="mdescRight">read pin value  <br /></td></tr>
+<tr class="separator:gacfb354fd5afd2be465c580982b5b2806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac31fd122fadb80540983907d4b8200c4" id="r_gac31fd122fadb80540983907d4b8200c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gac31fd122fadb80540983907d4b8200c4">rt_pin_get</a> (const char *name)</td></tr>
+<tr class="memdesc:gac31fd122fadb80540983907d4b8200c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">get pin number by name  <br /></td></tr>
+<tr class="separator:gac31fd122fadb80540983907d4b8200c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaffae7811e6f84f488accadf3187a0a74" id="r_gaffae7811e6f84f488accadf3187a0a74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gaffae7811e6f84f488accadf3187a0a74">rt_pin_attach_irq</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode, void(*hdr)(void *args), void *args)</td></tr>
+<tr class="memdesc:gaffae7811e6f84f488accadf3187a0a74"><td class="mdescLeft">&#160;</td><td class="mdescRight">bind the pin interrupt callback function  <br /></td></tr>
+<tr class="separator:gaffae7811e6f84f488accadf3187a0a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga58f34476bbedbc80c811c462f7dee6be" id="r_ga58f34476bbedbc80c811c462f7dee6be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#ga58f34476bbedbc80c811c462f7dee6be">rt_pin_detach_irq</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin)</td></tr>
+<tr class="memdesc:ga58f34476bbedbc80c811c462f7dee6be"><td class="mdescLeft">&#160;</td><td class="mdescRight">detach the pin interrupt callback function  <br /></td></tr>
+<tr class="separator:ga58f34476bbedbc80c811c462f7dee6be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba154cfb12163ef6e7f24eb6a8738172" id="r_gaba154cfb12163ef6e7f24eb6a8738172"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gaba154cfb12163ef6e7f24eb6a8738172">rt_pin_irq_enable</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> enabled)</td></tr>
+<tr class="memdesc:gaba154cfb12163ef6e7f24eb6a8738172"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable or disable the pin interrupt  <br /></td></tr>
+<tr class="separator:gaba154cfb12163ef6e7f24eb6a8738172"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4e6f01046fe6a9577a84cccbf766d91" id="r_gac4e6f01046fe6a9577a84cccbf766d91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___pin.html#gac4e6f01046fe6a9577a84cccbf766d91">rt_pin_debounce</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> pin, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> debounce)</td></tr>
+<tr class="memdesc:gac4e6f01046fe6a9577a84cccbf766d91"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the pin's debounce time  <br /></td></tr>
+<tr class="separator:gac4e6f01046fe6a9577a84cccbf766d91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>Pin driver api. </p>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="rtdevice_8h.html">rtdevice.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#ifndef BEEP_PIN_NUM</span></div>
+<div class="line"><span class="preprocessor">    #define BEEP_PIN_NUM            35  </span><span class="comment">// PB0</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor">#ifndef KEY0_PIN_NUM</span></div>
+<div class="line"><span class="preprocessor">    #define KEY0_PIN_NUM            55  </span><span class="comment">// PD8</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor">#ifndef KEY1_PIN_NUM</span></div>
+<div class="line"><span class="preprocessor">    #define KEY1_PIN_NUM            56  </span><span class="comment">// PD9</span></div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> beep_on(<span class="keywordtype">void</span> *args)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;turn on beep!\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga5a2951d0455b9a902f03ba72bfb1e841">rt_pin_write</a>(BEEP_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gae14869a27ae7d64d5790cdb2b866f737">PIN_HIGH</a>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">void</span> beep_off(<span class="keywordtype">void</span> *args)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;turn off beep!\n&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga5a2951d0455b9a902f03ba72bfb1e841">rt_pin_write</a>(BEEP_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#ga4569b310ad4177e935f20becec046af2">PIN_LOW</a>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> pin_beep_sample(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga7dda63a191c2832c70e925c077fb256d">rt_pin_mode</a>(BEEP_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gac25f0f159ffa1179651fbde4ac338c5d">PIN_MODE_OUTPUT</a>);</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga5a2951d0455b9a902f03ba72bfb1e841">rt_pin_write</a>(BEEP_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#ga4569b310ad4177e935f20becec046af2">PIN_LOW</a>);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga7dda63a191c2832c70e925c077fb256d">rt_pin_mode</a>(KEY0_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#ga520767b641f2966bcfbaea79837ab798">PIN_MODE_INPUT_PULLUP</a>);</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#gaffae7811e6f84f488accadf3187a0a74">rt_pin_attach_irq</a>(KEY0_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gaea72b7486ac7548f1e818310bd9bae62">PIN_IRQ_MODE_FALLING</a>, beep_on, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>);</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#gaba154cfb12163ef6e7f24eb6a8738172">rt_pin_irq_enable</a>(KEY0_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gae3f3a9a46d7592447337a3cfea0e3fd8">PIN_IRQ_ENABLE</a>);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#ga7dda63a191c2832c70e925c077fb256d">rt_pin_mode</a>(KEY1_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#ga520767b641f2966bcfbaea79837ab798">PIN_MODE_INPUT_PULLUP</a>);</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#gaffae7811e6f84f488accadf3187a0a74">rt_pin_attach_irq</a>(KEY1_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gaea72b7486ac7548f1e818310bd9bae62">PIN_IRQ_MODE_FALLING</a>, beep_off, <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>);</div>
+<div class="line">    <a class="code hl_function" href="group__group___pin.html#gaba154cfb12163ef6e7f24eb6a8738172">rt_pin_irq_enable</a>(KEY1_PIN_NUM, <a class="code hl_define" href="group__group___pin.html#gae3f3a9a46d7592447337a3cfea0e3fd8">PIN_IRQ_ENABLE</a>);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_define" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(pin_beep_sample, pin beep sample);</div>
+<div class="ttc" id="afinsh_8h_html_a91a67d7498e346a1e15a7ea7d58af654"><div class="ttname"><a href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a></div><div class="ttdeci">#define MSH_CMD_EXPORT(...)</div><div class="ttdoc">Exports a command to module shell.</div><div class="ttdef"><b>Definition</b> finsh.h:151</div></div>
+<div class="ttc" id="agroup__group___kernel_service_html_ga2cc5c9066908cd34d36848d8a281b472"><div class="ttname"><a href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a></div><div class="ttdeci">#define rt_kprintf(...)</div><div class="ttdef"><b>Definition</b> rtthread.h:773</div></div>
+<div class="ttc" id="agroup__group___pin_html_ga4569b310ad4177e935f20becec046af2"><div class="ttname"><a href="group__group___pin.html#ga4569b310ad4177e935f20becec046af2">PIN_LOW</a></div><div class="ttdeci">#define PIN_LOW</div><div class="ttdef"><b>Definition</b> dev_pin.h:113</div></div>
+<div class="ttc" id="agroup__group___pin_html_ga520767b641f2966bcfbaea79837ab798"><div class="ttname"><a href="group__group___pin.html#ga520767b641f2966bcfbaea79837ab798">PIN_MODE_INPUT_PULLUP</a></div><div class="ttdeci">#define PIN_MODE_INPUT_PULLUP</div><div class="ttdef"><b>Definition</b> dev_pin.h:118</div></div>
+<div class="ttc" id="agroup__group___pin_html_ga5a2951d0455b9a902f03ba72bfb1e841"><div class="ttname"><a href="group__group___pin.html#ga5a2951d0455b9a902f03ba72bfb1e841">rt_pin_write</a></div><div class="ttdeci">void rt_pin_write(rt_base_t pin, rt_ssize_t value)</div><div class="ttdoc">write pin value</div></div>
+<div class="ttc" id="agroup__group___pin_html_ga7dda63a191c2832c70e925c077fb256d"><div class="ttname"><a href="group__group___pin.html#ga7dda63a191c2832c70e925c077fb256d">rt_pin_mode</a></div><div class="ttdeci">void rt_pin_mode(rt_base_t pin, rt_uint8_t mode)</div><div class="ttdoc">set pin mode</div></div>
+<div class="ttc" id="agroup__group___pin_html_gaba154cfb12163ef6e7f24eb6a8738172"><div class="ttname"><a href="group__group___pin.html#gaba154cfb12163ef6e7f24eb6a8738172">rt_pin_irq_enable</a></div><div class="ttdeci">rt_err_t rt_pin_irq_enable(rt_base_t pin, rt_uint8_t enabled)</div><div class="ttdoc">enable or disable the pin interrupt</div></div>
+<div class="ttc" id="agroup__group___pin_html_gac25f0f159ffa1179651fbde4ac338c5d"><div class="ttname"><a href="group__group___pin.html#gac25f0f159ffa1179651fbde4ac338c5d">PIN_MODE_OUTPUT</a></div><div class="ttdeci">#define PIN_MODE_OUTPUT</div><div class="ttdef"><b>Definition</b> dev_pin.h:116</div></div>
+<div class="ttc" id="agroup__group___pin_html_gae14869a27ae7d64d5790cdb2b866f737"><div class="ttname"><a href="group__group___pin.html#gae14869a27ae7d64d5790cdb2b866f737">PIN_HIGH</a></div><div class="ttdeci">#define PIN_HIGH</div><div class="ttdef"><b>Definition</b> dev_pin.h:114</div></div>
+<div class="ttc" id="agroup__group___pin_html_gae3f3a9a46d7592447337a3cfea0e3fd8"><div class="ttname"><a href="group__group___pin.html#gae3f3a9a46d7592447337a3cfea0e3fd8">PIN_IRQ_ENABLE</a></div><div class="ttdeci">#define PIN_IRQ_ENABLE</div><div class="ttdef"><b>Definition</b> dev_pin.h:162</div></div>
+<div class="ttc" id="agroup__group___pin_html_gaea72b7486ac7548f1e818310bd9bae62"><div class="ttname"><a href="group__group___pin.html#gaea72b7486ac7548f1e818310bd9bae62">PIN_IRQ_MODE_FALLING</a></div><div class="ttdeci">#define PIN_IRQ_MODE_FALLING</div><div class="ttdef"><b>Definition</b> dev_pin.h:156</div></div>
+<div class="ttc" id="agroup__group___pin_html_gaffae7811e6f84f488accadf3187a0a74"><div class="ttname"><a href="group__group___pin.html#gaffae7811e6f84f488accadf3187a0a74">rt_pin_attach_irq</a></div><div class="ttdeci">rt_err_t rt_pin_attach_irq(rt_base_t pin, rt_uint8_t mode, void(*hdr)(void *args), void *args)</div><div class="ttdoc">bind the pin interrupt callback function</div></div>
+<div class="ttc" id="artdevice_8h_html"><div class="ttname"><a href="rtdevice_8h.html">rtdevice.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_ab3633bbb2a09b3406b19463ffc634345"><div class="ttname"><a href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></div><div class="ttdeci">#define RT_NULL</div><div class="ttdef"><b>Definition</b> rttypes.h:120</div></div>
+</div><!-- fragment --> <h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="gae14869a27ae7d64d5790cdb2b866f737" name="gae14869a27ae7d64d5790cdb2b866f737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae14869a27ae7d64d5790cdb2b866f737">&#9670;&#160;</a></span>PIN_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_HIGH&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>high level </p>
+
+</div>
+</div>
+<a id="ga5baa602cd2fb45994d1f4e5e587f1ace" name="ga5baa602cd2fb45994d1f4e5e587f1ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5baa602cd2fb45994d1f4e5e587f1ace">&#9670;&#160;</a></span>PIN_IRQ_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_DISABLE&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>disable irq </p>
+
+</div>
+</div>
+<a id="gae3f3a9a46d7592447337a3cfea0e3fd8" name="gae3f3a9a46d7592447337a3cfea0e3fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3f3a9a46d7592447337a3cfea0e3fd8">&#9670;&#160;</a></span>PIN_IRQ_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_ENABLE&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>enable irq </p>
+
+</div>
+</div>
+<a id="gaea72b7486ac7548f1e818310bd9bae62" name="gaea72b7486ac7548f1e818310bd9bae62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea72b7486ac7548f1e818310bd9bae62">&#9670;&#160;</a></span>PIN_IRQ_MODE_FALLING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_MODE_FALLING&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>falling edge trigger </p>
+
+</div>
+</div>
+<a id="gab217d390495bc6107eaf3c7f84dc4fde" name="gab217d390495bc6107eaf3c7f84dc4fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab217d390495bc6107eaf3c7f84dc4fde">&#9670;&#160;</a></span>PIN_IRQ_MODE_HIGH_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_MODE_HIGH_LEVEL&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>high level trigger </p>
+
+</div>
+</div>
+<a id="ga695a107bef2830a5d2f49d5feac9055e" name="ga695a107bef2830a5d2f49d5feac9055e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga695a107bef2830a5d2f49d5feac9055e">&#9670;&#160;</a></span>PIN_IRQ_MODE_LOW_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_MODE_LOW_LEVEL&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>low level trigger </p>
+
+</div>
+</div>
+<a id="gae44a5ad4f5830641eda4806e9f50a1c2" name="gae44a5ad4f5830641eda4806e9f50a1c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae44a5ad4f5830641eda4806e9f50a1c2">&#9670;&#160;</a></span>PIN_IRQ_MODE_RISING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_MODE_RISING&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>rising edge trigger </p>
+
+</div>
+</div>
+<a id="gadc869f3d0d5714f5fe22bf03bba8004a" name="gadc869f3d0d5714f5fe22bf03bba8004a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc869f3d0d5714f5fe22bf03bba8004a">&#9670;&#160;</a></span>PIN_IRQ_MODE_RISING_FALLING</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_MODE_RISING_FALLING&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>rising and falling edge trigger </p>
+
+</div>
+</div>
+<a id="ga4d5a445b2cff37bb53d39f219b443a7e" name="ga4d5a445b2cff37bb53d39f219b443a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d5a445b2cff37bb53d39f219b443a7e">&#9670;&#160;</a></span>PIN_IRQ_PIN_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_IRQ_PIN_NONE&#160;&#160;&#160;<a class="el" href="group__group___pin.html#ga61ae8c246db04e2ac956ccf175b217c6">PIN_NONE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>no pin irq </p>
+
+</div>
+</div>
+<a id="ga4569b310ad4177e935f20becec046af2" name="ga4569b310ad4177e935f20becec046af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4569b310ad4177e935f20becec046af2">&#9670;&#160;</a></span>PIN_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_LOW&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>low level </p>
+
+</div>
+</div>
+<a id="ga9b96fab07f827dcc04beaae6bd09400f" name="ga9b96fab07f827dcc04beaae6bd09400f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b96fab07f827dcc04beaae6bd09400f">&#9670;&#160;</a></span>PIN_MODE_INPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_MODE_INPUT&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>input mode </p>
+
+</div>
+</div>
+<a id="gadf4d746ef4f5a2d00d340646fe9d3bfa" name="gadf4d746ef4f5a2d00d340646fe9d3bfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf4d746ef4f5a2d00d340646fe9d3bfa">&#9670;&#160;</a></span>PIN_MODE_INPUT_PULLDOWN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_MODE_INPUT_PULLDOWN&#160;&#160;&#160;0x03</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>input mode with pull-down </p>
+
+</div>
+</div>
+<a id="ga520767b641f2966bcfbaea79837ab798" name="ga520767b641f2966bcfbaea79837ab798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga520767b641f2966bcfbaea79837ab798">&#9670;&#160;</a></span>PIN_MODE_INPUT_PULLUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_MODE_INPUT_PULLUP&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>input mode with pull-up </p>
+
+</div>
+</div>
+<a id="gac25f0f159ffa1179651fbde4ac338c5d" name="gac25f0f159ffa1179651fbde4ac338c5d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac25f0f159ffa1179651fbde4ac338c5d">&#9670;&#160;</a></span>PIN_MODE_OUTPUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_MODE_OUTPUT&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>output mode </p>
+
+</div>
+</div>
+<a id="ga35eda88d3f3c5101fa6e032c2cef5e89" name="ga35eda88d3f3c5101fa6e032c2cef5e89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35eda88d3f3c5101fa6e032c2cef5e89">&#9670;&#160;</a></span>PIN_MODE_OUTPUT_OD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_MODE_OUTPUT_OD&#160;&#160;&#160;0x04</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>output mode with open-drain </p>
+
+</div>
+</div>
+<a id="ga61ae8c246db04e2ac956ccf175b217c6" name="ga61ae8c246db04e2ac956ccf175b217c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61ae8c246db04e2ac956ccf175b217c6">&#9670;&#160;</a></span>PIN_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIN_NONE&#160;&#160;&#160;(-RT_EEMPTY)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga04252280d75185b75ad19875d9441e6f" name="ga04252280d75185b75ad19875d9441e6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04252280d75185b75ad19875d9441e6f">&#9670;&#160;</a></span>rt_device_pin_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_device_pin_register </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structrt__pin__ops.html">rt_pin_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>register a pin device </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the name of pin device </td></tr>
+    <tr><td class="paramname">ops</td><td>the operations of pin device </td></tr>
+    <tr><td class="paramname">user_data</td><td>the user data of pin device </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int error code </dd></dl>
+
+</div>
+</div>
+<a id="gaffae7811e6f84f488accadf3187a0a74" name="gaffae7811e6f84f488accadf3187a0a74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaffae7811e6f84f488accadf3187a0a74">&#9670;&#160;</a></span>rt_pin_attach_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pin_attach_irq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *args)&#160;</td>
+          <td class="paramname"><em>hdr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>bind the pin interrupt callback function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+    <tr><td class="paramname">mode</td><td>the irq mode </td></tr>
+    <tr><td class="paramname">hdr</td><td>the irq callback function </td></tr>
+    <tr><td class="paramname">args</td><td>the argument of the callback function </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="gac4e6f01046fe6a9577a84cccbf766d91" name="gac4e6f01046fe6a9577a84cccbf766d91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4e6f01046fe6a9577a84cccbf766d91">&#9670;&#160;</a></span>rt_pin_debounce()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pin_debounce </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>debounce</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the pin's debounce time </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+    <tr><td class="paramname">debounce</td><td>time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="ga58f34476bbedbc80c811c462f7dee6be" name="ga58f34476bbedbc80c811c462f7dee6be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga58f34476bbedbc80c811c462f7dee6be">&#9670;&#160;</a></span>rt_pin_detach_irq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pin_detach_irq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>detach the pin interrupt callback function </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="gac31fd122fadb80540983907d4b8200c4" name="gac31fd122fadb80540983907d4b8200c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac31fd122fadb80540983907d4b8200c4">&#9670;&#160;</a></span>rt_pin_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> rt_pin_get </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>get pin number by name </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>the pin name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_base_t the pin number </dd></dl>
+
+</div>
+</div>
+<a id="gaba154cfb12163ef6e7f24eb6a8738172" name="gaba154cfb12163ef6e7f24eb6a8738172"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaba154cfb12163ef6e7f24eb6a8738172">&#9670;&#160;</a></span>rt_pin_irq_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pin_irq_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>enabled</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable or disable the pin interrupt </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+    <tr><td class="paramname">enabled</td><td>PIN_IRQ_ENABLE or PIN_IRQ_DISABLE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="ga7dda63a191c2832c70e925c077fb256d" name="ga7dda63a191c2832c70e925c077fb256d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7dda63a191c2832c70e925c077fb256d">&#9670;&#160;</a></span>rt_pin_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pin_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set pin mode </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+    <tr><td class="paramname">mode</td><td>the pin mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gacfb354fd5afd2be465c580982b5b2806" name="gacfb354fd5afd2be465c580982b5b2806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfb354fd5afd2be465c580982b5b2806">&#9670;&#160;</a></span>rt_pin_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a> rt_pin_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>read pin value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_ssize_t the pin value </dd></dl>
+
+</div>
+</div>
+<a id="ga5a2951d0455b9a902f03ba72bfb1e841" name="ga5a2951d0455b9a902f03ba72bfb1e841"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a2951d0455b9a902f03ba72bfb1e841">&#9670;&#160;</a></span>rt_pin_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pin_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>pin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0838be0f1d323925555279fa1016892e">rt_ssize_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>write pin value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>the pin number </td></tr>
+    <tr><td class="paramname">value</td><td>the pin value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['secondexample_0',['SecondExample',['../class_my_library_1_1_second_example.html',1,'MyLibrary']]],
-  ['subclassexample_1',['SubclassExample',['../class_my_library_1_1_subclass_example.html',1,'MyLibrary']]]
+  ['can_5fconfigure_0',['can_configure',['../structcan__configure.html',1,'']]],
+  ['coordinates_1',['coordinates',['../structcoordinates.html',1,'']]]
 ];

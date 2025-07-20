@@ -1,0 +1,819 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/regulator.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('regulator_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">regulator.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;ref.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="misc_8h_source.html">drivers/misc.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for regulator.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="regulator_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2regulator_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2regulator_8h" id="acomponents_2drivers_2include_2drivers_2regulator_8h">
+<area shape="rect" title=" " alt="" coords="311,5,507,45"/>
+<area shape="rect" title=" " alt="" coords="205,93,255,119"/>
+<area shape="poly" title=" " alt="" coords="367,48,269,91,267,86,365,43"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="341,240,404,265"/>
+<area shape="poly" title=" " alt="" coords="393,47,354,99,335,132,321,167,318,179,320,191,332,212,349,229,345,233,328,215,316,193,313,179,315,166,330,130,349,96,389,44"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="481,93,568,119"/>
+<area shape="poly" title=" " alt="" coords="438,43,498,83,495,88,435,48"/>
+<area shape="rect" href="misc_8h.html" title=" " alt="" coords="737,93,851,119"/>
+<area shape="poly" title=" " alt="" coords="501,43,725,88,724,93,500,48"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="499,313,563,339"/>
+<area shape="poly" title=" " alt="" coords="399,263,494,305,492,310,397,268"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="389,387,471,412"/>
+<area shape="poly" title=" " alt="" coords="517,341,459,381,456,376,514,336"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="311,460,391,485"/>
+<area shape="poly" title=" " alt="" coords="500,334,438,351,406,366,379,388,363,416,356,447,350,445,358,415,375,385,403,362,436,346,498,329"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="459,460,559,485"/>
+<area shape="poly" title=" " alt="" coords="532,340,515,447,510,446,527,339"/>
+<area shape="rect" title=" " alt="" coords="547,387,657,412"/>
+<area shape="poly" title=" " alt="" coords="545,337,583,375,579,379,541,341"/>
+<area shape="poly" title=" " alt="" coords="419,414,376,453,372,449,416,410"/>
+<area shape="poly" title=" " alt="" coords="444,410,488,449,484,453,441,414"/>
+<area shape="rect" title=" " alt="" coords="661,533,743,559"/>
+<area shape="poly" title=" " alt="" coords="392,479,648,530,647,536,391,485"/>
+<area shape="rect" title=" " alt="" coords="5,533,76,559"/>
+<area shape="poly" title=" " alt="" coords="312,486,90,536,89,531,311,480"/>
+<area shape="rect" title=" " alt="" coords="101,533,175,559"/>
+<area shape="poly" title=" " alt="" coords="318,488,186,531,185,526,316,483"/>
+<area shape="rect" title=" " alt="" coords="199,533,274,559"/>
+<area shape="poly" title=" " alt="" coords="334,488,268,528,266,524,332,483"/>
+<area shape="rect" title=" " alt="" coords="298,533,394,559"/>
+<area shape="poly" title=" " alt="" coords="353,486,351,520,345,520,348,485"/>
+<area shape="rect" title=" " alt="" coords="419,533,513,559"/>
+<area shape="poly" title=" " alt="" coords="371,483,437,524,434,528,368,488"/>
+<area shape="rect" title=" " alt="" coords="538,533,637,559"/>
+<area shape="poly" title=" " alt="" coords="390,483,537,527,535,532,388,488"/>
+<area shape="poly" title=" " alt="" coords="541,483,659,526,657,531,539,488"/>
+<area shape="poly" title=" " alt="" coords="538,117,554,139,567,166,572,203,568,240,558,274,546,302,541,300,553,272,562,239,567,203,562,167,549,141,533,121"/>
+<area shape="poly" title=" " alt="" coords="566,116,669,148,798,195,860,222,915,251,958,281,984,312,992,332,995,352,993,371,986,389,962,422,927,452,885,478,840,500,756,532,754,527,838,495,883,473,924,448,958,419,982,387,988,370,990,352,987,334,980,315,955,285,913,256,858,227,796,200,668,153,565,121"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="623,240,714,265"/>
+<area shape="poly" title=" " alt="" coords="547,116,579,137,612,165,638,196,658,227,654,230,634,199,608,169,576,142,544,121"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="496,167,553,192"/>
+<area shape="poly" title=" " alt="" coords="520,119,519,153,513,153,515,119"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="331,167,420,192"/>
+<area shape="poly" title=" " alt="" coords="502,121,413,163,411,158,500,116"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="789,240,863,265"/>
+<area shape="poly" title=" " alt="" coords="550,116,791,232,789,236,548,121"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="428,240,493,265"/>
+<area shape="poly" title=" " alt="" coords="517,120,501,142,486,168,475,198,468,227,462,226,470,197,481,166,496,139,513,117"/>
+<area shape="poly" title=" " alt="" coords="648,268,567,309,565,305,645,263"/>
+<area shape="poly" title=" " alt="" coords="528,192,533,300,528,300,523,193"/>
+<area shape="poly" title=" " alt="" coords="529,166,531,132,536,133,534,167"/>
+<area shape="poly" title=" " alt="" coords="378,192,376,227,371,226,372,192"/>
+<area shape="poly" title=" " alt="" coords="789,266,577,316,576,311,787,261"/>
+<area shape="poly" title=" " alt="" coords="789,265,747,283,728,297,712,315,700,340,691,367,686,424,690,477,698,519,693,520,685,478,681,424,686,366,695,338,708,312,724,293,744,278,787,260"/>
+<area shape="poly" title=" " alt="" coords="789,264,729,283,697,297,668,315,638,345,617,376,612,373,634,341,664,311,695,292,727,278,788,259"/>
+<area shape="rect" title=" " alt="" coords="722,313,837,339"/>
+<area shape="poly" title=" " alt="" coords="821,267,797,303,792,300,816,264"/>
+<area shape="rect" title=" " alt="" coords="861,313,970,339"/>
+<area shape="poly" title=" " alt="" coords="842,263,892,302,888,307,839,267"/>
+<area shape="poly" title=" " alt="" coords="474,264,512,302,508,306,470,268"/>
+<area shape="poly" title=" " alt="" coords="795,119,789,149,777,189,757,231,728,267,693,291,653,308,614,318,578,324,577,319,612,313,652,303,690,287,724,263,753,228,772,187,784,148,790,118"/>
+<area shape="rect" title=" " alt="" coords="831,167,914,192"/>
+<area shape="poly" title=" " alt="" coords="808,117,852,156,848,159,805,121"/>
+</map>
+</div>
+</div>
+<p><a href="regulator_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__regulator__param.html">rt_regulator_param</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__regulator__node.html">rt_regulator_node</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__regulator__ops.html">rt_regulator_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unionrt__regulator__notifier__args.html">rt_regulator_notifier_args</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a8bba5f4d9accbfb50a1f107b8247945b" id="r_a8bba5f4d9accbfb50a1f107b8247945b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a8bba5f4d9accbfb50a1f107b8247945b">RT_REGULATOR_UVOLT_INVALID</a>&#160;&#160;&#160;(((int)(<a class="el" href="rtdef_8h.html#ac49e62afdbde91a1495cd06ddbd94421">RT_UINT32_MAX</a> &gt;&gt; 1)))</td></tr>
+<tr class="separator:a8bba5f4d9accbfb50a1f107b8247945b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade1eeca0a39649bb3bc2019ad9294cba" id="r_ade1eeca0a39649bb3bc2019ad9294cba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#ade1eeca0a39649bb3bc2019ad9294cba">RT_REGULATOR_MODE_INVALID</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ade1eeca0a39649bb3bc2019ad9294cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87c4bb7cd2ceea1f104947130e4426e1" id="r_a87c4bb7cd2ceea1f104947130e4426e1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a87c4bb7cd2ceea1f104947130e4426e1">RT_REGULATOR_MODE_FAST</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td></tr>
+<tr class="separator:a87c4bb7cd2ceea1f104947130e4426e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5195ca6b29b9672247162af0ce3b49d3" id="r_a5195ca6b29b9672247162af0ce3b49d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a5195ca6b29b9672247162af0ce3b49d3">RT_REGULATOR_MODE_NORMAL</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td></tr>
+<tr class="separator:a5195ca6b29b9672247162af0ce3b49d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ec9d0bffa9b608d7030c83507a380ec" id="r_a7ec9d0bffa9b608d7030c83507a380ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a7ec9d0bffa9b608d7030c83507a380ec">RT_REGULATOR_MODE_IDLE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td></tr>
+<tr class="separator:a7ec9d0bffa9b608d7030c83507a380ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be23cad2963b7cd5fe1280658417404" id="r_a4be23cad2963b7cd5fe1280658417404"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a4be23cad2963b7cd5fe1280658417404">RT_REGULATOR_MODE_STANDBY</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(3)</td></tr>
+<tr class="separator:a4be23cad2963b7cd5fe1280658417404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a346ea5005b1295f5f4dda1405ea9b767" id="r_a346ea5005b1295f5f4dda1405ea9b767"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a346ea5005b1295f5f4dda1405ea9b767">RT_REGULATOR_MSG_ENABLE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td></tr>
+<tr class="separator:a346ea5005b1295f5f4dda1405ea9b767"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d4c676029b2ca5d46ab2836858eb694" id="r_a9d4c676029b2ca5d46ab2836858eb694"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a9d4c676029b2ca5d46ab2836858eb694">RT_REGULATOR_MSG_DISABLE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td></tr>
+<tr class="separator:a9d4c676029b2ca5d46ab2836858eb694"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b9631bbf449003f681573beaa035202" id="r_a0b9631bbf449003f681573beaa035202"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a0b9631bbf449003f681573beaa035202">RT_REGULATOR_MSG_VOLTAGE_CHANGE</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td></tr>
+<tr class="separator:a0b9631bbf449003f681573beaa035202"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a567fa8afb5440bc9ee6ce2f54ffc4f38" id="r_a567fa8afb5440bc9ee6ce2f54ffc4f38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a567fa8afb5440bc9ee6ce2f54ffc4f38">RT_REGULATOR_MSG_VOLTAGE_CHANGE_ERR</a>&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(3)</td></tr>
+<tr class="separator:a567fa8afb5440bc9ee6ce2f54ffc4f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a15f1b8f89c5d6687c66b36d1b7ce051c" id="r_a15f1b8f89c5d6687c66b36d1b7ce051c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a15f1b8f89c5d6687c66b36d1b7ce051c">rt_regulator_notifier_callback</a>) (struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *notifier, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> msg, void *data)</td></tr>
+<tr class="separator:a15f1b8f89c5d6687c66b36d1b7ce051c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5ab3fc74466336b6a8070647cd7b5a3b" id="r_a5ab3fc74466336b6a8070647cd7b5a3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a5ab3fc74466336b6a8070647cd7b5a3b">rt_regulator_register</a> (struct <a class="el" href="structrt__regulator__node.html">rt_regulator_node</a> *reg_np)</td></tr>
+<tr class="separator:a5ab3fc74466336b6a8070647cd7b5a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24a0971244d3bf41e7dcf067950858cb" id="r_a24a0971244d3bf41e7dcf067950858cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a24a0971244d3bf41e7dcf067950858cb">rt_regulator_unregister</a> (struct <a class="el" href="structrt__regulator__node.html">rt_regulator_node</a> *reg_np)</td></tr>
+<tr class="separator:a24a0971244d3bf41e7dcf067950858cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38270fd4be2f18e067425eb52feff291" id="r_a38270fd4be2f18e067425eb52feff291"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a38270fd4be2f18e067425eb52feff291">rt_regulator_notifier_register</a> (struct rt_regulator *reg, struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *notifier)</td></tr>
+<tr class="separator:a38270fd4be2f18e067425eb52feff291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf4fcc00316bb75fcd864ccf861cb961" id="r_abf4fcc00316bb75fcd864ccf861cb961"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#abf4fcc00316bb75fcd864ccf861cb961">rt_regulator_notifier_unregister</a> (struct rt_regulator *reg, struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *notifier)</td></tr>
+<tr class="separator:abf4fcc00316bb75fcd864ccf861cb961"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ddd8d5aea37dc501f282a0e4bc0240" id="r_a07ddd8d5aea37dc501f282a0e4bc0240"><td class="memItemLeft" align="right" valign="top">struct rt_regulator *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a07ddd8d5aea37dc501f282a0e4bc0240">rt_regulator_get</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *dev, const char *id)</td></tr>
+<tr class="separator:a07ddd8d5aea37dc501f282a0e4bc0240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36ac91fe5149ac010e1fd5ed9112f4e5" id="r_a36ac91fe5149ac010e1fd5ed9112f4e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a36ac91fe5149ac010e1fd5ed9112f4e5">rt_regulator_put</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:a36ac91fe5149ac010e1fd5ed9112f4e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a420737b67563a6f4f5204c3153dffc89" id="r_a420737b67563a6f4f5204c3153dffc89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a420737b67563a6f4f5204c3153dffc89">rt_regulator_enable</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:a420737b67563a6f4f5204c3153dffc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab992c7c8ec3a3ff8afe3a5961db63aa0" id="r_ab992c7c8ec3a3ff8afe3a5961db63aa0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#ab992c7c8ec3a3ff8afe3a5961db63aa0">rt_regulator_disable</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:ab992c7c8ec3a3ff8afe3a5961db63aa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed61b6e4a616ff2c2ee6500cd501d06c" id="r_aed61b6e4a616ff2c2ee6500cd501d06c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#aed61b6e4a616ff2c2ee6500cd501d06c">rt_regulator_is_enabled</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:aed61b6e4a616ff2c2ee6500cd501d06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bbd5d73f97d2034f014dfdc6cbd5f99" id="r_a0bbd5d73f97d2034f014dfdc6cbd5f99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a0bbd5d73f97d2034f014dfdc6cbd5f99">rt_regulator_is_supported_voltage</a> (struct rt_regulator *reg, int min_uvolt, int max_uvolt)</td></tr>
+<tr class="separator:a0bbd5d73f97d2034f014dfdc6cbd5f99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb38398fea043a060bb96055c4677de5" id="r_aeb38398fea043a060bb96055c4677de5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#aeb38398fea043a060bb96055c4677de5">rt_regulator_set_voltage</a> (struct rt_regulator *reg, int min_uvolt, int max_uvolt)</td></tr>
+<tr class="separator:aeb38398fea043a060bb96055c4677de5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a137e455bd5bbdf8f1fce92bec57c4b30" id="r_a137e455bd5bbdf8f1fce92bec57c4b30"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a137e455bd5bbdf8f1fce92bec57c4b30">rt_regulator_get_voltage</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:a137e455bd5bbdf8f1fce92bec57c4b30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2688f8f0da09763ca9ed3c04f36f89ec" id="r_a2688f8f0da09763ca9ed3c04f36f89ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a2688f8f0da09763ca9ed3c04f36f89ec">rt_regulator_set_mode</a> (struct rt_regulator *reg, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> mode)</td></tr>
+<tr class="separator:a2688f8f0da09763ca9ed3c04f36f89ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d153f2df43aefd0475ae78fca1d922" id="r_a33d153f2df43aefd0475ae78fca1d922"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a33d153f2df43aefd0475ae78fca1d922">rt_regulator_get_mode</a> (struct rt_regulator *reg)</td></tr>
+<tr class="separator:a33d153f2df43aefd0475ae78fca1d922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72206176e54a66efede985f0ac10176f" id="r_a72206176e54a66efede985f0ac10176f"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="regulator_8h.html#a72206176e54a66efede985f0ac10176f">rt_regulator_set_voltage_triplet</a> (struct rt_regulator *reg, int min_uvolt, int target_uvolt, int max_uvolt)</td></tr>
+<tr class="separator:a72206176e54a66efede985f0ac10176f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a87c4bb7cd2ceea1f104947130e4426e1" name="a87c4bb7cd2ceea1f104947130e4426e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87c4bb7cd2ceea1f104947130e4426e1">&#9670;&#160;</a></span>RT_REGULATOR_MODE_FAST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MODE_FAST&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7ec9d0bffa9b608d7030c83507a380ec" name="a7ec9d0bffa9b608d7030c83507a380ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ec9d0bffa9b608d7030c83507a380ec">&#9670;&#160;</a></span>RT_REGULATOR_MODE_IDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MODE_IDLE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ade1eeca0a39649bb3bc2019ad9294cba" name="ade1eeca0a39649bb3bc2019ad9294cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade1eeca0a39649bb3bc2019ad9294cba">&#9670;&#160;</a></span>RT_REGULATOR_MODE_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MODE_INVALID&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5195ca6b29b9672247162af0ce3b49d3" name="a5195ca6b29b9672247162af0ce3b49d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5195ca6b29b9672247162af0ce3b49d3">&#9670;&#160;</a></span>RT_REGULATOR_MODE_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MODE_NORMAL&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4be23cad2963b7cd5fe1280658417404" name="a4be23cad2963b7cd5fe1280658417404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be23cad2963b7cd5fe1280658417404">&#9670;&#160;</a></span>RT_REGULATOR_MODE_STANDBY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MODE_STANDBY&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d4c676029b2ca5d46ab2836858eb694" name="a9d4c676029b2ca5d46ab2836858eb694"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d4c676029b2ca5d46ab2836858eb694">&#9670;&#160;</a></span>RT_REGULATOR_MSG_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MSG_DISABLE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a346ea5005b1295f5f4dda1405ea9b767" name="a346ea5005b1295f5f4dda1405ea9b767"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a346ea5005b1295f5f4dda1405ea9b767">&#9670;&#160;</a></span>RT_REGULATOR_MSG_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MSG_ENABLE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0b9631bbf449003f681573beaa035202" name="a0b9631bbf449003f681573beaa035202"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b9631bbf449003f681573beaa035202">&#9670;&#160;</a></span>RT_REGULATOR_MSG_VOLTAGE_CHANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MSG_VOLTAGE_CHANGE&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a567fa8afb5440bc9ee6ce2f54ffc4f38" name="a567fa8afb5440bc9ee6ce2f54ffc4f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567fa8afb5440bc9ee6ce2f54ffc4f38">&#9670;&#160;</a></span>RT_REGULATOR_MSG_VOLTAGE_CHANGE_ERR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_MSG_VOLTAGE_CHANGE_ERR&#160;&#160;&#160;<a class="el" href="misc_8h.html#a55a25940acc35d954978eb670b3089a5">RT_BIT</a>(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bba5f4d9accbfb50a1f107b8247945b" name="a8bba5f4d9accbfb50a1f107b8247945b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bba5f4d9accbfb50a1f107b8247945b">&#9670;&#160;</a></span>RT_REGULATOR_UVOLT_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_REGULATOR_UVOLT_INVALID&#160;&#160;&#160;(((int)(<a class="el" href="rtdef_8h.html#ac49e62afdbde91a1495cd06ddbd94421">RT_UINT32_MAX</a> &gt;&gt; 1)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a15f1b8f89c5d6687c66b36d1b7ce051c" name="a15f1b8f89c5d6687c66b36d1b7ce051c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f1b8f89c5d6687c66b36d1b7ce051c">&#9670;&#160;</a></span>rt_regulator_notifier_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_regulator_notifier_callback) (struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *notifier, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> msg, void *data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ab992c7c8ec3a3ff8afe3a5961db63aa0" name="ab992c7c8ec3a3ff8afe3a5961db63aa0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab992c7c8ec3a3ff8afe3a5961db63aa0">&#9670;&#160;</a></span>rt_regulator_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_disable </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a420737b67563a6f4f5204c3153dffc89" name="a420737b67563a6f4f5204c3153dffc89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a420737b67563a6f4f5204c3153dffc89">&#9670;&#160;</a></span>rt_regulator_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_enable </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07ddd8d5aea37dc501f282a0e4bc0240" name="a07ddd8d5aea37dc501f282a0e4bc0240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ddd8d5aea37dc501f282a0e4bc0240">&#9670;&#160;</a></span>rt_regulator_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct rt_regulator * rt_regulator_get </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33d153f2df43aefd0475ae78fca1d922" name="a33d153f2df43aefd0475ae78fca1d922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d153f2df43aefd0475ae78fca1d922">&#9670;&#160;</a></span>rt_regulator_get_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> rt_regulator_get_mode </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a137e455bd5bbdf8f1fce92bec57c4b30" name="a137e455bd5bbdf8f1fce92bec57c4b30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a137e455bd5bbdf8f1fce92bec57c4b30">&#9670;&#160;</a></span>rt_regulator_get_voltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_regulator_get_voltage </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aed61b6e4a616ff2c2ee6500cd501d06c" name="aed61b6e4a616ff2c2ee6500cd501d06c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed61b6e4a616ff2c2ee6500cd501d06c">&#9670;&#160;</a></span>rt_regulator_is_enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> rt_regulator_is_enabled </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0bbd5d73f97d2034f014dfdc6cbd5f99" name="a0bbd5d73f97d2034f014dfdc6cbd5f99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bbd5d73f97d2034f014dfdc6cbd5f99">&#9670;&#160;</a></span>rt_regulator_is_supported_voltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> rt_regulator_is_supported_voltage </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_uvolt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_uvolt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38270fd4be2f18e067425eb52feff291" name="a38270fd4be2f18e067425eb52feff291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38270fd4be2f18e067425eb52feff291">&#9670;&#160;</a></span>rt_regulator_notifier_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_notifier_register </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *&#160;</td>
+          <td class="paramname"><em>notifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf4fcc00316bb75fcd864ccf861cb961" name="abf4fcc00316bb75fcd864ccf861cb961"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf4fcc00316bb75fcd864ccf861cb961">&#9670;&#160;</a></span>rt_regulator_notifier_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_notifier_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structrt__regulator__notifier.html">rt_regulator_notifier</a> *&#160;</td>
+          <td class="paramname"><em>notifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36ac91fe5149ac010e1fd5ed9112f4e5" name="a36ac91fe5149ac010e1fd5ed9112f4e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36ac91fe5149ac010e1fd5ed9112f4e5">&#9670;&#160;</a></span>rt_regulator_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_regulator_put </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5ab3fc74466336b6a8070647cd7b5a3b" name="a5ab3fc74466336b6a8070647cd7b5a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ab3fc74466336b6a8070647cd7b5a3b">&#9670;&#160;</a></span>rt_regulator_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__regulator__node.html">rt_regulator_node</a> *&#160;</td>
+          <td class="paramname"><em>reg_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2688f8f0da09763ca9ed3c04f36f89ec" name="a2688f8f0da09763ca9ed3c04f36f89ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2688f8f0da09763ca9ed3c04f36f89ec">&#9670;&#160;</a></span>rt_regulator_set_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_set_mode </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb38398fea043a060bb96055c4677de5" name="aeb38398fea043a060bb96055c4677de5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb38398fea043a060bb96055c4677de5">&#9670;&#160;</a></span>rt_regulator_set_voltage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_set_voltage </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_uvolt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_uvolt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a72206176e54a66efede985f0ac10176f" name="a72206176e54a66efede985f0ac10176f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72206176e54a66efede985f0ac10176f">&#9670;&#160;</a></span>rt_regulator_set_voltage_triplet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_set_voltage_triplet </td>
+          <td>(</td>
+          <td class="paramtype">struct rt_regulator *&#160;</td>
+          <td class="paramname"><em>reg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min_uvolt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>target_uvolt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max_uvolt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a24a0971244d3bf41e7dcf067950858cb" name="a24a0971244d3bf41e7dcf067950858cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a0971244d3bf41e7dcf067950858cb">&#9670;&#160;</a></span>rt_regulator_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_regulator_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__regulator__node.html">rt_regulator_node</a> *&#160;</td>
+          <td class="paramname"><em>reg_np</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="regulator_8h.html">regulator.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: src/clock.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('clock_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">clock.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtatomic_8h_source.html">rtatomic.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for clock.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="clock_8c__incl.png" border="0" usemap="#asrc_2clock_8c" alt=""/></div>
+<map name="asrc_2clock_8c" id="asrc_2clock_8c">
+<area shape="rect" title=" " alt="" coords="535,5,625,31"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="569,225,631,251"/>
+<area shape="poly" title=" " alt="" coords="589,30,616,81,630,115,640,151,642,165,640,178,632,198,621,216,616,213,627,196,635,177,637,165,635,153,625,117,611,83,585,32"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="373,79,459,104"/>
+<area shape="poly" title=" " alt="" coords="555,33,456,76,454,71,553,28"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="535,152,625,177"/>
+<area shape="poly" title=" " alt="" coords="583,31,583,138,577,138,577,31"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,299,480,324"/>
+<area shape="poly" title=" " alt="" coords="577,253,486,295,484,290,574,248"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,372,489,397"/>
+<area shape="poly" title=" " alt="" coords="451,324,451,358,445,358,445,324"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,445,505,471"/>
+<area shape="poly" title=" " alt="" coords="465,322,487,343,504,371,507,389,503,406,487,436,482,434,498,404,501,388,499,373,482,347,462,326"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,445,402,471"/>
+<area shape="poly" title=" " alt="" coords="438,326,397,374,364,434,360,431,392,370,434,322"/>
+<area shape="rect" title=" " alt="" coords="221,372,331,397"/>
+<area shape="poly" title=" " alt="" coords="421,326,318,369,316,364,419,322"/>
+<area shape="poly" title=" " alt="" coords="453,397,462,432,457,433,448,398"/>
+<area shape="poly" title=" " alt="" coords="434,400,380,439,377,435,431,395"/>
+<area shape="rect" title=" " alt="" coords="48,519,131,544"/>
+<area shape="poly" title=" " alt="" coords="426,471,414,473,145,523,144,518,413,468,425,466"/>
+<area shape="rect" title=" " alt="" coords="202,519,273,544"/>
+<area shape="poly" title=" " alt="" coords="429,473,287,517,285,512,428,468"/>
+<area shape="rect" title=" " alt="" coords="297,519,372,544"/>
+<area shape="poly" title=" " alt="" coords="446,473,369,514,367,510,443,468"/>
+<area shape="rect" title=" " alt="" coords="396,519,471,544"/>
+<area shape="poly" title=" " alt="" coords="462,472,446,507,442,505,458,470"/>
+<area shape="rect" title=" " alt="" coords="495,519,591,544"/>
+<area shape="poly" title=" " alt="" coords="480,469,522,507,518,511,476,473"/>
+<area shape="rect" title=" " alt="" coords="615,519,710,544"/>
+<area shape="poly" title=" " alt="" coords="498,468,618,511,617,516,496,473"/>
+<area shape="rect" title=" " alt="" coords="735,519,833,544"/>
+<area shape="poly" title=" " alt="" coords="506,466,722,514,721,519,505,471"/>
+<area shape="poly" title=" " alt="" coords="310,473,145,518,144,513,309,468"/>
+<area shape="poly" title=" " alt="" coords="413,105,401,132,390,169,386,210,388,230,393,250,406,271,423,288,419,292,402,274,388,252,382,231,380,210,385,168,396,130,408,103"/>
+<area shape="poly" title=" " alt="" coords="373,101,271,118,150,147,95,166,49,187,19,211,11,224,8,237,8,386,14,422,29,455,49,484,70,507,65,511,45,487,25,458,9,423,3,386,3,236,6,222,15,207,46,182,93,161,149,142,270,113,372,96"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="403,225,493,251"/>
+<area shape="poly" title=" " alt="" coords="421,104,445,211,440,213,416,105"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="454,152,511,177"/>
+<area shape="poly" title=" " alt="" coords="422,103,457,141,453,144,418,106"/>
+<area shape="poly" title=" " alt="" coords="443,102,542,144,540,149,441,106"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="191,225,265,251"/>
+<area shape="poly" title=" " alt="" coords="373,99,342,106,310,116,278,132,251,154,236,182,231,212,226,211,231,180,247,150,275,127,308,111,341,100,372,94"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="262,152,327,177"/>
+<area shape="poly" title=" " alt="" coords="398,106,327,147,325,143,395,102"/>
+<area shape="poly" title=" " alt="" coords="451,251,451,285,445,285,445,251"/>
+<area shape="poly" title=" " alt="" coords="493,177,508,210,511,231,508,252,494,274,477,292,473,288,490,271,503,250,506,231,503,212,488,179"/>
+<area shape="poly" title=" " alt="" coords="477,154,442,115,446,111,481,150"/>
+<area shape="poly" title=" " alt="" coords="586,177,596,211,591,213,581,178"/>
+<area shape="poly" title=" " alt="" coords="264,248,404,293,402,298,263,253"/>
+<area shape="poly" title=" " alt="" coords="191,246,163,252,133,262,105,278,83,300,71,325,63,352,60,381,61,409,70,463,83,505,77,507,65,464,56,410,55,380,58,351,66,323,79,297,102,273,131,257,162,246,190,240"/>
+<area shape="poly" title=" " alt="" coords="267,244,315,261,338,277,356,297,360,318,351,337,334,354,314,367,311,363,331,350,347,334,355,317,351,300,334,281,312,266,265,249"/>
+<area shape="rect" title=" " alt="" coords="93,299,208,324"/>
+<area shape="poly" title=" " alt="" coords="217,253,175,291,172,287,214,249"/>
+<area shape="rect" title=" " alt="" coords="232,299,341,324"/>
+<area shape="poly" title=" " alt="" coords="240,249,271,287,267,290,236,253"/>
+<area shape="poly" title=" " alt="" coords="302,176,320,211,349,249,378,272,409,290,407,295,375,276,345,253,315,214,297,179"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga71d1e6e83760bdb225cc11c334c2b083" id="r_ga71d1e6e83760bdb225cc11c334c2b083"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga71d1e6e83760bdb225cc11c334c2b083">_update_process_times</a>(tick)</td></tr>
+<tr class="separator:ga71d1e6e83760bdb225cc11c334c2b083"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga6e2aa36f263bddcddae01a91986fcdae" id="r_ga6e2aa36f263bddcddae01a91986fcdae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga6e2aa36f263bddcddae01a91986fcdae">rt_tick_get</a> (void)</td></tr>
+<tr class="memdesc:ga6e2aa36f263bddcddae01a91986fcdae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return current tick from operating system startup.  <br /></td></tr>
+<tr class="separator:ga6e2aa36f263bddcddae01a91986fcdae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabcb56645a34adb226c2297aa0c4d5e08" id="r_gabcb56645a34adb226c2297aa0c4d5e08"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gabcb56645a34adb226c2297aa0c4d5e08">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga6e2aa36f263bddcddae01a91986fcdae">rt_tick_get</a>)</td></tr>
+<tr class="separator:gabcb56645a34adb226c2297aa0c4d5e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1efb7c80c0fb0612c226f65a9ee2894c" id="r_ga1efb7c80c0fb0612c226f65a9ee2894c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga1efb7c80c0fb0612c226f65a9ee2894c">rt_tick_get_delta</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> base)</td></tr>
+<tr class="memdesc:ga1efb7c80c0fb0612c226f65a9ee2894c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return delta tick from base.  <br /></td></tr>
+<tr class="separator:ga1efb7c80c0fb0612c226f65a9ee2894c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d93fb34432dab8b9a8a7a2d4d7af81c" id="r_ga8d93fb34432dab8b9a8a7a2d4d7af81c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga8d93fb34432dab8b9a8a7a2d4d7af81c">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga1efb7c80c0fb0612c226f65a9ee2894c">rt_tick_get_delta</a>)</td></tr>
+<tr class="separator:ga8d93fb34432dab8b9a8a7a2d4d7af81c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77af135da16a0b9e1c4a351f4bee6dbd" id="r_ga77af135da16a0b9e1c4a351f4bee6dbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga77af135da16a0b9e1c4a351f4bee6dbd">rt_tick_set</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> tick)</td></tr>
+<tr class="memdesc:ga77af135da16a0b9e1c4a351f4bee6dbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set current tick.  <br /></td></tr>
+<tr class="separator:ga77af135da16a0b9e1c4a351f4bee6dbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29337f93377626f651dd393e1bb608fb" id="r_ga29337f93377626f651dd393e1bb608fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga29337f93377626f651dd393e1bb608fb">rt_tick_increase</a> (void)</td></tr>
+<tr class="memdesc:ga29337f93377626f651dd393e1bb608fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will notify kernel there is one tick passed. Normally, this function is invoked by clock ISR.  <br /></td></tr>
+<tr class="separator:ga29337f93377626f651dd393e1bb608fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga675d451c9e89f5aaa6e4608bab04a9ea" id="r_ga675d451c9e89f5aaa6e4608bab04a9ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga675d451c9e89f5aaa6e4608bab04a9ea">rt_tick_increase_tick</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> tick)</td></tr>
+<tr class="memdesc:ga675d451c9e89f5aaa6e4608bab04a9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will notify kernel there is n tick passed. Normally, this function is invoked by clock ISR.  <br /></td></tr>
+<tr class="separator:ga675d451c9e89f5aaa6e4608bab04a9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae158e7af4e29210a5467bc2ea93ed0d" id="r_gaae158e7af4e29210a5467bc2ea93ed0d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gaae158e7af4e29210a5467bc2ea93ed0d">rt_tick_from_millisecond</a> (<a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> ms)</td></tr>
+<tr class="memdesc:gaae158e7af4e29210a5467bc2ea93ed0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will calculate the tick from millisecond.  <br /></td></tr>
+<tr class="separator:gaae158e7af4e29210a5467bc2ea93ed0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5bc90d93eb6fc12b651572e4b2b3156d" id="r_ga5bc90d93eb6fc12b651572e4b2b3156d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga5bc90d93eb6fc12b651572e4b2b3156d">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#gaae158e7af4e29210a5467bc2ea93ed0d">rt_tick_from_millisecond</a>)</td></tr>
+<tr class="separator:ga5bc90d93eb6fc12b651572e4b2b3156d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad12f9ca6e5c730a0dadc7cb8a26f80a" id="r_gaad12f9ca6e5c730a0dadc7cb8a26f80a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gaad12f9ca6e5c730a0dadc7cb8a26f80a">rt_tick_get_millisecond</a> (void)</td></tr>
+<tr class="memdesc:gaad12f9ca6e5c730a0dadc7cb8a26f80a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return the passed millisecond from boot.  <br /></td></tr>
+<tr class="separator:gaad12f9ca6e5c730a0dadc7cb8a26f80a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="clock_8c.html">clock.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

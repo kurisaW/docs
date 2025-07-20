@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/finsh/shell.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('shell_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">shell.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="shell_8h_source.html">shell.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="msh_8h_source.html">msh.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for shell.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="shell_8c__incl.png" border="0" usemap="#acomponents_2finsh_2shell_8c" alt=""/></div>
+<map name="acomponents_2finsh_2shell_8c" id="acomponents_2finsh_2shell_8c">
+<area shape="rect" title=" " alt="" coords="262,5,445,31"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="317,299,379,324"/>
+<area shape="poly" title=" " alt="" coords="287,33,246,51,228,64,214,81,203,91,189,99,177,106,168,115,166,131,172,156,191,195,226,249,242,266,261,280,304,298,302,303,259,285,238,270,222,252,187,198,167,158,160,131,163,113,173,102,187,94,200,87,210,77,225,60,243,46,285,28"/>
+<area shape="rect" title=" " alt="" coords="225,79,295,104"/>
+<area shape="poly" title=" " alt="" coords="340,33,288,72,284,68,337,29"/>
+<area shape="rect" title=" " alt="" coords="320,79,387,104"/>
+<area shape="poly" title=" " alt="" coords="356,31,356,65,351,65,351,31"/>
+<area shape="rect" href="shell_8h.html" title=" " alt="" coords="411,79,477,104"/>
+<area shape="poly" title=" " alt="" coords="370,29,420,68,417,72,366,33"/>
+<area shape="rect" href="msh_8h.html" title=" " alt="" coords="501,79,563,104"/>
+<area shape="poly" title=" " alt="" coords="383,28,491,71,489,76,381,33"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="417,372,481,397"/>
+<area shape="poly" title=" " alt="" coords="366,322,423,362,420,366,363,326"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="381,445,464,471"/>
+<area shape="poly" title=" " alt="" coords="447,399,434,434,429,432,442,397"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="331,519,411,544"/>
+<area shape="poly" title=" " alt="" coords="425,400,395,419,382,432,372,446,365,476,367,505,362,505,360,475,367,444,378,428,392,415,422,395"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="451,519,551,544"/>
+<area shape="poly" title=" " alt="" coords="458,397,478,444,497,504,492,506,474,446,453,399"/>
+<area shape="rect" title=" " alt="" coords="539,445,650,471"/>
+<area shape="poly" title=" " alt="" coords="474,395,560,437,558,442,472,400"/>
+<area shape="poly" title=" " alt="" coords="416,473,389,509,385,506,412,469"/>
+<area shape="poly" title=" " alt="" coords="437,469,480,508,477,511,434,473"/>
+<area shape="rect" title=" " alt="" coords="661,592,744,617"/>
+<area shape="poly" title=" " alt="" coords="411,539,648,589,647,594,410,544"/>
+<area shape="rect" title=" " alt="" coords="566,592,637,617"/>
+<area shape="poly" title=" " alt="" coords="409,541,554,586,552,591,407,547"/>
+<area shape="rect" title=" " alt="" coords="5,592,80,617"/>
+<area shape="poly" title=" " alt="" coords="331,544,94,594,93,589,330,538"/>
+<area shape="rect" title=" " alt="" coords="104,592,179,617"/>
+<area shape="poly" title=" " alt="" coords="335,547,193,590,191,585,333,541"/>
+<area shape="rect" title=" " alt="" coords="203,592,299,617"/>
+<area shape="poly" title=" " alt="" coords="353,546,284,587,281,582,350,542"/>
+<area shape="rect" title=" " alt="" coords="323,592,418,617"/>
+<area shape="poly" title=" " alt="" coords="373,544,373,578,368,578,368,544"/>
+<area shape="rect" title=" " alt="" coords="443,592,541,617"/>
+<area shape="poly" title=" " alt="" coords="392,542,462,583,459,587,389,546"/>
+<area shape="poly" title=" " alt="" coords="535,542,658,585,656,590,533,547"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="477,152,563,177"/>
+<area shape="poly" title=" " alt="" coords="458,102,499,141,496,144,454,106"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="237,225,302,251"/>
+<area shape="poly" title=" " alt="" coords="431,107,295,219,292,215,428,102"/>
+<area shape="poly" title=" " alt="" coords="533,176,550,197,564,225,566,238,564,251,554,291,533,326,510,349,485,367,481,363,506,345,529,322,549,289,559,250,561,238,559,226,546,200,529,179"/>
+<area shape="poly" title=" " alt="" coords="564,171,657,190,765,220,815,238,856,259,884,283,892,296,895,310,895,460,891,484,881,507,866,526,847,544,803,571,758,590,756,585,801,566,844,539,862,523,877,504,886,483,889,459,889,310,887,298,880,287,853,264,813,243,764,225,656,195,563,176"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="404,299,495,324"/>
+<area shape="poly" title=" " alt="" coords="513,179,481,227,458,287,453,285,476,224,508,176"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="491,225,549,251"/>
+<area shape="poly" title=" " alt="" coords="516,178,514,212,509,212,510,178"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="326,225,415,251"/>
+<area shape="poly" title=" " alt="" coords="497,180,409,222,406,217,495,175"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="624,299,699,324"/>
+<area shape="poly" title=" " alt="" coords="542,175,574,196,607,223,632,255,652,285,647,288,628,258,603,227,571,200,540,180"/>
+<area shape="poly" title=" " alt="" coords="480,180,316,226,315,221,479,175"/>
+<area shape="poly" title=" " alt="" coords="452,324,452,358,447,358,447,324"/>
+<area shape="poly" title=" " alt="" coords="523,251,521,285,509,325,494,347,477,365,473,361,490,344,504,323,515,284,518,251"/>
+<area shape="poly" title=" " alt="" coords="524,225,526,191,531,191,530,225"/>
+<area shape="poly" title=" " alt="" coords="369,252,358,286,353,285,364,250"/>
+<area shape="poly" title=" " alt="" coords="628,327,495,371,493,366,626,321"/>
+<area shape="poly" title=" " alt="" coords="668,324,680,371,696,487,704,578,699,578,691,487,675,373,662,325"/>
+<area shape="poly" title=" " alt="" coords="625,323,581,341,562,355,546,373,542,389,547,405,557,420,570,434,566,438,553,423,542,407,537,389,542,371,558,351,579,337,622,318"/>
+<area shape="rect" title=" " alt="" coords="740,372,855,397"/>
+<area shape="poly" title=" " alt="" coords="684,322,764,363,762,368,682,326"/>
+<area shape="rect" title=" " alt="" coords="556,372,665,397"/>
+<area shape="poly" title=" " alt="" coords="655,326,629,362,625,359,651,323"/>
+<area shape="poly" title=" " alt="" coords="274,250,284,285,293,305,306,322,328,340,353,354,405,372,403,377,351,359,325,344,302,326,288,308,279,287,269,251"/>
+<area shape="poly" title=" " alt="" coords="533,105,527,139,522,138,527,104"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ae351601d69c6141ed83e576fcab64e0b" id="r_ae351601d69c6141ed83e576fcab64e0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#ae351601d69c6141ed83e576fcab64e0b">_MSH_PROMPT</a>&#160;&#160;&#160;&quot;msh &quot;</td></tr>
+<tr class="separator:ae351601d69c6141ed83e576fcab64e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a7cca296f9a76546668dc511ec5f8f3c8" id="r_a7cca296f9a76546668dc511ec5f8f3c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a7cca296f9a76546668dc511ec5f8f3c8">finsh_set_prompt</a> (const char *prompt)</td></tr>
+<tr class="separator:a7cca296f9a76546668dc511ec5f8f3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a704ce02ee10c6cdf25d3393130bdda2b" id="r_a704ce02ee10c6cdf25d3393130bdda2b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a704ce02ee10c6cdf25d3393130bdda2b">finsh_get_prompt</a> (void)</td></tr>
+<tr class="separator:a704ce02ee10c6cdf25d3393130bdda2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab73621cc9f385c6742d10278a64cf638" id="r_ab73621cc9f385c6742d10278a64cf638"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#ab73621cc9f385c6742d10278a64cf638">finsh_get_prompt_mode</a> (void)</td></tr>
+<tr class="separator:ab73621cc9f385c6742d10278a64cf638"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad37603360d3201083d8bae51bec8d124" id="r_ad37603360d3201083d8bae51bec8d124"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#ad37603360d3201083d8bae51bec8d124">finsh_set_prompt_mode</a> (<a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> prompt_mode)</td></tr>
+<tr class="separator:ad37603360d3201083d8bae51bec8d124"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa5e3c144b3c224f8b3a00befc3ff03" id="r_afaa5e3c144b3c224f8b3a00befc3ff03"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#afaa5e3c144b3c224f8b3a00befc3ff03">finsh_getchar</a> (void)</td></tr>
+<tr class="separator:afaa5e3c144b3c224f8b3a00befc3ff03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ca70de04431b9f767dff9f2ba7dcc8b" id="r_a4ca70de04431b9f767dff9f2ba7dcc8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a4ca70de04431b9f767dff9f2ba7dcc8b">finsh_set_device</a> (const char *device_name)</td></tr>
+<tr class="separator:a4ca70de04431b9f767dff9f2ba7dcc8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe8f5ac72b6b16c55e97be2b08054b97" id="r_afe8f5ac72b6b16c55e97be2b08054b97"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#afe8f5ac72b6b16c55e97be2b08054b97">finsh_get_device</a> ()</td></tr>
+<tr class="separator:afe8f5ac72b6b16c55e97be2b08054b97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80e3d53913894f5fbfcf9335205c649" id="r_ae80e3d53913894f5fbfcf9335205c649"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#ae80e3d53913894f5fbfcf9335205c649">finsh_set_echo</a> (<a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> echo)</td></tr>
+<tr class="separator:ae80e3d53913894f5fbfcf9335205c649"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d4ddaeaf41942986da9810c6f5b5ee" id="r_a77d4ddaeaf41942986da9810c6f5b5ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a77d4ddaeaf41942986da9810c6f5b5ee">finsh_get_echo</a> ()</td></tr>
+<tr class="separator:a77d4ddaeaf41942986da9810c6f5b5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52183744c46631da773a842c927f1c86" id="r_a52183744c46631da773a842c927f1c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a52183744c46631da773a842c927f1c86">finsh_thread_entry_sethook</a> (void(*hook)(void))</td></tr>
+<tr class="memdesc:a52183744c46631da773a842c927f1c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function set a hook function at the entry of finsh thread.  <br /></td></tr>
+<tr class="separator:a52183744c46631da773a842c927f1c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8233759e73b815036f554e84ffdd0e" id="r_a3e8233759e73b815036f554e84ffdd0e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a3e8233759e73b815036f554e84ffdd0e">finsh_system_init</a> (void)</td></tr>
+<tr class="separator:a3e8233759e73b815036f554e84ffdd0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af540c9616e854066f7ea469c0adbac80" id="r_af540c9616e854066f7ea469c0adbac80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#af540c9616e854066f7ea469c0adbac80">INIT_APP_EXPORT</a> (<a class="el" href="shell_8c.html#a3e8233759e73b815036f554e84ffdd0e">finsh_system_init</a>)</td></tr>
+<tr class="separator:af540c9616e854066f7ea469c0adbac80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a7a6d87bb74cf8a72a6bea49337bca645" id="r_a7a6d87bb74cf8a72a6bea49337bca645"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a7a6d87bb74cf8a72a6bea49337bca645">_syscall_table_begin</a> = NULL</td></tr>
+<tr class="separator:a7a6d87bb74cf8a72a6bea49337bca645"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6fb70fca1e55f691f8c7f13fa7fe592" id="r_aa6fb70fca1e55f691f8c7f13fa7fe592"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#aa6fb70fca1e55f691f8c7f13fa7fe592">_syscall_table_end</a> = NULL</td></tr>
+<tr class="separator:aa6fb70fca1e55f691f8c7f13fa7fe592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df61643f85f60c71bd0eefcdb62b22d" id="r_a9df61643f85f60c71bd0eefcdb62b22d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structfinsh__shell.html">finsh_shell</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shell_8c.html#a9df61643f85f60c71bd0eefcdb62b22d">shell</a></td></tr>
+<tr class="separator:a9df61643f85f60c71bd0eefcdb62b22d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ae351601d69c6141ed83e576fcab64e0b" name="ae351601d69c6141ed83e576fcab64e0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae351601d69c6141ed83e576fcab64e0b">&#9670;&#160;</a></span>_MSH_PROMPT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _MSH_PROMPT&#160;&#160;&#160;&quot;msh &quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="afe8f5ac72b6b16c55e97be2b08054b97" name="afe8f5ac72b6b16c55e97be2b08054b97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe8f5ac72b6b16c55e97be2b08054b97">&#9670;&#160;</a></span>finsh_get_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * finsh_get_device </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function returns current finsh shell input device.</p>
+<dl class="section return"><dt>Returns</dt><dd>the finsh shell input device name is returned. </dd></dl>
+
+</div>
+</div>
+<a id="a77d4ddaeaf41942986da9810c6f5b5ee" name="a77d4ddaeaf41942986da9810c6f5b5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77d4ddaeaf41942986da9810c6f5b5ee">&#9670;&#160;</a></span>finsh_get_echo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> finsh_get_echo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function gets the echo mode of finsh shell.</p>
+<dl class="section return"><dt>Returns</dt><dd>the echo mode </dd></dl>
+
+</div>
+</div>
+<a id="a704ce02ee10c6cdf25d3393130bdda2b" name="a704ce02ee10c6cdf25d3393130bdda2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a704ce02ee10c6cdf25d3393130bdda2b">&#9670;&#160;</a></span>finsh_get_prompt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * finsh_get_prompt </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab73621cc9f385c6742d10278a64cf638" name="ab73621cc9f385c6742d10278a64cf638"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab73621cc9f385c6742d10278a64cf638">&#9670;&#160;</a></span>finsh_get_prompt_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> finsh_get_prompt_mode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function get the prompt mode of finsh shell.</p>
+<dl class="section return"><dt>Returns</dt><dd>prompt the prompt mode, 0 disable prompt mode, other values enable prompt mode. </dd></dl>
+
+</div>
+</div>
+<a id="afaa5e3c144b3c224f8b3a00befc3ff03" name="afaa5e3c144b3c224f8b3a00befc3ff03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaa5e3c144b3c224f8b3a00befc3ff03">&#9670;&#160;</a></span>finsh_getchar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int finsh_getchar </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ca70de04431b9f767dff9f2ba7dcc8b" name="a4ca70de04431b9f767dff9f2ba7dcc8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ca70de04431b9f767dff9f2ba7dcc8b">&#9670;&#160;</a></span>finsh_set_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finsh_set_device </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>device_name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function sets the input device of finsh shell.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">device_name</td><td>the name of new input device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae80e3d53913894f5fbfcf9335205c649" name="ae80e3d53913894f5fbfcf9335205c649"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae80e3d53913894f5fbfcf9335205c649">&#9670;&#160;</a></span>finsh_set_echo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finsh_set_echo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>echo</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function set the echo mode of finsh shell.</p>
+<p>FINSH_OPTION_ECHO=0x01 is echo mode, other values are none-echo mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">echo</td><td>the echo mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a7cca296f9a76546668dc511ec5f8f3c8" name="a7cca296f9a76546668dc511ec5f8f3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cca296f9a76546668dc511ec5f8f3c8">&#9670;&#160;</a></span>finsh_set_prompt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int finsh_set_prompt </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>prompt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad37603360d3201083d8bae51bec8d124" name="ad37603360d3201083d8bae51bec8d124"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad37603360d3201083d8bae51bec8d124">&#9670;&#160;</a></span>finsh_set_prompt_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finsh_set_prompt_mode </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>prompt_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>This function set the prompt mode of finsh shell.</p>
+<p>The parameter 0 disable prompt mode, other values enable prompt mode.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prompt_mode</td><td>the prompt mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e8233759e73b815036f554e84ffdd0e" name="a3e8233759e73b815036f554e84ffdd0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8233759e73b815036f554e84ffdd0e">&#9670;&#160;</a></span>finsh_system_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int finsh_system_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52183744c46631da773a842c927f1c86" name="a52183744c46631da773a842c927f1c86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52183744c46631da773a842c927f1c86">&#9670;&#160;</a></span>finsh_thread_entry_sethook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void finsh_thread_entry_sethook </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>hook</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function set a hook function at the entry of finsh thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hook</td><td>the function point to be called </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af540c9616e854066f7ea469c0adbac80" name="af540c9616e854066f7ea469c0adbac80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af540c9616e854066f7ea469c0adbac80">&#9670;&#160;</a></span>INIT_APP_EXPORT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">INIT_APP_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="shell_8c.html#a3e8233759e73b815036f554e84ffdd0e">finsh_system_init</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a7a6d87bb74cf8a72a6bea49337bca645" name="a7a6d87bb74cf8a72a6bea49337bca645"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6d87bb74cf8a72a6bea49337bca645">&#9670;&#160;</a></span>_syscall_table_begin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a>* _syscall_table_begin = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa6fb70fca1e55f691f8c7f13fa7fe592" name="aa6fb70fca1e55f691f8c7f13fa7fe592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6fb70fca1e55f691f8c7f13fa7fe592">&#9670;&#160;</a></span>_syscall_table_end</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__syscall.html">finsh_syscall</a>* _syscall_table_end = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9df61643f85f60c71bd0eefcdb62b22d" name="a9df61643f85f60c71bd0eefcdb62b22d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df61643f85f60c71bd0eefcdb62b22d">&#9670;&#160;</a></span>shell</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structfinsh__shell.html">finsh_shell</a>* shell</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_86d0af1c976cb2104552e4f347bf9ac9.html">finsh</a></li><li class="navelem"><a class="el" href="shell_8c.html">shell.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

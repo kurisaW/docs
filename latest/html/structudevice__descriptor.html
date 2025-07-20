@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: udevice_descriptor Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structudevice__descriptor.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">udevice_descriptor Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="usb__common_8h_source.html">usb_common.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a7005ecbf0ea80a1e9285841a729f4015" id="r_a7005ecbf0ea80a1e9285841a729f4015"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a7005ecbf0ea80a1e9285841a729f4015">bLength</a></td></tr>
+<tr class="separator:a7005ecbf0ea80a1e9285841a729f4015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ad49f68d8d7f705da84b54bf5f1bb8" id="r_af8ad49f68d8d7f705da84b54bf5f1bb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#af8ad49f68d8d7f705da84b54bf5f1bb8">type</a></td></tr>
+<tr class="separator:af8ad49f68d8d7f705da84b54bf5f1bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579cafcc6a932253338ccfcf3573965b" id="r_a579cafcc6a932253338ccfcf3573965b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a579cafcc6a932253338ccfcf3573965b">bcdUSB</a></td></tr>
+<tr class="separator:a579cafcc6a932253338ccfcf3573965b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9010f9c8ebaa081d2a351492816179" id="r_afa9010f9c8ebaa081d2a351492816179"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#afa9010f9c8ebaa081d2a351492816179">bDeviceClass</a></td></tr>
+<tr class="separator:afa9010f9c8ebaa081d2a351492816179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a320d5f6dc3e87764d54247c07e63f9fe" id="r_a320d5f6dc3e87764d54247c07e63f9fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a320d5f6dc3e87764d54247c07e63f9fe">bDeviceSubClass</a></td></tr>
+<tr class="separator:a320d5f6dc3e87764d54247c07e63f9fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2e808806a9f0a7251e45536f1934c5" id="r_a4f2e808806a9f0a7251e45536f1934c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a4f2e808806a9f0a7251e45536f1934c5">bDeviceProtocol</a></td></tr>
+<tr class="separator:a4f2e808806a9f0a7251e45536f1934c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accb72acacc05f697a7254d39a9241df6" id="r_accb72acacc05f697a7254d39a9241df6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#accb72acacc05f697a7254d39a9241df6">bMaxPacketSize0</a></td></tr>
+<tr class="separator:accb72acacc05f697a7254d39a9241df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fa382c691711f09a3d08e9b7dcfd560" id="r_a0fa382c691711f09a3d08e9b7dcfd560"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a0fa382c691711f09a3d08e9b7dcfd560">idVendor</a></td></tr>
+<tr class="separator:a0fa382c691711f09a3d08e9b7dcfd560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac178e0642327f51a5e877130f7089722" id="r_ac178e0642327f51a5e877130f7089722"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#ac178e0642327f51a5e877130f7089722">idProduct</a></td></tr>
+<tr class="separator:ac178e0642327f51a5e877130f7089722"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3e5a0ba2f8aa4b4026c41751eb3678" id="r_a3c3e5a0ba2f8aa4b4026c41751eb3678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a3c3e5a0ba2f8aa4b4026c41751eb3678">bcdDevice</a></td></tr>
+<tr class="separator:a3c3e5a0ba2f8aa4b4026c41751eb3678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8e43fb684b8da00bf0a27124bf699ae" id="r_af8e43fb684b8da00bf0a27124bf699ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#af8e43fb684b8da00bf0a27124bf699ae">iManufacturer</a></td></tr>
+<tr class="separator:af8e43fb684b8da00bf0a27124bf699ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3df0f375bb0e796456073f5a0f71d11" id="r_aa3df0f375bb0e796456073f5a0f71d11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#aa3df0f375bb0e796456073f5a0f71d11">iProduct</a></td></tr>
+<tr class="separator:aa3df0f375bb0e796456073f5a0f71d11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd43d6621a2d10dfd9c96e5b9a167e4" id="r_a8dd43d6621a2d10dfd9c96e5b9a167e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a8dd43d6621a2d10dfd9c96e5b9a167e4">iSerialNumber</a></td></tr>
+<tr class="separator:a8dd43d6621a2d10dfd9c96e5b9a167e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19fffaaf9e6992d3a1e874acff6c45e2" id="r_a19fffaaf9e6992d3a1e874acff6c45e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice__descriptor.html#a19fffaaf9e6992d3a1e874acff6c45e2">bNumConfigurations</a></td></tr>
+<tr class="separator:a19fffaaf9e6992d3a1e874acff6c45e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a3c3e5a0ba2f8aa4b4026c41751eb3678" name="a3c3e5a0ba2f8aa4b4026c41751eb3678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3e5a0ba2f8aa4b4026c41751eb3678">&#9670;&#160;</a></span>bcdDevice</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> udevice_descriptor::bcdDevice</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a579cafcc6a932253338ccfcf3573965b" name="a579cafcc6a932253338ccfcf3573965b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579cafcc6a932253338ccfcf3573965b">&#9670;&#160;</a></span>bcdUSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> udevice_descriptor::bcdUSB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afa9010f9c8ebaa081d2a351492816179" name="afa9010f9c8ebaa081d2a351492816179"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa9010f9c8ebaa081d2a351492816179">&#9670;&#160;</a></span>bDeviceClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bDeviceClass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f2e808806a9f0a7251e45536f1934c5" name="a4f2e808806a9f0a7251e45536f1934c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2e808806a9f0a7251e45536f1934c5">&#9670;&#160;</a></span>bDeviceProtocol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bDeviceProtocol</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a320d5f6dc3e87764d54247c07e63f9fe" name="a320d5f6dc3e87764d54247c07e63f9fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a320d5f6dc3e87764d54247c07e63f9fe">&#9670;&#160;</a></span>bDeviceSubClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bDeviceSubClass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7005ecbf0ea80a1e9285841a729f4015" name="a7005ecbf0ea80a1e9285841a729f4015"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7005ecbf0ea80a1e9285841a729f4015">&#9670;&#160;</a></span>bLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="accb72acacc05f697a7254d39a9241df6" name="accb72acacc05f697a7254d39a9241df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accb72acacc05f697a7254d39a9241df6">&#9670;&#160;</a></span>bMaxPacketSize0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bMaxPacketSize0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19fffaaf9e6992d3a1e874acff6c45e2" name="a19fffaaf9e6992d3a1e874acff6c45e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19fffaaf9e6992d3a1e874acff6c45e2">&#9670;&#160;</a></span>bNumConfigurations</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::bNumConfigurations</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac178e0642327f51a5e877130f7089722" name="ac178e0642327f51a5e877130f7089722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac178e0642327f51a5e877130f7089722">&#9670;&#160;</a></span>idProduct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> udevice_descriptor::idProduct</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0fa382c691711f09a3d08e9b7dcfd560" name="a0fa382c691711f09a3d08e9b7dcfd560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fa382c691711f09a3d08e9b7dcfd560">&#9670;&#160;</a></span>idVendor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> udevice_descriptor::idVendor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8e43fb684b8da00bf0a27124bf699ae" name="af8e43fb684b8da00bf0a27124bf699ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8e43fb684b8da00bf0a27124bf699ae">&#9670;&#160;</a></span>iManufacturer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::iManufacturer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3df0f375bb0e796456073f5a0f71d11" name="aa3df0f375bb0e796456073f5a0f71d11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3df0f375bb0e796456073f5a0f71d11">&#9670;&#160;</a></span>iProduct</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::iProduct</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8dd43d6621a2d10dfd9c96e5b9a167e4" name="a8dd43d6621a2d10dfd9c96e5b9a167e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd43d6621a2d10dfd9c96e5b9a167e4">&#9670;&#160;</a></span>iSerialNumber</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::iSerialNumber</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8ad49f68d8d7f705da84b54bf5f1bb8" name="af8ad49f68d8d7f705da84b54bf5f1bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8ad49f68d8d7f705da84b54bf5f1bb8">&#9670;&#160;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> udevice_descriptor::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="usb__common_8h_source.html">usb_common.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structudevice__descriptor.html">udevice_descriptor</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: DAC</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group___d_a_c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">DAC<div class="ingroups"><a class="el" href="group__group__device__driver.html">Group_device_driver</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>DAC driver api.  
+<a href="#details">More...</a></p>
+<div class="dynheader">
+Collaboration diagram for DAC:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group___d_a_c.png" border="0" usemap="#agroup____group______d__a__c" alt=""/></div>
+<map name="agroup____group______d__a__c" id="agroup____group______d__a__c">
+<area shape="rect" title="DAC driver api." alt="" coords="209,5,260,31"/>
+<area shape="rect" href="group__group__device__driver.html" title=" " alt="" coords="5,5,161,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__dac__ops.html">rt_dac_ops</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configuration of DAC device.  <a href="structrt__dac__ops.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__dac__device.html">rt_dac_device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">DAC device structure.  <a href="structrt__dac__device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga0948fc2864e6877ab43f0556400f7c23" id="r_ga0948fc2864e6877ab43f0556400f7c23"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__dac__device.html">rt_dac_device</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a></td></tr>
+<tr class="separator:ga0948fc2864e6877ab43f0556400f7c23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gaeee448e3f5f1c6941917bbd4f482b25a" id="r_gaeee448e3f5f1c6941917bbd4f482b25a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#gaeee448e3f5f1c6941917bbd4f482b25a">rt_dac_cmd_t</a> { <a class="el" href="group__group___d_a_c.html#ggaeee448e3f5f1c6941917bbd4f482b25aaafb5860fbf59cc2d86596c25a23aeafe">RT_DAC_CMD_ENABLE</a> = RT_DEVICE_CTRL_BASE(DAC) + 0
+, <a class="el" href="group__group___d_a_c.html#ggaeee448e3f5f1c6941917bbd4f482b25aae647efd40e6a64e52a76f6d358245d16">RT_DAC_CMD_DISABLE</a> = RT_DEVICE_CTRL_BASE(DAC) + 1
+, <a class="el" href="group__group___d_a_c.html#ggaeee448e3f5f1c6941917bbd4f482b25aaf29737e9ffc666d78b94e999ab15813f">RT_DAC_CMD_GET_RESOLUTION</a> = RT_DEVICE_CTRL_BASE(DAC) + 2
+ }</td></tr>
+<tr class="separator:gaeee448e3f5f1c6941917bbd4f482b25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga7d8d6d38f9bdf51360e89261ca1a5343" id="r_ga7d8d6d38f9bdf51360e89261ca1a5343"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#ga7d8d6d38f9bdf51360e89261ca1a5343">rt_hw_dac_register</a> (<a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a> dac, const char *name, const struct <a class="el" href="structrt__dac__ops.html">rt_dac_ops</a> *ops, const void *user_data)</td></tr>
+<tr class="memdesc:ga7d8d6d38f9bdf51360e89261ca1a5343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register a DAC device.  <br /></td></tr>
+<tr class="separator:ga7d8d6d38f9bdf51360e89261ca1a5343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0370f324ef52fb428f42a50867379c26" id="r_ga0370f324ef52fb428f42a50867379c26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#ga0370f324ef52fb428f42a50867379c26">rt_dac_write</a> (<a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a> dev, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> channel, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> value)</td></tr>
+<tr class="memdesc:ga0370f324ef52fb428f42a50867379c26"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the value of DAC  <br /></td></tr>
+<tr class="separator:ga0370f324ef52fb428f42a50867379c26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc2edb7a728f6a57132f42abc2c70843" id="r_gabc2edb7a728f6a57132f42abc2c70843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#gabc2edb7a728f6a57132f42abc2c70843">rt_dac_enable</a> (<a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a> dev, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> channel)</td></tr>
+<tr class="memdesc:gabc2edb7a728f6a57132f42abc2c70843"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable the DAC channel  <br /></td></tr>
+<tr class="separator:gabc2edb7a728f6a57132f42abc2c70843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e512b2f86520f8d566ed53c69b7fd2b" id="r_ga5e512b2f86520f8d566ed53c69b7fd2b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___d_a_c.html#ga5e512b2f86520f8d566ed53c69b7fd2b">rt_dac_disable</a> (<a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a> dev, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> channel)</td></tr>
+<tr class="memdesc:ga5e512b2f86520f8d566ed53c69b7fd2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">disable the DAC channel  <br /></td></tr>
+<tr class="separator:ga5e512b2f86520f8d566ed53c69b7fd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>DAC driver api. </p>
+<p><b>Example</b> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="rtthread_8h.html">rtthread.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="rtdevice_8h.html">rtdevice.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#define DAC_DEV_NAME        &quot;dac1&quot;</span></div>
+<div class="line"><span class="preprocessor">#define DAC_DEV_CHANNEL     1</span></div>
+<div class="line"><span class="preprocessor">#define REFER_VOLTAGE       330</span></div>
+<div class="line"><span class="preprocessor">#define CONVERT_BITS        (1 &lt;&lt; 12)</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">int</span> dac_vol_sample(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line">{</div>
+<div class="line">    <a class="code hl_struct" href="structrt__dac__device.html">rt_dac_device_t</a> dac_dev;</div>
+<div class="line">    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> value, vol;</div>
+<div class="line">    <a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> ret = RT_EOK;</div>
+<div class="line"> </div>
+<div class="line">    dac_dev = (<a class="code hl_typedef" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a>)<a class="code hl_function" href="group__group__device__driver.html#ga7fb604dd486fbf5e48004b4d94d8eb3e">rt_device_find</a>(DAC_DEV_NAME);</div>
+<div class="line">    <span class="keywordflow">if</span> (dac_dev == <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;dac sample run failed! can&#39;t find %s device!\n&quot;</span>, DAC_DEV_NAME);</div>
+<div class="line">        <span class="keywordflow">return</span> -RT_ERROR;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    ret = <a class="code hl_function" href="group__group___d_a_c.html#gabc2edb7a728f6a57132f42abc2c70843">rt_dac_enable</a>(dac_dev, DAC_DEV_CHANNEL);</div>
+<div class="line"> </div>
+<div class="line">    value = atoi(argv[1]);</div>
+<div class="line">    <a class="code hl_function" href="group__group___d_a_c.html#ga0370f324ef52fb428f42a50867379c26">rt_dac_write</a>(dac_dev, DAC_DEV_NAME, DAC_DEV_CHANNEL, value);</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;the value is :%d \n&quot;</span>, value);</div>
+<div class="line"> </div>
+<div class="line">    vol = value * REFER_VOLTAGE / CONVERT_BITS;</div>
+<div class="line">    <a class="code hl_define" href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a>(<span class="stringliteral">&quot;the voltage is :%d.%02d \n&quot;</span>, vol / 100, vol % 100);</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_function" href="group__group___thread.html#ga4ba0dbf06d5fa05f469da371ff6d2876">rt_thread_mdelay</a>(500);</div>
+<div class="line"> </div>
+<div class="line">    ret = <a class="code hl_function" href="group__group___d_a_c.html#ga5e512b2f86520f8d566ed53c69b7fd2b">rt_dac_disable</a>(dac_dev, DAC_DEV_CHANNEL);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> ret;</div>
+<div class="line">}</div>
+<div class="line"><a class="code hl_define" href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a>(dac_vol_sample, dac voltage convert sample);</div>
+<div class="ttc" id="afinsh_8h_html_a91a67d7498e346a1e15a7ea7d58af654"><div class="ttname"><a href="finsh_8h.html#a91a67d7498e346a1e15a7ea7d58af654">MSH_CMD_EXPORT</a></div><div class="ttdeci">#define MSH_CMD_EXPORT(...)</div><div class="ttdoc">Exports a command to module shell.</div><div class="ttdef"><b>Definition</b> finsh.h:151</div></div>
+<div class="ttc" id="agroup__group___d_a_c_html_ga0370f324ef52fb428f42a50867379c26"><div class="ttname"><a href="group__group___d_a_c.html#ga0370f324ef52fb428f42a50867379c26">rt_dac_write</a></div><div class="ttdeci">rt_err_t rt_dac_write(rt_dac_device_t dev, rt_uint32_t channel, rt_uint32_t value)</div><div class="ttdoc">set the value of DAC</div></div>
+<div class="ttc" id="agroup__group___d_a_c_html_ga0948fc2864e6877ab43f0556400f7c23"><div class="ttname"><a href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a></div><div class="ttdeci">struct rt_dac_device * rt_dac_device_t</div><div class="ttdef"><b>Definition</b> dac.h:87</div></div>
+<div class="ttc" id="agroup__group___d_a_c_html_ga5e512b2f86520f8d566ed53c69b7fd2b"><div class="ttname"><a href="group__group___d_a_c.html#ga5e512b2f86520f8d566ed53c69b7fd2b">rt_dac_disable</a></div><div class="ttdeci">rt_err_t rt_dac_disable(rt_dac_device_t dev, rt_uint32_t channel)</div><div class="ttdoc">disable the DAC channel</div></div>
+<div class="ttc" id="agroup__group___d_a_c_html_gabc2edb7a728f6a57132f42abc2c70843"><div class="ttname"><a href="group__group___d_a_c.html#gabc2edb7a728f6a57132f42abc2c70843">rt_dac_enable</a></div><div class="ttdeci">rt_err_t rt_dac_enable(rt_dac_device_t dev, rt_uint32_t channel)</div><div class="ttdoc">enable the DAC channel</div></div>
+<div class="ttc" id="agroup__group___kernel_service_html_ga2cc5c9066908cd34d36848d8a281b472"><div class="ttname"><a href="group__group___kernel_service.html#ga2cc5c9066908cd34d36848d8a281b472">rt_kprintf</a></div><div class="ttdeci">#define rt_kprintf(...)</div><div class="ttdef"><b>Definition</b> rtthread.h:773</div></div>
+<div class="ttc" id="agroup__group___thread_html_ga4ba0dbf06d5fa05f469da371ff6d2876"><div class="ttname"><a href="group__group___thread.html#ga4ba0dbf06d5fa05f469da371ff6d2876">rt_thread_mdelay</a></div><div class="ttdeci">rt_err_t rt_thread_mdelay(rt_int32_t ms)</div><div class="ttdoc">This function will let current thread delay for some milliseconds.</div><div class="ttdef"><b>Definition</b> thread.c:754</div></div>
+<div class="ttc" id="agroup__group__device__driver_html_ga7fb604dd486fbf5e48004b4d94d8eb3e"><div class="ttname"><a href="group__group__device__driver.html#ga7fb604dd486fbf5e48004b4d94d8eb3e">rt_device_find</a></div><div class="ttdeci">rt_device_t rt_device_find(const char *name)</div></div>
+<div class="ttc" id="artdevice_8h_html"><div class="ttname"><a href="rtdevice_8h.html">rtdevice.h</a></div></div>
+<div class="ttc" id="artthread_8h_html"><div class="ttname"><a href="rtthread_8h.html">rtthread.h</a></div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="arttypes_8h_html_aa0f407376acf6e5854ea411316811418"><div class="ttname"><a href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a></div><div class="ttdeci">unsigned int rt_uint32_t</div><div class="ttdef"><b>Definition</b> rttypes.h:59</div></div>
+<div class="ttc" id="arttypes_8h_html_ab3633bbb2a09b3406b19463ffc634345"><div class="ttname"><a href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></div><div class="ttdeci">#define RT_NULL</div><div class="ttdef"><b>Definition</b> rttypes.h:120</div></div>
+<div class="ttc" id="astructrt__dac__device_html"><div class="ttname"><a href="structrt__dac__device.html">rt_dac_device</a></div><div class="ttdoc">DAC device structure.</div><div class="ttdef"><b>Definition</b> dac.h:83</div></div>
+</div><!-- fragment --> <h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga0948fc2864e6877ab43f0556400f7c23" name="ga0948fc2864e6877ab43f0556400f7c23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0948fc2864e6877ab43f0556400f7c23">&#9670;&#160;</a></span>rt_dac_device_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__dac__device.html">rt_dac_device</a>* <a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gaeee448e3f5f1c6941917bbd4f482b25a" name="gaeee448e3f5f1c6941917bbd4f482b25a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeee448e3f5f1c6941917bbd4f482b25a">&#9670;&#160;</a></span>rt_dac_cmd_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group___d_a_c.html#gaeee448e3f5f1c6941917bbd4f482b25a">rt_dac_cmd_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaeee448e3f5f1c6941917bbd4f482b25aaafb5860fbf59cc2d86596c25a23aeafe" name="ggaeee448e3f5f1c6941917bbd4f482b25aaafb5860fbf59cc2d86596c25a23aeafe"></a>RT_DAC_CMD_ENABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaeee448e3f5f1c6941917bbd4f482b25aae647efd40e6a64e52a76f6d358245d16" name="ggaeee448e3f5f1c6941917bbd4f482b25aae647efd40e6a64e52a76f6d358245d16"></a>RT_DAC_CMD_DISABLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggaeee448e3f5f1c6941917bbd4f482b25aaf29737e9ffc666d78b94e999ab15813f" name="ggaeee448e3f5f1c6941917bbd4f482b25aaf29737e9ffc666d78b94e999ab15813f"></a>RT_DAC_CMD_GET_RESOLUTION&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga5e512b2f86520f8d566ed53c69b7fd2b" name="ga5e512b2f86520f8d566ed53c69b7fd2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e512b2f86520f8d566ed53c69b7fd2b">&#9670;&#160;</a></span>rt_dac_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_dac_disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>disable the DAC channel </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>DAC device </td></tr>
+    <tr><td class="paramname">channel</td><td>DAC channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="gabc2edb7a728f6a57132f42abc2c70843" name="gabc2edb7a728f6a57132f42abc2c70843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc2edb7a728f6a57132f42abc2c70843">&#9670;&#160;</a></span>rt_dac_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_dac_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enable the DAC channel </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>DAC device </td></tr>
+    <tr><td class="paramname">channel</td><td>DAC channel </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="ga0370f324ef52fb428f42a50867379c26" name="ga0370f324ef52fb428f42a50867379c26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0370f324ef52fb428f42a50867379c26">&#9670;&#160;</a></span>rt_dac_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_dac_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a>&#160;</td>
+          <td class="paramname"><em>dev</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>channel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set the value of DAC </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>DAC device </td></tr>
+    <tr><td class="paramname">channel</td><td>DAC channel </td></tr>
+    <tr><td class="paramname">value</td><td>the value of DAC </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+<a id="ga7d8d6d38f9bdf51360e89261ca1a5343" name="ga7d8d6d38f9bdf51360e89261ca1a5343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d8d6d38f9bdf51360e89261ca1a5343">&#9670;&#160;</a></span>rt_hw_dac_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_hw_dac_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___d_a_c.html#ga0948fc2864e6877ab43f0556400f7c23">rt_dac_device_t</a>&#160;</td>
+          <td class="paramname"><em>dac</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structrt__dac__ops.html">rt_dac_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Register a DAC device. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dac</td><td>DAC device </td></tr>
+    <tr><td class="paramname">name</td><td>DAC name </td></tr>
+    <tr><td class="paramname">ops</td><td>the operations of DAC device </td></tr>
+    <tr><td class="paramname">user_data</td><td>device private data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t error code </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

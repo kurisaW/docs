@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: src/scheduler_comm.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('scheduler__comm_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">scheduler_comm.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdbg_8h_source.html">rtdbg.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for scheduler_comm.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="scheduler__comm_8c__incl.png" border="0" usemap="#asrc_2scheduler__comm_8c" alt=""/></div>
+<map name="asrc_2scheduler__comm_8c" id="asrc_2scheduler__comm_8c">
+<area shape="rect" title=" " alt="" coords="484,5,651,31"/>
+<area shape="rect" href="rtdbg_8h.html" title=" " alt="" coords="684,79,752,104"/>
+<area shape="poly" title=" " alt="" coords="593,28,682,70,680,75,590,33"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="473,79,560,104"/>
+<area shape="poly" title=" " alt="" coords="561,33,535,69,531,66,557,29"/>
+<area shape="rect" title=" " alt="" coords="681,519,763,544"/>
+<area shape="poly" title=" " alt="" coords="739,102,767,122,793,150,819,190,824,211,826,237,826,386,824,412,818,432,793,472,774,494,753,512,749,508,770,490,789,469,814,430,819,411,821,386,821,237,819,212,814,193,789,154,763,126,736,106"/>
+<area shape="poly" title=" " alt="" coords="561,95,625,107,660,118,695,132,726,151,752,174,769,202,775,236,775,386,772,420,762,454,738,508,733,506,757,452,766,419,770,386,770,237,764,204,748,177,723,155,693,137,659,123,623,113,560,100"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="298,299,362,324"/>
+<area shape="poly" title=" " alt="" coords="505,106,449,156,383,227,344,288,340,285,379,224,445,152,501,102"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="393,225,483,251"/>
+<area shape="poly" title=" " alt="" coords="510,106,479,153,450,213,446,211,474,151,506,103"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="488,152,545,177"/>
+<area shape="poly" title=" " alt="" coords="512,104,511,139,505,138,507,104"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="159,152,248,177"/>
+<area shape="poly" title=" " alt="" coords="474,105,262,153,261,148,473,100"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="558,225,633,251"/>
+<area shape="poly" title=" " alt="" coords="528,103,560,151,588,211,584,213,556,153,523,106"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="272,152,337,177"/>
+<area shape="poly" title=" " alt="" coords="483,107,351,151,350,146,482,101"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="319,372,402,397"/>
+<area shape="poly" title=" " alt="" coords="338,323,353,359,348,361,333,325"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="295,445,375,471"/>
+<area shape="poly" title=" " alt="" coords="326,325,312,358,309,377,310,397,324,432,319,434,305,398,303,377,307,356,321,323"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="400,445,500,471"/>
+<area shape="poly" title=" " alt="" coords="354,322,386,342,416,370,434,401,446,431,441,433,430,403,412,374,382,346,351,326"/>
+<area shape="rect" title=" " alt="" coords="477,372,588,397"/>
+<area shape="poly" title=" " alt="" coords="363,321,488,365,486,370,361,326"/>
+<area shape="poly" title=" " alt="" coords="359,399,346,433,341,432,354,397"/>
+<area shape="poly" title=" " alt="" coords="377,395,426,434,423,439,373,399"/>
+<area shape="poly" title=" " alt="" coords="376,465,389,468,667,518,667,523,388,473,375,471"/>
+<area shape="rect" title=" " alt="" coords="5,519,76,544"/>
+<area shape="poly" title=" " alt="" coords="296,472,90,521,89,516,294,466"/>
+<area shape="rect" title=" " alt="" coords="101,519,175,544"/>
+<area shape="poly" title=" " alt="" coords="305,473,184,516,182,511,303,468"/>
+<area shape="rect" title=" " alt="" coords="199,519,274,544"/>
+<area shape="poly" title=" " alt="" coords="321,473,265,513,262,508,318,469"/>
+<area shape="rect" title=" " alt="" coords="298,519,394,544"/>
+<area shape="poly" title=" " alt="" coords="340,471,345,505,340,506,334,471"/>
+<area shape="rect" title=" " alt="" coords="419,519,513,544"/>
+<area shape="poly" title=" " alt="" coords="358,468,434,510,432,514,355,473"/>
+<area shape="rect" title=" " alt="" coords="538,519,637,544"/>
+<area shape="poly" title=" " alt="" coords="377,468,534,512,532,517,375,473"/>
+<area shape="poly" title=" " alt="" coords="494,468,668,513,667,518,493,473"/>
+<area shape="poly" title=" " alt="" coords="422,253,361,293,358,289,419,248"/>
+<area shape="poly" title=" " alt="" coords="521,152,523,118,528,118,526,152"/>
+<area shape="poly" title=" " alt="" coords="520,178,516,214,509,234,497,253,450,274,376,299,374,294,448,269,494,249,504,232,511,212,514,177"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="188,225,251,251"/>
+<area shape="poly" title=" " alt="" coords="209,177,216,212,211,213,203,178"/>
+<area shape="poly" title=" " alt="" coords="239,248,302,289,299,293,236,253"/>
+<area shape="poly" title=" " alt="" coords="632,248,668,267,685,281,699,297,713,323,722,351,732,409,733,463,729,505,723,505,727,463,727,409,717,352,708,325,694,300,681,284,665,272,630,253"/>
+<area shape="poly" title=" " alt="" coords="559,252,376,301,375,295,557,247"/>
+<area shape="poly" title=" " alt="" coords="589,252,560,300,541,359,536,357,556,298,584,250"/>
+<area shape="rect" title=" " alt="" coords="570,299,685,324"/>
+<area shape="poly" title=" " alt="" coords="603,250,619,285,614,287,598,252"/>
+<area shape="rect" title=" " alt="" coords="386,299,495,324"/>
+<area shape="poly" title=" " alt="" coords="572,253,479,295,477,290,569,248"/>
+<area shape="poly" title=" " alt="" coords="309,177,328,285,323,285,304,178"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac4e2937b86d1338f765c02b4869648ca" id="r_ac4e2937b86d1338f765c02b4869648ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#ac4e2937b86d1338f765c02b4869648ca">DBG_TAG</a>&#160;&#160;&#160;&quot;kernel.sched&quot;</td></tr>
+<tr class="separator:ac4e2937b86d1338f765c02b4869648ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5f21bfe809857ecc4dd3ecdba44f49" id="r_a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a2d5f21bfe809857ecc4dd3ecdba44f49">DBG_LVL</a>&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td></tr>
+<tr class="separator:a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a154ef1efdfaf731c77081de01f753bb8" id="r_a154ef1efdfaf731c77081de01f753bb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a154ef1efdfaf731c77081de01f753bb8">rt_sched_thread_init_ctx</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> tick, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> priority)</td></tr>
+<tr class="memdesc:a154ef1efdfaf731c77081de01f753bb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize thread scheduling context.  <br /></td></tr>
+<tr class="separator:a154ef1efdfaf731c77081de01f753bb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc74690e258c547fb2b5220bed467b72" id="r_adc74690e258c547fb2b5220bed467b72"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#adc74690e258c547fb2b5220bed467b72">rt_sched_thread_timer_start</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:adc74690e258c547fb2b5220bed467b72"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the thread timer for scheduling.  <br /></td></tr>
+<tr class="separator:adc74690e258c547fb2b5220bed467b72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f04ad69e25d1188f83d18295c6f2c3c" id="r_a4f04ad69e25d1188f83d18295c6f2c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a4f04ad69e25d1188f83d18295c6f2c3c">rt_sched_thread_timer_stop</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a4f04ad69e25d1188f83d18295c6f2c3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the thread timer for scheduling.  <br /></td></tr>
+<tr class="separator:a4f04ad69e25d1188f83d18295c6f2c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45ef6e9dd2506f835027110b390bef17" id="r_a45ef6e9dd2506f835027110b390bef17"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a45ef6e9dd2506f835027110b390bef17">rt_sched_thread_get_stat</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a45ef6e9dd2506f835027110b390bef17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current status of a thread.  <br /></td></tr>
+<tr class="separator:a45ef6e9dd2506f835027110b390bef17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc45f97697209c5487aa12a2a9e0b61" id="r_a4cc45f97697209c5487aa12a2a9e0b61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a4cc45f97697209c5487aa12a2a9e0b61">rt_sched_thread_get_curr_prio</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a4cc45f97697209c5487aa12a2a9e0b61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current priority of a thread.  <br /></td></tr>
+<tr class="separator:a4cc45f97697209c5487aa12a2a9e0b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a550eae0f4b6f02bf6b037974b11f0993" id="r_a550eae0f4b6f02bf6b037974b11f0993"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a550eae0f4b6f02bf6b037974b11f0993">rt_sched_thread_get_init_prio</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a550eae0f4b6f02bf6b037974b11f0993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the initial priority of a thread.  <br /></td></tr>
+<tr class="separator:a550eae0f4b6f02bf6b037974b11f0993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ad4052cfd579ceb78b5a967632b49d" id="r_aa2ad4052cfd579ceb78b5a967632b49d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#aa2ad4052cfd579ceb78b5a967632b49d">rt_sched_thread_is_suspended</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:aa2ad4052cfd579ceb78b5a967632b49d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a thread is in suspended state.  <br /></td></tr>
+<tr class="separator:aa2ad4052cfd579ceb78b5a967632b49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a740f1936aa0c2c7500b14ad6c4ed3cb1" id="r_a740f1936aa0c2c7500b14ad6c4ed3cb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a740f1936aa0c2c7500b14ad6c4ed3cb1">rt_sched_thread_close</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a740f1936aa0c2c7500b14ad6c4ed3cb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a thread by setting its status to CLOSED.  <br /></td></tr>
+<tr class="separator:a740f1936aa0c2c7500b14ad6c4ed3cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8f79e558ada07210603166f457b4203" id="r_ac8f79e558ada07210603166f457b4203"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#ac8f79e558ada07210603166f457b4203">rt_sched_thread_yield</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:ac8f79e558ada07210603166f457b4203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Yield the current thread's remaining time slice.  <br /></td></tr>
+<tr class="separator:ac8f79e558ada07210603166f457b4203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dd8e26d8dd479a7c22743be20ea3da0" id="r_a8dd8e26d8dd479a7c22743be20ea3da0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a8dd8e26d8dd479a7c22743be20ea3da0">rt_sched_thread_ready</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread)</td></tr>
+<tr class="memdesc:a8dd8e26d8dd479a7c22743be20ea3da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a suspended thread ready for scheduling.  <br /></td></tr>
+<tr class="separator:a8dd8e26d8dd479a7c22743be20ea3da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa966a6df58efc6b8874d45a22826414c" id="r_aa966a6df58efc6b8874d45a22826414c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#aa966a6df58efc6b8874d45a22826414c">rt_sched_tick_increase</a> (<a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> tick)</td></tr>
+<tr class="memdesc:aa966a6df58efc6b8874d45a22826414c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increase the system tick and update thread's remaining time slice.  <br /></td></tr>
+<tr class="separator:aa966a6df58efc6b8874d45a22826414c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a6249f0c063b23ae95c0267d49db5c6" id="r_a5a6249f0c063b23ae95c0267d49db5c6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a5a6249f0c063b23ae95c0267d49db5c6">rt_sched_thread_change_priority</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> priority)</td></tr>
+<tr class="memdesc:a5a6249f0c063b23ae95c0267d49db5c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update priority of the target thread.  <br /></td></tr>
+<tr class="separator:a5a6249f0c063b23ae95c0267d49db5c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63a1d1e7b1913d18b7f48a85a692d880" id="r_a63a1d1e7b1913d18b7f48a85a692d880"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="scheduler__comm_8c.html#a63a1d1e7b1913d18b7f48a85a692d880">rt_sched_thread_reset_priority</a> (struct <a class="el" href="structrt__thread.html">rt_thread</a> *thread, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> priority)</td></tr>
+<tr class="memdesc:a63a1d1e7b1913d18b7f48a85a692d880"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset priority of the target thread.  <br /></td></tr>
+<tr class="separator:a63a1d1e7b1913d18b7f48a85a692d880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2d5f21bfe809857ecc4dd3ecdba44f49" name="a2d5f21bfe809857ecc4dd3ecdba44f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5f21bfe809857ecc4dd3ecdba44f49">&#9670;&#160;</a></span>DBG_LVL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_LVL&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e2937b86d1338f765c02b4869648ca" name="ac4e2937b86d1338f765c02b4869648ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e2937b86d1338f765c02b4869648ca">&#9670;&#160;</a></span>DBG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TAG&#160;&#160;&#160;&quot;kernel.sched&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a5a6249f0c063b23ae95c0267d49db5c6" name="a5a6249f0c063b23ae95c0267d49db5c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6249f0c063b23ae95c0267d49db5c6">&#9670;&#160;</a></span>rt_sched_thread_change_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_change_priority </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update priority of the target thread. </p>
+
+</div>
+</div>
+<a id="a740f1936aa0c2c7500b14ad6c4ed3cb1" name="a740f1936aa0c2c7500b14ad6c4ed3cb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a740f1936aa0c2c7500b14ad6c4ed3cb1">&#9670;&#160;</a></span>rt_sched_thread_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_close </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close a thread by setting its status to CLOSED. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to be closed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t Always returns RT_EOK on success</dd></dl>
+<p>This function:</p><ul>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Sets the thread's status to RT_THREAD_CLOSE</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Must be called with scheduler lock held </dd></dl>
+
+</div>
+</div>
+<a id="a4cc45f97697209c5487aa12a2a9e0b61" name="a4cc45f97697209c5487aa12a2a9e0b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc45f97697209c5487aa12a2a9e0b61">&#9670;&#160;</a></span>rt_sched_thread_get_curr_prio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sched_thread_get_curr_prio </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current priority of a thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to get priority from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_uint8_t The current priority value of the thread</dd></dl>
+<p>This function:</p><ul>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Returns the thread's current priority field from its private scheduling data </li>
+</ul>
+
+</div>
+</div>
+<a id="a550eae0f4b6f02bf6b037974b11f0993" name="a550eae0f4b6f02bf6b037974b11f0993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550eae0f4b6f02bf6b037974b11f0993">&#9670;&#160;</a></span>rt_sched_thread_get_init_prio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sched_thread_get_init_prio </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the initial priority of a thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to get priority from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_uint8_t The initial priority value of the thread</dd></dl>
+<p>This function:</p><ul>
+<li>Returns the thread's initial priority field from its private scheduling data</li>
+<li>Does not require scheduler lock as it accesses read-only fields </li>
+</ul>
+
+</div>
+</div>
+<a id="a45ef6e9dd2506f835027110b390bef17" name="a45ef6e9dd2506f835027110b390bef17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45ef6e9dd2506f835027110b390bef17">&#9670;&#160;</a></span>rt_sched_thread_get_stat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sched_thread_get_stat </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current status of a thread. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to get status from</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_uint8_t The thread status masked with RT_THREAD_STAT_MASK</dd></dl>
+<p>This function:</p><ul>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Returns the thread's status field masked with RT_THREAD_STAT_MASK </li>
+</ul>
+
+</div>
+</div>
+<a id="a154ef1efdfaf731c77081de01f753bb8" name="a154ef1efdfaf731c77081de01f753bb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a154ef1efdfaf731c77081de01f753bb8">&#9670;&#160;</a></span>rt_sched_thread_init_ctx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_sched_thread_init_ctx </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>tick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize thread scheduling context. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to be initialized </td></tr>
+    <tr><td class="paramname">tick</td><td>Initial time slice value for the thread </td></tr>
+    <tr><td class="paramname">priority</td><td>Initial priority of the thread</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This function performs the following initialization:</p><ul>
+<li>Sets thread status to INIT</li>
+<li>For SMP systems:<ul>
+<li>Sets bind CPU to none (RT_CPUS_NR)</li>
+<li>Marks CPU as detached (RT_CPU_DETACHED)</li>
+</ul>
+</li>
+<li>Calls rt_sched_thread_init_priv() for private scheduling data initialization </li>
+</ul>
+
+</div>
+</div>
+<a id="aa2ad4052cfd579ceb78b5a967632b49d" name="aa2ad4052cfd579ceb78b5a967632b49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2ad4052cfd579ceb78b5a967632b49d">&#9670;&#160;</a></span>rt_sched_thread_is_suspended()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_sched_thread_is_suspended </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if a thread is in suspended state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to check</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_uint8_t<ul>
+<li>1 if thread is suspended (matches RT_THREAD_SUSPEND_MASK)</li>
+<li><p class="startli">0 otherwise</p>
+<p class="startli">This function:</p>
+</li>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Checks thread's status field against RT_THREAD_SUSPEND_MASK</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Caller must hold the scheduler lock before calling this function </dd></dl>
+
+</div>
+</div>
+<a id="a8dd8e26d8dd479a7c22743be20ea3da0" name="a8dd8e26d8dd479a7c22743be20ea3da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8dd8e26d8dd479a7c22743be20ea3da0">&#9670;&#160;</a></span>rt_sched_thread_ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_ready </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Make a suspended thread ready for scheduling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to be made ready</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t<ul>
+<li>RT_EOK if operation succeeded</li>
+<li>-RT_EINVAL if thread is not suspended</li>
+<li><p class="startli">Other error codes from <a class="el" href="scheduler__comm_8c.html#a4f04ad69e25d1188f83d18295c6f2c3c" title="Stop the thread timer for scheduling.">rt_sched_thread_timer_stop()</a> if timer stop failed</p>
+<p class="startli">This function:</p>
+</li>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Checks if thread is suspended (returns -RT_EINVAL if not)</li>
+<li>Stops thread timer if active</li>
+<li>Removes thread from suspend list</li>
+<li>Clears wakeup handler (if RT_USING_SMART is defined)</li>
+<li>Inserts thread into ready queue</li>
+</ul>
+</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Must be called with scheduler lock held May fail due to racing conditions with timeout ISR </dd></dl>
+<p>Quiet timeout timer first if set. and don't continue if we failed, because it probably means that a timeout ISR racing to resume thread before us.</p>
+
+</div>
+</div>
+<a id="a63a1d1e7b1913d18b7f48a85a692d880" name="a63a1d1e7b1913d18b7f48a85a692d880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63a1d1e7b1913d18b7f48a85a692d880">&#9670;&#160;</a></span>rt_sched_thread_reset_priority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_reset_priority </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset priority of the target thread. </p>
+
+</div>
+</div>
+<a id="adc74690e258c547fb2b5220bed467b72" name="adc74690e258c547fb2b5220bed467b72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc74690e258c547fb2b5220bed467b72">&#9670;&#160;</a></span>rt_sched_thread_timer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_timer_start </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start the thread timer for scheduling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread whose timer needs to be started</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t Always returns RT_EOK on success</dd></dl>
+<p>This function:</p><ul>
+<li>Requires scheduler lock to be held.</li>
+<li>Sets the thread's timer flag (sched_flag_ttmr_set) to indicate timer is active </li>
+</ul>
+
+</div>
+</div>
+<a id="a4f04ad69e25d1188f83d18295c6f2c3c" name="a4f04ad69e25d1188f83d18295c6f2c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f04ad69e25d1188f83d18295c6f2c3c">&#9670;&#160;</a></span>rt_sched_thread_timer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_timer_stop </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stop the thread timer for scheduling. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread whose timer needs to be stopped</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t<ul>
+<li>RT_EOK if timer was successfully stopped or not active</li>
+<li>Other error codes from <a class="el" href="group__group___clock.html#gaaef9923c8b90ede02e12826c58c6f8a2" title="This function will stop the timer.">rt_timer_stop()</a> if stop operation failed </li>
+</ul>
+</dd></dl>
+
+</div>
+</div>
+<a id="ac8f79e558ada07210603166f457b4203" name="ac8f79e558ada07210603166f457b4203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8f79e558ada07210603166f457b4203">&#9670;&#160;</a></span>rt_sched_thread_yield()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_thread_yield </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Yield the current thread's remaining time slice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">thread</td><td>The thread to yield </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t Always returns RT_EOK on success</dd></dl>
+<p>This function:</p><ul>
+<li>Requires scheduler lock to be held (RT_SCHED_DEBUG_IS_LOCKED)</li>
+<li>Resets the thread's remaining tick count to its initial value</li>
+<li>Sets the thread's status to YIELD state</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>Must be called with scheduler lock held </dd></dl>
+
+</div>
+</div>
+<a id="aa966a6df58efc6b8874d45a22826414c" name="aa966a6df58efc6b8874d45a22826414c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa966a6df58efc6b8874d45a22826414c">&#9670;&#160;</a></span>rt_sched_tick_increase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_sched_tick_increase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td>
+          <td class="paramname"><em>tick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Increase the system tick and update thread's remaining time slice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tick</td><td>The number of ticks to increase </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>rt_err_t Always returns RT_EOK</dd></dl>
+<p>This function:</p><ul>
+<li>Gets the current thread</li>
+<li>Locks the scheduler</li>
+<li>Decreases the thread's remaining tick count by the specified amount</li>
+<li>If remaining ticks reach zero:<ul>
+<li>Calls <a class="el" href="scheduler__comm_8c.html#ac8f79e558ada07210603166f457b4203" title="Yield the current thread&#39;s remaining time slice.">rt_sched_thread_yield()</a> to yield the thread</li>
+<li>Requests a reschedule with <a class="el" href="rtsched_8h.html#acd4ea4ae69e85675221aaeb0ef392f96" title="Unlock scheduler and trigger a reschedule if needed.">rt_sched_unlock_n_resched()</a></li>
+</ul>
+</li>
+<li>Otherwise simply unlocks the scheduler</li>
+</ul>
+<dl class="section note"><dt>Note</dt><dd>This function is typically called from timer interrupt context It handles both SMP and non-SMP cases </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="scheduler__comm_8c.html">scheduler_comm.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

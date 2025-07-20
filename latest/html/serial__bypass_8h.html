@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/serial_bypass.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('serial__bypass_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">serial_bypass.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rttypes_8h_source.html">rttypes.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtdevice_8h_source.html">rtdevice.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for serial_bypass.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="serial__bypass_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2serial__bypass_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2serial__bypass_8h" id="acomponents_2drivers_2include_2drivers_2serial__bypass_8h">
+<area shape="rect" title=" " alt="" coords="319,5,481,60"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="1171,328,1258,353"/>
+<area shape="poly" title=" " alt="" coords="398,60,394,94,396,133,405,172,414,190,427,205,449,220,477,232,547,246,632,251,725,249,910,242,988,243,1050,252,1089,266,1126,283,1188,318,1185,323,1124,288,1087,271,1049,257,988,248,910,247,725,255,632,256,547,252,475,237,446,225,424,209,410,193,400,174,390,134,389,94,392,60"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="309,695,389,720"/>
+<area shape="poly" title=" " alt="" coords="389,61,365,121,356,156,352,193,352,562,352,681,347,681,347,562,347,193,350,155,360,119,384,59"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1342,108,1429,133"/>
+<area shape="poly" title=" " alt="" coords="482,38,1328,112,1328,117,481,44"/>
+<area shape="rect" title=" " alt="" coords="1684,768,1767,793"/>
+<area shape="poly" title=" " alt="" coords="1259,343,1326,354,1364,364,1402,378,1435,397,1463,421,1481,450,1488,486,1488,635,1493,664,1506,689,1527,710,1553,728,1612,754,1671,769,1670,774,1611,759,1550,732,1523,714,1502,692,1488,666,1483,636,1483,486,1476,452,1459,424,1432,401,1399,383,1363,370,1325,359,1258,348"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="1231,548,1295,573"/>
+<area shape="poly" title=" " alt="" coords="1259,344,1286,351,1314,362,1340,378,1361,400,1369,419,1370,439,1364,459,1353,479,1324,514,1292,542,1288,538,1320,510,1349,476,1359,457,1364,439,1364,421,1356,403,1337,382,1311,367,1284,356,1257,350"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="1084,401,1175,427"/>
+<area shape="poly" title=" " alt="" coords="1203,355,1155,395,1152,390,1199,351"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="1199,401,1257,427"/>
+<area shape="poly" title=" " alt="" coords="1213,353,1217,388,1212,389,1207,354"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="970,401,1059,427"/>
+<area shape="poly" title=" " alt="" coords="1183,356,1061,399,1060,394,1182,351"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="455,475,529,500"/>
+<area shape="poly" title=" " alt="" coords="1171,345,1083,349,963,359,829,376,694,404,602,436,527,471,525,466,600,431,693,399,828,371,963,353,1082,344,1171,340"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="1281,401,1346,427"/>
+<area shape="poly" title=" " alt="" coords="1232,351,1288,391,1285,395,1229,356"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="1183,621,1265,647"/>
+<area shape="poly" title=" " alt="" coords="1259,575,1239,611,1234,608,1254,572"/>
+<area shape="poly" title=" " alt="" coords="1231,572,1060,607,831,649,592,682,403,703,403,698,592,677,830,644,1059,602,1230,567"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="1253,695,1353,720"/>
+<area shape="poly" title=" " alt="" coords="1269,573,1298,681,1293,682,1263,574"/>
+<area shape="rect" title=" " alt="" coords="709,621,819,647"/>
+<area shape="poly" title=" " alt="" coords="1231,569,834,626,833,620,1230,564"/>
+<area shape="poly" title=" " alt="" coords="1183,641,404,704,403,699,1182,636"/>
+<area shape="poly" title=" " alt="" coords="1238,645,1282,684,1278,687,1235,649"/>
+<area shape="poly" title=" " alt="" coords="390,715,408,717,595,736,785,751,1153,769,1464,776,1670,777,1670,782,1464,781,1153,774,785,756,594,742,408,723,389,720"/>
+<area shape="rect" title=" " alt="" coords="369,768,439,793"/>
+<area shape="poly" title=" " alt="" coords="360,719,389,756,385,759,356,722"/>
+<area shape="rect" title=" " alt="" coords="464,768,539,793"/>
+<area shape="poly" title=" " alt="" coords="375,718,465,760,463,765,373,722"/>
+<area shape="rect" title=" " alt="" coords="563,768,637,793"/>
+<area shape="poly" title=" " alt="" coords="390,717,550,762,548,768,389,723"/>
+<area shape="rect" title=" " alt="" coords="5,768,101,793"/>
+<area shape="poly" title=" " alt="" coords="309,721,115,767,114,762,308,716"/>
+<area shape="rect" title=" " alt="" coords="126,768,221,793"/>
+<area shape="poly" title=" " alt="" coords="322,722,216,765,214,760,320,718"/>
+<area shape="rect" title=" " alt="" coords="245,768,344,793"/>
+<area shape="poly" title=" " alt="" coords="342,722,314,759,310,756,338,719"/>
+<area shape="poly" title=" " alt="" coords="1353,714,1670,767,1669,773,1352,720"/>
+<area shape="poly" title=" " alt="" coords="1142,425,1245,536,1241,539,1138,429"/>
+<area shape="poly" title=" " alt="" coords="1230,402,1225,367,1231,366,1235,401"/>
+<area shape="poly" title=" " alt="" coords="1233,426,1259,534,1254,535,1228,428"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="882,475,945,500"/>
+<area shape="poly" title=" " alt="" coords="1000,429,943,469,940,464,997,424"/>
+<area shape="poly" title=" " alt="" coords="945,493,965,497,1218,548,1217,553,963,503,944,498"/>
+<area shape="poly" title=" " alt="" coords="494,500,496,535,501,555,511,572,532,593,552,608,593,625,639,633,697,644,837,676,980,703,1124,725,1262,742,1504,764,1670,774,1670,780,1503,770,1261,747,1123,730,979,709,835,682,695,649,638,638,591,630,549,613,529,597,507,575,497,557,491,536,488,501"/>
+<area shape="poly" title=" " alt="" coords="530,494,548,497,743,521,934,537,1217,555,1217,560,934,543,742,526,548,503,529,500"/>
+<area shape="poly" title=" " alt="" coords="531,497,588,518,649,546,700,578,742,610,739,615,697,582,647,550,586,522,529,502"/>
+<area shape="rect" title=" " alt="" coords="521,548,636,573"/>
+<area shape="poly" title=" " alt="" coords="508,498,556,537,552,541,504,502"/>
+<area shape="rect" title=" " alt="" coords="711,548,820,573"/>
+<area shape="poly" title=" " alt="" coords="530,496,709,542,707,547,529,501"/>
+<area shape="poly" title=" " alt="" coords="1312,428,1274,536,1269,534,1307,426"/>
+<area shape="poly" title=" " alt="" coords="1364,136,1333,155,1296,182,1260,216,1230,256,1220,285,1217,314,1212,314,1215,284,1226,253,1256,212,1292,178,1330,150,1362,131"/>
+<area shape="poly" title=" " alt="" coords="1342,124,1214,126,1047,133,963,140,885,151,820,165,773,184,745,209,719,247,698,292,680,341,655,429,645,475,642,488,645,498,655,505,674,512,730,524,893,541,1075,551,1217,556,1217,561,1075,557,893,547,729,529,672,517,653,510,641,502,636,488,640,474,650,428,675,339,693,290,715,244,741,205,771,179,818,160,884,146,962,135,1047,128,1214,120,1342,119"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="655,475,807,500"/>
+<area shape="poly" title=" " alt="" coords="1342,124,1221,125,1064,132,985,139,913,150,853,164,811,184,781,206,758,228,742,251,729,275,712,331,696,402,694,414,696,426,704,445,715,462,710,465,699,447,691,427,688,414,691,401,707,330,724,273,737,248,754,225,777,202,808,179,851,159,912,144,984,134,1063,126,1221,119,1342,119"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="705,401,844,427"/>
+<area shape="poly" title=" " alt="" coords="1342,127,1056,145,913,162,863,172,836,184,817,205,801,230,790,258,783,287,776,343,775,388,770,388,770,342,777,286,785,256,797,228,812,202,833,179,862,167,912,157,1056,140,1341,121"/>
+<area shape="rect" href="block_8h.html" title=" " alt="" coords="1473,328,1644,353"/>
+<area shape="poly" title=" " alt="" coords="1399,132,1442,180,1500,253,1545,315,1541,318,1495,256,1438,183,1395,135"/>
+<area shape="rect" href="char_8h.html" title=" " alt="" coords="1717,255,1880,280"/>
+<area shape="poly" title=" " alt="" coords="1429,125,1533,144,1594,159,1653,179,1719,211,1773,245,1770,249,1717,216,1651,184,1592,164,1532,149,1429,130"/>
+<area shape="rect" href="graphic_8h.html" title=" " alt="" coords="1669,328,1851,353"/>
+<area shape="poly" title=" " alt="" coords="1406,131,1730,319,1727,323,1404,136"/>
+<area shape="rect" href="mtd_8h.html" title=" " alt="" coords="847,181,1009,207"/>
+<area shape="poly" title=" " alt="" coords="1342,131,1015,182,1014,177,1341,126"/>
+<area shape="rect" href="net_8h.html" title=" " alt="" coords="438,181,594,207"/>
+<area shape="poly" title=" " alt="" coords="1342,127,1037,148,614,184,608,185,607,179,613,179,1037,143,1342,122"/>
+<area shape="rect" href="ringbuffer_8h.html" title=" " alt="" coords="919,255,1038,280"/>
+<area shape="poly" title=" " alt="" coords="1343,136,1184,184,1094,219,1017,251,1015,246,1092,214,1182,179,1341,131"/>
+<area shape="rect" href="completion_8h.html" title=" " alt="" coords="2388,475,2519,500"/>
+<area shape="poly" title=" " alt="" coords="1429,120,1601,125,1842,135,2083,153,2184,165,2259,179,2325,189,2384,196,2409,203,2428,216,2441,237,2445,266,2445,342,2448,406,2453,461,2448,461,2443,407,2440,342,2440,266,2436,238,2424,220,2406,208,2383,201,2324,194,2258,184,2183,170,2083,158,1841,141,1601,130,1429,126"/>
+<area shape="rect" href="dataqueue_8h.html" title=" " alt="" coords="1726,475,1853,500"/>
+<area shape="poly" title=" " alt="" coords="1429,121,1564,132,1648,142,1734,155,1814,174,1880,198,1906,212,1925,228,1938,246,1943,266,1943,342,1940,365,1931,386,1904,422,1867,450,1831,471,1829,466,1864,446,1900,418,1927,383,1935,363,1937,342,1937,266,1933,248,1921,232,1903,217,1877,203,1812,179,1733,161,1648,147,1564,137,1429,127"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="2266,401,2395,427"/>
+<area shape="poly" title=" " alt="" coords="1429,120,1613,123,1864,133,2098,150,2181,163,2210,171,2228,179,2253,200,2273,226,2303,283,2321,340,2330,387,2325,388,2316,342,2298,285,2269,229,2249,204,2225,184,2208,176,2180,168,2097,156,1864,138,1613,129,1429,125"/>
+<area shape="rect" href="condvar_8h.html" title=" " alt="" coords="1239,255,1347,280"/>
+<area shape="poly" title=" " alt="" coords="1374,136,1353,157,1333,183,1316,213,1304,242,1299,240,1312,211,1328,180,1349,153,1370,132"/>
+<area shape="rect" href="waitqueue_8h.html" title=" " alt="" coords="1928,475,2053,500"/>
+<area shape="poly" title=" " alt="" coords="1429,120,1575,128,1668,137,1762,150,1850,169,1923,193,1952,208,1974,225,1988,244,1993,266,1993,342,1993,461,1988,461,1988,342,1988,266,1983,247,1970,229,1949,213,1921,198,1849,174,1761,155,1667,142,1575,134,1429,126"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1343,181,1428,207"/>
+<area shape="poly" title=" " alt="" coords="1388,134,1388,168,1383,168,1383,134"/>
+<area shape="rect" href="poll_8h.html" title=" " alt="" coords="2078,475,2159,500"/>
+<area shape="poly" title=" " alt="" coords="1429,119,1595,123,1702,130,1812,141,1915,159,2001,185,2034,201,2060,220,2077,241,2083,266,2083,342,2085,375,2092,407,2111,461,2106,463,2087,408,2080,375,2077,342,2077,266,2072,244,2056,223,2032,205,1999,190,1913,164,1811,146,1701,135,1595,128,1429,124"/>
+<area shape="rect" href="ringblk__buf_8h.html" title=" " alt="" coords="2183,475,2313,500"/>
+<area shape="poly" title=" " alt="" coords="1429,121,1734,141,1907,157,1978,167,2031,179,2094,189,2151,197,2175,205,2194,217,2206,237,2211,266,2211,342,2214,375,2221,407,2240,461,2234,463,2215,408,2208,376,2205,342,2205,266,2201,239,2190,221,2173,209,2150,202,2094,195,2030,184,1977,173,1906,163,1734,146,1429,127"/>
+<area shape="poly" title=" " alt="" coords="807,496,1217,551,1216,556,807,501"/>
+<area shape="poly" title=" " alt="" coords="786,425,820,462,844,482,870,498,937,517,1033,533,1217,553,1216,558,1032,538,936,522,868,502,841,486,817,466,782,429"/>
+<area shape="poly" title=" " alt="" coords="798,424,880,466,877,471,796,429"/>
+<area shape="poly" title=" " alt="" coords="770,428,747,464,743,462,765,426"/>
+<area shape="poly" title=" " alt="" coords="1557,355,1522,424,1492,466,1455,502,1420,523,1381,539,1309,557,1308,551,1379,534,1417,519,1452,498,1488,462,1517,421,1552,352"/>
+<area shape="poly" title=" " alt="" coords="1820,278,1841,292,1860,311,1871,332,1871,343,1866,355,1851,373,1829,391,1770,424,1695,455,1611,482,1441,526,1309,554,1308,548,1440,521,1610,477,1693,450,1767,419,1826,386,1847,369,1862,352,1866,342,1865,333,1855,314,1837,296,1817,282"/>
+<area shape="poly" title=" " alt="" coords="1745,356,1639,424,1565,465,1486,502,1392,534,1309,553,1308,548,1391,528,1484,498,1562,461,1636,419,1742,351"/>
+<area shape="poly" title=" " alt="" coords="925,208,911,255,911,280,918,351,928,408,938,432,953,455,974,477,1003,498,1057,524,1114,541,1170,551,1217,555,1217,561,1169,556,1113,546,1055,529,1000,502,970,481,948,458,933,435,923,409,912,351,905,280,905,254,920,206"/>
+<area shape="poly" title=" " alt="" coords="518,207,516,261,524,341,533,385,549,427,571,465,600,498,634,511,695,523,872,540,1067,550,1217,556,1217,561,1066,556,872,545,695,528,632,516,597,502,566,469,544,429,528,386,518,342,511,262,512,207"/>
+<area shape="poly" title=" " alt="" coords="1017,277,1164,321,1163,327,1016,283"/>
+<area shape="poly" title=" " alt="" coords="920,273,811,286,746,298,678,317,611,343,547,378,491,422,466,448,445,476,440,489,440,503,455,530,494,572,528,613,544,629,569,644,611,663,664,679,794,707,949,730,1116,747,1440,768,1670,776,1670,781,1439,773,1116,752,949,735,793,713,662,684,609,668,567,649,541,633,524,617,490,575,451,533,435,504,434,489,440,473,462,444,487,418,544,373,609,339,677,312,745,293,811,280,919,268"/>
+<area shape="poly" title=" " alt="" coords="975,281,962,309,951,347,947,388,951,407,960,425,984,455,1014,481,1048,501,1084,518,1156,541,1217,552,1216,557,1154,546,1082,523,1045,506,1011,485,980,459,955,428,946,409,942,388,945,346,957,307,970,279"/>
+<area shape="poly" title=" " alt="" coords="2456,500,2452,543,2441,604,2430,637,2415,669,2396,698,2371,722,2338,735,2279,746,2113,763,1928,774,1780,780,1780,775,1928,769,2113,758,2278,741,2336,730,2368,718,2392,694,2411,666,2425,635,2435,603,2447,543,2450,500"/>
+<area shape="poly" title=" " alt="" coords="2388,498,2326,503,1725,539,1309,560,1308,555,1725,534,2325,497,2387,492"/>
+<area shape="poly" title=" " alt="" coords="1789,501,1733,755,1728,754,1784,499"/>
+<area shape="poly" title=" " alt="" coords="1726,500,1309,556,1308,551,1725,495"/>
+<area shape="poly" title=" " alt="" coords="2336,426,2347,483,2353,559,2353,636,2348,657,2334,677,2313,694,2284,709,2211,733,2123,752,2028,765,1934,773,1780,781,1780,776,1934,768,2028,759,2122,746,2210,728,2282,704,2310,689,2331,673,2344,655,2348,635,2348,559,2341,484,2331,427"/>
+<area shape="poly" title=" " alt="" coords="2266,421,2105,437,2010,453,1917,477,1892,490,1866,503,1788,522,1708,537,1550,555,1410,562,1308,563,1308,558,1410,557,1549,550,1707,532,1787,517,1864,497,1890,485,1915,472,2009,448,2104,432,2265,416"/>
+<area shape="poly" title=" " alt="" coords="2352,424,2423,465,2420,470,2349,429"/>
+<area shape="poly" title=" " alt="" coords="1282,282,1239,321,1236,317,1279,278"/>
+<area shape="poly" title=" " alt="" coords="1982,502,1747,760,1743,756,1978,498"/>
+<area shape="poly" title=" " alt="" coords="1928,500,1910,503,1565,537,1309,558,1309,553,1564,532,1909,497,1927,495"/>
+<area shape="poly" title=" " alt="" coords="1394,206,1420,254,1439,305,1448,326,1463,352,1496,386,1532,411,1606,444,1639,461,1666,484,1684,515,1691,559,1691,635,1693,668,1700,700,1718,754,1713,756,1695,702,1688,669,1685,635,1685,560,1679,517,1662,487,1636,466,1603,449,1529,415,1492,390,1459,355,1443,329,1434,307,1415,256,1390,208"/>
+<area shape="poly" title=" " alt="" coords="1391,206,1401,258,1408,335,1406,378,1399,422,1386,464,1363,502,1337,527,1307,545,1305,540,1334,522,1359,498,1381,461,1394,421,1401,378,1403,335,1396,258,1386,207"/>
+<area shape="poly" title=" " alt="" coords="1372,209,1321,248,1317,244,1369,205"/>
+<area shape="poly" title=" " alt="" coords="2105,503,1812,722,1755,762,1752,758,1809,718,2102,498"/>
+<area shape="poly" title=" " alt="" coords="2078,501,2066,503,1844,528,1626,546,1309,561,1308,555,1626,540,1843,523,2065,497,2077,495"/>
+<area shape="poly" title=" " alt="" coords="2230,502,2073,595,1847,722,1763,764,1761,760,1844,718,2071,591,2228,498"/>
+<area shape="poly" title=" " alt="" coords="2183,501,2172,503,1917,526,1667,543,1309,560,1308,555,1666,538,1916,521,2172,497,2183,496"/>
+</map>
+</div>
+</div>
+<p><a href="serial__bypass_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__serial__bypass__func.html">rt_serial_bypass_func</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__serial__bypass__head.html">rt_serial_bypass_head</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__serial__bypass.html">rt_serial_bypass</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aaaac8fa7a7eb4459b05c350401b335bc" id="r_aaaac8fa7a7eb4459b05c350401b335bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#aaaac8fa7a7eb4459b05c350401b335bc">RT_BYPASS_LEVEL_MAX</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:aaaac8fa7a7eb4459b05c350401b335bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada969ad158a95c1f2f3dbea84b32e05a" id="r_ada969ad158a95c1f2f3dbea84b32e05a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#ada969ad158a95c1f2f3dbea84b32e05a">RT_BYPASS_LEVEL_1</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ada969ad158a95c1f2f3dbea84b32e05a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5776ae4222d4c0518cde74ee19f96243" id="r_a5776ae4222d4c0518cde74ee19f96243"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a5776ae4222d4c0518cde74ee19f96243">RT_BYPASS_LEVEL_2</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a5776ae4222d4c0518cde74ee19f96243"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5218dfb98a0b0222c9eb4fd667fdf94e" id="r_a5218dfb98a0b0222c9eb4fd667fdf94e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a5218dfb98a0b0222c9eb4fd667fdf94e">RT_BYPASS_LEVEL_3</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a5218dfb98a0b0222c9eb4fd667fdf94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c9ec3922fe9e289bcc60652f02fa7c" id="r_a22c9ec3922fe9e289bcc60652f02fa7c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a22c9ec3922fe9e289bcc60652f02fa7c">RT_BYPASS_LEVEL_4</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a22c9ec3922fe9e289bcc60652f02fa7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9205b73bd9f8188d183bd833d87fa34f" id="r_a9205b73bd9f8188d183bd833d87fa34f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a9205b73bd9f8188d183bd833d87fa34f">RT_BYPASS_MAX_LEVEL</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a9205b73bd9f8188d183bd833d87fa34f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd01df6d89e321ebd816a65c6d8b786d" id="r_afd01df6d89e321ebd816a65c6d8b786d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#afd01df6d89e321ebd816a65c6d8b786d">RT_BYPASS_PROTECT_LEVEL_1</a>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:afd01df6d89e321ebd816a65c6d8b786d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8f3ab5347064f2ccf22129e3f47aa87" id="r_af8f3ab5347064f2ccf22129e3f47aa87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#af8f3ab5347064f2ccf22129e3f47aa87">RT_BYPASS_PROTECT_LEVEL_2</a>&#160;&#160;&#160;11</td></tr>
+<tr class="separator:af8f3ab5347064f2ccf22129e3f47aa87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafd9fe8e2582caf58123a8ca51d550e6" id="r_aafd9fe8e2582caf58123a8ca51d550e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#aafd9fe8e2582caf58123a8ca51d550e6">RT_BYPASS_PROTECT_LEVEL_3</a>&#160;&#160;&#160;12</td></tr>
+<tr class="separator:aafd9fe8e2582caf58123a8ca51d550e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f125b778afe33a25fd1b7103f231d2" id="r_a21f125b778afe33a25fd1b7103f231d2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a21f125b778afe33a25fd1b7103f231d2">RT_BYPASS_PROTECT_LEVEL_4</a>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:a21f125b778afe33a25fd1b7103f231d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a1a46d97b75299d439c51f5896cca7da0" id="r_a1a46d97b75299d439c51f5896cca7da0"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a>) (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, char buf, void *data)</td></tr>
+<tr class="separator:a1a46d97b75299d439c51f5896cca7da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a335a1d2056a29c4a978e3959f891eacb" id="r_a335a1d2056a29c4a978e3959f891eacb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a335a1d2056a29c4a978e3959f891eacb">serial_bypass_list</a> (int argc, char **argv)</td></tr>
+<tr class="separator:a335a1d2056a29c4a978e3959f891eacb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4a740bb3ca4b1fd65ad9d0f9856bbc" id="r_a4d4a740bb3ca4b1fd65ad9d0f9856bbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a4d4a740bb3ca4b1fd65ad9d0f9856bbc">rt_bypass_work_straight</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial)</td></tr>
+<tr class="separator:a4d4a740bb3ca4b1fd65ad9d0f9856bbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c29c88f5266240e8f4d388af141eb07" id="r_a0c29c88f5266240e8f4d388af141eb07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a0c29c88f5266240e8f4d388af141eb07">rt_bypass_putchar</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> ch)</td></tr>
+<tr class="separator:a0c29c88f5266240e8f4d388af141eb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61b20cd45e538f5a83a06727bf840b13" id="r_a61b20cd45e538f5a83a06727bf840b13"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a61b20cd45e538f5a83a06727bf840b13">rt_bypass_getchar</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *ch)</td></tr>
+<tr class="separator:a61b20cd45e538f5a83a06727bf840b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3713796f2ebcb160f752156e4186ffa" id="r_ae3713796f2ebcb160f752156e4186ffa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#ae3713796f2ebcb160f752156e4186ffa">rt_bypass_upper_unregister</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level)</td></tr>
+<tr class="separator:ae3713796f2ebcb160f752156e4186ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65a0778f20b58017d1db34774e971dd8" id="r_a65a0778f20b58017d1db34774e971dd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#a65a0778f20b58017d1db34774e971dd8">rt_bypass_lower_unregister</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level)</td></tr>
+<tr class="separator:a65a0778f20b58017d1db34774e971dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf621807935818e24a830b65294b43c3" id="r_adf621807935818e24a830b65294b43c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#adf621807935818e24a830b65294b43c3">rt_bypass_upper_register</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, const char *name, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level, <a class="el" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a> func, void *data)</td></tr>
+<tr class="separator:adf621807935818e24a830b65294b43c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd39b721fdf61b54e776c38291324d4d" id="r_acd39b721fdf61b54e776c38291324d4d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial__bypass_8h.html#acd39b721fdf61b54e776c38291324d4d">rt_bypass_lower_register</a> (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, const char *name, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> level, <a class="el" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a> func, void *data)</td></tr>
+<tr class="separator:acd39b721fdf61b54e776c38291324d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ada969ad158a95c1f2f3dbea84b32e05a" name="ada969ad158a95c1f2f3dbea84b32e05a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada969ad158a95c1f2f3dbea84b32e05a">&#9670;&#160;</a></span>RT_BYPASS_LEVEL_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_LEVEL_1&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5776ae4222d4c0518cde74ee19f96243" name="a5776ae4222d4c0518cde74ee19f96243"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5776ae4222d4c0518cde74ee19f96243">&#9670;&#160;</a></span>RT_BYPASS_LEVEL_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_LEVEL_2&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5218dfb98a0b0222c9eb4fd667fdf94e" name="a5218dfb98a0b0222c9eb4fd667fdf94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5218dfb98a0b0222c9eb4fd667fdf94e">&#9670;&#160;</a></span>RT_BYPASS_LEVEL_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_LEVEL_3&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22c9ec3922fe9e289bcc60652f02fa7c" name="a22c9ec3922fe9e289bcc60652f02fa7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22c9ec3922fe9e289bcc60652f02fa7c">&#9670;&#160;</a></span>RT_BYPASS_LEVEL_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_LEVEL_4&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaaac8fa7a7eb4459b05c350401b335bc" name="aaaac8fa7a7eb4459b05c350401b335bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaaac8fa7a7eb4459b05c350401b335bc">&#9670;&#160;</a></span>RT_BYPASS_LEVEL_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_LEVEL_MAX&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9205b73bd9f8188d183bd833d87fa34f" name="a9205b73bd9f8188d183bd833d87fa34f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9205b73bd9f8188d183bd833d87fa34f">&#9670;&#160;</a></span>RT_BYPASS_MAX_LEVEL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_MAX_LEVEL&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd01df6d89e321ebd816a65c6d8b786d" name="afd01df6d89e321ebd816a65c6d8b786d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd01df6d89e321ebd816a65c6d8b786d">&#9670;&#160;</a></span>RT_BYPASS_PROTECT_LEVEL_1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_PROTECT_LEVEL_1&#160;&#160;&#160;10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8f3ab5347064f2ccf22129e3f47aa87" name="af8f3ab5347064f2ccf22129e3f47aa87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8f3ab5347064f2ccf22129e3f47aa87">&#9670;&#160;</a></span>RT_BYPASS_PROTECT_LEVEL_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_PROTECT_LEVEL_2&#160;&#160;&#160;11</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafd9fe8e2582caf58123a8ca51d550e6" name="aafd9fe8e2582caf58123a8ca51d550e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafd9fe8e2582caf58123a8ca51d550e6">&#9670;&#160;</a></span>RT_BYPASS_PROTECT_LEVEL_3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_PROTECT_LEVEL_3&#160;&#160;&#160;12</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21f125b778afe33a25fd1b7103f231d2" name="a21f125b778afe33a25fd1b7103f231d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f125b778afe33a25fd1b7103f231d2">&#9670;&#160;</a></span>RT_BYPASS_PROTECT_LEVEL_4</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_BYPASS_PROTECT_LEVEL_4&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a1a46d97b75299d439c51f5896cca7da0" name="a1a46d97b75299d439c51f5896cca7da0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a46d97b75299d439c51f5896cca7da0">&#9670;&#160;</a></span>bypass_function_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* bypass_function_t) (struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *serial, char buf, void *data)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a61b20cd45e538f5a83a06727bf840b13" name="a61b20cd45e538f5a83a06727bf840b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61b20cd45e538f5a83a06727bf840b13">&#9670;&#160;</a></span>rt_bypass_getchar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_bypass_getchar </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>ch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd39b721fdf61b54e776c38291324d4d" name="acd39b721fdf61b54e776c38291324d4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd39b721fdf61b54e776c38291324d4d">&#9670;&#160;</a></span>rt_bypass_lower_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bypass_lower_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a65a0778f20b58017d1db34774e971dd8" name="a65a0778f20b58017d1db34774e971dd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65a0778f20b58017d1db34774e971dd8">&#9670;&#160;</a></span>rt_bypass_lower_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bypass_lower_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c29c88f5266240e8f4d388af141eb07" name="a0c29c88f5266240e8f4d388af141eb07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c29c88f5266240e8f4d388af141eb07">&#9670;&#160;</a></span>rt_bypass_putchar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_bypass_putchar </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>ch</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adf621807935818e24a830b65294b43c3" name="adf621807935818e24a830b65294b43c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf621807935818e24a830b65294b43c3">&#9670;&#160;</a></span>rt_bypass_upper_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bypass_upper_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="serial__bypass_8h.html#a1a46d97b75299d439c51f5896cca7da0">bypass_function_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae3713796f2ebcb160f752156e4186ffa" name="ae3713796f2ebcb160f752156e4186ffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3713796f2ebcb160f752156e4186ffa">&#9670;&#160;</a></span>rt_bypass_upper_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_bypass_upper_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d4a740bb3ca4b1fd65ad9d0f9856bbc" name="a4d4a740bb3ca4b1fd65ad9d0f9856bbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4a740bb3ca4b1fd65ad9d0f9856bbc">&#9670;&#160;</a></span>rt_bypass_work_straight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_bypass_work_straight </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__serial__device.html">rt_serial_device</a> *&#160;</td>
+          <td class="paramname"><em>serial</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a335a1d2056a29c4a978e3959f891eacb" name="a335a1d2056a29c4a978e3959f891eacb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a335a1d2056a29c4a978e3959f891eacb">&#9670;&#160;</a></span>serial_bypass_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int serial_bypass_list </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="serial__bypass_8h.html">serial_bypass.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

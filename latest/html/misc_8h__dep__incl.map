@@ -1,0 +1,21 @@
+<map id="components/drivers/include/drivers/misc.h" name="components/drivers/include/drivers/misc.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="190,5,359,45"/>
+<area shape="rect" id="Node000002" href="$ahci_8h.html" title=" " alt="" coords="5,93,171,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,53,130,96,128,91,220,49"/>
+<area shape="rect" id="Node000003" href="$dm_8h.html" title=" " alt="" coords="246,93,437,133"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="300,55,329,91,324,95,296,58"/>
+<area shape="rect" id="Node000004" href="$dma_8h.html" title=" " alt="" coords="130,181,297,221"/>
+<area shape="poly" id="edge9_Node000001_Node000004" title=" " alt="" coords="255,58,236,94,223,141,217,182,212,181,218,140,231,92,250,55"/>
+<area shape="rect" id="Node000009" href="$regulator_8h.html" title=" " alt="" coords="461,93,657,133"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="351,47,497,91,496,96,349,52"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="303,144,243,183,240,179,300,139"/>
+<area shape="rect" id="Node000005" href="$pci_8h.html" title=" " alt="" coords="316,269,473,309"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="348,147,365,220,387,268,382,270,360,222,343,148"/>
+<area shape="rect" id="Node000008" href="$pic_8h.html" title=" " alt="" coords="375,181,532,221"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="379,140,430,179,427,183,376,144"/>
+<area shape="rect" id="Node000006" href="$pci__endpoint_8h.html" title=" " alt="" coords="223,357,374,412"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="367,321,328,359,324,355,364,317"/>
+<area shape="rect" id="Node000007" href="$pci__msi_8h.html" title=" " alt="" coords="398,365,586,405"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="426,317,474,363,470,367,422,321"/>
+<area shape="poly" id="edge8_Node000008_Node000005" title=" " alt="" coords="435,234,410,271,405,268,431,231"/>
+</map>

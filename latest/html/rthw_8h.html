@@ -1,0 +1,1222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: include/rthw.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('rthw_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">rthw.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for rthw.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="rthw_8h__incl.png" border="0" usemap="#ainclude_2rthw_8h" alt=""/></div>
+<map name="ainclude_2rthw_8h" id="ainclude_2rthw_8h">
+<area shape="rect" title=" " alt="" coords="198,5,311,31"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="223,79,287,104"/>
+<area shape="poly" title=" " alt="" coords="257,31,257,65,252,65,252,31"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="175,152,257,177"/>
+<area shape="poly" title=" " alt="" coords="251,106,231,141,226,139,246,103"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="255,225,335,251"/>
+<area shape="poly" title=" " alt="" coords="261,104,290,211,285,213,255,105"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="87,225,187,251"/>
+<area shape="poly" title=" " alt="" coords="228,106,195,126,165,154,150,183,143,212,138,211,145,181,161,150,192,121,226,102"/>
+<area shape="rect" title=" " alt="" coords="333,152,443,177"/>
+<area shape="poly" title=" " alt="" coords="277,102,355,143,353,148,275,106"/>
+<area shape="poly" title=" " alt="" coords="230,175,274,214,270,218,227,179"/>
+<area shape="poly" title=" " alt="" coords="205,179,162,218,158,214,202,175"/>
+<area shape="rect" title=" " alt="" coords="5,299,88,324"/>
+<area shape="poly" title=" " alt="" coords="256,253,101,297,99,292,254,248"/>
+<area shape="rect" title=" " alt="" coords="113,299,183,324"/>
+<area shape="poly" title=" " alt="" coords="272,253,185,295,183,290,270,248"/>
+<area shape="rect" title=" " alt="" coords="208,299,283,324"/>
+<area shape="poly" title=" " alt="" coords="289,253,263,289,259,286,284,249"/>
+<area shape="rect" title=" " alt="" coords="307,299,381,324"/>
+<area shape="poly" title=" " alt="" coords="305,249,330,286,326,289,301,253"/>
+<area shape="rect" title=" " alt="" coords="405,299,501,324"/>
+<area shape="poly" title=" " alt="" coords="321,248,416,291,414,295,319,253"/>
+<area shape="rect" title=" " alt="" coords="526,299,621,324"/>
+<area shape="poly" title=" " alt="" coords="336,247,516,293,515,298,335,252"/>
+<area shape="rect" title=" " alt="" coords="645,299,744,324"/>
+<area shape="poly" title=" " alt="" coords="335,244,632,296,631,301,334,249"/>
+<area shape="poly" title=" " alt="" coords="124,253,74,292,71,288,121,249"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="rthw_8h__dep__incl.png" border="0" usemap="#ainclude_2rthw_8hdep" alt=""/></div>
+<map name="ainclude_2rthw_8hdep" id="ainclude_2rthw_8hdep">
+<area shape="rect" title=" " alt="" coords="2484,5,2597,31"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="5,79,161,119"/>
+<area shape="poly" title=" " alt="" coords="2470,22,2033,25,1370,34,685,51,397,65,181,81,162,84,161,78,180,76,397,59,684,46,1370,28,2033,20,2470,17"/>
+<area shape="rect" href="dev__audio_8c.html" title=" " alt="" coords="1317,365,1468,405"/>
+<area shape="poly" title=" " alt="" coords="2470,23,2027,29,1391,41,814,58,627,69,573,75,550,81,527,108,510,136,500,164,496,193,499,222,508,251,524,279,546,307,578,317,648,328,865,348,1317,377,1317,382,864,354,647,333,576,323,543,312,520,282,503,253,494,223,491,193,495,163,505,134,523,105,547,76,572,70,627,64,814,53,1391,35,2027,23,2470,17"/>
+<area shape="rect" href="dev__audio__pipe_8c.html" title=" " alt="" coords="2031,460,2210,500"/>
+<area shape="poly" title=" " alt="" coords="2470,22,1980,23,1261,30,904,37,594,48,368,62,298,71,262,81,233,101,215,123,205,150,202,185,202,283,206,299,218,314,237,329,264,343,337,368,433,390,548,409,679,425,973,449,1285,464,1585,472,2031,476,2031,482,1585,478,1285,469,973,454,679,430,548,414,432,395,335,373,261,348,234,334,214,318,201,301,197,284,197,185,200,149,210,121,229,97,260,76,297,66,368,57,594,42,903,32,1261,24,1980,18,2470,17"/>
+<area shape="rect" href="ahci_8h.html" title=" " alt="" coords="2998,365,3163,405"/>
+<area shape="poly" title=" " alt="" coords="2536,45,2526,99,2521,170,2524,208,2532,244,2546,278,2568,307,2582,319,2600,327,2647,340,2704,347,2766,349,2891,349,2944,350,2986,355,3018,362,3017,367,2986,360,2944,356,2891,354,2766,355,2703,352,2646,345,2598,332,2579,323,2564,311,2541,281,2527,246,2518,209,2515,170,2520,98,2531,43"/>
+<area shape="rect" href="blk_8h.html" title=" " alt="" coords="748,262,907,302"/>
+<area shape="poly" title=" " alt="" coords="2470,24,2014,42,1759,58,1654,69,1575,81,1542,90,1518,99,1462,121,1310,164,1191,192,1071,219,919,257,892,265,891,259,917,252,1070,214,1189,187,1309,159,1460,116,1516,94,1541,85,1573,76,1653,64,1759,53,2014,36,2470,18"/>
+<area shape="rect" href="nvme_8h.html" title=" " alt="" coords="740,365,915,405"/>
+<area shape="poly" title=" " alt="" coords="2470,24,1876,42,1531,59,1388,70,1280,81,1161,92,1053,92,956,88,865,88,781,98,741,109,702,125,663,147,624,175,585,212,547,256,535,281,539,301,555,319,583,335,618,347,658,358,740,372,739,377,657,363,617,353,581,339,552,323,534,304,530,280,542,253,582,208,621,171,660,142,699,120,739,104,780,93,865,83,956,83,1054,86,1161,86,1279,76,1388,64,1531,54,1876,37,2470,18"/>
+<area shape="rect" href="clk_8h.html" title=" " alt="" coords="1291,79,1449,119"/>
+<area shape="poly" title=" " alt="" coords="2470,23,2294,26,2045,35,1759,53,1468,81,1449,84,1449,79,1467,76,1758,48,2045,30,2294,21,2470,17"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="1727,167,1920,207"/>
+<area shape="poly" title=" " alt="" coords="2470,22,2299,26,2090,34,1991,42,1905,52,1842,65,1821,72,1809,80,1800,100,1800,122,1806,145,1815,165,1810,168,1801,147,1794,123,1795,98,1805,77,1819,68,1841,60,1905,47,1990,37,2090,29,2299,20,2470,17"/>
+<area shape="rect" href="dev__i2c__dm_8h.html" title=" " alt="" coords="931,255,1081,309"/>
+<area shape="poly" title=" " alt="" coords="2470,24,2263,30,2000,41,1761,58,1675,69,1626,81,1604,94,1588,109,1567,143,1545,178,1529,195,1506,209,1448,233,1397,247,1350,251,1305,251,1211,246,1157,248,1094,257,1082,260,1081,255,1094,252,1156,243,1211,241,1305,245,1350,246,1396,241,1446,228,1503,204,1525,190,1541,175,1562,141,1584,106,1600,90,1624,76,1674,64,1760,53,2000,36,2263,24,2470,18"/>
+<area shape="rect" href="dm_8h.html" title=" " alt="" coords="288,79,479,119"/>
+<area shape="poly" title=" " alt="" coords="2470,23,1515,39,929,57,683,68,498,81,479,83,479,78,498,76,683,63,929,51,1515,34,2470,17"/>
+<area shape="rect" href="pic_8h.html" title=" " alt="" coords="237,167,394,207"/>
+<area shape="poly" title=" " alt="" coords="2470,23,1973,27,1245,38,582,56,366,67,303,74,277,81,271,90,269,99,273,122,285,145,300,165,295,168,280,148,268,124,263,99,266,87,274,76,302,69,365,62,581,50,1245,33,1973,22,2470,17"/>
+<area shape="rect" href="numa_8h.html" title=" " alt="" coords="1106,255,1261,309"/>
+<area shape="poly" title=" " alt="" coords="2470,24,2027,42,1804,59,1724,69,1678,81,1656,94,1640,109,1618,143,1596,177,1579,194,1557,209,1517,227,1482,238,1419,245,1354,246,1316,250,1273,257,1262,260,1261,255,1272,252,1316,244,1353,241,1418,240,1481,233,1515,222,1554,204,1576,190,1591,174,1613,140,1635,106,1652,90,1676,76,1723,64,1803,54,2027,37,2470,19"/>
+<area shape="rect" href="power__domain_8h.html" title=" " alt="" coords="1285,255,1439,309"/>
+<area shape="poly" title=" " alt="" coords="2470,24,2055,44,1848,60,1774,70,1731,81,1708,94,1692,109,1669,141,1646,176,1630,193,1607,209,1440,260,1439,255,1605,204,1626,189,1642,172,1664,138,1688,105,1705,90,1729,76,1773,65,1847,55,2055,38,2470,19"/>
+<area shape="rect" href="led_8h.html" title=" " alt="" coords="1820,79,1979,119"/>
+<area shape="poly" title=" " alt="" coords="2471,28,2259,49,1998,81,1979,84,1979,79,1998,76,2258,43,2470,23"/>
+<area shape="rect" href="regulator_8h.html" title=" " alt="" coords="1464,262,1660,302"/>
+<area shape="poly" title=" " alt="" coords="2470,22,2312,23,2115,31,2016,39,1926,49,1849,63,1792,81,1749,107,1721,137,1696,170,1658,209,1589,264,1586,260,1655,205,1691,167,1717,133,1746,103,1790,76,1848,58,1925,44,2016,34,2114,26,2312,18,2470,16"/>
+<area shape="rect" href="reset_8h.html" title=" " alt="" coords="1685,262,1855,302"/>
+<area shape="poly" title=" " alt="" coords="2470,26,2256,44,2150,60,2107,70,2075,81,2050,95,2031,109,2002,140,1975,174,1933,209,1877,240,1822,264,1820,260,1874,236,1930,204,1971,170,1998,137,2027,105,2047,90,2073,76,2105,65,2149,55,2255,39,2470,21"/>
+<area shape="rect" href="scsi_8h.html" title=" " alt="" coords="2578,262,2741,302"/>
+<area shape="poly" title=" " alt="" coords="2554,42,2653,261,2648,263,2549,45"/>
+<area shape="rect" href="cmd_8c.html" title=" " alt="" coords="1880,269,2060,295"/>
+<area shape="poly" title=" " alt="" coords="2470,25,2379,31,2276,41,2182,58,2145,68,2118,81,2100,94,2088,108,2072,137,2060,170,2038,208,1983,271,1979,267,2033,205,2055,168,2068,135,2084,105,2097,90,2115,76,2143,63,2181,52,2275,36,2378,25,2470,19"/>
+<area shape="rect" href="shell_8c.html" title=" " alt="" coords="2320,86,2503,111"/>
+<area shape="poly" title=" " alt="" coords="2511,40,2432,88,2429,83,2509,36"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="2156,86,2296,111"/>
+<area shape="poly" title=" " alt="" coords="2482,37,2272,89,2271,83,2481,31"/>
+<area shape="rect" href="clock_8c.html" title=" " alt="" coords="2085,269,2175,295"/>
+<area shape="poly" title=" " alt="" coords="2470,22,2382,26,2285,35,2199,53,2167,65,2145,81,2130,102,2121,127,2116,154,2115,181,2120,232,2129,269,2124,270,2115,233,2110,182,2111,154,2116,126,2125,100,2141,77,2164,61,2197,48,2284,30,2381,21,2470,17"/>
+<area shape="rect" href="components_8c.html" title=" " alt="" coords="2967,269,3103,295"/>
+<area shape="poly" title=" " alt="" coords="2612,18,2703,28,2755,37,2810,51,2865,70,2918,95,2967,126,3011,165,3027,191,3035,220,3039,269,3033,269,3030,221,3022,193,3007,168,2964,130,2916,100,2863,75,2809,56,2754,43,2702,33,2611,23"/>
+<area shape="rect" href="cpu__mp_8c.html" title=" " alt="" coords="3127,269,3234,295"/>
+<area shape="poly" title=" " alt="" coords="2611,16,2682,19,2766,29,2854,47,2939,76,2979,97,3016,121,3085,176,3139,229,3173,267,3169,271,3135,233,3081,180,3013,126,2976,101,2937,81,2853,52,2765,34,2682,25,2611,21"/>
+<area shape="rect" href="cpu__up_8c.html" title=" " alt="" coords="3259,269,3361,295"/>
+<area shape="poly" title=" " alt="" coords="2611,17,2691,20,2787,30,2891,47,2992,76,3041,97,3090,121,3179,176,3251,229,3298,267,3295,271,3248,233,3176,180,3087,126,3039,101,2990,81,2890,53,2787,35,2690,26,2611,22"/>
+<area shape="rect" href="defunct_8c.html" title=" " alt="" coords="3385,269,3491,295"/>
+<area shape="poly" title=" " alt="" coords="2611,17,2701,20,2813,29,2935,47,3055,76,3113,96,3170,121,3277,176,3366,229,3423,267,3420,271,3363,233,3275,181,3168,126,3111,101,3053,81,2934,52,2813,35,2701,25,2611,22"/>
+<area shape="rect" href="idle_8c.html" title=" " alt="" coords="3514,269,3594,295"/>
+<area shape="poly" title=" " alt="" coords="2611,16,2713,19,2842,28,2984,46,3056,59,3125,76,3189,96,3253,121,3373,176,3472,229,3537,267,3534,271,3469,233,3371,180,3251,126,3188,101,3124,81,3055,64,2984,51,2842,33,2713,24,2611,22"/>
+<area shape="rect" href="ipc_8c.html" title=" " alt="" coords="3618,269,3693,295"/>
+<area shape="poly" title=" " alt="" coords="2611,16,2725,18,2873,26,3038,45,3121,58,3201,76,3262,95,3308,114,3410,164,3509,207,3607,252,3636,267,3633,272,3605,257,3507,212,3408,169,3306,119,3260,100,3200,81,3120,64,3037,50,2873,32,2725,23,2611,21"/>
+<area shape="rect" href="irq_8c.html" title=" " alt="" coords="3717,269,3791,295"/>
+<area shape="poly" title=" " alt="" coords="2611,20,2955,39,3140,56,3217,65,3275,76,3346,96,3417,120,3551,175,3662,228,3735,267,3733,272,3660,233,3549,180,3415,125,3344,101,3273,81,3216,71,3140,61,2955,45,2611,25"/>
+<area shape="rect" href="kservice_8c.html" title=" " alt="" coords="3815,269,3925,295"/>
+<area shape="poly" title=" " alt="" coords="2612,19,2996,38,3205,55,3292,65,3357,76,3425,94,3476,114,3590,164,3844,267,3842,272,3588,169,3474,119,3423,99,3356,81,3291,70,3205,60,2995,44,2612,25"/>
+<area shape="rect" href="mem_8c.html" title=" " alt="" coords="3950,269,4041,295"/>
+<area shape="poly" title=" " alt="" coords="2612,19,3034,38,3267,54,3364,65,3437,76,3519,95,3601,119,3757,175,3887,228,3973,267,3970,272,3885,233,3755,180,3600,125,3518,101,3436,81,3363,70,3267,60,3034,43,2611,24"/>
+<area shape="rect" href="memheap_8c.html" title=" " alt="" coords="4065,269,4187,295"/>
+<area shape="poly" title=" " alt="" coords="2611,19,3077,37,3339,54,3447,64,3529,76,3607,94,3666,114,3799,164,4054,252,4095,267,4093,272,4052,257,3797,169,3664,119,3605,99,3528,81,3446,69,3338,59,3077,42,2611,24"/>
+<area shape="rect" href="mempool_8c.html" title=" " alt="" coords="4212,269,4331,295"/>
+<area shape="poly" title=" " alt="" coords="2611,18,3119,36,3408,53,3528,64,3618,76,3713,95,3809,119,3991,174,4144,228,4244,267,4242,272,4142,233,3990,179,3807,124,3712,101,3618,81,3527,69,3408,59,3119,42,2611,24"/>
+<area shape="rect" href="object_8c.html" title=" " alt="" coords="4355,269,4451,295"/>
+<area shape="poly" title=" " alt="" coords="2611,18,3169,36,3489,53,3622,64,3722,76,3812,94,3881,114,4036,164,4190,205,4258,224,4343,252,4379,267,4377,272,4341,257,4256,229,4189,210,4035,169,3879,119,3811,99,3722,81,3621,69,3488,58,3168,41,2611,23"/>
+<area shape="rect" href="scheduler__mp_8c.html" title=" " alt="" coords="4475,269,4622,295"/>
+<area shape="poly" title=" " alt="" coords="2611,18,3215,35,3566,52,3712,63,3822,76,3928,95,4034,119,4237,174,4407,228,4519,267,4517,272,4405,233,4235,179,4032,124,3926,101,3822,81,3711,68,3566,57,3215,40,2611,23"/>
+<area shape="rect" href="scheduler__up_8c.html" title=" " alt="" coords="4647,269,4789,295"/>
+<area shape="poly" title=" " alt="" coords="2611,18,3268,34,3654,52,3814,63,3936,76,4049,95,4163,119,4381,174,4565,228,4685,267,4684,272,4563,233,4380,179,4162,124,4048,100,3935,81,3814,68,3653,57,3268,40,2611,23"/>
+<area shape="rect" href="signal_8c.html" title=" " alt="" coords="4813,269,4908,295"/>
+<area shape="poly" title=" " alt="" coords="2611,18,3324,34,3746,51,3922,63,4056,76,4164,94,4248,114,4437,164,4621,203,4701,221,4802,252,4838,267,4836,272,4800,257,4699,227,4620,208,4436,169,4247,119,4163,99,4055,81,3922,68,3746,57,3324,39,2611,23"/>
+<area shape="rect" href="slab_8c.html" title=" " alt="" coords="4933,269,5015,295"/>
+<area shape="poly" title=" " alt="" coords="2611,17,2927,22,3378,32,3837,50,4028,62,4173,76,4281,94,4363,114,4551,164,4655,186,4737,202,4818,220,4920,252,4954,267,4952,272,4918,257,4817,225,4736,207,4654,191,4549,169,4362,119,4280,99,4172,81,4028,67,3837,55,3378,38,2927,27,2611,23"/>
+<area shape="rect" href="thread_8c.html" title=" " alt="" coords="5039,269,5138,295"/>
+<area shape="poly" title=" " alt="" coords="2612,17,2947,21,3432,31,3926,49,4133,61,4289,76,4397,94,4480,114,4668,164,4849,203,4928,222,5028,252,5065,267,5063,272,5026,257,4927,227,4848,208,4667,169,4479,119,4396,99,4288,81,4133,66,3926,54,3432,36,2947,27,2611,23"/>
+<area shape="rect" href="timer_8c.html" title=" " alt="" coords="5162,269,5253,295"/>
+<area shape="poly" title=" " alt="" coords="2611,17,2966,20,3486,29,4018,47,4240,60,4408,76,4514,94,4595,114,4676,137,4780,164,4885,187,4967,202,5048,221,5151,252,5186,267,5184,272,5149,257,5047,226,4966,207,4884,192,4779,169,4674,142,4594,119,4513,99,4407,81,4240,65,4017,52,3486,35,2966,26,2611,22"/>
+<area shape="poly" title=" " alt="" coords="830,316,830,365,825,365,825,316"/>
+<area shape="poly" title=" " alt="" coords="1713,198,1382,224,1215,240,1094,257,1082,260,1081,255,1094,252,1215,235,1381,219,1713,193"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="2301,262,2452,302"/>
+<area shape="poly" title=" " alt="" coords="1934,204,2302,265,2301,271,1934,209"/>
+<area shape="poly" title=" " alt="" coords="2302,308,2282,312,2115,333,1886,353,1468,382,1468,376,1886,348,2115,328,2282,307,2301,303"/>
+<area shape="poly" title=" " alt="" coords="2338,312,2276,359,2250,387,2224,414,2155,462,2152,458,2220,410,2246,383,2272,355,2335,308"/>
+<area shape="rect" href="dfs_8h.html" title=" " alt="" coords="1856,365,2007,405"/>
+<area shape="poly" title=" " alt="" coords="2298,308,2283,312,2208,327,2150,335,2092,344,2019,360,1991,367,1990,362,2017,355,2091,339,2149,330,2208,321,2281,307,2297,303"/>
+<area shape="rect" href="dev__audio__pipe_8h.html" title=" " alt="" coords="2031,365,2211,405"/>
+<area shape="poly" title=" " alt="" coords="2317,310,2170,367,2168,362,2315,305"/>
+<area shape="rect" href="clk-fixed-rate_8c.html" title=" " alt="" coords="2287,365,2437,405"/>
+<area shape="poly" title=" " alt="" coords="2375,316,2367,365,2362,364,2369,315"/>
+<area shape="rect" href="clk_8c.html" title=" " alt="" coords="2461,365,2612,405"/>
+<area shape="poly" title=" " alt="" coords="2420,307,2508,362,2505,367,2417,311"/>
+<area shape="rect" href="dev__serial__v2_8h.html" title=" " alt="" coords="2636,357,2787,412"/>
+<area shape="poly" title=" " alt="" coords="2453,303,2636,358,2635,363,2451,308"/>
+<area shape="rect" href="serial__bypass_8h.html" title=" " alt="" coords="2811,357,2974,412"/>
+<area shape="poly" title=" " alt="" coords="2466,297,2522,307,2661,329,2799,355,2812,358,2811,363,2797,360,2660,334,2522,312,2465,302"/>
+<area shape="poly" title=" " alt="" coords="2123,418,2123,460,2118,460,2118,418"/>
+<area shape="rect" href="dma_8h.html" title=" " alt="" coords="557,262,724,302"/>
+<area shape="poly" title=" " alt="" coords="423,125,616,260,612,264,420,129"/>
+<area shape="rect" href="pci_8h.html" title=" " alt="" coords="262,262,419,302"/>
+<area shape="poly" title=" " alt="" coords="402,131,412,168,413,188,408,208,390,239,367,263,363,260,386,236,404,206,407,187,407,168,397,132"/>
+<area shape="poly" title=" " alt="" coords="362,131,332,168,328,165,358,128"/>
+<area shape="poly" title=" " alt="" coords="327,219,338,261,333,263,321,221"/>
+<area shape="poly" title=" " alt="" coords="2755,301,2987,355,3015,362,3013,367,2985,360,2753,306"/>
+<area shape="poly" title=" " alt="" coords="2232,125,2234,165,2230,215,2217,266,2205,290,2189,311,2170,329,2150,341,2111,349,2069,351,2019,360,1994,367,1993,362,2017,355,2068,346,2111,344,2148,336,2166,325,2185,308,2200,287,2212,264,2225,214,2228,165,2226,125"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="2860,174,2997,199"/>
+<area shape="poly" title=" " alt="" coords="2285,112,2308,116,2462,139,2615,156,2860,178,2860,183,2615,162,2461,144,2307,121,2284,117"/>
+<area shape="poly" title=" " alt="" coords="2216,125,2139,270,2134,268,2211,123"/>
+<area shape="poly" title=" " alt="" coords="2931,213,2937,260,2945,285,2958,308,2973,325,2991,340,3030,362,3028,367,2988,344,2969,329,2953,311,2940,287,2932,261,2926,213"/>
+<area shape="poly" title=" " alt="" coords="2846,192,1821,216,1251,235,1042,246,918,257,885,265,884,259,918,252,1041,241,1250,230,1821,211,2846,187"/>
+<area shape="poly" title=" " alt="" coords="2846,195,2550,218,2398,236,2336,246,2290,257,2260,270,2240,285,2218,299,2188,312,2104,329,1997,340,1749,352,1499,355,1305,360,915,381,915,376,1305,355,1499,350,1749,347,1997,335,2103,324,2187,307,2216,295,2237,280,2258,265,2288,252,2335,241,2398,230,2550,213,2846,190"/>
+<area shape="poly" title=" " alt="" coords="2846,192,1910,217,1394,236,1206,247,1094,257,1082,260,1081,254,1094,252,1205,241,1394,231,1910,212,2846,187"/>
+<area shape="poly" title=" " alt="" coords="2846,200,2673,222,2472,257,2441,265,2440,259,2471,252,2672,217,2846,194"/>
+<area shape="poly" title=" " alt="" coords="2847,197,2713,216,2639,234,2567,257,2531,276,2483,305,2391,367,2388,362,2480,301,2528,271,2565,252,2637,229,2712,211,2846,192"/>
+<area shape="poly" title=" " alt="" coords="2886,207,2842,228,2798,257,2785,271,2777,284,2769,298,2754,312,2693,336,2598,367,2596,362,2691,331,2751,307,2765,294,2773,281,2781,267,2795,253,2839,224,2883,202"/>
+<area shape="poly" title=" " alt="" coords="2908,211,2798,311,2744,359,2740,355,2795,307,2905,207"/>
+<area shape="poly" title=" " alt="" coords="2924,213,2914,255,2898,357,2893,357,2909,254,2919,212"/>
+<area shape="poly" title=" " alt="" coords="2846,192,1730,215,1102,235,872,246,736,257,701,265,700,259,735,252,871,240,1102,229,1730,210,2846,187"/>
+<area shape="poly" title=" " alt="" coords="2846,191,2521,196,2066,207,1608,226,1417,240,1273,257,1262,259,1261,254,1272,252,1416,235,1607,221,2065,201,2521,190,2846,186"/>
+<area shape="poly" title=" " alt="" coords="2846,192,2553,197,2150,209,1746,229,1578,242,1452,257,1440,259,1439,254,1451,252,1578,236,1746,223,2150,204,2553,192,2846,186"/>
+<area shape="poly" title=" " alt="" coords="2847,190,2640,191,2349,200,2013,220,1841,236,1673,257,1634,264,1633,259,1672,252,1841,231,2013,215,2349,195,2640,186,2846,185"/>
+<area shape="poly" title=" " alt="" coords="2846,190,2669,193,2425,202,2148,222,2006,238,1868,257,1834,265,1832,259,1867,252,2005,232,2147,217,2425,197,2669,187,2846,185"/>
+<area shape="poly" title=" " alt="" coords="2883,206,2714,265,2713,259,2882,201"/>
+<area shape="poly" title=" " alt="" coords="2847,192,2701,198,2508,209,2291,228,2073,257,2009,272,2008,267,2072,252,2291,223,2508,204,2701,193,2847,187"/>
+<area shape="poly" title=" " alt="" coords="2846,195,2578,216,2412,234,2245,257,2175,272,2174,267,2244,252,2411,229,2578,211,2846,190"/>
+<area shape="poly" title=" " alt="" coords="2954,206,3024,267,3020,271,2950,210"/>
+<area shape="poly" title=" " alt="" coords="2975,201,3116,252,3154,267,3152,272,3114,257,2974,206"/>
+<area shape="poly" title=" " alt="" coords="3012,199,3124,221,3247,252,3286,267,3284,272,3245,257,3123,226,3011,204"/>
+<area shape="poly" title=" " alt="" coords="3011,192,3179,213,3277,230,3373,252,3414,267,3412,272,3372,257,3276,235,3179,218,3010,197"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3112,190,3236,201,3370,221,3503,252,3536,267,3534,272,3501,257,3369,226,3235,206,3112,196,3011,191"/>
+<area shape="poly" title=" " alt="" coords="3011,189,3326,212,3489,230,3556,240,3607,252,3639,267,3637,272,3605,257,3555,246,3488,235,3326,217,3011,195"/>
+<area shape="poly" title=" " alt="" coords="3011,188,3174,196,3375,209,3567,227,3646,239,3706,252,3738,267,3735,272,3704,257,3645,244,3566,232,3374,214,3174,201,3011,194"/>
+<area shape="poly" title=" " alt="" coords="3011,189,3421,211,3642,229,3733,240,3803,252,3846,267,3844,272,3801,257,3732,245,3642,234,3421,216,3011,194"/>
+<area shape="poly" title=" " alt="" coords="3012,187,3219,193,3487,205,3748,224,3856,237,3937,252,3975,267,3973,272,3936,257,3855,242,3747,230,3487,211,3219,199,3011,192"/>
+<area shape="poly" title=" " alt="" coords="3011,187,3240,194,3541,207,3838,226,3960,238,4053,252,4100,267,4099,272,4052,257,3960,243,3837,231,3541,212,3240,199,3011,193"/>
+<area shape="poly" title=" " alt="" coords="3011,187,3268,192,3611,203,3952,223,4093,236,4200,252,4246,267,4244,272,4199,257,4092,241,3951,228,3611,209,3268,197,3011,192"/>
+<area shape="poly" title=" " alt="" coords="3011,185,3294,188,3679,197,3878,206,4063,217,4223,232,4343,252,4383,267,4381,272,4341,257,4222,238,4063,222,3878,211,3679,203,3294,193,3011,191"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3315,191,3735,202,4156,222,4331,235,4464,252,4519,267,4517,272,4463,257,4331,241,4156,227,3735,207,3315,196,3011,192"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3345,189,3814,199,4288,219,4485,234,4635,252,4688,267,4687,272,4633,257,4485,239,4288,224,3814,204,3345,195,3011,191"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3409,193,3967,206,4495,226,4687,238,4801,252,4841,267,4839,272,4800,257,4687,243,4494,231,3967,212,3409,199,3011,192"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3432,192,4027,203,4592,223,4798,236,4920,252,4956,267,4954,272,4919,257,4798,242,4592,228,4027,209,3431,197,3011,191"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3452,192,4081,204,4680,224,4899,237,5028,252,5068,267,5066,272,5027,257,4898,242,4679,229,4081,209,3452,197,3011,191"/>
+<area shape="poly" title=" " alt="" coords="3011,186,3475,191,4143,202,4780,221,5013,235,5096,243,5151,252,5188,267,5186,272,5149,257,5095,249,5013,241,4780,227,4143,207,3475,196,3011,191"/>
+</map>
+</div>
+</div>
+<p><a href="rthw_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__irq__desc.html">rt_irq_desc</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa22c1dc2c29cb06192e325f46f8c8886" id="r_aa22c1dc2c29cb06192e325f46f8c8886"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aa22c1dc2c29cb06192e325f46f8c8886">HWREG64</a>(x)&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#ad1d06de9cbc8f1bf71c1612314d05aec">rt_uint64_t</a> *)(x)))</td></tr>
+<tr class="separator:aa22c1dc2c29cb06192e325f46f8c8886"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a005bc3d0bebdd1031a77f1fba8947998" id="r_a005bc3d0bebdd1031a77f1fba8947998"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a005bc3d0bebdd1031a77f1fba8947998">HWREG32</a>(x)&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> *)(x)))</td></tr>
+<tr class="separator:a005bc3d0bebdd1031a77f1fba8947998"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7bb830016238e9f911612eddc5e58143" id="r_a7bb830016238e9f911612eddc5e58143"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a7bb830016238e9f911612eddc5e58143">HWREG16</a>(x)&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> *)(x)))</td></tr>
+<tr class="separator:a7bb830016238e9f911612eddc5e58143"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437bba8c6aaa7542f8d7522146157b42" id="r_a437bba8c6aaa7542f8d7522146157b42"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a437bba8c6aaa7542f8d7522146157b42">HWREG8</a>(x)&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *)(x)))</td></tr>
+<tr class="separator:a437bba8c6aaa7542f8d7522146157b42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3684c7a23b9fdd8ad52a38820277f9f" id="r_ac3684c7a23b9fdd8ad52a38820277f9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#ac3684c7a23b9fdd8ad52a38820277f9f">RT_CPU_CACHE_LINE_SZ</a>&#160;&#160;&#160;32</td></tr>
+<tr class="separator:ac3684c7a23b9fdd8ad52a38820277f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a235c8f4a582ede07ad88e12f68962dc3" id="r_a235c8f4a582ede07ad88e12f68962dc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a235c8f4a582ede07ad88e12f68962dc3">rt_hw_cpu_icache_enable</a>(...)</td></tr>
+<tr class="separator:a235c8f4a582ede07ad88e12f68962dc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d8bdd0e32783a204e443a969e02399e" id="r_a5d8bdd0e32783a204e443a969e02399e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a5d8bdd0e32783a204e443a969e02399e">rt_hw_cpu_icache_disable</a>(...)</td></tr>
+<tr class="separator:a5d8bdd0e32783a204e443a969e02399e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab01a4d367a752cba1a4486df3ba73522" id="r_ab01a4d367a752cba1a4486df3ba73522"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#ab01a4d367a752cba1a4486df3ba73522">rt_hw_cpu_icache_ops</a>(...)</td></tr>
+<tr class="separator:ab01a4d367a752cba1a4486df3ba73522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3ff1bf78c671c8e0cf024e6d191ef00" id="r_ad3ff1bf78c671c8e0cf024e6d191ef00"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#ad3ff1bf78c671c8e0cf024e6d191ef00">rt_hw_cpu_dcache_enable</a>(...)</td></tr>
+<tr class="separator:ad3ff1bf78c671c8e0cf024e6d191ef00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa002c4aa7a93c4c9726a2d6c182cf83c" id="r_aa002c4aa7a93c4c9726a2d6c182cf83c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aa002c4aa7a93c4c9726a2d6c182cf83c">rt_hw_cpu_dcache_disable</a>(...)</td></tr>
+<tr class="separator:aa002c4aa7a93c4c9726a2d6c182cf83c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c7ea96b6591afece39599c7e6410f6d" id="r_a4c7ea96b6591afece39599c7e6410f6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a4c7ea96b6591afece39599c7e6410f6d">rt_hw_cpu_dcache_ops</a>(...)</td></tr>
+<tr class="separator:a4c7ea96b6591afece39599c7e6410f6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43173043fd7fcbeb1f6d4ed6d6febbbd" id="r_a43173043fd7fcbeb1f6d4ed6d6febbbd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a43173043fd7fcbeb1f6d4ed6d6febbbd">rt_hw_cpu_icache_status</a>(...)&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a43173043fd7fcbeb1f6d4ed6d6febbbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07322d474125a100c66098853f1d2cc8" id="r_a07322d474125a100c66098853f1d2cc8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a07322d474125a100c66098853f1d2cc8">rt_hw_cpu_dcache_status</a>(...)&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a07322d474125a100c66098853f1d2cc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1cd4f8af76b74f8ec50dfbda34e53bd" id="r_aa1cd4f8af76b74f8ec50dfbda34e53bd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aa1cd4f8af76b74f8ec50dfbda34e53bd">rt_hw_local_irq_disable</a>&#160;&#160;&#160;<a class="el" href="rthw_8h.html#aa56c3da0faca777694f042aa6557ca53">rt_hw_interrupt_disable</a></td></tr>
+<tr class="separator:aa1cd4f8af76b74f8ec50dfbda34e53bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5dd59432cd0737c1213cb3aae3ceccf" id="r_ac5dd59432cd0737c1213cb3aae3ceccf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#ac5dd59432cd0737c1213cb3aae3ceccf">rt_hw_local_irq_enable</a>&#160;&#160;&#160;<a class="el" href="rthw_8h.html#a566def229b448a1d209a14834501dc3a">rt_hw_interrupt_enable</a></td></tr>
+<tr class="separator:ac5dd59432cd0737c1213cb3aae3ceccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a000a80e15ebbba809aae7f40c8edf9b0" id="r_a000a80e15ebbba809aae7f40c8edf9b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a000a80e15ebbba809aae7f40c8edf9b0">RT_DEFINE_HW_SPINLOCK</a>(x)&#160;&#160;&#160;<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> x</td></tr>
+<tr class="separator:a000a80e15ebbba809aae7f40c8edf9b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b4d0e953b68f2262b39414ac2de4c4c" id="r_a2b4d0e953b68f2262b39414ac2de4c4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a2b4d0e953b68f2262b39414ac2de4c4c">rt_hw_spin_lock</a>(lock)&#160;&#160;&#160;*(lock) = <a class="el" href="rthw_8h.html#aa56c3da0faca777694f042aa6557ca53">rt_hw_interrupt_disable</a>()</td></tr>
+<tr class="separator:a2b4d0e953b68f2262b39414ac2de4c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7363620ee37f98a238153119dd1a82a8" id="r_a7363620ee37f98a238153119dd1a82a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a7363620ee37f98a238153119dd1a82a8">rt_hw_spin_unlock</a>(lock)&#160;&#160;&#160;<a class="el" href="rthw_8h.html#a566def229b448a1d209a14834501dc3a">rt_hw_interrupt_enable</a>(*(lock))</td></tr>
+<tr class="separator:a7363620ee37f98a238153119dd1a82a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a228bc426f0f1d7847d0f03f5b57ac" id="r_a62a228bc426f0f1d7847d0f03f5b57ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a62a228bc426f0f1d7847d0f03f5b57ac">rt_hw_isb</a>()</td></tr>
+<tr class="separator:a62a228bc426f0f1d7847d0f03f5b57ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f06c280b36db2e86075fbe739b3afda" id="r_a8f06c280b36db2e86075fbe739b3afda"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a8f06c280b36db2e86075fbe739b3afda">rt_hw_dmb</a>()</td></tr>
+<tr class="separator:a8f06c280b36db2e86075fbe739b3afda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f600dbc2cbe51f295263405e71d8659" id="r_a7f600dbc2cbe51f295263405e71d8659"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a7f600dbc2cbe51f295263405e71d8659">rt_hw_dsb</a>()</td></tr>
+<tr class="separator:a7f600dbc2cbe51f295263405e71d8659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a88054432dd4245f99f91f3566a2a3af0" id="r_a88054432dd4245f99f91f3566a2a3af0"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a>) (int vector, void *param)</td></tr>
+<tr class="separator:a88054432dd4245f99f91f3566a2a3af0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a6ba5b77419f74ad2b62073c3f504858a" id="r_a6ba5b77419f74ad2b62073c3f504858a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a6ba5b77419f74ad2b62073c3f504858a">RT_HW_CACHE_OPS</a> { <a class="el" href="rthw_8h.html#a6ba5b77419f74ad2b62073c3f504858aa8f9079a528fff6f4c2c42986d3b8c8f8">RT_HW_CACHE_FLUSH</a> = 0x01
+, <a class="el" href="rthw_8h.html#a6ba5b77419f74ad2b62073c3f504858aa497024ec3e5f630957edac053e42bcda">RT_HW_CACHE_INVALIDATE</a> = 0x02
+ }</td></tr>
+<tr class="separator:a6ba5b77419f74ad2b62073c3f504858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gadd5718194efbe43640078a27590b8112" id="r_gadd5718194efbe43640078a27590b8112"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gadd5718194efbe43640078a27590b8112">rt_hw_cpu_reset</a> (void)</td></tr>
+<tr class="separator:gadd5718194efbe43640078a27590b8112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09e3207582f656b3cb8e5b123399b8ce" id="r_ga09e3207582f656b3cb8e5b123399b8ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga09e3207582f656b3cb8e5b123399b8ce">rt_hw_cpu_shutdown</a> (void)</td></tr>
+<tr class="separator:ga09e3207582f656b3cb8e5b123399b8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b54be7c40727730394de885792f5f6c" id="r_ga4b54be7c40727730394de885792f5f6c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga4b54be7c40727730394de885792f5f6c">rt_hw_cpu_arch</a> (void)</td></tr>
+<tr class="separator:ga4b54be7c40727730394de885792f5f6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1d05b5a957c569b195f2276d8726d7d" id="r_aa1d05b5a957c569b195f2276d8726d7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aa1d05b5a957c569b195f2276d8726d7d">rt_hw_stack_init</a> (void *entry, void *parameter, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *stack_addr, void *exit)</td></tr>
+<tr class="separator:aa1d05b5a957c569b195f2276d8726d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab40031c8c6d5fe45893912dc50b04639" id="r_ab40031c8c6d5fe45893912dc50b04639"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#ab40031c8c6d5fe45893912dc50b04639">rt_hw_interrupt_init</a> (void)</td></tr>
+<tr class="separator:ab40031c8c6d5fe45893912dc50b04639"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9528763a2ebf52c2be6e9349704672fc" id="r_a9528763a2ebf52c2be6e9349704672fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a9528763a2ebf52c2be6e9349704672fc">rt_hw_interrupt_mask</a> (int vector)</td></tr>
+<tr class="separator:a9528763a2ebf52c2be6e9349704672fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08efe992a1717a83757e99295a1b33c" id="r_af08efe992a1717a83757e99295a1b33c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#af08efe992a1717a83757e99295a1b33c">rt_hw_interrupt_umask</a> (int vector)</td></tr>
+<tr class="separator:af08efe992a1717a83757e99295a1b33c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56fb65cd9f8a6df62214f26222d69e58" id="r_a56fb65cd9f8a6df62214f26222d69e58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a56fb65cd9f8a6df62214f26222d69e58">rt_hw_interrupt_install</a> (int vector, <a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a> handler, void *param, const char *name)</td></tr>
+<tr class="separator:a56fb65cd9f8a6df62214f26222d69e58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a735af0bbd2bc4cfc7598536e0dc23ef2" id="r_a735af0bbd2bc4cfc7598536e0dc23ef2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a735af0bbd2bc4cfc7598536e0dc23ef2">rt_hw_interrupt_uninstall</a> (int vector, <a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a> handler, void *param)</td></tr>
+<tr class="separator:a735af0bbd2bc4cfc7598536e0dc23ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa56c3da0faca777694f042aa6557ca53" id="r_aa56c3da0faca777694f042aa6557ca53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aa56c3da0faca777694f042aa6557ca53">rt_hw_interrupt_disable</a> (void)</td></tr>
+<tr class="separator:aa56c3da0faca777694f042aa6557ca53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a566def229b448a1d209a14834501dc3a" id="r_a566def229b448a1d209a14834501dc3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a566def229b448a1d209a14834501dc3a">rt_hw_interrupt_enable</a> (<a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> level)</td></tr>
+<tr class="separator:a566def229b448a1d209a14834501dc3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga557ada7f31a9b6a68ed6892349b604be" id="r_ga557ada7f31a9b6a68ed6892349b604be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__kernel__core.html#ga557ada7f31a9b6a68ed6892349b604be">rt_hw_interrupt_is_disabled</a> (void)</td></tr>
+<tr class="separator:ga557ada7f31a9b6a68ed6892349b604be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae958f36584a62b84cb51c129c11e14f" id="r_aae958f36584a62b84cb51c129c11e14f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#aae958f36584a62b84cb51c129c11e14f">rt_hw_context_switch</a> (<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> from, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> to)</td></tr>
+<tr class="separator:aae958f36584a62b84cb51c129c11e14f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bbe3104ec0718435fa63f83c0c66787" id="r_a3bbe3104ec0718435fa63f83c0c66787"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a3bbe3104ec0718435fa63f83c0c66787">rt_hw_context_switch_to</a> (<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> to)</td></tr>
+<tr class="separator:a3bbe3104ec0718435fa63f83c0c66787"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90f76142bf9bdab92be383820c31a0da" id="r_a90f76142bf9bdab92be383820c31a0da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a90f76142bf9bdab92be383820c31a0da">rt_hw_context_switch_interrupt</a> (<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> from, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> to, <a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> from_thread, <a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> to_thread)</td></tr>
+<tr class="separator:a90f76142bf9bdab92be383820c31a0da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84493d8f8ff8f3c1c9a08d40b9d289c1" id="r_ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga84493d8f8ff8f3c1c9a08d40b9d289c1">rt_hw_backtrace_frame_get</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame)</td></tr>
+<tr class="memdesc:ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the inner most frame of target thread.  <br /></td></tr>
+<tr class="separator:ga84493d8f8ff8f3c1c9a08d40b9d289c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga33db6a8d3ca19fc6872ac4d050eb5cb6" id="r_ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#ga33db6a8d3ca19fc6872ac4d050eb5cb6">rt_hw_backtrace_frame_unwind</a> (<a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a> thread, struct <a class="el" href="structrt__hw__backtrace__frame.html">rt_hw_backtrace_frame</a> *frame)</td></tr>
+<tr class="memdesc:ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unwind the target frame.  <br /></td></tr>
+<tr class="separator:ga33db6a8d3ca19fc6872ac4d050eb5cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3574517d49fe022ffe1640e50bfabfd7" id="r_a3574517d49fe022ffe1640e50bfabfd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a3574517d49fe022ffe1640e50bfabfd7">rt_hw_console_output</a> (const char *str)</td></tr>
+<tr class="separator:a3574517d49fe022ffe1640e50bfabfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a64bff2ddf83fee682dffae98614e3" id="r_a99a64bff2ddf83fee682dffae98614e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a99a64bff2ddf83fee682dffae98614e3">rt_hw_show_memory</a> (<a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> addr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a99a64bff2ddf83fee682dffae98614e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d9541d9d2f4b1925e2c3635d7f1699a" id="r_a0d9541d9d2f4b1925e2c3635d7f1699a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a0d9541d9d2f4b1925e2c3635d7f1699a">rt_hw_exception_install</a> (<a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*exception_handle)(void *context))</td></tr>
+<tr class="separator:a0d9541d9d2f4b1925e2c3635d7f1699a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac782adf90d6c32c6e757e9227a76dab6" id="r_gac782adf90d6c32c6e757e9227a76dab6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___kernel_service.html#gac782adf90d6c32c6e757e9227a76dab6">rt_hw_us_delay</a> (<a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> us)</td></tr>
+<tr class="separator:gac782adf90d6c32c6e757e9227a76dab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43586d29b4002453e91dcf4e7e8661a2" id="r_a43586d29b4002453e91dcf4e7e8661a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rthw_8h.html#a43586d29b4002453e91dcf4e7e8661a2">rt_hw_cpu_id</a> (void)</td></tr>
+<tr class="separator:a43586d29b4002453e91dcf4e7e8661a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a7bb830016238e9f911612eddc5e58143" name="a7bb830016238e9f911612eddc5e58143"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7bb830016238e9f911612eddc5e58143">&#9670;&#160;</a></span>HWREG16</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HWREG16</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> *)(x)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a005bc3d0bebdd1031a77f1fba8947998" name="a005bc3d0bebdd1031a77f1fba8947998"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005bc3d0bebdd1031a77f1fba8947998">&#9670;&#160;</a></span>HWREG32</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HWREG32</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> *)(x)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa22c1dc2c29cb06192e325f46f8c8886" name="aa22c1dc2c29cb06192e325f46f8c8886"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa22c1dc2c29cb06192e325f46f8c8886">&#9670;&#160;</a></span>HWREG64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HWREG64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#ad1d06de9cbc8f1bf71c1612314d05aec">rt_uint64_t</a> *)(x)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a437bba8c6aaa7542f8d7522146157b42" name="a437bba8c6aaa7542f8d7522146157b42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437bba8c6aaa7542f8d7522146157b42">&#9670;&#160;</a></span>HWREG8</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HWREG8</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;(*((volatile <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *)(x)))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3684c7a23b9fdd8ad52a38820277f9f" name="ac3684c7a23b9fdd8ad52a38820277f9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3684c7a23b9fdd8ad52a38820277f9f">&#9670;&#160;</a></span>RT_CPU_CACHE_LINE_SZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_CPU_CACHE_LINE_SZ&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a000a80e15ebbba809aae7f40c8edf9b0" name="a000a80e15ebbba809aae7f40c8edf9b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a000a80e15ebbba809aae7f40c8edf9b0">&#9670;&#160;</a></span>RT_DEFINE_HW_SPINLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_DEFINE_HW_SPINLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> x</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa002c4aa7a93c4c9726a2d6c182cf83c" name="aa002c4aa7a93c4c9726a2d6c182cf83c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa002c4aa7a93c4c9726a2d6c182cf83c">&#9670;&#160;</a></span>rt_hw_cpu_dcache_disable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_dcache_disable</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3ff1bf78c671c8e0cf024e6d191ef00" name="ad3ff1bf78c671c8e0cf024e6d191ef00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3ff1bf78c671c8e0cf024e6d191ef00">&#9670;&#160;</a></span>rt_hw_cpu_dcache_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_dcache_enable</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c7ea96b6591afece39599c7e6410f6d" name="a4c7ea96b6591afece39599c7e6410f6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c7ea96b6591afece39599c7e6410f6d">&#9670;&#160;</a></span>rt_hw_cpu_dcache_ops</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_dcache_ops</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07322d474125a100c66098853f1d2cc8" name="a07322d474125a100c66098853f1d2cc8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07322d474125a100c66098853f1d2cc8">&#9670;&#160;</a></span>rt_hw_cpu_dcache_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_dcache_status</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d8bdd0e32783a204e443a969e02399e" name="a5d8bdd0e32783a204e443a969e02399e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d8bdd0e32783a204e443a969e02399e">&#9670;&#160;</a></span>rt_hw_cpu_icache_disable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_icache_disable</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a235c8f4a582ede07ad88e12f68962dc3" name="a235c8f4a582ede07ad88e12f68962dc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a235c8f4a582ede07ad88e12f68962dc3">&#9670;&#160;</a></span>rt_hw_cpu_icache_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_icache_enable</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab01a4d367a752cba1a4486df3ba73522" name="ab01a4d367a752cba1a4486df3ba73522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab01a4d367a752cba1a4486df3ba73522">&#9670;&#160;</a></span>rt_hw_cpu_icache_ops</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_icache_ops</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43173043fd7fcbeb1f6d4ed6d6febbbd" name="a43173043fd7fcbeb1f6d4ed6d6febbbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43173043fd7fcbeb1f6d4ed6d6febbbd">&#9670;&#160;</a></span>rt_hw_cpu_icache_status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_cpu_icache_status</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f06c280b36db2e86075fbe739b3afda" name="a8f06c280b36db2e86075fbe739b3afda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f06c280b36db2e86075fbe739b3afda">&#9670;&#160;</a></span>rt_hw_dmb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_dmb</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f600dbc2cbe51f295263405e71d8659" name="a7f600dbc2cbe51f295263405e71d8659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f600dbc2cbe51f295263405e71d8659">&#9670;&#160;</a></span>rt_hw_dsb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_dsb</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62a228bc426f0f1d7847d0f03f5b57ac" name="a62a228bc426f0f1d7847d0f03f5b57ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62a228bc426f0f1d7847d0f03f5b57ac">&#9670;&#160;</a></span>rt_hw_isb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_isb</td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1cd4f8af76b74f8ec50dfbda34e53bd" name="aa1cd4f8af76b74f8ec50dfbda34e53bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1cd4f8af76b74f8ec50dfbda34e53bd">&#9670;&#160;</a></span>rt_hw_local_irq_disable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_local_irq_disable&#160;&#160;&#160;<a class="el" href="rthw_8h.html#aa56c3da0faca777694f042aa6557ca53">rt_hw_interrupt_disable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5dd59432cd0737c1213cb3aae3ceccf" name="ac5dd59432cd0737c1213cb3aae3ceccf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5dd59432cd0737c1213cb3aae3ceccf">&#9670;&#160;</a></span>rt_hw_local_irq_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_local_irq_enable&#160;&#160;&#160;<a class="el" href="rthw_8h.html#a566def229b448a1d209a14834501dc3a">rt_hw_interrupt_enable</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2b4d0e953b68f2262b39414ac2de4c4c" name="a2b4d0e953b68f2262b39414ac2de4c4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b4d0e953b68f2262b39414ac2de4c4c">&#9670;&#160;</a></span>rt_hw_spin_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_spin_lock</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">lock</td><td>)</td>
+          <td>&#160;&#160;&#160;*(lock) = <a class="el" href="rthw_8h.html#aa56c3da0faca777694f042aa6557ca53">rt_hw_interrupt_disable</a>()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7363620ee37f98a238153119dd1a82a8" name="a7363620ee37f98a238153119dd1a82a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7363620ee37f98a238153119dd1a82a8">&#9670;&#160;</a></span>rt_hw_spin_unlock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rt_hw_spin_unlock</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">lock</td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="rthw_8h.html#a566def229b448a1d209a14834501dc3a">rt_hw_interrupt_enable</a>(*(lock))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a88054432dd4245f99f91f3566a2a3af0" name="a88054432dd4245f99f91f3566a2a3af0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88054432dd4245f99f91f3566a2a3af0">&#9670;&#160;</a></span>rt_isr_handler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* rt_isr_handler_t) (int vector, void *param)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a6ba5b77419f74ad2b62073c3f504858a" name="a6ba5b77419f74ad2b62073c3f504858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba5b77419f74ad2b62073c3f504858a">&#9670;&#160;</a></span>RT_HW_CACHE_OPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="rthw_8h.html#a6ba5b77419f74ad2b62073c3f504858a">RT_HW_CACHE_OPS</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6ba5b77419f74ad2b62073c3f504858aa8f9079a528fff6f4c2c42986d3b8c8f8" name="a6ba5b77419f74ad2b62073c3f504858aa8f9079a528fff6f4c2c42986d3b8c8f8"></a>RT_HW_CACHE_FLUSH&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a6ba5b77419f74ad2b62073c3f504858aa497024ec3e5f630957edac053e42bcda" name="a6ba5b77419f74ad2b62073c3f504858aa497024ec3e5f630957edac053e42bcda"></a>RT_HW_CACHE_INVALIDATE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a3574517d49fe022ffe1640e50bfabfd7" name="a3574517d49fe022ffe1640e50bfabfd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3574517d49fe022ffe1640e50bfabfd7">&#9670;&#160;</a></span>rt_hw_console_output()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_console_output </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aae958f36584a62b84cb51c129c11e14f" name="aae958f36584a62b84cb51c129c11e14f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae958f36584a62b84cb51c129c11e14f">&#9670;&#160;</a></span>rt_hw_context_switch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_context_switch </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>to</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a90f76142bf9bdab92be383820c31a0da" name="a90f76142bf9bdab92be383820c31a0da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f76142bf9bdab92be383820c31a0da">&#9670;&#160;</a></span>rt_hw_context_switch_interrupt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_context_switch_interrupt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>from_thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__group___thread.html#gad617ac6bd69bf546743549542a86fbf9">rt_thread_t</a>&#160;</td>
+          <td class="paramname"><em>to_thread</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bbe3104ec0718435fa63f83c0c66787" name="a3bbe3104ec0718435fa63f83c0c66787"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bbe3104ec0718435fa63f83c0c66787">&#9670;&#160;</a></span>rt_hw_context_switch_to()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_context_switch_to </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>to</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a43586d29b4002453e91dcf4e7e8661a2" name="a43586d29b4002453e91dcf4e7e8661a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43586d29b4002453e91dcf4e7e8661a2">&#9670;&#160;</a></span>rt_hw_cpu_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_hw_cpu_id </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d9541d9d2f4b1925e2c3635d7f1699a" name="a0d9541d9d2f4b1925e2c3635d7f1699a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d9541d9d2f4b1925e2c3635d7f1699a">&#9670;&#160;</a></span>rt_hw_exception_install()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_exception_install </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*)(void *context)&#160;</td>
+          <td class="paramname"><em>exception_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa56c3da0faca777694f042aa6557ca53" name="aa56c3da0faca777694f042aa6557ca53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa56c3da0faca777694f042aa6557ca53">&#9670;&#160;</a></span>rt_hw_interrupt_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a> rt_hw_interrupt_disable </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a566def229b448a1d209a14834501dc3a" name="a566def229b448a1d209a14834501dc3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566def229b448a1d209a14834501dc3a">&#9670;&#160;</a></span>rt_hw_interrupt_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_interrupt_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0903689e9212375ba7d0de65c3adfece">rt_base_t</a>&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab40031c8c6d5fe45893912dc50b04639" name="ab40031c8c6d5fe45893912dc50b04639"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab40031c8c6d5fe45893912dc50b04639">&#9670;&#160;</a></span>rt_hw_interrupt_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_interrupt_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a56fb65cd9f8a6df62214f26222d69e58" name="a56fb65cd9f8a6df62214f26222d69e58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56fb65cd9f8a6df62214f26222d69e58">&#9670;&#160;</a></span>rt_hw_interrupt_install()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a> rt_hw_interrupt_install </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9528763a2ebf52c2be6e9349704672fc" name="a9528763a2ebf52c2be6e9349704672fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9528763a2ebf52c2be6e9349704672fc">&#9670;&#160;</a></span>rt_hw_interrupt_mask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_interrupt_mask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af08efe992a1717a83757e99295a1b33c" name="af08efe992a1717a83757e99295a1b33c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af08efe992a1717a83757e99295a1b33c">&#9670;&#160;</a></span>rt_hw_interrupt_umask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_interrupt_umask </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vector</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a735af0bbd2bc4cfc7598536e0dc23ef2" name="a735af0bbd2bc4cfc7598536e0dc23ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a735af0bbd2bc4cfc7598536e0dc23ef2">&#9670;&#160;</a></span>rt_hw_interrupt_uninstall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_interrupt_uninstall </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rthw_8h.html#a88054432dd4245f99f91f3566a2a3af0">rt_isr_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99a64bff2ddf83fee682dffae98614e3" name="a99a64bff2ddf83fee682dffae98614e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a64bff2ddf83fee682dffae98614e3">&#9670;&#160;</a></span>rt_hw_show_memory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_hw_show_memory </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa1d05b5a957c569b195f2276d8726d7d" name="aa1d05b5a957c569b195f2276d8726d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d05b5a957c569b195f2276d8726d7d">&#9670;&#160;</a></span>rt_hw_stack_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> * rt_hw_stack_init </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>entry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>parameter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>stack_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>exit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="rthw_8h.html">rthw.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

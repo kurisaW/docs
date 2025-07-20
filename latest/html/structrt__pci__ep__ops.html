@@ -1,0 +1,346 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: rt_pci_ep_ops Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structrt__pci__ep__ops.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">rt_pci_ep_ops Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="pci__endpoint_8h_source.html">pci_endpoint.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ad82e9f4caf164cb67af3989a02dd9d89" id="r_ad82e9f4caf164cb67af3989a02dd9d89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#ad82e9f4caf164cb67af3989a02dd9d89">write_header</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__header.html">rt_pci_ep_header</a> *hdr)</td></tr>
+<tr class="separator:ad82e9f4caf164cb67af3989a02dd9d89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d19a405389959cd747c9aa2f1834ef" id="r_a61d19a405389959cd747c9aa2f1834ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a61d19a405389959cd747c9aa2f1834ef">set_bar</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__bar.html">rt_pci_ep_bar</a> *bar, int bar_idx)</td></tr>
+<tr class="separator:a61d19a405389959cd747c9aa2f1834ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a886f34931a19eb43f4589996a6e245b6" id="r_a886f34931a19eb43f4589996a6e245b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a886f34931a19eb43f4589996a6e245b6">clear_bar</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__bar.html">rt_pci_ep_bar</a> *bar, int bar_idx)</td></tr>
+<tr class="separator:a886f34931a19eb43f4589996a6e245b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bf27a96f1911df80a3fea4f5a64598a" id="r_a2bf27a96f1911df80a3fea4f5a64598a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a2bf27a96f1911df80a3fea4f5a64598a">map_addr</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> addr, <a class="el" href="rttypes_8h.html#ad1d06de9cbc8f1bf71c1612314d05aec">rt_uint64_t</a> pci_addr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a2bf27a96f1911df80a3fea4f5a64598a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1258d683b980395298fb43f4039fc3" id="r_a2e1258d683b980395298fb43f4039fc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a2e1258d683b980395298fb43f4039fc3">unmap_addr</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> addr)</td></tr>
+<tr class="separator:a2e1258d683b980395298fb43f4039fc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de9a5d0f60f092e7f198d210874ea36" id="r_a8de9a5d0f60f092e7f198d210874ea36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a8de9a5d0f60f092e7f198d210874ea36">set_msi</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned irq_nr)</td></tr>
+<tr class="separator:a8de9a5d0f60f092e7f198d210874ea36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c22a9added6e4b1d39719eb58b6dc03" id="r_a9c22a9added6e4b1d39719eb58b6dc03"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a9c22a9added6e4b1d39719eb58b6dc03">get_msi</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned *out_irq_nr)</td></tr>
+<tr class="separator:a9c22a9added6e4b1d39719eb58b6dc03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac55c5f8fd0f76722692a4043e273e594" id="r_ac55c5f8fd0f76722692a4043e273e594"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#ac55c5f8fd0f76722692a4043e273e594">set_msix</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned irq_nr, int bar_idx, <a class="el" href="rttypes_8h.html#a0fd4981851ce935649b6723a81f2f1bf">rt_off_t</a> offset)</td></tr>
+<tr class="separator:ac55c5f8fd0f76722692a4043e273e594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a2975c11559e3919fb6d315630214a" id="r_a70a2975c11559e3919fb6d315630214a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a70a2975c11559e3919fb6d315630214a">get_msix</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned *out_irq_nr)</td></tr>
+<tr class="separator:a70a2975c11559e3919fb6d315630214a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23336a8e7231cb00ee69181172a05b9a" id="r_a23336a8e7231cb00ee69181172a05b9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a23336a8e7231cb00ee69181172a05b9a">raise_irq</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, enum <a class="el" href="pci__endpoint_8h.html#a6a60f87f9fc471ed316eb37a50ba2c4a">rt_pci_ep_irq</a> type, unsigned irq)</td></tr>
+<tr class="separator:a23336a8e7231cb00ee69181172a05b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a0f3388f9d71e2271254f57e514543" id="r_a16a0f3388f9d71e2271254f57e514543"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#a16a0f3388f9d71e2271254f57e514543">start</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep)</td></tr>
+<tr class="separator:a16a0f3388f9d71e2271254f57e514543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affbf04fa1572a0b457cfd75c611aad21" id="r_affbf04fa1572a0b457cfd75c611aad21"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pci__ep__ops.html#affbf04fa1572a0b457cfd75c611aad21">stop</a> )(struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep)</td></tr>
+<tr class="separator:affbf04fa1572a0b457cfd75c611aad21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a886f34931a19eb43f4589996a6e245b6" name="a886f34931a19eb43f4589996a6e245b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a886f34931a19eb43f4589996a6e245b6">&#9670;&#160;</a></span>clear_bar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::clear_bar) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__bar.html">rt_pci_ep_bar</a> *bar, int bar_idx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c22a9added6e4b1d39719eb58b6dc03" name="a9c22a9added6e4b1d39719eb58b6dc03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c22a9added6e4b1d39719eb58b6dc03">&#9670;&#160;</a></span>get_msi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::get_msi) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned *out_irq_nr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a70a2975c11559e3919fb6d315630214a" name="a70a2975c11559e3919fb6d315630214a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70a2975c11559e3919fb6d315630214a">&#9670;&#160;</a></span>get_msix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::get_msix) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned *out_irq_nr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2bf27a96f1911df80a3fea4f5a64598a" name="a2bf27a96f1911df80a3fea4f5a64598a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf27a96f1911df80a3fea4f5a64598a">&#9670;&#160;</a></span>map_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::map_addr) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> addr, <a class="el" href="rttypes_8h.html#ad1d06de9cbc8f1bf71c1612314d05aec">rt_uint64_t</a> pci_addr, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a23336a8e7231cb00ee69181172a05b9a" name="a23336a8e7231cb00ee69181172a05b9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23336a8e7231cb00ee69181172a05b9a">&#9670;&#160;</a></span>raise_irq</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::raise_irq) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, enum <a class="el" href="pci__endpoint_8h.html#a6a60f87f9fc471ed316eb37a50ba2c4a">rt_pci_ep_irq</a> type, unsigned irq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61d19a405389959cd747c9aa2f1834ef" name="a61d19a405389959cd747c9aa2f1834ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61d19a405389959cd747c9aa2f1834ef">&#9670;&#160;</a></span>set_bar</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::set_bar) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__bar.html">rt_pci_ep_bar</a> *bar, int bar_idx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8de9a5d0f60f092e7f198d210874ea36" name="a8de9a5d0f60f092e7f198d210874ea36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de9a5d0f60f092e7f198d210874ea36">&#9670;&#160;</a></span>set_msi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::set_msi) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned irq_nr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac55c5f8fd0f76722692a4043e273e594" name="ac55c5f8fd0f76722692a4043e273e594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac55c5f8fd0f76722692a4043e273e594">&#9670;&#160;</a></span>set_msix</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::set_msix) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, unsigned irq_nr, int bar_idx, <a class="el" href="rttypes_8h.html#a0fd4981851ce935649b6723a81f2f1bf">rt_off_t</a> offset)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a16a0f3388f9d71e2271254f57e514543" name="a16a0f3388f9d71e2271254f57e514543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a0f3388f9d71e2271254f57e514543">&#9670;&#160;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::start) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="affbf04fa1572a0b457cfd75c611aad21" name="affbf04fa1572a0b457cfd75c611aad21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbf04fa1572a0b457cfd75c611aad21">&#9670;&#160;</a></span>stop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::stop) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e1258d683b980395298fb43f4039fc3" name="a2e1258d683b980395298fb43f4039fc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1258d683b980395298fb43f4039fc3">&#9670;&#160;</a></span>unmap_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::unmap_addr) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> addr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad82e9f4caf164cb67af3989a02dd9d89" name="ad82e9f4caf164cb67af3989a02dd9d89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82e9f4caf164cb67af3989a02dd9d89">&#9670;&#160;</a></span>write_header</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pci_ep_ops::write_header) (struct <a class="el" href="structrt__pci__ep.html">rt_pci_ep</a> *ep, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> func_no, struct <a class="el" href="structrt__pci__ep__header.html">rt_pci_ep_header</a> *hdr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="pci__endpoint_8h_source.html">pci_endpoint.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structrt__pci__ep__ops.html">rt_pci_ep_ops</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

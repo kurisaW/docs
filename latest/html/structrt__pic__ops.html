@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: rt_pic_ops Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structrt__pic__ops.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">rt_pic_ops Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="pic_8h_source.html">pic.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:ad191b09235a9e1008185408164eda1ce" id="r_ad191b09235a9e1008185408164eda1ce"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#ad191b09235a9e1008185408164eda1ce">name</a></td></tr>
+<tr class="separator:ad191b09235a9e1008185408164eda1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8034636e90313069787978ca12f0399" id="r_af8034636e90313069787978ca12f0399"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#af8034636e90313069787978ca12f0399">irq_init</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic)</td></tr>
+<tr class="separator:af8034636e90313069787978ca12f0399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1143f94411e04599821221ad66594969" id="r_a1143f94411e04599821221ad66594969"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a1143f94411e04599821221ad66594969">irq_finit</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic)</td></tr>
+<tr class="separator:a1143f94411e04599821221ad66594969"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6755efdeb6c9684fd9587f646fba00a5" id="r_a6755efdeb6c9684fd9587f646fba00a5"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a6755efdeb6c9684fd9587f646fba00a5">irq_enable</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a6755efdeb6c9684fd9587f646fba00a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ce149c6418b2eedd3f95f34626412b7" id="r_a3ce149c6418b2eedd3f95f34626412b7"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a3ce149c6418b2eedd3f95f34626412b7">irq_disable</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a3ce149c6418b2eedd3f95f34626412b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8614454334da1c477f45890a6725008e" id="r_a8614454334da1c477f45890a6725008e"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a8614454334da1c477f45890a6725008e">irq_ack</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a8614454334da1c477f45890a6725008e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad15a2f8d27ef1e88e9ea91e6f787eba8" id="r_ad15a2f8d27ef1e88e9ea91e6f787eba8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#ad15a2f8d27ef1e88e9ea91e6f787eba8">irq_mask</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:ad15a2f8d27ef1e88e9ea91e6f787eba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6854c50e35339f7602df7ce761213ba1" id="r_a6854c50e35339f7602df7ce761213ba1"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a6854c50e35339f7602df7ce761213ba1">irq_unmask</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a6854c50e35339f7602df7ce761213ba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a528c5e6151fac9cf5140c9c1e5bf06a6" id="r_a528c5e6151fac9cf5140c9c1e5bf06a6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a528c5e6151fac9cf5140c9c1e5bf06a6">irq_eoi</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td></tr>
+<tr class="separator:a528c5e6151fac9cf5140c9c1e5bf06a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004faf8f5ea2b821d3968b07eac621f6" id="r_a004faf8f5ea2b821d3968b07eac621f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a004faf8f5ea2b821d3968b07eac621f6">irq_set_priority</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> priority)</td></tr>
+<tr class="separator:a004faf8f5ea2b821d3968b07eac621f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71e39db409e5f7069d2f10998a9bfbf8" id="r_a71e39db409e5f7069d2f10998a9bfbf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a71e39db409e5f7069d2f10998a9bfbf8">irq_set_affinity</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, rt_bitmap_t *affinity)</td></tr>
+<tr class="separator:a71e39db409e5f7069d2f10998a9bfbf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e2e2080cfaa3e92f9ca177d3b09c1e4" id="r_a7e2e2080cfaa3e92f9ca177d3b09c1e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a7e2e2080cfaa3e92f9ca177d3b09c1e4">irq_set_triger_mode</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> mode)</td></tr>
+<tr class="separator:a7e2e2080cfaa3e92f9ca177d3b09c1e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa23a48926bd876acabc9d1645b3ace" id="r_a7aa23a48926bd876acabc9d1645b3ace"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a7aa23a48926bd876acabc9d1645b3ace">irq_send_ipi</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, rt_bitmap_t *cpumask)</td></tr>
+<tr class="separator:a7aa23a48926bd876acabc9d1645b3ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66780c3c156d9b24b723526ec1347422" id="r_a66780c3c156d9b24b723526ec1347422"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a66780c3c156d9b24b723526ec1347422">irq_compose_msi_msg</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg)</td></tr>
+<tr class="separator:a66780c3c156d9b24b723526ec1347422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe5687c9999c86813522a472addb89f3" id="r_abe5687c9999c86813522a472addb89f3"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#abe5687c9999c86813522a472addb89f3">irq_write_msi_msg</a> )(struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg)</td></tr>
+<tr class="separator:abe5687c9999c86813522a472addb89f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefac86e6d9002258006ef39cb286cb01" id="r_aefac86e6d9002258006ef39cb286cb01"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#aefac86e6d9002258006ef39cb286cb01">irq_alloc_msi</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, struct <a class="el" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *msi_desc)</td></tr>
+<tr class="separator:aefac86e6d9002258006ef39cb286cb01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0321dc1d407e1228d3266dfb8c9b590f" id="r_a0321dc1d407e1228d3266dfb8c9b590f"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a0321dc1d407e1228d3266dfb8c9b590f">irq_free_msi</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int irq)</td></tr>
+<tr class="separator:a0321dc1d407e1228d3266dfb8c9b590f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f392752e1af09c35f42557bbb2649fb" id="r_a8f392752e1af09c35f42557bbb2649fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a8f392752e1af09c35f42557bbb2649fb">irq_set_state</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, int type, <a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> state)</td></tr>
+<tr class="separator:a8f392752e1af09c35f42557bbb2649fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db82e841e09220da39fa0f460702589" id="r_a9db82e841e09220da39fa0f460702589"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a9db82e841e09220da39fa0f460702589">irq_get_state</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, int type, <a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> *out_state)</td></tr>
+<tr class="separator:a9db82e841e09220da39fa0f460702589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b83183dde706c389aa79c9688f4c51" id="r_a47b83183dde706c389aa79c9688f4c51"><td class="memItemLeft" align="right" valign="top">int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a47b83183dde706c389aa79c9688f4c51">irq_map</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> mode)</td></tr>
+<tr class="separator:a47b83183dde706c389aa79c9688f4c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd687a84939cae274641d7a64bc48e6" id="r_a3fd687a84939cae274641d7a64bc48e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a3fd687a84939cae274641d7a64bc48e6">irq_parse</a> )(struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, struct <a class="el" href="structrt__ofw__cell__args.html">rt_ofw_cell_args</a> *args, struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *out_pirq)</td></tr>
+<tr class="separator:a3fd687a84939cae274641d7a64bc48e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17b34cafadea96426f9f82085b9cd260" id="r_a17b34cafadea96426f9f82085b9cd260"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pic__ops.html#a17b34cafadea96426f9f82085b9cd260">flags</a></td></tr>
+<tr class="separator:a17b34cafadea96426f9f82085b9cd260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a17b34cafadea96426f9f82085b9cd260" name="a17b34cafadea96426f9f82085b9cd260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17b34cafadea96426f9f82085b9cd260">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> rt_pic_ops::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8614454334da1c477f45890a6725008e" name="a8614454334da1c477f45890a6725008e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8614454334da1c477f45890a6725008e">&#9670;&#160;</a></span>irq_ack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_ack) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefac86e6d9002258006ef39cb286cb01" name="aefac86e6d9002258006ef39cb286cb01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefac86e6d9002258006ef39cb286cb01">&#9670;&#160;</a></span>irq_alloc_msi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* rt_pic_ops::irq_alloc_msi) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, struct <a class="el" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *msi_desc)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66780c3c156d9b24b723526ec1347422" name="a66780c3c156d9b24b723526ec1347422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66780c3c156d9b24b723526ec1347422">&#9670;&#160;</a></span>irq_compose_msi_msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_compose_msi_msg) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3ce149c6418b2eedd3f95f34626412b7" name="a3ce149c6418b2eedd3f95f34626412b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ce149c6418b2eedd3f95f34626412b7">&#9670;&#160;</a></span>irq_disable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_disable) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6755efdeb6c9684fd9587f646fba00a5" name="a6755efdeb6c9684fd9587f646fba00a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6755efdeb6c9684fd9587f646fba00a5">&#9670;&#160;</a></span>irq_enable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_enable) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a528c5e6151fac9cf5140c9c1e5bf06a6" name="a528c5e6151fac9cf5140c9c1e5bf06a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528c5e6151fac9cf5140c9c1e5bf06a6">&#9670;&#160;</a></span>irq_eoi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_eoi) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1143f94411e04599821221ad66594969" name="a1143f94411e04599821221ad66594969"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1143f94411e04599821221ad66594969">&#9670;&#160;</a></span>irq_finit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_finit) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0321dc1d407e1228d3266dfb8c9b590f" name="a0321dc1d407e1228d3266dfb8c9b590f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0321dc1d407e1228d3266dfb8c9b590f">&#9670;&#160;</a></span>irq_free_msi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_free_msi) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int irq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9db82e841e09220da39fa0f460702589" name="a9db82e841e09220da39fa0f460702589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db82e841e09220da39fa0f460702589">&#9670;&#160;</a></span>irq_get_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_get_state) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, int type, <a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> *out_state)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af8034636e90313069787978ca12f0399" name="af8034636e90313069787978ca12f0399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8034636e90313069787978ca12f0399">&#9670;&#160;</a></span>irq_init</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_init) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a47b83183dde706c389aa79c9688f4c51" name="a47b83183dde706c389aa79c9688f4c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b83183dde706c389aa79c9688f4c51">&#9670;&#160;</a></span>irq_map</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int(* rt_pic_ops::irq_map) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> mode)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad15a2f8d27ef1e88e9ea91e6f787eba8" name="ad15a2f8d27ef1e88e9ea91e6f787eba8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad15a2f8d27ef1e88e9ea91e6f787eba8">&#9670;&#160;</a></span>irq_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_mask) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3fd687a84939cae274641d7a64bc48e6" name="a3fd687a84939cae274641d7a64bc48e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd687a84939cae274641d7a64bc48e6">&#9670;&#160;</a></span>irq_parse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_parse) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, struct <a class="el" href="structrt__ofw__cell__args.html">rt_ofw_cell_args</a> *args, struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *out_pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7aa23a48926bd876acabc9d1645b3ace" name="a7aa23a48926bd876acabc9d1645b3ace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aa23a48926bd876acabc9d1645b3ace">&#9670;&#160;</a></span>irq_send_ipi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_send_ipi) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, rt_bitmap_t *cpumask)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a71e39db409e5f7069d2f10998a9bfbf8" name="a71e39db409e5f7069d2f10998a9bfbf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71e39db409e5f7069d2f10998a9bfbf8">&#9670;&#160;</a></span>irq_set_affinity</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_set_affinity) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, rt_bitmap_t *affinity)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a004faf8f5ea2b821d3968b07eac621f6" name="a004faf8f5ea2b821d3968b07eac621f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a004faf8f5ea2b821d3968b07eac621f6">&#9670;&#160;</a></span>irq_set_priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_set_priority) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> priority)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f392752e1af09c35f42557bbb2649fb" name="a8f392752e1af09c35f42557bbb2649fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f392752e1af09c35f42557bbb2649fb">&#9670;&#160;</a></span>irq_set_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_set_state) (struct <a class="el" href="structrt__pic.html">rt_pic</a> *pic, int hwirq, int type, <a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> state)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e2e2080cfaa3e92f9ca177d3b09c1e4" name="a7e2e2080cfaa3e92f9ca177d3b09c1e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e2e2080cfaa3e92f9ca177d3b09c1e4">&#9670;&#160;</a></span>irq_set_triger_mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* rt_pic_ops::irq_set_triger_mode) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> mode)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6854c50e35339f7602df7ce761213ba1" name="a6854c50e35339f7602df7ce761213ba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6854c50e35339f7602df7ce761213ba1">&#9670;&#160;</a></span>irq_unmask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_unmask) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe5687c9999c86813522a472addb89f3" name="abe5687c9999c86813522a472addb89f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe5687c9999c86813522a472addb89f3">&#9670;&#160;</a></span>irq_write_msi_msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* rt_pic_ops::irq_write_msi_msg) (struct <a class="el" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq, struct <a class="el" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad191b09235a9e1008185408164eda1ce" name="ad191b09235a9e1008185408164eda1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad191b09235a9e1008185408164eda1ce">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* rt_pic_ops::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="pic_8h_source.html">pic.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structrt__pic__ops.html">rt_pic_ops</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

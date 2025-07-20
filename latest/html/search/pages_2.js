@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['kurisaw_20docs_0',['KurisaW Docs',['../index.html',1,'']]]
+  ['docs_0',['Doxygen Awesome Custom Docs',['../index.html',1,'']]],
+  ['doxygen_20awesome_20custom_20docs_1',['Doxygen Awesome Custom Docs',['../index.html',1,'']]]
 ];

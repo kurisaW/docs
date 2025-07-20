@@ -1,0 +1,1096 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: MailBox</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('group__group__mailbox.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">MailBox<div class="ingroups"><a class="el" href="group__group___i_p_c.html">Group_IPC</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for MailBox:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__group__mailbox.png" border="0" usemap="#agroup____group____mailbox" alt=""/></div>
+<map name="agroup____group____mailbox" id="agroup____group____mailbox">
+<area shape="rect" href="group__group___i_p_c.html" title=" " alt="" coords="5,5,95,31"/>
+<area shape="rect" title=" " alt="" coords="143,5,217,31"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mailbox.html">rt_mailbox</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga96b4618b92ab16611956ffd77c330d5e" id="r_ga96b4618b92ab16611956ffd77c330d5e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structrt__mailbox.html">rt_mailbox</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a></td></tr>
+<tr class="separator:ga96b4618b92ab16611956ffd77c330d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:gac05bd0c179f754c32f83a7b013e8953b" id="r_gac05bd0c179f754c32f83a7b013e8953b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b">rt_mb_init</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, const char *name, void *msgpool, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:gac05bd0c179f754c32f83a7b013e8953b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a static mailbox object.  <br /></td></tr>
+<tr class="separator:gac05bd0c179f754c32f83a7b013e8953b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3312c6094d9c21af33a74f444a8c5993" id="r_ga3312c6094d9c21af33a74f444a8c5993"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993">rt_mb_detach</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb)</td></tr>
+<tr class="memdesc:ga3312c6094d9c21af33a74f444a8c5993"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will detach a static mailbox object.  <br /></td></tr>
+<tr class="separator:ga3312c6094d9c21af33a74f444a8c5993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7719d644b6f58399894dec1c6353ac37" id="r_ga7719d644b6f58399894dec1c6353ac37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37">rt_mb_create</a> (const char *name, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:ga7719d644b6f58399894dec1c6353ac37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creating a mailbox object.  <br /></td></tr>
+<tr class="separator:ga7719d644b6f58399894dec1c6353ac37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71e9e49401cbbed83515ace6fa13c27b" id="r_ga71e9e49401cbbed83515ace6fa13c27b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b">rt_mb_delete</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb)</td></tr>
+<tr class="memdesc:ga71e9e49401cbbed83515ace6fa13c27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will delete a mailbox object and release the memory space.  <br /></td></tr>
+<tr class="separator:ga71e9e49401cbbed83515ace6fa13c27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac2b0d532eab2989b713fdb0b1fac6665" id="r_gac2b0d532eab2989b713fdb0b1fac6665"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gac2b0d532eab2989b713fdb0b1fac6665">rt_mb_send</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value)</td></tr>
+<tr class="memdesc:gac2b0d532eab2989b713fdb0b1fac6665"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will send an mail to the mailbox object. If there is a thread suspended on the mailbox, the thread will be resumed.  <br /></td></tr>
+<tr class="separator:gac2b0d532eab2989b713fdb0b1fac6665"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9900f76119a771e2a07c6eaf7ae95294" id="r_ga9900f76119a771e2a07c6eaf7ae95294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga9900f76119a771e2a07c6eaf7ae95294">rt_mb_send_interruptible</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value)</td></tr>
+<tr class="separator:ga9900f76119a771e2a07c6eaf7ae95294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c963f86bc506afa91a97b08fb63d2c8" id="r_ga3c963f86bc506afa91a97b08fb63d2c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga3c963f86bc506afa91a97b08fb63d2c8">rt_mb_send_killable</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value)</td></tr>
+<tr class="separator:ga3c963f86bc506afa91a97b08fb63d2c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad39b8b365c2168d697c89de80f0498d0" id="r_gad39b8b365c2168d697c89de80f0498d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gad39b8b365c2168d697c89de80f0498d0">rt_mb_send_wait</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:gad39b8b365c2168d697c89de80f0498d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad97bb963f28af671bd3adc9a9b8ad2f7" id="r_gad97bb963f28af671bd3adc9a9b8ad2f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gad97bb963f28af671bd3adc9a9b8ad2f7">rt_mb_send_wait_interruptible</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:gad97bb963f28af671bd3adc9a9b8ad2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga329a6f3cdd8a74024a80ebe4b7fa5abd" id="r_ga329a6f3cdd8a74024a80ebe4b7fa5abd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga329a6f3cdd8a74024a80ebe4b7fa5abd">rt_mb_send_wait_killable</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga329a6f3cdd8a74024a80ebe4b7fa5abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabc9da3320cdbeee5aa86e65cdf48f928" id="r_gabc9da3320cdbeee5aa86e65cdf48f928"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gabc9da3320cdbeee5aa86e65cdf48f928">rt_mb_urgent</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> value)</td></tr>
+<tr class="memdesc:gabc9da3320cdbeee5aa86e65cdf48f928"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will send an urgent mail to the mailbox object.  <br /></td></tr>
+<tr class="separator:gabc9da3320cdbeee5aa86e65cdf48f928"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4fe9492b9f797650c8a1ced2e9d8c9ae" id="r_ga4fe9492b9f797650c8a1ced2e9d8c9ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga4fe9492b9f797650c8a1ced2e9d8c9ae">rt_mb_recv</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga4fe9492b9f797650c8a1ced2e9d8c9ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9304fcbb50b32abf913673b0b6be32e7" id="r_ga9304fcbb50b32abf913673b0b6be32e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga9304fcbb50b32abf913673b0b6be32e7">rt_mb_recv_interruptible</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga9304fcbb50b32abf913673b0b6be32e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga007f010abaed3f902dff9e214e256294" id="r_ga007f010abaed3f902dff9e214e256294"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga007f010abaed3f902dff9e214e256294">rt_mb_recv_killable</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, <a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *value, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ga007f010abaed3f902dff9e214e256294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga18c381ffe3aab6dea429c98ecfcea44c" id="r_ga18c381ffe3aab6dea429c98ecfcea44c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga18c381ffe3aab6dea429c98ecfcea44c">rt_mb_control</a> (<a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> mb, int cmd, void *arg)</td></tr>
+<tr class="memdesc:ga18c381ffe3aab6dea429c98ecfcea44c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will set some extra attributions of a mailbox object.  <br /></td></tr>
+<tr class="separator:ga18c381ffe3aab6dea429c98ecfcea44c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga905925fba4c0fcb7c3ea4dd23ae5cebc" id="r_ga905925fba4c0fcb7c3ea4dd23ae5cebc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga905925fba4c0fcb7c3ea4dd23ae5cebc">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b">rt_mb_init</a>)</td></tr>
+<tr class="separator:ga905925fba4c0fcb7c3ea4dd23ae5cebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga839d2b0e0fa69cbdc7ba91101f57b3c0" id="r_ga839d2b0e0fa69cbdc7ba91101f57b3c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga839d2b0e0fa69cbdc7ba91101f57b3c0">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993">rt_mb_detach</a>)</td></tr>
+<tr class="separator:ga839d2b0e0fa69cbdc7ba91101f57b3c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a4da20d046bce8e9f71be248030c3c6" id="r_ga0a4da20d046bce8e9f71be248030c3c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga0a4da20d046bce8e9f71be248030c3c6">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37">rt_mb_create</a>)</td></tr>
+<tr class="separator:ga0a4da20d046bce8e9f71be248030c3c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga436801427dc23be04acd844844c8b5d4" id="r_ga436801427dc23be04acd844844c8b5d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga436801427dc23be04acd844844c8b5d4">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b">rt_mb_delete</a>)</td></tr>
+<tr class="separator:ga436801427dc23be04acd844844c8b5d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0e865320353893f0d95b237d1fb46ed" id="r_gaf0e865320353893f0d95b237d1fb46ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gaf0e865320353893f0d95b237d1fb46ed">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#gad39b8b365c2168d697c89de80f0498d0">rt_mb_send_wait</a>)</td></tr>
+<tr class="separator:gaf0e865320353893f0d95b237d1fb46ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0fe2c0c1c3e0be708e3acd04e2d6cdd8" id="r_ga0fe2c0c1c3e0be708e3acd04e2d6cdd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga0fe2c0c1c3e0be708e3acd04e2d6cdd8">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#gad97bb963f28af671bd3adc9a9b8ad2f7">rt_mb_send_wait_interruptible</a>)</td></tr>
+<tr class="separator:ga0fe2c0c1c3e0be708e3acd04e2d6cdd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8cdc6e05239dfc597e931f2e731007d0" id="r_ga8cdc6e05239dfc597e931f2e731007d0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga8cdc6e05239dfc597e931f2e731007d0">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga329a6f3cdd8a74024a80ebe4b7fa5abd">rt_mb_send_wait_killable</a>)</td></tr>
+<tr class="separator:ga8cdc6e05239dfc597e931f2e731007d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47e701f9435872f0f324566ce4fbdac1" id="r_ga47e701f9435872f0f324566ce4fbdac1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga47e701f9435872f0f324566ce4fbdac1">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#gac2b0d532eab2989b713fdb0b1fac6665">rt_mb_send</a>)</td></tr>
+<tr class="separator:ga47e701f9435872f0f324566ce4fbdac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf70e5b69f84eb17f4b5c57499163558c" id="r_gaf70e5b69f84eb17f4b5c57499163558c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gaf70e5b69f84eb17f4b5c57499163558c">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga9900f76119a771e2a07c6eaf7ae95294">rt_mb_send_interruptible</a>)</td></tr>
+<tr class="separator:gaf70e5b69f84eb17f4b5c57499163558c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6cf747cd604b7e78e7585042f11dfc3" id="r_gac6cf747cd604b7e78e7585042f11dfc3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gac6cf747cd604b7e78e7585042f11dfc3">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga3c963f86bc506afa91a97b08fb63d2c8">rt_mb_send_killable</a>)</td></tr>
+<tr class="separator:gac6cf747cd604b7e78e7585042f11dfc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga135c52d7cef4dade9f2f0eeb121c5e8a" id="r_ga135c52d7cef4dade9f2f0eeb121c5e8a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga135c52d7cef4dade9f2f0eeb121c5e8a">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#gabc9da3320cdbeee5aa86e65cdf48f928">rt_mb_urgent</a>)</td></tr>
+<tr class="separator:ga135c52d7cef4dade9f2f0eeb121c5e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2650efac009a8123f74bc133c3242b53" id="r_ga2650efac009a8123f74bc133c3242b53"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga2650efac009a8123f74bc133c3242b53">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga4fe9492b9f797650c8a1ced2e9d8c9ae">rt_mb_recv</a>)</td></tr>
+<tr class="separator:ga2650efac009a8123f74bc133c3242b53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37ba269371e1bf2268b2431f9e6dfcd6" id="r_ga37ba269371e1bf2268b2431f9e6dfcd6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#ga37ba269371e1bf2268b2431f9e6dfcd6">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga9304fcbb50b32abf913673b0b6be32e7">rt_mb_recv_interruptible</a>)</td></tr>
+<tr class="separator:ga37ba269371e1bf2268b2431f9e6dfcd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab14c987f6b91a3646f4eb6790ec8bb1f" id="r_gab14c987f6b91a3646f4eb6790ec8bb1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gab14c987f6b91a3646f4eb6790ec8bb1f">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga007f010abaed3f902dff9e214e256294">rt_mb_recv_killable</a>)</td></tr>
+<tr class="separator:gab14c987f6b91a3646f4eb6790ec8bb1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd3ebb8b78d33605ed90111d0f699428" id="r_gafd3ebb8b78d33605ed90111d0f699428"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__mailbox.html#gafd3ebb8b78d33605ed90111d0f699428">RTM_EXPORT</a> (<a class="el" href="group__group__mailbox.html#ga18c381ffe3aab6dea429c98ecfcea44c">rt_mb_control</a>)</td></tr>
+<tr class="separator:gafd3ebb8b78d33605ed90111d0f699428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="ga96b4618b92ab16611956ffd77c330d5e" name="ga96b4618b92ab16611956ffd77c330d5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96b4618b92ab16611956ffd77c330d5e">&#9670;&#160;</a></span>rt_mailbox_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structrt__mailbox.html">rt_mailbox</a>* <a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga18c381ffe3aab6dea429c98ecfcea44c" name="ga18c381ffe3aab6dea429c98ecfcea44c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18c381ffe3aab6dea429c98ecfcea44c">&#9670;&#160;</a></span>rt_mb_control()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_control </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>arg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will set some extra attributions of a mailbox object. </p>
+<dl class="section note"><dt>Note</dt><dd>Currently this function only supports the RT_IPC_CMD_RESET command to reset the mailbox.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to a mailbox object.</td></tr>
+    <tr><td class="paramname">cmd</td><td>is a command used to configure some attributions of the mailbox.</td></tr>
+    <tr><td class="paramname">arg</td><td>is the argument of the function to execute the command.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that this function failed to execute. </dd></dl>
+
+</div>
+</div>
+<a id="ga7719d644b6f58399894dec1c6353ac37" name="ga7719d644b6f58399894dec1c6353ac37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7719d644b6f58399894dec1c6353ac37">&#9670;&#160;</a></span>rt_mb_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a> rt_mb_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creating a mailbox object. </p>
+<dl class="section note"><dt>Note</dt><dd>For the mailbox object, its memory space is allocated automatically. By contrast, the <a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b" title="Initialize a static mailbox object.">rt_mb_init()</a> function will initialize a static mailbox object.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b" title="Initialize a static mailbox object.">rt_mb_init()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>is a pointer that given to the mailbox.</td></tr>
+    <tr><td class="paramname">size</td><td>is the maximum number of mails in the mailbox. For example, when mailbox buffer capacity is N, size is N/4.</td></tr>
+    <tr><td class="paramname">flag</td><td>is the mailbox flag, which determines the queuing way of how multiple threads wait when the mailbox is not available. The mailbox flag can be ONE of the following values: <pre class="fragment">RT_IPC_FLAG_PRIO          The pending threads will queue in order of priority.
+
+RT_IPC_FLAG_FIFO          The pending threads will queue in the first-in-first-out method
+                          (also known as first-come-first-served (FCFS) scheduling strategy).
+
+NOTE: RT_IPC_FLAG_FIFO is a non-real-time scheduling mode. It is strongly recommended to
+use RT_IPC_FLAG_PRIO to ensure the thread is real-time UNLESS your applications concern about
+the first-in-first-out principle, and you clearly understand that all threads involved in
+this mailbox will become non-real-time threads.
+</pre> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return a pointer to the mailbox object. When the return value is RT_NULL, it means the creation failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY be called from threads. </dd></dl>
+
+</div>
+</div>
+<a id="ga71e9e49401cbbed83515ace6fa13c27b" name="ga71e9e49401cbbed83515ace6fa13c27b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga71e9e49401cbbed83515ace6fa13c27b">&#9670;&#160;</a></span>rt_mb_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will delete a mailbox object and release the memory space. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is used to delete a mailbox object which is created by the <a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37" title="Creating a mailbox object.">rt_mb_create()</a> function. By contrast, the <a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993" title="This function will detach a static mailbox object.">rt_mb_detach()</a> function will detach a static mailbox object. When the mailbox is successfully deleted, it will resume all suspended threads in the mailbox list.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993" title="This function will detach a static mailbox object.">rt_mb_detach()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to a mailbox object to be deleted.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the mailbox detach failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can only delete mailbox created by the <a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37" title="Creating a mailbox object.">rt_mb_create()</a> function. If the mailbox is initialized by the <a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b" title="Initialize a static mailbox object.">rt_mb_init()</a> function, you MUST NOT USE this function to delete it, ONLY USE the <a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993" title="This function will detach a static mailbox object.">rt_mb_detach()</a> function to complete the detachment. </dd></dl>
+
+</div>
+</div>
+<a id="ga3312c6094d9c21af33a74f444a8c5993" name="ga3312c6094d9c21af33a74f444a8c5993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3312c6094d9c21af33a74f444a8c5993">&#9670;&#160;</a></span>rt_mb_detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_detach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will detach a static mailbox object. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is used to detach a static mailbox object which is initialized by <a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b" title="Initialize a static mailbox object.">rt_mb_init()</a> function. By contrast, the <a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b" title="This function will delete a mailbox object and release the memory space.">rt_mb_delete()</a> function will delete a mailbox object. When the mailbox is successfully detached, it will resume all suspended threads in the mailbox list.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b" title="This function will delete a mailbox object and release the memory space.">rt_mb_delete()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to a mailbox object to be detached.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the initialization is successful. If the return value is any other values, it means that the mailbox detach failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY detach a static mailbox initialized by the <a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b" title="Initialize a static mailbox object.">rt_mb_init()</a> function. If the mailbox is created by the <a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37" title="Creating a mailbox object.">rt_mb_create()</a> function, you MUST NOT USE this function to detach it, ONLY USE the <a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b" title="This function will delete a mailbox object and release the memory space.">rt_mb_delete()</a> function to complete the deletion. </dd></dl>
+
+</div>
+</div>
+<a id="gac05bd0c179f754c32f83a7b013e8953b" name="gac05bd0c179f754c32f83a7b013e8953b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac05bd0c179f754c32f83a7b013e8953b">&#9670;&#160;</a></span>rt_mb_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>msgpool</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize a static mailbox object. </p>
+<dl class="section note"><dt>Note</dt><dd>For the static mailbox object, its memory space is allocated by the compiler during compiling, and shall placed on the read-write data segment or on the uninitialized data segment. By contrast, the <a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37" title="Creating a mailbox object.">rt_mb_create()</a> function will allocate memory space automatically and initialize the mailbox.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37" title="Creating a mailbox object.">rt_mb_create()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to the mailbox to initialize. It is assumed that storage for the mailbox will be allocated in your application.</td></tr>
+    <tr><td class="paramname">name</td><td>is a pointer to the name that given to the mailbox.</td></tr>
+    <tr><td class="paramname">msgpool</td><td>the begin address of buffer to save received mail.</td></tr>
+    <tr><td class="paramname">size</td><td>is the maximum number of mails in the mailbox. For example, when the mailbox buffer capacity is N, size is N/4.</td></tr>
+    <tr><td class="paramname">flag</td><td>is the mailbox flag, which determines the queuing way of how multiple threads wait when the mailbox is not available. The mailbox flag can be ONE of the following values: <pre class="fragment">RT_IPC_FLAG_PRIO          The pending threads will queue in order of priority.
+
+RT_IPC_FLAG_FIFO          The pending threads will queue in the first-in-first-out method
+                        (also known as first-come-first-served (FCFS) scheduling strategy).
+
+NOTE: RT_IPC_FLAG_FIFO is a non-real-time scheduling mode. It is strongly recommended to
+use RT_IPC_FLAG_PRIO to ensure the thread is real-time UNLESS your applications concern about
+the first-in-first-out principle, and you clearly understand that all threads involved in
+this mailbox will become non-real-time threads.
+</pre> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the initialization is successful. If the return value is any other values, it represents the initialization failed.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This function can ONLY be called from threads. </dd></dl>
+
+</div>
+</div>
+<a id="ga4fe9492b9f797650c8a1ced2e9d8c9ae" name="ga4fe9492b9f797650c8a1ced2e9d8c9ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4fe9492b9f797650c8a1ced2e9d8c9ae">&#9670;&#160;</a></span>rt_mb_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_recv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga9304fcbb50b32abf913673b0b6be32e7" name="ga9304fcbb50b32abf913673b0b6be32e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9304fcbb50b32abf913673b0b6be32e7">&#9670;&#160;</a></span>rt_mb_recv_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_recv_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga007f010abaed3f902dff9e214e256294" name="ga007f010abaed3f902dff9e214e256294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga007f010abaed3f902dff9e214e256294">&#9670;&#160;</a></span>rt_mb_recv_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_recv_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac2b0d532eab2989b713fdb0b1fac6665" name="gac2b0d532eab2989b713fdb0b1fac6665"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac2b0d532eab2989b713fdb0b1fac6665">&#9670;&#160;</a></span>rt_mb_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will send an mail to the mailbox object. If there is a thread suspended on the mailbox, the thread will be resumed. </p>
+<dl class="section note"><dt>Note</dt><dd>When using this function to send a mail, if the mailbox is fully used, this function will return an error code immediately without waiting time. By contrast, the <a class="el" href="group__group__mailbox.html#gad39b8b365c2168d697c89de80f0498d0">rt_mb_send_wait()</a> function is set a timeout to wait for the mail to be sent.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#gad39b8b365c2168d697c89de80f0498d0">rt_mb_send_wait()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to the mailbox object to be sent.</td></tr>
+    <tr><td class="paramname">value</td><td>is a value to the content of the mail you want to send.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the mailbox detach failed. </dd></dl>
+
+</div>
+</div>
+<a id="ga9900f76119a771e2a07c6eaf7ae95294" name="ga9900f76119a771e2a07c6eaf7ae95294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9900f76119a771e2a07c6eaf7ae95294">&#9670;&#160;</a></span>rt_mb_send_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga3c963f86bc506afa91a97b08fb63d2c8" name="ga3c963f86bc506afa91a97b08fb63d2c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3c963f86bc506afa91a97b08fb63d2c8">&#9670;&#160;</a></span>rt_mb_send_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad39b8b365c2168d697c89de80f0498d0" name="gad39b8b365c2168d697c89de80f0498d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad39b8b365c2168d697c89de80f0498d0">&#9670;&#160;</a></span>rt_mb_send_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gad97bb963f28af671bd3adc9a9b8ad2f7" name="gad97bb963f28af671bd3adc9a9b8ad2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad97bb963f28af671bd3adc9a9b8ad2f7">&#9670;&#160;</a></span>rt_mb_send_wait_interruptible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send_wait_interruptible </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga329a6f3cdd8a74024a80ebe4b7fa5abd" name="ga329a6f3cdd8a74024a80ebe4b7fa5abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga329a6f3cdd8a74024a80ebe4b7fa5abd">&#9670;&#160;</a></span>rt_mb_send_wait_killable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_send_wait_killable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gabc9da3320cdbeee5aa86e65cdf48f928" name="gabc9da3320cdbeee5aa86e65cdf48f928"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc9da3320cdbeee5aa86e65cdf48f928">&#9670;&#160;</a></span>rt_mb_urgent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_mb_urgent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga96b4618b92ab16611956ffd77c330d5e">rt_mailbox_t</a>&#160;</td>
+          <td class="paramname"><em>mb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#ab1fea6250be26e7de7cc2d949f755487">rt_ubase_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will send an urgent mail to the mailbox object. </p>
+<dl class="section note"><dt>Note</dt><dd>This function is almost the same as the <a class="el" href="group__group__mailbox.html#gac2b0d532eab2989b713fdb0b1fac6665" title="This function will send an mail to the mailbox object. If there is a thread suspended on the mailbox,...">rt_mb_send()</a> function. The only difference is that when sending an urgent mail, the mail will be placed at the head of the mail queue so that the recipient can receive the urgent mail first.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__group__mailbox.html#gac2b0d532eab2989b713fdb0b1fac6665" title="This function will send an mail to the mailbox object. If there is a thread suspended on the mailbox,...">rt_mb_send()</a></dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mb</td><td>is a pointer to the mailbox object to be sent.</td></tr>
+    <tr><td class="paramname">value</td><td>is the content of the mail you want to send.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Return the operation status. When the return value is RT_EOK, the operation is successful. If the return value is any other values, it means that the mailbox detach failed. </dd></dl>
+
+</div>
+</div>
+<a id="gafd3ebb8b78d33605ed90111d0f699428" name="gafd3ebb8b78d33605ed90111d0f699428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd3ebb8b78d33605ed90111d0f699428">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[1/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga18c381ffe3aab6dea429c98ecfcea44c">rt_mb_control</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0a4da20d046bce8e9f71be248030c3c6" name="ga0a4da20d046bce8e9f71be248030c3c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a4da20d046bce8e9f71be248030c3c6">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[2/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga7719d644b6f58399894dec1c6353ac37">rt_mb_create</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga436801427dc23be04acd844844c8b5d4" name="ga436801427dc23be04acd844844c8b5d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga436801427dc23be04acd844844c8b5d4">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[3/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga71e9e49401cbbed83515ace6fa13c27b">rt_mb_delete</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga839d2b0e0fa69cbdc7ba91101f57b3c0" name="ga839d2b0e0fa69cbdc7ba91101f57b3c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga839d2b0e0fa69cbdc7ba91101f57b3c0">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[4/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga3312c6094d9c21af33a74f444a8c5993">rt_mb_detach</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga905925fba4c0fcb7c3ea4dd23ae5cebc" name="ga905925fba4c0fcb7c3ea4dd23ae5cebc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga905925fba4c0fcb7c3ea4dd23ae5cebc">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[5/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#gac05bd0c179f754c32f83a7b013e8953b">rt_mb_init</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga2650efac009a8123f74bc133c3242b53" name="ga2650efac009a8123f74bc133c3242b53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2650efac009a8123f74bc133c3242b53">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[6/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga4fe9492b9f797650c8a1ced2e9d8c9ae">rt_mb_recv</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga37ba269371e1bf2268b2431f9e6dfcd6" name="ga37ba269371e1bf2268b2431f9e6dfcd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga37ba269371e1bf2268b2431f9e6dfcd6">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[7/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga9304fcbb50b32abf913673b0b6be32e7">rt_mb_recv_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gab14c987f6b91a3646f4eb6790ec8bb1f" name="gab14c987f6b91a3646f4eb6790ec8bb1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab14c987f6b91a3646f4eb6790ec8bb1f">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[8/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga007f010abaed3f902dff9e214e256294">rt_mb_recv_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga47e701f9435872f0f324566ce4fbdac1" name="ga47e701f9435872f0f324566ce4fbdac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47e701f9435872f0f324566ce4fbdac1">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[9/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#gac2b0d532eab2989b713fdb0b1fac6665">rt_mb_send</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf70e5b69f84eb17f4b5c57499163558c" name="gaf70e5b69f84eb17f4b5c57499163558c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf70e5b69f84eb17f4b5c57499163558c">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[10/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga9900f76119a771e2a07c6eaf7ae95294">rt_mb_send_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac6cf747cd604b7e78e7585042f11dfc3" name="gac6cf747cd604b7e78e7585042f11dfc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6cf747cd604b7e78e7585042f11dfc3">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[11/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga3c963f86bc506afa91a97b08fb63d2c8">rt_mb_send_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaf0e865320353893f0d95b237d1fb46ed" name="gaf0e865320353893f0d95b237d1fb46ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0e865320353893f0d95b237d1fb46ed">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[12/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#gad39b8b365c2168d697c89de80f0498d0">rt_mb_send_wait</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga0fe2c0c1c3e0be708e3acd04e2d6cdd8" name="ga0fe2c0c1c3e0be708e3acd04e2d6cdd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0fe2c0c1c3e0be708e3acd04e2d6cdd8">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[13/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#gad97bb963f28af671bd3adc9a9b8ad2f7">rt_mb_send_wait_interruptible</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga8cdc6e05239dfc597e931f2e731007d0" name="ga8cdc6e05239dfc597e931f2e731007d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8cdc6e05239dfc597e931f2e731007d0">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[14/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#ga329a6f3cdd8a74024a80ebe4b7fa5abd">rt_mb_send_wait_killable</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga135c52d7cef4dade9f2f0eeb121c5e8a" name="ga135c52d7cef4dade9f2f0eeb121c5e8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga135c52d7cef4dade9f2f0eeb121c5e8a">&#9670;&#160;</a></span>RTM_EXPORT() <span class="overload">[15/15]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">RTM_EXPORT </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__mailbox.html#gabc9da3320cdbeee5aa86e65cdf48f928">rt_mb_urgent</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

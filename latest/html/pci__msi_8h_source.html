@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/pci_msi.h Source File</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('pci__msi_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">pci_msi.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="pci__msi_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2006-2022, RT-Thread Development Team</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * Change Logs:</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * Date           Author       Notes</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * 2022-08-25     GuEe-GUI     first version</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef __PCI_MSI_H__</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define __PCI_MSI_H__</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;<a class="code" href="pci_8h.html">drivers/pci.h</a>&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * MSI Format:</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> *  T0: 32-bit Address</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> *  T1: 64-bit Address</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> *  T2: 32-bit Address with Per-Vector Masking</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> *  T3: 64-bit Address with Per-Vector Masking</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> *   31                      16  15              8 7             0</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> *  +---------------------------+-----------------+---------------+</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> *  |      Message Control      | Next Capability | Capability ID | DW0</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> *  |                           |     Pointer     |     (05h)     |</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"> *  +---------------------------+-----------------+---------------+</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment"> *  |                    Message Address [31:0]                   | DW1</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment"> *  +-------------------------------------------------------------+</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"> *  |                    Message Address [63:32]                  | DW2 (T1: only 64-bit)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment"> *  +---------------------------+---------------------------------+</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"> *  |         Reserved          |           Message Data          | DW3</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment"> *  +---------------------------+---------------------------------+</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment"> *  |                       Mask Bits                             | DW4 (T2/T3: only with Per-Vector Masking)</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment"> *  +-------------------------------------------------------------+</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment"> *  |                      Pending Bits                           | DW5 (T2/T3: only with Per-Vector Masking)</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment"> *  +-------------------------------------------------------------+</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> * MSI Message Control:</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment"> *   15                   9  8   7  6             4 3        1  0</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment"> *  +----------------------+---+---+---------------+----------+---+</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment"> *  |       Reserved       |   |   |               |          |   |</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> *  +----------------------+---+---+---------------+----------+---+</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> *                           ^   ^         ^             ^      ^</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment"> *                           |   |         |             |      |</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment"> *                           |   |         |             |      +---- MSI Enable (RW)</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment"> *                           |   |         |             +----------- Multiple Message Capable (RO, log2n, [n &lt;= 5])</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"> *                           |   |         +------------------------- Multiple Message Enable (RW, log2n, [n &lt;= 5])</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"> *                           |   +----------------------------------- 64-bit Address Capable</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment"> *                           +--------------------------------------- Per-Vector Masking Capable</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="};">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html">   54</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__conf.html">rt_pci_msi_conf</a></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>{</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#ab64a5ca4d7e05cef41be1520bb7d3fba">   56</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#ab64a5ca4d7e05cef41be1520bb7d3fba">mask</a>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#a2be0d4d3848ec3d74a5aa794a923e15b">   57</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#a2be0d4d3848ec3d74a5aa794a923e15b">mask_pos</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#aaa91f2bb13b0eafe988d774f0e047b62">   58</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structrt__pci__msi__conf.html#aaa91f2bb13b0eafe988d774f0e047b62">default_irq</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keyword">struct</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#a6efaadefa2019742a1251d4c45eed1f4">   62</a></span>        <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#a6efaadefa2019742a1251d4c45eed1f4">is_masking</a>:1;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#aabeb72d81b6d083f1802306554e91643">   63</a></span>        <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#aabeb72d81b6d083f1802306554e91643">is_64bit</a>:1;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#a346cf58ae1375c295324f8628a6432db">   64</a></span>        <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#a346cf58ae1375c295324f8628a6432db">multi_msg_max</a>:3; <span class="comment">/* log2 num of messages allocated */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#ac3bfb967226ce8c6b89211f0e0f967ab">   65</a></span>        <a class="code hl_typedef" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> <a class="code hl_variable" href="structrt__pci__msi__conf.html#ac3bfb967226ce8c6b89211f0e0f967ab">multi_msg_use</a>:3; <span class="comment">/* log2 num of messages supported */</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="structrt__pci__msi__conf.html#af79dee8afb75e27fdc7b2959292573a2">   66</a></span>    } <a class="code hl_variable" href="structrt__pci__msi__conf.html#af79dee8afb75e27fdc7b2959292573a2">cap</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
+</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="comment"> * MSI-X Format:</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment"> *   31                      16  15              8 7             0</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"> *  +---------------------------+-----------------+---------------+</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment"> *  |      Message Control      | Next Capability | Capability ID | DW0</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> *  |                           |     Pointer     |     (11h)     |</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"> *  +---------------------------+-----------------+---+-----------+</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment"> *  |                    MSI-X Table Offset           | Table BIR | DW1 (BIR: BAR Index Register)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"> *  +-------------------------------------------------+-----------+               |</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment"> *  |             Pending Bit Array (PBA) Offset      |  PBA BIR  | DW2 --------+ |</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment"> *  +-------------------------------------------------+-----------+             | |</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment"> *                                                                              | |</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"> * MSI-X Message Control:                                                       | |</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment"> *                                                                              | |</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"> *   15 14 13      11 10                                         0              | |</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"> *  +---+---+----------+------------------------------------------+             | |</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment"> *  |   |   | Reserved |         Table Size in N-1 (RO)           |             | |</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment"> *  +---+---+----------+------------------------------------------+             | |</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="comment"> *    ^   ^                                                                     | |</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="comment"> *    |   |                                                                     | |</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment"> *    |   +---- Function Mask (RW)                                              | |</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"> *    +-------- MSI-X Enable (RW)                                               | |</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment"> *                                                                              | |</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"> * MSI-X Table (BAR[Table BIR] + MSI-X Table Offset):                           | |</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> *                                                                              | |</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment"> *          DW3            DW2             DW1             DW0                  | |</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment"> *  +----------------+--------------+---------------+---------------+ &lt;---------|-+</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment"> *  | Vector Control | Message Data | Upper Address | Lower Address | Entry 0   |</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="comment"> *  +----------------+--------------+---------------+---------------+           |</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"> *  | Vector Control | Message Data | Upper Address | Lower Address | Entry 1   |</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment"> *  +----------------+--------------+---------------+---------------+           |</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> *  |     ......     |    ......    |    ......     |    ......     |           |</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"> *  +----------------+--------------+---------------+---------------+           |</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"> *  | Vector Control | Message Data | Upper Address | Lower Address | Entry N-1 |</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment"> *  +----------------+--------------+---------------+---------------+           |</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span><span class="comment"> *                  ^                                                           |</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span><span class="comment"> *                  |                                                           |</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment"> *                  +---- Bit 0 is vector Mask Bit (R/W)                        |</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment"> *                                                                              |</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"> * MSI-X Pending Bit Array (BAR[PBA BIR] + Pending Bit Array Offset):           |</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment"> *                                                                              |</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"> *          DW1            DW0                                                  |</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"> *  +-------------------------------+ &lt;-----------------------------------------+</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"> *  |     Pending Bits 0 - 63       | QW 0</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> *  +-------------------------------+</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> *  |    Pending Bits 64 - 127      | QW 1</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> *  +-------------------------------+</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> *  |            ......             |</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> *  +-------------------------------+</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> *  |         Pending Bits          | QW (N-1)/64</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"> *  +-------------------------------+</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
+<div class="foldopen" id="foldopen00123" data-start="{" data-end="};">
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno"><a class="line" href="structrt__pci__msix__conf.html">  123</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msix__conf.html">rt_pci_msix_conf</a></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>{</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="structrt__pci__msix__conf.html#a2551a27f8b5505071198a34031cd430f">  125</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structrt__pci__msix__conf.html#a2551a27f8b5505071198a34031cd430f">index</a>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="structrt__pci__msix__conf.html#a601aa0f8bac323ac321d95f4224441b9">  127</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structrt__pci__msix__conf.html#a601aa0f8bac323ac321d95f4224441b9">msg_ctrl</a>;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="structrt__pci__msix__conf.html#ab44397996b4bdf08fe789e42d60b8c07">  128</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__pci__msix__conf.html#ab44397996b4bdf08fe789e42d60b8c07">table_base</a>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>};</div>
+</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="foldopen" id="foldopen00131" data-start="{" data-end="};">
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno"><a class="line" href="structrt__pci__msi__msg.html">  131</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>{</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="structrt__pci__msi__msg.html#ae57109ea80ba4e930604b240521d6e8a">  133</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structrt__pci__msi__msg.html#ae57109ea80ba4e930604b240521d6e8a">address_lo</a>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="structrt__pci__msi__msg.html#a8e01b3e9ffdf52d8613e7b2e2a46198b">  134</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structrt__pci__msi__msg.html#a8e01b3e9ffdf52d8613e7b2e2a46198b">address_hi</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="structrt__pci__msi__msg.html#a4f8a36ed228554c24762436f90b0732e">  135</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> <a class="code hl_variable" href="structrt__pci__msi__msg.html#a4f8a36ed228554c24762436f90b0732e">data</a>;</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>};</div>
+</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00138" data-start="{" data-end="};">
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html">  138</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>{</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a6be00ed3ec51f54fcc8a1ac58eef7485">  140</a></span>    <a class="code hl_struct" href="structrt__list__node.html">rt_list_t</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#a6be00ed3ec51f54fcc8a1ac58eef7485">list</a>;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#ac05dece91f26688ab47b08ef16c2699e">  142</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structrt__pci__msi__desc.html#ac05dece91f26688ab47b08ef16c2699e">irq</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a0998283695b775bef6846321bc9b6626">  143</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#a0998283695b775bef6846321bc9b6626">vector_used</a>;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a2dbad161044a350ef7f5226de3182573">  144</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#a2dbad161044a350ef7f5226de3182573">vector_count</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <span class="comment">/* For MSI-X */</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a606b6ac4814d9afd4d0dc91727dde4f0">  149</a></span>        rt_bitmap_t *<a class="code hl_variable" href="structrt__pci__msi__desc.html#a606b6ac4814d9afd4d0dc91727dde4f0">affinity</a>;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="comment">/* For MSI */</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#aaf231765388c5b4052a6d1c0fb842f90">  151</a></span>        rt_bitmap_t **<a class="code hl_variable" href="structrt__pci__msi__desc.html#aaf231765388c5b4052a6d1c0fb842f90">affinities</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    };</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#acfeb3a27f60230716e07e61bc313fac1">  154</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__device.html">rt_pci_device</a> *<a class="code hl_variable" href="structrt__pci__msi__desc.html#acfeb3a27f60230716e07e61bc313fac1">pdev</a>;</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a0fb69d3ec76cf97291777fb83e1aaf7f">  155</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#a0fb69d3ec76cf97291777fb83e1aaf7f">msg</a>;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#ad3aa9f8d8abde8a6a2ec643dfb31de58">  157</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__pci__msi__desc.html#ad3aa9f8d8abde8a6a2ec643dfb31de58">write_msi_msg_data</a>;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a067ec28f6f443846d16e16d059a4bb1a">  158</a></span>    void (*<a class="code hl_variable" href="structrt__pci__msi__desc.html#a067ec28f6f443846d16e16d059a4bb1a">write_msi_msg</a>)(<span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *, <span class="keywordtype">void</span> *);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a4a8d571b0148e745368906437d7eb0ee">  160</a></span>    <a class="code hl_typedef" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#a4a8d571b0148e745368906437d7eb0ee">is_msix</a>;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="keyword">union</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    {</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#af1dd702fcd219c76ff04dfef4256d526">  163</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msi__conf.html">rt_pci_msi_conf</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#af1dd702fcd219c76ff04dfef4256d526">msi</a>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#ad835c19dac8ea5e78c5ce007e61971c8">  164</a></span>        <span class="keyword">struct </span><a class="code hl_struct" href="structrt__pci__msix__conf.html">rt_pci_msix_conf</a> <a class="code hl_variable" href="structrt__pci__msi__desc.html#ad835c19dac8ea5e78c5ce007e61971c8">msix</a>;</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    };</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="structrt__pci__msi__desc.html#a192dccd39817c5e3912b9d93ca0c1c4c">  167</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structrt__pci__msi__desc.html#a192dccd39817c5e3912b9d93ca0c1c4c">priv</a>;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>};</div>
+</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="foldopen" id="foldopen00170" data-start="" data-end="">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a052c05733cd0000efd730d395c06162f">  170</a></span><span class="preprocessor">#define rt_pci_msi_first_desc(pdev) \</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="preprocessor">    (rt_list_isempty(&amp;(pdev)-&gt;msi_desc_nodes) ? RT_NULL : \</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="preprocessor">        rt_list_first_entry(&amp;(pdev)-&gt;msi_desc_nodes, struct rt_pci_msi_desc, list))</span></div>
+</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
+<div class="foldopen" id="foldopen00174" data-start="" data-end="">
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#ac59a02f9fc9bc60e743fceabc5be570d">  174</a></span><span class="preprocessor">#define rt_pci_msi_for_each_desc(pdev, desc) \</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="preprocessor">    rt_list_for_each_entry(desc, &amp;(pdev)-&gt;msi_desc_nodes, list)</span></div>
+</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a0887a42683151189f66ff7c21197f882">  177</a></span><span class="preprocessor">#define rt_pci_msix_table_size(flags) ((flags &amp; PCIM_MSIXCTRL_TABLE_SIZE) + 1)</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#ae52a2e22351a83267f209b4820c2fe58">  179</a></span><a class="code hl_typedef" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> <a class="code hl_function" href="pci__msi_8h.html#ae52a2e22351a83267f209b4820c2fe58">rt_pci_msi_setup_irqs</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__device.html">rt_pci_device</a> *pdev, <span class="keywordtype">int</span> nvec, <span class="keywordtype">int</span> type);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a9f35ac8a11483f96c39d774d4e1d1864">  181</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#a9f35ac8a11483f96c39d774d4e1d1864">rt_pci_msi_shutdown</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__device.html">rt_pci_device</a> *pdev);</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a793d872b6325a024a37d5d61f35aa1ca">  182</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#a793d872b6325a024a37d5d61f35aa1ca">rt_pci_msix_shutdown</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__device.html">rt_pci_device</a> *pdev);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a7c218f9660da2a333cde42d6d0478ce2">  183</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#a7c218f9660da2a333cde42d6d0478ce2">rt_pci_msi_free_irqs</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__device.html">rt_pci_device</a> *pdev);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#ad75107a01425fd8e6bd7dad3dba9b9e8">  184</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#ad75107a01425fd8e6bd7dad3dba9b9e8">rt_pci_msi_write_msg</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a> *desc, <span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a> *msg);</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span> </div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a208724588ac328b470f067a62a8f0cf6">  186</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#a208724588ac328b470f067a62a8f0cf6">rt_pci_msi_mask_irq</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="pci__msi_8h.html#a1d4d103c528c5e294f2ef4c177ee02dd">  187</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="pci__msi_8h.html#a1d4d103c528c5e294f2ef4c177ee02dd">rt_pci_msi_unmask_irq</a>(<span class="keyword">struct</span> <a class="code hl_struct" href="structrt__pic__irq.html">rt_pic_irq</a> *pirq);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="preprocessor">#endif </span><span class="comment">/* __PCI_MSI_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="apci_8h_html"><div class="ttname"><a href="pci_8h.html">pci.h</a></div></div>
+<div class="ttc" id="apci__msi_8h_html_a1d4d103c528c5e294f2ef4c177ee02dd"><div class="ttname"><a href="pci__msi_8h.html#a1d4d103c528c5e294f2ef4c177ee02dd">rt_pci_msi_unmask_irq</a></div><div class="ttdeci">void rt_pci_msi_unmask_irq(struct rt_pic_irq *pirq)</div></div>
+<div class="ttc" id="apci__msi_8h_html_a208724588ac328b470f067a62a8f0cf6"><div class="ttname"><a href="pci__msi_8h.html#a208724588ac328b470f067a62a8f0cf6">rt_pci_msi_mask_irq</a></div><div class="ttdeci">void rt_pci_msi_mask_irq(struct rt_pic_irq *pirq)</div></div>
+<div class="ttc" id="apci__msi_8h_html_a793d872b6325a024a37d5d61f35aa1ca"><div class="ttname"><a href="pci__msi_8h.html#a793d872b6325a024a37d5d61f35aa1ca">rt_pci_msix_shutdown</a></div><div class="ttdeci">void rt_pci_msix_shutdown(struct rt_pci_device *pdev)</div></div>
+<div class="ttc" id="apci__msi_8h_html_a7c218f9660da2a333cde42d6d0478ce2"><div class="ttname"><a href="pci__msi_8h.html#a7c218f9660da2a333cde42d6d0478ce2">rt_pci_msi_free_irqs</a></div><div class="ttdeci">void rt_pci_msi_free_irqs(struct rt_pci_device *pdev)</div></div>
+<div class="ttc" id="apci__msi_8h_html_a9f35ac8a11483f96c39d774d4e1d1864"><div class="ttname"><a href="pci__msi_8h.html#a9f35ac8a11483f96c39d774d4e1d1864">rt_pci_msi_shutdown</a></div><div class="ttdeci">void rt_pci_msi_shutdown(struct rt_pci_device *pdev)</div></div>
+<div class="ttc" id="apci__msi_8h_html_ad75107a01425fd8e6bd7dad3dba9b9e8"><div class="ttname"><a href="pci__msi_8h.html#ad75107a01425fd8e6bd7dad3dba9b9e8">rt_pci_msi_write_msg</a></div><div class="ttdeci">void rt_pci_msi_write_msg(struct rt_pci_msi_desc *desc, struct rt_pci_msi_msg *msg)</div></div>
+<div class="ttc" id="apci__msi_8h_html_ae52a2e22351a83267f209b4820c2fe58"><div class="ttname"><a href="pci__msi_8h.html#ae52a2e22351a83267f209b4820c2fe58">rt_pci_msi_setup_irqs</a></div><div class="ttdeci">rt_err_t rt_pci_msi_setup_irqs(struct rt_pci_device *pdev, int nvec, int type)</div></div>
+<div class="ttc" id="arttypes_8h_html_a3e03a3519ef7e33d13ebd34c482db49c"><div class="ttname"><a href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a></div><div class="ttdeci">int rt_bool_t</div><div class="ttdef"><b>Definition</b> rttypes.h:41</div></div>
+<div class="ttc" id="arttypes_8h_html_a42df42aabf676f2a89f5af2208b79950"><div class="ttname"><a href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a></div><div class="ttdeci">rt_base_t rt_err_t</div><div class="ttdef"><b>Definition</b> rttypes.h:90</div></div>
+<div class="ttc" id="arttypes_8h_html_a585e2ad0fbab0f83817cb61373465df6"><div class="ttname"><a href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a></div><div class="ttdeci">unsigned char rt_uint8_t</div><div class="ttdef"><b>Definition</b> rttypes.h:57</div></div>
+<div class="ttc" id="arttypes_8h_html_a8011d259fdfc54b8a9aa006b4d49ac14"><div class="ttname"><a href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a></div><div class="ttdeci">rt_ubase_t rt_size_t</div><div class="ttdef"><b>Definition</b> rttypes.h:84</div></div>
+<div class="ttc" id="arttypes_8h_html_aa0f407376acf6e5854ea411316811418"><div class="ttname"><a href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a></div><div class="ttdeci">unsigned int rt_uint32_t</div><div class="ttdef"><b>Definition</b> rttypes.h:59</div></div>
+<div class="ttc" id="astructrt__list__node_html"><div class="ttname"><a href="structrt__list__node.html">rt_list_node</a></div><div class="ttdef"><b>Definition</b> rttypes.h:126</div></div>
+<div class="ttc" id="astructrt__pci__device_html"><div class="ttname"><a href="structrt__pci__device.html">rt_pci_device</a></div><div class="ttdef"><b>Definition</b> pci.h:129</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html"><div class="ttname"><a href="structrt__pci__msi__conf.html">rt_pci_msi_conf</a></div><div class="ttdef"><b>Definition</b> pci_msi.h:55</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_a2be0d4d3848ec3d74a5aa794a923e15b"><div class="ttname"><a href="structrt__pci__msi__conf.html#a2be0d4d3848ec3d74a5aa794a923e15b">rt_pci_msi_conf::mask_pos</a></div><div class="ttdeci">rt_uint8_t mask_pos</div><div class="ttdef"><b>Definition</b> pci_msi.h:57</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_a346cf58ae1375c295324f8628a6432db"><div class="ttname"><a href="structrt__pci__msi__conf.html#a346cf58ae1375c295324f8628a6432db">rt_pci_msi_conf::multi_msg_max</a></div><div class="ttdeci">rt_uint8_t multi_msg_max</div><div class="ttdef"><b>Definition</b> pci_msi.h:64</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_a6efaadefa2019742a1251d4c45eed1f4"><div class="ttname"><a href="structrt__pci__msi__conf.html#a6efaadefa2019742a1251d4c45eed1f4">rt_pci_msi_conf::is_masking</a></div><div class="ttdeci">rt_uint8_t is_masking</div><div class="ttdef"><b>Definition</b> pci_msi.h:62</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_aaa91f2bb13b0eafe988d774f0e047b62"><div class="ttname"><a href="structrt__pci__msi__conf.html#aaa91f2bb13b0eafe988d774f0e047b62">rt_pci_msi_conf::default_irq</a></div><div class="ttdeci">int default_irq</div><div class="ttdef"><b>Definition</b> pci_msi.h:58</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_aabeb72d81b6d083f1802306554e91643"><div class="ttname"><a href="structrt__pci__msi__conf.html#aabeb72d81b6d083f1802306554e91643">rt_pci_msi_conf::is_64bit</a></div><div class="ttdeci">rt_uint8_t is_64bit</div><div class="ttdef"><b>Definition</b> pci_msi.h:63</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_ab64a5ca4d7e05cef41be1520bb7d3fba"><div class="ttname"><a href="structrt__pci__msi__conf.html#ab64a5ca4d7e05cef41be1520bb7d3fba">rt_pci_msi_conf::mask</a></div><div class="ttdeci">rt_uint32_t mask</div><div class="ttdef"><b>Definition</b> pci_msi.h:56</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_ac3bfb967226ce8c6b89211f0e0f967ab"><div class="ttname"><a href="structrt__pci__msi__conf.html#ac3bfb967226ce8c6b89211f0e0f967ab">rt_pci_msi_conf::multi_msg_use</a></div><div class="ttdeci">rt_uint8_t multi_msg_use</div><div class="ttdef"><b>Definition</b> pci_msi.h:65</div></div>
+<div class="ttc" id="astructrt__pci__msi__conf_html_af79dee8afb75e27fdc7b2959292573a2"><div class="ttname"><a href="structrt__pci__msi__conf.html#af79dee8afb75e27fdc7b2959292573a2">rt_pci_msi_conf::cap</a></div><div class="ttdeci">struct rt_pci_msi_conf::@39 cap</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html"><div class="ttname"><a href="structrt__pci__msi__desc.html">rt_pci_msi_desc</a></div><div class="ttdef"><b>Definition</b> pci_msi.h:139</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a067ec28f6f443846d16e16d059a4bb1a"><div class="ttname"><a href="structrt__pci__msi__desc.html#a067ec28f6f443846d16e16d059a4bb1a">rt_pci_msi_desc::write_msi_msg</a></div><div class="ttdeci">void(* write_msi_msg)(struct rt_pci_msi_desc *, void *)</div><div class="ttdef"><b>Definition</b> pci_msi.h:158</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a0998283695b775bef6846321bc9b6626"><div class="ttname"><a href="structrt__pci__msi__desc.html#a0998283695b775bef6846321bc9b6626">rt_pci_msi_desc::vector_used</a></div><div class="ttdeci">rt_size_t vector_used</div><div class="ttdef"><b>Definition</b> pci_msi.h:143</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a0fb69d3ec76cf97291777fb83e1aaf7f"><div class="ttname"><a href="structrt__pci__msi__desc.html#a0fb69d3ec76cf97291777fb83e1aaf7f">rt_pci_msi_desc::msg</a></div><div class="ttdeci">struct rt_pci_msi_msg msg</div><div class="ttdef"><b>Definition</b> pci_msi.h:155</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a192dccd39817c5e3912b9d93ca0c1c4c"><div class="ttname"><a href="structrt__pci__msi__desc.html#a192dccd39817c5e3912b9d93ca0c1c4c">rt_pci_msi_desc::priv</a></div><div class="ttdeci">void * priv</div><div class="ttdef"><b>Definition</b> pci_msi.h:167</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a2dbad161044a350ef7f5226de3182573"><div class="ttname"><a href="structrt__pci__msi__desc.html#a2dbad161044a350ef7f5226de3182573">rt_pci_msi_desc::vector_count</a></div><div class="ttdeci">rt_size_t vector_count</div><div class="ttdef"><b>Definition</b> pci_msi.h:144</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a4a8d571b0148e745368906437d7eb0ee"><div class="ttname"><a href="structrt__pci__msi__desc.html#a4a8d571b0148e745368906437d7eb0ee">rt_pci_msi_desc::is_msix</a></div><div class="ttdeci">rt_bool_t is_msix</div><div class="ttdef"><b>Definition</b> pci_msi.h:160</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a606b6ac4814d9afd4d0dc91727dde4f0"><div class="ttname"><a href="structrt__pci__msi__desc.html#a606b6ac4814d9afd4d0dc91727dde4f0">rt_pci_msi_desc::affinity</a></div><div class="ttdeci">rt_bitmap_t * affinity</div><div class="ttdef"><b>Definition</b> pci_msi.h:149</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_a6be00ed3ec51f54fcc8a1ac58eef7485"><div class="ttname"><a href="structrt__pci__msi__desc.html#a6be00ed3ec51f54fcc8a1ac58eef7485">rt_pci_msi_desc::list</a></div><div class="ttdeci">rt_list_t list</div><div class="ttdef"><b>Definition</b> pci_msi.h:140</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_aaf231765388c5b4052a6d1c0fb842f90"><div class="ttname"><a href="structrt__pci__msi__desc.html#aaf231765388c5b4052a6d1c0fb842f90">rt_pci_msi_desc::affinities</a></div><div class="ttdeci">rt_bitmap_t ** affinities</div><div class="ttdef"><b>Definition</b> pci_msi.h:151</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_ac05dece91f26688ab47b08ef16c2699e"><div class="ttname"><a href="structrt__pci__msi__desc.html#ac05dece91f26688ab47b08ef16c2699e">rt_pci_msi_desc::irq</a></div><div class="ttdeci">int irq</div><div class="ttdef"><b>Definition</b> pci_msi.h:142</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_acfeb3a27f60230716e07e61bc313fac1"><div class="ttname"><a href="structrt__pci__msi__desc.html#acfeb3a27f60230716e07e61bc313fac1">rt_pci_msi_desc::pdev</a></div><div class="ttdeci">struct rt_pci_device * pdev</div><div class="ttdef"><b>Definition</b> pci_msi.h:154</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_ad3aa9f8d8abde8a6a2ec643dfb31de58"><div class="ttname"><a href="structrt__pci__msi__desc.html#ad3aa9f8d8abde8a6a2ec643dfb31de58">rt_pci_msi_desc::write_msi_msg_data</a></div><div class="ttdeci">void * write_msi_msg_data</div><div class="ttdef"><b>Definition</b> pci_msi.h:157</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_ad835c19dac8ea5e78c5ce007e61971c8"><div class="ttname"><a href="structrt__pci__msi__desc.html#ad835c19dac8ea5e78c5ce007e61971c8">rt_pci_msi_desc::msix</a></div><div class="ttdeci">struct rt_pci_msix_conf msix</div><div class="ttdef"><b>Definition</b> pci_msi.h:164</div></div>
+<div class="ttc" id="astructrt__pci__msi__desc_html_af1dd702fcd219c76ff04dfef4256d526"><div class="ttname"><a href="structrt__pci__msi__desc.html#af1dd702fcd219c76ff04dfef4256d526">rt_pci_msi_desc::msi</a></div><div class="ttdeci">struct rt_pci_msi_conf msi</div><div class="ttdef"><b>Definition</b> pci_msi.h:163</div></div>
+<div class="ttc" id="astructrt__pci__msi__msg_html"><div class="ttname"><a href="structrt__pci__msi__msg.html">rt_pci_msi_msg</a></div><div class="ttdef"><b>Definition</b> pci_msi.h:132</div></div>
+<div class="ttc" id="astructrt__pci__msi__msg_html_a4f8a36ed228554c24762436f90b0732e"><div class="ttname"><a href="structrt__pci__msi__msg.html#a4f8a36ed228554c24762436f90b0732e">rt_pci_msi_msg::data</a></div><div class="ttdeci">rt_uint32_t data</div><div class="ttdef"><b>Definition</b> pci_msi.h:135</div></div>
+<div class="ttc" id="astructrt__pci__msi__msg_html_a8e01b3e9ffdf52d8613e7b2e2a46198b"><div class="ttname"><a href="structrt__pci__msi__msg.html#a8e01b3e9ffdf52d8613e7b2e2a46198b">rt_pci_msi_msg::address_hi</a></div><div class="ttdeci">rt_uint32_t address_hi</div><div class="ttdef"><b>Definition</b> pci_msi.h:134</div></div>
+<div class="ttc" id="astructrt__pci__msi__msg_html_ae57109ea80ba4e930604b240521d6e8a"><div class="ttname"><a href="structrt__pci__msi__msg.html#ae57109ea80ba4e930604b240521d6e8a">rt_pci_msi_msg::address_lo</a></div><div class="ttdeci">rt_uint32_t address_lo</div><div class="ttdef"><b>Definition</b> pci_msi.h:133</div></div>
+<div class="ttc" id="astructrt__pci__msix__conf_html"><div class="ttname"><a href="structrt__pci__msix__conf.html">rt_pci_msix_conf</a></div><div class="ttdef"><b>Definition</b> pci_msi.h:124</div></div>
+<div class="ttc" id="astructrt__pci__msix__conf_html_a2551a27f8b5505071198a34031cd430f"><div class="ttname"><a href="structrt__pci__msix__conf.html#a2551a27f8b5505071198a34031cd430f">rt_pci_msix_conf::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition</b> pci_msi.h:125</div></div>
+<div class="ttc" id="astructrt__pci__msix__conf_html_a601aa0f8bac323ac321d95f4224441b9"><div class="ttname"><a href="structrt__pci__msix__conf.html#a601aa0f8bac323ac321d95f4224441b9">rt_pci_msix_conf::msg_ctrl</a></div><div class="ttdeci">rt_uint32_t msg_ctrl</div><div class="ttdef"><b>Definition</b> pci_msi.h:127</div></div>
+<div class="ttc" id="astructrt__pci__msix__conf_html_ab44397996b4bdf08fe789e42d60b8c07"><div class="ttname"><a href="structrt__pci__msix__conf.html#ab44397996b4bdf08fe789e42d60b8c07">rt_pci_msix_conf::table_base</a></div><div class="ttdeci">void * table_base</div><div class="ttdef"><b>Definition</b> pci_msi.h:128</div></div>
+<div class="ttc" id="astructrt__pic__irq_html"><div class="ttname"><a href="structrt__pic__irq.html">rt_pic_irq</a></div><div class="ttdef"><b>Definition</b> pic.h:114</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="pci__msi_8h.html">pci_msi.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

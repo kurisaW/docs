@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['green_0',['green',['../namespace_my_library.html#a79a9f4bbb675f6c082b09249c5a95ceda7170352a3cd8a59b864c0166ff98182e',1,'MyLibrary']]]
+  ['busoff_0',['BUSOFF',['../group__group___c_a_n___device.html#gga2db9822bd352087e8d22b5196b18c1bba2adf02eebb602f30434fc0ab4357de78',1,'dev_can.h']]]
 ];

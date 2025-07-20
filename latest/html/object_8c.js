@@ -1,0 +1,37 @@
+var object_8c =
+[
+    [ "rt_custom_object", "structrt__custom__object.html", "structrt__custom__object" ],
+    [ "_OBJ_CONTAINER_LIST_INIT", "object_8c.html#a03e94a8f34cbd1e06acb50b8729033c2", null ],
+    [ "rt_object_info_type", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923", [
+      [ "RT_Object_Info_Thread", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a63fc316a82816c295f5e6e5ac5025224", null ],
+      [ "RT_Object_Info_Semaphore", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923afc0f434f528d61cead4f5d4675bdf0de", null ],
+      [ "RT_Object_Info_Mutex", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923ae24f99a0d730bf4e693b7b0d6e5ad855", null ],
+      [ "RT_Object_Info_Event", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a10a67776bee4662ac28d12de764aa96c", null ],
+      [ "RT_Object_Info_MailBox", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a679c0ee0a4aa126b0e4e8569024926e1", null ],
+      [ "RT_Object_Info_MessageQueue", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923adce9c5b210a7f086216837f86715e539", null ],
+      [ "RT_Object_Info_MemPool", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a3026ff17e729eb6269c440fea643f87b", null ],
+      [ "RT_Object_Info_Device", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923ae53966200ce71fc6eb034d919fcbed35", null ],
+      [ "RT_Object_Info_Timer", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923ad240d66310f13f1411d0b5cad9332d81", null ],
+      [ "RT_Object_Info_Module", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a483f654f33f51bd481707c80e6dad30b", null ],
+      [ "RT_Object_Info_Memory", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a143d7615242429ca33f770b036b5cf72", null ],
+      [ "RT_Object_Info_Custom", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923a3ec05835ea57e0359cdcca0bede2ceb2", null ],
+      [ "RT_Object_Info_Unknown", "object_8c.html#ae4b87728705ce6642c0fc9e4d128b923ac37a3443d7b33a013690855c24a68a70", null ]
+    ] ],
+    [ "rt_custom_object_create", "group__group___kernel_object.html#ga75581e85adfc9cd4068c5144d19849b4", null ],
+    [ "rt_custom_object_destroy", "group__group___kernel_object.html#ga50c46982eda3aeab85fa9e2d94302d62", null ],
+    [ "rt_object_allocate", "group__group___kernel_object.html#ga661bb999394a29404c20c7f3e58e5f64", null ],
+    [ "rt_object_delete", "group__group___kernel_object.html#ga0479fb23b766d96e9611ed32becc2797", null ],
+    [ "rt_object_detach", "group__group___kernel_object.html#gad3a5cf0c036738c6f0ee560a62bc93be", null ],
+    [ "rt_object_find", "group__group___kernel_object.html#ga6c82dbb4ae114918c5c96d0dca3957eb", null ],
+    [ "rt_object_for_each", "group__group___kernel_object.html#gaa55c2a73bdf7ede3f5bb80fe70431f4f", null ],
+    [ "rt_object_get_information", "group__group___kernel_object.html#ga8cb85e5812b8e7c3705fb3c7702c992b", null ],
+    [ "rt_object_get_length", "group__group___kernel_object.html#ga999d82dfa646d3c4416698f35e37ed65", null ],
+    [ "rt_object_get_name", "group__group___kernel_object.html#ga49942be6b9cf766f38f0ec5fe00524b2", null ],
+    [ "rt_object_get_pointers", "group__group___kernel_object.html#gaa6879a7d034c9ccc56ab3a4cb8fd75f6", null ],
+    [ "rt_object_get_type", "group__group___kernel_object.html#ga8e9948d16704c567feb38b9d98618a91", null ],
+    [ "rt_object_init", "group__group___kernel_object.html#ga0a86356c83e8264841fcb83255f72014", null ],
+    [ "rt_object_is_systemobject", "group__group___kernel_object.html#ga0b4471fdda93017477bc81ca357481ac", null ],
+    [ "RTM_EXPORT", "group__group___kernel_object.html#ga7167ae7d39f610dc3d0fe892148e7579", null ],
+    [ "RTM_EXPORT", "group__group___kernel_object.html#gaff8a8eeb6feb5b69a873f7bf55816f86", null ],
+    [ "RTM_EXPORT", "group__group___kernel_object.html#ga7ea8ef4694447ec1f1d934cf76e4a2e9", null ]
+];

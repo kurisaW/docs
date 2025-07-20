@@ -1,0 +1,2653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/usb_device.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('usb__device_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">usb_device.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &quot;<a class="el" href="usb__common_8h_source.html">drivers/usb_common.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for usb_device.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="usb__device_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2usb__device_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2usb__device_8h" id="acomponents_2drivers_2include_2drivers_2usb__device_8h">
+<area shape="rect" title=" " alt="" coords="222,5,373,60"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="254,181,341,207"/>
+<area shape="poly" title=" " alt="" coords="281,61,265,96,262,114,264,133,282,169,277,171,259,134,257,114,260,94,276,59"/>
+<area shape="rect" href="usb__common_8h.html" title=" " alt="" coords="273,108,444,133"/>
+<area shape="poly" title=" " alt="" coords="318,59,344,95,340,98,314,62"/>
+<area shape="rect" title=" " alt="" coords="53,621,136,647"/>
+<area shape="poly" title=" " alt="" coords="254,200,181,209,140,219,100,232,64,250,35,274,15,303,8,340,8,488,14,525,31,558,52,587,73,610,69,614,48,590,26,561,9,526,3,489,3,339,10,301,31,270,61,246,98,227,139,214,180,204,253,195"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="416,401,480,427"/>
+<area shape="poly" title=" " alt="" coords="341,192,379,196,422,205,462,224,479,237,494,253,503,270,507,289,501,326,486,362,468,391,463,389,481,360,496,325,501,289,498,272,490,256,476,241,459,228,420,210,379,201,341,197"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="556,328,647,353"/>
+<area shape="poly" title=" " alt="" coords="341,195,385,200,436,210,489,227,539,252,570,282,591,314,587,317,566,285,536,257,487,232,435,215,384,205,340,200"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="221,255,278,280"/>
+<area shape="poly" title=" " alt="" coords="285,209,259,244,254,241,280,205"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="302,255,391,280"/>
+<area shape="poly" title=" " alt="" coords="308,205,333,242,329,245,303,209"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="152,328,227,353"/>
+<area shape="poly" title=" " alt="" coords="271,209,239,228,210,256,198,285,193,315,187,314,192,284,206,253,235,224,268,204"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="415,255,481,280"/>
+<area shape="poly" title=" " alt="" coords="323,204,412,246,410,251,320,209"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="407,475,489,500"/>
+<area shape="poly" title=" " alt="" coords="451,427,451,461,445,461,445,427"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="425,548,505,573"/>
+<area shape="poly" title=" " alt="" coords="465,425,487,446,504,474,507,491,503,509,487,539,482,536,498,507,501,491,499,476,482,449,462,429"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="302,548,402,573"/>
+<area shape="poly" title=" " alt="" coords="438,429,397,476,364,537,360,534,392,473,434,425"/>
+<area shape="rect" title=" " alt="" coords="221,475,331,500"/>
+<area shape="poly" title=" " alt="" coords="421,429,318,472,316,467,419,424"/>
+<area shape="poly" title=" " alt="" coords="453,500,462,534,457,536,448,501"/>
+<area shape="poly" title=" " alt="" coords="434,502,380,542,377,537,431,498"/>
+<area shape="poly" title=" " alt="" coords="426,574,414,576,150,626,149,620,413,571,425,568"/>
+<area shape="rect" title=" " alt="" coords="761,621,831,647"/>
+<area shape="poly" title=" " alt="" coords="506,568,748,619,747,624,505,573"/>
+<area shape="rect" title=" " alt="" coords="200,621,275,647"/>
+<area shape="poly" title=" " alt="" coords="429,576,288,620,287,615,428,571"/>
+<area shape="rect" title=" " alt="" coords="299,621,373,647"/>
+<area shape="poly" title=" " alt="" coords="446,576,371,617,368,612,443,571"/>
+<area shape="rect" title=" " alt="" coords="397,621,493,647"/>
+<area shape="poly" title=" " alt="" coords="465,574,455,609,450,607,459,573"/>
+<area shape="rect" title=" " alt="" coords="518,621,613,647"/>
+<area shape="poly" title=" " alt="" coords="483,571,539,611,536,615,480,576"/>
+<area shape="rect" title=" " alt="" coords="637,621,736,647"/>
+<area shape="poly" title=" " alt="" coords="502,571,639,615,637,620,500,576"/>
+<area shape="poly" title=" " alt="" coords="311,576,150,620,149,615,310,571"/>
+<area shape="poly" title=" " alt="" coords="578,356,486,398,484,393,576,351"/>
+<area shape="poly" title=" " alt="" coords="262,253,288,217,292,220,266,256"/>
+<area shape="poly" title=" " alt="" coords="259,279,285,314,323,351,363,376,404,395,402,400,361,381,320,355,281,317,255,282"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="334,328,397,353"/>
+<area shape="poly" title=" " alt="" coords="352,280,361,314,356,316,347,281"/>
+<area shape="poly" title=" " alt="" coords="380,351,426,390,422,394,377,355"/>
+<area shape="poly" title=" " alt="" coords="153,354,114,372,97,386,84,403,72,428,66,456,65,513,75,566,88,608,82,609,70,567,60,513,60,455,67,427,79,400,93,382,112,368,151,349"/>
+<area shape="poly" title=" " alt="" coords="228,350,403,398,402,403,226,355"/>
+<area shape="poly" title=" " alt="" coords="228,348,302,369,335,384,356,400,361,420,352,439,335,456,314,470,311,466,331,452,348,436,356,420,351,403,332,388,300,374,226,353"/>
+<area shape="rect" title=" " alt="" coords="93,401,208,427"/>
+<area shape="poly" title=" " alt="" coords="185,355,166,391,161,388,181,352"/>
+<area shape="rect" title=" " alt="" coords="232,401,341,427"/>
+<area shape="poly" title=" " alt="" coords="207,351,261,391,258,395,203,356"/>
+<area shape="poly" title=" " alt="" coords="451,280,451,388,445,388,445,280"/>
+<area shape="poly" title=" " alt="" coords="351,135,318,173,314,169,347,132"/>
+</map>
+</div>
+</div>
+<p><a href="usb__device_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudcd__ops.html">udcd_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structep__id.html">ep_id</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuio__request.html">uio_request</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuendpoint.html">uendpoint</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudcd.html">udcd</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structualtsetting.html">ualtsetting</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuinterface.html">uinterface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structufunction__ops.html">ufunction_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structufunction.html">ufunction</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuconfig.html">uconfig</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudevice.html">udevice</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudclass.html">udclass</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structep__msg.html">ep_msg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structudev__msg.html">udev_msg</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a5aa709169b5c3d88cffd260c7a43b418" id="r_a5aa709169b5c3d88cffd260c7a43b418"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a5aa709169b5c3d88cffd260c7a43b418">_VENDOR_ID</a>&#160;&#160;&#160;0x0EFF</td></tr>
+<tr class="separator:a5aa709169b5c3d88cffd260c7a43b418"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed0420a4cd26e7800925768830dab564" id="r_aed0420a4cd26e7800925768830dab564"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aed0420a4cd26e7800925768830dab564">_PRODUCT_ID</a>&#160;&#160;&#160;0x0001</td></tr>
+<tr class="separator:aed0420a4cd26e7800925768830dab564"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75cc6ca185565fbf22a5a0c3738891bc" id="r_a75cc6ca185565fbf22a5a0c3738891bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a75cc6ca185565fbf22a5a0c3738891bc">MAX_INTF_STR</a>&#160;&#160;&#160;20</td></tr>
+<tr class="separator:a75cc6ca185565fbf22a5a0c3738891bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b45bf8b21d1d0e73263eb5f30ec23cd" id="r_a6b45bf8b21d1d0e73263eb5f30ec23cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a6b45bf8b21d1d0e73263eb5f30ec23cd">USB_BCD_DEVICE</a>&#160;&#160;&#160;0x0200   /* USB Specification Release Number in Binary-Coded Decimal */</td></tr>
+<tr class="separator:a6b45bf8b21d1d0e73263eb5f30ec23cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08bbe8eee58a0402a100a10dc6e0dfdf" id="r_a08bbe8eee58a0402a100a10dc6e0dfdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a08bbe8eee58a0402a100a10dc6e0dfdf">USB_BCD_VERSION</a>&#160;&#160;&#160;0x0200   /* USB 2.0 */</td></tr>
+<tr class="separator:a08bbe8eee58a0402a100a10dc6e0dfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa02bbbb4ceb856c63c94c48786d51cd1" id="r_aa02bbbb4ceb856c63c94c48786d51cd1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aa02bbbb4ceb856c63c94c48786d51cd1">EP0_IN_ADDR</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:aa02bbbb4ceb856c63c94c48786d51cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88bb712ebe94bd7a77e67bfb7abb2afc" id="r_a88bb712ebe94bd7a77e67bfb7abb2afc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a88bb712ebe94bd7a77e67bfb7abb2afc">EP0_OUT_ADDR</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:a88bb712ebe94bd7a77e67bfb7abb2afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dacd947b7b71012510d497f6c8ec93a" id="r_a1dacd947b7b71012510d497f6c8ec93a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a1dacd947b7b71012510d497f6c8ec93a">EP_HANDLER</a>(ep,  func,  size)&#160;&#160;&#160;<a class="el" href="group__group___kernel_service.html#ga6a86c5965ba3874257e3cb99a3536b70">RT_ASSERT</a>(ep != <a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>); ep-&gt;handler(func, size)</td></tr>
+<tr class="separator:a1dacd947b7b71012510d497f6c8ec93a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b13fb365cfda9a509a6aefee6114385" id="r_a4b13fb365cfda9a509a6aefee6114385"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4b13fb365cfda9a509a6aefee6114385">EP_ADDRESS</a>(ep)&#160;&#160;&#160;ep-&gt;ep_desc-&gt;bEndpointAddress</td></tr>
+<tr class="separator:a4b13fb365cfda9a509a6aefee6114385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9901d9b662fc5878132029b0c08e675c" id="r_a9901d9b662fc5878132029b0c08e675c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a9901d9b662fc5878132029b0c08e675c">EP_MAXPACKET</a>(ep)&#160;&#160;&#160;ep-&gt;ep_desc-&gt;wMaxPacketSize</td></tr>
+<tr class="separator:a9901d9b662fc5878132029b0c08e675c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01638125650ab71597f096a8919a0f44" id="r_a01638125650ab71597f096a8919a0f44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a01638125650ab71597f096a8919a0f44">FUNC_ENABLE</a>(func)</td></tr>
+<tr class="separator:a01638125650ab71597f096a8919a0f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10bf6d69e0efb1b6d670fc9200bb84ab" id="r_a10bf6d69e0efb1b6d670fc9200bb84ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a10bf6d69e0efb1b6d670fc9200bb84ab">FUNC_DISABLE</a>(func)</td></tr>
+<tr class="separator:a10bf6d69e0efb1b6d670fc9200bb84ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6816c0076c3a7382b6e116232ee3045e" id="r_a6816c0076c3a7382b6e116232ee3045e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a6816c0076c3a7382b6e116232ee3045e">RT_USBD_CLASS_CTRL_CONNECTED</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(USBDevice) + 0)</td></tr>
+<tr class="separator:a6816c0076c3a7382b6e116232ee3045e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a15b38e3b2aaa31edc90de53e2ab8b5b7" id="r_a15b38e3b2aaa31edc90de53e2ab8b5b7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a15b38e3b2aaa31edc90de53e2ab8b5b7">udep_handler_t</a>) (struct <a class="el" href="structufunction.html">ufunction</a> *func, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a15b38e3b2aaa31edc90de53e2ab8b5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86cb0c95484f9ce556641cd5b5f8cde4" id="r_a86cb0c95484f9ce556641cd5b5f8cde4"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structuio__request.html">uio_request</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a86cb0c95484f9ce556641cd5b5f8cde4">uio_request_t</a></td></tr>
+<tr class="separator:a86cb0c95484f9ce556641cd5b5f8cde4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5d5c319e509b62e3f246be3b1f84347" id="r_ab5d5c319e509b62e3f246be3b1f84347"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structuendpoint.html">uendpoint</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a></td></tr>
+<tr class="separator:ab5d5c319e509b62e3f246be3b1f84347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9144c7b118d56d06c717acfc9d599f44" id="r_a9144c7b118d56d06c717acfc9d599f44"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structudcd.html">udcd</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a></td></tr>
+<tr class="separator:a9144c7b118d56d06c717acfc9d599f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a8057dfeb10e778fcecf259ff6fd6a1" id="r_a4a8057dfeb10e778fcecf259ff6fd6a1"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structualtsetting.html">ualtsetting</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a></td></tr>
+<tr class="separator:a4a8057dfeb10e778fcecf259ff6fd6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3eefc3b5ab36ae57a4c70f7e7b379a1a" id="r_a3eefc3b5ab36ae57a4c70f7e7b379a1a"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a3eefc3b5ab36ae57a4c70f7e7b379a1a">uintf_handler_t</a>) (struct <a class="el" href="structufunction.html">ufunction</a> *func, <a class="el" href="usb__common_8h.html#a9b056ad5426372128b291ecdfa98e2fb">ureq_t</a> setup)</td></tr>
+<tr class="separator:a3eefc3b5ab36ae57a4c70f7e7b379a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad888c0137068d981a69ee2714e7a2e3b" id="r_ad888c0137068d981a69ee2714e7a2e3b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structuinterface.html">uinterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a></td></tr>
+<tr class="separator:ad888c0137068d981a69ee2714e7a2e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80df9e2d59bd3edb6811bfe7cea4ee24" id="r_a80df9e2d59bd3edb6811bfe7cea4ee24"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structufunction__ops.html">ufunction_ops</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a80df9e2d59bd3edb6811bfe7cea4ee24">ufunction_ops_t</a></td></tr>
+<tr class="separator:a80df9e2d59bd3edb6811bfe7cea4ee24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7409c58bd270474a58cae2febca582f3" id="r_a7409c58bd270474a58cae2febca582f3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structufunction.html">ufunction</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a></td></tr>
+<tr class="separator:a7409c58bd270474a58cae2febca582f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9abf164065c67e99ef2e5b58df231fbd" id="r_a9abf164065c67e99ef2e5b58df231fbd"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structuconfig.html">uconfig</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a></td></tr>
+<tr class="separator:a9abf164065c67e99ef2e5b58df231fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48f4f13cc013f940cd2ccd683ffd86c8" id="r_a48f4f13cc013f940cd2ccd683ffd86c8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structudevice.html">udevice</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a></td></tr>
+<tr class="separator:a48f4f13cc013f940cd2ccd683ffd86c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae53bfe3a0298069221d714531e24721e" id="r_ae53bfe3a0298069221d714531e24721e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structudclass.html">udclass</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ae53bfe3a0298069221d714531e24721e">udclass_t</a></td></tr>
+<tr class="separator:ae53bfe3a0298069221d714531e24721e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4becf5b9dbdc2065d0c6dee39e03b54b" id="r_a4becf5b9dbdc2065d0c6dee39e03b54b"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7d">udev_msg_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4becf5b9dbdc2065d0c6dee39e03b54b">udev_msg_type</a></td></tr>
+<tr class="separator:a4becf5b9dbdc2065d0c6dee39e03b54b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579fd5a04a5fca85880f643ab9ce685e" id="r_a579fd5a04a5fca85880f643ab9ce685e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structudev__msg.html">udev_msg</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a579fd5a04a5fca85880f643ab9ce685e">udev_msg_t</a></td></tr>
+<tr class="separator:a579fd5a04a5fca85880f643ab9ce685e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:abb75b5e205ce6c92679d4e0c01452c2f" id="r_abb75b5e205ce6c92679d4e0c01452c2f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2f">UIO_REQUEST_TYPE</a> { <a class="el" href="usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2fa0a3d091cfe59d66d7c35ec6cdc744048">UIO_REQUEST_READ_FULL</a>
+, <a class="el" href="usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2faa341a8f1f4e765267045bb30a4a961ed">UIO_REQUEST_READ_BEST</a>
+, <a class="el" href="usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2fa8cbe5ad9f3e5234464be6854c6dc9503">UIO_REQUEST_WRITE</a>
+ }</td></tr>
+<tr class="separator:abb75b5e205ce6c92679d4e0c01452c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab182f9b5cca776f035a230d85be63b7d" id="r_ab182f9b5cca776f035a230d85be63b7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7d">udev_msg_type</a> { <br />
+&#160;&#160;<a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7daf2feb52e76e626a639f3809b9bff6ae8">USB_MSG_SETUP_NOTIFY</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da959037b23baccef6850e47af252cd703">USB_MSG_DATA_NOTIFY</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7dacab85e42ec6858d00b52ad5dec0c1ac4">USB_MSG_EP0_OUT</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7dabdaeba566d0b353c33384d2316d382c0">USB_MSG_EP_CLEAR_FEATURE</a>
+, <br />
+&#160;&#160;<a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da072176a68482368c2303acec68d245f7">USB_MSG_SOF</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da1c804c2132a34ff6444aa113ae953c35">USB_MSG_RESET</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da6a6a86543fd3b6d3717eba918d27c54c">USB_MSG_PLUG_IN</a>
+, <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7da1796f1e73c9117c8633f35603e94968a">USB_MSG_PLUG_OUT</a>
+<br />
+ }</td></tr>
+<tr class="separator:ab182f9b5cca776f035a230d85be63b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae0a6f3a87c03792878697b3828030cc6" id="r_ae0a6f3a87c03792878697b3828030cc6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ae0a6f3a87c03792878697b3828030cc6">rt_usbd_class_list_init</a> (void)</td></tr>
+<tr class="separator:ae0a6f3a87c03792878697b3828030cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c23b429cdc770ee1c0ee39166f46ca1" id="r_a7c23b429cdc770ee1c0ee39166f46ca1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a7c23b429cdc770ee1c0ee39166f46ca1">rt_usbd_device_new</a> (void)</td></tr>
+<tr class="separator:a7c23b429cdc770ee1c0ee39166f46ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd96dd91372993528df78eb9637cf35e" id="r_acd96dd91372993528df78eb9637cf35e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#acd96dd91372993528df78eb9637cf35e">rt_usbd_config_new</a> (void)</td></tr>
+<tr class="separator:acd96dd91372993528df78eb9637cf35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a024d833c07f9355d87a193353b9269d9" id="r_a024d833c07f9355d87a193353b9269d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a024d833c07f9355d87a193353b9269d9">rt_usbd_function_new</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__common_8h.html#a3a9111e0d1b3cdc049a535e6a3dd304d">udev_desc_t</a> dev_desc, <a class="el" href="usb__device_8h.html#a80df9e2d59bd3edb6811bfe7cea4ee24">ufunction_ops_t</a> ops)</td></tr>
+<tr class="separator:a024d833c07f9355d87a193353b9269d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6884416dc18960f51fa5b8b49e46aa" id="r_aee6884416dc18960f51fa5b8b49e46aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aee6884416dc18960f51fa5b8b49e46aa">rt_usbd_interface_new</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#a3eefc3b5ab36ae57a4c70f7e7b379a1a">uintf_handler_t</a> handler)</td></tr>
+<tr class="separator:aee6884416dc18960f51fa5b8b49e46aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c6b4d9af18bf4a1ed3bb0ead4251dd" id="r_a29c6b4d9af18bf4a1ed3bb0ead4251dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a29c6b4d9af18bf4a1ed3bb0ead4251dd">rt_usbd_endpoint_new</a> (<a class="el" href="usb__common_8h.html#a6013622af708528ebed775135db28e90">uep_desc_t</a> ep_desc, <a class="el" href="usb__device_8h.html#a15b38e3b2aaa31edc90de53e2ab8b5b7">udep_handler_t</a> handler)</td></tr>
+<tr class="separator:a29c6b4d9af18bf4a1ed3bb0ead4251dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38b9db26704c0d984a05ded7a430569b" id="r_a38b9db26704c0d984a05ded7a430569b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a38b9db26704c0d984a05ded7a430569b">rt_usbd_altsetting_new</a> (<a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> desc_size)</td></tr>
+<tr class="separator:a38b9db26704c0d984a05ded7a430569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97957896f29d4ca83dec71408298b08c" id="r_a97957896f29d4ca83dec71408298b08c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a97957896f29d4ca83dec71408298b08c">rt_usbd_core_init</a> (void)</td></tr>
+<tr class="separator:a97957896f29d4ca83dec71408298b08c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a565b0690b581e92b1677a053daf108f8" id="r_a565b0690b581e92b1677a053daf108f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a565b0690b581e92b1677a053daf108f8">rt_usb_device_init</a> (void)</td></tr>
+<tr class="separator:a565b0690b581e92b1677a053daf108f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d4bb020235c3d608d0b245cb572458b" id="r_a0d4bb020235c3d608d0b245cb572458b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a0d4bb020235c3d608d0b245cb572458b">rt_usbd_event_signal</a> (struct <a class="el" href="structudev__msg.html">udev_msg</a> *msg)</td></tr>
+<tr class="separator:a0d4bb020235c3d608d0b245cb572458b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2092e751eb9b48aa08a4b5ed6461ce0b" id="r_a2092e751eb9b48aa08a4b5ed6461ce0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a2092e751eb9b48aa08a4b5ed6461ce0b">rt_usbd_device_set_controller</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a2092e751eb9b48aa08a4b5ed6461ce0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f407ff8475821ad139052d026dcaf9c" id="r_a2f407ff8475821ad139052d026dcaf9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a2f407ff8475821ad139052d026dcaf9c">rt_usbd_device_set_descriptor</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__common_8h.html#a3a9111e0d1b3cdc049a535e6a3dd304d">udev_desc_t</a> dev_desc)</td></tr>
+<tr class="separator:a2f407ff8475821ad139052d026dcaf9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace869c01645b7215d7b6422fe74370c0" id="r_ace869c01645b7215d7b6422fe74370c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ace869c01645b7215d7b6422fe74370c0">rt_usbd_device_set_string</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, const char **ustring)</td></tr>
+<tr class="separator:ace869c01645b7215d7b6422fe74370c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf19ab30835fcea247a5dd73f0b39abd" id="r_acf19ab30835fcea247a5dd73f0b39abd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#acf19ab30835fcea247a5dd73f0b39abd">rt_usbd_device_set_interface_string</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, int index, const char *string)</td></tr>
+<tr class="separator:acf19ab30835fcea247a5dd73f0b39abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac318b5ace95eec4271843f6538e8c923" id="r_ac318b5ace95eec4271843f6538e8c923"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ac318b5ace95eec4271843f6538e8c923">rt_usbd_device_set_qualifier</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, struct <a class="el" href="structusb__qualifier__descriptor.html">usb_qualifier_descriptor</a> *qualifier)</td></tr>
+<tr class="separator:ac318b5ace95eec4271843f6538e8c923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c6af8b748f510bb6bbddce93916e957" id="r_a1c6af8b748f510bb6bbddce93916e957"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a1c6af8b748f510bb6bbddce93916e957">rt_usbd_device_set_os_comp_id_desc</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__common_8h.html#a286af23d162310f728d5fe019c01ade9">usb_os_comp_id_desc_t</a> os_comp_id_desc)</td></tr>
+<tr class="separator:a1c6af8b748f510bb6bbddce93916e957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99ed82bee0f193f9ffcdca7211a8a229" id="r_a99ed82bee0f193f9ffcdca7211a8a229"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a99ed82bee0f193f9ffcdca7211a8a229">rt_usbd_device_add_config</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a> cfg)</td></tr>
+<tr class="separator:a99ed82bee0f193f9ffcdca7211a8a229"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f8a2a8c765743c4fb2111ca87f314f7" id="r_a2f8a2a8c765743c4fb2111ca87f314f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a2f8a2a8c765743c4fb2111ca87f314f7">rt_usbd_config_add_function</a> (<a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a> cfg, <a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> func)</td></tr>
+<tr class="separator:a2f8a2a8c765743c4fb2111ca87f314f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae225ecf3a8385cd942a418ff3444d26c" id="r_ae225ecf3a8385cd942a418ff3444d26c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ae225ecf3a8385cd942a418ff3444d26c">rt_usbd_class_register</a> (<a class="el" href="usb__device_8h.html#ae53bfe3a0298069221d714531e24721e">udclass_t</a> <a class="el" href="structudclass.html">udclass</a>)</td></tr>
+<tr class="separator:ae225ecf3a8385cd942a418ff3444d26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d819ab98ad463d1d03ac9af4366cc23" id="r_a0d819ab98ad463d1d03ac9af4366cc23"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a0d819ab98ad463d1d03ac9af4366cc23">rt_usbd_function_add_interface</a> (<a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> func, <a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a> intf)</td></tr>
+<tr class="separator:a0d819ab98ad463d1d03ac9af4366cc23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a95212397ea3dca7d7c6753c801d086" id="r_a4a95212397ea3dca7d7c6753c801d086"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4a95212397ea3dca7d7c6753c801d086">rt_usbd_interface_add_altsetting</a> (<a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a> intf, <a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a> setting)</td></tr>
+<tr class="separator:a4a95212397ea3dca7d7c6753c801d086"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6741fb39a122bdf2e0398ba16850fb8c" id="r_a6741fb39a122bdf2e0398ba16850fb8c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a6741fb39a122bdf2e0398ba16850fb8c">rt_usbd_altsetting_add_endpoint</a> (<a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a> setting, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep)</td></tr>
+<tr class="separator:a6741fb39a122bdf2e0398ba16850fb8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5788857035d9733b7a7e3211d6a34a5" id="r_aa5788857035d9733b7a7e3211d6a34a5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aa5788857035d9733b7a7e3211d6a34a5">rt_usbd_os_comp_id_desc_add_os_func_comp_id_desc</a> (<a class="el" href="usb__common_8h.html#a286af23d162310f728d5fe019c01ade9">usb_os_comp_id_desc_t</a> os_comp_id_desc, <a class="el" href="usb__common_8h.html#ac7df66596902510c8d09534e5beb91c3">usb_os_func_comp_id_desc_t</a> os_func_comp_id_desc)</td></tr>
+<tr class="separator:aa5788857035d9733b7a7e3211d6a34a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdbe7db29ddcfac3dad88a90c387804d" id="r_acdbe7db29ddcfac3dad88a90c387804d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#acdbe7db29ddcfac3dad88a90c387804d">rt_usbd_altsetting_config_descriptor</a> (<a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a> setting, const void *desc, <a class="el" href="rttypes_8h.html#a0fd4981851ce935649b6723a81f2f1bf">rt_off_t</a> intf_pos)</td></tr>
+<tr class="separator:acdbe7db29ddcfac3dad88a90c387804d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac391a66d6ee0b26c0bacfc9f8494d3f2" id="r_ac391a66d6ee0b26c0bacfc9f8494d3f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ac391a66d6ee0b26c0bacfc9f8494d3f2">rt_usbd_set_config</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> value)</td></tr>
+<tr class="separator:ac391a66d6ee0b26c0bacfc9f8494d3f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e4c5bbc4f6fd2b811ec1cb18d8874c8" id="r_a8e4c5bbc4f6fd2b811ec1cb18d8874c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a8e4c5bbc4f6fd2b811ec1cb18d8874c8">rt_usbd_set_altsetting</a> (<a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a> intf, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> value)</td></tr>
+<tr class="separator:a8e4c5bbc4f6fd2b811ec1cb18d8874c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab22ab4c3167184c6e97ae6a06480d4b4" id="r_ab22ab4c3167184c6e97ae6a06480d4b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ab22ab4c3167184c6e97ae6a06480d4b4">rt_usbd_find_device</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:ab22ab4c3167184c6e97ae6a06480d4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992a694856adc714f3a4150f1e29f9a2" id="r_a992a694856adc714f3a4150f1e29f9a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a992a694856adc714f3a4150f1e29f9a2">rt_usbd_find_config</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> value)</td></tr>
+<tr class="separator:a992a694856adc714f3a4150f1e29f9a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a50d62482a8f7d1f16ad98235a7553c" id="r_a2a50d62482a8f7d1f16ad98235a7553c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a2a50d62482a8f7d1f16ad98235a7553c">rt_usbd_find_interface</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> value, <a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> *pfunc)</td></tr>
+<tr class="separator:a2a50d62482a8f7d1f16ad98235a7553c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e7a9b42a315440e19f2ca5c12ffec6d" id="r_a8e7a9b42a315440e19f2ca5c12ffec6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a8e7a9b42a315440e19f2ca5c12ffec6d">rt_usbd_find_endpoint</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> *pfunc, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> ep_addr)</td></tr>
+<tr class="separator:a8e7a9b42a315440e19f2ca5c12ffec6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20b90e426de92987fe88e8ba26c7f480" id="r_a20b90e426de92987fe88e8ba26c7f480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a20b90e426de92987fe88e8ba26c7f480">rt_usbd_io_request</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep, <a class="el" href="usb__device_8h.html#a86cb0c95484f9ce556641cd5b5f8cde4">uio_request_t</a> req)</td></tr>
+<tr class="separator:a20b90e426de92987fe88e8ba26c7f480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafac0ae57651e07a08fcbf4d12f52df6" id="r_aafac0ae57651e07a08fcbf4d12f52df6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aafac0ae57651e07a08fcbf4d12f52df6">rt_usbd_ep0_write</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:aafac0ae57651e07a08fcbf4d12f52df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f7a1db8e2d61776fd3affac257fdee9" id="r_a8f7a1db8e2d61776fd3affac257fdee9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a8f7a1db8e2d61776fd3affac257fdee9">rt_usbd_ep0_read</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size, <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*rx_ind)(<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size))</td></tr>
+<tr class="separator:a8f7a1db8e2d61776fd3affac257fdee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1961477ef2cd8c50140d0cdae5d676d0" id="r_a1961477ef2cd8c50140d0cdae5d676d0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a1961477ef2cd8c50140d0cdae5d676d0">rt_usbd_vcom_class_register</a> (void)</td></tr>
+<tr class="separator:a1961477ef2cd8c50140d0cdae5d676d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4473d6c9718d2a9bf92f33ce91c0302e" id="r_a4473d6c9718d2a9bf92f33ce91c0302e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4473d6c9718d2a9bf92f33ce91c0302e">rt_usbd_ecm_class_register</a> (void)</td></tr>
+<tr class="separator:a4473d6c9718d2a9bf92f33ce91c0302e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b1c47d84e0b5f06ff9d3f1c9c8f9064" id="r_a9b1c47d84e0b5f06ff9d3f1c9c8f9064"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a9b1c47d84e0b5f06ff9d3f1c9c8f9064">rt_usbd_hid_class_register</a> (void)</td></tr>
+<tr class="separator:a9b1c47d84e0b5f06ff9d3f1c9c8f9064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e34389bc014a7210a8c09553a332976" id="r_a4e34389bc014a7210a8c09553a332976"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4e34389bc014a7210a8c09553a332976">rt_usbd_msc_class_register</a> (void)</td></tr>
+<tr class="separator:a4e34389bc014a7210a8c09553a332976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9894222f85f110c7b530953bbb263eaa" id="r_a9894222f85f110c7b530953bbb263eaa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a9894222f85f110c7b530953bbb263eaa">rt_usbd_rndis_class_register</a> (void)</td></tr>
+<tr class="separator:a9894222f85f110c7b530953bbb263eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bbfbb953e48866f5c61032fc35bcf8" id="r_a73bbfbb953e48866f5c61032fc35bcf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a73bbfbb953e48866f5c61032fc35bcf8">rt_usbd_winusb_class_register</a> (void)</td></tr>
+<tr class="separator:a73bbfbb953e48866f5c61032fc35bcf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510506a1da059ca43bc91150e53fc14b" id="r_a510506a1da059ca43bc91150e53fc14b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a510506a1da059ca43bc91150e53fc14b">rt_usbd_set_feature</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> value, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> index)</td></tr>
+<tr class="separator:a510506a1da059ca43bc91150e53fc14b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2626203768773d2a5cae2ecedbfb863" id="r_ac2626203768773d2a5cae2ecedbfb863"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ac2626203768773d2a5cae2ecedbfb863">rt_usbd_clear_feature</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> value, <a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> index)</td></tr>
+<tr class="separator:ac2626203768773d2a5cae2ecedbfb863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06c2ca9048e9792008ba1767bddbb91f" id="r_a06c2ca9048e9792008ba1767bddbb91f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a06c2ca9048e9792008ba1767bddbb91f">rt_usbd_ep_set_stall</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep)</td></tr>
+<tr class="separator:a06c2ca9048e9792008ba1767bddbb91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1cc94040d2723bb35f5d6f1e233e0e" id="r_a2e1cc94040d2723bb35f5d6f1e233e0e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a2e1cc94040d2723bb35f5d6f1e233e0e">rt_usbd_ep_clear_stall</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep)</td></tr>
+<tr class="separator:a2e1cc94040d2723bb35f5d6f1e233e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551a65c6e6abc0e929ed965809c2545a" id="r_a551a65c6e6abc0e929ed965809c2545a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a551a65c6e6abc0e929ed965809c2545a">rt_usbd_ep0_set_stall</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device)</td></tr>
+<tr class="separator:a551a65c6e6abc0e929ed965809c2545a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abedd2bedfbe73617e04caf45fcd9e831" id="r_abedd2bedfbe73617e04caf45fcd9e831"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#abedd2bedfbe73617e04caf45fcd9e831">rt_usbd_ep0_clear_stall</a> (<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device)</td></tr>
+<tr class="separator:abedd2bedfbe73617e04caf45fcd9e831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfb590a9e72e32fed04a89ac162063e4" id="r_acfb590a9e72e32fed04a89ac162063e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#acfb590a9e72e32fed04a89ac162063e4">rt_usbd_ep0_setup_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, struct <a class="el" href="structurequest.html">urequest</a> *setup)</td></tr>
+<tr class="separator:acfb590a9e72e32fed04a89ac162063e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64c80851c07fd394970cf4fc4f1fe6d0" id="r_a64c80851c07fd394970cf4fc4f1fe6d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a64c80851c07fd394970cf4fc4f1fe6d0">rt_usbd_ep0_in_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a64c80851c07fd394970cf4fc4f1fe6d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fb76af51965cafbcf611c1a1301a4b8" id="r_a6fb76af51965cafbcf611c1a1301a4b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a6fb76af51965cafbcf611c1a1301a4b8">rt_usbd_ep0_out_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a6fb76af51965cafbcf611c1a1301a4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b52494007f4d1ae8121556f75a933a" id="r_aa5b52494007f4d1ae8121556f75a933a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aa5b52494007f4d1ae8121556f75a933a">rt_usbd_ep_in_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:aa5b52494007f4d1ae8121556f75a933a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd49f431a88162c8291d7528dc817494" id="r_abd49f431a88162c8291d7528dc817494"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#abd49f431a88162c8291d7528dc817494">rt_usbd_ep_out_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:abd49f431a88162c8291d7528dc817494"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e694618bcc89e8d120189c717176c4" id="r_a60e694618bcc89e8d120189c717176c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a60e694618bcc89e8d120189c717176c4">rt_usbd_reset_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a60e694618bcc89e8d120189c717176c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e72cb0e9e20fe5ade0314fccedb922" id="r_a77e72cb0e9e20fe5ade0314fccedb922"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a77e72cb0e9e20fe5ade0314fccedb922">rt_usbd_connect_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a77e72cb0e9e20fe5ade0314fccedb922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a771f669f3c9d53129f6729662bfedeaf" id="r_a771f669f3c9d53129f6729662bfedeaf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a771f669f3c9d53129f6729662bfedeaf">rt_usbd_disconnect_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a771f669f3c9d53129f6729662bfedeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c659b12bf736e41b48d0b496e73b7e" id="r_a14c659b12bf736e41b48d0b496e73b7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a14c659b12bf736e41b48d0b496e73b7e">rt_usbd_sof_handler</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a14c659b12bf736e41b48d0b496e73b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c3a3389d439ff04b2a4cf5739979c53" id="r_a7c3a3389d439ff04b2a4cf5739979c53"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a7c3a3389d439ff04b2a4cf5739979c53">dcd_set_address</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address)</td></tr>
+<tr class="separator:a7c3a3389d439ff04b2a4cf5739979c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5f958df9dd4ee837d2ac954e799128d" id="r_aa5f958df9dd4ee837d2ac954e799128d"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#aa5f958df9dd4ee837d2ac954e799128d">dcd_set_config</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address)</td></tr>
+<tr class="separator:aa5f958df9dd4ee837d2ac954e799128d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adde5dc95fbd5587a7569a6c5010680dd" id="r_adde5dc95fbd5587a7569a6c5010680dd"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#adde5dc95fbd5587a7569a6c5010680dd">dcd_ep_enable</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep)</td></tr>
+<tr class="separator:adde5dc95fbd5587a7569a6c5010680dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14fde78a6e137f5158b66351fc33f316" id="r_a14fde78a6e137f5158b66351fc33f316"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a14fde78a6e137f5158b66351fc33f316">dcd_ep_disable</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> ep)</td></tr>
+<tr class="separator:a14fde78a6e137f5158b66351fc33f316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e9749f2027341a7d61714caa223aaf6" id="r_a1e9749f2027341a7d61714caa223aaf6"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a1e9749f2027341a7d61714caa223aaf6">dcd_ep_read_prepare</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a1e9749f2027341a7d61714caa223aaf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be4ca65a63b792152464f4c125bbd5f" id="r_a4be4ca65a63b792152464f4c125bbd5f"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4be4ca65a63b792152464f4c125bbd5f">dcd_ep_read</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address, void *buffer)</td></tr>
+<tr class="separator:a4be4ca65a63b792152464f4c125bbd5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08f378b2eabd5bb0c3d2a3e78c1ac5fc" id="r_a08f378b2eabd5bb0c3d2a3e78c1ac5fc"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a08f378b2eabd5bb0c3d2a3e78c1ac5fc">dcd_ep_write</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address, void *buffer, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="separator:a08f378b2eabd5bb0c3d2a3e78c1ac5fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315586001e63cfc5815fe6a5db2e1bcc" id="r_a315586001e63cfc5815fe6a5db2e1bcc"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a315586001e63cfc5815fe6a5db2e1bcc">dcd_ep0_send_status</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd)</td></tr>
+<tr class="separator:a315586001e63cfc5815fe6a5db2e1bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7943367cdf9eeea5fb74e203a1ad60c" id="r_ab7943367cdf9eeea5fb74e203a1ad60c"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#ab7943367cdf9eeea5fb74e203a1ad60c">dcd_ep_set_stall</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address)</td></tr>
+<tr class="separator:ab7943367cdf9eeea5fb74e203a1ad60c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d7de9e011be8b2a5c4709051db256fc" id="r_a4d7de9e011be8b2a5c4709051db256fc"><td class="memItemLeft" align="right" valign="top">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a4d7de9e011be8b2a5c4709051db256fc">dcd_ep_clear_stall</a> (<a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a> dcd, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> address)</td></tr>
+<tr class="separator:a4d7de9e011be8b2a5c4709051db256fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a431012145116fc954ccd1f51eebd61a2" id="r_a431012145116fc954ccd1f51eebd61a2"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="usb__device_8h.html#a431012145116fc954ccd1f51eebd61a2">usbd_os_proerty_descriptor_send</a> (<a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> func, <a class="el" href="usb__common_8h.html#a9b056ad5426372128b291ecdfa98e2fb">ureq_t</a> setup, <a class="el" href="usb__common_8h.html#a29d7709dd06e831d3ff68480e1fdb5fe">usb_os_proerty_t</a> <a class="el" href="structusb__os__proerty.html">usb_os_proerty</a>, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> number_of_proerty)</td></tr>
+<tr class="separator:a431012145116fc954ccd1f51eebd61a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aed0420a4cd26e7800925768830dab564" name="aed0420a4cd26e7800925768830dab564"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed0420a4cd26e7800925768830dab564">&#9670;&#160;</a></span>_PRODUCT_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _PRODUCT_ID&#160;&#160;&#160;0x0001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5aa709169b5c3d88cffd260c7a43b418" name="a5aa709169b5c3d88cffd260c7a43b418"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa709169b5c3d88cffd260c7a43b418">&#9670;&#160;</a></span>_VENDOR_ID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define _VENDOR_ID&#160;&#160;&#160;0x0EFF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa02bbbb4ceb856c63c94c48786d51cd1" name="aa02bbbb4ceb856c63c94c48786d51cd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa02bbbb4ceb856c63c94c48786d51cd1">&#9670;&#160;</a></span>EP0_IN_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EP0_IN_ADDR&#160;&#160;&#160;0x80</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a88bb712ebe94bd7a77e67bfb7abb2afc" name="a88bb712ebe94bd7a77e67bfb7abb2afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88bb712ebe94bd7a77e67bfb7abb2afc">&#9670;&#160;</a></span>EP0_OUT_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EP0_OUT_ADDR&#160;&#160;&#160;0x00</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b13fb365cfda9a509a6aefee6114385" name="a4b13fb365cfda9a509a6aefee6114385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b13fb365cfda9a509a6aefee6114385">&#9670;&#160;</a></span>EP_ADDRESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EP_ADDRESS</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ep</td><td>)</td>
+          <td>&#160;&#160;&#160;ep-&gt;ep_desc-&gt;bEndpointAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1dacd947b7b71012510d497f6c8ec93a" name="a1dacd947b7b71012510d497f6c8ec93a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dacd947b7b71012510d497f6c8ec93a">&#9670;&#160;</a></span>EP_HANDLER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EP_HANDLER</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ep, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">size&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__group___kernel_service.html#ga6a86c5965ba3874257e3cb99a3536b70">RT_ASSERT</a>(ep != <a class="el" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a>); ep-&gt;handler(func, size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9901d9b662fc5878132029b0c08e675c" name="a9901d9b662fc5878132029b0c08e675c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9901d9b662fc5878132029b0c08e675c">&#9670;&#160;</a></span>EP_MAXPACKET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EP_MAXPACKET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">ep</td><td>)</td>
+          <td>&#160;&#160;&#160;ep-&gt;ep_desc-&gt;wMaxPacketSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10bf6d69e0efb1b6d670fc9200bb84ab" name="a10bf6d69e0efb1b6d670fc9200bb84ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10bf6d69e0efb1b6d670fc9200bb84ab">&#9670;&#160;</a></span>FUNC_DISABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUNC_DISABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span>{                                             \</div>
+<div class="line">                                        if(func-&gt;ops-&gt;disable != <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a> &amp;&amp;         \</div>
+<div class="line">                                            func-&gt;enabled == <a class="code hl_define" href="rttypes_8h.html#a5e3d4a1b993df67473bc161096dba218">RT_TRUE</a>)               \</div>
+<div class="line">                                        {                                           \</div>
+<div class="line">                                                func-&gt;enabled = <a class="code hl_define" href="rttypes_8h.html#aad465603954df66df7791befd55ff325">RT_FALSE</a>;           \</div>
+<div class="line">                                                func-&gt;ops-&gt;disable(func);           \</div>
+<div class="line">                                        }                                           \</div>
+<div class="line">                                    }<span class="keywordflow">while</span>(0)</div>
+<div class="ttc" id="arttypes_8h_html_a5e3d4a1b993df67473bc161096dba218"><div class="ttname"><a href="rttypes_8h.html#a5e3d4a1b993df67473bc161096dba218">RT_TRUE</a></div><div class="ttdeci">#define RT_TRUE</div><div class="ttdef"><b>Definition</b> rttypes.h:116</div></div>
+<div class="ttc" id="arttypes_8h_html_aad465603954df66df7791befd55ff325"><div class="ttname"><a href="rttypes_8h.html#aad465603954df66df7791befd55ff325">RT_FALSE</a></div><div class="ttdeci">#define RT_FALSE</div><div class="ttdef"><b>Definition</b> rttypes.h:117</div></div>
+<div class="ttc" id="arttypes_8h_html_ab3633bbb2a09b3406b19463ffc634345"><div class="ttname"><a href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a></div><div class="ttdeci">#define RT_NULL</div><div class="ttdef"><b>Definition</b> rttypes.h:120</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a01638125650ab71597f096a8919a0f44" name="a01638125650ab71597f096a8919a0f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01638125650ab71597f096a8919a0f44">&#9670;&#160;</a></span>FUNC_ENABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FUNC_ENABLE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">func</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">                                        <span class="keywordflow">do</span>{                                             \</div>
+<div class="line">                                        if(func-&gt;ops-&gt;enable != <a class="code hl_define" href="rttypes_8h.html#ab3633bbb2a09b3406b19463ffc634345">RT_NULL</a> &amp;&amp;          \</div>
+<div class="line">                                            func-&gt;enabled == <a class="code hl_define" href="rttypes_8h.html#aad465603954df66df7791befd55ff325">RT_FALSE</a>)              \</div>
+<div class="line">                                        {                                           \</div>
+<div class="line">                                            if(func-&gt;ops-&gt;enable(func) == RT_EOK)   \</div>
+<div class="line">                                                func-&gt;enabled = <a class="code hl_define" href="rttypes_8h.html#a5e3d4a1b993df67473bc161096dba218">RT_TRUE</a>;            \</div>
+<div class="line">                                        }                                           \</div>
+<div class="line">                                    }<span class="keywordflow">while</span>(0)</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a75cc6ca185565fbf22a5a0c3738891bc" name="a75cc6ca185565fbf22a5a0c3738891bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cc6ca185565fbf22a5a0c3738891bc">&#9670;&#160;</a></span>MAX_INTF_STR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_INTF_STR&#160;&#160;&#160;20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6816c0076c3a7382b6e116232ee3045e" name="a6816c0076c3a7382b6e116232ee3045e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6816c0076c3a7382b6e116232ee3045e">&#9670;&#160;</a></span>RT_USBD_CLASS_CTRL_CONNECTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_USBD_CLASS_CTRL_CONNECTED&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(USBDevice) + 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b45bf8b21d1d0e73263eb5f30ec23cd" name="a6b45bf8b21d1d0e73263eb5f30ec23cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b45bf8b21d1d0e73263eb5f30ec23cd">&#9670;&#160;</a></span>USB_BCD_DEVICE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USB_BCD_DEVICE&#160;&#160;&#160;0x0200   /* USB Specification Release Number in Binary-Coded Decimal */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08bbe8eee58a0402a100a10dc6e0dfdf" name="a08bbe8eee58a0402a100a10dc6e0dfdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08bbe8eee58a0402a100a10dc6e0dfdf">&#9670;&#160;</a></span>USB_BCD_VERSION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define USB_BCD_VERSION&#160;&#160;&#160;0x0200   /* USB 2.0 */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a4a8057dfeb10e778fcecf259ff6fd6a1" name="a4a8057dfeb10e778fcecf259ff6fd6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8057dfeb10e778fcecf259ff6fd6a1">&#9670;&#160;</a></span>ualtsetting_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structualtsetting.html">ualtsetting</a>* <a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9abf164065c67e99ef2e5b58df231fbd" name="a9abf164065c67e99ef2e5b58df231fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abf164065c67e99ef2e5b58df231fbd">&#9670;&#160;</a></span>uconfig_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structuconfig.html">uconfig</a>* <a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9144c7b118d56d06c717acfc9d599f44" name="a9144c7b118d56d06c717acfc9d599f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9144c7b118d56d06c717acfc9d599f44">&#9670;&#160;</a></span>udcd_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structudcd.html">udcd</a>* <a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae53bfe3a0298069221d714531e24721e" name="ae53bfe3a0298069221d714531e24721e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae53bfe3a0298069221d714531e24721e">&#9670;&#160;</a></span>udclass_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structudclass.html">udclass</a>* <a class="el" href="usb__device_8h.html#ae53bfe3a0298069221d714531e24721e">udclass_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15b38e3b2aaa31edc90de53e2ab8b5b7" name="a15b38e3b2aaa31edc90de53e2ab8b5b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b38e3b2aaa31edc90de53e2ab8b5b7">&#9670;&#160;</a></span>udep_handler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* udep_handler_t) (struct <a class="el" href="structufunction.html">ufunction</a> *func, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a579fd5a04a5fca85880f643ab9ce685e" name="a579fd5a04a5fca85880f643ab9ce685e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579fd5a04a5fca85880f643ab9ce685e">&#9670;&#160;</a></span>udev_msg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structudev__msg.html">udev_msg</a>* <a class="el" href="usb__device_8h.html#a579fd5a04a5fca85880f643ab9ce685e">udev_msg_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4becf5b9dbdc2065d0c6dee39e03b54b" name="a4becf5b9dbdc2065d0c6dee39e03b54b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4becf5b9dbdc2065d0c6dee39e03b54b">&#9670;&#160;</a></span>udev_msg_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7d">udev_msg_type</a> <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7d">udev_msg_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48f4f13cc013f940cd2ccd683ffd86c8" name="a48f4f13cc013f940cd2ccd683ffd86c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48f4f13cc013f940cd2ccd683ffd86c8">&#9670;&#160;</a></span>udevice_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structudevice.html">udevice</a>* <a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab5d5c319e509b62e3f246be3b1f84347" name="ab5d5c319e509b62e3f246be3b1f84347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5d5c319e509b62e3f246be3b1f84347">&#9670;&#160;</a></span>uep_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structuendpoint.html">uendpoint</a>* <a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80df9e2d59bd3edb6811bfe7cea4ee24" name="a80df9e2d59bd3edb6811bfe7cea4ee24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80df9e2d59bd3edb6811bfe7cea4ee24">&#9670;&#160;</a></span>ufunction_ops_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structufunction__ops.html">ufunction_ops</a>* <a class="el" href="usb__device_8h.html#a80df9e2d59bd3edb6811bfe7cea4ee24">ufunction_ops_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7409c58bd270474a58cae2febca582f3" name="a7409c58bd270474a58cae2febca582f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7409c58bd270474a58cae2febca582f3">&#9670;&#160;</a></span>ufunction_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structufunction.html">ufunction</a>* <a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3eefc3b5ab36ae57a4c70f7e7b379a1a" name="a3eefc3b5ab36ae57a4c70f7e7b379a1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3eefc3b5ab36ae57a4c70f7e7b379a1a">&#9670;&#160;</a></span>uintf_handler_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(* uintf_handler_t) (struct <a class="el" href="structufunction.html">ufunction</a> *func, <a class="el" href="usb__common_8h.html#a9b056ad5426372128b291ecdfa98e2fb">ureq_t</a> setup)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad888c0137068d981a69ee2714e7a2e3b" name="ad888c0137068d981a69ee2714e7a2e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad888c0137068d981a69ee2714e7a2e3b">&#9670;&#160;</a></span>uintf_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structuinterface.html">uinterface</a>* <a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86cb0c95484f9ce556641cd5b5f8cde4" name="a86cb0c95484f9ce556641cd5b5f8cde4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86cb0c95484f9ce556641cd5b5f8cde4">&#9670;&#160;</a></span>uio_request_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structuio__request.html">uio_request</a>* <a class="el" href="usb__device_8h.html#a86cb0c95484f9ce556641cd5b5f8cde4">uio_request_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ab182f9b5cca776f035a230d85be63b7d" name="ab182f9b5cca776f035a230d85be63b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab182f9b5cca776f035a230d85be63b7d">&#9670;&#160;</a></span>udev_msg_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="usb__device_8h.html#ab182f9b5cca776f035a230d85be63b7d">udev_msg_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7daf2feb52e76e626a639f3809b9bff6ae8" name="ab182f9b5cca776f035a230d85be63b7daf2feb52e76e626a639f3809b9bff6ae8"></a>USB_MSG_SETUP_NOTIFY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7da959037b23baccef6850e47af252cd703" name="ab182f9b5cca776f035a230d85be63b7da959037b23baccef6850e47af252cd703"></a>USB_MSG_DATA_NOTIFY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7dacab85e42ec6858d00b52ad5dec0c1ac4" name="ab182f9b5cca776f035a230d85be63b7dacab85e42ec6858d00b52ad5dec0c1ac4"></a>USB_MSG_EP0_OUT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7dabdaeba566d0b353c33384d2316d382c0" name="ab182f9b5cca776f035a230d85be63b7dabdaeba566d0b353c33384d2316d382c0"></a>USB_MSG_EP_CLEAR_FEATURE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7da072176a68482368c2303acec68d245f7" name="ab182f9b5cca776f035a230d85be63b7da072176a68482368c2303acec68d245f7"></a>USB_MSG_SOF&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7da1c804c2132a34ff6444aa113ae953c35" name="ab182f9b5cca776f035a230d85be63b7da1c804c2132a34ff6444aa113ae953c35"></a>USB_MSG_RESET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7da6a6a86543fd3b6d3717eba918d27c54c" name="ab182f9b5cca776f035a230d85be63b7da6a6a86543fd3b6d3717eba918d27c54c"></a>USB_MSG_PLUG_IN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab182f9b5cca776f035a230d85be63b7da1796f1e73c9117c8633f35603e94968a" name="ab182f9b5cca776f035a230d85be63b7da1796f1e73c9117c8633f35603e94968a"></a>USB_MSG_PLUG_OUT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="abb75b5e205ce6c92679d4e0c01452c2f" name="abb75b5e205ce6c92679d4e0c01452c2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb75b5e205ce6c92679d4e0c01452c2f">&#9670;&#160;</a></span>UIO_REQUEST_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="usb__device_8h.html#abb75b5e205ce6c92679d4e0c01452c2f">UIO_REQUEST_TYPE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abb75b5e205ce6c92679d4e0c01452c2fa0a3d091cfe59d66d7c35ec6cdc744048" name="abb75b5e205ce6c92679d4e0c01452c2fa0a3d091cfe59d66d7c35ec6cdc744048"></a>UIO_REQUEST_READ_FULL&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb75b5e205ce6c92679d4e0c01452c2faa341a8f1f4e765267045bb30a4a961ed" name="abb75b5e205ce6c92679d4e0c01452c2faa341a8f1f4e765267045bb30a4a961ed"></a>UIO_REQUEST_READ_BEST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abb75b5e205ce6c92679d4e0c01452c2fa8cbe5ad9f3e5234464be6854c6dc9503" name="abb75b5e205ce6c92679d4e0c01452c2fa8cbe5ad9f3e5234464be6854c6dc9503"></a>UIO_REQUEST_WRITE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a315586001e63cfc5815fe6a5db2e1bcc" name="a315586001e63cfc5815fe6a5db2e1bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315586001e63cfc5815fe6a5db2e1bcc">&#9670;&#160;</a></span>dcd_ep0_send_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_ep0_send_status </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4d7de9e011be8b2a5c4709051db256fc" name="a4d7de9e011be8b2a5c4709051db256fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d7de9e011be8b2a5c4709051db256fc">&#9670;&#160;</a></span>dcd_ep_clear_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_ep_clear_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14fde78a6e137f5158b66351fc33f316" name="a14fde78a6e137f5158b66351fc33f316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14fde78a6e137f5158b66351fc33f316">&#9670;&#160;</a></span>dcd_ep_disable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_ep_disable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adde5dc95fbd5587a7569a6c5010680dd" name="adde5dc95fbd5587a7569a6c5010680dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adde5dc95fbd5587a7569a6c5010680dd">&#9670;&#160;</a></span>dcd_ep_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_ep_enable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4be4ca65a63b792152464f4c125bbd5f" name="a4be4ca65a63b792152464f4c125bbd5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be4ca65a63b792152464f4c125bbd5f">&#9670;&#160;</a></span>dcd_ep_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> dcd_ep_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e9749f2027341a7d61714caa223aaf6" name="a1e9749f2027341a7d61714caa223aaf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e9749f2027341a7d61714caa223aaf6">&#9670;&#160;</a></span>dcd_ep_read_prepare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> dcd_ep_read_prepare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7943367cdf9eeea5fb74e203a1ad60c" name="ab7943367cdf9eeea5fb74e203a1ad60c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7943367cdf9eeea5fb74e203a1ad60c">&#9670;&#160;</a></span>dcd_ep_set_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_ep_set_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a08f378b2eabd5bb0c3d2a3e78c1ac5fc" name="a08f378b2eabd5bb0c3d2a3e78c1ac5fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08f378b2eabd5bb0c3d2a3e78c1ac5fc">&#9670;&#160;</a></span>dcd_ep_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> dcd_ep_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c3a3389d439ff04b2a4cf5739979c53" name="a7c3a3389d439ff04b2a4cf5739979c53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c3a3389d439ff04b2a4cf5739979c53">&#9670;&#160;</a></span>dcd_set_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_set_address </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5f958df9dd4ee837d2ac954e799128d" name="aa5f958df9dd4ee837d2ac954e799128d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5f958df9dd4ee837d2ac954e799128d">&#9670;&#160;</a></span>dcd_set_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> dcd_set_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a565b0690b581e92b1677a053daf108f8" name="a565b0690b581e92b1677a053daf108f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a565b0690b581e92b1677a053daf108f8">&#9670;&#160;</a></span>rt_usb_device_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usb_device_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6741fb39a122bdf2e0398ba16850fb8c" name="a6741fb39a122bdf2e0398ba16850fb8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6741fb39a122bdf2e0398ba16850fb8c">&#9670;&#160;</a></span>rt_usbd_altsetting_add_endpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_altsetting_add_endpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a>&#160;</td>
+          <td class="paramname"><em>setting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acdbe7db29ddcfac3dad88a90c387804d" name="acdbe7db29ddcfac3dad88a90c387804d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdbe7db29ddcfac3dad88a90c387804d">&#9670;&#160;</a></span>rt_usbd_altsetting_config_descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_altsetting_config_descriptor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a>&#160;</td>
+          <td class="paramname"><em>setting</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a0fd4981851ce935649b6723a81f2f1bf">rt_off_t</a>&#160;</td>
+          <td class="paramname"><em>intf_pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a38b9db26704c0d984a05ded7a430569b" name="a38b9db26704c0d984a05ded7a430569b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b9db26704c0d984a05ded7a430569b">&#9670;&#160;</a></span>rt_usbd_altsetting_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a> rt_usbd_altsetting_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>desc_size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae0a6f3a87c03792878697b3828030cc6" name="ae0a6f3a87c03792878697b3828030cc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0a6f3a87c03792878697b3828030cc6">&#9670;&#160;</a></span>rt_usbd_class_list_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_class_list_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae225ecf3a8385cd942a418ff3444d26c" name="ae225ecf3a8385cd942a418ff3444d26c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae225ecf3a8385cd942a418ff3444d26c">&#9670;&#160;</a></span>rt_usbd_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_class_register </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ae53bfe3a0298069221d714531e24721e">udclass_t</a>&#160;</td>
+          <td class="paramname"><em>udclass</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac2626203768773d2a5cae2ecedbfb863" name="ac2626203768773d2a5cae2ecedbfb863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2626203768773d2a5cae2ecedbfb863">&#9670;&#160;</a></span>rt_usbd_clear_feature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_clear_feature </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f8a2a8c765743c4fb2111ca87f314f7" name="a2f8a2a8c765743c4fb2111ca87f314f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f8a2a8c765743c4fb2111ca87f314f7">&#9670;&#160;</a></span>rt_usbd_config_add_function()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_config_add_function </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acd96dd91372993528df78eb9637cf35e" name="acd96dd91372993528df78eb9637cf35e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd96dd91372993528df78eb9637cf35e">&#9670;&#160;</a></span>rt_usbd_config_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a> rt_usbd_config_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a77e72cb0e9e20fe5ade0314fccedb922" name="a77e72cb0e9e20fe5ade0314fccedb922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e72cb0e9e20fe5ade0314fccedb922">&#9670;&#160;</a></span>rt_usbd_connect_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_connect_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a97957896f29d4ca83dec71408298b08c" name="a97957896f29d4ca83dec71408298b08c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97957896f29d4ca83dec71408298b08c">&#9670;&#160;</a></span>rt_usbd_core_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_core_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a99ed82bee0f193f9ffcdca7211a8a229" name="a99ed82bee0f193f9ffcdca7211a8a229"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ed82bee0f193f9ffcdca7211a8a229">&#9670;&#160;</a></span>rt_usbd_device_add_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_add_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a>&#160;</td>
+          <td class="paramname"><em>cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c23b429cdc770ee1c0ee39166f46ca1" name="a7c23b429cdc770ee1c0ee39166f46ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c23b429cdc770ee1c0ee39166f46ca1">&#9670;&#160;</a></span>rt_usbd_device_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> rt_usbd_device_new </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2092e751eb9b48aa08a4b5ed6461ce0b" name="a2092e751eb9b48aa08a4b5ed6461ce0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2092e751eb9b48aa08a4b5ed6461ce0b">&#9670;&#160;</a></span>rt_usbd_device_set_controller()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_controller </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2f407ff8475821ad139052d026dcaf9c" name="a2f407ff8475821ad139052d026dcaf9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f407ff8475821ad139052d026dcaf9c">&#9670;&#160;</a></span>rt_usbd_device_set_descriptor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_descriptor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a3a9111e0d1b3cdc049a535e6a3dd304d">udev_desc_t</a>&#160;</td>
+          <td class="paramname"><em>dev_desc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf19ab30835fcea247a5dd73f0b39abd" name="acf19ab30835fcea247a5dd73f0b39abd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf19ab30835fcea247a5dd73f0b39abd">&#9670;&#160;</a></span>rt_usbd_device_set_interface_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_interface_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c6af8b748f510bb6bbddce93916e957" name="a1c6af8b748f510bb6bbddce93916e957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c6af8b748f510bb6bbddce93916e957">&#9670;&#160;</a></span>rt_usbd_device_set_os_comp_id_desc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_os_comp_id_desc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a286af23d162310f728d5fe019c01ade9">usb_os_comp_id_desc_t</a>&#160;</td>
+          <td class="paramname"><em>os_comp_id_desc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac318b5ace95eec4271843f6538e8c923" name="ac318b5ace95eec4271843f6538e8c923"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac318b5ace95eec4271843f6538e8c923">&#9670;&#160;</a></span>rt_usbd_device_set_qualifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_qualifier </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structusb__qualifier__descriptor.html">usb_qualifier_descriptor</a> *&#160;</td>
+          <td class="paramname"><em>qualifier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace869c01645b7215d7b6422fe74370c0" name="ace869c01645b7215d7b6422fe74370c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace869c01645b7215d7b6422fe74370c0">&#9670;&#160;</a></span>rt_usbd_device_set_string()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_device_set_string </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>ustring</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a771f669f3c9d53129f6729662bfedeaf" name="a771f669f3c9d53129f6729662bfedeaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a771f669f3c9d53129f6729662bfedeaf">&#9670;&#160;</a></span>rt_usbd_disconnect_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_disconnect_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4473d6c9718d2a9bf92f33ce91c0302e" name="a4473d6c9718d2a9bf92f33ce91c0302e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4473d6c9718d2a9bf92f33ce91c0302e">&#9670;&#160;</a></span>rt_usbd_ecm_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_ecm_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a29c6b4d9af18bf4a1ed3bb0ead4251dd" name="a29c6b4d9af18bf4a1ed3bb0ead4251dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29c6b4d9af18bf4a1ed3bb0ead4251dd">&#9670;&#160;</a></span>rt_usbd_endpoint_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> rt_usbd_endpoint_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a6013622af708528ebed775135db28e90">uep_desc_t</a>&#160;</td>
+          <td class="paramname"><em>ep_desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a15b38e3b2aaa31edc90de53e2ab8b5b7">udep_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abedd2bedfbe73617e04caf45fcd9e831" name="abedd2bedfbe73617e04caf45fcd9e831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abedd2bedfbe73617e04caf45fcd9e831">&#9670;&#160;</a></span>rt_usbd_ep0_clear_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep0_clear_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a64c80851c07fd394970cf4fc4f1fe6d0" name="a64c80851c07fd394970cf4fc4f1fe6d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64c80851c07fd394970cf4fc4f1fe6d0">&#9670;&#160;</a></span>rt_usbd_ep0_in_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep0_in_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6fb76af51965cafbcf611c1a1301a4b8" name="a6fb76af51965cafbcf611c1a1301a4b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fb76af51965cafbcf611c1a1301a4b8">&#9670;&#160;</a></span>rt_usbd_ep0_out_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep0_out_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f7a1db8e2d61776fd3affac257fdee9" name="a8f7a1db8e2d61776fd3affac257fdee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f7a1db8e2d61776fd3affac257fdee9">&#9670;&#160;</a></span>rt_usbd_ep0_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_usbd_ep0_read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>(*)(<a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> device, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)&#160;</td>
+          <td class="paramname"><em>rx_ind</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a551a65c6e6abc0e929ed965809c2545a" name="a551a65c6e6abc0e929ed965809c2545a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a551a65c6e6abc0e929ed965809c2545a">&#9670;&#160;</a></span>rt_usbd_ep0_set_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep0_set_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acfb590a9e72e32fed04a89ac162063e4" name="acfb590a9e72e32fed04a89ac162063e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfb590a9e72e32fed04a89ac162063e4">&#9670;&#160;</a></span>rt_usbd_ep0_setup_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep0_setup_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="structurequest.html">urequest</a> *&#160;</td>
+          <td class="paramname"><em>setup</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aafac0ae57651e07a08fcbf4d12f52df6" name="aafac0ae57651e07a08fcbf4d12f52df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafac0ae57651e07a08fcbf4d12f52df6">&#9670;&#160;</a></span>rt_usbd_ep0_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_usbd_ep0_write </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e1cc94040d2723bb35f5d6f1e233e0e" name="a2e1cc94040d2723bb35f5d6f1e233e0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1cc94040d2723bb35f5d6f1e233e0e">&#9670;&#160;</a></span>rt_usbd_ep_clear_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep_clear_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5b52494007f4d1ae8121556f75a933a" name="aa5b52494007f4d1ae8121556f75a933a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5b52494007f4d1ae8121556f75a933a">&#9670;&#160;</a></span>rt_usbd_ep_in_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep_in_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd49f431a88162c8291d7528dc817494" name="abd49f431a88162c8291d7528dc817494"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd49f431a88162c8291d7528dc817494">&#9670;&#160;</a></span>rt_usbd_ep_out_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep_out_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06c2ca9048e9792008ba1767bddbb91f" name="a06c2ca9048e9792008ba1767bddbb91f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c2ca9048e9792008ba1767bddbb91f">&#9670;&#160;</a></span>rt_usbd_ep_set_stall()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_ep_set_stall </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d4bb020235c3d608d0b245cb572458b" name="a0d4bb020235c3d608d0b245cb572458b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d4bb020235c3d608d0b245cb572458b">&#9670;&#160;</a></span>rt_usbd_event_signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_event_signal </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structudev__msg.html">udev_msg</a> *&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a992a694856adc714f3a4150f1e29f9a2" name="a992a694856adc714f3a4150f1e29f9a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992a694856adc714f3a4150f1e29f9a2">&#9670;&#160;</a></span>rt_usbd_find_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a9abf164065c67e99ef2e5b58df231fbd">uconfig_t</a> rt_usbd_find_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab22ab4c3167184c6e97ae6a06480d4b4" name="ab22ab4c3167184c6e97ae6a06480d4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab22ab4c3167184c6e97ae6a06480d4b4">&#9670;&#160;</a></span>rt_usbd_find_device()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a> rt_usbd_find_device </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e7a9b42a315440e19f2ca5c12ffec6d" name="a8e7a9b42a315440e19f2ca5c12ffec6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7a9b42a315440e19f2ca5c12ffec6d">&#9670;&#160;</a></span>rt_usbd_find_endpoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a> rt_usbd_find_endpoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> *&#160;</td>
+          <td class="paramname"><em>pfunc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>ep_addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2a50d62482a8f7d1f16ad98235a7553c" name="a2a50d62482a8f7d1f16ad98235a7553c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a50d62482a8f7d1f16ad98235a7553c">&#9670;&#160;</a></span>rt_usbd_find_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a> rt_usbd_find_interface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> *&#160;</td>
+          <td class="paramname"><em>pfunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d819ab98ad463d1d03ac9af4366cc23" name="a0d819ab98ad463d1d03ac9af4366cc23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d819ab98ad463d1d03ac9af4366cc23">&#9670;&#160;</a></span>rt_usbd_function_add_interface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_function_add_interface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a>&#160;</td>
+          <td class="paramname"><em>intf</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a024d833c07f9355d87a193353b9269d9" name="a024d833c07f9355d87a193353b9269d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a024d833c07f9355d87a193353b9269d9">&#9670;&#160;</a></span>rt_usbd_function_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a> rt_usbd_function_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a3a9111e0d1b3cdc049a535e6a3dd304d">udev_desc_t</a>&#160;</td>
+          <td class="paramname"><em>dev_desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a80df9e2d59bd3edb6811bfe7cea4ee24">ufunction_ops_t</a>&#160;</td>
+          <td class="paramname"><em>ops</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b1c47d84e0b5f06ff9d3f1c9c8f9064" name="a9b1c47d84e0b5f06ff9d3f1c9c8f9064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b1c47d84e0b5f06ff9d3f1c9c8f9064">&#9670;&#160;</a></span>rt_usbd_hid_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_hid_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a95212397ea3dca7d7c6753c801d086" name="a4a95212397ea3dca7d7c6753c801d086"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a95212397ea3dca7d7c6753c801d086">&#9670;&#160;</a></span>rt_usbd_interface_add_altsetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_interface_add_altsetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a>&#160;</td>
+          <td class="paramname"><em>intf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a4a8057dfeb10e778fcecf259ff6fd6a1">ualtsetting_t</a>&#160;</td>
+          <td class="paramname"><em>setting</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee6884416dc18960f51fa5b8b49e46aa" name="aee6884416dc18960f51fa5b8b49e46aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee6884416dc18960f51fa5b8b49e46aa">&#9670;&#160;</a></span>rt_usbd_interface_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a> rt_usbd_interface_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a3eefc3b5ab36ae57a4c70f7e7b379a1a">uintf_handler_t</a>&#160;</td>
+          <td class="paramname"><em>handler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a20b90e426de92987fe88e8ba26c7f480" name="a20b90e426de92987fe88e8ba26c7f480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20b90e426de92987fe88e8ba26c7f480">&#9670;&#160;</a></span>rt_usbd_io_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_usbd_io_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ab5d5c319e509b62e3f246be3b1f84347">uep_t</a>&#160;</td>
+          <td class="paramname"><em>ep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a86cb0c95484f9ce556641cd5b5f8cde4">uio_request_t</a>&#160;</td>
+          <td class="paramname"><em>req</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e34389bc014a7210a8c09553a332976" name="a4e34389bc014a7210a8c09553a332976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e34389bc014a7210a8c09553a332976">&#9670;&#160;</a></span>rt_usbd_msc_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_msc_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5788857035d9733b7a7e3211d6a34a5" name="aa5788857035d9733b7a7e3211d6a34a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5788857035d9733b7a7e3211d6a34a5">&#9670;&#160;</a></span>rt_usbd_os_comp_id_desc_add_os_func_comp_id_desc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_os_comp_id_desc_add_os_func_comp_id_desc </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a286af23d162310f728d5fe019c01ade9">usb_os_comp_id_desc_t</a>&#160;</td>
+          <td class="paramname"><em>os_comp_id_desc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#ac7df66596902510c8d09534e5beb91c3">usb_os_func_comp_id_desc_t</a>&#160;</td>
+          <td class="paramname"><em>os_func_comp_id_desc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60e694618bcc89e8d120189c717176c4" name="a60e694618bcc89e8d120189c717176c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60e694618bcc89e8d120189c717176c4">&#9670;&#160;</a></span>rt_usbd_reset_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_reset_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9894222f85f110c7b530953bbb263eaa" name="a9894222f85f110c7b530953bbb263eaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9894222f85f110c7b530953bbb263eaa">&#9670;&#160;</a></span>rt_usbd_rndis_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_rndis_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8e4c5bbc4f6fd2b811ec1cb18d8874c8" name="a8e4c5bbc4f6fd2b811ec1cb18d8874c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e4c5bbc4f6fd2b811ec1cb18d8874c8">&#9670;&#160;</a></span>rt_usbd_set_altsetting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_set_altsetting </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#ad888c0137068d981a69ee2714e7a2e3b">uintf_t</a>&#160;</td>
+          <td class="paramname"><em>intf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac391a66d6ee0b26c0bacfc9f8494d3f2" name="ac391a66d6ee0b26c0bacfc9f8494d3f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac391a66d6ee0b26c0bacfc9f8494d3f2">&#9670;&#160;</a></span>rt_usbd_set_config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_set_config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a510506a1da059ca43bc91150e53fc14b" name="a510506a1da059ca43bc91150e53fc14b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a510506a1da059ca43bc91150e53fc14b">&#9670;&#160;</a></span>rt_usbd_set_feature()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_set_feature </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a48f4f13cc013f940cd2ccd683ffd86c8">udevice_t</a>&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14c659b12bf736e41b48d0b496e73b7e" name="a14c659b12bf736e41b48d0b496e73b7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c659b12bf736e41b48d0b496e73b7e">&#9670;&#160;</a></span>rt_usbd_sof_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_usbd_sof_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a9144c7b118d56d06c717acfc9d599f44">udcd_t</a>&#160;</td>
+          <td class="paramname"><em>dcd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1961477ef2cd8c50140d0cdae5d676d0" name="a1961477ef2cd8c50140d0cdae5d676d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1961477ef2cd8c50140d0cdae5d676d0">&#9670;&#160;</a></span>rt_usbd_vcom_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_vcom_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73bbfbb953e48866f5c61032fc35bcf8" name="a73bbfbb953e48866f5c61032fc35bcf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73bbfbb953e48866f5c61032fc35bcf8">&#9670;&#160;</a></span>rt_usbd_winusb_class_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_usbd_winusb_class_register </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a431012145116fc954ccd1f51eebd61a2" name="a431012145116fc954ccd1f51eebd61a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a431012145116fc954ccd1f51eebd61a2">&#9670;&#160;</a></span>usbd_os_proerty_descriptor_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline void usbd_os_proerty_descriptor_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="usb__device_8h.html#a7409c58bd270474a58cae2febca582f3">ufunction_t</a>&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a9b056ad5426372128b291ecdfa98e2fb">ureq_t</a>&#160;</td>
+          <td class="paramname"><em>setup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="usb__common_8h.html#a29d7709dd06e831d3ff68480e1fdb5fe">usb_os_proerty_t</a>&#160;</td>
+          <td class="paramname"><em>usb_os_proerty</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>number_of_proerty</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="usb__device_8h.html">usb_device.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

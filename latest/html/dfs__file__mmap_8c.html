@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/dfs/dfs_v2/src/dfs_file_mmap.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dfs__file__mmap_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dfs_file_mmap.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dfs__file_8h_source.html">dfs_file.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dfs__dentry_8h_source.html">dfs_dentry.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dfs__mnt_8h_source.html">dfs_mnt.h</a>&quot;</code><br />
+<code>#include &lt;<a class="el" href="rtdbg_8h_source.html">rtdbg.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dfs_file_mmap.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="dfs__file__mmap_8c__incl.png" border="0" usemap="#acomponents_2dfs_2dfs__v2_2src_2dfs__file__mmap_8c" alt=""/></div>
+<map name="acomponents_2dfs_2dfs__v2_2src_2dfs__file__mmap_8c" id="acomponents_2dfs_2dfs__v2_2src_2dfs__file__mmap_8c">
+<area shape="rect" title=" " alt="" coords="1810,5,1989,45"/>
+<area shape="rect" href="dfs__file_8h.html" title=" " alt="" coords="1231,167,1312,192"/>
+<area shape="poly" title=" " alt="" coords="1810,34,1669,43,1509,56,1371,74,1324,84,1298,95,1288,107,1281,122,1274,153,1269,152,1276,120,1284,105,1295,91,1322,79,1370,69,1508,51,1668,37,1810,28"/>
+<area shape="rect" href="dfs__dentry_8h.html" title=" " alt="" coords="1309,93,1410,119"/>
+<area shape="poly" title=" " alt="" coords="1810,42,1424,98,1423,93,1809,37"/>
+<area shape="rect" href="dfs__mnt_8h.html" title=" " alt="" coords="1940,548,2027,573"/>
+<area shape="poly" title=" " alt="" coords="1929,44,1957,67,1985,98,2008,136,2014,156,2017,178,2017,408,2009,478,1994,535,1989,534,2004,477,2011,408,2011,178,2009,157,2003,138,1981,102,1953,71,1925,48"/>
+<area shape="rect" href="rtdbg_8h.html" title=" " alt="" coords="2276,167,2344,192"/>
+<area shape="poly" title=" " alt="" coords="1951,43,2267,159,2265,164,1949,48"/>
+<area shape="rect" href="dfs_8h.html" title=" " alt="" coords="785,313,840,339"/>
+<area shape="poly" title=" " alt="" coords="1236,195,854,314,852,309,1234,190"/>
+<area shape="rect" href="dfs__fs_8h.html" title=" " alt="" coords="1235,240,1308,265"/>
+<area shape="poly" title=" " alt="" coords="1267,192,1265,227,1260,226,1262,192"/>
+<area shape="rect" title=" " alt="" coords="942,394,1009,419"/>
+<area shape="poly" title=" " alt="" coords="837,336,941,386,938,391,835,341"/>
+<area shape="rect" title=" " alt="" coords="2243,1061,2313,1087"/>
+<area shape="poly" title=" " alt="" coords="841,327,1414,384,1494,390,1570,391,1710,383,1838,371,1956,362,2013,362,2068,366,2123,376,2177,392,2232,416,2287,449,2343,492,2400,546,2512,662,2561,719,2600,775,2625,832,2631,861,2632,891,2628,921,2618,952,2602,983,2579,1015,2562,1029,2536,1040,2469,1057,2394,1067,2327,1073,2327,1068,2394,1062,2468,1051,2534,1035,2559,1024,2575,1011,2597,980,2613,950,2623,920,2627,891,2626,862,2620,834,2595,778,2557,722,2509,666,2396,550,2339,496,2284,453,2230,421,2176,397,2122,381,2067,371,2012,367,1956,367,1838,376,1711,389,1570,396,1494,395,1414,389,840,333"/>
+<area shape="rect" title=" " alt="" coords="5,394,76,419"/>
+<area shape="poly" title=" " alt="" coords="785,329,673,329,500,335,295,353,190,369,88,389,79,392,77,387,87,384,189,363,295,348,500,330,673,324,785,324"/>
+<area shape="rect" title=" " alt="" coords="100,394,171,419"/>
+<area shape="poly" title=" " alt="" coords="785,330,686,331,536,339,360,357,270,371,183,389,173,392,172,387,181,384,269,366,360,351,536,334,685,326,785,324"/>
+<area shape="rect" title=" " alt="" coords="195,387,383,427"/>
+<area shape="poly" title=" " alt="" coords="786,334,397,389,396,384,785,328"/>
+<area shape="rect" title=" " alt="" coords="407,394,469,419"/>
+<area shape="poly" title=" " alt="" coords="786,333,654,351,568,368,483,389,476,391,474,386,481,384,567,362,653,346,785,328"/>
+<area shape="rect" title=" " alt="" coords="494,394,579,419"/>
+<area shape="poly" title=" " alt="" coords="786,337,592,389,583,392,581,387,591,384,785,331"/>
+<area shape="rect" title=" " alt="" coords="604,394,701,419"/>
+<area shape="poly" title=" " alt="" coords="791,341,689,390,687,386,788,336"/>
+<area shape="rect" title=" " alt="" coords="726,394,817,419"/>
+<area shape="poly" title=" " alt="" coords="809,340,786,383,781,381,804,338"/>
+<area shape="rect" title=" " alt="" coords="889,1061,984,1087"/>
+<area shape="poly" title=" " alt="" coords="822,338,831,357,839,381,840,406,831,428,801,454,769,465,736,466,703,460,669,454,635,452,601,458,566,477,520,517,486,556,462,596,447,638,438,684,434,734,433,853,433,928,436,944,446,959,461,972,482,985,536,1008,603,1026,749,1052,876,1066,875,1071,749,1057,602,1031,534,1013,479,990,458,977,442,962,431,946,427,929,427,853,428,734,433,683,442,637,457,594,482,553,516,513,563,472,599,453,635,447,670,449,704,455,737,460,768,460,798,450,827,425,835,405,834,382,827,359,818,340"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="1179,695,1268,720"/>
+<area shape="poly" title=" " alt="" coords="830,337,853,358,875,385,900,433,906,456,907,486,907,562,914,581,934,601,964,620,1002,637,1087,668,1166,690,1165,695,1085,673,1000,642,962,624,931,605,910,584,902,562,902,486,900,457,895,435,870,388,849,362,826,341"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1315,394,1401,419"/>
+<area shape="poly" title=" " alt="" coords="840,329,1301,395,1300,400,840,334"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="1205,768,1268,793"/>
+<area shape="poly" title=" " alt="" coords="1228,720,1235,754,1229,755,1223,721"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="1477,841,1541,867"/>
+<area shape="poly" title=" " alt="" coords="1269,788,1464,838,1462,843,1268,793"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="1546,915,1629,940"/>
+<area shape="poly" title=" " alt="" coords="1523,865,1566,904,1563,907,1520,869"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="1530,988,1610,1013"/>
+<area shape="poly" title=" " alt="" coords="1514,867,1522,900,1536,939,1557,975,1552,978,1532,941,1517,901,1509,868"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="1635,988,1735,1013"/>
+<area shape="poly" title=" " alt="" coords="1542,861,1592,880,1619,894,1643,913,1665,943,1680,974,1675,976,1661,946,1639,917,1616,899,1590,885,1540,866"/>
+<area shape="rect" title=" " alt="" coords="1884,915,1995,940"/>
+<area shape="poly" title=" " alt="" coords="1541,858,1871,912,1870,917,1540,863"/>
+<area shape="poly" title=" " alt="" coords="1587,941,1579,976,1573,974,1582,940"/>
+<area shape="poly" title=" " alt="" coords="1605,938,1659,977,1656,982,1601,942"/>
+<area shape="poly" title=" " alt="" coords="1611,1008,1624,1011,1798,1033,1970,1050,2229,1068,2229,1073,1969,1055,1797,1038,1623,1016,1610,1014"/>
+<area shape="poly" title=" " alt="" coords="1530,1009,998,1069,997,1063,1530,1004"/>
+<area shape="rect" title=" " alt="" coords="1805,1061,1887,1087"/>
+<area shape="poly" title=" " alt="" coords="1611,1010,1792,1056,1791,1061,1609,1015"/>
+<area shape="rect" title=" " alt="" coords="1533,1061,1607,1087"/>
+<area shape="poly" title=" " alt="" coords="1573,1014,1573,1048,1567,1048,1567,1014"/>
+<area shape="poly" title=" " alt="" coords="1712,1011,1808,1053,1806,1058,1710,1016"/>
+<area shape="poly" title=" " alt="" coords="1315,415,1163,438,1087,456,1057,466,1035,477,995,510,962,546,937,585,922,625,916,667,922,709,939,751,968,791,993,804,1040,815,1180,832,1337,843,1463,848,1463,854,1337,848,1180,837,1040,820,991,809,964,795,934,753,917,710,911,667,917,624,932,582,958,543,991,506,1033,472,1055,461,1085,450,1162,433,1314,410"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="1747,621,1833,647"/>
+<area shape="poly" title=" " alt="" coords="1402,406,1505,411,1634,422,1757,441,1806,455,1841,472,1866,494,1883,518,1888,544,1879,575,1859,599,1833,617,1830,613,1855,595,1874,572,1883,544,1878,520,1862,498,1838,477,1804,460,1756,446,1633,427,1504,416,1401,412"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="978,768,1130,793"/>
+<area shape="poly" title=" " alt="" coords="1315,415,1250,423,1175,436,1108,454,1083,465,1065,477,1038,505,1017,532,1001,560,991,588,987,617,988,648,994,682,1006,719,1017,739,1032,757,1028,760,1013,742,1001,721,989,683,982,648,981,616,986,586,996,558,1012,529,1034,501,1062,473,1080,460,1106,449,1174,431,1249,418,1314,410"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="1015,695,1154,720"/>
+<area shape="poly" title=" " alt="" coords="1315,415,1253,423,1183,435,1121,453,1099,464,1084,476,1070,500,1061,527,1057,555,1058,583,1066,638,1078,681,1073,682,1060,639,1052,584,1052,554,1056,525,1065,498,1080,473,1096,460,1119,448,1182,430,1252,417,1314,409"/>
+<area shape="rect" href="block_8h.html" title=" " alt="" coords="1227,621,1398,647"/>
+<area shape="poly" title=" " alt="" coords="1386,417,1412,431,1436,450,1452,474,1454,487,1451,501,1430,537,1402,569,1373,595,1345,616,1342,611,1369,591,1399,565,1426,534,1446,499,1449,487,1447,475,1433,454,1409,436,1384,422"/>
+<area shape="rect" href="char_8h.html" title=" " alt="" coords="1422,621,1585,647"/>
+<area shape="poly" title=" " alt="" coords="1392,417,1433,439,1454,454,1471,473,1489,507,1499,543,1506,607,1501,608,1494,544,1484,509,1466,476,1450,458,1430,443,1389,422"/>
+<area shape="rect" href="graphic_8h.html" title=" " alt="" coords="684,548,867,573"/>
+<area shape="poly" title=" " alt="" coords="1315,413,1242,419,1147,430,1042,449,938,477,865,509,805,543,802,538,862,504,936,472,1040,444,1146,425,1241,414,1314,408"/>
+<area shape="rect" href="mtd_8h.html" title=" " alt="" coords="1095,475,1256,500"/>
+<area shape="poly" title=" " alt="" coords="1332,422,1216,472,1214,467,1330,417"/>
+<area shape="rect" href="net_8h.html" title=" " alt="" coords="1280,475,1436,500"/>
+<area shape="poly" title=" " alt="" coords="1361,420,1361,461,1355,461,1355,420"/>
+<area shape="rect" href="ringbuffer_8h.html" title=" " alt="" coords="1613,548,1732,573"/>
+<area shape="poly" title=" " alt="" coords="1399,417,1468,440,1545,472,1601,505,1649,538,1645,542,1598,510,1542,477,1466,445,1397,422"/>
+<area shape="rect" href="completion_8h.html" title=" " alt="" coords="1970,768,2101,793"/>
+<area shape="poly" title=" " alt="" coords="1402,408,1600,426,1868,457,1996,477,2103,501,2145,514,2177,528,2198,543,2206,559,2206,636,2203,659,2194,681,2180,700,2163,717,2123,745,2083,765,2080,760,2120,741,2159,713,2176,697,2189,678,2198,658,2201,635,2201,560,2194,546,2175,532,2143,519,2102,506,1995,482,1867,462,1600,431,1401,414"/>
+<area shape="rect" href="dataqueue_8h.html" title=" " alt="" coords="2343,768,2469,793"/>
+<area shape="poly" title=" " alt="" coords="1402,407,1638,420,1965,447,2123,467,2256,492,2308,506,2348,522,2374,539,2381,549,2383,559,2383,635,2390,700,2402,754,2396,756,2384,701,2378,635,2378,560,2376,551,2370,543,2345,527,2306,511,2255,497,2122,473,1964,453,1637,425,1402,412"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="1985,695,2115,720"/>
+<area shape="poly" title=" " alt="" coords="1402,407,1489,412,1607,423,1739,443,1872,472,1925,483,1968,492,2006,509,2024,525,2042,547,2057,580,2063,617,2062,652,2058,681,2053,681,2057,651,2058,617,2052,582,2037,549,2020,528,2003,514,1966,497,1924,489,1871,477,1738,448,1606,429,1488,417,1401,412"/>
+<area shape="rect" href="condvar_8h.html" title=" " alt="" coords="1756,548,1864,573"/>
+<area shape="poly" title=" " alt="" coords="1401,417,1584,472,1770,541,1768,546,1582,477,1399,422"/>
+<area shape="rect" href="waitqueue_8h.html" title=" " alt="" coords="467,768,593,793"/>
+<area shape="poly" title=" " alt="" coords="1315,413,935,437,734,456,662,466,620,477,587,492,561,508,544,528,538,560,538,635,534,754,529,754,533,635,533,559,539,526,558,504,585,488,618,472,661,461,733,451,935,432,1314,408"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="1742,475,1827,500"/>
+<area shape="poly" title=" " alt="" coords="1402,413,1729,473,1728,478,1401,419"/>
+<area shape="rect" href="poll_8h.html" title=" " alt="" coords="617,768,699,793"/>
+<area shape="poly" title=" " alt="" coords="1315,413,961,437,775,456,709,466,671,477,641,493,618,509,603,529,598,560,598,635,602,669,614,702,644,755,639,758,609,704,597,671,593,636,593,559,598,527,614,505,638,488,669,472,708,461,775,451,960,432,1314,408"/>
+<area shape="rect" href="ringblk__buf_8h.html" title=" " alt="" coords="723,768,852,793"/>
+<area shape="poly" title=" " alt="" coords="1315,414,1122,433,998,451,873,477,833,484,793,486,720,489,691,495,668,506,654,527,649,560,649,635,651,656,659,676,684,710,717,738,751,759,748,764,714,743,680,714,654,678,646,658,643,636,643,559,649,525,665,502,689,490,720,484,793,481,833,479,872,472,997,446,1121,428,1314,408"/>
+<area shape="poly" title=" " alt="" coords="1747,643,1282,701,1281,696,1746,638"/>
+<area shape="poly" title=" " alt="" coords="1790,648,1780,683,1771,703,1759,722,1712,766,1657,800,1602,825,1555,843,1553,838,1600,821,1655,795,1708,761,1755,718,1766,700,1775,681,1785,646"/>
+<area shape="poly" title=" " alt="" coords="1834,634,1910,638,1998,647,2078,665,2109,677,2129,693,2137,707,2140,724,2136,764,2119,810,2094,860,2064,908,2032,953,2001,990,1974,1015,1935,1040,1895,1059,1893,1054,1932,1036,1971,1011,1997,986,2028,950,2060,906,2090,857,2114,808,2131,762,2135,724,2132,709,2125,696,2106,682,2077,670,1997,653,1909,643,1834,639"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="1819,695,1910,720"/>
+<area shape="poly" title=" " alt="" coords="1804,645,1844,683,1841,687,1800,649"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="1687,695,1744,720"/>
+<area shape="poly" title=" " alt="" coords="1773,649,1732,686,1728,682,1769,645"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="2189,768,2263,793"/>
+<area shape="poly" title=" " alt="" coords="1834,635,1916,641,2015,652,2108,669,2146,680,2173,692,2188,705,2201,721,2219,754,2215,756,2197,724,2185,709,2170,697,2144,685,2107,674,2014,657,1915,646,1833,640"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="1597,695,1663,720"/>
+<area shape="poly" title=" " alt="" coords="1765,649,1670,691,1668,687,1763,644"/>
+<area shape="poly" title=" " alt="" coords="1854,722,1809,759,1749,796,1698,816,1646,831,1555,849,1554,844,1645,826,1697,810,1746,791,1806,754,1850,718"/>
+<area shape="poly" title=" " alt="" coords="1703,722,1606,796,1542,837,1539,832,1603,791,1700,718"/>
+<area shape="poly" title=" " alt="" coords="1732,693,1774,655,1777,659,1736,697"/>
+<area shape="poly" title=" " alt="" coords="2188,788,2113,796,1555,851,1554,846,2112,791,2188,783"/>
+<area shape="poly" title=" " alt="" coords="2210,796,2185,816,2162,843,2149,867,2143,889,2139,933,2132,974,2122,995,2104,1015,2069,1034,2016,1049,1901,1069,1900,1064,2015,1044,2067,1029,2100,1011,2118,992,2127,972,2134,932,2137,888,2144,865,2157,840,2181,812,2207,792"/>
+<area shape="poly" title=" " alt="" coords="2204,796,1975,911,1973,906,2202,791"/>
+<area shape="rect" title=" " alt="" coords="2171,841,2286,867"/>
+<area shape="poly" title=" " alt="" coords="2229,794,2230,828,2225,828,2224,794"/>
+<area shape="rect" title=" " alt="" coords="2310,841,2419,867"/>
+<area shape="poly" title=" " alt="" coords="2249,791,2331,833,2329,837,2247,796"/>
+<area shape="poly" title=" " alt="" coords="1627,722,1608,756,1580,795,1537,835,1534,831,1576,792,1603,753,1622,719"/>
+<area shape="poly" title=" " alt="" coords="1127,791,1463,843,1463,848,1127,796"/>
+<area shape="poly" title=" " alt="" coords="1110,718,1201,760,1199,765,1108,722"/>
+<area shape="poly" title=" " alt="" coords="1097,718,1137,755,1164,775,1194,791,1265,816,1338,833,1407,843,1463,848,1463,854,1406,849,1337,839,1263,822,1192,796,1162,779,1134,759,1094,722"/>
+<area shape="poly" title=" " alt="" coords="1082,721,1067,757,1062,755,1077,719"/>
+<area shape="poly" title=" " alt="" coords="1327,645,1377,693,1443,767,1493,829,1489,832,1439,770,1373,697,1324,649"/>
+<area shape="poly" title=" " alt="" coords="1503,648,1493,695,1488,744,1493,793,1502,828,1497,829,1487,794,1483,744,1487,694,1497,646"/>
+<area shape="poly" title=" " alt="" coords="781,573,796,616,825,677,844,709,867,740,893,768,923,791,967,809,1028,824,1101,834,1181,842,1340,849,1463,850,1463,856,1340,854,1180,847,1100,839,1027,829,965,814,921,796,890,772,863,744,839,712,820,679,791,618,776,575"/>
+<area shape="poly" title=" " alt="" coords="1177,500,1176,528,1178,566,1187,607,1204,645,1221,663,1238,672,1259,680,1282,692,1343,742,1369,765,1405,791,1475,833,1472,837,1402,796,1366,769,1340,746,1279,697,1256,684,1236,677,1218,667,1200,648,1181,609,1173,567,1171,528,1172,500"/>
+<area shape="poly" title=" " alt="" coords="1334,502,1289,527,1242,562,1224,581,1212,602,1209,624,1218,645,1228,658,1240,667,1265,674,1294,679,1326,692,1360,717,1385,739,1438,791,1485,830,1482,834,1435,795,1381,743,1357,721,1323,697,1292,684,1264,679,1237,671,1225,662,1213,648,1204,624,1207,601,1219,578,1238,558,1286,523,1332,498"/>
+<area shape="poly" title=" " alt="" coords="1673,575,1662,609,1643,648,1629,664,1615,673,1602,682,1588,696,1565,730,1546,767,1520,830,1515,827,1541,764,1561,728,1584,693,1599,678,1612,669,1625,660,1638,645,1657,607,1668,573"/>
+<area shape="poly" title=" " alt="" coords="1733,569,1785,584,1840,608,1866,625,1890,644,1910,667,1925,694,1927,707,1925,721,1912,777,1896,819,1879,861,1862,915,1853,952,1847,988,1847,1048,1841,1047,1842,988,1847,950,1857,914,1874,859,1891,817,1907,775,1919,719,1922,707,1919,696,1905,670,1886,648,1863,629,1838,613,1783,589,1731,575"/>
+<area shape="poly" title=" " alt="" coords="1693,571,1760,612,1758,616,1690,576"/>
+<area shape="poly" title=" " alt="" coords="1970,793,1555,849,1554,844,1969,788"/>
+<area shape="poly" title=" " alt="" coords="2039,794,2035,859,2026,901,2010,941,1982,979,1948,1011,1882,1057,1879,1052,1945,1006,1978,975,2005,939,2021,900,2030,859,2033,794"/>
+<area shape="poly" title=" " alt="" coords="2342,790,2276,796,1554,852,1554,847,2275,791,2342,785"/>
+<area shape="poly" title=" " alt="" coords="2429,791,2456,811,2478,840,2499,889,2509,932,2509,953,2504,973,2494,994,2477,1015,2447,1030,2390,1042,2229,1060,2047,1070,1901,1074,1901,1069,2047,1064,2228,1054,2390,1037,2445,1025,2474,1011,2489,991,2499,971,2504,952,2504,932,2494,890,2473,843,2452,815,2426,796"/>
+<area shape="poly" title=" " alt="" coords="2019,723,1916,757,1787,796,1661,826,1555,847,1554,842,1660,820,1785,791,1915,752,2017,717"/>
+<area shape="poly" title=" " alt="" coords="2027,722,1993,742,1960,770,1928,806,1908,836,1892,871,1875,915,1857,987,1850,1048,1845,1047,1852,986,1870,914,1887,868,1903,834,1924,802,1956,766,1990,738,2025,718"/>
+<area shape="poly" title=" " alt="" coords="2050,721,2043,755,2038,754,2045,720"/>
+<area shape="poly" title=" " alt="" coords="1809,574,1799,609,1794,607,1804,573"/>
+<area shape="poly" title=" " alt="" coords="593,789,605,791,859,814,1107,831,1463,848,1463,854,1107,836,858,819,604,796,592,795"/>
+<area shape="poly" title=" " alt="" coords="562,791,680,833,863,893,1083,957,1197,986,1311,1011,1445,1033,1579,1049,1791,1067,1791,1072,1579,1055,1444,1038,1309,1016,1196,991,1081,962,862,898,679,838,560,796"/>
+<area shape="poly" title=" " alt="" coords="1742,492,1707,497,1669,507,1633,524,1604,550,1597,562,1595,572,1597,594,1602,618,1599,647,1592,663,1584,673,1566,696,1545,731,1530,769,1515,828,1510,827,1525,767,1541,729,1561,693,1580,670,1587,660,1594,646,1597,619,1592,595,1589,572,1592,560,1600,546,1630,519,1667,501,1706,491,1741,487"/>
+<area shape="poly" title=" " alt="" coords="1828,489,1955,501,2034,511,2113,526,2187,544,2249,568,2273,582,2291,597,2303,614,2307,632,2307,709,2311,754,2319,772,2333,791,2349,804,2367,813,2407,826,2423,832,2435,840,2440,852,2434,868,2410,901,2383,930,2352,956,2319,978,2247,1015,2170,1041,2093,1058,2020,1069,1901,1076,1901,1071,2019,1064,2092,1053,2168,1036,2244,1010,2316,974,2349,951,2379,926,2406,897,2429,865,2434,852,2431,843,2421,836,2405,831,2365,818,2346,809,2329,795,2314,774,2306,755,2302,709,2302,633,2298,616,2287,600,2270,586,2247,573,2186,549,2112,531,2033,517,1954,506,1827,494"/>
+<area shape="poly" title=" " alt="" coords="1791,499,1804,534,1799,536,1786,501"/>
+<area shape="poly" title=" " alt="" coords="699,789,710,791,931,817,1147,834,1463,849,1463,854,1147,839,930,822,710,796,698,794"/>
+<area shape="poly" title=" " alt="" coords="690,791,807,832,986,891,1200,955,1423,1011,1524,1030,1625,1046,1791,1065,1790,1070,1625,1051,1523,1035,1421,1016,1199,960,985,896,806,837,688,796"/>
+<area shape="poly" title=" " alt="" coords="853,788,872,791,1211,825,1463,846,1463,852,1210,830,871,796,852,794"/>
+<area shape="poly" title=" " alt="" coords="819,791,1103,889,1307,953,1519,1011,1666,1042,1791,1062,1791,1068,1665,1047,1517,1016,1306,958,1101,894,817,796"/>
+<area shape="poly" title=" " alt="" coords="1276,240,1277,206,1283,206,1281,240"/>
+<area shape="poly" title=" " alt="" coords="1235,262,855,321,854,316,1234,257"/>
+<area shape="poly" title=" " alt="" coords="1347,121,1298,160,1295,156,1344,117"/>
+<area shape="poly" title=" " alt="" coords="1359,120,1347,154,1327,193,1296,232,1292,228,1322,191,1342,152,1353,118"/>
+<area shape="poly" title=" " alt="" coords="1953,576,1835,619,1833,614,1951,571"/>
+<area shape="poly" title=" " alt="" coords="1976,575,1885,686,1881,682,1972,572"/>
+<area shape="poly" title=" " alt="" coords="2345,182,2407,194,2443,205,2478,219,2510,238,2536,261,2554,290,2561,324,2561,929,2557,958,2547,981,2529,999,2503,1016,2468,1027,2408,1037,2238,1054,1901,1073,1901,1068,2238,1048,2407,1032,2467,1022,2501,1011,2525,995,2542,978,2552,957,2555,929,2555,325,2549,292,2532,265,2507,242,2476,224,2441,210,2406,200,2344,187"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac4e2937b86d1338f765c02b4869648ca" id="r_ac4e2937b86d1338f765c02b4869648ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__file__mmap_8c.html#ac4e2937b86d1338f765c02b4869648ca">DBG_TAG</a>&#160;&#160;&#160;&quot;dfs.mmap&quot;</td></tr>
+<tr class="separator:ac4e2937b86d1338f765c02b4869648ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5f21bfe809857ecc4dd3ecdba44f49" id="r_a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__file__mmap_8c.html#a2d5f21bfe809857ecc4dd3ecdba44f49">DBG_LVL</a>&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9f7743bd75d5be061a83ae0da47bc323">DBG_WARNING</a></td></tr>
+<tr class="separator:a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a9e73b515726ba3d0ec99f3ce083aac51" id="r_a9e73b515726ba3d0ec99f3ce083aac51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dfs__file__mmap_8c.html#a9e73b515726ba3d0ec99f3ce083aac51">dfs_file_mmap</a> (struct <a class="el" href="structdfs__file.html">dfs_file</a> *file, struct dfs_mmap2_args *mmap2)</td></tr>
+<tr class="separator:a9e73b515726ba3d0ec99f3ce083aac51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2d5f21bfe809857ecc4dd3ecdba44f49" name="a2d5f21bfe809857ecc4dd3ecdba44f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5f21bfe809857ecc4dd3ecdba44f49">&#9670;&#160;</a></span>DBG_LVL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_LVL&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9f7743bd75d5be061a83ae0da47bc323">DBG_WARNING</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e2937b86d1338f765c02b4869648ca" name="ac4e2937b86d1338f765c02b4869648ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e2937b86d1338f765c02b4869648ca">&#9670;&#160;</a></span>DBG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TAG&#160;&#160;&#160;&quot;dfs.mmap&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a9e73b515726ba3d0ec99f3ce083aac51" name="a9e73b515726ba3d0ec99f3ce083aac51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e73b515726ba3d0ec99f3ce083aac51">&#9670;&#160;</a></span>dfs_file_mmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int dfs_file_mmap </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structdfs__file.html">dfs_file</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct dfs_mmap2_args *&#160;</td>
+          <td class="paramname"><em>mmap2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_88fad670f0983a8d34917f1a982db765.html">dfs</a></li><li class="navelem"><a class="el" href="dir_0315ccb147cbbd68fff85702afb63e70.html">dfs_v2</a></li><li class="navelem"><a class="el" href="dir_c616d9650c6704449007aa33708f33c8.html">src</a></li><li class="navelem"><a class="el" href="dfs__file__mmap_8c.html">dfs_file_mmap.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="AUDIO_DSP" name="AUDIO_DSP">
+<area shape="rect" id="Node000002" href="$group__group___audio.html" title="Audio driver API." alt="" coords="5,5,64,31"/>
+<area shape="rect" id="Node000001" title="Support Dsp(input/output) Units controls. The macro group from application level, can set audio mixer..." alt="" coords="112,5,211,31"/>
+</map>

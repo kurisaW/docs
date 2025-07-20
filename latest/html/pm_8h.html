@@ -1,0 +1,1118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/pm.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('pm_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">pm.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="lptimer_8h_source.html">drivers/lptimer.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for pm.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="pm_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2pm_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2pm_8h" id="acomponents_2drivers_2include_2drivers_2pm_8h">
+<area shape="rect" title=" " alt="" coords="104,5,263,45"/>
+<area shape="rect" title=" " alt="" coords="5,607,76,632"/>
+<area shape="poly" title=" " alt="" coords="157,48,129,71,101,101,79,138,72,157,70,178,70,474,63,540,51,594,45,593,58,539,65,474,65,178,67,156,74,136,96,98,125,67,154,44"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="243,167,329,192"/>
+<area shape="poly" title=" " alt="" coords="188,45,196,80,212,117,232,139,255,157,252,161,228,143,208,120,190,82,183,46"/>
+<area shape="rect" href="lptimer_8h.html" title=" " alt="" coords="221,93,351,119"/>
+<area shape="poly" title=" " alt="" coords="210,43,262,83,258,87,207,48"/>
+<area shape="rect" title=" " alt="" coords="661,607,743,632"/>
+<area shape="poly" title=" " alt="" coords="330,182,445,197,585,224,650,242,704,265,741,292,752,308,755,324,755,474,752,508,742,542,718,596,713,594,737,540,746,507,750,474,750,325,747,310,737,296,702,270,648,247,584,229,444,202,329,187"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="278,387,342,412"/>
+<area shape="poly" title=" " alt="" coords="267,195,230,220,191,256,176,276,167,296,166,317,174,337,192,357,215,372,265,389,264,394,213,377,188,361,169,340,160,318,162,295,172,273,187,252,227,216,264,190"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="183,313,274,339"/>
+<area shape="poly" title=" " alt="" coords="278,194,262,215,247,241,238,271,233,300,228,299,233,270,242,239,257,212,274,190"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="257,240,315,265"/>
+<area shape="poly" title=" " alt="" coords="282,192,280,227,275,226,276,192"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="339,240,428,265"/>
+<area shape="poly" title=" " alt="" coords="303,190,358,229,355,234,300,194"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="521,313,595,339"/>
+<area shape="poly" title=" " alt="" coords="330,184,443,204,496,219,532,238,543,252,551,267,559,299,554,300,546,269,538,254,528,242,494,224,442,209,329,189"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="452,240,517,265"/>
+<area shape="poly" title=" " alt="" coords="319,190,440,233,438,238,317,195"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="347,460,430,485"/>
+<area shape="poly" title=" " alt="" coords="324,410,368,449,364,453,321,414"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="323,533,403,559"/>
+<area shape="poly" title=" " alt="" coords="315,412,338,484,354,520,349,522,333,486,310,413"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="428,533,528,559"/>
+<area shape="poly" title=" " alt="" coords="343,410,400,433,426,446,444,458,464,488,475,519,470,521,459,491,440,462,424,450,398,438,341,414"/>
+<area shape="rect" title=" " alt="" coords="529,460,640,485"/>
+<area shape="poly" title=" " alt="" coords="343,406,355,409,528,454,527,459,353,415,342,412"/>
+<area shape="poly" title=" " alt="" coords="387,487,374,521,369,520,382,485"/>
+<area shape="poly" title=" " alt="" coords="405,483,454,522,451,527,401,487"/>
+<area shape="poly" title=" " alt="" coords="324,558,90,609,89,604,323,553"/>
+<area shape="poly" title=" " alt="" coords="404,553,417,556,648,604,647,609,416,561,403,559"/>
+<area shape="rect" title=" " alt="" coords="562,607,637,632"/>
+<area shape="poly" title=" " alt="" coords="402,556,550,600,548,605,400,561"/>
+<area shape="rect" title=" " alt="" coords="101,607,175,632"/>
+<area shape="poly" title=" " alt="" coords="328,561,188,605,187,600,326,556"/>
+<area shape="rect" title=" " alt="" coords="199,607,295,632"/>
+<area shape="poly" title=" " alt="" coords="346,561,279,602,277,597,343,556"/>
+<area shape="rect" title=" " alt="" coords="320,607,415,632"/>
+<area shape="poly" title=" " alt="" coords="367,559,369,593,363,593,361,559"/>
+<area shape="rect" title=" " alt="" coords="439,607,538,632"/>
+<area shape="poly" title=" " alt="" coords="385,556,458,597,455,602,382,561"/>
+<area shape="poly" title=" " alt="" coords="515,556,654,600,652,605,513,561"/>
+<area shape="poly" title=" " alt="" coords="243,337,288,376,285,380,240,341"/>
+<area shape="poly" title=" " alt="" coords="290,240,292,206,297,206,296,240"/>
+<area shape="poly" title=" " alt="" coords="291,265,308,373,303,373,285,266"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="352,313,415,339"/>
+<area shape="poly" title=" " alt="" coords="386,266,386,300,381,300,381,266"/>
+<area shape="poly" title=" " alt="" coords="373,341,334,379,330,375,369,337"/>
+<area shape="poly" title=" " alt="" coords="586,336,619,356,648,385,676,439,693,496,701,550,704,592,699,593,696,550,687,497,671,441,644,388,615,360,583,341"/>
+<area shape="poly" title=" " alt="" coords="521,341,356,388,355,383,520,336"/>
+<area shape="poly" title=" " alt="" coords="581,337,607,357,628,386,632,403,628,421,609,451,604,448,623,419,627,403,624,388,603,361,577,341"/>
+<area shape="rect" title=" " alt="" coords="366,387,481,412"/>
+<area shape="poly" title=" " alt="" coords="538,341,459,382,456,378,535,336"/>
+<area shape="rect" title=" " alt="" coords="505,387,614,412"/>
+<area shape="poly" title=" " alt="" coords="561,339,562,373,556,373,556,339"/>
+<area shape="poly" title=" " alt="" coords="481,267,461,302,429,341,393,366,356,384,353,379,390,361,426,337,457,299,477,264"/>
+<area shape="poly" title=" " alt="" coords="289,119,289,153,283,153,283,119"/>
+</map>
+</div>
+</div>
+<p><a href="pm_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pm__ops.html">rt_pm_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__device__pm__ops.html">rt_device_pm_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__device__pm.html">rt_device_pm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pm__module.html">rt_pm_module</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pm.html">rt_pm</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__pm__notify.html">rt_pm_notify</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a829bbfc6aaa306d59ad9e1b60716bb0a" id="r_a829bbfc6aaa306d59ad9e1b60716bb0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a829bbfc6aaa306d59ad9e1b60716bb0a">PM_SLEEP_MODE_NAMES</a></td></tr>
+<tr class="separator:a829bbfc6aaa306d59ad9e1b60716bb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa697b7545301f5128e4e4360a0c30889" id="r_aa697b7545301f5128e4e4360a0c30889"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#aa697b7545301f5128e4e4360a0c30889">PM_RUN_MODE_NAMES</a></td></tr>
+<tr class="separator:aa697b7545301f5128e4e4360a0c30889"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49b1a0e6de111dafa10e4c026f9fc2aa" id="r_a49b1a0e6de111dafa10e4c026f9fc2aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a49b1a0e6de111dafa10e4c026f9fc2aa">RT_PM_DEFAULT_SLEEP_MODE</a>&#160;&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da38a0e269972e7d5f465565a9543ce6bd">PM_SLEEP_MODE_NONE</a></td></tr>
+<tr class="separator:a49b1a0e6de111dafa10e4c026f9fc2aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac1ec30e1dd59bb19fa04d13485dfd1d" id="r_aac1ec30e1dd59bb19fa04d13485dfd1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#aac1ec30e1dd59bb19fa04d13485dfd1d">RT_PM_DEFAULT_DEEPSLEEP_MODE</a>&#160;&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da5ef920e1f781a0d993d224094e399268">PM_SLEEP_MODE_DEEP</a></td></tr>
+<tr class="separator:aac1ec30e1dd59bb19fa04d13485dfd1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af49b6e2d04ee00a46cd47df9c4ee565d" id="r_af49b6e2d04ee00a46cd47df9c4ee565d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#af49b6e2d04ee00a46cd47df9c4ee565d">RT_PM_DEFAULT_RUN_MODE</a>&#160;&#160;&#160;<a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122ace86934b966862c401f584634625a965">PM_RUN_MODE_NORMAL_SPEED</a></td></tr>
+<tr class="separator:af49b6e2d04ee00a46cd47df9c4ee565d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af090d46561c0d0863515b3f3895aa7e2" id="r_af090d46561c0d0863515b3f3895aa7e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#af090d46561c0d0863515b3f3895aa7e2">RT_PM_DEVICE_CTRL_RELEASE</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(PM) + 0x00)</td></tr>
+<tr class="separator:af090d46561c0d0863515b3f3895aa7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b1f58316e2645e37d930995d2ee689" id="r_a48b1f58316e2645e37d930995d2ee689"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a48b1f58316e2645e37d930995d2ee689">RT_PM_DEVICE_CTRL_REQUEST</a>&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(PM) + 0x01)</td></tr>
+<tr class="separator:a48b1f58316e2645e37d930995d2ee689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a157d5577a5b2f5986037d0d09c7dc77d" id="r_a157d5577a5b2f5986037d0d09c7dc77d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da38a0e269972e7d5f465565a9543ce6bd">PM_SLEEP_MODE_NONE</a> = 0
+, <a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77dac35b3cea4eafe71a152f80172215b6ce">PM_SLEEP_MODE_IDLE</a>
+, <a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da539cfcac2008c0184911c42604b4a3ca">PM_SLEEP_MODE_LIGHT</a>
+, <a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da5ef920e1f781a0d993d224094e399268">PM_SLEEP_MODE_DEEP</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da06e15a8e6044d6d88473b444d3fb6a72">PM_SLEEP_MODE_STANDBY</a>
+, <a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da7c240f9ae025a3effdd4d7ff2ee5dbba">PM_SLEEP_MODE_SHUTDOWN</a>
+, <a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77daed86b4556ae2ad5daab09b12f2ca703d">PM_SLEEP_MODE_MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a157d5577a5b2f5986037d0d09c7dc77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb9092bcdeada2d206bdc74afbbe122" id="r_a1fb9092bcdeada2d206bdc74afbbe122"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122ac97fe63e45c221247423748ad257aade">PM_RUN_MODE_HIGH_SPEED</a> = 0
+, <a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122ace86934b966862c401f584634625a965">PM_RUN_MODE_NORMAL_SPEED</a>
+, <a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122aeef65da61c126f1e5f49aa2d9cbc9443">PM_RUN_MODE_MEDIUM_SPEED</a>
+, <a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a8f7866b608929fa19c3f8a9ae9de004c">PM_RUN_MODE_LOW_SPEED</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122ab1700184c89f491e5f4df8e9028ac8be">PM_RUN_MODE_MAX</a>
+<br />
+ }</td></tr>
+<tr class="separator:a1fb9092bcdeada2d206bdc74afbbe122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84627a72058502328269676b81780f89" id="r_a84627a72058502328269676b81780f89"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="pm_8h.html#a84627a72058502328269676b81780f89a4d330746e72c22ab3d0972104339c2b8">RT_PM_FREQUENCY_PENDING</a> = 0x01
+ }</td></tr>
+<tr class="separator:a84627a72058502328269676b81780f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9730ff52bd4702c60bac31d11f9cfa6" id="r_aa9730ff52bd4702c60bac31d11f9cfa6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6">pm_module_id</a> { <br />
+&#160;&#160;<a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a7e471245e67e0f803895217736ecbf49">PM_NONE_ID</a> = 0
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a3afcaceab29da5c79d5a86782e518791">PM_POWER_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6ae35cbdc2119373432e1b872cda47c268">PM_BOARD_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a59c245bfde42ce8038a101c0f7ffb7b5">PM_BSP_ID</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a5a24715929fe2ef2adf591ca8b51371b">PM_MAIN_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a1337bf196d07d6198138e77dba960b25">PM_PMS_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a0d24c0518b8a6eaa353b4a3b8bb89033">PM_PMC_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6ab5ea2122e107eb454d167061a8ccbcd5">PM_TASK_ID</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a3227c5050bc6ef2afae85e028cac7e45">PM_SPI_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a7f3fff7e1337d509f39caaa6c1fabd00">PM_I2C_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6acf96895af33b020ba71a871243526499">PM_UART_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6aa1b03af52878ba4ab89cd4857f1b8c00">PM_CAN_ID</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a31081527d5de5fad6077a71b929efd29">PM_ETH_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a5af35bfb0325ad1c70918ed9aab7016e">PM_SENSOR_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a286cb118ce97ef478135de610f616536">PM_LCD_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6a384e651d8cbecfbfb331789cb64b25d2">PM_KEY_ID</a>
+, <br />
+&#160;&#160;<a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6afa08a2bbefad0668a7bf98b62df7cb2b">PM_TP_ID</a>
+, <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6ad756fa63f5f70dfc6d4265d2647d5284">PM_MODULE_MAX_ID</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa9730ff52bd4702c60bac31d11f9cfa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3520ff6d43011872bab77edd27d4de3" id="r_af3520ff6d43011872bab77edd27d4de3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="pm_8h.html#af3520ff6d43011872bab77edd27d4de3ad44fdaf792dda242da7bc254ad132212">RT_PM_ENTER_SLEEP</a> = 0
+, <a class="el" href="pm_8h.html#af3520ff6d43011872bab77edd27d4de3a989c9c85544ae4e6722356246448f577">RT_PM_EXIT_SLEEP</a>
+ }</td></tr>
+<tr class="separator:af3520ff6d43011872bab77edd27d4de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aaa64ffbc537a1a332335bb7ec1abd816" id="r_aaa64ffbc537a1a332335bb7ec1abd816"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#aaa64ffbc537a1a332335bb7ec1abd816">rt_pm_request</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:aaa64ffbc537a1a332335bb7ec1abd816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f7c5a62c3e85a44a445a9ad165a106" id="r_a32f7c5a62c3e85a44a445a9ad165a106"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a32f7c5a62c3e85a44a445a9ad165a106">rt_pm_release</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:a32f7c5a62c3e85a44a445a9ad165a106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac94418dc6d71f9d6927c7c9360aa0522" id="r_ac94418dc6d71f9d6927c7c9360aa0522"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#ac94418dc6d71f9d6927c7c9360aa0522">rt_pm_release_all</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:ac94418dc6d71f9d6927c7c9360aa0522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af736c1281a7e80e12366a081ba3eea65" id="r_af736c1281a7e80e12366a081ba3eea65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#af736c1281a7e80e12366a081ba3eea65">rt_pm_run_enter</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> run_mode)</td></tr>
+<tr class="separator:af736c1281a7e80e12366a081ba3eea65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c12f9e9281daec71878a03e2d6dfb2b" id="r_a8c12f9e9281daec71878a03e2d6dfb2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a8c12f9e9281daec71878a03e2d6dfb2b">rt_pm_device_register</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *device, const struct <a class="el" href="structrt__device__pm__ops.html">rt_device_pm_ops</a> *ops)</td></tr>
+<tr class="separator:a8c12f9e9281daec71878a03e2d6dfb2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2c9643e6c16285fb34b327aca56381" id="r_a3b2c9643e6c16285fb34b327aca56381"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a3b2c9643e6c16285fb34b327aca56381">rt_pm_device_unregister</a> (struct <a class="el" href="structrt__device.html">rt_device</a> *device)</td></tr>
+<tr class="separator:a3b2c9643e6c16285fb34b327aca56381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4441065ef1a8d67a8e431624daf87648" id="r_a4441065ef1a8d67a8e431624daf87648"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a4441065ef1a8d67a8e431624daf87648">rt_pm_notify_set</a> (void(*notify)(<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> event, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode, void *data), void *data)</td></tr>
+<tr class="separator:a4441065ef1a8d67a8e431624daf87648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84800c70bab23152e9a87895876b6834" id="r_a84800c70bab23152e9a87895876b6834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a84800c70bab23152e9a87895876b6834">rt_pm_default_set</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:a84800c70bab23152e9a87895876b6834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b9b56cebf92c448744546feb7040933" id="r_a6b9b56cebf92c448744546feb7040933"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a6b9b56cebf92c448744546feb7040933">rt_system_pm_init</a> (const struct <a class="el" href="structrt__pm__ops.html">rt_pm_ops</a> *ops, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> timer_mask, void *user_data)</td></tr>
+<tr class="separator:a6b9b56cebf92c448744546feb7040933"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a14a202e7954a0fa63b896d9df861c0" id="r_a8a14a202e7954a0fa63b896d9df861c0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a8a14a202e7954a0fa63b896d9df861c0">rt_pm_module_request</a> (uint8_t module_id, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:a8a14a202e7954a0fa63b896d9df861c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ba8d201b2f18508a5e7d3a5c9485bc4" id="r_a9ba8d201b2f18508a5e7d3a5c9485bc4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a9ba8d201b2f18508a5e7d3a5c9485bc4">rt_pm_module_release</a> (uint8_t module_id, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:a9ba8d201b2f18508a5e7d3a5c9485bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e3ca2ddcdd2532fdd42365d148779e9" id="r_a6e3ca2ddcdd2532fdd42365d148779e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a6e3ca2ddcdd2532fdd42365d148779e9">rt_pm_module_release_all</a> (uint8_t module_id, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> sleep_mode)</td></tr>
+<tr class="separator:a6e3ca2ddcdd2532fdd42365d148779e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73ce2a80a7ddf3bf58a17faae6acf4b8" id="r_a73ce2a80a7ddf3bf58a17faae6acf4b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a73ce2a80a7ddf3bf58a17faae6acf4b8">rt_pm_module_delay_sleep</a> (<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> module_id, <a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> timeout)</td></tr>
+<tr class="separator:a73ce2a80a7ddf3bf58a17faae6acf4b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52369a99d65a1919595524ca542e1def" id="r_a52369a99d65a1919595524ca542e1def"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a52369a99d65a1919595524ca542e1def">rt_pm_module_get_status</a> (void)</td></tr>
+<tr class="separator:a52369a99d65a1919595524ca542e1def"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86d8fb6a58371a537ba9696b0bd93b8" id="r_ac86d8fb6a58371a537ba9696b0bd93b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#ac86d8fb6a58371a537ba9696b0bd93b8">rt_pm_get_sleep_mode</a> (void)</td></tr>
+<tr class="separator:ac86d8fb6a58371a537ba9696b0bd93b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2224f20bf0096802239ff8e9e4f8f36" id="r_ad2224f20bf0096802239ff8e9e4f8f36"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__pm.html">rt_pm</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#ad2224f20bf0096802239ff8e9e4f8f36">rt_pm_get_handle</a> (void)</td></tr>
+<tr class="separator:ad2224f20bf0096802239ff8e9e4f8f36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab796680f95c67d7e3c6348c1e21762d" id="r_aab796680f95c67d7e3c6348c1e21762d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#aab796680f95c67d7e3c6348c1e21762d">rt_pm_sleep_request</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode)</td></tr>
+<tr class="separator:aab796680f95c67d7e3c6348c1e21762d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cf316cc62ad0e2ba29ef7008c338aba" id="r_a7cf316cc62ad0e2ba29ef7008c338aba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a7cf316cc62ad0e2ba29ef7008c338aba">rt_pm_sleep_release</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode)</td></tr>
+<tr class="separator:a7cf316cc62ad0e2ba29ef7008c338aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a184a418b0d9443cfe3aa44cbcf00d2d3" id="r_a184a418b0d9443cfe3aa44cbcf00d2d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a184a418b0d9443cfe3aa44cbcf00d2d3">rt_pm_sleep_none_request</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:a184a418b0d9443cfe3aa44cbcf00d2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3102ba0f2351ba9391f3cd53900a8899" id="r_a3102ba0f2351ba9391f3cd53900a8899"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a3102ba0f2351ba9391f3cd53900a8899">rt_pm_sleep_none_release</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:a3102ba0f2351ba9391f3cd53900a8899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ce5eea9e95e141ff1c2cc544c3b7d80" id="r_a8ce5eea9e95e141ff1c2cc544c3b7d80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a8ce5eea9e95e141ff1c2cc544c3b7d80">rt_pm_sleep_idle_request</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:a8ce5eea9e95e141ff1c2cc544c3b7d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6d6fc1f7c2cf3a1cbb6c8d70b014c69" id="r_ad6d6fc1f7c2cf3a1cbb6c8d70b014c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#ad6d6fc1f7c2cf3a1cbb6c8d70b014c69">rt_pm_sleep_idle_release</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:ad6d6fc1f7c2cf3a1cbb6c8d70b014c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab176efc457ca5ade1beea7ba07815a81" id="r_ab176efc457ca5ade1beea7ba07815a81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#ab176efc457ca5ade1beea7ba07815a81">rt_pm_sleep_light_request</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:ab176efc457ca5ade1beea7ba07815a81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593a04f8f1f7eea66c1192f5819fda6b" id="r_a593a04f8f1f7eea66c1192f5819fda6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pm_8h.html#a593a04f8f1f7eea66c1192f5819fda6b">rt_pm_sleep_light_release</a> (<a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a> module_id)</td></tr>
+<tr class="separator:a593a04f8f1f7eea66c1192f5819fda6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aa697b7545301f5128e4e4360a0c30889" name="aa697b7545301f5128e4e4360a0c30889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa697b7545301f5128e4e4360a0c30889">&#9670;&#160;</a></span>PM_RUN_MODE_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PM_RUN_MODE_NAMES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                               \</div>
+<div class="line">    <span class="stringliteral">&quot;High Speed&quot;</span>,               \</div>
+<div class="line">    <span class="stringliteral">&quot;Normal Speed&quot;</span>,             \</div>
+<div class="line">    <span class="stringliteral">&quot;Medium Speed&quot;</span>,             \</div>
+<div class="line">    <span class="stringliteral">&quot;Low Mode&quot;</span>,                 \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a829bbfc6aaa306d59ad9e1b60716bb0a" name="a829bbfc6aaa306d59ad9e1b60716bb0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a829bbfc6aaa306d59ad9e1b60716bb0a">&#9670;&#160;</a></span>PM_SLEEP_MODE_NAMES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PM_SLEEP_MODE_NAMES</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">{                               \</div>
+<div class="line">    <span class="stringliteral">&quot;None Mode&quot;</span>,                \</div>
+<div class="line">    <span class="stringliteral">&quot;Idle Mode&quot;</span>,                \</div>
+<div class="line">    <span class="stringliteral">&quot;LightSleep Mode&quot;</span>,          \</div>
+<div class="line">    <span class="stringliteral">&quot;DeepSleep Mode&quot;</span>,           \</div>
+<div class="line">    <span class="stringliteral">&quot;Standby Mode&quot;</span>,             \</div>
+<div class="line">    <span class="stringliteral">&quot;Shutdown Mode&quot;</span>,            \</div>
+<div class="line">}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aac1ec30e1dd59bb19fa04d13485dfd1d" name="aac1ec30e1dd59bb19fa04d13485dfd1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac1ec30e1dd59bb19fa04d13485dfd1d">&#9670;&#160;</a></span>RT_PM_DEFAULT_DEEPSLEEP_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PM_DEFAULT_DEEPSLEEP_MODE&#160;&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da5ef920e1f781a0d993d224094e399268">PM_SLEEP_MODE_DEEP</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af49b6e2d04ee00a46cd47df9c4ee565d" name="af49b6e2d04ee00a46cd47df9c4ee565d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49b6e2d04ee00a46cd47df9c4ee565d">&#9670;&#160;</a></span>RT_PM_DEFAULT_RUN_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PM_DEFAULT_RUN_MODE&#160;&#160;&#160;<a class="el" href="pm_8h.html#a1fb9092bcdeada2d206bdc74afbbe122ace86934b966862c401f584634625a965">PM_RUN_MODE_NORMAL_SPEED</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a49b1a0e6de111dafa10e4c026f9fc2aa" name="a49b1a0e6de111dafa10e4c026f9fc2aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49b1a0e6de111dafa10e4c026f9fc2aa">&#9670;&#160;</a></span>RT_PM_DEFAULT_SLEEP_MODE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PM_DEFAULT_SLEEP_MODE&#160;&#160;&#160;<a class="el" href="pm_8h.html#a157d5577a5b2f5986037d0d09c7dc77da38a0e269972e7d5f465565a9543ce6bd">PM_SLEEP_MODE_NONE</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af090d46561c0d0863515b3f3895aa7e2" name="af090d46561c0d0863515b3f3895aa7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af090d46561c0d0863515b3f3895aa7e2">&#9670;&#160;</a></span>RT_PM_DEVICE_CTRL_RELEASE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PM_DEVICE_CTRL_RELEASE&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(PM) + 0x00)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>device control flag to request or release power </p>
+
+</div>
+</div>
+<a id="a48b1f58316e2645e37d930995d2ee689" name="a48b1f58316e2645e37d930995d2ee689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b1f58316e2645e37d930995d2ee689">&#9670;&#160;</a></span>RT_PM_DEVICE_CTRL_REQUEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_PM_DEVICE_CTRL_REQUEST&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(PM) + 0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a157d5577a5b2f5986037d0d09c7dc77d" name="a157d5577a5b2f5986037d0d09c7dc77d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a157d5577a5b2f5986037d0d09c7dc77d">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77da38a0e269972e7d5f465565a9543ce6bd" name="a157d5577a5b2f5986037d0d09c7dc77da38a0e269972e7d5f465565a9543ce6bd"></a>PM_SLEEP_MODE_NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77dac35b3cea4eafe71a152f80172215b6ce" name="a157d5577a5b2f5986037d0d09c7dc77dac35b3cea4eafe71a152f80172215b6ce"></a>PM_SLEEP_MODE_IDLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77da539cfcac2008c0184911c42604b4a3ca" name="a157d5577a5b2f5986037d0d09c7dc77da539cfcac2008c0184911c42604b4a3ca"></a>PM_SLEEP_MODE_LIGHT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77da5ef920e1f781a0d993d224094e399268" name="a157d5577a5b2f5986037d0d09c7dc77da5ef920e1f781a0d993d224094e399268"></a>PM_SLEEP_MODE_DEEP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77da06e15a8e6044d6d88473b444d3fb6a72" name="a157d5577a5b2f5986037d0d09c7dc77da06e15a8e6044d6d88473b444d3fb6a72"></a>PM_SLEEP_MODE_STANDBY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77da7c240f9ae025a3effdd4d7ff2ee5dbba" name="a157d5577a5b2f5986037d0d09c7dc77da7c240f9ae025a3effdd4d7ff2ee5dbba"></a>PM_SLEEP_MODE_SHUTDOWN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a157d5577a5b2f5986037d0d09c7dc77daed86b4556ae2ad5daab09b12f2ca703d" name="a157d5577a5b2f5986037d0d09c7dc77daed86b4556ae2ad5daab09b12f2ca703d"></a>PM_SLEEP_MODE_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a1fb9092bcdeada2d206bdc74afbbe122" name="a1fb9092bcdeada2d206bdc74afbbe122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb9092bcdeada2d206bdc74afbbe122">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1fb9092bcdeada2d206bdc74afbbe122ac97fe63e45c221247423748ad257aade" name="a1fb9092bcdeada2d206bdc74afbbe122ac97fe63e45c221247423748ad257aade"></a>PM_RUN_MODE_HIGH_SPEED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1fb9092bcdeada2d206bdc74afbbe122ace86934b966862c401f584634625a965" name="a1fb9092bcdeada2d206bdc74afbbe122ace86934b966862c401f584634625a965"></a>PM_RUN_MODE_NORMAL_SPEED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1fb9092bcdeada2d206bdc74afbbe122aeef65da61c126f1e5f49aa2d9cbc9443" name="a1fb9092bcdeada2d206bdc74afbbe122aeef65da61c126f1e5f49aa2d9cbc9443"></a>PM_RUN_MODE_MEDIUM_SPEED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1fb9092bcdeada2d206bdc74afbbe122a8f7866b608929fa19c3f8a9ae9de004c" name="a1fb9092bcdeada2d206bdc74afbbe122a8f7866b608929fa19c3f8a9ae9de004c"></a>PM_RUN_MODE_LOW_SPEED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1fb9092bcdeada2d206bdc74afbbe122ab1700184c89f491e5f4df8e9028ac8be" name="a1fb9092bcdeada2d206bdc74afbbe122ab1700184c89f491e5f4df8e9028ac8be"></a>PM_RUN_MODE_MAX&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="a84627a72058502328269676b81780f89" name="a84627a72058502328269676b81780f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84627a72058502328269676b81780f89">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a84627a72058502328269676b81780f89a4d330746e72c22ab3d0972104339c2b8" name="a84627a72058502328269676b81780f89a4d330746e72c22ab3d0972104339c2b8"></a>RT_PM_FREQUENCY_PENDING&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="af3520ff6d43011872bab77edd27d4de3" name="af3520ff6d43011872bab77edd27d4de3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3520ff6d43011872bab77edd27d4de3">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af3520ff6d43011872bab77edd27d4de3ad44fdaf792dda242da7bc254ad132212" name="af3520ff6d43011872bab77edd27d4de3ad44fdaf792dda242da7bc254ad132212"></a>RT_PM_ENTER_SLEEP&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af3520ff6d43011872bab77edd27d4de3a989c9c85544ae4e6722356246448f577" name="af3520ff6d43011872bab77edd27d4de3a989c9c85544ae4e6722356246448f577"></a>RT_PM_EXIT_SLEEP&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa9730ff52bd4702c60bac31d11f9cfa6" name="aa9730ff52bd4702c60bac31d11f9cfa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9730ff52bd4702c60bac31d11f9cfa6">&#9670;&#160;</a></span>pm_module_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="pm_8h.html#aa9730ff52bd4702c60bac31d11f9cfa6">pm_module_id</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Modules used for pm_module_request(PM_BOARD_ID, PM_SLEEP_MODE_IDLE) pm_module_release(PM_BOARD_ID, PM_SLEEP_MODE_IDLE) pm_module_release_all(PM_BOARD_ID, PM_SLEEP_MODE_IDLE) </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a7e471245e67e0f803895217736ecbf49" name="aa9730ff52bd4702c60bac31d11f9cfa6a7e471245e67e0f803895217736ecbf49"></a>PM_NONE_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a3afcaceab29da5c79d5a86782e518791" name="aa9730ff52bd4702c60bac31d11f9cfa6a3afcaceab29da5c79d5a86782e518791"></a>PM_POWER_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6ae35cbdc2119373432e1b872cda47c268" name="aa9730ff52bd4702c60bac31d11f9cfa6ae35cbdc2119373432e1b872cda47c268"></a>PM_BOARD_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a59c245bfde42ce8038a101c0f7ffb7b5" name="aa9730ff52bd4702c60bac31d11f9cfa6a59c245bfde42ce8038a101c0f7ffb7b5"></a>PM_BSP_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a5a24715929fe2ef2adf591ca8b51371b" name="aa9730ff52bd4702c60bac31d11f9cfa6a5a24715929fe2ef2adf591ca8b51371b"></a>PM_MAIN_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a1337bf196d07d6198138e77dba960b25" name="aa9730ff52bd4702c60bac31d11f9cfa6a1337bf196d07d6198138e77dba960b25"></a>PM_PMS_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a0d24c0518b8a6eaa353b4a3b8bb89033" name="aa9730ff52bd4702c60bac31d11f9cfa6a0d24c0518b8a6eaa353b4a3b8bb89033"></a>PM_PMC_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6ab5ea2122e107eb454d167061a8ccbcd5" name="aa9730ff52bd4702c60bac31d11f9cfa6ab5ea2122e107eb454d167061a8ccbcd5"></a>PM_TASK_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a3227c5050bc6ef2afae85e028cac7e45" name="aa9730ff52bd4702c60bac31d11f9cfa6a3227c5050bc6ef2afae85e028cac7e45"></a>PM_SPI_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a7f3fff7e1337d509f39caaa6c1fabd00" name="aa9730ff52bd4702c60bac31d11f9cfa6a7f3fff7e1337d509f39caaa6c1fabd00"></a>PM_I2C_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6acf96895af33b020ba71a871243526499" name="aa9730ff52bd4702c60bac31d11f9cfa6acf96895af33b020ba71a871243526499"></a>PM_UART_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6aa1b03af52878ba4ab89cd4857f1b8c00" name="aa9730ff52bd4702c60bac31d11f9cfa6aa1b03af52878ba4ab89cd4857f1b8c00"></a>PM_CAN_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a31081527d5de5fad6077a71b929efd29" name="aa9730ff52bd4702c60bac31d11f9cfa6a31081527d5de5fad6077a71b929efd29"></a>PM_ETH_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a5af35bfb0325ad1c70918ed9aab7016e" name="aa9730ff52bd4702c60bac31d11f9cfa6a5af35bfb0325ad1c70918ed9aab7016e"></a>PM_SENSOR_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a286cb118ce97ef478135de610f616536" name="aa9730ff52bd4702c60bac31d11f9cfa6a286cb118ce97ef478135de610f616536"></a>PM_LCD_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6a384e651d8cbecfbfb331789cb64b25d2" name="aa9730ff52bd4702c60bac31d11f9cfa6a384e651d8cbecfbfb331789cb64b25d2"></a>PM_KEY_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6afa08a2bbefad0668a7bf98b62df7cb2b" name="aa9730ff52bd4702c60bac31d11f9cfa6afa08a2bbefad0668a7bf98b62df7cb2b"></a>PM_TP_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="aa9730ff52bd4702c60bac31d11f9cfa6ad756fa63f5f70dfc6d4265d2647d5284" name="aa9730ff52bd4702c60bac31d11f9cfa6ad756fa63f5f70dfc6d4265d2647d5284"></a>PM_MODULE_MAX_ID&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a84800c70bab23152e9a87895876b6834" name="a84800c70bab23152e9a87895876b6834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84800c70bab23152e9a87895876b6834">&#9670;&#160;</a></span>rt_pm_default_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pm_default_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c12f9e9281daec71878a03e2d6dfb2b" name="a8c12f9e9281daec71878a03e2d6dfb2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c12f9e9281daec71878a03e2d6dfb2b">&#9670;&#160;</a></span>rt_pm_device_register()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pm_device_register </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const struct <a class="el" href="structrt__device__pm__ops.html">rt_device_pm_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b2c9643e6c16285fb34b327aca56381" name="a3b2c9643e6c16285fb34b327aca56381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2c9643e6c16285fb34b327aca56381">&#9670;&#160;</a></span>rt_pm_device_unregister()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pm_device_unregister </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__device.html">rt_device</a> *&#160;</td>
+          <td class="paramname"><em>device</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad2224f20bf0096802239ff8e9e4f8f36" name="ad2224f20bf0096802239ff8e9e4f8f36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2224f20bf0096802239ff8e9e4f8f36">&#9670;&#160;</a></span>rt_pm_get_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__pm.html">rt_pm</a> * rt_pm_get_handle </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac86d8fb6a58371a537ba9696b0bd93b8" name="ac86d8fb6a58371a537ba9696b0bd93b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86d8fb6a58371a537ba9696b0bd93b8">&#9670;&#160;</a></span>rt_pm_get_sleep_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> rt_pm_get_sleep_mode </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73ce2a80a7ddf3bf58a17faae6acf4b8" name="a73ce2a80a7ddf3bf58a17faae6acf4b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73ce2a80a7ddf3bf58a17faae6acf4b8">&#9670;&#160;</a></span>rt_pm_module_delay_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pm_module_delay_sleep </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52369a99d65a1919595524ca542e1def" name="a52369a99d65a1919595524ca542e1def"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52369a99d65a1919595524ca542e1def">&#9670;&#160;</a></span>rt_pm_module_get_status()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_pm_module_get_status </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ba8d201b2f18508a5e7d3a5c9485bc4" name="a9ba8d201b2f18508a5e7d3a5c9485bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba8d201b2f18508a5e7d3a5c9485bc4">&#9670;&#160;</a></span>rt_pm_module_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_module_release </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6e3ca2ddcdd2532fdd42365d148779e9" name="a6e3ca2ddcdd2532fdd42365d148779e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3ca2ddcdd2532fdd42365d148779e9">&#9670;&#160;</a></span>rt_pm_module_release_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_module_release_all </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a14a202e7954a0fa63b896d9df861c0" name="a8a14a202e7954a0fa63b896d9df861c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a14a202e7954a0fa63b896d9df861c0">&#9670;&#160;</a></span>rt_pm_module_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_module_request </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4441065ef1a8d67a8e431624daf87648" name="a4441065ef1a8d67a8e431624daf87648"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4441065ef1a8d67a8e431624daf87648">&#9670;&#160;</a></span>rt_pm_notify_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_pm_notify_set </td>
+          <td>(</td>
+          <td class="paramtype">void(*)(<a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> event, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> mode, void *data)&#160;</td>
+          <td class="paramname"><em>notify</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a32f7c5a62c3e85a44a445a9ad165a106" name="a32f7c5a62c3e85a44a445a9ad165a106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f7c5a62c3e85a44a445a9ad165a106">&#9670;&#160;</a></span>rt_pm_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac94418dc6d71f9d6927c7c9360aa0522" name="ac94418dc6d71f9d6927c7c9360aa0522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac94418dc6d71f9d6927c7c9360aa0522">&#9670;&#160;</a></span>rt_pm_release_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_release_all </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa64ffbc537a1a332335bb7ec1abd816" name="aaa64ffbc537a1a332335bb7ec1abd816"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa64ffbc537a1a332335bb7ec1abd816">&#9670;&#160;</a></span>rt_pm_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>sleep_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af736c1281a7e80e12366a081ba3eea65" name="af736c1281a7e80e12366a081ba3eea65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af736c1281a7e80e12366a081ba3eea65">&#9670;&#160;</a></span>rt_pm_run_enter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_run_enter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>run_mode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6d6fc1f7c2cf3a1cbb6c8d70b014c69" name="ad6d6fc1f7c2cf3a1cbb6c8d70b014c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6d6fc1f7c2cf3a1cbb6c8d70b014c69">&#9670;&#160;</a></span>rt_pm_sleep_idle_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_idle_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ce5eea9e95e141ff1c2cc544c3b7d80" name="a8ce5eea9e95e141ff1c2cc544c3b7d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ce5eea9e95e141ff1c2cc544c3b7d80">&#9670;&#160;</a></span>rt_pm_sleep_idle_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_idle_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a593a04f8f1f7eea66c1192f5819fda6b" name="a593a04f8f1f7eea66c1192f5819fda6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593a04f8f1f7eea66c1192f5819fda6b">&#9670;&#160;</a></span>rt_pm_sleep_light_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_light_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab176efc457ca5ade1beea7ba07815a81" name="ab176efc457ca5ade1beea7ba07815a81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab176efc457ca5ade1beea7ba07815a81">&#9670;&#160;</a></span>rt_pm_sleep_light_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_light_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3102ba0f2351ba9391f3cd53900a8899" name="a3102ba0f2351ba9391f3cd53900a8899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3102ba0f2351ba9391f3cd53900a8899">&#9670;&#160;</a></span>rt_pm_sleep_none_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_none_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a184a418b0d9443cfe3aa44cbcf00d2d3" name="a184a418b0d9443cfe3aa44cbcf00d2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a184a418b0d9443cfe3aa44cbcf00d2d3">&#9670;&#160;</a></span>rt_pm_sleep_none_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_none_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cf316cc62ad0e2ba29ef7008c338aba" name="a7cf316cc62ad0e2ba29ef7008c338aba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cf316cc62ad0e2ba29ef7008c338aba">&#9670;&#160;</a></span>rt_pm_sleep_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aab796680f95c67d7e3c6348c1e21762d" name="aab796680f95c67d7e3c6348c1e21762d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab796680f95c67d7e3c6348c1e21762d">&#9670;&#160;</a></span>rt_pm_sleep_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_pm_sleep_request </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a5acba55f46553417996ac70828b874da">rt_uint16_t</a>&#160;</td>
+          <td class="paramname"><em>module_id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b9b56cebf92c448744546feb7040933" name="a6b9b56cebf92c448744546feb7040933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b9b56cebf92c448744546feb7040933">&#9670;&#160;</a></span>rt_system_pm_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_system_pm_init </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structrt__pm__ops.html">rt_pm_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a>&#160;</td>
+          <td class="paramname"><em>timer_mask</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>user_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="pm_8h.html">pm.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

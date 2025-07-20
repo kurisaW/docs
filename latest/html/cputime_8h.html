@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/cputime.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('cputime_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">cputime.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="cputimer_8h_source.html">cputimer.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for cputime.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="cputime_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2cputime_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2cputime_8h" id="acomponents_2drivers_2include_2drivers_2cputime_8h">
+<area shape="rect" title=" " alt="" coords="64,5,255,45"/>
+<area shape="rect" title=" " alt="" coords="5,607,76,632"/>
+<area shape="poly" title=" " alt="" coords="140,47,117,71,94,103,76,139,69,178,69,474,62,540,50,594,45,593,57,539,63,474,63,178,71,137,89,100,113,68,136,44"/>
+<area shape="rect" href="cputimer_8h.html" title=" " alt="" coords="178,93,269,119"/>
+<area shape="poly" title=" " alt="" coords="177,44,207,81,203,84,173,47"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="243,167,329,192"/>
+<area shape="poly" title=" " alt="" coords="236,117,269,154,265,158,232,121"/>
+<area shape="rect" title=" " alt="" coords="661,607,743,632"/>
+<area shape="poly" title=" " alt="" coords="330,182,445,197,585,224,650,242,704,265,741,292,752,308,755,324,755,474,752,508,742,542,718,596,713,594,737,540,746,507,750,474,750,325,747,310,737,296,702,270,648,247,584,229,444,202,329,187"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="278,387,342,412"/>
+<area shape="poly" title=" " alt="" coords="267,195,230,220,191,256,176,276,167,296,166,317,174,337,192,357,215,372,265,389,264,394,213,377,188,361,169,340,160,318,162,295,172,273,187,252,227,216,264,190"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="183,313,274,339"/>
+<area shape="poly" title=" " alt="" coords="278,194,262,215,247,241,238,271,233,300,228,299,233,270,242,239,257,212,274,190"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="257,240,315,265"/>
+<area shape="poly" title=" " alt="" coords="282,192,280,227,275,226,276,192"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="339,240,428,265"/>
+<area shape="poly" title=" " alt="" coords="303,190,358,229,355,234,300,194"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="521,313,595,339"/>
+<area shape="poly" title=" " alt="" coords="330,177,376,180,429,189,483,207,508,221,531,238,542,252,550,267,558,299,553,300,545,269,537,254,527,242,505,225,481,212,428,194,375,185,329,182"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="452,240,517,265"/>
+<area shape="poly" title=" " alt="" coords="319,190,440,233,438,238,317,195"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="347,460,430,485"/>
+<area shape="poly" title=" " alt="" coords="324,410,368,449,364,453,321,414"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="323,533,403,559"/>
+<area shape="poly" title=" " alt="" coords="315,412,338,484,354,520,349,522,333,486,310,413"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="428,533,528,559"/>
+<area shape="poly" title=" " alt="" coords="343,410,400,433,426,446,444,458,464,488,475,519,470,521,459,491,440,462,424,450,398,438,341,414"/>
+<area shape="rect" title=" " alt="" coords="529,460,640,485"/>
+<area shape="poly" title=" " alt="" coords="343,406,355,409,528,454,527,459,353,415,342,412"/>
+<area shape="poly" title=" " alt="" coords="387,487,374,521,369,520,382,485"/>
+<area shape="poly" title=" " alt="" coords="405,483,454,522,451,527,401,487"/>
+<area shape="poly" title=" " alt="" coords="324,558,90,609,89,604,323,553"/>
+<area shape="poly" title=" " alt="" coords="404,553,417,556,648,604,647,609,416,561,403,559"/>
+<area shape="rect" title=" " alt="" coords="562,607,637,632"/>
+<area shape="poly" title=" " alt="" coords="402,556,550,600,548,605,400,561"/>
+<area shape="rect" title=" " alt="" coords="101,607,175,632"/>
+<area shape="poly" title=" " alt="" coords="328,561,188,605,187,600,326,556"/>
+<area shape="rect" title=" " alt="" coords="199,607,295,632"/>
+<area shape="poly" title=" " alt="" coords="346,561,279,602,277,597,343,556"/>
+<area shape="rect" title=" " alt="" coords="320,607,415,632"/>
+<area shape="poly" title=" " alt="" coords="367,559,369,593,363,593,361,559"/>
+<area shape="rect" title=" " alt="" coords="439,607,538,632"/>
+<area shape="poly" title=" " alt="" coords="385,556,458,597,455,602,382,561"/>
+<area shape="poly" title=" " alt="" coords="515,556,654,600,652,605,513,561"/>
+<area shape="poly" title=" " alt="" coords="243,337,288,376,285,380,240,341"/>
+<area shape="poly" title=" " alt="" coords="290,240,292,206,297,206,296,240"/>
+<area shape="poly" title=" " alt="" coords="291,265,308,373,303,373,285,266"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="352,313,415,339"/>
+<area shape="poly" title=" " alt="" coords="386,266,386,300,381,300,381,266"/>
+<area shape="poly" title=" " alt="" coords="373,341,334,379,330,375,369,337"/>
+<area shape="poly" title=" " alt="" coords="586,336,619,356,648,385,676,439,693,496,701,550,704,592,699,593,696,550,687,497,671,441,644,388,615,360,583,341"/>
+<area shape="poly" title=" " alt="" coords="521,341,356,388,355,383,520,336"/>
+<area shape="poly" title=" " alt="" coords="581,337,607,357,628,386,632,403,628,421,609,451,604,448,623,419,627,403,624,388,603,361,577,341"/>
+<area shape="rect" title=" " alt="" coords="366,387,481,412"/>
+<area shape="poly" title=" " alt="" coords="538,341,459,382,456,378,535,336"/>
+<area shape="rect" title=" " alt="" coords="505,387,614,412"/>
+<area shape="poly" title=" " alt="" coords="561,339,562,373,556,373,556,339"/>
+<area shape="poly" title=" " alt="" coords="481,267,460,302,428,341,393,365,356,384,354,379,390,361,424,337,456,299,477,264"/>
+</map>
+</div>
+</div>
+<p><a href="cputime_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__clock__cputime__ops.html">rt_clock_cputime_ops</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a90f20b472af70f71f2335ae14d239bd4" id="r_a90f20b472af70f71f2335ae14d239bd4"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#a90f20b472af70f71f2335ae14d239bd4">clock_cpu_getres</a> (void)</td></tr>
+<tr class="separator:a90f20b472af70f71f2335ae14d239bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa785ae6bea4b891195d353bae9e56d45" id="r_aa785ae6bea4b891195d353bae9e56d45"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#aa785ae6bea4b891195d353bae9e56d45">clock_cpu_gettime</a> (void)</td></tr>
+<tr class="separator:aa785ae6bea4b891195d353bae9e56d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bc61c20a92159141cb4177c3fef0ed9" id="r_a5bc61c20a92159141cb4177c3fef0ed9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#a5bc61c20a92159141cb4177c3fef0ed9">clock_cpu_settimeout</a> (uint64_t tick, void(*timeout)(void *param), void *param)</td></tr>
+<tr class="separator:a5bc61c20a92159141cb4177c3fef0ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa7303f92ad2e21aa1bb4aed9247947f3" id="r_aa7303f92ad2e21aa1bb4aed9247947f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#aa7303f92ad2e21aa1bb4aed9247947f3">clock_cpu_issettimeout</a> (void)</td></tr>
+<tr class="separator:aa7303f92ad2e21aa1bb4aed9247947f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2cae15e8bfaab866d3eaf112155f6d3" id="r_aa2cae15e8bfaab866d3eaf112155f6d3"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#aa2cae15e8bfaab866d3eaf112155f6d3">clock_cpu_microsecond</a> (uint64_t cpu_tick)</td></tr>
+<tr class="separator:aa2cae15e8bfaab866d3eaf112155f6d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a911a3c2d8c45d094d38c8bcebc35a50e" id="r_a911a3c2d8c45d094d38c8bcebc35a50e"><td class="memItemLeft" align="right" valign="top">uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#a911a3c2d8c45d094d38c8bcebc35a50e">clock_cpu_millisecond</a> (uint64_t cpu_tick)</td></tr>
+<tr class="separator:a911a3c2d8c45d094d38c8bcebc35a50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69cd0feac7f0c7e292afaead4ab79743" id="r_a69cd0feac7f0c7e292afaead4ab79743"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cputime_8h.html#a69cd0feac7f0c7e292afaead4ab79743">clock_cpu_setops</a> (const struct <a class="el" href="structrt__clock__cputime__ops.html">rt_clock_cputime_ops</a> *ops)</td></tr>
+<tr class="separator:a69cd0feac7f0c7e292afaead4ab79743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a90f20b472af70f71f2335ae14d239bd4" name="a90f20b472af70f71f2335ae14d239bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90f20b472af70f71f2335ae14d239bd4">&#9670;&#160;</a></span>clock_cpu_getres()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t clock_cpu_getres </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa785ae6bea4b891195d353bae9e56d45" name="aa785ae6bea4b891195d353bae9e56d45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa785ae6bea4b891195d353bae9e56d45">&#9670;&#160;</a></span>clock_cpu_gettime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t clock_cpu_gettime </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa7303f92ad2e21aa1bb4aed9247947f3" name="aa7303f92ad2e21aa1bb4aed9247947f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7303f92ad2e21aa1bb4aed9247947f3">&#9670;&#160;</a></span>clock_cpu_issettimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clock_cpu_issettimeout </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2cae15e8bfaab866d3eaf112155f6d3" name="aa2cae15e8bfaab866d3eaf112155f6d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2cae15e8bfaab866d3eaf112155f6d3">&#9670;&#160;</a></span>clock_cpu_microsecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t clock_cpu_microsecond </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>cpu_tick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a911a3c2d8c45d094d38c8bcebc35a50e" name="a911a3c2d8c45d094d38c8bcebc35a50e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911a3c2d8c45d094d38c8bcebc35a50e">&#9670;&#160;</a></span>clock_cpu_millisecond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint64_t clock_cpu_millisecond </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>cpu_tick</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a69cd0feac7f0c7e292afaead4ab79743" name="a69cd0feac7f0c7e292afaead4ab79743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69cd0feac7f0c7e292afaead4ab79743">&#9670;&#160;</a></span>clock_cpu_setops()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clock_cpu_setops </td>
+          <td>(</td>
+          <td class="paramtype">const struct <a class="el" href="structrt__clock__cputime__ops.html">rt_clock_cputime_ops</a> *&#160;</td>
+          <td class="paramname"><em>ops</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5bc61c20a92159141cb4177c3fef0ed9" name="a5bc61c20a92159141cb4177c3fef0ed9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc61c20a92159141cb4177c3fef0ed9">&#9670;&#160;</a></span>clock_cpu_settimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clock_cpu_settimeout </td>
+          <td>(</td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>tick</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void *param)&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>param</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="cputime_8h.html">cputime.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

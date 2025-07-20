@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: rt_thermal_zone_device Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structrt__thermal__zone__device.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">rt_thermal_zone_device Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="drivers_2thermal_8h_source.html">thermal.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a244a51ae63cfafb51d3d2fe879443d4c" id="r_a244a51ae63cfafb51d3d2fe879443d4c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__device.html">rt_device</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a244a51ae63cfafb51d3d2fe879443d4c">parent</a></td></tr>
+<tr class="separator:a244a51ae63cfafb51d3d2fe879443d4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ab30258cc8496973503c34886186b71" id="r_a2ab30258cc8496973503c34886186b71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a2ab30258cc8496973503c34886186b71">zone_id</a></td></tr>
+<tr class="separator:a2ab30258cc8496973503c34886186b71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3515a0a80a491ac52ee4054511919a30" id="r_a3515a0a80a491ac52ee4054511919a30"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structrt__thermal__zone__ops.html">rt_thermal_zone_ops</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a3515a0a80a491ac52ee4054511919a30">ops</a></td></tr>
+<tr class="separator:a3515a0a80a491ac52ee4054511919a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797188079f076ff84274f9c7b1f25675" id="r_a797188079f076ff84274f9c7b1f25675"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a797188079f076ff84274f9c7b1f25675">trips_free</a></td></tr>
+<tr class="separator:a797188079f076ff84274f9c7b1f25675"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d70ceca873a0d86bfcff6d015657414" id="r_a5d70ceca873a0d86bfcff6d015657414"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a5d70ceca873a0d86bfcff6d015657414">trips_nr</a></td></tr>
+<tr class="separator:a5d70ceca873a0d86bfcff6d015657414"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd6135d8f80c83d416869c148d45e941" id="r_afd6135d8f80c83d416869c148d45e941"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__thermal__trip.html">rt_thermal_trip</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#afd6135d8f80c83d416869c148d45e941">trips</a></td></tr>
+<tr class="separator:afd6135d8f80c83d416869c148d45e941"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acec2c10c99b0cc616e23d2a3e762eb9e" id="r_acec2c10c99b0cc616e23d2a3e762eb9e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__thermal__zone__params.html">rt_thermal_zone_params</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#acec2c10c99b0cc616e23d2a3e762eb9e">params</a></td></tr>
+<tr class="separator:acec2c10c99b0cc616e23d2a3e762eb9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acffa9ca8f95b846f4ee8ffd1d09a621c" id="r_acffa9ca8f95b846f4ee8ffd1d09a621c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#acffa9ca8f95b846f4ee8ffd1d09a621c">enabled</a></td></tr>
+<tr class="separator:acffa9ca8f95b846f4ee8ffd1d09a621c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbb802a3a1b3a4c8d1f3cadd40033a30" id="r_afbb802a3a1b3a4c8d1f3cadd40033a30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#afbb802a3a1b3a4c8d1f3cadd40033a30">cooling</a></td></tr>
+<tr class="separator:afbb802a3a1b3a4c8d1f3cadd40033a30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d92ff6ef4fab998ab51c175d78fdd0b" id="r_a0d92ff6ef4fab998ab51c175d78fdd0b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a0d92ff6ef4fab998ab51c175d78fdd0b">temperature</a></td></tr>
+<tr class="separator:a0d92ff6ef4fab998ab51c175d78fdd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e8287527333989d816f643d52aa3605" id="r_a5e8287527333989d816f643d52aa3605"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a5e8287527333989d816f643d52aa3605">last_temperature</a></td></tr>
+<tr class="separator:a5e8287527333989d816f643d52aa3605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbb5e3bfa428d448bcc1206ad7367ee8" id="r_adbb5e3bfa428d448bcc1206ad7367ee8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#adbb5e3bfa428d448bcc1206ad7367ee8">prev_low_trip</a></td></tr>
+<tr class="separator:adbb5e3bfa428d448bcc1206ad7367ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a442c70883e8f4e0496d20ee4d68ffa0d" id="r_a442c70883e8f4e0496d20ee4d68ffa0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a442c70883e8f4e0496d20ee4d68ffa0d">prev_high_trip</a></td></tr>
+<tr class="separator:a442c70883e8f4e0496d20ee4d68ffa0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a354517a42c5911d83a4310cd54237200" id="r_a354517a42c5911d83a4310cd54237200"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a354517a42c5911d83a4310cd54237200">notifier_nodes</a></td></tr>
+<tr class="separator:a354517a42c5911d83a4310cd54237200"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd5b5848dac6c55dff68f6480342268" id="r_a5cd5b5848dac6c55dff68f6480342268"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__spinlock.html">rt_spinlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a5cd5b5848dac6c55dff68f6480342268">nodes_lock</a></td></tr>
+<tr class="separator:a5cd5b5848dac6c55dff68f6480342268"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1dc13d8b4eae5acae41f167430fc1af" id="r_ab1dc13d8b4eae5acae41f167430fc1af"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#ab1dc13d8b4eae5acae41f167430fc1af">cooling_maps_nr</a></td></tr>
+<tr class="separator:ab1dc13d8b4eae5acae41f167430fc1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a24b5f6037b27bebf6d4ff80b1712ae" id="r_a8a24b5f6037b27bebf6d4ff80b1712ae"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__thermal__cooling__map.html">rt_thermal_cooling_map</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a8a24b5f6037b27bebf6d4ff80b1712ae">cooling_maps</a></td></tr>
+<tr class="separator:a8a24b5f6037b27bebf6d4ff80b1712ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f984f99e37b69ed749f37bd674a86e3" id="r_a0f984f99e37b69ed749f37bd674a86e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a0f984f99e37b69ed749f37bd674a86e3">passive_delay</a></td></tr>
+<tr class="separator:a0f984f99e37b69ed749f37bd674a86e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7c3fa7c97be2a2ed9d4b44d47325d0" id="r_a6d7c3fa7c97be2a2ed9d4b44d47325d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a6d7c3fa7c97be2a2ed9d4b44d47325d0">polling_delay</a></td></tr>
+<tr class="separator:a6d7c3fa7c97be2a2ed9d4b44d47325d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb5faf40dfb394ec1204d57b725b3d2f" id="r_aeb5faf40dfb394ec1204d57b725b3d2f"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__work.html">rt_work</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#aeb5faf40dfb394ec1204d57b725b3d2f">poller</a></td></tr>
+<tr class="separator:aeb5faf40dfb394ec1204d57b725b3d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8f857a839917ae0bf575782be293fe3" id="r_ad8f857a839917ae0bf575782be293fe3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__mutex.html">rt_mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#ad8f857a839917ae0bf575782be293fe3">mutex</a></td></tr>
+<tr class="separator:ad8f857a839917ae0bf575782be293fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c7cdcc18afc147418bf41682b90f7c3" id="r_a3c7cdcc18afc147418bf41682b90f7c3"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__thermal__zone__device.html#a3c7cdcc18afc147418bf41682b90f7c3">priv</a></td></tr>
+<tr class="separator:a3c7cdcc18afc147418bf41682b90f7c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="afbb802a3a1b3a4c8d1f3cadd40033a30" name="afbb802a3a1b3a4c8d1f3cadd40033a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbb802a3a1b3a4c8d1f3cadd40033a30">&#9670;&#160;</a></span>cooling</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> rt_thermal_zone_device::cooling</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a24b5f6037b27bebf6d4ff80b1712ae" name="a8a24b5f6037b27bebf6d4ff80b1712ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a24b5f6037b27bebf6d4ff80b1712ae">&#9670;&#160;</a></span>cooling_maps</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__thermal__cooling__map.html">rt_thermal_cooling_map</a>* rt_thermal_zone_device::cooling_maps</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1dc13d8b4eae5acae41f167430fc1af" name="ab1dc13d8b4eae5acae41f167430fc1af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1dc13d8b4eae5acae41f167430fc1af">&#9670;&#160;</a></span>cooling_maps_nr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_thermal_zone_device::cooling_maps_nr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acffa9ca8f95b846f4ee8ffd1d09a621c" name="acffa9ca8f95b846f4ee8ffd1d09a621c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acffa9ca8f95b846f4ee8ffd1d09a621c">&#9670;&#160;</a></span>enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> rt_thermal_zone_device::enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5e8287527333989d816f643d52aa3605" name="a5e8287527333989d816f643d52aa3605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e8287527333989d816f643d52aa3605">&#9670;&#160;</a></span>last_temperature</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thermal_zone_device::last_temperature</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad8f857a839917ae0bf575782be293fe3" name="ad8f857a839917ae0bf575782be293fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8f857a839917ae0bf575782be293fe3">&#9670;&#160;</a></span>mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__mutex.html">rt_mutex</a> rt_thermal_zone_device::mutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5cd5b5848dac6c55dff68f6480342268" name="a5cd5b5848dac6c55dff68f6480342268"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cd5b5848dac6c55dff68f6480342268">&#9670;&#160;</a></span>nodes_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__spinlock.html">rt_spinlock</a> rt_thermal_zone_device::nodes_lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a354517a42c5911d83a4310cd54237200" name="a354517a42c5911d83a4310cd54237200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a354517a42c5911d83a4310cd54237200">&#9670;&#160;</a></span>notifier_nodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> rt_thermal_zone_device::notifier_nodes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3515a0a80a491ac52ee4054511919a30" name="a3515a0a80a491ac52ee4054511919a30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3515a0a80a491ac52ee4054511919a30">&#9670;&#160;</a></span>ops</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structrt__thermal__zone__ops.html">rt_thermal_zone_ops</a>* rt_thermal_zone_device::ops</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acec2c10c99b0cc616e23d2a3e762eb9e" name="acec2c10c99b0cc616e23d2a3e762eb9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acec2c10c99b0cc616e23d2a3e762eb9e">&#9670;&#160;</a></span>params</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__thermal__zone__params.html">rt_thermal_zone_params</a> rt_thermal_zone_device::params</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a244a51ae63cfafb51d3d2fe879443d4c" name="a244a51ae63cfafb51d3d2fe879443d4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a244a51ae63cfafb51d3d2fe879443d4c">&#9670;&#160;</a></span>parent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__device.html">rt_device</a> rt_thermal_zone_device::parent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0f984f99e37b69ed749f37bd674a86e3" name="a0f984f99e37b69ed749f37bd674a86e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f984f99e37b69ed749f37bd674a86e3">&#9670;&#160;</a></span>passive_delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> rt_thermal_zone_device::passive_delay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeb5faf40dfb394ec1204d57b725b3d2f" name="aeb5faf40dfb394ec1204d57b725b3d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb5faf40dfb394ec1204d57b725b3d2f">&#9670;&#160;</a></span>poller</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__work.html">rt_work</a> rt_thermal_zone_device::poller</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d7c3fa7c97be2a2ed9d4b44d47325d0" name="a6d7c3fa7c97be2a2ed9d4b44d47325d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7c3fa7c97be2a2ed9d4b44d47325d0">&#9670;&#160;</a></span>polling_delay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> rt_thermal_zone_device::polling_delay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a442c70883e8f4e0496d20ee4d68ffa0d" name="a442c70883e8f4e0496d20ee4d68ffa0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a442c70883e8f4e0496d20ee4d68ffa0d">&#9670;&#160;</a></span>prev_high_trip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thermal_zone_device::prev_high_trip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adbb5e3bfa428d448bcc1206ad7367ee8" name="adbb5e3bfa428d448bcc1206ad7367ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb5e3bfa428d448bcc1206ad7367ee8">&#9670;&#160;</a></span>prev_low_trip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thermal_zone_device::prev_low_trip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c7cdcc18afc147418bf41682b90f7c3" name="a3c7cdcc18afc147418bf41682b90f7c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c7cdcc18afc147418bf41682b90f7c3">&#9670;&#160;</a></span>priv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* rt_thermal_zone_device::priv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0d92ff6ef4fab998ab51c175d78fdd0b" name="a0d92ff6ef4fab998ab51c175d78fdd0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d92ff6ef4fab998ab51c175d78fdd0b">&#9670;&#160;</a></span>temperature</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thermal_zone_device::temperature</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd6135d8f80c83d416869c148d45e941" name="afd6135d8f80c83d416869c148d45e941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd6135d8f80c83d416869c148d45e941">&#9670;&#160;</a></span>trips</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__thermal__trip.html">rt_thermal_trip</a>* rt_thermal_zone_device::trips</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a797188079f076ff84274f9c7b1f25675" name="a797188079f076ff84274f9c7b1f25675"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a797188079f076ff84274f9c7b1f25675">&#9670;&#160;</a></span>trips_free</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a3e03a3519ef7e33d13ebd34c482db49c">rt_bool_t</a> rt_thermal_zone_device::trips_free</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d70ceca873a0d86bfcff6d015657414" name="a5d70ceca873a0d86bfcff6d015657414"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d70ceca873a0d86bfcff6d015657414">&#9670;&#160;</a></span>trips_nr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> rt_thermal_zone_device::trips_nr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ab30258cc8496973503c34886186b71" name="a2ab30258cc8496973503c34886186b71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab30258cc8496973503c34886186b71">&#9670;&#160;</a></span>zone_id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int rt_thermal_zone_device::zone_id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="drivers_2thermal_8h_source.html">thermal.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structrt__thermal__zone__device.html">rt_thermal_zone_device</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

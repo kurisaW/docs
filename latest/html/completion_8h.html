@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/ipc/completion.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('completion_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">completion.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdef_8h_source.html">rtdef.h</a>&gt;</code><br />
+<code>#include &lt;rtconfig.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for completion.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="completion_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2ipc_2completion_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2ipc_2completion_8h" id="acomponents_2drivers_2include_2ipc_2completion_8h">
+<area shape="rect" title=" " alt="" coords="536,5,721,45"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="519,93,583,119"/>
+<area shape="poly" title=" " alt="" coords="612,47,574,85,570,82,608,44"/>
+<area shape="rect" title=" " alt="" coords="661,313,743,339"/>
+<area shape="poly" title=" " alt="" coords="636,45,699,299,693,301,631,46"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="389,167,471,192"/>
+<area shape="poly" title=" " alt="" coords="533,121,463,162,460,157,530,116"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="311,240,391,265"/>
+<area shape="poly" title=" " alt="" coords="520,112,486,117,449,127,411,144,379,168,362,197,355,227,350,226,357,195,375,165,408,139,447,122,485,112,519,107"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="564,240,664,265"/>
+<area shape="poly" title=" " alt="" coords="574,117,600,137,622,166,628,197,624,227,619,226,622,197,617,168,596,141,571,121"/>
+<area shape="rect" title=" " alt="" coords="496,167,607,192"/>
+<area shape="poly" title=" " alt="" coords="554,119,554,153,549,153,549,119"/>
+<area shape="poly" title=" " alt="" coords="419,194,376,233,372,229,416,190"/>
+<area shape="poly" title=" " alt="" coords="461,190,572,232,570,237,459,195"/>
+<area shape="poly" title=" " alt="" coords="392,259,648,310,647,316,391,265"/>
+<area shape="rect" title=" " alt="" coords="5,313,76,339"/>
+<area shape="poly" title=" " alt="" coords="312,266,90,316,89,311,311,260"/>
+<area shape="rect" title=" " alt="" coords="101,313,175,339"/>
+<area shape="poly" title=" " alt="" coords="318,268,186,311,185,306,316,263"/>
+<area shape="rect" title=" " alt="" coords="199,313,274,339"/>
+<area shape="poly" title=" " alt="" coords="334,268,268,308,266,304,332,263"/>
+<area shape="rect" title=" " alt="" coords="298,313,394,339"/>
+<area shape="poly" title=" " alt="" coords="353,266,351,300,345,300,348,265"/>
+<area shape="rect" title=" " alt="" coords="419,313,513,339"/>
+<area shape="poly" title=" " alt="" coords="371,263,437,304,434,308,368,268"/>
+<area shape="rect" title=" " alt="" coords="538,313,637,339"/>
+<area shape="poly" title=" " alt="" coords="390,263,537,307,535,312,388,268"/>
+<area shape="poly" title=" " alt="" coords="630,263,679,302,675,307,626,267"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="completion_8h__dep__incl.png" border="0" usemap="#acomponents_2drivers_2include_2ipc_2completion_8hdep" alt=""/></div>
+<map name="acomponents_2drivers_2include_2ipc_2completion_8hdep" id="acomponents_2drivers_2include_2ipc_2completion_8hdep">
+<area shape="rect" title=" " alt="" coords="1901,5,2087,45"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="1838,93,2022,133"/>
+<area shape="poly" title=" " alt="" coords="1974,58,1946,95,1942,92,1969,55"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1919,181,2069,221"/>
+<area shape="poly" title=" " alt="" coords="2019,56,2037,93,2040,113,2037,134,2026,160,2012,182,2007,179,2021,158,2031,133,2035,113,2031,94,2015,58"/>
+<area shape="poly" title=" " alt="" coords="1955,143,1982,180,1978,183,1950,146"/>
+<area shape="rect" href="dfs_8h.html" title=" " alt="" coords="473,277,624,317"/>
+<area shape="poly" title=" " alt="" coords="1905,211,624,293,624,288,1904,206"/>
+<area shape="rect" href="dev__audio_8c.html" title=" " alt="" coords="1488,277,1639,317"/>
+<area shape="poly" title=" " alt="" coords="1906,221,1659,272,1630,279,1629,274,1657,267,1905,216"/>
+<area shape="rect" href="dev__audio__pipe_8c.html" title=" " alt="" coords="1651,379,1830,419"/>
+<area shape="poly" title=" " alt="" coords="1906,214,1845,222,1785,234,1735,251,1716,260,1704,271,1697,283,1695,296,1699,325,1712,354,1727,377,1723,380,1707,356,1694,327,1689,296,1692,281,1700,268,1713,256,1733,246,1784,229,1844,217,1905,208"/>
+<area shape="rect" href="dev__audio__pipe_8h.html" title=" " alt="" coords="1715,277,1895,317"/>
+<area shape="poly" title=" " alt="" coords="1945,230,1844,279,1842,274,1942,225"/>
+<area shape="rect" href="clk-fixed-rate_8c.html" title=" " alt="" coords="1919,277,2069,317"/>
+<area shape="poly" title=" " alt="" coords="1997,235,1997,277,1991,277,1991,235"/>
+<area shape="rect" href="clk_8c.html" title=" " alt="" coords="2093,277,2244,317"/>
+<area shape="poly" title=" " alt="" coords="2043,225,2135,274,2132,279,2040,230"/>
+<area shape="rect" href="dev__serial__v2_8h.html" title=" " alt="" coords="2268,269,2419,324"/>
+<area shape="poly" title=" " alt="" coords="2084,222,2256,267,2268,270,2267,275,2255,272,2082,227"/>
+<area shape="rect" href="serial__bypass_8h.html" title=" " alt="" coords="2443,269,2606,324"/>
+<area shape="poly" title=" " alt="" coords="2083,210,2246,233,2432,267,2443,269,2442,275,2431,272,2245,238,2082,216"/>
+<area shape="rect" href="serial__dm_8h.html" title=" " alt="" coords="2630,277,2833,317"/>
+<area shape="poly" title=" " alt="" coords="2084,206,2326,228,2472,245,2618,267,2656,274,2655,279,2618,272,2471,250,2325,233,2083,212"/>
+<area shape="rect" href="dfs__file_8h.html" title=" " alt="" coords="772,379,931,419"/>
+<area shape="poly" title=" " alt="" coords="619,318,795,377,794,382,617,323"/>
+<area shape="rect" href="dfs_8c.html" title=" " alt="" coords="1263,665,1413,705"/>
+<area shape="poly" title=" " alt="" coords="638,304,859,333,995,356,1134,384,1268,419,1386,459,1437,482,1480,507,1514,533,1539,561,1547,576,1550,590,1547,604,1539,619,1520,635,1489,649,1414,671,1413,666,1487,644,1517,630,1535,616,1542,602,1544,590,1542,578,1534,564,1511,537,1477,511,1435,487,1385,464,1267,424,1133,390,994,361,858,339,637,310"/>
+<area shape="rect" href="dfs__dentry_8c.html" title=" " alt="" coords="5,665,156,705"/>
+<area shape="poly" title=" " alt="" coords="460,312,380,335,339,352,302,374,262,408,225,446,192,488,163,530,118,609,91,666,86,664,113,607,159,527,188,485,221,443,258,404,299,370,337,347,378,330,459,307"/>
+<area shape="rect" href="dfs__file_8c.html" title=" " alt="" coords="529,665,680,705"/>
+<area shape="poly" title=" " alt="" coords="520,329,486,367,456,414,446,439,441,464,442,489,451,513,467,531,486,539,508,546,530,561,553,586,572,615,599,664,594,667,568,617,549,590,527,565,505,550,484,544,464,535,446,516,437,490,435,464,441,437,451,411,482,363,516,325"/>
+<area shape="rect" href="dfs__mnt_8c.html" title=" " alt="" coords="180,665,331,705"/>
+<area shape="poly" title=" " alt="" coords="461,313,398,335,368,352,343,374,316,409,296,448,281,489,270,531,260,609,257,665,252,665,254,609,265,530,276,488,291,445,312,406,339,370,365,348,395,330,459,308"/>
+<area shape="rect" href="dfs__posix_8c.html" title=" " alt="" coords="355,665,505,705"/>
+<area shape="poly" title=" " alt="" coords="462,322,420,343,401,357,385,374,345,434,332,462,325,490,322,519,326,549,335,581,350,616,370,643,396,663,393,667,366,647,345,619,330,583,321,550,317,519,319,489,327,461,340,432,381,370,398,353,417,339,459,317"/>
+<area shape="rect" href="dfs__fs_8h.html" title=" " alt="" coords="1140,475,1291,515"/>
+<area shape="poly" title=" " alt="" coords="638,306,782,330,863,348,943,369,1010,393,1076,421,1181,472,1179,477,1074,426,1008,398,941,375,862,353,781,335,637,311"/>
+<area shape="rect" href="dfs__seq__file_8h.html" title=" " alt="" coords="1601,563,1752,617"/>
+<area shape="poly" title=" " alt="" coords="638,296,874,302,1170,314,1312,324,1436,336,1530,351,1562,360,1583,370,1606,389,1625,413,1652,466,1668,519,1676,562,1671,563,1663,520,1647,468,1620,416,1602,393,1581,374,1561,365,1529,356,1435,341,1312,329,1170,319,874,307,638,302"/>
+<area shape="rect" href="dfs__posix_8h.html" title=" " alt="" coords="461,475,636,515"/>
+<area shape="poly" title=" " alt="" coords="551,330,551,474,546,474,546,330"/>
+<area shape="rect" href="dfs__private_8h.html" title=" " alt="" coords="359,570,517,610"/>
+<area shape="poly" title=" " alt="" coords="467,324,433,345,407,373,396,398,391,424,392,452,396,479,412,530,430,569,425,571,407,532,391,480,386,452,386,424,391,396,402,371,430,341,464,320"/>
+<area shape="rect" href="dfs__dentry_8h.html" title=" " alt="" coords="777,570,955,610"/>
+<area shape="poly" title=" " alt="" coords="855,433,861,514,866,570,861,570,855,515,850,433"/>
+<area shape="poly" title=" " alt="" coords="945,401,1043,408,1149,420,1243,441,1279,456,1304,473,1321,495,1333,520,1346,574,1347,625,1344,665,1339,665,1342,625,1341,574,1328,521,1317,497,1300,477,1276,460,1241,446,1148,426,1043,413,944,406"/>
+<area shape="poly" title=" " alt="" coords="815,429,740,475,695,498,648,517,604,530,565,538,498,543,431,548,393,554,348,565,282,589,217,616,115,668,113,663,215,611,280,584,347,560,392,549,431,542,498,538,564,533,602,525,646,512,693,493,738,470,812,425"/>
+<area shape="poly" title=" " alt="" coords="824,431,780,476,689,583,622,667,617,663,685,580,776,473,820,427"/>
+<area shape="rect" href="dfs__file__mmap_8c.html" title=" " alt="" coords="705,665,883,705"/>
+<area shape="poly" title=" " alt="" coords="832,432,796,491,780,526,767,563,763,590,767,617,775,642,785,664,781,666,770,644,762,618,758,590,762,562,775,524,791,488,827,429"/>
+<area shape="rect" href="dfs__fs_8c.html" title=" " alt="" coords="1088,665,1239,705"/>
+<area shape="poly" title=" " alt="" coords="864,431,881,472,907,513,922,528,936,538,969,561,994,589,1020,615,1065,642,1111,663,1108,668,1062,647,1016,619,990,593,966,565,933,542,918,532,903,516,877,475,859,433"/>
+<area shape="poly" title=" " alt="" coords="932,420,1140,473,1139,478,930,425"/>
+<area shape="rect" href="dfs__vfs_8h.html" title=" " alt="" coords="1031,570,1189,610"/>
+<area shape="poly" title=" " alt="" coords="874,429,909,471,954,513,1006,544,1058,567,1056,572,1003,549,951,517,906,475,870,432"/>
+<area shape="poly" title=" " alt="" coords="778,426,611,477,609,472,776,421"/>
+<area shape="rect" href="dfs__vnode_8c.html" title=" " alt="" coords="965,475,1116,515"/>
+<area shape="poly" title=" " alt="" coords="903,423,1004,472,1001,477,901,428"/>
+<area shape="poly" title=" " alt="" coords="969,608,1251,663,1263,665,1262,671,1249,668,968,613"/>
+<area shape="poly" title=" " alt="" coords="763,601,493,626,330,645,168,668,157,670,156,665,167,663,329,640,492,621,762,596"/>
+<area shape="poly" title=" " alt="" coords="801,617,658,668,657,663,800,612"/>
+<area shape="poly" title=" " alt="" coords="845,622,811,667,806,664,841,619"/>
+<area shape="poly" title=" " alt="" coords="940,612,1104,663,1102,668,938,617"/>
+<area shape="poly" title=" " alt="" coords="763,606,568,632,342,668,331,670,330,665,342,663,567,627,763,601"/>
+<area shape="rect" href="dfs__pcache_8c.html" title=" " alt="" coords="908,665,1064,705"/>
+<area shape="poly" title=" " alt="" coords="903,616,963,663,960,667,900,621"/>
+<area shape="poly" title=" " alt="" coords="765,615,517,668,506,670,505,665,516,663,764,610"/>
+<area shape="rect" href="dfs__seq__file_8c.html" title=" " alt="" coords="1438,665,1598,705"/>
+<area shape="poly" title=" " alt="" coords="970,607,1018,615,1133,629,1222,638,1311,647,1425,663,1438,665,1437,670,1424,668,1310,652,1221,643,1132,634,1018,620,969,612"/>
+<area shape="poly" title=" " alt="" coords="1136,474,930,422,932,417,1137,469"/>
+<area shape="poly" title=" " alt="" coords="1132,521,937,573,936,567,1131,516"/>
+<area shape="poly" title=" " alt="" coords="1237,525,1328,663,1323,666,1233,528"/>
+<area shape="poly" title=" " alt="" coords="1126,517,1022,527,940,528,861,536,816,547,766,565,723,587,684,615,625,667,621,663,681,610,720,583,764,560,815,542,860,531,939,523,1022,522,1126,512"/>
+<area shape="poly" title=" " alt="" coords="1217,529,1214,572,1203,618,1192,644,1179,666,1174,664,1187,642,1198,617,1208,571,1212,528"/>
+<area shape="poly" title=" " alt="" coords="1305,511,1601,571,1600,576,1304,517"/>
+<area shape="poly" title=" " alt="" coords="1186,526,1133,572,1130,568,1182,522"/>
+<area shape="rect" href="blk_8h.html" title=" " alt="" coords="1367,570,1525,610"/>
+<area shape="poly" title=" " alt="" coords="1276,517,1400,567,1398,572,1274,522"/>
+<area shape="poly" title=" " alt="" coords="1621,627,1552,667,1549,663,1619,622"/>
+<area shape="rect" href="nvme_8h.html" title=" " alt="" coords="1623,665,1797,705"/>
+<area shape="poly" title=" " alt="" coords="1513,612,1658,663,1656,668,1511,617"/>
+<area shape="poly" title=" " alt="" coords="531,596,939,632,1250,663,1263,665,1262,670,1250,668,938,637,530,602"/>
+<area shape="poly" title=" " alt="" coords="353,616,154,668,152,663,352,611"/>
+<area shape="poly" title=" " alt="" coords="485,614,572,663,570,668,482,619"/>
+<area shape="poly" title=" " alt="" coords="531,597,777,622,1076,663,1088,665,1087,670,1075,668,777,627,530,602"/>
+<area shape="poly" title=" " alt="" coords="390,619,293,668,291,663,388,614"/>
+<area shape="poly" title=" " alt="" coords="438,624,434,666,429,665,433,623"/>
+<area shape="poly" title=" " alt="" coords="1788,330,1755,381,1750,378,1783,327"/>
+<area shape="rect" href="dev__audio_8h.html" title=" " alt="" coords="1855,372,2005,427"/>
+<area shape="poly" title=" " alt="" coords="1841,323,1899,370,1895,374,1837,327"/>
+</map>
+</div>
+</div>
+<p><a href="completion_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__completion.html">rt_completion</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ab81e84dbe0cb787a7320920e3e3bf962" id="r_ab81e84dbe0cb787a7320920e3e3bf962"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#ab81e84dbe0cb787a7320920e3e3bf962">RT_COMPLETION_INIT</a>(comp)&#160;&#160;&#160;{0}</td></tr>
+<tr class="separator:ab81e84dbe0cb787a7320920e3e3bf962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1527dc7227b7da4415c4d618de21203a" id="r_a1527dc7227b7da4415c4d618de21203a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#a1527dc7227b7da4415c4d618de21203a">rt_completion_init</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion)</td></tr>
+<tr class="separator:a1527dc7227b7da4415c4d618de21203a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3d4fab47c460684679388e9b82549c9" id="r_ac3d4fab47c460684679388e9b82549c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#ac3d4fab47c460684679388e9b82549c9">rt_completion_wait</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:ac3d4fab47c460684679388e9b82549c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a122a72a8cbf1635659dbc98125260d7c" id="r_a122a72a8cbf1635659dbc98125260d7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#a122a72a8cbf1635659dbc98125260d7c">rt_completion_wait_noisr</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout)</td></tr>
+<tr class="separator:a122a72a8cbf1635659dbc98125260d7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6be2551815ca62be0b3c7697f964de5b" id="r_a6be2551815ca62be0b3c7697f964de5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#a6be2551815ca62be0b3c7697f964de5b">rt_completion_wait_flags</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout, int suspend_flag)</td></tr>
+<tr class="separator:a6be2551815ca62be0b3c7697f964de5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc107c32fc67648c21dfc17792a7ae02" id="r_adc107c32fc67648c21dfc17792a7ae02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#adc107c32fc67648c21dfc17792a7ae02">rt_completion_wait_flags_noisr</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> timeout, int suspend_flag)</td></tr>
+<tr class="separator:adc107c32fc67648c21dfc17792a7ae02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef87b77329dbc70bfd8e2f0cc115b8c7" id="r_aef87b77329dbc70bfd8e2f0cc115b8c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#aef87b77329dbc70bfd8e2f0cc115b8c7">rt_completion_done</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion)</td></tr>
+<tr class="separator:aef87b77329dbc70bfd8e2f0cc115b8c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b60846030435d6857d51c11e64e4d00" id="r_a4b60846030435d6857d51c11e64e4d00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#a4b60846030435d6857d51c11e64e4d00">rt_completion_wakeup</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion)</td></tr>
+<tr class="separator:a4b60846030435d6857d51c11e64e4d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeee9657631b0eaf6688b12bc2abd2632" id="r_aeee9657631b0eaf6688b12bc2abd2632"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="completion_8h.html#aeee9657631b0eaf6688b12bc2abd2632">rt_completion_wakeup_by_errno</a> (struct <a class="el" href="structrt__completion.html">rt_completion</a> *completion, <a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> error)</td></tr>
+<tr class="separator:aeee9657631b0eaf6688b12bc2abd2632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ab81e84dbe0cb787a7320920e3e3bf962" name="ab81e84dbe0cb787a7320920e3e3bf962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab81e84dbe0cb787a7320920e3e3bf962">&#9670;&#160;</a></span>RT_COMPLETION_INIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RT_COMPLETION_INIT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">comp</td><td>)</td>
+          <td>&#160;&#160;&#160;{0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="aef87b77329dbc70bfd8e2f0cc115b8c7" name="aef87b77329dbc70bfd8e2f0cc115b8c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef87b77329dbc70bfd8e2f0cc115b8c7">&#9670;&#160;</a></span>rt_completion_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_completion_done </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1527dc7227b7da4415c4d618de21203a" name="a1527dc7227b7da4415c4d618de21203a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1527dc7227b7da4415c4d618de21203a">&#9670;&#160;</a></span>rt_completion_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_completion_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3d4fab47c460684679388e9b82549c9" name="ac3d4fab47c460684679388e9b82549c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3d4fab47c460684679388e9b82549c9">&#9670;&#160;</a></span>rt_completion_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wait </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6be2551815ca62be0b3c7697f964de5b" name="a6be2551815ca62be0b3c7697f964de5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6be2551815ca62be0b3c7697f964de5b">&#9670;&#160;</a></span>rt_completion_wait_flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wait_flags </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>suspend_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc107c32fc67648c21dfc17792a7ae02" name="adc107c32fc67648c21dfc17792a7ae02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc107c32fc67648c21dfc17792a7ae02">&#9670;&#160;</a></span>rt_completion_wait_flags_noisr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wait_flags_noisr </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>suspend_flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a122a72a8cbf1635659dbc98125260d7c" name="a122a72a8cbf1635659dbc98125260d7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a122a72a8cbf1635659dbc98125260d7c">&#9670;&#160;</a></span>rt_completion_wait_noisr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wait_noisr </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4b60846030435d6857d51c11e64e4d00" name="a4b60846030435d6857d51c11e64e4d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b60846030435d6857d51c11e64e4d00">&#9670;&#160;</a></span>rt_completion_wakeup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wakeup </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeee9657631b0eaf6688b12bc2abd2632" name="aeee9657631b0eaf6688b12bc2abd2632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee9657631b0eaf6688b12bc2abd2632">&#9670;&#160;</a></span>rt_completion_wakeup_by_errno()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_completion_wakeup_by_errno </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__completion.html">rt_completion</a> *&#160;</td>
+          <td class="paramname"><em>completion</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td>
+          <td class="paramname"><em>error</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_11bb67f88cc0f770d647bd74c0677382.html">ipc</a></li><li class="navelem"><a class="el" href="completion_8h.html">completion.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

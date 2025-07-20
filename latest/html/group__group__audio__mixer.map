@@ -1,0 +1,4 @@
+<map id="AUDIO_MIXER" name="AUDIO_MIXER">
+<area shape="rect" id="Node000002" href="$group__group___audio.html" title="Audio driver API." alt="" coords="5,5,64,31"/>
+<area shape="rect" id="Node000001" title="Supported Mixer Units controls. The macro group from driver level, can set audio mixer parameters inc..." alt="" coords="112,5,227,31"/>
+</map>

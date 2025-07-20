@@ -1,0 +1,440 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/include/drivers/dev_audio.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dev__audio_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dev_audio.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="dev__audio__pipe_8h_source.html">dev_audio_pipe.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dev_audio.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dev__audio_8h__incl.png" border="0" usemap="#acomponents_2drivers_2include_2drivers_2dev__audio_8h" alt=""/></div>
+<map name="acomponents_2drivers_2include_2drivers_2dev__audio_8h" id="acomponents_2drivers_2include_2drivers_2dev__audio_8h">
+<area shape="rect" title=" " alt="" coords="1003,5,1154,60"/>
+<area shape="rect" href="dev__audio__pipe_8h.html" title=" " alt="" coords="1011,108,1147,133"/>
+<area shape="poly" title=" " alt="" coords="1081,60,1081,94,1076,94,1076,60"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1035,181,1122,207"/>
+<area shape="poly" title=" " alt="" coords="1081,134,1081,168,1076,168,1076,134"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="917,621,981,647"/>
+<area shape="poly" title=" " alt="" coords="1123,194,1197,198,1284,208,1363,225,1393,238,1413,253,1418,267,1413,281,1389,338,1363,384,1336,423,1306,456,1272,485,1233,513,1135,576,1100,594,1063,608,996,627,994,622,1062,603,1098,589,1132,571,1230,509,1269,481,1303,452,1332,420,1359,382,1384,335,1408,279,1412,267,1409,256,1390,242,1361,230,1283,213,1197,203,1122,199"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="493,401,579,427"/>
+<area shape="poly" title=" " alt="" coords="1035,199,922,203,777,213,637,230,580,243,538,257,504,275,477,296,469,308,464,321,464,336,469,352,485,374,505,392,501,396,481,378,464,355,459,336,459,320,464,306,473,293,501,271,536,252,579,237,636,225,777,208,922,198,1035,194"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="245,548,397,573"/>
+<area shape="poly" title=" " alt="" coords="1035,200,810,212,500,238,351,257,226,281,177,294,140,309,117,324,109,340,109,415,113,440,123,462,139,481,158,498,206,524,255,542,253,547,203,529,155,502,135,485,119,465,108,442,104,416,104,339,113,320,138,304,175,289,225,276,350,252,500,233,810,207,1035,194"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="245,475,384,500"/>
+<area shape="poly" title=" " alt="" coords="1035,198,912,200,752,208,671,215,597,226,534,240,489,257,459,278,431,302,385,359,350,417,327,463,322,460,345,414,380,356,428,299,456,273,487,252,533,234,596,221,670,210,752,203,912,195,1035,193"/>
+<area shape="rect" href="block_8h.html" title=" " alt="" coords="663,401,833,427"/>
+<area shape="poly" title=" " alt="" coords="1035,199,962,206,873,227,828,243,785,266,747,294,716,329,711,344,713,359,730,389,725,392,708,361,705,343,711,327,743,290,782,261,826,238,871,221,961,201,1035,194"/>
+<area shape="rect" href="char_8h.html" title=" " alt="" coords="725,328,888,353"/>
+<area shape="poly" title=" " alt="" coords="1058,209,841,324,839,319,1056,205"/>
+<area shape="rect" href="graphic_8h.html" title=" " alt="" coords="959,401,1142,427"/>
+<area shape="poly" title=" " alt="" coords="1072,208,1059,229,1048,255,1045,280,1046,316,1051,387,1045,387,1040,316,1040,280,1043,254,1054,227,1068,205"/>
+<area shape="rect" href="mtd_8h.html" title=" " alt="" coords="1058,255,1219,280"/>
+<area shape="poly" title=" " alt="" coords="1091,205,1122,242,1118,246,1087,209"/>
+<area shape="rect" href="net_8h.html" title=" " alt="" coords="1243,255,1399,280"/>
+<area shape="poly" title=" " alt="" coords="1118,204,1270,248,1268,253,1117,209"/>
+<area shape="rect" href="ringbuffer_8h.html" title=" " alt="" coords="913,328,1031,353"/>
+<area shape="poly" title=" " alt="" coords="1059,209,1030,229,1003,256,988,286,979,315,974,314,983,284,999,253,1027,225,1056,205"/>
+<area shape="rect" href="completion_8h.html" title=" " alt="" coords="1420,548,1551,573"/>
+<area shape="poly" title=" " alt="" coords="1123,192,1194,194,1286,202,1386,220,1436,234,1484,252,1523,267,1557,281,1571,290,1582,303,1588,319,1591,339,1591,415,1586,461,1565,502,1544,525,1520,543,1516,539,1540,521,1560,498,1581,460,1585,415,1585,339,1583,320,1577,306,1567,294,1555,286,1521,272,1482,257,1434,239,1385,225,1285,207,1194,199,1123,197"/>
+<area shape="rect" href="dataqueue_8h.html" title=" " alt="" coords="1626,548,1753,573"/>
+<area shape="poly" title=" " alt="" coords="1122,194,1264,203,1354,212,1444,226,1529,244,1599,268,1627,283,1648,300,1662,318,1667,339,1667,415,1673,480,1685,534,1680,536,1668,481,1661,415,1661,340,1657,321,1644,303,1624,287,1597,273,1528,249,1443,231,1353,217,1264,208,1122,199"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="1421,475,1550,500"/>
+<area shape="poly" title=" " alt="" coords="1122,193,1206,197,1306,206,1398,223,1433,236,1458,253,1476,276,1488,303,1496,332,1500,361,1499,417,1493,461,1488,461,1494,417,1494,361,1491,333,1483,305,1471,279,1454,257,1431,241,1397,229,1305,211,1206,202,1122,199"/>
+<area shape="rect" href="condvar_8h.html" title=" " alt="" coords="479,328,587,353"/>
+<area shape="poly" title=" " alt="" coords="1035,197,924,197,782,204,712,211,648,222,596,237,560,257,550,269,543,283,536,315,531,314,538,282,546,266,557,253,594,232,647,217,711,206,782,199,924,192,1035,192"/>
+<area shape="rect" href="waitqueue_8h.html" title=" " alt="" coords="1777,548,1903,573"/>
+<area shape="poly" title=" " alt="" coords="1122,193,1283,198,1387,205,1493,217,1592,235,1674,260,1707,276,1732,294,1748,315,1753,339,1753,415,1760,451,1776,485,1797,514,1819,537,1815,540,1793,517,1771,487,1755,453,1748,416,1748,340,1743,318,1728,298,1704,281,1672,265,1590,240,1492,222,1386,210,1283,203,1122,198"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="571,255,656,280"/>
+<area shape="poly" title=" " alt="" coords="1035,204,675,257,670,258,669,253,674,252,1035,199"/>
+<area shape="rect" href="poll_8h.html" title=" " alt="" coords="1927,548,2009,573"/>
+<area shape="poly" title=" " alt="" coords="1122,193,1225,195,1369,204,1533,222,1617,235,1698,252,1736,258,1774,261,1844,264,1873,271,1897,284,1912,306,1917,339,1917,415,1921,449,1931,482,1956,535,1951,538,1926,483,1916,450,1912,415,1912,340,1907,308,1893,288,1872,276,1843,270,1774,266,1735,264,1697,257,1616,240,1532,227,1368,209,1225,201,1122,198"/>
+<area shape="rect" href="ringblk__buf_8h.html" title=" " alt="" coords="2033,548,2162,573"/>
+<area shape="poly" title=" " alt="" coords="1122,194,1349,206,1663,232,1815,251,1942,275,1992,289,2030,304,2055,320,2064,339,2064,415,2067,448,2073,480,2090,534,2085,536,2068,482,2061,449,2059,415,2059,340,2051,324,2028,308,1990,294,1941,280,1814,257,1663,238,1349,212,1122,200"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="869,695,952,720"/>
+<area shape="poly" title=" " alt="" coords="945,648,926,684,921,681,941,646"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="292,768,372,793"/>
+<area shape="poly" title=" " alt="" coords="918,648,800,683,649,723,507,752,386,773,385,768,506,747,647,717,798,678,916,643"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="939,768,1039,793"/>
+<area shape="poly" title=" " alt="" coords="955,646,985,754,980,755,950,648"/>
+<area shape="rect" title=" " alt="" coords="526,695,637,720"/>
+<area shape="poly" title=" " alt="" coords="918,644,651,695,650,690,917,639"/>
+<area shape="poly" title=" " alt="" coords="869,716,386,775,385,770,869,711"/>
+<area shape="poly" title=" " alt="" coords="925,718,968,757,965,761,922,722"/>
+<area shape="rect" title=" " alt="" coords="1304,841,1387,867"/>
+<area shape="poly" title=" " alt="" coords="373,788,391,791,654,818,913,835,1136,845,1290,849,1290,854,1136,850,913,840,654,823,390,796,372,793"/>
+<area shape="rect" title=" " alt="" coords="467,841,538,867"/>
+<area shape="poly" title=" " alt="" coords="360,791,463,834,461,838,358,796"/>
+<area shape="rect" title=" " alt="" coords="563,841,637,867"/>
+<area shape="poly" title=" " alt="" coords="373,790,550,837,549,842,371,795"/>
+<area shape="rect" title=" " alt="" coords="5,841,80,867"/>
+<area shape="poly" title=" " alt="" coords="292,794,94,843,93,838,291,789"/>
+<area shape="rect" title=" " alt="" coords="104,841,200,867"/>
+<area shape="poly" title=" " alt="" coords="304,796,195,839,193,834,302,791"/>
+<area shape="rect" title=" " alt="" coords="225,841,319,867"/>
+<area shape="poly" title=" " alt="" coords="324,795,293,833,288,829,320,792"/>
+<area shape="rect" title=" " alt="" coords="344,841,443,867"/>
+<area shape="poly" title=" " alt="" coords="344,792,376,829,372,833,340,795"/>
+<area shape="poly" title=" " alt="" coords="1040,789,1291,839,1290,844,1039,795"/>
+<area shape="poly" title=" " alt="" coords="539,427,545,462,552,481,563,498,600,532,643,560,689,582,736,599,829,620,904,628,903,634,828,625,735,604,687,587,640,565,597,536,559,502,547,484,540,463,534,428"/>
+<area shape="poly" title=" " alt="" coords="493,420,425,425,347,436,278,452,252,463,235,476,220,500,216,523,221,547,235,572,251,588,267,598,301,604,340,605,362,610,385,619,424,645,450,670,476,695,515,718,573,741,625,756,671,766,715,771,809,777,927,791,1290,843,1290,848,926,796,808,783,715,776,670,771,623,762,572,746,512,722,473,699,446,674,420,649,383,624,361,615,340,611,301,609,265,603,247,592,231,575,216,549,211,523,215,498,231,473,249,459,276,447,346,430,424,420,492,415"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="573,475,664,500"/>
+<area shape="poly" title=" " alt="" coords="551,425,596,463,593,468,548,429"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="689,475,746,500"/>
+<area shape="poly" title=" " alt="" coords="559,424,677,470,675,475,557,429"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="409,475,498,500"/>
+<area shape="poly" title=" " alt="" coords="524,429,479,468,476,463,521,425"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="96,548,171,573"/>
+<area shape="poly" title=" " alt="" coords="493,421,329,440,247,456,214,466,191,477,176,489,163,504,145,536,141,534,159,501,172,486,188,472,212,461,245,451,328,434,492,416"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="770,475,835,500"/>
+<area shape="poly" title=" " alt="" coords="580,424,757,471,756,476,578,429"/>
+<area shape="poly" title=" " alt="" coords="641,498,708,532,792,571,905,615,903,619,790,576,706,536,639,502"/>
+<area shape="poly" title=" " alt="" coords="733,498,776,532,832,571,912,613,910,618,829,576,773,537,729,502"/>
+<area shape="poly" title=" " alt="" coords="694,477,584,434,586,429,696,472"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="473,548,535,573"/>
+<area shape="poly" title=" " alt="" coords="464,499,490,535,486,538,460,502"/>
+<area shape="poly" title=" " alt="" coords="536,567,555,571,749,603,904,624,903,630,748,608,554,576,535,572"/>
+<area shape="poly" title=" " alt="" coords="171,564,234,571,621,605,904,627,903,632,621,610,233,576,171,569"/>
+<area shape="poly" title=" " alt="" coords="128,574,111,609,109,628,114,645,442,791,518,805,619,816,863,833,1108,844,1290,849,1290,854,1108,849,862,839,618,821,517,810,441,796,110,648,104,628,106,607,123,572"/>
+<area shape="poly" title=" " alt="" coords="171,566,269,587,385,619,473,653,547,686,545,691,471,658,383,624,268,592,170,571"/>
+<area shape="rect" title=" " alt="" coords="124,621,239,647"/>
+<area shape="poly" title=" " alt="" coords="143,572,168,609,164,612,139,575"/>
+<area shape="rect" title=" " alt="" coords="263,621,372,647"/>
+<area shape="poly" title=" " alt="" coords="164,571,275,614,273,619,162,576"/>
+<area shape="poly" title=" " alt="" coords="810,499,828,534,857,571,884,594,914,612,911,617,881,599,853,575,824,536,805,501"/>
+<area shape="poly" title=" " alt="" coords="398,569,416,571,903,625,903,630,416,576,397,574"/>
+<area shape="poly" title=" " alt="" coords="334,498,400,539,461,571,521,588,583,602,707,620,819,628,903,631,903,636,818,634,707,626,582,607,520,594,459,576,397,544,331,502"/>
+<area shape="poly" title=" " alt="" coords="346,498,461,540,459,545,344,503"/>
+<area shape="poly" title=" " alt="" coords="318,500,322,534,316,535,313,501"/>
+<area shape="poly" title=" " alt="" coords="805,424,851,442,874,456,894,473,917,505,933,541,949,607,944,608,928,543,913,508,890,476,871,460,849,447,803,429"/>
+<area shape="poly" title=" " alt="" coords="822,352,855,382,895,427,933,483,948,515,959,547,961,579,958,608,953,607,956,579,953,549,943,517,929,486,891,430,851,386,819,356"/>
+<area shape="poly" title=" " alt="" coords="1056,427,1061,455,1064,493,1061,535,1046,575,1023,600,995,618,992,614,1020,596,1042,572,1056,534,1059,493,1056,455,1051,428"/>
+<area shape="poly" title=" " alt="" coords="1145,279,1159,343,1162,385,1156,427,1142,474,1126,509,1104,541,1070,575,1034,601,995,620,993,615,1031,597,1066,571,1100,537,1122,507,1137,472,1151,426,1156,385,1154,344,1140,281"/>
+<area shape="poly" title=" " alt="" coords="1318,282,1291,334,1245,412,1181,499,1143,539,1102,575,1076,592,1048,606,995,625,993,620,1046,601,1073,588,1098,571,1139,536,1176,495,1240,409,1287,331,1314,279"/>
+<area shape="poly" title=" " alt="" coords="966,355,950,388,946,407,949,426,959,440,971,448,985,458,996,473,1005,501,1007,524,1004,547,996,574,986,595,973,613,968,610,981,592,991,572,999,545,1002,524,1000,502,991,476,981,461,969,453,955,444,944,428,941,407,945,386,961,353"/>
+<area shape="poly" title=" " alt="" coords="1032,341,1109,351,1151,360,1191,374,1227,393,1257,417,1277,448,1284,486,1284,708,1289,743,1300,775,1331,829,1326,831,1295,778,1283,744,1279,709,1279,486,1272,450,1253,420,1225,397,1189,379,1149,366,1108,356,1031,347"/>
+<area shape="poly" title=" " alt="" coords="913,354,594,406,593,401,912,349"/>
+<area shape="poly" title=" " alt="" coords="1420,574,1402,576,996,629,995,624,1401,571,1419,568"/>
+<area shape="poly" title=" " alt="" coords="1482,575,1359,830,1354,828,1477,572"/>
+<area shape="poly" title=" " alt="" coords="1626,571,995,631,995,626,1625,565"/>
+<area shape="poly" title=" " alt="" coords="1692,574,1687,616,1675,676,1665,708,1650,740,1632,770,1608,795,1572,814,1518,829,1401,849,1400,844,1517,824,1570,809,1605,791,1628,766,1646,738,1660,706,1670,674,1682,615,1686,573"/>
+<area shape="poly" title=" " alt="" coords="1473,502,1422,539,1388,559,1352,576,1255,604,1156,621,1066,631,996,635,995,629,1066,625,1155,616,1253,599,1350,571,1385,555,1419,535,1470,498"/>
+<area shape="poly" title=" " alt="" coords="1508,498,1538,518,1565,546,1586,587,1591,633,1591,709,1585,740,1571,766,1549,788,1522,806,1461,832,1401,847,1400,842,1459,827,1520,802,1546,784,1567,763,1580,738,1585,708,1585,633,1581,588,1561,550,1534,522,1505,502"/>
+<area shape="poly" title=" " alt="" coords="1488,500,1488,534,1483,534,1483,500"/>
+<area shape="poly" title=" " alt="" coords="536,354,538,388,532,388,531,354"/>
+<area shape="poly" title=" " alt="" coords="1778,575,1766,576,1539,598,1318,615,996,633,995,628,1317,609,1539,593,1765,571,1777,569"/>
+<area shape="poly" title=" " alt="" coords="1836,575,1810,617,1766,678,1708,742,1674,771,1637,796,1577,823,1514,840,1453,850,1401,854,1400,849,1452,845,1513,835,1576,818,1635,791,1671,767,1704,738,1762,674,1805,614,1831,572"/>
+<area shape="poly" title=" " alt="" coords="615,280,615,309,618,348,630,390,639,408,653,425,676,443,698,451,721,453,745,452,794,452,821,458,848,472,882,503,908,540,929,576,943,607,938,609,924,579,904,543,878,507,845,477,819,463,794,457,745,458,721,459,697,456,673,447,649,429,635,411,625,392,613,349,609,310,610,280"/>
+<area shape="poly" title=" " alt="" coords="656,267,805,274,900,283,996,296,1087,314,1162,339,1191,354,1214,371,1228,391,1233,412,1233,709,1236,728,1242,746,1262,780,1289,809,1317,831,1314,835,1286,813,1258,784,1237,749,1230,729,1228,709,1228,413,1223,393,1210,375,1188,358,1160,343,1085,319,996,301,899,288,805,279,656,272"/>
+<area shape="poly" title=" " alt="" coords="602,282,558,321,555,317,599,278"/>
+<area shape="poly" title=" " alt="" coords="1927,574,1915,576,1643,605,1375,623,1148,632,995,635,995,630,1148,626,1375,617,1642,600,1914,571,1926,569"/>
+<area shape="poly" title=" " alt="" coords="1959,575,1917,618,1850,678,1766,742,1720,771,1672,796,1601,821,1527,838,1458,848,1400,853,1400,848,1458,843,1526,833,1599,816,1670,791,1717,767,1763,738,1847,674,1914,614,1956,572"/>
+<area shape="poly" title=" " alt="" coords="2033,575,2022,576,1715,602,1416,619,995,634,995,629,1415,614,1715,596,2021,571,2032,569"/>
+<area shape="poly" title=" " alt="" coords="2085,576,2028,618,1940,678,1831,742,1772,771,1713,796,1629,821,1544,837,1465,848,1400,853,1400,848,1465,842,1543,832,1628,815,1711,791,1770,766,1828,738,1937,674,2025,614,2081,571"/>
+</map>
+</div>
+</div>
+<p><a href="dev__audio_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__buf__info.html">rt_audio_buf_info</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio buffer info.  <a href="structrt__audio__buf__info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__ops.html">rt_audio_ops</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aduio device operators.  <a href="structrt__audio__ops.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__configure.html">rt_audio_configure</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio configuration.  <a href="structrt__audio__configure.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__caps.html">rt_audio_caps</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio capabilities.  <a href="structrt__audio__caps.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__replay.html">rt_audio_replay</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio replay.  <a href="structrt__audio__replay.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__record.html">rt_audio_record</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio record, the audio device pipe container of ringbuffer.  <a href="structrt__audio__record.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__device.html">rt_audio_device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio device.  <a href="structrt__audio__device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gac53cc839613b1783a73510f434da3217" id="r_gac53cc839613b1783a73510f434da3217"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(a)&#160;&#160;&#160;(<a class="el" href="group__group__device__driver.html#ga84ca7227cef307374363fee129dec0cb">RT_DEVICE_CTRL_BASE</a>(Sound) + a)</td></tr>
+<tr class="memdesc:gac53cc839613b1783a73510f434da3217"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate audio command code with <em>a</em>.  <br /></td></tr>
+<tr class="separator:gac53cc839613b1783a73510f434da3217"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51c75cdd15b6245253dc0d70d64296ab" id="r_ga51c75cdd15b6245253dc0d70d64296ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#ga51c75cdd15b6245253dc0d70d64296ab">AUDIO_CTL_GETCAPS</a>&#160;&#160;&#160;<a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(1)</td></tr>
+<tr class="separator:ga51c75cdd15b6245253dc0d70d64296ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21782d27ed3b5a1940bad23ccdb06211" id="r_ga21782d27ed3b5a1940bad23ccdb06211"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#ga21782d27ed3b5a1940bad23ccdb06211">AUDIO_CTL_CONFIGURE</a>&#160;&#160;&#160;<a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(2)</td></tr>
+<tr class="separator:ga21782d27ed3b5a1940bad23ccdb06211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fcb80113ee2a634e0a690c2b6aec02c" id="r_ga9fcb80113ee2a634e0a690c2b6aec02c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#ga9fcb80113ee2a634e0a690c2b6aec02c">AUDIO_CTL_START</a>&#160;&#160;&#160;<a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(3)</td></tr>
+<tr class="separator:ga9fcb80113ee2a634e0a690c2b6aec02c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga886d3fc205bf74d707e8be2b94dbd501" id="r_ga886d3fc205bf74d707e8be2b94dbd501"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#ga886d3fc205bf74d707e8be2b94dbd501">AUDIO_CTL_STOP</a>&#160;&#160;&#160;<a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(4)</td></tr>
+<tr class="separator:ga886d3fc205bf74d707e8be2b94dbd501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga975bc5dbcf9c97dc3a5af65088ef66dc" id="r_ga975bc5dbcf9c97dc3a5af65088ef66dc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__control.html#ga975bc5dbcf9c97dc3a5af65088ef66dc">AUDIO_CTL_GETBUFFERINFO</a>&#160;&#160;&#160;<a class="el" href="group__group__audio__control.html#gac53cc839613b1783a73510f434da3217">_AUDIO_CTL</a>(5)</td></tr>
+<tr class="separator:ga975bc5dbcf9c97dc3a5af65088ef66dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadce99b21700327ded98b0741a6f267e6" id="r_gadce99b21700327ded98b0741a6f267e6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__type.html#gadce99b21700327ded98b0741a6f267e6">AUDIO_TYPE_QUERY</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="separator:gadce99b21700327ded98b0741a6f267e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga644908ebf87fc7c47d39117ff9505866" id="r_ga644908ebf87fc7c47d39117ff9505866"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__type.html#ga644908ebf87fc7c47d39117ff9505866">AUDIO_TYPE_INPUT</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ga644908ebf87fc7c47d39117ff9505866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga309489d6866d1ac5a789d8a307322dc4" id="r_ga309489d6866d1ac5a789d8a307322dc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__type.html#ga309489d6866d1ac5a789d8a307322dc4">AUDIO_TYPE_OUTPUT</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga309489d6866d1ac5a789d8a307322dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7f0e5d7f29e68c8e355f3dcfe0dfc244" id="r_ga7f0e5d7f29e68c8e355f3dcfe0dfc244"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__type.html#ga7f0e5d7f29e68c8e355f3dcfe0dfc244">AUDIO_TYPE_MIXER</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:ga7f0e5d7f29e68c8e355f3dcfe0dfc244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60d13cd97cb9c8c5ad3f929e8deb26f9" id="r_ga60d13cd97cb9c8c5ad3f929e8deb26f9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga60d13cd97cb9c8c5ad3f929e8deb26f9">AUDIO_SAMP_RATE_8K</a>&#160;&#160;&#160;0x0001</td></tr>
+<tr class="separator:ga60d13cd97cb9c8c5ad3f929e8deb26f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84d1d47caf2d2d0eda98dd4dfb55846a" id="r_ga84d1d47caf2d2d0eda98dd4dfb55846a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga84d1d47caf2d2d0eda98dd4dfb55846a">AUDIO_SAMP_RATE_11K</a>&#160;&#160;&#160;0x0002</td></tr>
+<tr class="separator:ga84d1d47caf2d2d0eda98dd4dfb55846a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2af41cab3dd2e59e452277c93f6f4a6a" id="r_ga2af41cab3dd2e59e452277c93f6f4a6a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga2af41cab3dd2e59e452277c93f6f4a6a">AUDIO_SAMP_RATE_16K</a>&#160;&#160;&#160;0x0004</td></tr>
+<tr class="separator:ga2af41cab3dd2e59e452277c93f6f4a6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb5600a964f56cfcadd401918b30f4ab" id="r_gacb5600a964f56cfcadd401918b30f4ab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#gacb5600a964f56cfcadd401918b30f4ab">AUDIO_SAMP_RATE_22K</a>&#160;&#160;&#160;0x0008</td></tr>
+<tr class="separator:gacb5600a964f56cfcadd401918b30f4ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ef166a0496e1ab3636d1e3a90ddc652" id="r_ga5ef166a0496e1ab3636d1e3a90ddc652"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga5ef166a0496e1ab3636d1e3a90ddc652">AUDIO_SAMP_RATE_32K</a>&#160;&#160;&#160;0x0010</td></tr>
+<tr class="separator:ga5ef166a0496e1ab3636d1e3a90ddc652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed717d610168010009e5f86ff2a79bd7" id="r_gaed717d610168010009e5f86ff2a79bd7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#gaed717d610168010009e5f86ff2a79bd7">AUDIO_SAMP_RATE_44K</a>&#160;&#160;&#160;0x0020</td></tr>
+<tr class="separator:gaed717d610168010009e5f86ff2a79bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga241393217abb1223bafd3cb5e21f59c6" id="r_ga241393217abb1223bafd3cb5e21f59c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga241393217abb1223bafd3cb5e21f59c6">AUDIO_SAMP_RATE_48K</a>&#160;&#160;&#160;0x0040</td></tr>
+<tr class="separator:ga241393217abb1223bafd3cb5e21f59c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5658e25e18a224643899cafd63159a4" id="r_gab5658e25e18a224643899cafd63159a4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#gab5658e25e18a224643899cafd63159a4">AUDIO_SAMP_RATE_96K</a>&#160;&#160;&#160;0x0080</td></tr>
+<tr class="separator:gab5658e25e18a224643899cafd63159a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ac47c6a7695ee7ad6f1ed9823a51c66" id="r_ga2ac47c6a7695ee7ad6f1ed9823a51c66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga2ac47c6a7695ee7ad6f1ed9823a51c66">AUDIO_SAMP_RATE_128K</a>&#160;&#160;&#160;0x0100</td></tr>
+<tr class="separator:ga2ac47c6a7695ee7ad6f1ed9823a51c66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3e788c51b6e02898abfc8f70edb86e2" id="r_gac3e788c51b6e02898abfc8f70edb86e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#gac3e788c51b6e02898abfc8f70edb86e2">AUDIO_SAMP_RATE_160K</a>&#160;&#160;&#160;0x0200</td></tr>
+<tr class="separator:gac3e788c51b6e02898abfc8f70edb86e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19c3702800af594505aac58aa63100a3" id="r_ga19c3702800af594505aac58aa63100a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga19c3702800af594505aac58aa63100a3">AUDIO_SAMP_RATE_172K</a>&#160;&#160;&#160;0x0400</td></tr>
+<tr class="separator:ga19c3702800af594505aac58aa63100a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3c71ccf4ef93acea920c203fbcb2778f" id="r_ga3c71ccf4ef93acea920c203fbcb2778f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__samp__rates.html#ga3c71ccf4ef93acea920c203fbcb2778f">AUDIO_SAMP_RATE_192K</a>&#160;&#160;&#160;0x0800</td></tr>
+<tr class="separator:ga3c71ccf4ef93acea920c203fbcb2778f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga938b96d0fe5fad9b5e9b65df8766d99d" id="r_ga938b96d0fe5fad9b5e9b65df8766d99d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#ga938b96d0fe5fad9b5e9b65df8766d99d">AUDIO_BIT_RATE_22K</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:ga938b96d0fe5fad9b5e9b65df8766d99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9debdc504c2230691e0813a92dd4f416" id="r_ga9debdc504c2230691e0813a92dd4f416"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#ga9debdc504c2230691e0813a92dd4f416">AUDIO_BIT_RATE_44K</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga9debdc504c2230691e0813a92dd4f416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf215ad15446bf2d250352ba9cac3925" id="r_gacf215ad15446bf2d250352ba9cac3925"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#gacf215ad15446bf2d250352ba9cac3925">AUDIO_BIT_RATE_48K</a>&#160;&#160;&#160;0x04</td></tr>
+<tr class="separator:gacf215ad15446bf2d250352ba9cac3925"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62a9f53c239bdd7efc61966248635fb0" id="r_ga62a9f53c239bdd7efc61966248635fb0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#ga62a9f53c239bdd7efc61966248635fb0">AUDIO_BIT_RATE_96K</a>&#160;&#160;&#160;0x08</td></tr>
+<tr class="separator:ga62a9f53c239bdd7efc61966248635fb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5f5294020b0a7b9e1da4e6ac0701703" id="r_gab5f5294020b0a7b9e1da4e6ac0701703"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#gab5f5294020b0a7b9e1da4e6ac0701703">AUDIO_BIT_RATE_128K</a>&#160;&#160;&#160;0x10</td></tr>
+<tr class="separator:gab5f5294020b0a7b9e1da4e6ac0701703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccce7ee23c2968fb293fa3e878c97114" id="r_gaccce7ee23c2968fb293fa3e878c97114"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#gaccce7ee23c2968fb293fa3e878c97114">AUDIO_BIT_RATE_160K</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:gaccce7ee23c2968fb293fa3e878c97114"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga038ede16b176c637aba72a92c1f5571e" id="r_ga038ede16b176c637aba72a92c1f5571e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#ga038ede16b176c637aba72a92c1f5571e">AUDIO_BIT_RATE_172K</a>&#160;&#160;&#160;0x40</td></tr>
+<tr class="separator:ga038ede16b176c637aba72a92c1f5571e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5698523696655b41fe7a75f6c7844820" id="r_ga5698523696655b41fe7a75f6c7844820"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__bit__rates.html#ga5698523696655b41fe7a75f6c7844820">AUDIO_BIT_RATE_192K</a>&#160;&#160;&#160;0x80</td></tr>
+<tr class="separator:ga5698523696655b41fe7a75f6c7844820"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga21c1a1d3815ad0901aa9a96ff7b5ae96" id="r_ga21c1a1d3815ad0901aa9a96ff7b5ae96"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__dsp.html#ga21c1a1d3815ad0901aa9a96ff7b5ae96">AUDIO_DSP_PARAM</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga21c1a1d3815ad0901aa9a96ff7b5ae96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15d20bdc24475c79212a2a9f4c9f82e4" id="r_ga15d20bdc24475c79212a2a9f4c9f82e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__dsp.html#ga15d20bdc24475c79212a2a9f4c9f82e4">AUDIO_DSP_SAMPLERATE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga15d20bdc24475c79212a2a9f4c9f82e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a6c6d4de9807ac6b1d1d7ccab4764c0" id="r_ga7a6c6d4de9807ac6b1d1d7ccab4764c0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__dsp.html#ga7a6c6d4de9807ac6b1d1d7ccab4764c0">AUDIO_DSP_CHANNELS</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ga7a6c6d4de9807ac6b1d1d7ccab4764c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1bf388c220a8eecdc4f545e7cf75d63" id="r_gae1bf388c220a8eecdc4f545e7cf75d63"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__dsp.html#gae1bf388c220a8eecdc4f545e7cf75d63">AUDIO_DSP_SAMPLEBITS</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:gae1bf388c220a8eecdc4f545e7cf75d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90b8ccf58b63f044776df8e2d40a2c16" id="r_ga90b8ccf58b63f044776df8e2d40a2c16"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga90b8ccf58b63f044776df8e2d40a2c16">AUDIO_MIXER_QUERY</a>&#160;&#160;&#160;0x0000</td></tr>
+<tr class="separator:ga90b8ccf58b63f044776df8e2d40a2c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b9203865f4da921b7c12c773bfe1396" id="r_ga8b9203865f4da921b7c12c773bfe1396"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga8b9203865f4da921b7c12c773bfe1396">AUDIO_MIXER_MUTE</a>&#160;&#160;&#160;0x0001</td></tr>
+<tr class="separator:ga8b9203865f4da921b7c12c773bfe1396"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga418b8ff75e6d9dc9fe321f21c3a81b5f" id="r_ga418b8ff75e6d9dc9fe321f21c3a81b5f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga418b8ff75e6d9dc9fe321f21c3a81b5f">AUDIO_MIXER_VOLUME</a>&#160;&#160;&#160;0x0002</td></tr>
+<tr class="separator:ga418b8ff75e6d9dc9fe321f21c3a81b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03a5f54b8a04fd26341a408becc498a5" id="r_ga03a5f54b8a04fd26341a408becc498a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga03a5f54b8a04fd26341a408becc498a5">AUDIO_MIXER_BASS</a>&#160;&#160;&#160;0x0004</td></tr>
+<tr class="separator:ga03a5f54b8a04fd26341a408becc498a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1309d2f284805418941aa953eaae2618" id="r_ga1309d2f284805418941aa953eaae2618"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga1309d2f284805418941aa953eaae2618">AUDIO_MIXER_MID</a>&#160;&#160;&#160;0x0008</td></tr>
+<tr class="separator:ga1309d2f284805418941aa953eaae2618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga994709e944897d6f5e7c444f94299caa" id="r_ga994709e944897d6f5e7c444f94299caa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga994709e944897d6f5e7c444f94299caa">AUDIO_MIXER_TREBLE</a>&#160;&#160;&#160;0x0010</td></tr>
+<tr class="separator:ga994709e944897d6f5e7c444f94299caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae5d5f9d589b1036eadb21628decbc4d" id="r_gaae5d5f9d589b1036eadb21628decbc4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#gaae5d5f9d589b1036eadb21628decbc4d">AUDIO_MIXER_EQUALIZER</a>&#160;&#160;&#160;0x0020</td></tr>
+<tr class="separator:gaae5d5f9d589b1036eadb21628decbc4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5fd567a2ab3db72370279042b103fc0a" id="r_ga5fd567a2ab3db72370279042b103fc0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga5fd567a2ab3db72370279042b103fc0a">AUDIO_MIXER_LINE</a>&#160;&#160;&#160;0x0040</td></tr>
+<tr class="separator:ga5fd567a2ab3db72370279042b103fc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga42909b347d4f1c45399fecd824cfd62d" id="r_ga42909b347d4f1c45399fecd824cfd62d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga42909b347d4f1c45399fecd824cfd62d">AUDIO_MIXER_DIGITAL</a>&#160;&#160;&#160;0x0080</td></tr>
+<tr class="separator:ga42909b347d4f1c45399fecd824cfd62d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06ef880699edcb0e0d87a69e8cc44736" id="r_ga06ef880699edcb0e0d87a69e8cc44736"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#ga06ef880699edcb0e0d87a69e8cc44736">AUDIO_MIXER_MIC</a>&#160;&#160;&#160;0x0100</td></tr>
+<tr class="separator:ga06ef880699edcb0e0d87a69e8cc44736"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe38518e97f324d61ff326947ae899db" id="r_gafe38518e97f324d61ff326947ae899db"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#gafe38518e97f324d61ff326947ae899db">AUDIO_MIXER_VITURAL</a>&#160;&#160;&#160;0x0200</td></tr>
+<tr class="separator:gafe38518e97f324d61ff326947ae899db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe1bfad2f26c824d0a67549294dde1f4" id="r_gafe1bfad2f26c824d0a67549294dde1f4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__mixer.html#gafe1bfad2f26c824d0a67549294dde1f4">AUDIO_MIXER_EXTEND</a>&#160;&#160;&#160;0x8000</td></tr>
+<tr class="separator:gafe1bfad2f26c824d0a67549294dde1f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf4ddb8146c81f9a30da18e6821325f6b" id="r_gaf4ddb8146c81f9a30da18e6821325f6b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#gaf4ddb8146c81f9a30da18e6821325f6b">AUDIO_VOLUME_MAX</a>&#160;&#160;&#160;(100)</td></tr>
+<tr class="separator:gaf4ddb8146c81f9a30da18e6821325f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaf8f7702e0b628ee0d86cd248b5e828e" id="r_gaaf8f7702e0b628ee0d86cd248b5e828e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#gaaf8f7702e0b628ee0d86cd248b5e828e">AUDIO_VOLUME_MIN</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:gaaf8f7702e0b628ee0d86cd248b5e828e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga64e42bc91a671c0db4921b36f1e574b8" id="r_ga64e42bc91a671c0db4921b36f1e574b8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#ga64e42bc91a671c0db4921b36f1e574b8">CFG_AUDIO_REPLAY_QUEUE_COUNT</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ga64e42bc91a671c0db4921b36f1e574b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7a570854b2b05539c3d149f0b08307e" id="r_gae7a570854b2b05539c3d149f0b08307e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#gae7a570854b2b05539c3d149f0b08307e">CODEC_CMD_RESET</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gae7a570854b2b05539c3d149f0b08307e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e8bd8b8f30d54f651049089cb300c61" id="r_ga4e8bd8b8f30d54f651049089cb300c61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#ga4e8bd8b8f30d54f651049089cb300c61">CODEC_CMD_SET_VOLUME</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga4e8bd8b8f30d54f651049089cb300c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b95aa4743ea0c0a40566befad96c6ec" id="r_ga6b95aa4743ea0c0a40566befad96c6ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#ga6b95aa4743ea0c0a40566befad96c6ec">CODEC_CMD_GET_VOLUME</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ga6b95aa4743ea0c0a40566befad96c6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga36c76880d29d4882531c6a219784cf48" id="r_ga36c76880d29d4882531c6a219784cf48"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#ga36c76880d29d4882531c6a219784cf48">CODEC_CMD_SAMPLERATE</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ga36c76880d29d4882531c6a219784cf48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae24d3f7d81e279bf1ea70eb855bd782" id="r_gaae24d3f7d81e279bf1ea70eb855bd782"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#gaae24d3f7d81e279bf1ea70eb855bd782">CODEC_CMD_EQ</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:gaae24d3f7d81e279bf1ea70eb855bd782"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6c86ce19f1f120da3c137cc64b63b711" id="r_ga6c86ce19f1f120da3c137cc64b63b711"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#ga6c86ce19f1f120da3c137cc64b63b711">CODEC_CMD_3D</a>&#160;&#160;&#160;5</td></tr>
+<tr class="separator:ga6c86ce19f1f120da3c137cc64b63b711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga597f43cab141578008144bb895614472" id="r_ga597f43cab141578008144bb895614472"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__audio__codec__cmd.html#ga597f43cab141578008144bb895614472">CODEC_VOLUME_MAX</a>&#160;&#160;&#160;(63)</td></tr>
+<tr class="separator:ga597f43cab141578008144bb895614472"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:gabb57506391eceabfed404efd0789cbec" id="r_gabb57506391eceabfed404efd0789cbec"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#gabb57506391eceabfed404efd0789cbec">audio_stream</a> { <a class="el" href="group__group___audio.html#ggabb57506391eceabfed404efd0789cbeca331a8b9d17478f10d69e6686bbdf0993">AUDIO_STREAM_REPLAY</a> = 0
+, <a class="el" href="group__group___audio.html#ggabb57506391eceabfed404efd0789cbeca8450ff6fdfb818a2aac5f8200d88a1df">AUDIO_STREAM_RECORD</a>
+, <a class="el" href="group__group___audio.html#ggabb57506391eceabfed404efd0789cbeca03c92af7ccc03d9efa570838985d37c8">AUDIO_STREAM_LAST</a> = AUDIO_STREAM_RECORD
+ }</td></tr>
+<tr class="memdesc:gabb57506391eceabfed404efd0789cbec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio stream control command.  <a href="group__group___audio.html#gabb57506391eceabfed404efd0789cbec">More...</a><br /></td></tr>
+<tr class="separator:gabb57506391eceabfed404efd0789cbec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga8aa727f137a441f16cdb2e2fa8837cf8" id="r_ga8aa727f137a441f16cdb2e2fa8837cf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#ga8aa727f137a441f16cdb2e2fa8837cf8">rt_audio_register</a> (struct <a class="el" href="structrt__audio__device.html">rt_audio_device</a> *audio, const char *name, <a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> flag, void *data)</td></tr>
+<tr class="memdesc:ga8aa727f137a441f16cdb2e2fa8837cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register and initialize audio device.  <br /></td></tr>
+<tr class="separator:ga8aa727f137a441f16cdb2e2fa8837cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad8ae3e3407789ede9e780448ebcd7bff" id="r_gad8ae3e3407789ede9e780448ebcd7bff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#gad8ae3e3407789ede9e780448ebcd7bff">rt_audio_tx_complete</a> (struct <a class="el" href="structrt__audio__device.html">rt_audio_device</a> *audio)</td></tr>
+<tr class="memdesc:gad8ae3e3407789ede9e780448ebcd7bff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a replay frame to the audio hardware device.  <br /></td></tr>
+<tr class="separator:gad8ae3e3407789ede9e780448ebcd7bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf74c7ee2a2ec3bd36b44e9b97899c305" id="r_gaf74c7ee2a2ec3bd36b44e9b97899c305"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___audio.html#gaf74c7ee2a2ec3bd36b44e9b97899c305">rt_audio_rx_done</a> (struct <a class="el" href="structrt__audio__device.html">rt_audio_device</a> *audio, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *pbuf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> len)</td></tr>
+<tr class="memdesc:gaf74c7ee2a2ec3bd36b44e9b97899c305"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receive recording from audio device.  <br /></td></tr>
+<tr class="separator:gaf74c7ee2a2ec3bd36b44e9b97899c305"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_a52d36b4f4a76177bc859387071753c5.html">include</a></li><li class="navelem"><a class="el" href="dir_7366499e6c37697d8f4c9b6fd6f51a86.html">drivers</a></li><li class="navelem"><a class="el" href="dev__audio_8h.html">dev_audio.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

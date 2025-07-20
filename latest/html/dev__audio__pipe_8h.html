@@ -1,0 +1,549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: components/drivers/audio/dev_audio_pipe.h File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('dev__audio__pipe_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">dev_audio_pipe.h File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtdevice_8h_source.html">rtdevice.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for dev_audio_pipe.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="dev__audio__pipe_8h__incl.png" border="0" usemap="#acomponents_2drivers_2audio_2dev__audio__pipe_8h" alt=""/></div>
+<map name="acomponents_2drivers_2audio_2dev__audio__pipe_8h" id="acomponents_2drivers_2audio_2dev__audio__pipe_8h">
+<area shape="rect" title=" " alt="" coords="989,5,1169,45"/>
+<area shape="rect" href="rtdevice_8h.html" title=" " alt="" coords="1035,93,1122,119"/>
+<area shape="poly" title=" " alt="" coords="1081,46,1081,79,1076,79,1076,46"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="917,533,981,559"/>
+<area shape="poly" title=" " alt="" coords="1123,106,1197,110,1284,120,1363,137,1393,150,1413,165,1418,179,1413,193,1389,250,1363,296,1336,335,1306,368,1272,397,1233,425,1135,488,1100,506,1063,520,996,539,994,534,1062,515,1098,501,1132,483,1230,421,1269,393,1303,364,1332,332,1359,294,1384,247,1408,191,1412,179,1409,168,1390,154,1361,142,1283,125,1197,115,1122,111"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="493,313,579,339"/>
+<area shape="poly" title=" " alt="" coords="1035,111,922,115,777,125,637,142,580,155,538,169,504,187,477,208,469,220,464,233,464,248,469,264,485,286,505,304,501,308,481,290,464,267,459,248,459,232,464,218,473,205,501,183,536,164,579,149,636,137,777,120,922,110,1035,106"/>
+<area shape="rect" href="driver_8h.html" title=" " alt="" coords="245,460,397,485"/>
+<area shape="poly" title=" " alt="" coords="1035,112,810,124,500,150,351,169,226,193,177,206,140,221,117,236,109,252,109,327,113,352,123,374,139,393,158,410,206,436,255,454,253,459,203,441,155,414,135,397,119,377,108,354,104,328,104,251,113,232,138,216,175,201,225,188,350,164,500,145,810,119,1035,106"/>
+<area shape="rect" href="bus_8h.html" title=" " alt="" coords="245,387,384,412"/>
+<area shape="poly" title=" " alt="" coords="1035,110,912,112,752,120,671,127,597,138,534,152,489,169,459,190,431,214,385,271,350,329,327,375,322,372,345,326,380,268,428,211,456,185,487,164,533,146,596,133,670,122,752,115,912,107,1035,105"/>
+<area shape="rect" href="block_8h.html" title=" " alt="" coords="663,313,833,339"/>
+<area shape="poly" title=" " alt="" coords="1035,111,962,118,873,139,828,155,785,178,747,206,716,241,711,256,713,271,730,301,725,304,708,273,705,255,711,239,743,202,782,173,826,150,871,133,961,113,1035,106"/>
+<area shape="rect" href="char_8h.html" title=" " alt="" coords="725,240,888,265"/>
+<area shape="poly" title=" " alt="" coords="1058,121,841,236,839,231,1056,117"/>
+<area shape="rect" href="graphic_8h.html" title=" " alt="" coords="959,313,1142,339"/>
+<area shape="poly" title=" " alt="" coords="1072,120,1059,141,1048,167,1045,192,1046,228,1051,299,1045,299,1040,228,1040,192,1043,166,1054,139,1068,117"/>
+<area shape="rect" href="mtd_8h.html" title=" " alt="" coords="1058,167,1219,192"/>
+<area shape="poly" title=" " alt="" coords="1091,117,1122,154,1118,158,1087,121"/>
+<area shape="rect" href="net_8h.html" title=" " alt="" coords="1243,167,1399,192"/>
+<area shape="poly" title=" " alt="" coords="1118,116,1270,160,1268,165,1117,121"/>
+<area shape="rect" href="ringbuffer_8h.html" title=" " alt="" coords="913,240,1031,265"/>
+<area shape="poly" title=" " alt="" coords="1059,121,1030,141,1003,168,988,198,979,227,974,226,983,196,999,165,1027,137,1056,117"/>
+<area shape="rect" href="completion_8h.html" title=" " alt="" coords="1420,460,1551,485"/>
+<area shape="poly" title=" " alt="" coords="1123,104,1194,106,1286,114,1386,132,1436,146,1484,164,1523,179,1557,193,1571,202,1582,215,1588,231,1591,251,1591,327,1586,373,1565,414,1544,437,1520,455,1516,451,1540,433,1560,410,1581,372,1585,327,1585,251,1583,232,1577,218,1567,206,1555,198,1521,184,1482,169,1434,151,1385,137,1285,119,1194,111,1123,109"/>
+<area shape="rect" href="dataqueue_8h.html" title=" " alt="" coords="1626,460,1753,485"/>
+<area shape="poly" title=" " alt="" coords="1122,106,1264,115,1354,124,1444,138,1529,156,1599,180,1627,195,1648,212,1662,230,1667,251,1667,327,1673,392,1685,446,1680,448,1668,393,1661,327,1661,252,1657,233,1644,215,1624,199,1597,185,1528,161,1443,143,1353,129,1264,120,1122,111"/>
+<area shape="rect" href="workqueue_8h.html" title=" " alt="" coords="1421,387,1550,412"/>
+<area shape="poly" title=" " alt="" coords="1122,105,1206,109,1306,118,1398,135,1433,148,1458,165,1476,188,1488,215,1496,244,1500,273,1499,329,1493,373,1488,373,1494,329,1494,273,1491,245,1483,217,1471,191,1454,169,1431,153,1397,141,1305,123,1206,114,1122,111"/>
+<area shape="rect" href="condvar_8h.html" title=" " alt="" coords="479,240,587,265"/>
+<area shape="poly" title=" " alt="" coords="1035,109,924,109,782,116,712,123,648,134,596,149,560,169,550,181,543,195,536,227,531,226,538,194,546,178,557,165,594,144,647,129,711,118,782,111,924,104,1035,104"/>
+<area shape="rect" href="waitqueue_8h.html" title=" " alt="" coords="1777,460,1903,485"/>
+<area shape="poly" title=" " alt="" coords="1122,105,1283,110,1387,117,1493,129,1592,147,1674,172,1707,188,1732,206,1748,227,1753,251,1753,327,1760,363,1776,397,1797,426,1819,449,1815,452,1793,429,1771,399,1755,365,1748,328,1748,252,1743,230,1728,210,1704,193,1672,177,1590,152,1492,134,1386,122,1283,115,1122,110"/>
+<area shape="rect" href="pipe_8h.html" title=" " alt="" coords="571,167,656,192"/>
+<area shape="poly" title=" " alt="" coords="1035,116,675,169,670,170,669,165,674,164,1035,111"/>
+<area shape="rect" href="poll_8h.html" title=" " alt="" coords="1927,460,2009,485"/>
+<area shape="poly" title=" " alt="" coords="1122,105,1225,107,1369,116,1533,134,1617,147,1698,164,1736,170,1774,173,1844,176,1873,183,1897,196,1912,218,1917,251,1917,327,1921,361,1931,394,1956,447,1951,450,1926,395,1916,362,1912,327,1912,252,1907,220,1893,200,1872,188,1843,182,1774,178,1735,176,1697,169,1616,152,1532,139,1368,121,1225,113,1122,110"/>
+<area shape="rect" href="ringblk__buf_8h.html" title=" " alt="" coords="2033,460,2162,485"/>
+<area shape="poly" title=" " alt="" coords="1122,106,1349,118,1663,144,1815,163,1942,187,1992,201,2030,216,2055,232,2064,251,2064,327,2067,360,2073,392,2090,446,2085,448,2068,394,2061,361,2059,327,2059,252,2051,236,2028,220,1990,206,1941,192,1814,169,1663,150,1349,124,1122,112"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="869,607,952,632"/>
+<area shape="poly" title=" " alt="" coords="945,560,926,596,921,593,941,558"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="292,680,372,705"/>
+<area shape="poly" title=" " alt="" coords="918,560,800,595,649,635,507,664,386,685,385,680,506,659,647,629,798,590,916,555"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="939,680,1039,705"/>
+<area shape="poly" title=" " alt="" coords="955,558,985,666,980,667,950,560"/>
+<area shape="rect" title=" " alt="" coords="526,607,637,632"/>
+<area shape="poly" title=" " alt="" coords="918,556,651,607,650,602,917,551"/>
+<area shape="poly" title=" " alt="" coords="869,628,386,687,385,682,869,623"/>
+<area shape="poly" title=" " alt="" coords="925,630,968,669,965,673,922,634"/>
+<area shape="rect" title=" " alt="" coords="1304,753,1387,779"/>
+<area shape="poly" title=" " alt="" coords="373,700,391,703,654,730,913,747,1136,757,1290,761,1290,766,1136,762,913,752,654,735,390,708,372,705"/>
+<area shape="rect" title=" " alt="" coords="467,753,538,779"/>
+<area shape="poly" title=" " alt="" coords="360,703,463,746,461,750,358,708"/>
+<area shape="rect" title=" " alt="" coords="563,753,637,779"/>
+<area shape="poly" title=" " alt="" coords="373,702,550,749,549,754,371,707"/>
+<area shape="rect" title=" " alt="" coords="5,753,80,779"/>
+<area shape="poly" title=" " alt="" coords="292,706,94,755,93,750,291,701"/>
+<area shape="rect" title=" " alt="" coords="104,753,200,779"/>
+<area shape="poly" title=" " alt="" coords="304,708,195,751,193,746,302,703"/>
+<area shape="rect" title=" " alt="" coords="225,753,319,779"/>
+<area shape="poly" title=" " alt="" coords="324,707,293,745,288,741,320,704"/>
+<area shape="rect" title=" " alt="" coords="344,753,443,779"/>
+<area shape="poly" title=" " alt="" coords="344,704,376,741,372,745,340,707"/>
+<area shape="poly" title=" " alt="" coords="1040,701,1291,751,1290,756,1039,707"/>
+<area shape="poly" title=" " alt="" coords="539,339,545,374,552,393,563,410,600,444,643,472,689,494,736,511,829,532,904,540,903,546,828,537,735,516,687,499,640,477,597,448,559,414,547,396,540,375,534,340"/>
+<area shape="poly" title=" " alt="" coords="493,332,425,337,347,348,278,364,252,375,235,388,220,412,216,435,221,459,235,484,251,500,267,510,301,516,340,517,362,522,385,531,424,557,450,582,476,607,515,630,573,653,625,668,671,678,715,683,809,689,927,703,1290,755,1290,760,926,708,808,695,715,688,670,683,623,674,572,658,512,634,473,611,446,586,420,561,383,536,361,527,340,523,301,521,265,515,247,504,231,487,216,461,211,435,215,410,231,385,249,371,276,359,346,342,424,332,492,327"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="573,387,664,412"/>
+<area shape="poly" title=" " alt="" coords="551,337,596,375,593,380,548,341"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="689,387,746,412"/>
+<area shape="poly" title=" " alt="" coords="559,336,677,382,675,387,557,341"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="409,387,498,412"/>
+<area shape="poly" title=" " alt="" coords="524,341,479,380,476,375,521,337"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="96,460,171,485"/>
+<area shape="poly" title=" " alt="" coords="493,333,329,352,247,368,214,378,191,389,176,401,163,416,145,448,141,446,159,413,172,398,188,384,212,373,245,363,328,346,492,328"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="770,387,835,412"/>
+<area shape="poly" title=" " alt="" coords="580,336,757,383,756,388,578,341"/>
+<area shape="poly" title=" " alt="" coords="641,410,708,444,792,483,905,527,903,531,790,488,706,448,639,414"/>
+<area shape="poly" title=" " alt="" coords="733,410,776,444,832,483,912,525,910,530,829,488,773,449,729,414"/>
+<area shape="poly" title=" " alt="" coords="694,389,584,346,586,341,696,384"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="473,460,535,485"/>
+<area shape="poly" title=" " alt="" coords="464,411,490,447,486,450,460,414"/>
+<area shape="poly" title=" " alt="" coords="536,479,555,483,749,515,904,536,903,542,748,520,554,488,535,484"/>
+<area shape="poly" title=" " alt="" coords="171,476,234,483,621,517,904,539,903,544,621,522,233,488,171,481"/>
+<area shape="poly" title=" " alt="" coords="128,486,111,521,109,540,114,557,442,703,518,717,619,728,863,745,1108,756,1290,761,1290,766,1108,761,862,751,618,733,517,722,441,708,110,560,104,540,106,519,123,484"/>
+<area shape="poly" title=" " alt="" coords="171,478,269,499,385,531,473,565,547,598,545,603,471,570,383,536,268,504,170,483"/>
+<area shape="rect" title=" " alt="" coords="124,533,239,559"/>
+<area shape="poly" title=" " alt="" coords="143,484,168,521,164,524,139,487"/>
+<area shape="rect" title=" " alt="" coords="263,533,372,559"/>
+<area shape="poly" title=" " alt="" coords="164,483,275,526,273,531,162,488"/>
+<area shape="poly" title=" " alt="" coords="810,411,828,446,857,483,884,506,914,524,911,529,881,511,853,487,824,448,805,413"/>
+<area shape="poly" title=" " alt="" coords="398,481,416,483,903,537,903,542,416,488,397,486"/>
+<area shape="poly" title=" " alt="" coords="334,410,400,451,461,483,521,500,583,514,707,532,819,540,903,543,903,548,818,546,707,538,582,519,520,506,459,488,397,456,331,414"/>
+<area shape="poly" title=" " alt="" coords="346,410,461,452,459,457,344,415"/>
+<area shape="poly" title=" " alt="" coords="318,412,322,446,316,447,313,413"/>
+<area shape="poly" title=" " alt="" coords="805,336,851,354,874,368,894,385,917,417,933,453,949,519,944,520,928,455,913,420,890,388,871,372,849,359,803,341"/>
+<area shape="poly" title=" " alt="" coords="822,264,855,294,895,339,933,395,948,427,959,459,961,491,958,520,953,519,956,491,953,461,943,429,929,398,891,342,851,298,819,268"/>
+<area shape="poly" title=" " alt="" coords="1056,339,1061,367,1064,405,1061,447,1046,487,1023,512,995,530,992,526,1020,508,1042,484,1056,446,1059,405,1056,367,1051,340"/>
+<area shape="poly" title=" " alt="" coords="1145,191,1159,255,1162,297,1156,339,1142,386,1126,421,1104,453,1070,487,1034,513,995,532,993,527,1031,509,1066,483,1100,449,1122,419,1137,384,1151,338,1156,297,1154,256,1140,193"/>
+<area shape="poly" title=" " alt="" coords="1318,194,1291,246,1245,324,1181,411,1143,451,1102,487,1076,504,1048,518,995,537,993,532,1046,513,1073,500,1098,483,1139,448,1176,407,1240,321,1287,243,1314,191"/>
+<area shape="poly" title=" " alt="" coords="966,267,950,300,946,319,949,338,959,352,971,360,985,370,996,385,1005,413,1007,436,1004,459,996,486,986,507,973,525,968,522,981,504,991,484,999,457,1002,436,1000,414,991,388,981,373,969,365,955,356,944,340,941,319,945,298,961,265"/>
+<area shape="poly" title=" " alt="" coords="1032,253,1109,263,1151,272,1191,286,1227,305,1257,329,1277,360,1284,398,1284,620,1289,655,1300,687,1331,741,1326,743,1295,690,1283,656,1279,621,1279,398,1272,362,1253,332,1225,309,1189,291,1149,278,1108,268,1031,259"/>
+<area shape="poly" title=" " alt="" coords="913,266,594,318,593,313,912,261"/>
+<area shape="poly" title=" " alt="" coords="1420,486,1402,488,996,541,995,536,1401,483,1419,480"/>
+<area shape="poly" title=" " alt="" coords="1482,487,1359,742,1354,740,1477,484"/>
+<area shape="poly" title=" " alt="" coords="1626,483,995,543,995,538,1625,477"/>
+<area shape="poly" title=" " alt="" coords="1692,486,1687,528,1675,588,1665,620,1650,652,1632,682,1608,707,1572,726,1518,741,1401,761,1400,756,1517,736,1570,721,1605,703,1628,678,1646,650,1660,618,1670,586,1682,527,1686,485"/>
+<area shape="poly" title=" " alt="" coords="1473,414,1422,451,1388,471,1352,488,1255,516,1156,533,1066,543,996,547,995,541,1066,537,1155,528,1253,511,1350,483,1385,467,1419,447,1470,410"/>
+<area shape="poly" title=" " alt="" coords="1508,410,1538,430,1565,458,1586,499,1591,545,1591,621,1585,652,1571,678,1549,700,1522,718,1461,744,1401,759,1400,754,1459,739,1520,714,1546,696,1567,675,1580,650,1585,620,1585,545,1581,500,1561,462,1534,434,1505,414"/>
+<area shape="poly" title=" " alt="" coords="1488,412,1488,446,1483,446,1483,412"/>
+<area shape="poly" title=" " alt="" coords="536,266,538,300,532,300,531,266"/>
+<area shape="poly" title=" " alt="" coords="1778,487,1766,488,1539,510,1318,527,996,545,995,540,1317,521,1539,505,1765,483,1777,481"/>
+<area shape="poly" title=" " alt="" coords="1836,487,1810,529,1766,590,1708,654,1674,683,1637,708,1577,735,1514,752,1453,762,1401,766,1400,761,1452,757,1513,747,1576,730,1635,703,1671,679,1704,650,1762,586,1805,526,1831,484"/>
+<area shape="poly" title=" " alt="" coords="615,192,615,221,618,260,630,302,639,320,653,337,676,355,698,363,721,365,745,364,794,364,821,370,848,384,882,415,908,452,929,488,943,519,938,521,924,491,904,455,878,419,845,389,819,375,794,369,745,370,721,371,697,368,673,359,649,341,635,323,625,304,613,261,609,222,610,192"/>
+<area shape="poly" title=" " alt="" coords="656,179,805,186,900,195,996,208,1087,226,1162,251,1191,266,1214,283,1228,303,1233,324,1233,621,1236,640,1242,658,1262,692,1289,721,1317,743,1314,747,1286,725,1258,696,1237,661,1230,641,1228,621,1228,325,1223,305,1210,287,1188,270,1160,255,1085,231,996,213,899,200,805,191,656,184"/>
+<area shape="poly" title=" " alt="" coords="602,194,558,233,555,229,599,190"/>
+<area shape="poly" title=" " alt="" coords="1927,486,1915,488,1643,517,1375,535,1148,544,995,547,995,542,1148,538,1375,529,1642,512,1914,483,1926,481"/>
+<area shape="poly" title=" " alt="" coords="1959,487,1917,530,1850,590,1766,654,1720,683,1672,708,1601,733,1527,750,1458,760,1400,765,1400,760,1458,755,1526,745,1599,728,1670,703,1717,679,1763,650,1847,586,1914,526,1956,484"/>
+<area shape="poly" title=" " alt="" coords="2033,487,2022,488,1715,514,1416,531,995,546,995,541,1415,526,1715,508,2021,483,2032,481"/>
+<area shape="poly" title=" " alt="" coords="2085,488,2028,530,1940,590,1831,654,1772,683,1713,708,1629,733,1544,749,1465,760,1400,765,1400,760,1465,754,1543,744,1628,727,1711,703,1770,678,1828,650,1937,586,2025,526,2081,483"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="dev__audio__pipe_8h__dep__incl.png" border="0" usemap="#acomponents_2drivers_2audio_2dev__audio__pipe_8hdep" alt=""/></div>
+<map name="acomponents_2drivers_2audio_2dev__audio__pipe_8hdep" id="acomponents_2drivers_2audio_2dev__audio__pipe_8hdep">
+<area shape="rect" title=" " alt="" coords="99,5,279,45"/>
+<area shape="rect" href="dev__audio__pipe_8c.html" title=" " alt="" coords="5,101,184,141"/>
+<area shape="poly" title=" " alt="" coords="162,57,116,103,112,99,158,53"/>
+<area shape="rect" href="dev__audio_8h.html" title=" " alt="" coords="209,93,359,148"/>
+<area shape="poly" title=" " alt="" coords="220,53,259,91,255,95,216,57"/>
+</map>
+</div>
+</div>
+<p><a href="dev__audio__pipe_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__portal__device.html">rt_audio_portal_device</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Portal device.  <a href="structrt__audio__portal__device.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Audio buffer info.  <a href="structrt__audio__pipe.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0ed3d40db0b352afd0ae6e6dbe9671e8" id="r_a0ed3d40db0b352afd0ae6e6dbe9671e8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#a0ed3d40db0b352afd0ae6e6dbe9671e8">PIPE_BUFSZ</a>&#160;&#160;&#160;512</td></tr>
+<tr class="separator:a0ed3d40db0b352afd0ae6e6dbe9671e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae29b3d7641435f81e517cd2077121068" id="r_ae29b3d7641435f81e517cd2077121068"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#ae29b3d7641435f81e517cd2077121068">PIPE_CTRL_GET_SPACE</a>&#160;&#160;&#160;0x14</td></tr>
+<tr class="separator:ae29b3d7641435f81e517cd2077121068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ae3e94edb62dba2e140ebd86e80a3bc01" id="r_ae3e94edb62dba2e140ebd86e80a3bc01"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01">rt_audio_pipe_flag</a> { <a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01a509df13e3f4624e6d8dc6c8dd4c00261">RT_PIPE_FLAG_NONBLOCK_RDWR</a> = 0x00
+, <a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01a002d26b6cfa7bdc38c8287d6c1c74e95">RT_PIPE_FLAG_BLOCK_RD</a> = 0x01
+, <a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01aa9439925ad8c1a468e46194669535c8d">RT_PIPE_FLAG_BLOCK_WR</a> = 0x02
+, <a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01aa5ca854ed62c0e65153c5647c32a3d62">RT_PIPE_FLAG_FORCE_WR</a> = 0x04
+ }</td></tr>
+<tr class="memdesc:ae3e94edb62dba2e140ebd86e80a3bc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aduio pipe flags.  <a href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01">More...</a><br /></td></tr>
+<tr class="separator:ae3e94edb62dba2e140ebd86e80a3bc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a45cc2520fc9764e5c862f258c830ae47" id="r_a45cc2520fc9764e5c862f258c830ae47"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#a45cc2520fc9764e5c862f258c830ae47">rt_audio_pipe_init</a> (struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *pipe, const char *name, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> flag, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *buf, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:a45cc2520fc9764e5c862f258c830ae47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init audio pipe.  <br /></td></tr>
+<tr class="separator:a45cc2520fc9764e5c862f258c830ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe24c876ce4ea0b93cfca7d08011f41b" id="r_afe24c876ce4ea0b93cfca7d08011f41b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#afe24c876ce4ea0b93cfca7d08011f41b">rt_audio_pipe_detach</a> (struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *pipe)</td></tr>
+<tr class="memdesc:afe24c876ce4ea0b93cfca7d08011f41b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will detach a pipe device from resource management.  <br /></td></tr>
+<tr class="separator:afe24c876ce4ea0b93cfca7d08011f41b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1156df2122e2df2842f525b32b82538" id="r_ad1156df2122e2df2842f525b32b82538"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#ad1156df2122e2df2842f525b32b82538">rt_audio_pipe_create</a> (const char *name, <a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a> flag, <a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a> size)</td></tr>
+<tr class="memdesc:ad1156df2122e2df2842f525b32b82538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creat audio pipe.  <br /></td></tr>
+<tr class="separator:ad1156df2122e2df2842f525b32b82538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80619fd2dad21d0030f744ad43b33076" id="r_a80619fd2dad21d0030f744ad43b33076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dev__audio__pipe_8h.html#a80619fd2dad21d0030f744ad43b33076">rt_audio_pipe_destroy</a> (struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *pipe)</td></tr>
+<tr class="memdesc:a80619fd2dad21d0030f744ad43b33076"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detachaudio pipe and free its ringbuffer.  <br /></td></tr>
+<tr class="separator:a80619fd2dad21d0030f744ad43b33076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a0ed3d40db0b352afd0ae6e6dbe9671e8" name="a0ed3d40db0b352afd0ae6e6dbe9671e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ed3d40db0b352afd0ae6e6dbe9671e8">&#9670;&#160;</a></span>PIPE_BUFSZ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIPE_BUFSZ&#160;&#160;&#160;512</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Pipe Device </p>
+
+</div>
+</div>
+<a id="ae29b3d7641435f81e517cd2077121068" name="ae29b3d7641435f81e517cd2077121068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae29b3d7641435f81e517cd2077121068">&#9670;&#160;</a></span>PIPE_CTRL_GET_SPACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define PIPE_CTRL_GET_SPACE&#160;&#160;&#160;0x14</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get the remaining size of a pipe device </p>
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ae3e94edb62dba2e140ebd86e80a3bc01" name="ae3e94edb62dba2e140ebd86e80a3bc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3e94edb62dba2e140ebd86e80a3bc01">&#9670;&#160;</a></span>rt_audio_pipe_flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="dev__audio__pipe_8h.html#ae3e94edb62dba2e140ebd86e80a3bc01">rt_audio_pipe_flag</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aduio pipe flags. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae3e94edb62dba2e140ebd86e80a3bc01a509df13e3f4624e6d8dc6c8dd4c00261" name="ae3e94edb62dba2e140ebd86e80a3bc01a509df13e3f4624e6d8dc6c8dd4c00261"></a>RT_PIPE_FLAG_NONBLOCK_RDWR&#160;</td><td class="fielddoc"><p>both read and write won't block </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3e94edb62dba2e140ebd86e80a3bc01a002d26b6cfa7bdc38c8287d6c1c74e95" name="ae3e94edb62dba2e140ebd86e80a3bc01a002d26b6cfa7bdc38c8287d6c1c74e95"></a>RT_PIPE_FLAG_BLOCK_RD&#160;</td><td class="fielddoc"><p>read would block </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3e94edb62dba2e140ebd86e80a3bc01aa9439925ad8c1a468e46194669535c8d" name="ae3e94edb62dba2e140ebd86e80a3bc01aa9439925ad8c1a468e46194669535c8d"></a>RT_PIPE_FLAG_BLOCK_WR&#160;</td><td class="fielddoc"><p>write would block </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ae3e94edb62dba2e140ebd86e80a3bc01aa5ca854ed62c0e65153c5647c32a3d62" name="ae3e94edb62dba2e140ebd86e80a3bc01aa5ca854ed62c0e65153c5647c32a3d62"></a>RT_PIPE_FLAG_FORCE_WR&#160;</td><td class="fielddoc"><p>write to this pipe will discard some data when the pipe is full. When this flag is set, RT_PIPE_FLAG_BLOCK_WR will be ignored since write operation will always be success. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ad1156df2122e2df2842f525b32b82538" name="ad1156df2122e2df2842f525b32b82538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1156df2122e2df2842f525b32b82538">&#9670;&#160;</a></span>rt_audio_pipe_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_audio_pipe_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creat audio pipe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>pipe name</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flag</td><td>pipe flags, it can be one of enum rt_audio_pipe_flag items</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>ringbuffer size</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>error code, RT_EOK on initialization successfully</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>depend on RT_USING_HEAP </dd></dl>
+
+</div>
+</div>
+<a id="a80619fd2dad21d0030f744ad43b33076" name="a80619fd2dad21d0030f744ad43b33076"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80619fd2dad21d0030f744ad43b33076">&#9670;&#160;</a></span>rt_audio_pipe_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_audio_pipe_destroy </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *&#160;</td>
+          <td class="paramname"><em>pipe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detachaudio pipe and free its ringbuffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pipe</td><td>pointer to the pipe will be destory</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>depend on RT_USING_HEAP </dd></dl>
+
+</div>
+</div>
+<a id="afe24c876ce4ea0b93cfca7d08011f41b" name="afe24c876ce4ea0b93cfca7d08011f41b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe24c876ce4ea0b93cfca7d08011f41b">&#9670;&#160;</a></span>rt_audio_pipe_detach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_audio_pipe_detach </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *&#160;</td>
+          <td class="paramname"><em>pipe</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function will detach a pipe device from resource management. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipe</td><td>the pipe device</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the operation status, RT_EOK on successful </dd></dl>
+
+</div>
+</div>
+<a id="a45cc2520fc9764e5c862f258c830ae47" name="a45cc2520fc9764e5c862f258c830ae47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45cc2520fc9764e5c862f258c830ae47">&#9670;&#160;</a></span>rt_audio_pipe_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a> rt_audio_pipe_init </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__audio__pipe.html">rt_audio_pipe</a> *&#160;</td>
+          <td class="paramname"><em>pipe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#afab3dddb302fee91b8d8cff1c6fae9bd">rt_int32_t</a>&#160;</td>
+          <td class="paramname"><em>flag</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8011d259fdfc54b8a9aa006b4d49ac14">rt_size_t</a>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Init audio pipe. </p>
+<p>This function will initialize a pipe device and put it under control of resource management.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pipe</td><td>the pipe device</td></tr>
+    <tr><td class="paramname">name</td><td>the name of pipe device</td></tr>
+    <tr><td class="paramname">flag</td><td>the attribute of the pipe device</td></tr>
+    <tr><td class="paramname">buf</td><td>the buffer of pipe device</td></tr>
+    <tr><td class="paramname">size</td><td>the size of pipe device buffer</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the operation status, RT_EOK on successful </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_409f97388efe006bc3438b95e9edef48.html">components</a></li><li class="navelem"><a class="el" href="dir_5929fb5670f1753e25faccc4903a41ec.html">drivers</a></li><li class="navelem"><a class="el" href="dir_25d69668522c48e8b22ef95bda5444ff.html">audio</a></li><li class="navelem"><a class="el" href="dev__audio__pipe_8h.html">dev_audio_pipe.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

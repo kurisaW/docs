@@ -1,0 +1,474 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: rt_mmcsd_host Struct Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('structrt__mmcsd__host.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Data Fields</a>  </div>
+  <div class="headertitle"><div class="title">rt_mmcsd_host Struct Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mmcsd__host_8h_source.html">mmcsd_host.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Data Fields</h2></td></tr>
+<tr class="memitem:a9b4182004aedb3b2c78d70aadbc4e162" id="r_a9b4182004aedb3b2c78d70aadbc4e162"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a9b4182004aedb3b2c78d70aadbc4e162">name</a> [RT_NAME_MAX]</td></tr>
+<tr class="separator:a9b4182004aedb3b2c78d70aadbc4e162"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac86dafd2c6900be77749dd74babaa75d" id="r_ac86dafd2c6900be77749dd74babaa75d"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ac86dafd2c6900be77749dd74babaa75d">card</a></td></tr>
+<tr class="separator:ac86dafd2c6900be77749dd74babaa75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641e49fd78432a575773dd49262e2e0f" id="r_a641e49fd78432a575773dd49262e2e0f"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structrt__mmcsd__host__ops.html">rt_mmcsd_host_ops</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a641e49fd78432a575773dd49262e2e0f">ops</a></td></tr>
+<tr class="separator:a641e49fd78432a575773dd49262e2e0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c99d44f377aa8ccfb73f2cdab40689" id="r_a44c99d44f377aa8ccfb73f2cdab40689"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a44c99d44f377aa8ccfb73f2cdab40689">freq_min</a></td></tr>
+<tr class="separator:a44c99d44f377aa8ccfb73f2cdab40689"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6607662e569ca51e0ce4b06026081e32" id="r_a6607662e569ca51e0ce4b06026081e32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a6607662e569ca51e0ce4b06026081e32">freq_max</a></td></tr>
+<tr class="separator:a6607662e569ca51e0ce4b06026081e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac273e903ffd0be30bb2082f5e4c9a5b6" id="r_ac273e903ffd0be30bb2082f5e4c9a5b6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__mmcsd__io__cfg.html">rt_mmcsd_io_cfg</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ac273e903ffd0be30bb2082f5e4c9a5b6">io_cfg</a></td></tr>
+<tr class="separator:ac273e903ffd0be30bb2082f5e4c9a5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a0765fc4f6ebf2f0af7522f9a73720b" id="r_a8a0765fc4f6ebf2f0af7522f9a73720b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a8a0765fc4f6ebf2f0af7522f9a73720b">valid_ocr</a></td></tr>
+<tr class="separator:a8a0765fc4f6ebf2f0af7522f9a73720b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50ccd886285c3eda80b12420bfd03fa" id="r_ac50ccd886285c3eda80b12420bfd03fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ac50ccd886285c3eda80b12420bfd03fa">flags</a></td></tr>
+<tr class="separator:ac50ccd886285c3eda80b12420bfd03fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4a69229fce8bb26c09b03b599f52646" id="r_aa4a69229fce8bb26c09b03b599f52646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#aa4a69229fce8bb26c09b03b599f52646">max_seg_size</a></td></tr>
+<tr class="separator:aa4a69229fce8bb26c09b03b599f52646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae20cb3a4640d52ff871f9ea0cbd6ec64" id="r_ae20cb3a4640d52ff871f9ea0cbd6ec64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ae20cb3a4640d52ff871f9ea0cbd6ec64">max_dma_segs</a></td></tr>
+<tr class="separator:ae20cb3a4640d52ff871f9ea0cbd6ec64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06eaa75b2058b2cfb46894c3822537e" id="r_aa06eaa75b2058b2cfb46894c3822537e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#aa06eaa75b2058b2cfb46894c3822537e">max_blk_size</a></td></tr>
+<tr class="separator:aa06eaa75b2058b2cfb46894c3822537e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5522925b99f16a70da0fbdff50808687" id="r_a5522925b99f16a70da0fbdff50808687"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a5522925b99f16a70da0fbdff50808687">max_blk_count</a></td></tr>
+<tr class="separator:a5522925b99f16a70da0fbdff50808687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012b07b8a6cafb5644fe8a08ffeb1a8f" id="r_a012b07b8a6cafb5644fe8a08ffeb1a8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a012b07b8a6cafb5644fe8a08ffeb1a8f">id</a></td></tr>
+<tr class="separator:a012b07b8a6cafb5644fe8a08ffeb1a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab05209760a700de09ca48a5e488a2c19" id="r_ab05209760a700de09ca48a5e488a2c19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ab05209760a700de09ca48a5e488a2c19">spi_use_crc</a></td></tr>
+<tr class="separator:ab05209760a700de09ca48a5e488a2c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a086ed829fdfafbf3ed588c315cca8790" id="r_a086ed829fdfafbf3ed588c315cca8790"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__mutex.html">rt_mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a086ed829fdfafbf3ed588c315cca8790">bus_lock</a></td></tr>
+<tr class="separator:a086ed829fdfafbf3ed588c315cca8790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d9119347d9af30ba6f67ba09fd5c42c" id="r_a1d9119347d9af30ba6f67ba09fd5c42c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__semaphore.html">rt_semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a1d9119347d9af30ba6f67ba09fd5c42c">sem_ack</a></td></tr>
+<tr class="separator:a1d9119347d9af30ba6f67ba09fd5c42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a779e215608d29a702a8238879a60b6b0" id="r_a779e215608d29a702a8238879a60b6b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a779e215608d29a702a8238879a60b6b0">sdio_irq_num</a></td></tr>
+<tr class="separator:a779e215608d29a702a8238879a60b6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2ccaa138dd90a59e4358c85948f22c" id="r_abe2ccaa138dd90a59e4358c85948f22c"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__semaphore.html">rt_semaphore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#abe2ccaa138dd90a59e4358c85948f22c">sdio_irq_sem</a></td></tr>
+<tr class="separator:abe2ccaa138dd90a59e4358c85948f22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b9d127cb0a724e0ae3a3abb81b53d6" id="r_ae6b9d127cb0a724e0ae3a3abb81b53d6"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structrt__thread.html">rt_thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#ae6b9d127cb0a724e0ae3a3abb81b53d6">sdio_irq_thread</a></td></tr>
+<tr class="separator:ae6b9d127cb0a724e0ae3a3abb81b53d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c299e7aecec0e0f62348b3754b72bf5" id="r_a0c299e7aecec0e0f62348b3754b72bf5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrt__mmcsd__host.html#a0c299e7aecec0e0f62348b3754b72bf5">private_data</a></td></tr>
+<tr class="separator:a0c299e7aecec0e0f62348b3754b72bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Field Documentation</h2>
+<a id="a086ed829fdfafbf3ed588c315cca8790" name="a086ed829fdfafbf3ed588c315cca8790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086ed829fdfafbf3ed588c315cca8790">&#9670;&#160;</a></span>bus_lock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__mutex.html">rt_mutex</a> rt_mmcsd_host::bus_lock</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac86dafd2c6900be77749dd74babaa75d" name="ac86dafd2c6900be77749dd74babaa75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac86dafd2c6900be77749dd74babaa75d">&#9670;&#160;</a></span>card</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__mmcsd__card.html">rt_mmcsd_card</a>* rt_mmcsd_host::card</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac50ccd886285c3eda80b12420bfd03fa" name="ac50ccd886285c3eda80b12420bfd03fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50ccd886285c3eda80b12420bfd03fa">&#9670;&#160;</a></span>flags</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::flags</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6607662e569ca51e0ce4b06026081e32" name="a6607662e569ca51e0ce4b06026081e32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6607662e569ca51e0ce4b06026081e32">&#9670;&#160;</a></span>freq_max</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::freq_max</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a44c99d44f377aa8ccfb73f2cdab40689" name="a44c99d44f377aa8ccfb73f2cdab40689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c99d44f377aa8ccfb73f2cdab40689">&#9670;&#160;</a></span>freq_min</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::freq_min</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a012b07b8a6cafb5644fe8a08ffeb1a8f" name="a012b07b8a6cafb5644fe8a08ffeb1a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a012b07b8a6cafb5644fe8a08ffeb1a8f">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::id</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac273e903ffd0be30bb2082f5e4c9a5b6" name="ac273e903ffd0be30bb2082f5e4c9a5b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac273e903ffd0be30bb2082f5e4c9a5b6">&#9670;&#160;</a></span>io_cfg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__mmcsd__io__cfg.html">rt_mmcsd_io_cfg</a> rt_mmcsd_host::io_cfg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5522925b99f16a70da0fbdff50808687" name="a5522925b99f16a70da0fbdff50808687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5522925b99f16a70da0fbdff50808687">&#9670;&#160;</a></span>max_blk_count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::max_blk_count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa06eaa75b2058b2cfb46894c3822537e" name="aa06eaa75b2058b2cfb46894c3822537e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa06eaa75b2058b2cfb46894c3822537e">&#9670;&#160;</a></span>max_blk_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::max_blk_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae20cb3a4640d52ff871f9ea0cbd6ec64" name="ae20cb3a4640d52ff871f9ea0cbd6ec64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae20cb3a4640d52ff871f9ea0cbd6ec64">&#9670;&#160;</a></span>max_dma_segs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::max_dma_segs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4a69229fce8bb26c09b03b599f52646" name="aa4a69229fce8bb26c09b03b599f52646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4a69229fce8bb26c09b03b599f52646">&#9670;&#160;</a></span>max_seg_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::max_seg_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9b4182004aedb3b2c78d70aadbc4e162" name="a9b4182004aedb3b2c78d70aadbc4e162"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b4182004aedb3b2c78d70aadbc4e162">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char rt_mmcsd_host::name[RT_NAME_MAX]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a641e49fd78432a575773dd49262e2e0f" name="a641e49fd78432a575773dd49262e2e0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641e49fd78432a575773dd49262e2e0f">&#9670;&#160;</a></span>ops</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structrt__mmcsd__host__ops.html">rt_mmcsd_host_ops</a>* rt_mmcsd_host::ops</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0c299e7aecec0e0f62348b3754b72bf5" name="a0c299e7aecec0e0f62348b3754b72bf5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c299e7aecec0e0f62348b3754b72bf5">&#9670;&#160;</a></span>private_data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* rt_mmcsd_host::private_data</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a779e215608d29a702a8238879a60b6b0" name="a779e215608d29a702a8238879a60b6b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a779e215608d29a702a8238879a60b6b0">&#9670;&#160;</a></span>sdio_irq_num</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::sdio_irq_num</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abe2ccaa138dd90a59e4358c85948f22c" name="abe2ccaa138dd90a59e4358c85948f22c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2ccaa138dd90a59e4358c85948f22c">&#9670;&#160;</a></span>sdio_irq_sem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__semaphore.html">rt_semaphore</a>* rt_mmcsd_host::sdio_irq_sem</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae6b9d127cb0a724e0ae3a3abb81b53d6" name="ae6b9d127cb0a724e0ae3a3abb81b53d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6b9d127cb0a724e0ae3a3abb81b53d6">&#9670;&#160;</a></span>sdio_irq_thread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__thread.html">rt_thread</a>* rt_mmcsd_host::sdio_irq_thread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1d9119347d9af30ba6f67ba09fd5c42c" name="a1d9119347d9af30ba6f67ba09fd5c42c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d9119347d9af30ba6f67ba09fd5c42c">&#9670;&#160;</a></span>sem_ack</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structrt__semaphore.html">rt_semaphore</a> rt_mmcsd_host::sem_ack</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab05209760a700de09ca48a5e488a2c19" name="ab05209760a700de09ca48a5e488a2c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab05209760a700de09ca48a5e488a2c19">&#9670;&#160;</a></span>spi_use_crc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::spi_use_crc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8a0765fc4f6ebf2f0af7522f9a73720b" name="a8a0765fc4f6ebf2f0af7522f9a73720b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a0765fc4f6ebf2f0af7522f9a73720b">&#9670;&#160;</a></span>valid_ocr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="rttypes_8h.html#aa0f407376acf6e5854ea411316811418">rt_uint32_t</a> rt_mmcsd_host::valid_ocr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li>components/drivers/include/drivers/<a class="el" href="mmcsd__host_8h_source.html">mmcsd_host.h</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structrt__mmcsd__host.html">rt_mmcsd_host</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

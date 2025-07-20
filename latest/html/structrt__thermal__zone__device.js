@@ -1,0 +1,25 @@
+var structrt__thermal__zone__device =
+[
+    [ "cooling", "structrt__thermal__zone__device.html#afbb802a3a1b3a4c8d1f3cadd40033a30", null ],
+    [ "cooling_maps", "structrt__thermal__zone__device.html#a8a24b5f6037b27bebf6d4ff80b1712ae", null ],
+    [ "cooling_maps_nr", "structrt__thermal__zone__device.html#ab1dc13d8b4eae5acae41f167430fc1af", null ],
+    [ "enabled", "structrt__thermal__zone__device.html#acffa9ca8f95b846f4ee8ffd1d09a621c", null ],
+    [ "last_temperature", "structrt__thermal__zone__device.html#a5e8287527333989d816f643d52aa3605", null ],
+    [ "mutex", "structrt__thermal__zone__device.html#ad8f857a839917ae0bf575782be293fe3", null ],
+    [ "nodes_lock", "structrt__thermal__zone__device.html#a5cd5b5848dac6c55dff68f6480342268", null ],
+    [ "notifier_nodes", "structrt__thermal__zone__device.html#a354517a42c5911d83a4310cd54237200", null ],
+    [ "ops", "structrt__thermal__zone__device.html#a3515a0a80a491ac52ee4054511919a30", null ],
+    [ "params", "structrt__thermal__zone__device.html#acec2c10c99b0cc616e23d2a3e762eb9e", null ],
+    [ "parent", "structrt__thermal__zone__device.html#a244a51ae63cfafb51d3d2fe879443d4c", null ],
+    [ "passive_delay", "structrt__thermal__zone__device.html#a0f984f99e37b69ed749f37bd674a86e3", null ],
+    [ "poller", "structrt__thermal__zone__device.html#aeb5faf40dfb394ec1204d57b725b3d2f", null ],
+    [ "polling_delay", "structrt__thermal__zone__device.html#a6d7c3fa7c97be2a2ed9d4b44d47325d0", null ],
+    [ "prev_high_trip", "structrt__thermal__zone__device.html#a442c70883e8f4e0496d20ee4d68ffa0d", null ],
+    [ "prev_low_trip", "structrt__thermal__zone__device.html#adbb5e3bfa428d448bcc1206ad7367ee8", null ],
+    [ "priv", "structrt__thermal__zone__device.html#a3c7cdcc18afc147418bf41682b90f7c3", null ],
+    [ "temperature", "structrt__thermal__zone__device.html#a0d92ff6ef4fab998ab51c175d78fdd0b", null ],
+    [ "trips", "structrt__thermal__zone__device.html#afd6135d8f80c83d416869c148d45e941", null ],
+    [ "trips_free", "structrt__thermal__zone__device.html#a797188079f076ff84274f9c7b1f25675", null ],
+    [ "trips_nr", "structrt__thermal__zone__device.html#a5d70ceca873a0d86bfcff6d015657414", null ],
+    [ "zone_id", "structrt__thermal__zone__device.html#a2ab30258cc8496973503c34886186b71", null ]
+];

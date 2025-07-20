@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>RT-Thread RTOS: src/timer.c File Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript" src="version-switcher.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RT-Thread RTOS
+   &#160;<span id="projectnumber">main</span>
+   </div>
+   <div id="projectbrief">An open source embedded real-time operating system</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('timer_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">timer.c File Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;<a class="el" href="rtthread_8h_source.html">rtthread.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rthw_8h_source.html">rthw.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="rtdbg_8h_source.html">rtdbg.h</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for timer.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="timer_8c__incl.png" border="0" usemap="#asrc_2timer_8c" alt=""/></div>
+<map name="asrc_2timer_8c" id="asrc_2timer_8c">
+<area shape="rect" title=" " alt="" coords="398,5,489,31"/>
+<area shape="rect" href="rtthread_8h.html" title=" " alt="" coords="400,79,487,104"/>
+<area shape="poly" title=" " alt="" coords="446,31,446,65,441,65,441,31"/>
+<area shape="rect" href="rthw_8h.html" title=" " alt="" coords="173,225,236,251"/>
+<area shape="poly" title=" " alt="" coords="398,27,339,39,269,62,235,79,202,99,173,124,150,153,145,169,151,185,163,201,178,215,175,219,159,205,146,188,140,169,145,151,169,120,199,95,232,74,267,57,337,34,397,22"/>
+<area shape="rect" href="rtdbg_8h.html" title=" " alt="" coords="643,79,711,104"/>
+<area shape="poly" title=" " alt="" coords="482,28,630,73,629,78,480,33"/>
+<area shape="rect" title=" " alt="" coords="697,519,779,544"/>
+<area shape="poly" title=" " alt="" coords="487,89,573,94,624,101,673,113,719,132,756,157,771,174,782,192,789,213,791,237,791,386,788,420,778,454,754,508,749,506,773,452,782,419,786,386,786,237,784,214,777,194,767,177,753,161,716,136,672,118,623,106,573,99,487,94"/>
+<area shape="rect" href="rtdef_8h.html" title=" " alt="" coords="314,299,378,324"/>
+<area shape="poly" title=" " alt="" coords="436,106,404,153,374,225,355,286,350,285,369,223,400,151,432,103"/>
+<area shape="rect" href="rtservice_8h.html" title=" " alt="" coords="465,225,555,251"/>
+<area shape="poly" title=" " alt="" coords="455,103,486,151,507,211,502,213,481,153,450,106"/>
+<area shape="rect" href="rtm_8h.html" title=" " alt="" coords="415,152,472,177"/>
+<area shape="poly" title=" " alt="" coords="439,104,437,139,432,138,434,104"/>
+<area shape="rect" href="rtatomic_8h.html" title=" " alt="" coords="160,152,249,177"/>
+<area shape="poly" title=" " alt="" coords="406,107,257,151,256,145,404,101"/>
+<area shape="rect" href="rtklibc_8h.html" title=" " alt="" coords="579,225,654,251"/>
+<area shape="poly" title=" " alt="" coords="459,102,594,215,591,219,456,107"/>
+<area shape="rect" href="finsh_8h.html" title=" " alt="" coords="273,152,339,177"/>
+<area shape="poly" title=" " alt="" coords="422,106,342,148,339,143,420,102"/>
+<area shape="rect" href="rtsched_8h.html" title=" " alt="" coords="305,372,387,397"/>
+<area shape="poly" title=" " alt="" coords="349,324,349,358,343,358,343,324"/>
+<area shape="rect" href="rttypes_8h.html" title=" " alt="" coords="287,445,367,471"/>
+<area shape="poly" title=" " alt="" coords="332,326,312,347,295,373,293,388,295,404,311,433,306,435,290,406,287,388,290,371,307,343,329,322"/>
+<area shape="rect" href="rtcompiler_8h.html" title=" " alt="" coords="392,445,492,471"/>
+<area shape="poly" title=" " alt="" coords="360,322,402,370,434,431,430,434,397,374,356,326"/>
+<area shape="rect" title=" " alt="" coords="463,372,573,397"/>
+<area shape="poly" title=" " alt="" coords="375,322,478,364,476,369,373,326"/>
+<area shape="poly" title=" " alt="" coords="345,398,336,433,331,432,340,397"/>
+<area shape="poly" title=" " alt="" coords="363,395,417,435,414,439,360,400"/>
+<area shape="poly" title=" " alt="" coords="368,466,380,468,684,519,683,524,379,473,367,471"/>
+<area shape="rect" title=" " alt="" coords="5,519,76,544"/>
+<area shape="poly" title=" " alt="" coords="288,472,90,521,89,515,286,467"/>
+<area shape="rect" title=" " alt="" coords="101,519,175,544"/>
+<area shape="poly" title=" " alt="" coords="298,473,183,516,181,511,296,468"/>
+<area shape="rect" title=" " alt="" coords="199,519,274,544"/>
+<area shape="poly" title=" " alt="" coords="314,473,264,512,261,508,311,469"/>
+<area shape="rect" title=" " alt="" coords="298,519,394,544"/>
+<area shape="poly" title=" " alt="" coords="333,470,342,505,337,506,328,472"/>
+<area shape="rect" title=" " alt="" coords="419,519,513,544"/>
+<area shape="poly" title=" " alt="" coords="351,468,432,510,430,515,348,473"/>
+<area shape="rect" title=" " alt="" coords="538,519,637,544"/>
+<area shape="poly" title=" " alt="" coords="368,468,533,512,531,518,367,473"/>
+<area shape="poly" title=" " alt="" coords="490,468,684,514,683,520,489,473"/>
+<area shape="poly" title=" " alt="" coords="485,253,386,296,384,291,483,248"/>
+<area shape="poly" title=" " alt="" coords="448,152,449,118,455,118,453,152"/>
+<area shape="poly" title=" " alt="" coords="440,179,398,252,368,290,363,287,393,249,435,176"/>
+<area shape="poly" title=" " alt="" coords="207,178,207,212,202,212,202,178"/>
+<area shape="poly" title=" " alt="" coords="229,248,312,290,310,295,226,253"/>
+<area shape="poly" title=" " alt="" coords="651,248,685,267,702,281,715,297,728,323,738,351,747,409,748,462,745,505,739,504,743,462,742,409,733,352,723,325,710,300,698,285,682,272,648,253"/>
+<area shape="poly" title=" " alt="" coords="580,252,392,301,391,296,578,247"/>
+<area shape="poly" title=" " alt="" coords="580,252,495,277,460,290,443,300,438,317,446,333,463,349,483,363,480,367,459,353,442,337,433,317,439,297,458,286,494,272,578,247"/>
+<area shape="rect" title=" " alt="" coords="453,299,567,324"/>
+<area shape="poly" title=" " alt="" coords="601,253,540,293,537,289,598,248"/>
+<area shape="rect" title=" " alt="" coords="591,299,701,324"/>
+<area shape="poly" title=" " alt="" coords="624,250,638,285,634,287,619,252"/>
+<area shape="poly" title=" " alt="" coords="312,177,342,285,337,286,307,178"/>
+<area shape="poly" title=" " alt="" coords="712,98,762,117,787,131,809,150,826,170,836,189,841,210,842,237,842,386,840,412,834,432,809,472,790,494,769,512,765,508,786,490,805,469,830,430,835,411,837,386,837,237,836,211,831,191,822,173,805,154,784,136,759,121,710,103"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ac4e2937b86d1338f765c02b4869648ca" id="r_ac4e2937b86d1338f765c02b4869648ca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#ac4e2937b86d1338f765c02b4869648ca">DBG_TAG</a>&#160;&#160;&#160;&quot;kernel.timer&quot;</td></tr>
+<tr class="separator:ac4e2937b86d1338f765c02b4869648ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5f21bfe809857ecc4dd3ecdba44f49" id="r_a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a2d5f21bfe809857ecc4dd3ecdba44f49">DBG_LVL</a>&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td></tr>
+<tr class="separator:a2d5f21bfe809857ecc4dd3ecdba44f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5a5086ab32870d170291641a5b24661b" id="r_a5a5086ab32870d170291641a5b24661b"><td class="memItemLeft" align="right" valign="top">rt_inline struct <a class="el" href="structrt__spinlock.html">rt_spinlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a5a5086ab32870d170291641a5b24661b">_timerlock_idx</a> (struct <a class="el" href="structrt__timer.html">rt_timer</a> *timer)</td></tr>
+<tr class="separator:a5a5086ab32870d170291641a5b24661b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cccbde486b4ce6cceaa8bbab892f3a1" id="r_a2cccbde486b4ce6cceaa8bbab892f3a1"><td class="memItemLeft" align="right" valign="top">rt_inline void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a2cccbde486b4ce6cceaa8bbab892f3a1">_timer_remove</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer)</td></tr>
+<tr class="memdesc:a2cccbde486b4ce6cceaa8bbab892f3a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove the timer.  <br /></td></tr>
+<tr class="separator:a2cccbde486b4ce6cceaa8bbab892f3a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cdaa2ec6353ef2f090bf3e9ff271848" id="r_a6cdaa2ec6353ef2f090bf3e9ff271848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timer_8c.html#a6cdaa2ec6353ef2f090bf3e9ff271848">rt_timer_dump</a> (<a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a> timer_heads[])</td></tr>
+<tr class="memdesc:a6cdaa2ec6353ef2f090bf3e9ff271848"><td class="mdescLeft">&#160;</td><td class="mdescRight">dump the all timer information  <br /></td></tr>
+<tr class="separator:a6cdaa2ec6353ef2f090bf3e9ff271848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga678d29f53307113da6b1578c9d3423cb" id="r_ga678d29f53307113da6b1578c9d3423cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga678d29f53307113da6b1578c9d3423cb">rt_timer_init</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer, const char *name, void(*timeout)(void *parameter), void *parameter, <a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> time, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:ga678d29f53307113da6b1578c9d3423cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will initialize a timer normally this function is used to initialize a static timer object.  <br /></td></tr>
+<tr class="separator:ga678d29f53307113da6b1578c9d3423cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17c5a365e0d16a5105192267525a5bd1" id="r_ga17c5a365e0d16a5105192267525a5bd1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga17c5a365e0d16a5105192267525a5bd1">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga678d29f53307113da6b1578c9d3423cb">rt_timer_init</a>)</td></tr>
+<tr class="separator:ga17c5a365e0d16a5105192267525a5bd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0d1aca4fc86f1dbd88945be8820793bb" id="r_ga0d1aca4fc86f1dbd88945be8820793bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga0d1aca4fc86f1dbd88945be8820793bb">rt_timer_detach</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer)</td></tr>
+<tr class="memdesc:ga0d1aca4fc86f1dbd88945be8820793bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will detach a timer from timer management.  <br /></td></tr>
+<tr class="separator:ga0d1aca4fc86f1dbd88945be8820793bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9c92dbc8ddc78947fbef8ca1c6c48d06" id="r_ga9c92dbc8ddc78947fbef8ca1c6c48d06"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga9c92dbc8ddc78947fbef8ca1c6c48d06">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga0d1aca4fc86f1dbd88945be8820793bb">rt_timer_detach</a>)</td></tr>
+<tr class="separator:ga9c92dbc8ddc78947fbef8ca1c6c48d06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e6911989135de1b989dd7fe1b3543ce" id="r_ga9e6911989135de1b989dd7fe1b3543ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga9e6911989135de1b989dd7fe1b3543ce">rt_timer_create</a> (const char *name, void(*timeout)(void *parameter), void *parameter, <a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a> time, <a class="el" href="rttypes_8h.html#a585e2ad0fbab0f83817cb61373465df6">rt_uint8_t</a> flag)</td></tr>
+<tr class="memdesc:ga9e6911989135de1b989dd7fe1b3543ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will create a timer.  <br /></td></tr>
+<tr class="separator:ga9e6911989135de1b989dd7fe1b3543ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5b9c2018440ac8f431f859d618b2340" id="r_gab5b9c2018440ac8f431f859d618b2340"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gab5b9c2018440ac8f431f859d618b2340">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga9e6911989135de1b989dd7fe1b3543ce">rt_timer_create</a>)</td></tr>
+<tr class="separator:gab5b9c2018440ac8f431f859d618b2340"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6c147a1f25bd5ac9e72a142ab36a4ac" id="r_gaf6c147a1f25bd5ac9e72a142ab36a4ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gaf6c147a1f25bd5ac9e72a142ab36a4ac">rt_timer_delete</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer)</td></tr>
+<tr class="memdesc:gaf6c147a1f25bd5ac9e72a142ab36a4ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will delete a timer and release timer memory.  <br /></td></tr>
+<tr class="separator:gaf6c147a1f25bd5ac9e72a142ab36a4ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga99f45ebed280630c456390adaa49c1b7" id="r_ga99f45ebed280630c456390adaa49c1b7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga99f45ebed280630c456390adaa49c1b7">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#gaf6c147a1f25bd5ac9e72a142ab36a4ac">rt_timer_delete</a>)</td></tr>
+<tr class="separator:ga99f45ebed280630c456390adaa49c1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3aeb8f8350b3a7403d8629231396c016" id="r_ga3aeb8f8350b3a7403d8629231396c016"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga3aeb8f8350b3a7403d8629231396c016">rt_timer_start</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer)</td></tr>
+<tr class="memdesc:ga3aeb8f8350b3a7403d8629231396c016"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will start the timer.  <br /></td></tr>
+<tr class="separator:ga3aeb8f8350b3a7403d8629231396c016"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1ee2578db03535f9030d45f2f084e39" id="r_gac1ee2578db03535f9030d45f2f084e39"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gac1ee2578db03535f9030d45f2f084e39">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga3aeb8f8350b3a7403d8629231396c016">rt_timer_start</a>)</td></tr>
+<tr class="separator:gac1ee2578db03535f9030d45f2f084e39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaef9923c8b90ede02e12826c58c6f8a2" id="r_gaaef9923c8b90ede02e12826c58c6f8a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gaaef9923c8b90ede02e12826c58c6f8a2">rt_timer_stop</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer)</td></tr>
+<tr class="memdesc:gaaef9923c8b90ede02e12826c58c6f8a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will stop the timer.  <br /></td></tr>
+<tr class="separator:gaaef9923c8b90ede02e12826c58c6f8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7536a1d0363ccc49611cb4f82101fe6" id="r_gae7536a1d0363ccc49611cb4f82101fe6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gae7536a1d0363ccc49611cb4f82101fe6">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#gaaef9923c8b90ede02e12826c58c6f8a2">rt_timer_stop</a>)</td></tr>
+<tr class="separator:gae7536a1d0363ccc49611cb4f82101fe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15e3b76a4a58d31aaf5c992bc127615c" id="r_ga15e3b76a4a58d31aaf5c992bc127615c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a42df42aabf676f2a89f5af2208b79950">rt_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga15e3b76a4a58d31aaf5c992bc127615c">rt_timer_control</a> (<a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a> timer, int cmd, void *arg)</td></tr>
+<tr class="memdesc:ga15e3b76a4a58d31aaf5c992bc127615c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will get or set some options of the timer.  <br /></td></tr>
+<tr class="separator:ga15e3b76a4a58d31aaf5c992bc127615c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1fa13b4e33d30732060295d39241c9c" id="r_gaa1fa13b4e33d30732060295d39241c9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gaa1fa13b4e33d30732060295d39241c9c">RTM_EXPORT</a> (<a class="el" href="group__group___clock.html#ga15e3b76a4a58d31aaf5c992bc127615c">rt_timer_control</a>)</td></tr>
+<tr class="separator:gaa1fa13b4e33d30732060295d39241c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a29a70b401aa9d5c5dbb7269fd0ac57" id="r_ga3a29a70b401aa9d5c5dbb7269fd0ac57"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga3a29a70b401aa9d5c5dbb7269fd0ac57">rt_timer_check</a> (void)</td></tr>
+<tr class="memdesc:ga3a29a70b401aa9d5c5dbb7269fd0ac57"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will check timer list, if a timeout event happens, the corresponding timeout function will be invoked.  <br /></td></tr>
+<tr class="separator:ga3a29a70b401aa9d5c5dbb7269fd0ac57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51af0ff7d55ff298adfb87d276d0d678" id="r_ga51af0ff7d55ff298adfb87d276d0d678"><td class="memItemLeft" align="right" valign="top"><a class="el" href="rttypes_8h.html#a66c400929925784dba020d671154978a">rt_tick_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga51af0ff7d55ff298adfb87d276d0d678">rt_timer_next_timeout_tick</a> (void)</td></tr>
+<tr class="memdesc:ga51af0ff7d55ff298adfb87d276d0d678"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will return the next timeout tick in the system.  <br /></td></tr>
+<tr class="separator:ga51af0ff7d55ff298adfb87d276d0d678"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f109e873cdcf963059e968cedb76c36" id="r_ga9f109e873cdcf963059e968cedb76c36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#ga9f109e873cdcf963059e968cedb76c36">rt_system_timer_init</a> (void)</td></tr>
+<tr class="memdesc:ga9f109e873cdcf963059e968cedb76c36"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will initialize system timer.  <br /></td></tr>
+<tr class="separator:ga9f109e873cdcf963059e968cedb76c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5298e02b109e4885723f6116fb11814" id="r_gac5298e02b109e4885723f6116fb11814"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group___clock.html#gac5298e02b109e4885723f6116fb11814">rt_system_timer_thread_init</a> (void)</td></tr>
+<tr class="memdesc:gac5298e02b109e4885723f6116fb11814"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will initialize system timer thread.  <br /></td></tr>
+<tr class="separator:gac5298e02b109e4885723f6116fb11814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a2d5f21bfe809857ecc4dd3ecdba44f49" name="a2d5f21bfe809857ecc4dd3ecdba44f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5f21bfe809857ecc4dd3ecdba44f49">&#9670;&#160;</a></span>DBG_LVL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_LVL&#160;&#160;&#160;<a class="el" href="rtdbg_8h.html#a9615e001b781d55752b3d44f9bfd5162">DBG_INFO</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac4e2937b86d1338f765c02b4869648ca" name="ac4e2937b86d1338f765c02b4869648ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e2937b86d1338f765c02b4869648ca">&#9670;&#160;</a></span>DBG_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DBG_TAG&#160;&#160;&#160;&quot;kernel.timer&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a2cccbde486b4ce6cceaa8bbab892f3a1" name="a2cccbde486b4ce6cceaa8bbab892f3a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cccbde486b4ce6cceaa8bbab892f3a1">&#9670;&#160;</a></span>_timer_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline void _timer_remove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group___clock.html#ga32c381b041bcb69be117bcb32273775d">rt_timer_t</a>&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove the timer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer</td><td>the point of the timer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a5086ab32870d170291641a5b24661b" name="a5a5086ab32870d170291641a5b24661b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5086ab32870d170291641a5b24661b">&#9670;&#160;</a></span>_timerlock_idx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rt_inline struct <a class="el" href="structrt__spinlock.html">rt_spinlock</a> * _timerlock_idx </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structrt__timer.html">rt_timer</a> *&#160;</td>
+          <td class="paramname"><em>timer</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6cdaa2ec6353ef2f090bf3e9ff271848" name="a6cdaa2ec6353ef2f090bf3e9ff271848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6cdaa2ec6353ef2f090bf3e9ff271848">&#9670;&#160;</a></span>rt_timer_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rt_timer_dump </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="rttypes_8h.html#a8e0e590336e9435f976bf672d844547c">rt_list_t</a>&#160;</td>
+          <td class="paramname"><em>timer_heads</em>[]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dump the all timer information </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_heads</td><td>the head of timer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="timer_8c.html">timer.c</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
