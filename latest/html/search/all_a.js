@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['motivation_0',['Motivation',['../index.html#autotoc_md8',1,'']]],
-  ['mylibrary_1',['MyLibrary',['../namespace_my_library.html',1,'']]]
+  ['quotes_0',['Quotes',['../class_my_library_1_1_example.html#autotoc_md4',1,'']]]
 ];

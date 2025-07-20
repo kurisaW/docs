@@ -25,7 +25,6 @@
 var NAVTREE =
 [
   [ "kurisaw docs", "index.html", [
-    [ "Doxygen Awesome", "index.html", "index" ],
     [ "Bug List", "bug.html", null ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Todo List", "todo.html", null ],
