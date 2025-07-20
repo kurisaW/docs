@@ -109,6 +109,8 @@ document.addEventListener('DOMContentLoaded', function() {
       parentElement.style.position = 'relative';
       parentElement.appendChild(dropdown);
       console.log('Version switcher: Added dropdown to parent element');
+      console.log('Version switcher: Dropdown element:', dropdown);
+      console.log('Version switcher: Dropdown style.display:', dropdown.style.display);
       
       // 添加点击事件
       projectNumber.addEventListener('click', (e) => {
@@ -116,6 +118,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const isVisible = dropdown.style.display === 'block';
         dropdown.style.display = isVisible ? 'none' : 'block';
         console.log('Version switcher: Toggle dropdown, new state:', dropdown.style.display);
+        console.log('Version switcher: Dropdown computed style:', window.getComputedStyle(dropdown).display);
+        
+        // 强制重绘
+        dropdown.offsetHeight;
       });
       
       // 点击其他地方关闭下拉菜单

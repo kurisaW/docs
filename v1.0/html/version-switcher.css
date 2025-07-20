@@ -1,3 +1,8 @@
+/* 测试样式 - 确保CSS文件被加载 */
+#projectnumber {
+  border: 2px solid red !important;
+}
+
 /* 版本切换器样式 - 直接修改 projectnumber 元素 */
 #projectnumber {
   cursor: pointer !important;
