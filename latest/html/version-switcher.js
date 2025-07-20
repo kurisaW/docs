@@ -65,8 +65,24 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     `;
     
-    console.log('Version switcher: Inserting HTML:', switcher);
-    document.body.insertAdjacentHTML('afterbegin', switcher);
+    // 查找项目编号元素并插入版本切换器
+    const projectNumber = document.getElementById('projectnumber');
+    if (projectNumber) {
+      console.log('Version switcher: Found project number element, inserting after it');
+      // 在项目编号后插入版本切换器
+      projectNumber.insertAdjacentHTML('afterend', switcher);
+    } else {
+      // 如果找不到项目编号，尝试在项目名称区域插入
+      const projectName = document.getElementById('projectname');
+      if (projectName) {
+        console.log('Version switcher: Found project name element, inserting after it');
+        projectName.insertAdjacentHTML('afterend', switcher);
+      } else {
+        console.log('Version switcher: No suitable element found, inserting at body start');
+        document.body.insertAdjacentHTML('afterbegin', switcher);
+      }
+    }
+    
     console.log('Version switcher: Successfully inserted');
   }
 });
