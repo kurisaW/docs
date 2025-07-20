@@ -53,36 +53,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentVersion = pathSegments[1] || 'latest'; // 从路径中获取版本号
     console.log('Version switcher: Current version:', currentVersion);
     
-    const switcher = `
-      <div id="version-switcher">
-        <select onchange="location.href='../' + this.value + '/html/'">
-          ${versions.map(v => 
-            `<option value="${v}" ${v === currentVersion ? 'selected' : ''}>
-              ${v === 'latest' ? 'main' : v}
-            </option>`
-          ).join('')}
-        </select>
-      </div>
-    `;
-    
-    // 查找项目编号元素并插入版本切换器
+    // 查找项目编号元素
     const projectNumber = document.getElementById('projectnumber');
     if (projectNumber) {
-      console.log('Version switcher: Found project number element, inserting after it');
-      // 在项目编号后插入版本切换器
-      projectNumber.insertAdjacentHTML('afterend', switcher);
+      console.log('Version switcher: Found project number element, modifying it');
+      
+      // 设置当前版本显示
+      const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
+      projectNumber.textContent = displayVersion;
+      
+      // 添加提示文本
+      projectNumber.title = 'Click to switch version';
+      
+      // 创建版本选择下拉菜单
+      const dropdown = document.createElement('div');
+      dropdown.id = 'version-dropdown';
+      
+      // 添加版本选项
+      versions.forEach(version => {
+        const option = document.createElement('div');
+        option.textContent = version === 'latest' ? 'main' : version;
+        
+        option.addEventListener('click', () => {
+          const targetVersion = version === 'latest' ? 'latest' : version;
+          window.location.href = '../' + targetVersion + '/html/';
+        });
+        
+        dropdown.appendChild(option);
+      });
+      
+      // 将下拉菜单添加到项目编号的父元素
+      projectNumber.parentNode.style.position = 'relative';
+      projectNumber.parentNode.appendChild(dropdown);
+      
+      // 添加点击事件
+      projectNumber.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isVisible = dropdown.style.display === 'block';
+        dropdown.style.display = isVisible ? 'none' : 'block';
+      });
+      
+      // 点击其他地方关闭下拉菜单
+      document.addEventListener('click', () => {
+        dropdown.style.display = 'none';
+      });
+      
+      console.log('Version switcher: Successfully modified project number element');
     } else {
-      // 如果找不到项目编号，尝试在项目名称区域插入
-      const projectName = document.getElementById('projectname');
-      if (projectName) {
-        console.log('Version switcher: Found project name element, inserting after it');
-        projectName.insertAdjacentHTML('afterend', switcher);
-      } else {
-        console.log('Version switcher: No suitable element found, inserting at body start');
-        document.body.insertAdjacentHTML('afterbegin', switcher);
-      }
+      console.log('Version switcher: Project number element not found');
     }
-    
-    console.log('Version switcher: Successfully inserted');
   }
 });

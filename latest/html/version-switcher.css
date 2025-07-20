@@ -1,56 +1,71 @@
-/* 版本切换器样式 */
-#version-switcher {
-  display: inline-block;
-  margin-left: 8px;
-  vertical-align: middle;
+/* 版本切换器样式 - 直接修改 projectnumber 元素 */
+#projectnumber {
+  cursor: pointer !important;
+  text-decoration: underline !important;
+  color: #3498db !important;
+  transition: color 0.2s ease;
 }
 
-#version-switcher select {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 3px;
-  padding: 2px 6px;
-  font-size: 11px;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.2s ease;
-  color: inherit;
+#projectnumber:hover {
+  color: #2980b9 !important;
+}
+
+/* 版本下拉菜单样式 */
+#version-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: none;
+  min-width: 100px;
   font-family: inherit;
-  font-weight: inherit;
 }
 
-#version-switcher select:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  background: rgba(255, 255, 255, 0.1);
+#version-dropdown div {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  transition: background-color 0.2s ease;
 }
 
-#version-switcher select:focus {
-  border-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+#version-dropdown div:hover {
+  background-color: #f5f5f5;
+}
+
+#version-dropdown div:last-child {
+  border-bottom: none;
 }
 
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
-  #version-switcher select {
-    background: transparent;
-    border-color: rgba(255, 255, 255, 0.3);
-    color: inherit;
+  #version-dropdown {
+    background: #2c3e50;
+    border-color: #7f8c8d;
+    color: white;
   }
   
-  #version-switcher select:hover {
-    border-color: rgba(255, 255, 255, 0.6);
-    background: rgba(255, 255, 255, 0.1);
+  #version-dropdown div {
+    border-bottom-color: #34495e;
+  }
+  
+  #version-dropdown div:hover {
+    background-color: #34495e;
   }
 }
 
 /* 移动端适配 */
 @media (max-width: 768px) {
-  #version-switcher {
-    margin-left: 5px;
+  #version-dropdown {
+    min-width: 80px;
   }
   
-  #version-switcher select {
-    font-size: 10px;
-    padding: 1px 4px;
+  #version-dropdown div {
+    font-size: 11px;
+    padding: 6px 8px;
   }
 }
