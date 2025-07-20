@@ -70,15 +70,42 @@ jobs:
       - name: Generate version manifest
         run: |
           cd output
-          # 生成版本列表
+          # 生成版本列表 - 使用versions.list中定义的所有版本
           echo '{"versions": [' > versions.json
-          ls -d */ | grep -E '^[a-zA-Z0-9]+/' | sed 's/\///g' | sed 's/^/"/' | sed 's/$/"/' | tr '\n' ',' | sed 's/,$//' >> versions.json
+          # 从versions.list读取版本，并转换为正确的目录名
+          VERSIONS_FROM_LIST=""
+          if [ -f "../.github/versions.list" ]; then
+            VERSIONS_FROM_LIST=$(grep -v '^#' ../.github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ')
+          else
+            VERSIONS_FROM_LIST="main"
+          fi
+          
+          # 将版本转换为目录名并添加到versions.json
+          IFS=' ' read -ra VERSION_ARRAY <<< "$VERSIONS_FROM_LIST"
+          VERSIONS_JSON=""
+          for VERSION in "${VERSION_ARRAY[@]}"; do
+            if [ "$VERSION" = "main" ]; then
+              DIR_NAME="latest"
+            else
+              DIR_NAME="$VERSION"
+            fi
+            if [ -n "$VERSIONS_JSON" ]; then
+              VERSIONS_JSON="$VERSIONS_JSON,\"$DIR_NAME\""
+            else
+              VERSIONS_JSON="\"$DIR_NAME\""
+            fi
+          done
+          echo "$VERSIONS_JSON" >> versions.json
           echo ']}' >> versions.json
+          
+          echo "Generated versions.json content:"
+          cat versions.json
           
           # 将 versions.json 复制到每个版本的目录中
           for dir in */; do
             if [ -d "$dir" ]; then
               cp versions.json "$dir/"
+              echo "Copied versions.json to $dir"
             fi
           done
 
