@@ -47,21 +47,23 @@ jobs:
             mkdir -p "output/$OUT_DIR"
             cp Doxyfile Doxyfile.tmp
             echo "PROJECT_NUMBER = $VERSION" >> Doxyfile.tmp
+            echo "OUTPUT_DIRECTORY = html" >> Doxyfile.tmp
             echo "HTML_EXTRA_FILES = docs/version-switcher.js" >> Doxyfile.tmp
             echo "HTML_EXTRA_STYLESHEET = docs/version-switcher.css" >> Doxyfile.tmp
             doxygen Doxyfile.tmp
 
             if [ -d "html" ]; then
               mv html/* "output/$OUT_DIR/"
+              rm -rf html
             fi
           done
 
       - name: Generate version manifest
         run: |
           cd output
-          # 只匹配字母数字目录名
+          # 生成版本列表
           echo '{"versions": [' > versions.json
-          ls -d */ | grep -E '^[a-zA-Z0-9]+/' | sed 's/\///g' | jq -R -s -c 'split("\n")[:-1]' >> versions.json
+          ls -d */ | grep -E '^[a-zA-Z0-9]+/' | sed 's/\///g' | sed 's/^/"/' | sed 's/$/"/' | tr '\n' ',' | sed 's/,$//' >> versions.json
           echo ']}' >> versions.json
 
       - name: Prepare deployment
