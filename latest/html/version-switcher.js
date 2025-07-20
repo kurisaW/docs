@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
       position: absolute !important;
       top: 100% !important;
       left: 0 !important;
-      background: white !important;
-      border: 1px solid #ddd !important;
+      background: red !important;
+      border: 3px solid blue !important;
       border-radius: 4px !important;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
-      z-index: 1000 !important;
-      display: none !important;
+      z-index: 9999 !important;
       min-width: 100px !important;
       font-family: inherit !important;
+      padding: 10px !important;
     }
     
     #version-dropdown div {
@@ -52,10 +52,13 @@ document.addEventListener('DOMContentLoaded', function() {
       border-bottom: 1px solid #eee !important;
       font-size: 12px !important;
       transition: background-color 0.2s ease !important;
+      color: white !important;
+      background: green !important;
     }
     
     #version-dropdown div:hover {
-      background-color: #f5f5f5 !important;
+      background-color: yellow !important;
+      color: black !important;
     }
     
     #version-dropdown div:last-child {
@@ -138,6 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 创建版本选择下拉菜单
       const dropdown = document.createElement('div');
       dropdown.id = 'version-dropdown';
+      dropdown.style.display = 'none'; // 初始状态隐藏
       
       console.log('Version switcher: Creating dropdown with versions:', versions);
       
@@ -181,9 +185,19 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdown.style.display = isVisible ? 'none' : 'block';
         console.log('Version switcher: Toggle dropdown, new state:', dropdown.style.display);
         console.log('Version switcher: Dropdown computed style:', window.getComputedStyle(dropdown).display);
+        console.log('Version switcher: Dropdown children count:', dropdown.children.length);
+        console.log('Version switcher: Dropdown HTML:', dropdown.innerHTML);
         
-        // 强制重绘
-        dropdown.offsetHeight;
+        // 强制重绘并确保显示
+        if (dropdown.style.display === 'block') {
+          dropdown.style.setProperty('display', 'block', 'important');
+          console.log('Version switcher: Forced display block with important');
+          
+          // 检查下拉菜单的位置和尺寸
+          const rect = dropdown.getBoundingClientRect();
+          console.log('Version switcher: Dropdown position:', rect);
+          console.log('Version switcher: Dropdown dimensions:', rect.width, 'x', rect.height);
+        }
       });
       
       // 点击其他地方关闭下拉菜单
