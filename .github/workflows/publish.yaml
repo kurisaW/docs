@@ -23,14 +23,19 @@ jobs:
       - name: Parse version list
         id: versions
         run: |
+          echo "Checking for versions.list file..."
           if [ -f ".github/versions.list" ]; then
+            echo "Found .github/versions.list file:"
+            cat .github/versions.list
+            echo ""
+            echo "Parsing versions..."
             # 读取版本列表，过滤注释和空行，只取第一列
             VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
             echo "Found versions: $VERSIONS"
           else
-            echo "versions=main" >> $GITHUB_OUTPUT
             echo "No versions.list found, using default: main"
+            echo "versions=main" >> $GITHUB_OUTPUT
           fi
 
       - name: Build docs

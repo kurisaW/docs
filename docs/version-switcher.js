@@ -2,6 +2,20 @@
 document.addEventListener('DOMContentLoaded', function() {
   console.log('Version switcher: DOM loaded');
   
+  // 清理旧的版本切换器元素
+  const oldVersionSwitcher = document.getElementById('version-switcher');
+  if (oldVersionSwitcher) {
+    console.log('Version switcher: Removing old version switcher element');
+    oldVersionSwitcher.remove();
+  }
+  
+  // 清理旧的下拉菜单
+  const oldDropdown = document.getElementById('version-dropdown');
+  if (oldDropdown) {
+    console.log('Version switcher: Removing old dropdown element');
+    oldDropdown.remove();
+  }
+  
   // 获取正确的 versions.json 路径
   const currentPath = window.location.pathname;
   const pathSegments = currentPath.split('/').filter(segment => segment);
@@ -52,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function createVersionSwitcher(versions) {
     const currentVersion = pathSegments[1] || 'latest'; // 从路径中获取版本号
     console.log('Version switcher: Current version:', currentVersion);
+    console.log('Version switcher: Available versions:', versions);
     
     // 查找项目编号元素
     const projectNumber = document.getElementById('projectnumber');
@@ -61,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // 设置当前版本显示
       const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
       projectNumber.textContent = displayVersion;
+      console.log('Version switcher: Set display version to:', displayVersion);
       
       // 添加提示文本
       projectNumber.title = 'Click to switch version';
@@ -68,14 +84,20 @@ document.addEventListener('DOMContentLoaded', function() {
       // 创建版本选择下拉菜单
       const dropdown = document.createElement('div');
       dropdown.id = 'version-dropdown';
+      dropdown.style.display = 'none'; // 确保初始状态是隐藏的
+      
+      console.log('Version switcher: Creating dropdown with versions:', versions);
       
       // 添加版本选项
       versions.forEach(version => {
         const option = document.createElement('div');
-        option.textContent = version === 'latest' ? 'main' : version;
+        const optionText = version === 'latest' ? 'main' : version;
+        option.textContent = optionText;
+        console.log('Version switcher: Adding option:', optionText);
         
         option.addEventListener('click', () => {
           const targetVersion = version === 'latest' ? 'latest' : version;
+          console.log('Version switcher: Switching to version:', targetVersion);
           window.location.href = '../' + targetVersion + '/html/';
         });
         
@@ -83,14 +105,17 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
       // 将下拉菜单添加到项目编号的父元素
-      projectNumber.parentNode.style.position = 'relative';
-      projectNumber.parentNode.appendChild(dropdown);
+      const parentElement = projectNumber.parentNode;
+      parentElement.style.position = 'relative';
+      parentElement.appendChild(dropdown);
+      console.log('Version switcher: Added dropdown to parent element');
       
       // 添加点击事件
       projectNumber.addEventListener('click', (e) => {
         e.stopPropagation();
         const isVisible = dropdown.style.display === 'block';
         dropdown.style.display = isVisible ? 'none' : 'block';
+        console.log('Version switcher: Toggle dropdown, new state:', dropdown.style.display);
       });
       
       // 点击其他地方关闭下拉菜单
