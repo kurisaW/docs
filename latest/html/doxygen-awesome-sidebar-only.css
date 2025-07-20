@@ -54,28 +54,40 @@ html {
         max-width: var(--side-nav-fixed-width);
         top: var(--top-height);
         overflow: visible;
-    }
-
-    #nav-tree, #side-nav {
-        height: calc(100vh - var(--top-height)) !important;
-    }
-
-    #nav-tree {
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh !important;
     }
 
     #top {
         display: block;
         border-bottom: none;
-        height: var(--top-height);
-        margin-bottom: calc(0px - var(--top-height));
+        /* height: var(--top-height); */
+        margin-bottom: 0;
         max-width: var(--side-nav-fixed-width);
-        overflow: hidden;
+        overflow: visible;
         background: var(--side-nav-background);
     }
     #main-nav {
-        float: left;
+        float: none;
         padding-right: 0;
+        margin-top: 0;
+    }
+    #nav-tree {
+        padding: 0;
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+    }
+    /* 让main-nav及其下方内容自动排在top下方 */
+    #side-nav > #top + #main-nav,
+    #side-nav > #main-nav {
+        margin-top: 0;
+    }
+    /* projectbrief等内容撑高top区域 */
+    #top {
+        min-height: unset;
+        height: auto;
     }
 
     .ui-resizable-handle {
