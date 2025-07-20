@@ -1,43 +1,39 @@
 // 等待 DOM 加载完成
+// == Version Switcher Projectnumber Optimized ==
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('Version switcher: DOM loaded');
-  
   // 清理旧的版本切换器元素
   const oldVersionSwitcher = document.getElementById('version-switcher');
-  if (oldVersionSwitcher) {
-    oldVersionSwitcher.remove();
-  }
+  if (oldVersionSwitcher) oldVersionSwitcher.remove();
   const oldDropdown = document.getElementById('version-dropdown');
-  if (oldDropdown) {
-    oldDropdown.remove();
-  }
-  
-  // 注入美观的CSS样式
+  if (oldDropdown) oldDropdown.remove();
+
+  // 注入优化样式
   const style = document.createElement('style');
   style.textContent = `
     #projectnumber {
       cursor: pointer !important;
-      color: #3498db !important;
-      transition: color 0.2s ease;
-      position: relative;
+      color: var(--primary-color, #3498db) !important;
+      background: var(--page-background-color, #fff) !important;
+      border: 1.5px solid var(--primary-color, #3498db) !important;
+      border-radius: 8px 8px 8px 8px !important;
+      box-shadow: 0 1px 8px rgba(52,152,219,0.07);
       display: inline-flex;
       align-items: center;
-      font-weight: 500;
-      background: #fff;
-      border-radius: 6px;
-      padding: 2px 10px 2px 8px;
-      box-shadow: 0 1px 4px rgba(52,152,219,0.07);
-      border: 1px solid #e0e6ed !important;
       gap: 4px;
+      font-weight: 500;
+      padding: 2px 16px 2px 12px;
       user-select: none;
+      position: relative;
+      z-index: 10010;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
     }
     #projectnumber:hover, #projectnumber.active {
-      background: #f0f7fd;
+      background: var(--side-nav-hover, #f0f7fd) !important;
       color: #217dbb !important;
-      border-color: #b5d6f6;
+      border-color: #217dbb !important;
     }
     .dropdown-caret {
-      font-size: 0.85em;
+      font-size: 0.95em;
       color: #888;
       margin-left: 4px;
       transition: transform 0.2s;
@@ -49,37 +45,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     #version-dropdown {
       position: absolute !important;
-      top: calc(100% + 4px) !important;
-      right: 0 !important;
-      background: #fff !important;
-      border: 1px solid #e0e6ed !important;
-      border-radius: 8px !important;
+      top: calc(100% + 2px) !important;
+      left: 0 !important;
+      width: 100% !important;
+      background: var(--page-background-color, #fff) !important;
+      border: 1.5px solid var(--primary-color, #3498db) !important;
+      border-radius: 0 0 8px 8px !important;
       box-shadow: 0 4px 16px rgba(52,152,219,0.13) !important;
-      z-index: 9999 !important;
+      z-index: 10020 !important;
       min-width: 120px !important;
       font-family: inherit !important;
       padding: 4px 0 !important;
+      display: none;
+      animation: fadeInDropdown 0.18s;
+    }
+    @keyframes fadeInDropdown {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     #version-dropdown div {
       padding: 8px 18px 8px 16px !important;
       cursor: pointer !important;
       font-size: 13px !important;
-      color: #217dbb !important;
+      color: var(--primary-color, #217dbb) !important;
       border: none !important;
       background: none !important;
       border-radius: 0 !important;
       transition: background 0.18s, color 0.18s;
       text-align: left;
     }
-    #version-dropdown div:hover {
-      background: #f0f7fd !important;
-      color: #145a86 !important;
-      border-radius: 0 8px 8px 0;
-    }
     #version-dropdown div.selected {
       font-weight: bold;
       color: #145a86 !important;
       background: #eaf3fa !important;
+    }
+    #version-dropdown div:hover {
+      background: var(--side-nav-hover, #f0f7fd) !important;
+      color: #145a86 !important;
+      border-radius: 0 8px 8px 0;
+    }
+    @media (prefers-color-scheme: dark) {
+      #projectnumber, #version-dropdown {
+        background: var(--side-nav-background, #23272e) !important;
+        color: #8ec2f7 !important;
+        border-color: #8ec2f7 !important;
+      }
+      #projectnumber:hover, #projectnumber.active {
+        background: #34495e !important;
+        color: #fff !important;
+        border-color: #8ec2f7 !important;
+      }
+      #version-dropdown div {
+        color: #8ec2f7 !important;
+      }
+      #version-dropdown div.selected {
+        color: #fff !important;
+        background: #2c3e50 !important;
+      }
+      #version-dropdown div:hover {
+        background: #34495e !important;
+        color: #fff !important;
+      }
     }
   `;
   document.head.appendChild(style);
@@ -94,7 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
   } else if (pathSegments.length >= 2) {
     versionsPath = '../versions.json';
   }
-
   console.log('Version switcher: Fetching from:', versionsPath);
 
   fetch(versionsPath)
@@ -124,22 +149,18 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (projectNumber) {
       console.log('Version switcher: Found project number element');
-      
       // 构建版本号+下拉符号
       const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
       projectNumber.innerHTML = `<span class="version-label">${displayVersion}</span><span class="dropdown-caret">▼</span>`;
       projectNumber.title = '点击切换文档版本';
       projectNumber.classList.remove('active');
-      
       console.log('Version switcher: Set display version to:', displayVersion);
 
       // 创建下拉菜单
       const dropdown = document.createElement('div');
       dropdown.id = 'version-dropdown';
       dropdown.style.display = 'none';
-      
-      console.log('Version switcher: Creating dropdown with versions:', versions);
-      
+      dropdown.style.width = '100%';
       versions.forEach(version => {
         const option = document.createElement('div');
         const optionText = version === 'latest' ? 'main' : version;
@@ -160,9 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
           window.location.href = targetUrl;
         });
         dropdown.appendChild(option);
-        console.log('Version switcher: Added option:', optionText);
       });
-      
       // 右对齐到 projectnumber
       projectNumber.style.position = 'relative';
       projectNumber.appendChild(dropdown);
@@ -175,29 +194,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const newDisplay = isVisible ? 'none' : 'block';
         dropdown.style.display = newDisplay;
         projectNumber.classList.toggle('active', !isVisible);
-        
-        console.log('Version switcher: Toggle dropdown, new display:', newDisplay);
-        console.log('Version switcher: Dropdown computed style:', window.getComputedStyle(dropdown).display);
-        console.log('Version switcher: Dropdown children count:', dropdown.children.length);
-        
-        // 强制应用样式
         if (newDisplay === 'block') {
           dropdown.style.setProperty('display', 'block', 'important');
-          console.log('Version switcher: Forced display block with important');
         }
+        // 保证z-index
+        dropdown.style.zIndex = '10020';
       }
-      
       projectNumber.addEventListener('click', toggleDropdown);
-      
       // 点击外部关闭
       document.addEventListener('click', function() {
         dropdown.style.display = 'none';
         projectNumber.classList.remove('active');
       });
-      
       // 防止菜单点击冒泡
       dropdown.addEventListener('click', e => e.stopPropagation());
-      
       console.log('Version switcher: Successfully initialized');
     } else {
       console.log('Version switcher: Project number element not found');
