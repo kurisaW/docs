@@ -10,10 +10,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: main
 
       - name: Install dependencies
         run: |
@@ -23,64 +24,56 @@ jobs:
       - name: Parse version list
         id: versions
         run: |
-          echo "Checking for versions.list file..."
           if [ -f ".github/versions.list" ]; then
-            echo "Found .github/versions.list file:"
-            cat .github/versions.list
-            echo ""
-            echo "Parsing versions..."
-            # 读取版本列表，过滤注释和空行，只取第一列
             VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
-            echo "Found versions: $VERSIONS"
           else
-            echo "No versions.list found, using default: main"
             echo "versions=main" >> $GITHUB_OUTPUT
           fi
 
-      - name: Build docs
+      - name: Clean output dir
+        run: |
+          rm -rf output
+          mkdir output
+
+      - name: Build docs for all versions
         run: |
           IFS=' ' read -ra VERSION_ARRAY <<< "${{ steps.versions.outputs.versions }}"
-          
           for VERSION in "${VERSION_ARRAY[@]}"; do
             echo "Building version: $VERSION"
-            
             if [ "$VERSION" = "main" ]; then
+              git checkout main
               OUT_DIR="latest"
             else
+              git fetch origin $VERSION:$VERSION || true
+              git checkout $VERSION || git checkout origin/$VERSION
               OUT_DIR="$VERSION"
             fi
-
-            mkdir -p "output/$OUT_DIR"
+            rm -rf html
             cp Doxyfile Doxyfile.tmp
             echo "PROJECT_NUMBER = $VERSION" >> Doxyfile.tmp
             echo "OUTPUT_DIRECTORY = html" >> Doxyfile.tmp
-            # 添加版本切换器文件到现有的HTML_EXTRA_FILES和HTML_EXTRA_STYLESHEET
-            # 使用 sed 来修改现有的配置行
-            sed -i 's|HTML_EXTRA_FILES.*|HTML_EXTRA_FILES = doxygen-awesome-darkmode-toggle.js \\\n                         doxygen-awesome-fragment-copy-button.js \\\n                         doxygen-awesome-paragraph-link.js \\\n                         doxygen-custom/toggle-alternative-theme.js \\\n                         doxygen-awesome-interactive-toc.js \\\n                         doxygen-awesome-tabs.js \\\n                         docs/version-switcher.js|' Doxyfile.tmp
-            sed -i 's|HTML_EXTRA_STYLESHEET.*|HTML_EXTRA_STYLESHEET = doxygen-awesome.css \\\n                         doxygen-custom/custom.css \\\n                         doxygen-awesome-sidebar-only.css \\\n                         doxygen-awesome-sidebar-only-darkmode-toggle.css \\\n                         doxygen-custom/custom-alternative.css|' Doxyfile.tmp
+            sed -i 's|HTML_EXTRA_FILES.*|HTML_EXTRA_FILES = doxygen-awesome-darkmode-toggle.js \\n                         doxygen-awesome-fragment-copy-button.js \\n                         doxygen-awesome-paragraph-link.js \\n                         doxygen-custom/toggle-alternative-theme.js \\n                         doxygen-awesome-interactive-toc.js \\n                         doxygen-awesome-tabs.js \\n                         docs/version-switcher.js|' Doxyfile.tmp
+            sed -i 's|HTML_EXTRA_STYLESHEET.*|HTML_EXTRA_STYLESHEET = doxygen-awesome.css \\n                         doxygen-custom/custom.css \\n                         doxygen-awesome-sidebar-only.css \\n                         doxygen-awesome-sidebar-only-darkmode-toggle.css \\n                         doxygen-custom/custom-alternative.css|' Doxyfile.tmp
             doxygen Doxyfile.tmp
-
+            mkdir -p output/$OUT_DIR
             if [ -d "html" ]; then
-              mv html/* "output/$OUT_DIR/"
+              mv html/* output/$OUT_DIR/
               rm -rf html
             fi
           done
+          git checkout main
 
       - name: Generate version manifest
         run: |
           cd output
-          # 生成版本列表 - 使用versions.list中定义的所有版本
           echo '{"versions": [' > versions.json
-          # 从versions.list读取版本，并转换为正确的目录名
           VERSIONS_FROM_LIST=""
           if [ -f "../.github/versions.list" ]; then
             VERSIONS_FROM_LIST=$(grep -v '^#' ../.github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ')
           else
             VERSIONS_FROM_LIST="main"
           fi
-          
-          # 将版本转换为目录名并添加到versions.json
           IFS=' ' read -ra VERSION_ARRAY <<< "$VERSIONS_FROM_LIST"
           VERSIONS_JSON=""
           for VERSION in "${VERSION_ARRAY[@]}"; do
@@ -97,24 +90,15 @@ jobs:
           done
           echo "$VERSIONS_JSON" >> versions.json
           echo ']}' >> versions.json
-          
-          echo "Generated versions.json content:"
-          cat versions.json
-          
-          # 将 versions.json 复制到每个版本的目录中
           for dir in */; do
             if [ -d "$dir" ]; then
               cp versions.json "$dir/"
-              echo "Copied versions.json to $dir"
             fi
           done
 
       - name: Prepare deployment
         run: |
-          # 创建 .nojekyll 文件
           touch output/.nojekyll
-          
-          # 创建根目录重定向
           cat > output/index.html << 'EOF'
           <!DOCTYPE html>
           <html>
@@ -123,7 +107,6 @@ jobs:
             <meta http-equiv="refresh" content="0; url=./latest/html/" />
             <title>Redirecting...</title>
             <script>
-              // JavaScript fallback for redirect
               window.location.href = './latest/html/';
             </script>
           </head>
@@ -133,8 +116,6 @@ jobs:
           </body>
           </html>
           EOF
-          
-          # 创建404页面
           cat > output/404.html << 'EOF'
           <!DOCTYPE html>
           <html>
@@ -143,37 +124,12 @@ jobs:
             <meta http-equiv="refresh" content="3; url=./latest/html/" />
             <title>Page Not Found - Redirecting...</title>
             <style>
-              body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                padding: 50px;
-                background-color: #f5f5f5;
-              }
-              .container {
-                max-width: 600px;
-                margin: 0 auto;
-                background: white;
-                padding: 30px;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-              }
-              .error-code {
-                font-size: 72px;
-                color: #e74c3c;
-                margin-bottom: 20px;
-              }
-              .message {
-                font-size: 18px;
-                color: #333;
-                margin-bottom: 20px;
-              }
-              .link {
-                color: #3498db;
-                text-decoration: none;
-              }
-              .link:hover {
-                text-decoration: underline;
-              }
+              body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f5f5f5; }
+              .container { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+              .error-code { font-size: 72px; color: #e74c3c; margin-bottom: 20px; }
+              .message { font-size: 18px; color: #333; margin-bottom: 20px; }
+              .link { color: #3498db; text-decoration: none; }
+              .link:hover { text-decoration: underline; }
             </style>
           </head>
           <body>
@@ -187,19 +143,16 @@ jobs:
               <p><a href="./latest/html/" class="link">Click here if you're not redirected automatically</a></p>
             </div>
             <script>
-              // JavaScript fallback for redirect
-              setTimeout(function() {
-                window.location.href = './latest/html/';
-              }, 3000);
+              setTimeout(function() { window.location.href = './latest/html/'; }, 3000);
             </script>
           </body>
           </html>
           EOF
-          
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./output
           publish_branch: gh-pages
-          keep_files: true
+          keep_files: false
