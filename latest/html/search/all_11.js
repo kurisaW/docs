@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usage_0',['usage',['../md_docs_2extensions.html#autotoc_md29',1,'Usage'],['../md_docs_2extensions.html#autotoc_md31',1,'Usage']]]
+  ['wide_0',['System-wide',['../index.html#autotoc_md14',1,'']]]
 ];
