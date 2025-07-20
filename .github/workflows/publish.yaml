@@ -24,12 +24,14 @@ jobs:
         id: versions
         run: |
           if [ -f ".github/versions.list" ]; then
-            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ' | sed 's/ $//')
+            # 读取版本列表，过滤注释和空行，只取第一列
+            VERSIONS=$(grep -v '^#' .github/versions.list | grep -v '^$' | awk '{print $1}' | tr '\n' ' ')
             echo "versions=${VERSIONS}" >> $GITHUB_OUTPUT
+            echo "Found versions: $VERSIONS"
           else
             echo "versions=main" >> $GITHUB_OUTPUT
+            echo "No versions.list found, using default: main"
           fi
-          echo "Versions to build: $VERSIONS"
 
       - name: Build docs
         run: |
