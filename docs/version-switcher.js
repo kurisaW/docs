@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
       color: #3498db !important;
       transition: color 0.2s ease;
       position: relative;
-      border: 2px solid red !important;
     }
     
     #projectnumber:hover {
@@ -36,14 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
       position: absolute !important;
       top: 100% !important;
       left: 0 !important;
-      background: red !important;
-      border: 3px solid blue !important;
+      background: white !important;
+      border: 1px solid #ddd !important;
       border-radius: 4px !important;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
       z-index: 9999 !important;
       min-width: 100px !important;
       font-family: inherit !important;
-      padding: 10px !important;
     }
     
     #version-dropdown div {
@@ -52,13 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
       border-bottom: 1px solid #eee !important;
       font-size: 12px !important;
       transition: background-color 0.2s ease !important;
-      color: white !important;
-      background: green !important;
+      color: #333 !important;
     }
     
     #version-dropdown div:hover {
-      background-color: yellow !important;
-      color: black !important;
+      background-color: #f5f5f5 !important;
     }
     
     #version-dropdown div:last-child {
@@ -125,10 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
     if (projectNumber) {
       console.log('Version switcher: Found project number element, modifying it');
       
-      // 检查CSS是否加载（红色边框测试）
+      // 检查CSS是否加载
       const computedStyle = window.getComputedStyle(projectNumber);
-      console.log('Version switcher: Project number border:', computedStyle.border);
-      console.log('Version switcher: CSS loaded:', computedStyle.border.includes('red'));
+      console.log('Version switcher: Project number color:', computedStyle.color);
+      console.log('Version switcher: CSS loaded:', computedStyle.color.includes('rgb(52, 152, 219)'));
       
       // 设置当前版本显示
       const displayVersion = currentVersion === 'latest' ? 'main' : currentVersion;
@@ -156,7 +152,19 @@ document.addEventListener('DOMContentLoaded', function() {
         option.addEventListener('click', () => {
           const targetVersion = version === 'latest' ? 'latest' : version;
           console.log('Version switcher: Switching to version:', targetVersion);
-          window.location.href = '../' + targetVersion + '/html/';
+          
+          // 计算正确的跳转URL
+          let targetUrl;
+          if (targetVersion === 'latest') {
+            // 跳转到最新版本
+            targetUrl = '/docs/latest/html/';
+          } else {
+            // 跳转到特定版本
+            targetUrl = `/docs/${targetVersion}/html/`;
+          }
+          
+          console.log('Version switcher: Target URL:', targetUrl);
+          window.location.href = targetUrl;
         });
         
         option.addEventListener('mouseenter', () => {
