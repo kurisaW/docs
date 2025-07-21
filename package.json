@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jothepro/doxygen-awesome-css.git"
+    "url": "https://github.com/kurisaW/docs.git"
   },
-  "homepage": "https://jothepro.github.io/doxygen-awesome-css/",
+  "homepage": "https://github.com/kurisaW/docs",
   "bugs": {
-    "url": "https://github.com/jothepro/doxygen-awesome-css/issues"
+    "url": "https://github.com/kurisaW/docs/issues"
   },
   "keywords": [
     "doxygen",
