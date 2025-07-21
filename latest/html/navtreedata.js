@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "RT-Thread RTOS", "index.html", [
-    [ "Doxygen Awesome Custom Docs", "index.html", null ],
+    [ "Home", "index.html", null ],
     [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],

@@ -1,5 +1,5 @@
 <toc label="RT-Thread RTOS" topic="index.html">
-  <topic label="Doxygen Awesome Custom Docs" href="index.html"/>
+  <topic label="Home" href="index.html"/>
   <topic label="Topics" href="topics.html">
     <topic label="Group_DFS" href="group__group___d_f_s.html">
       <topic label="dfs_dup" href="group__group___d_f_s.html#ga0493711f9a42c10ecff1f1cfaced7244"/>

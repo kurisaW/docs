@@ -110,6 +110,5 @@ var searchData=
   ['audio_5ftype_5fquery_107',['AUDIO_TYPE_QUERY',['../group__group__audio__type.html#gadce99b21700327ded98b0741a6f267e6',1,'dev_audio.h']]],
   ['audio_5fvolume_5fmax_108',['AUDIO_VOLUME_MAX',['../group__group___audio.html#gaf4ddb8146c81f9a30da18e6821325f6b',1,'dev_audio.h']]],
   ['audio_5fvolume_5fmin_109',['AUDIO_VOLUME_MIN',['../group__group___audio.html#gaaf8f7702e0b628ee0d86cd248b5e828e',1,'dev_audio.h']]],
-  ['autorefresh_110',['autorefresh',['../structrt__blk__disk__ops.html#a0f52e275ec82a74bbde9997c4b76e755',1,'rt_blk_disk_ops']]],
-  ['awesome_20custom_20docs_111',['Doxygen Awesome Custom Docs',['../index.html',1,'']]]
+  ['autorefresh_110',['autorefresh',['../structrt__blk__disk__ops.html#a0f52e275ec82a74bbde9997c4b76e755',1,'rt_blk_disk_ops']]]
 ];
